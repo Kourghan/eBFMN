@@ -32,10 +32,10 @@
                                 <rect key="frame" x="101" y="102" width="119" height="25"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="USERNAME" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oam-C3-doM">
-                                <rect key="frame" x="48" y="189" width="225" height="60"/>
+                                <rect key="frame" x="23" y="189" width="275" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="225" id="HCo-sk-ar2"/>
+                                    <constraint firstAttribute="width" constant="275" id="HCo-sk-ar2"/>
                                     <constraint firstAttribute="height" constant="60" id="jwV-vR-rcr"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -46,7 +46,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="PASSWORD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qoS-L1-mBU">
-                                <rect key="frame" x="48" y="274" width="225" height="60"/>
+                                <rect key="frame" x="23" y="274" width="275" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="15"/>
@@ -56,7 +56,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHI-qD-dx2" userLabel="Login">
-                                <rect key="frame" x="48" y="359" width="225" height="60"/>
+                                <rect key="frame" x="23" y="359" width="275" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="15"/>
                                 <state key="normal" title="LOGIN">
@@ -68,7 +68,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0r-bf-zXh">
-                                <rect key="frame" x="48" y="444" width="75" height="21"/>
+                                <rect key="frame" x="23" y="444" width="75" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="s1p-sz-vkk"/>
                                 </constraints>
@@ -81,7 +81,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1S-ml-ON7">
-                                <rect key="frame" x="143" y="444" width="130" height="21"/>
+                                <rect key="frame" x="168" y="444" width="130" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="o05-Wk-OCR"/>
                                 </constraints>
@@ -94,14 +94,14 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hde-By-f6h">
-                                <rect key="frame" x="48" y="465" width="75" height="1"/>
+                                <rect key="frame" x="23" y="465" width="75" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="76K-79-M8D"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3i-zW-E0Q">
-                                <rect key="frame" x="143" y="465" width="130" height="1"/>
+                                <rect key="frame" x="168" y="465" width="130" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="8Lc-3v-5LY"/>
@@ -152,6 +152,8 @@
                         <outlet property="passwordTextField" destination="qoS-L1-mBU" id="Zus-fr-kEM"/>
                         <outlet property="termsButton" destination="7c6-ei-rKf" id="xyx-fv-urC"/>
                         <outlet property="usernameTextField" destination="oam-C3-doM" id="84m-fv-Uiw"/>
+                        <outletCollection property="credentialsFields" destination="oam-C3-doM" id="coD-kB-M3r"/>
+                        <outletCollection property="credentialsFields" destination="qoS-L1-mBU" id="azb-g0-FiJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

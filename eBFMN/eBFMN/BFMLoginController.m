@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *contactUsButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *termsButton;
 
+@property (nonatomic, strong) IBOutletCollection(UITextField) NSArray *credentialsFields;
+
 @end
 
 @implementation BFMLoginController
@@ -23,6 +25,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    for (UITextField *textfield in self.credentialsFields) {
+        textfield.layer.borderColor = [[UIColor whiteColor] CGColor];
+        textfield.layer.borderWidth = 1.f;
+        
+        textfield.attributedPlaceholder = [[NSAttributedString alloc] initWithString:textfield.placeholder
+                                                                          attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    }
+
 }
 
 #pragma mark - Handlers
