@@ -8,7 +8,7 @@
 
 #import "BFMLoginController.h"
 
-@interface BFMLoginController ()
+@interface BFMLoginController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -37,6 +37,14 @@
 
 - (IBAction)contactUsButtonTapped:(id)sender {
     
+}
+
+#pragma mark - TextField Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.view endEditing:YES];
+    
+    return YES;
 }
 
 @end
