@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 eBFMN. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "BFMLoginController.h"
 
-@interface ViewController ()
+@interface BFMLoginController ()
 
 @end
 
-@implementation ViewController
+@implementation BFMLoginController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
