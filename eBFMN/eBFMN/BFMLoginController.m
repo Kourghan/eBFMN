@@ -10,6 +10,12 @@
 
 @interface BFMLoginController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *contactUsButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *termsButton;
+
 @end
 
 @implementation BFMLoginController
@@ -19,9 +25,18 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Handlers
+
+- (IBAction)loginButtonTapped:(id)sender {
+    
+}
+
+- (IBAction)termsButtonTapped:(id)sender {
+    
+}
+
+- (IBAction)contactUsButtonTapped:(id)sender {
+    
 }
 
 @end
