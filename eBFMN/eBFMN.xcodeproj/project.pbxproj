@@ -14,6 +14,7 @@
 		619E2BE71B97564A00886893 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 619E2BE61B97564A00886893 /* Images.xcassets */; };
 		619E2BEA1B97564A00886893 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619E2BE81B97564A00886893 /* LaunchScreen.xib */; };
 		619E2BF61B97564A00886893 /* eBFMNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BF51B97564A00886893 /* eBFMNTests.m */; };
+		619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C071B977CF200886893 /* BFMUserCredentials.m */; };
 		7017DF46620972E10C2C25AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDF264433FB8F41C107ADD8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 		619E2BEF1B97564A00886893 /* eBFMNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eBFMNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		619E2BF41B97564A00886893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		619E2BF51B97564A00886893 /* eBFMNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eBFMNTests.m; sourceTree = "<group>"; };
+		619E2C061B977CF200886893 /* BFMUserCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMUserCredentials.h; path = "Classes/Models/User Credentials/BFMUserCredentials.h"; sourceTree = "<group>"; };
+		619E2C071B977CF200886893 /* BFMUserCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMUserCredentials.m; path = "Classes/Models/User Credentials/BFMUserCredentials.m"; sourceTree = "<group>"; };
 		9A2ED38684585DCC5C04EDB7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ED90EA9A0FFE50580AD1AD04 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +157,7 @@
 		619E2C011B977B9C00886893 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				619E2C051B977C9600886893 /* User Credentials */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -181,6 +185,15 @@
 				619E2BE31B97564A00886893 /* Login.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		619E2C051B977C9600886893 /* User Credentials */ = {
+			isa = PBXGroup;
+			children = (
+				619E2C061B977CF200886893 /* BFMUserCredentials.h */,
+				619E2C071B977CF200886893 /* BFMUserCredentials.m */,
+			);
+			name = "User Credentials";
 			sourceTree = "<group>";
 		};
 		E50B6C96981474BB1FCC1F9A /* Frameworks */ = {
@@ -237,6 +250,7 @@
 		619E2BCE1B97564A00886893 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BFM;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = eBFMN;
 				TargetAttributes = {
@@ -327,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				619E2BE21B97564A00886893 /* ViewController.m in Sources */,
+				619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */,
 				619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */,
 				619E2BDC1B97564A00886893 /* main.m in Sources */,
 			);
