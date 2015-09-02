@@ -13,13 +13,29 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_login" translatesAutoresizingMaskIntoConstraints="NO" id="rEz-3J-xgS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rEz-3J-xgS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="26x-mB-jht"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="rEz-3J-xgS" secondAttribute="bottom" id="3cm-ML-Cb5"/>
+                            <constraint firstAttribute="trailing" secondItem="rEz-3J-xgS" secondAttribute="trailing" id="IH5-Ge-kfO"/>
+                            <constraint firstItem="rEz-3J-xgS" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="IPa-1i-k14"/>
+                        </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg_login" width="320" height="568"/>
+    </resources>
 </document>
