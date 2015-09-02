@@ -7,6 +7,7 @@
 //
 
 #import "BFMLoginController.h"
+#import "BFMUserCredentials.h"
 
 @interface BFMLoginController () <UITextFieldDelegate>
 
@@ -40,10 +41,19 @@
 
 }
 
+#pragma mark - Private
+
+- (BOOL)dataVerified {
+    return [self.passwordTextField.text length] > 0 && [self.usernameTextField.text length] > 0;
+}
+
 #pragma mark - Handlers
 
 - (IBAction)loginButtonTapped:(id)sender {
-    
+    if ([self dataVerified]) {
+        BFMUserCredentials *credentials = [[BFMUserCredentials alloc] initWithUsername:self.usernameTextField.text password:self.passwordTextField.text];
+        [credentials loginWithCompletition];
+    }
 }
 
 - (IBAction)termsButtonTapped:(id)sender {
