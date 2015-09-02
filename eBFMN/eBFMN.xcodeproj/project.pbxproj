@@ -15,6 +15,8 @@
 		619E2BEA1B97564A00886893 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619E2BE81B97564A00886893 /* LaunchScreen.xib */; };
 		619E2BF61B97564A00886893 /* eBFMNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BF51B97564A00886893 /* eBFMNTests.m */; };
 		619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C071B977CF200886893 /* BFMUserCredentials.m */; };
+		619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C121B977DC400886893 /* JNKeychain+UNTExtension.m */; };
+		619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C151B977DD000886893 /* UIColor+Extensions.m */; };
 		7017DF46620972E10C2C25AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDF264433FB8F41C107ADD8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,10 @@
 		619E2BF51B97564A00886893 /* eBFMNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eBFMNTests.m; sourceTree = "<group>"; };
 		619E2C061B977CF200886893 /* BFMUserCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMUserCredentials.h; path = "Classes/Models/User Credentials/BFMUserCredentials.h"; sourceTree = "<group>"; };
 		619E2C071B977CF200886893 /* BFMUserCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMUserCredentials.m; path = "Classes/Models/User Credentials/BFMUserCredentials.m"; sourceTree = "<group>"; };
+		619E2C111B977DC400886893 /* JNKeychain+UNTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JNKeychain+UNTExtension.h"; path = "Misc/Categories/JNKeychain+UNTExtension/JNKeychain+UNTExtension.h"; sourceTree = "<group>"; };
+		619E2C121B977DC400886893 /* JNKeychain+UNTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JNKeychain+UNTExtension.m"; path = "Misc/Categories/JNKeychain+UNTExtension/JNKeychain+UNTExtension.m"; sourceTree = "<group>"; };
+		619E2C141B977DD000886893 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Extensions.h"; path = "Misc/Categories/UIColor+UNTExtension/UIColor+Extensions.h"; sourceTree = "<group>"; };
+		619E2C151B977DD000886893 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Extensions.m"; path = "Misc/Categories/UIColor+UNTExtension/UIColor+Extensions.m"; sourceTree = "<group>"; };
 		9A2ED38684585DCC5C04EDB7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ED90EA9A0FFE50580AD1AD04 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +106,7 @@
 		619E2BD81B97564A00886893 /* eBFMN */ = {
 			isa = PBXGroup;
 			children = (
+				619E2C091B977D4000886893 /* Misc */,
 				619E2C001B977B9100886893 /* Resources */,
 				619E2BFF1B977B8900886893 /* Classes */,
 				619E2BDD1B97564A00886893 /* AppDelegate.h */,
@@ -194,6 +201,41 @@
 				619E2C071B977CF200886893 /* BFMUserCredentials.m */,
 			);
 			name = "User Credentials";
+			sourceTree = "<group>";
+		};
+		619E2C091B977D4000886893 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				619E2C0A1B977D4800886893 /* Categories */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		619E2C0A1B977D4800886893 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				619E2C101B977DB400886893 /* UIColor */,
+				619E2C0F1B977DAC00886893 /* Keychain */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		619E2C0F1B977DAC00886893 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				619E2C111B977DC400886893 /* JNKeychain+UNTExtension.h */,
+				619E2C121B977DC400886893 /* JNKeychain+UNTExtension.m */,
+			);
+			name = Keychain;
+			sourceTree = "<group>";
+		};
+		619E2C101B977DB400886893 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				619E2C141B977DD000886893 /* UIColor+Extensions.h */,
+				619E2C151B977DD000886893 /* UIColor+Extensions.m */,
+			);
+			name = UIColor;
 			sourceTree = "<group>";
 		};
 		E50B6C96981474BB1FCC1F9A /* Frameworks */ = {
@@ -341,9 +383,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				619E2BE21B97564A00886893 /* ViewController.m in Sources */,
+				619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */,
 				619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */,
 				619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */,
 				619E2BDC1B97564A00886893 /* main.m in Sources */,
+				619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
