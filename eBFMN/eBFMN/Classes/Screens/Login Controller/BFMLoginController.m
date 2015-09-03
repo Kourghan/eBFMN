@@ -59,6 +59,7 @@
                                                                               password:self.passwordTextField.text];
         [credentials loginWithCompletitionCompletitionBlock:^(BOOL success, NSError *error) {
             if (success) {
+                [SVProgressHUD dismiss];
                 // move to tabbar here
             } else {
                 if (error) {
