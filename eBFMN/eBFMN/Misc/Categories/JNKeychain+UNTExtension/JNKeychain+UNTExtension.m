@@ -8,9 +8,8 @@
 
 #import "JNKeychain+UNTExtension.h"
 
-NSString* const kUNTUsernameKey = @"UsernameKey";
-NSString* const kUNTPasswordKey = @"PasswordKey";
-NSString* const kUNTGUIDKey = @"GUIDKey";
+NSString* const kBFMSessionKey = @"SessionKey";
+
 
 @implementation JNKeychain (UNTExtension)
 

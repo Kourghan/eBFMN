@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  eBFMN
+
+  Created by Mikhail Timoscenko on 03.09.15.
+  Copyright (c) 2015 eBFMN. All rights reserved.
+*/
+
+"login.wrongcredentials" = "Wrong Username or Password";
+"login.emptyfields" = "Fields Must Not Be Empty";
