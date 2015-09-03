@@ -8,9 +8,7 @@
 
 #import "JNKeychain.h"
 
-extern NSString* const kUNTUsernameKey;
-extern NSString* const kUNTPasswordKey;
-extern NSString* const kUNTGUIDKey;
+extern NSString* const kBFMSessionKey;
 
 @interface JNKeychain (UNTExtension)
 

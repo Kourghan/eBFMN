@@ -9,6 +9,8 @@
 #import "BFMLoginController.h"
 #import "BFMUserCredentials.h"
 
+#import <SVProgressHUD/SVProgressHUD.h>
+
 @interface BFMLoginController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
@@ -51,8 +53,23 @@
 
 - (IBAction)loginButtonTapped:(id)sender {
     if ([self dataVerified]) {
-        BFMUserCredentials *credentials = [[BFMUserCredentials alloc] initWithUsername:self.usernameTextField.text password:self.passwordTextField.text];
-        [credentials loginWithCompletition];
+        [SVProgressHUD show];
+        
+        BFMUserCredentials *credentials = [[BFMUserCredentials alloc] initWithUsername:self.usernameTextField.text
+                                                                              password:self.passwordTextField.text];
+        [credentials loginWithCompletitionCompletitionBlock:^(BOOL success, NSError *error) {
+            if (success) {
+                // move to tabbar here
+            } else {
+                if (error) {
+                    [SVProgressHUD showErrorWithStatus:error.description];
+                } else {
+                    [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"login.wrongcredentials", @"")];
+                }
+            }
+        }];
+    } else {
+        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"login.emptyfields", @"")];
     }
 }
 

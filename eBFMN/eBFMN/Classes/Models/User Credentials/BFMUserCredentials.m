@@ -9,6 +9,9 @@
 #import "BFMUserCredentials.h"
 
 #import <AFNetworking/AFNetworking.h>
+#import "BFMSessionManager.h"
+
+#import "JNKeychain+UNTExtension.h"
 
 typedef enum {
     BFMLoginResultSuccess = 0,
@@ -26,17 +29,26 @@ typedef enum {
     return self;
 }
 
-- (void)loginWithCompletition {
-    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://164.40.131.211:80"]];
+- (void)loginWithCompletitionCompletitionBlock:(void (^)(BOOL success, NSError *error))completition {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
 
-    [manager GET:@"/API/Accounts/Login" parameters:@{@"login" : self.username, @"password" : self.password} success:^(NSURLSessionDataTask *task, id responseObject)
-     {
-         // Success
-         NSLog(@"Success: %@", responseObject);
-     }failure:^(NSURLSessionDataTask *task, NSError *error)
-     {
-         // Failure
-         NSLog(@"Failure: %@", error);
+    [manager GET:@"/API/Accounts/Login"
+      parameters:@{@"login" : self.username, @"password" : self.password}
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             if ([[responseObject valueForKey:@"State"] integerValue] == BFMLoginResultSuccess) {
+                 [JNKeychain saveValue:[responseObject valueForKey:@"Key"] forKey:kBFMSessionKey];
+                 if (completition) {
+                     completition(YES, nil);
+                 }
+             } else {
+                 if (completition) {
+                     completition(NO, nil);
+                 }
+             }
+     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+         if (completition) {
+             completition(NO, error);
+         }
      }];
 }
 
