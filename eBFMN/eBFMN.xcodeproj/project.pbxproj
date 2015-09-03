@@ -9,11 +9,28 @@
 /* Begin PBXBuildFile section */
 		619E2BDC1B97564A00886893 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDB1B97564A00886893 /* main.m */; };
 		619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDE1B97564A00886893 /* AppDelegate.m */; };
-		619E2BE21B97564A00886893 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BE11B97564A00886893 /* ViewController.m */; };
+		619E2BE21B97564A00886893 /* BFMLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BE11B97564A00886893 /* BFMLoginController.m */; };
 		619E2BE51B97564A00886893 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 619E2BE31B97564A00886893 /* Login.storyboard */; };
 		619E2BE71B97564A00886893 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 619E2BE61B97564A00886893 /* Images.xcassets */; };
 		619E2BEA1B97564A00886893 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619E2BE81B97564A00886893 /* LaunchScreen.xib */; };
 		619E2BF61B97564A00886893 /* eBFMNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BF51B97564A00886893 /* eBFMNTests.m */; };
+		619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C071B977CF200886893 /* BFMUserCredentials.m */; };
+		619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C121B977DC400886893 /* JNKeychain+UNTExtension.m */; };
+		619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C151B977DD000886893 /* UIColor+Extensions.m */; };
+		619E2C261B9780ED00886893 /* Mark Simonson - Proxima Nova Black Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 619E2C181B9780ED00886893 /* Mark Simonson - Proxima Nova Black Italic.otf */; };
+		619E2C271B9780ED00886893 /* Mark Simonson - Proxima Nova Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 619E2C191B9780ED00886893 /* Mark Simonson - Proxima Nova Black.otf */; };
+		619E2C281B9780ED00886893 /* Mark Simonson - Proxima Nova Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 619E2C1A1B9780ED00886893 /* Mark Simonson - Proxima Nova Bold Italic.otf */; };
+		619E2C291B9780ED00886893 /* Mark Simonson - Proxima Nova Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 619E2C1B1B9780ED00886893 /* Mark Simonson - Proxima Nova Bold.otf */; };
+		619E2C2A1B9780ED00886893 /* Mark Simonson - Proxima Nova Extrabold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 619E2C1C1B9780ED00886893 /* Mark Simonson - Proxima Nova Extrabold Italic.otf */; };
+		619E2C2B1B9780ED00886893 /* Mark Simonson - Proxima Nova Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 619E2C1D1B9780ED00886893 /* Mark Simonson - Proxima Nova Extrabold.otf */; };
+		619E2C2C1B9780ED00886893 /* Mark Simonson - Proxima Nova Light Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 619E2C1E1B9780ED00886893 /* Mark Simonson - Proxima Nova Light Italic.otf */; };
+		619E2C2D1B9780ED00886893 /* Mark Simonson - Proxima Nova Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 619E2C1F1B9780ED00886893 /* Mark Simonson - Proxima Nova Light.otf */; };
+		619E2C2E1B9780ED00886893 /* Mark Simonson - Proxima Nova Regular Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 619E2C201B9780ED00886893 /* Mark Simonson - Proxima Nova Regular Italic.otf */; };
+		619E2C2F1B9780ED00886893 /* Mark Simonson - Proxima Nova Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 619E2C211B9780ED00886893 /* Mark Simonson - Proxima Nova Regular.otf */; };
+		619E2C301B9780ED00886893 /* Mark Simonson - Proxima Nova Semibold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 619E2C221B9780ED00886893 /* Mark Simonson - Proxima Nova Semibold Italic.otf */; };
+		619E2C311B9780ED00886893 /* Mark Simonson - Proxima Nova Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 619E2C231B9780ED00886893 /* Mark Simonson - Proxima Nova Semibold.otf */; };
+		619E2C321B9780ED00886893 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 619E2C241B9780ED00886893 /* Mark Simonson - Proxima Nova Thin Italic.otf */; };
+		619E2C331B9780ED00886893 /* Mark Simonson - Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 619E2C251B9780ED00886893 /* Mark Simonson - Proxima Nova Thin.otf */; };
 		7017DF46620972E10C2C25AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDF264433FB8F41C107ADD8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -34,14 +51,34 @@
 		619E2BDB1B97564A00886893 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		619E2BDD1B97564A00886893 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		619E2BDE1B97564A00886893 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		619E2BE01B97564A00886893 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		619E2BE11B97564A00886893 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		619E2BE01B97564A00886893 /* BFMLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFMLoginController.h; sourceTree = "<group>"; };
+		619E2BE11B97564A00886893 /* BFMLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFMLoginController.m; sourceTree = "<group>"; };
 		619E2BE41B97564A00886893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		619E2BE61B97564A00886893 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		619E2BE91B97564A00886893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		619E2BEF1B97564A00886893 /* eBFMNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eBFMNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		619E2BF41B97564A00886893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		619E2BF51B97564A00886893 /* eBFMNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eBFMNTests.m; sourceTree = "<group>"; };
+		619E2C061B977CF200886893 /* BFMUserCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMUserCredentials.h; path = "Classes/Models/User Credentials/BFMUserCredentials.h"; sourceTree = "<group>"; };
+		619E2C071B977CF200886893 /* BFMUserCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMUserCredentials.m; path = "Classes/Models/User Credentials/BFMUserCredentials.m"; sourceTree = "<group>"; };
+		619E2C111B977DC400886893 /* JNKeychain+UNTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JNKeychain+UNTExtension.h"; path = "Misc/Categories/JNKeychain+UNTExtension/JNKeychain+UNTExtension.h"; sourceTree = "<group>"; };
+		619E2C121B977DC400886893 /* JNKeychain+UNTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JNKeychain+UNTExtension.m"; path = "Misc/Categories/JNKeychain+UNTExtension/JNKeychain+UNTExtension.m"; sourceTree = "<group>"; };
+		619E2C141B977DD000886893 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Extensions.h"; path = "Misc/Categories/UIColor+UNTExtension/UIColor+Extensions.h"; sourceTree = "<group>"; };
+		619E2C151B977DD000886893 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Extensions.m"; path = "Misc/Categories/UIColor+UNTExtension/UIColor+Extensions.m"; sourceTree = "<group>"; };
+		619E2C181B9780ED00886893 /* Mark Simonson - Proxima Nova Black Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Black Italic.otf"; sourceTree = "<group>"; };
+		619E2C191B9780ED00886893 /* Mark Simonson - Proxima Nova Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Black.otf"; sourceTree = "<group>"; };
+		619E2C1A1B9780ED00886893 /* Mark Simonson - Proxima Nova Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Bold Italic.otf"; sourceTree = "<group>"; };
+		619E2C1B1B9780ED00886893 /* Mark Simonson - Proxima Nova Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Bold.otf"; sourceTree = "<group>"; };
+		619E2C1C1B9780ED00886893 /* Mark Simonson - Proxima Nova Extrabold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Extrabold Italic.otf"; sourceTree = "<group>"; };
+		619E2C1D1B9780ED00886893 /* Mark Simonson - Proxima Nova Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Extrabold.otf"; sourceTree = "<group>"; };
+		619E2C1E1B9780ED00886893 /* Mark Simonson - Proxima Nova Light Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Light Italic.otf"; sourceTree = "<group>"; };
+		619E2C1F1B9780ED00886893 /* Mark Simonson - Proxima Nova Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Light.otf"; sourceTree = "<group>"; };
+		619E2C201B9780ED00886893 /* Mark Simonson - Proxima Nova Regular Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Regular Italic.otf"; sourceTree = "<group>"; };
+		619E2C211B9780ED00886893 /* Mark Simonson - Proxima Nova Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Regular.otf"; sourceTree = "<group>"; };
+		619E2C221B9780ED00886893 /* Mark Simonson - Proxima Nova Semibold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Semibold Italic.otf"; sourceTree = "<group>"; };
+		619E2C231B9780ED00886893 /* Mark Simonson - Proxima Nova Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Semibold.otf"; sourceTree = "<group>"; };
+		619E2C241B9780ED00886893 /* Mark Simonson - Proxima Nova Thin Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Thin Italic.otf"; sourceTree = "<group>"; };
+		619E2C251B9780ED00886893 /* Mark Simonson - Proxima Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Thin.otf"; sourceTree = "<group>"; };
 		9A2ED38684585DCC5C04EDB7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ED90EA9A0FFE50580AD1AD04 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +134,7 @@
 		619E2BD81B97564A00886893 /* eBFMN */ = {
 			isa = PBXGroup;
 			children = (
+				619E2C091B977D4000886893 /* Misc */,
 				619E2C001B977B9100886893 /* Resources */,
 				619E2BFF1B977B8900886893 /* Classes */,
 				619E2BDD1B97564A00886893 /* AppDelegate.h */,
@@ -144,6 +182,7 @@
 		619E2C001B977B9100886893 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				619E2C171B9780D800886893 /* Fonts */,
 				619E2BE81B97564A00886893 /* LaunchScreen.xib */,
 				619E2BE61B97564A00886893 /* Images.xcassets */,
 				619E2C041B977BDD00886893 /* Storyboards */,
@@ -154,6 +193,7 @@
 		619E2C011B977B9C00886893 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				619E2C051B977C9600886893 /* User Credentials */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -161,8 +201,8 @@
 		619E2C021B977BA200886893 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				619E2BE01B97564A00886893 /* ViewController.h */,
-				619E2BE11B97564A00886893 /* ViewController.m */,
+				619E2BE01B97564A00886893 /* BFMLoginController.h */,
+				619E2BE11B97564A00886893 /* BFMLoginController.m */,
 				619E2C031B977BB000886893 /* Login Screen */,
 			);
 			name = Screens;
@@ -181,6 +221,71 @@
 				619E2BE31B97564A00886893 /* Login.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		619E2C051B977C9600886893 /* User Credentials */ = {
+			isa = PBXGroup;
+			children = (
+				619E2C061B977CF200886893 /* BFMUserCredentials.h */,
+				619E2C071B977CF200886893 /* BFMUserCredentials.m */,
+			);
+			name = "User Credentials";
+			sourceTree = "<group>";
+		};
+		619E2C091B977D4000886893 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				619E2C0A1B977D4800886893 /* Categories */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		619E2C0A1B977D4800886893 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				619E2C101B977DB400886893 /* UIColor */,
+				619E2C0F1B977DAC00886893 /* Keychain */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		619E2C0F1B977DAC00886893 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				619E2C111B977DC400886893 /* JNKeychain+UNTExtension.h */,
+				619E2C121B977DC400886893 /* JNKeychain+UNTExtension.m */,
+			);
+			name = Keychain;
+			sourceTree = "<group>";
+		};
+		619E2C101B977DB400886893 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				619E2C141B977DD000886893 /* UIColor+Extensions.h */,
+				619E2C151B977DD000886893 /* UIColor+Extensions.m */,
+			);
+			name = UIColor;
+			sourceTree = "<group>";
+		};
+		619E2C171B9780D800886893 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				619E2C181B9780ED00886893 /* Mark Simonson - Proxima Nova Black Italic.otf */,
+				619E2C191B9780ED00886893 /* Mark Simonson - Proxima Nova Black.otf */,
+				619E2C1A1B9780ED00886893 /* Mark Simonson - Proxima Nova Bold Italic.otf */,
+				619E2C1B1B9780ED00886893 /* Mark Simonson - Proxima Nova Bold.otf */,
+				619E2C1C1B9780ED00886893 /* Mark Simonson - Proxima Nova Extrabold Italic.otf */,
+				619E2C1D1B9780ED00886893 /* Mark Simonson - Proxima Nova Extrabold.otf */,
+				619E2C1E1B9780ED00886893 /* Mark Simonson - Proxima Nova Light Italic.otf */,
+				619E2C1F1B9780ED00886893 /* Mark Simonson - Proxima Nova Light.otf */,
+				619E2C201B9780ED00886893 /* Mark Simonson - Proxima Nova Regular Italic.otf */,
+				619E2C211B9780ED00886893 /* Mark Simonson - Proxima Nova Regular.otf */,
+				619E2C221B9780ED00886893 /* Mark Simonson - Proxima Nova Semibold Italic.otf */,
+				619E2C231B9780ED00886893 /* Mark Simonson - Proxima Nova Semibold.otf */,
+				619E2C241B9780ED00886893 /* Mark Simonson - Proxima Nova Thin Italic.otf */,
+				619E2C251B9780ED00886893 /* Mark Simonson - Proxima Nova Thin.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		E50B6C96981474BB1FCC1F9A /* Frameworks */ = {
@@ -237,6 +342,7 @@
 		619E2BCE1B97564A00886893 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BFM;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = eBFMN;
 				TargetAttributes = {
@@ -273,8 +379,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				619E2C2F1B9780ED00886893 /* Mark Simonson - Proxima Nova Regular.otf in Resources */,
+				619E2C311B9780ED00886893 /* Mark Simonson - Proxima Nova Semibold.otf in Resources */,
 				619E2BE51B97564A00886893 /* Login.storyboard in Resources */,
+				619E2C331B9780ED00886893 /* Mark Simonson - Proxima Nova Thin.otf in Resources */,
+				619E2C271B9780ED00886893 /* Mark Simonson - Proxima Nova Black.otf in Resources */,
+				619E2C2C1B9780ED00886893 /* Mark Simonson - Proxima Nova Light Italic.otf in Resources */,
+				619E2C281B9780ED00886893 /* Mark Simonson - Proxima Nova Bold Italic.otf in Resources */,
+				619E2C2E1B9780ED00886893 /* Mark Simonson - Proxima Nova Regular Italic.otf in Resources */,
+				619E2C2B1B9780ED00886893 /* Mark Simonson - Proxima Nova Extrabold.otf in Resources */,
+				619E2C261B9780ED00886893 /* Mark Simonson - Proxima Nova Black Italic.otf in Resources */,
 				619E2BEA1B97564A00886893 /* LaunchScreen.xib in Resources */,
+				619E2C2A1B9780ED00886893 /* Mark Simonson - Proxima Nova Extrabold Italic.otf in Resources */,
+				619E2C301B9780ED00886893 /* Mark Simonson - Proxima Nova Semibold Italic.otf in Resources */,
+				619E2C291B9780ED00886893 /* Mark Simonson - Proxima Nova Bold.otf in Resources */,
+				619E2C2D1B9780ED00886893 /* Mark Simonson - Proxima Nova Light.otf in Resources */,
+				619E2C321B9780ED00886893 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */,
 				619E2BE71B97564A00886893 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,9 +446,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				619E2BE21B97564A00886893 /* ViewController.m in Sources */,
+				619E2BE21B97564A00886893 /* BFMLoginController.m in Sources */,
+				619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */,
+				619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */,
 				619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */,
 				619E2BDC1B97564A00886893 /* main.m in Sources */,
+				619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
