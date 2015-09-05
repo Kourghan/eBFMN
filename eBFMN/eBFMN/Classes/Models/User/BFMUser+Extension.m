@@ -10,7 +10,8 @@
 
 #import "BFMSessionManager.h"
 #import "JNKeychain+UNTExtension.h"
-#import "BFMMappingProvider.h"
+#import "BFMSysAccount+Extension.h"
+
 #import <FastEasyMapping/FastEasyMapping.h>
 #import <MagicalRecord/MagicalRecord.h>
 
@@ -26,12 +27,34 @@
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
              NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
              [FEMManagedObjectDeserializer objectFromRepresentation:responseObject
-                                                            mapping:[BFMMappingProvider userInfoMapping]
+                                                            mapping:[BFMUser defaultMapping]
                                                             context:context];
              completition(YES);
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              completition(NO);
          }];
+}
+
++ (FEMMapping *)defaultMapping {
+    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"BFMUser" rootPath:@"Data"];
+    
+    [mapping setPrimaryKey:@"identifier"];
+    [mapping addAttributesFromDictionary:@{
+                                           @"identifier" : @"ID",
+                                           @"name" : @"Name",
+                                           @"accCount" : @"AccCount",
+                                           @"code" : @"Code",
+                                           @"type" : @"Type",
+                                           @"ibsCount" : @"IbsCount",
+                                           @"groupType" : @"GroupType",
+                                           @"main" : @"isMainOffice"
+                                           }];
+    
+    [mapping addToManyRelationshipMapping:[BFMSysAccount defaultMapping]
+                              forProperty:@"sysAccounts"
+                                  keyPath:@"sysAccounts"];
+    
+    return mapping;
 }
 
 @end

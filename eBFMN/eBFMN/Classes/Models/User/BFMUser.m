@@ -1,12 +1,13 @@
 //
 //  BFMUser.m
-//  
+//  eBFMN
 //
-//  Created by Mikhail Timoscenko on 05.09.15.
-//
+//  Created by Mikhail Timoscenko on 06.09.15.
+//  Copyright (c) 2015 eBFMN. All rights reserved.
 //
 
 #import "BFMUser.h"
+#import "BFMSysAccount.h"
 
 
 @implementation BFMUser
@@ -19,5 +20,6 @@
 @dynamic ibsCount;
 @dynamic groupType;
 @dynamic main;
+@dynamic sysAccounts;
 
 @end

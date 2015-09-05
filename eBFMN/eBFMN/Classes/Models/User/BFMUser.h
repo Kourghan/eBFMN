@@ -1,14 +1,15 @@
 //
 //  BFMUser.h
-//  
+//  eBFMN
 //
-//  Created by Mikhail Timoscenko on 05.09.15.
-//
+//  Created by Mikhail Timoscenko on 06.09.15.
+//  Copyright (c) 2015 eBFMN. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class BFMSysAccount;
 
 @interface BFMUser : NSManagedObject
 
@@ -20,5 +21,14 @@
 @property (nonatomic, retain) NSNumber * ibsCount;
 @property (nonatomic, retain) NSNumber * groupType;
 @property (nonatomic, retain) NSNumber * main;
+@property (nonatomic, retain) NSSet *sysAccounts;
+@end
+
+@interface BFMUser (CoreDataGeneratedAccessors)
+
+- (void)addSysAccountsObject:(BFMSysAccount *)value;
+- (void)removeSysAccountsObject:(BFMSysAccount *)value;
+- (void)addSysAccounts:(NSSet *)values;
+- (void)removeSysAccounts:(NSSet *)values;
 
 @end
