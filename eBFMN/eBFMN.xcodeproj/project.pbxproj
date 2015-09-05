@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		613AE74E1B9B78CE00300B22 /* ebfmn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 613AE74C1B9B78CE00300B22 /* ebfmn.xcdatamodeld */; };
+		613AE7511B9B79B100300B22 /* BFMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7501B9B79B100300B22 /* BFMUser.m */; };
+		613AE7551B9B7A6800300B22 /* BFMUser+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7541B9B7A6800300B22 /* BFMUser+Extension.m */; };
+		613AE7571B9B822900300B22 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613AE7561B9B822900300B22 /* CoreData.framework */; };
 		619E2BDC1B97564A00886893 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDB1B97564A00886893 /* main.m */; };
 		619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDE1B97564A00886893 /* AppDelegate.m */; };
 		619E2BE71B97564A00886893 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 619E2BE61B97564A00886893 /* Images.xcassets */; };
@@ -49,6 +53,12 @@
 
 /* Begin PBXFileReference section */
 		1FDF264433FB8F41C107ADD8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		613AE74D1B9B78CE00300B22 /* ebfmn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ebfmn.xcdatamodel; sourceTree = "<group>"; };
+		613AE74F1B9B79B100300B22 /* BFMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMUser.h; path = Classes/Models/User/BFMUser.h; sourceTree = "<group>"; };
+		613AE7501B9B79B100300B22 /* BFMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMUser.m; path = Classes/Models/User/BFMUser.m; sourceTree = "<group>"; };
+		613AE7531B9B7A6800300B22 /* BFMUser+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMUser+Extension.h"; path = "Classes/Models/User/BFMUser+Extension.h"; sourceTree = "<group>"; };
+		613AE7541B9B7A6800300B22 /* BFMUser+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMUser+Extension.m"; path = "Classes/Models/User/BFMUser+Extension.m"; sourceTree = "<group>"; };
+		613AE7561B9B822900300B22 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		619E2BD61B97564A00886893 /* eBFMN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eBFMN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		619E2BDA1B97564A00886893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		619E2BDB1B97564A00886893 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				613AE7571B9B822900300B22 /* CoreData.framework in Frameworks */,
 				7017DF46620972E10C2C25AA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +207,7 @@
 				619E2BE81B97564A00886893 /* LaunchScreen.xib */,
 				619E2BE61B97564A00886893 /* Images.xcassets */,
 				61C181F51B98DF7100D5FAC8 /* Localizable.strings */,
+				613AE74C1B9B78CE00300B22 /* ebfmn.xcdatamodeld */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -205,6 +217,7 @@
 			children = (
 				61C181F11B98D8D800D5FAC8 /* Mapping */,
 				619E2C051B977C9600886893 /* User Credentials */,
+				61C182181B98E89700D5FAC8 /* User */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -325,9 +338,21 @@
 			name = Mapping;
 			sourceTree = "<group>";
 		};
+		61C182181B98E89700D5FAC8 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				613AE74F1B9B79B100300B22 /* BFMUser.h */,
+				613AE7501B9B79B100300B22 /* BFMUser.m */,
+				613AE7531B9B7A6800300B22 /* BFMUser+Extension.h */,
+				613AE7541B9B7A6800300B22 /* BFMUser+Extension.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 		E50B6C96981474BB1FCC1F9A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				613AE7561B9B822900300B22 /* CoreData.framework */,
 				1FDF264433FB8F41C107ADD8 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -484,13 +509,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				613AE7511B9B79B100300B22 /* BFMUser.m in Sources */,
 				619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */,
 				61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */,
+				613AE7551B9B7A6800300B22 /* BFMUser+Extension.m in Sources */,
 				619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */,
 				61C181F41B98D95A00D5FAC8 /* BFMMappingProvider.m in Sources */,
 				619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */,
 				619E2BDC1B97564A00886893 /* main.m in Sources */,
 				61C181F01B98D62700D5FAC8 /* BFMSessionManager.m in Sources */,
+				613AE74E1B9B78CE00300B22 /* ebfmn.xcdatamodeld in Sources */,
 				619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -694,6 +722,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		613AE74C1B9B78CE00300B22 /* ebfmn.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				613AE74D1B9B78CE00300B22 /* ebfmn.xcdatamodel */,
+			);
+			currentVersion = 613AE74D1B9B78CE00300B22 /* ebfmn.xcdatamodel */;
+			name = ebfmn.xcdatamodeld;
+			path = Resources/ebfmn.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 619E2BCE1B97564A00886893 /* Project object */;
 }

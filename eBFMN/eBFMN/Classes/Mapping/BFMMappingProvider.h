@@ -12,6 +12,6 @@
 
 @interface BFMMappingProvider : NSObject
 
-+ (FEMMapping *)loginResultMapping;
++ (FEMMapping *)userInfoMapping;
 
 @end

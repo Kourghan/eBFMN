@@ -8,7 +8,7 @@
 
 #import "BFMSessionManager.h"
 
-static NSString *developmentServerURL = @"http://164.40.131.211:80";
+static NSString *developmentServerURL = @"http://164.40.131.211:80/API/";
 static NSString *productionServerURL = @"";
 
 @implementation BFMSessionManager
