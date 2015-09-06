@@ -8,13 +8,13 @@
 
 #import "BFMLoginController.h"
 #import "BFMUserCredentials.h"
+#import "BFMUser+Extension.h"
 
 #import <SVProgressHUD/SVProgressHUD.h>
 
-
 #pragma mark - DEBUG
 
-#import "BFMUser+Extension.h"
+#import "BFMLeaderboardModel.h"
 
 @interface BFMLoginController () <UITextFieldDelegate>
 
@@ -67,6 +67,8 @@
                 [BFMUser getInfoWithCompletitionBlock:^(BOOL success) {
                     if (success) {
                         // Show Main Storyboard here
+
+                        
                     } else {
                         [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"login.wrongcredentials", @"")];
                     }
@@ -86,7 +88,9 @@
 }
 
 - (IBAction)termsButtonTapped:(id)sender {
-    
+    [BFMLeaderboardModel getLeaderboardForType:BFMLeaderboardTypePoints completition:^(BOOL success) {
+        
+    }];
 }
 
 - (IBAction)contactUsButtonTapped:(id)sender {
