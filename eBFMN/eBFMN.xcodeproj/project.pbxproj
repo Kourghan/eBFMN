@@ -24,6 +24,7 @@
 		613AE7661B9B9F7C00300B22 /* BFMAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7651B9B9F7C00300B22 /* BFMAccount.m */; };
 		613AE76D1B9C683800300B22 /* BFMLeaderboardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE76C1B9C683800300B22 /* BFMLeaderboardModel.m */; };
 		613AE7721B9CC8CA00300B22 /* NINavigationAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7711B9CC8CA00300B22 /* NINavigationAppearance.m */; };
+		613AE7731B9CCC9600300B22 /* BFMAccount+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7681B9B9FAA00300B22 /* BFMAccount+Extension.m */; };
 		619E2BDC1B97564A00886893 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDB1B97564A00886893 /* main.m */; };
 		619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDE1B97564A00886893 /* AppDelegate.m */; };
 		619E2BE71B97564A00886893 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 619E2BE61B97564A00886893 /* Images.xcassets */; };
@@ -33,7 +34,6 @@
 		619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C121B977DC400886893 /* JNKeychain+UNTExtension.m */; };
 		619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C151B977DD000886893 /* UIColor+Extensions.m */; };
 		61C181F01B98D62700D5FAC8 /* BFMSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C181EF1B98D62700D5FAC8 /* BFMSessionManager.m */; };
-		61C181F41B98D95A00D5FAC8 /* BFMMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C181F31B98D95A00D5FAC8 /* BFMMappingProvider.m */; };
 		61C181F61B98DF7100D5FAC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61C181F51B98DF7100D5FAC8 /* Localizable.strings */; };
 		61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C181F81B98E04F00D5FAC8 /* BFMLoginController.m */; };
 		61C181FB1B98E06200D5FAC8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C181FA1B98E06200D5FAC8 /* Login.storyboard */; };
@@ -112,8 +112,6 @@
 		619E2C151B977DD000886893 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Extensions.m"; path = "Misc/Categories/UIColor+UNTExtension/UIColor+Extensions.m"; sourceTree = "<group>"; };
 		61C181EE1B98D62700D5FAC8 /* BFMSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMSessionManager.h; path = Networking/Manager/BFMSessionManager.h; sourceTree = "<group>"; };
 		61C181EF1B98D62700D5FAC8 /* BFMSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMSessionManager.m; path = Networking/Manager/BFMSessionManager.m; sourceTree = "<group>"; };
-		61C181F21B98D95A00D5FAC8 /* BFMMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMMappingProvider.h; path = Classes/Mapping/BFMMappingProvider.h; sourceTree = "<group>"; };
-		61C181F31B98D95A00D5FAC8 /* BFMMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMMappingProvider.m; path = Classes/Mapping/BFMMappingProvider.m; sourceTree = "<group>"; };
 		61C181F51B98DF7100D5FAC8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Resources/Localizable.strings; sourceTree = "<group>"; };
 		61C181F71B98E04F00D5FAC8 /* BFMLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMLoginController.h; path = "Classes/Screens/Login Controller/BFMLoginController.h"; sourceTree = "<group>"; };
 		61C181F81B98E04F00D5FAC8 /* BFMLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMLoginController.m; path = "Classes/Screens/Login Controller/BFMLoginController.m"; sourceTree = "<group>"; };
@@ -297,7 +295,6 @@
 		619E2C011B977B9C00886893 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				61C181F11B98D8D800D5FAC8 /* Mapping */,
 				613AE76A1B9C671600300B22 /* Leaderboard Record */,
 				619E2C051B977C9600886893 /* User Credentials */,
 				61C182181B98E89700D5FAC8 /* User */,
@@ -418,15 +415,6 @@
 				61C181EF1B98D62700D5FAC8 /* BFMSessionManager.m */,
 			);
 			name = SessionManager;
-			sourceTree = "<group>";
-		};
-		61C181F11B98D8D800D5FAC8 /* Mapping */ = {
-			isa = PBXGroup;
-			children = (
-				61C181F21B98D95A00D5FAC8 /* BFMMappingProvider.h */,
-				61C181F31B98D95A00D5FAC8 /* BFMMappingProvider.m */,
-			);
-			name = Mapping;
 			sourceTree = "<group>";
 		};
 		61C182181B98E89700D5FAC8 /* User */ = {
@@ -621,9 +609,9 @@
 				613AE7631B9B9EDF00300B22 /* BFMUser.m in Sources */,
 				613AE7661B9B9F7C00300B22 /* BFMAccount.m in Sources */,
 				619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */,
+				613AE7731B9CCC9600300B22 /* BFMAccount+Extension.m in Sources */,
 				2CF024EF1B9A409A009E8959 /* BFMTabBarController.m in Sources */,
 				613AE7721B9CC8CA00300B22 /* NINavigationAppearance.m in Sources */,
-				61C181F41B98D95A00D5FAC8 /* BFMMappingProvider.m in Sources */,
 				619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */,
 				613AE75A1B9B872C00300B22 /* BFMSysAccount.m in Sources */,
 				619E2BDC1B97564A00886893 /* main.m in Sources */,
