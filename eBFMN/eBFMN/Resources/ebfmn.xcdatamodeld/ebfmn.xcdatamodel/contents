@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BFMAccount" representedClassName="BFMAccount" syncable="YES">
+        <attribute name="balance" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="managed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="platform" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="platformType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BFMUser" inverseName="accounts" inverseEntity="BFMUser" syncable="YES"/>
+    </entity>
+    <entity name="BFMSysAccount" representedClassName="BFMSysAccount" syncable="YES">
+        <attribute name="balance" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="commission" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="managed" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <attribute name="netDeposit" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="platform" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="platformType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="prewNetDeposit" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="prewTotalDeposit" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rebate" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="spread" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="totalDeposit" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BFMUser" inverseName="sysAccounts" inverseEntity="BFMUser" syncable="YES"/>
+    </entity>
+    <entity name="BFMUser" representedClassName="BFMUser" syncable="YES">
+        <attribute name="accCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="code" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="groupType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="ibsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="main" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="accounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BFMAccount" inverseName="user" inverseEntity="BFMAccount" syncable="YES"/>
+        <relationship name="sysAccounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BFMSysAccount" inverseName="user" inverseEntity="BFMSysAccount" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BFMUser" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="BFMAccount" positionX="-54" positionY="54" width="128" height="150"/>
+        <element name="BFMSysAccount" positionX="-36" positionY="63" width="128" height="255"/>
+    </elements>
+</model>

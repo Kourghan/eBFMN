@@ -11,6 +11,11 @@
 
 #import <SVProgressHUD/SVProgressHUD.h>
 
+
+#pragma mark - DEBUG
+
+#import "BFMUser+Extension.h"
+
 @interface BFMLoginController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
@@ -59,8 +64,14 @@
                                                                               password:self.passwordTextField.text];
         [credentials loginWithCompletitionCompletitionBlock:^(BOOL success, NSError *error) {
             if (success) {
-                [SVProgressHUD dismiss];
-                // move to tabbar here
+                [BFMUser getInfoWithCompletitionBlock:^(BOOL success) {
+                    if (success) {
+                        // Show Main Storyboard here
+                    } else {
+                        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"login.wrongcredentials", @"")];
+                    }
+                    [SVProgressHUD dismiss];
+                }];
             } else {
                 if (error) {
                     [SVProgressHUD showErrorWithStatus:error.description];

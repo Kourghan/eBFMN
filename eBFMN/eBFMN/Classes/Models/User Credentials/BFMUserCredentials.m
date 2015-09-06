@@ -32,11 +32,12 @@ typedef enum {
 - (void)loginWithCompletitionCompletitionBlock:(void (^)(BOOL success, NSError *error))completition {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
 
-    [manager GET:@"/API/Accounts/Login"
+    [manager GET:@"Accounts/Login"
       parameters:@{@"login" : self.username, @"password" : self.password}
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
              if ([[responseObject valueForKey:@"State"] integerValue] == BFMLoginResultSuccess) {
-                 [JNKeychain saveValue:[responseObject valueForKey:@"Key"] forKey:kBFMSessionKey];
+                 [JNKeychain saveValue:[responseObject valueForKey:@"Data"] forKey:kBFMSessionKey];
+                 [JNKeychain saveValue:self.username forKey:kBFMUsername];
                  if (completition) {
                      completition(YES, nil);
                  }

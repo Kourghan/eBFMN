@@ -7,8 +7,11 @@
 //
 
 #import "BFMMappingProvider.h"
+#import "BFMUser+Extension.h"
 
 @implementation BFMMappingProvider
+
+
 
 
 

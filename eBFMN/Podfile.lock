@@ -22,6 +22,7 @@ PODS:
     - AFNetworking/NSURLSession
   - FastEasyMapping (1.0)
   - JNKeychain (0.1.2)
+  - MagicalRecord (2.3.0)
   - RBBAnimation (0.4.0)
   - SDCAlertView (2.5.2):
     - RBBAnimation (~> 0.3)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - FastEasyMapping
   - JNKeychain
+  - MagicalRecord
   - SDCAlertView
   - SVProgressHUD
 
@@ -40,6 +42,7 @@ SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   FastEasyMapping: f5ecdce05f39595aa921275d6bbaf4fb8aa60d89
   JNKeychain: 3428e123958aca6672b55d615a8a45cdf7b82c71
+  MagicalRecord: 89eb7d7ead39fb37f01c3d010665ee94d17f8dba
   RBBAnimation: 4b2d66f6d993febce63cd564da934985313b9c59
   SDCAlertView: f9706c18f456ea87909f8f199704cd28e582ff27
   SDCAutoLayout: e6885bb39ab8e2ec2ff84d158f38035f025f7420
