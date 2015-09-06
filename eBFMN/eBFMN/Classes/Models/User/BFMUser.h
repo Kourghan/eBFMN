@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class BFMSysAccount;
+@class BFMSysAccount, BFMAccount;
 
 @interface BFMUser : NSManagedObject
 
@@ -22,6 +22,7 @@
 @property (nonatomic, retain) NSNumber * groupType;
 @property (nonatomic, retain) NSNumber * main;
 @property (nonatomic, retain) NSSet *sysAccounts;
+@property (nonatomic, retain) NSSet *accounts;
 @end
 
 @interface BFMUser (CoreDataGeneratedAccessors)
@@ -30,5 +31,10 @@
 - (void)removeSysAccountsObject:(BFMSysAccount *)value;
 - (void)addSysAccounts:(NSSet *)values;
 - (void)removeSysAccounts:(NSSet *)values;
+
+- (void)addAccountsObject:(BFMAccount *)value;
+- (void)removeAccountsObject:(BFMAccount *)value;
+- (void)addAccounts:(NSSet *)values;
+- (void)removeAccounts:(NSSet *)values;
 
 @end

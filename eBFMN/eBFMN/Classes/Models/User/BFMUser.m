@@ -8,6 +8,7 @@
 
 #import "BFMUser.h"
 #import "BFMSysAccount.h"
+#import "BFMAccount.h"
 
 
 @implementation BFMUser
@@ -21,5 +22,6 @@
 @dynamic groupType;
 @dynamic main;
 @dynamic sysAccounts;
+@dynamic accounts;
 
 @end

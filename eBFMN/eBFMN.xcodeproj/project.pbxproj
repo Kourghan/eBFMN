@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		613AE74E1B9B78CE00300B22 /* ebfmn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 613AE74C1B9B78CE00300B22 /* ebfmn.xcdatamodeld */; };
-		613AE7511B9B79B100300B22 /* BFMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7501B9B79B100300B22 /* BFMUser.m */; };
 		613AE7551B9B7A6800300B22 /* BFMUser+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7541B9B7A6800300B22 /* BFMUser+Extension.m */; };
 		613AE7571B9B822900300B22 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613AE7561B9B822900300B22 /* CoreData.framework */; };
 		613AE75A1B9B872C00300B22 /* BFMSysAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7591B9B872C00300B22 /* BFMSysAccount.m */; };
 		613AE75D1B9B88B000300B22 /* BFMSysAccount+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE75C1B9B88B000300B22 /* BFMSysAccount+Extension.m */; };
+		613AE7631B9B9EDF00300B22 /* BFMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7621B9B9EDF00300B22 /* BFMUser.m */; };
+		613AE7661B9B9F7C00300B22 /* BFMAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7651B9B9F7C00300B22 /* BFMAccount.m */; };
+		613AE7691B9B9FAA00300B22 /* BFMAccount+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7681B9B9FAA00300B22 /* BFMAccount+Extension.m */; };
 		619E2BDC1B97564A00886893 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDB1B97564A00886893 /* main.m */; };
 		619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDE1B97564A00886893 /* AppDelegate.m */; };
 		619E2BE71B97564A00886893 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 619E2BE61B97564A00886893 /* Images.xcassets */; };
@@ -56,8 +58,6 @@
 /* Begin PBXFileReference section */
 		1FDF264433FB8F41C107ADD8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		613AE74D1B9B78CE00300B22 /* ebfmn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ebfmn.xcdatamodel; sourceTree = "<group>"; };
-		613AE74F1B9B79B100300B22 /* BFMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMUser.h; path = Classes/Models/User/BFMUser.h; sourceTree = "<group>"; };
-		613AE7501B9B79B100300B22 /* BFMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMUser.m; path = Classes/Models/User/BFMUser.m; sourceTree = "<group>"; };
 		613AE7531B9B7A6800300B22 /* BFMUser+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMUser+Extension.h"; path = "Classes/Models/User/BFMUser+Extension.h"; sourceTree = "<group>"; };
 		613AE7541B9B7A6800300B22 /* BFMUser+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMUser+Extension.m"; path = "Classes/Models/User/BFMUser+Extension.m"; sourceTree = "<group>"; };
 		613AE7561B9B822900300B22 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -65,6 +65,12 @@
 		613AE7591B9B872C00300B22 /* BFMSysAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMSysAccount.m; path = Classes/Models/User/BFMSysAccount.m; sourceTree = "<group>"; };
 		613AE75B1B9B88B000300B22 /* BFMSysAccount+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMSysAccount+Extension.h"; path = "Classes/Models/User/BFMSysAccount+Extension.h"; sourceTree = "<group>"; };
 		613AE75C1B9B88B000300B22 /* BFMSysAccount+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMSysAccount+Extension.m"; path = "Classes/Models/User/BFMSysAccount+Extension.m"; sourceTree = "<group>"; };
+		613AE7611B9B9EDF00300B22 /* BFMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMUser.h; path = Classes/Models/User/BFMUser.h; sourceTree = "<group>"; };
+		613AE7621B9B9EDF00300B22 /* BFMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMUser.m; path = Classes/Models/User/BFMUser.m; sourceTree = "<group>"; };
+		613AE7641B9B9F7C00300B22 /* BFMAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMAccount.h; path = Classes/Models/User/BFMAccount.h; sourceTree = "<group>"; };
+		613AE7651B9B9F7C00300B22 /* BFMAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMAccount.m; path = Classes/Models/User/BFMAccount.m; sourceTree = "<group>"; };
+		613AE7671B9B9FAA00300B22 /* BFMAccount+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMAccount+Extension.h"; path = "Classes/Models/User/BFMAccount+Extension.h"; sourceTree = "<group>"; };
+		613AE7681B9B9FAA00300B22 /* BFMAccount+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMAccount+Extension.m"; path = "Classes/Models/User/BFMAccount+Extension.m"; sourceTree = "<group>"; };
 		619E2BD61B97564A00886893 /* eBFMN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eBFMN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		619E2BDA1B97564A00886893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		619E2BDB1B97564A00886893 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -347,14 +353,18 @@
 		61C182181B98E89700D5FAC8 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				613AE74F1B9B79B100300B22 /* BFMUser.h */,
-				613AE7501B9B79B100300B22 /* BFMUser.m */,
+				613AE7611B9B9EDF00300B22 /* BFMUser.h */,
+				613AE7621B9B9EDF00300B22 /* BFMUser.m */,
 				613AE7531B9B7A6800300B22 /* BFMUser+Extension.h */,
 				613AE7541B9B7A6800300B22 /* BFMUser+Extension.m */,
 				613AE7581B9B872C00300B22 /* BFMSysAccount.h */,
 				613AE7591B9B872C00300B22 /* BFMSysAccount.m */,
 				613AE75B1B9B88B000300B22 /* BFMSysAccount+Extension.h */,
 				613AE75C1B9B88B000300B22 /* BFMSysAccount+Extension.m */,
+				613AE7641B9B9F7C00300B22 /* BFMAccount.h */,
+				613AE7651B9B9F7C00300B22 /* BFMAccount.m */,
+				613AE7671B9B9FAA00300B22 /* BFMAccount+Extension.h */,
+				613AE7681B9B9FAA00300B22 /* BFMAccount+Extension.m */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -519,10 +529,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				613AE7511B9B79B100300B22 /* BFMUser.m in Sources */,
 				619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */,
+				613AE7691B9B9FAA00300B22 /* BFMAccount+Extension.m in Sources */,
 				61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */,
 				613AE7551B9B7A6800300B22 /* BFMUser+Extension.m in Sources */,
+				613AE7631B9B9EDF00300B22 /* BFMUser.m in Sources */,
+				613AE7661B9B9F7C00300B22 /* BFMAccount.m in Sources */,
 				619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */,
 				61C181F41B98D95A00D5FAC8 /* BFMMappingProvider.m in Sources */,
 				619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */,
