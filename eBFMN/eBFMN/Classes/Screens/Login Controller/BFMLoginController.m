@@ -8,6 +8,8 @@
 
 #import "BFMLoginController.h"
 #import "BFMUserCredentials.h"
+#import "UIStoryboard+BFMStoryboards.h"
+#import "BFMTabBarController.h"
 
 #import <SVProgressHUD/SVProgressHUD.h>
 
@@ -66,7 +68,8 @@
             if (success) {
                 [BFMUser getInfoWithCompletitionBlock:^(BOOL success) {
                     if (success) {
-                        // Show Main Storyboard here
+                        BFMTabBarController *tabBarVC = [[UIStoryboard tabBarStoryboard] instantiateInitialViewController];
+                        [self showViewController:tabBarVC sender:self];
                     } else {
                         [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"login.wrongcredentials", @"")];
                     }

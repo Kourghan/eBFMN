@@ -46,9 +46,9 @@
                  [response setValue:rawData forKey:@"Data"];
              }
              
-             [FEMManagedObjectDeserializer objectFromRepresentation:[response copy]
-                                                            mapping:[BFMUser defaultMapping]
-                                                            context:context];
+//             [FEMManagedObjectDeserializer objectFromRepresentation:[response copy]
+//                                                            mapping:[BFMUser defaultMapping]
+//                                                            context:context];
              completition(YES);
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              completition(NO);

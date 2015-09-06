@@ -7,14 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2CB1B8401B9CC37B00AC16D2 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1B83A1B9CC37B00AC16D2 /* Dashboard.storyboard */; };
-		2CB1B8411B9CC37B00AC16D2 /* Leaderboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1B83B1B9CC37B00AC16D2 /* Leaderboard.storyboard */; };
-		2CB1B8421B9CC37B00AC16D2 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1B83C1B9CC37B00AC16D2 /* News.storyboard */; };
-		2CB1B8431B9CC37B00AC16D2 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1B83D1B9CC37B00AC16D2 /* Notifications.storyboard */; };
-		2CB1B8441B9CC37B00AC16D2 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1B83E1B9CC37B00AC16D2 /* Profile.storyboard */; };
-		2CB1B8451B9CC37B00AC16D2 /* tabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1B83F1B9CC37B00AC16D2 /* tabBar.storyboard */; };
-		2CF024EF1B9A409A009E8959 /* BFMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF024EE1B9A409A009E8959 /* BFMTabBarController.m */; };
-		2CF024F31B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF024F21B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m */; };
+<<<<<<< Updated upstream
 		613AE74E1B9B78CE00300B22 /* ebfmn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 613AE74C1B9B78CE00300B22 /* ebfmn.xcdatamodeld */; };
 		613AE7551B9B7A6800300B22 /* BFMUser+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7541B9B7A6800300B22 /* BFMUser+Extension.m */; };
 		613AE7571B9B822900300B22 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613AE7561B9B822900300B22 /* CoreData.framework */; };
@@ -22,6 +15,17 @@
 		613AE75D1B9B88B000300B22 /* BFMSysAccount+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE75C1B9B88B000300B22 /* BFMSysAccount+Extension.m */; };
 		613AE7631B9B9EDF00300B22 /* BFMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7621B9B9EDF00300B22 /* BFMUser.m */; };
 		613AE7661B9B9F7C00300B22 /* BFMAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7651B9B9F7C00300B22 /* BFMAccount.m */; };
+		613AE7691B9B9FAA00300B22 /* BFMAccount+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7681B9B9FAA00300B22 /* BFMAccount+Extension.m */; };
+=======
+		2CF024EB1B9A3DC4009E8959 /* tabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF024EA1B9A3DC4009E8959 /* tabBar.storyboard */; };
+		2CF024EF1B9A409A009E8959 /* BFMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF024EE1B9A409A009E8959 /* BFMTabBarController.m */; };
+		2CF024F31B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF024F21B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m */; };
+		2CF024F51B9A4248009E8959 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF024F41B9A4248009E8959 /* Dashboard.storyboard */; };
+		2CF024F71B9A4256009E8959 /* Leaderboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF024F61B9A4256009E8959 /* Leaderboard.storyboard */; };
+		2CF024F91B9A4272009E8959 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF024F81B9A4272009E8959 /* News.storyboard */; };
+		2CF024FB1B9A42C3009E8959 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF024FA1B9A42C3009E8959 /* Profile.storyboard */; };
+		2CF024FD1B9A430E009E8959 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF024FC1B9A430E009E8959 /* Notifications.storyboard */; };
+>>>>>>> Stashed changes
 		619E2BDC1B97564A00886893 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDB1B97564A00886893 /* main.m */; };
 		619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDE1B97564A00886893 /* AppDelegate.m */; };
 		619E2BE71B97564A00886893 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 619E2BE61B97564A00886893 /* Images.xcassets */; };
@@ -64,16 +68,7 @@
 
 /* Begin PBXFileReference section */
 		1FDF264433FB8F41C107ADD8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CB1B83A1B9CC37B00AC16D2 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Dashboard.storyboard; path = Resources/Storyboards/Dashboard.storyboard; sourceTree = "<group>"; };
-		2CB1B83B1B9CC37B00AC16D2 /* Leaderboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Leaderboard.storyboard; path = Resources/Storyboards/Leaderboard.storyboard; sourceTree = "<group>"; };
-		2CB1B83C1B9CC37B00AC16D2 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = News.storyboard; path = Resources/Storyboards/News.storyboard; sourceTree = "<group>"; };
-		2CB1B83D1B9CC37B00AC16D2 /* Notifications.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Notifications.storyboard; path = Resources/Storyboards/Notifications.storyboard; sourceTree = "<group>"; };
-		2CB1B83E1B9CC37B00AC16D2 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Resources/Storyboards/Profile.storyboard; sourceTree = "<group>"; };
-		2CB1B83F1B9CC37B00AC16D2 /* tabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = tabBar.storyboard; path = Resources/Storyboards/tabBar.storyboard; sourceTree = "<group>"; };
-		2CF024ED1B9A409A009E8959 /* BFMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMTabBarController.h; sourceTree = "<group>"; };
-		2CF024EE1B9A409A009E8959 /* BFMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMTabBarController.m; sourceTree = "<group>"; };
-		2CF024F11B9A415F009E8959 /* UIStoryboard+BFMStoryboards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+BFMStoryboards.h"; sourceTree = "<group>"; };
-		2CF024F21B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+BFMStoryboards.m"; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 		613AE74D1B9B78CE00300B22 /* ebfmn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ebfmn.xcdatamodel; sourceTree = "<group>"; };
 		613AE7531B9B7A6800300B22 /* BFMUser+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMUser+Extension.h"; path = "Classes/Models/User/BFMUser+Extension.h"; sourceTree = "<group>"; };
 		613AE7541B9B7A6800300B22 /* BFMUser+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMUser+Extension.m"; path = "Classes/Models/User/BFMUser+Extension.m"; sourceTree = "<group>"; };
@@ -88,6 +83,18 @@
 		613AE7651B9B9F7C00300B22 /* BFMAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMAccount.m; path = Classes/Models/User/BFMAccount.m; sourceTree = "<group>"; };
 		613AE7671B9B9FAA00300B22 /* BFMAccount+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMAccount+Extension.h"; path = "Classes/Models/User/BFMAccount+Extension.h"; sourceTree = "<group>"; };
 		613AE7681B9B9FAA00300B22 /* BFMAccount+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMAccount+Extension.m"; path = "Classes/Models/User/BFMAccount+Extension.m"; sourceTree = "<group>"; };
+=======
+		2CF024EA1B9A3DC4009E8959 /* tabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = tabBar.storyboard; sourceTree = "<group>"; };
+		2CF024ED1B9A409A009E8959 /* BFMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMTabBarController.h; sourceTree = "<group>"; };
+		2CF024EE1B9A409A009E8959 /* BFMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMTabBarController.m; sourceTree = "<group>"; };
+		2CF024F11B9A415F009E8959 /* UIStoryboard+BFMStoryboards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+BFMStoryboards.h"; sourceTree = "<group>"; };
+		2CF024F21B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+BFMStoryboards.m"; sourceTree = "<group>"; };
+		2CF024F41B9A4248009E8959 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		2CF024F61B9A4256009E8959 /* Leaderboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Leaderboard.storyboard; sourceTree = "<group>"; };
+		2CF024F81B9A4272009E8959 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		2CF024FA1B9A42C3009E8959 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		2CF024FC1B9A430E009E8959 /* Notifications.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 		619E2BD61B97564A00886893 /* eBFMN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eBFMN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		619E2BDA1B97564A00886893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		619E2BDB1B97564A00886893 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -293,12 +300,12 @@
 			isa = PBXGroup;
 			children = (
 				61C181FA1B98E06200D5FAC8 /* Login.storyboard */,
-				2CB1B83A1B9CC37B00AC16D2 /* Dashboard.storyboard */,
-				2CB1B83B1B9CC37B00AC16D2 /* Leaderboard.storyboard */,
-				2CB1B83C1B9CC37B00AC16D2 /* News.storyboard */,
-				2CB1B83D1B9CC37B00AC16D2 /* Notifications.storyboard */,
-				2CB1B83E1B9CC37B00AC16D2 /* Profile.storyboard */,
-				2CB1B83F1B9CC37B00AC16D2 /* tabBar.storyboard */,
+				2CF024EA1B9A3DC4009E8959 /* tabBar.storyboard */,
+				2CF024F41B9A4248009E8959 /* Dashboard.storyboard */,
+				2CF024F61B9A4256009E8959 /* Leaderboard.storyboard */,
+				2CF024F81B9A4272009E8959 /* News.storyboard */,
+				2CF024FA1B9A42C3009E8959 /* Profile.storyboard */,
+				2CF024FC1B9A430E009E8959 /* Notifications.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -508,25 +515,25 @@
 			files = (
 				61C1820C1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Bold Italic.otf in Resources */,
 				61C182151B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold.otf in Resources */,
+				2CF024EB1B9A3DC4009E8959 /* tabBar.storyboard in Resources */,
 				61C1820B1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black.otf in Resources */,
 				61C181FB1B98E06200D5FAC8 /* Login.storyboard in Resources */,
-				2CB1B8421B9CC37B00AC16D2 /* News.storyboard in Resources */,
+				2CF024F91B9A4272009E8959 /* News.storyboard in Resources */,
 				61C182111B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Light.otf in Resources */,
+				2CF024FB1B9A42C3009E8959 /* Profile.storyboard in Resources */,
 				619E2BEA1B97564A00886893 /* LaunchScreen.xib in Resources */,
-				2CB1B8441B9CC37B00AC16D2 /* Profile.storyboard in Resources */,
-				2CB1B8401B9CC37B00AC16D2 /* Dashboard.storyboard in Resources */,
+				2CF024FD1B9A430E009E8959 /* Notifications.storyboard in Resources */,
 				61C181F61B98DF7100D5FAC8 /* Localizable.strings in Resources */,
 				619E2BE71B97564A00886893 /* Images.xcassets in Resources */,
+				2CF024F71B9A4256009E8959 /* Leaderboard.storyboard in Resources */,
 				61C182101B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Light Italic.otf in Resources */,
-				2CB1B8411B9CC37B00AC16D2 /* Leaderboard.storyboard in Resources */,
 				61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */,
+				2CF024F51B9A4248009E8959 /* Dashboard.storyboard in Resources */,
 				61C1820F1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold.otf in Resources */,
 				61C182141B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold Italic.otf in Resources */,
 				61C182131B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Regular.otf in Resources */,
 				61C182161B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */,
-				2CB1B8431B9CC37B00AC16D2 /* Notifications.storyboard in Resources */,
 				61C1820E1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold Italic.otf in Resources */,
-				2CB1B8451B9CC37B00AC16D2 /* tabBar.storyboard in Resources */,
 				61C1820A1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black Italic.otf in Resources */,
 				61C182121B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Regular Italic.otf in Resources */,
 				61C1820D1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Bold.otf in Resources */,
@@ -581,7 +588,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */,
+<<<<<<< Updated upstream
+				613AE7691B9B9FAA00300B22 /* BFMAccount+Extension.m in Sources */,
+=======
 				2CF024F31B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m in Sources */,
+>>>>>>> Stashed changes
 				61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */,
 				613AE7551B9B7A6800300B22 /* BFMUser+Extension.m in Sources */,
 				613AE7631B9B9EDF00300B22 /* BFMUser.m in Sources */,
