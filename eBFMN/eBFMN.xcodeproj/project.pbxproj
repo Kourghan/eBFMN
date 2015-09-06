@@ -22,6 +22,8 @@
 		613AE75D1B9B88B000300B22 /* BFMSysAccount+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE75C1B9B88B000300B22 /* BFMSysAccount+Extension.m */; };
 		613AE7631B9B9EDF00300B22 /* BFMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7621B9B9EDF00300B22 /* BFMUser.m */; };
 		613AE7661B9B9F7C00300B22 /* BFMAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7651B9B9F7C00300B22 /* BFMAccount.m */; };
+		613AE7691B9B9FAA00300B22 /* BFMAccount+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7681B9B9FAA00300B22 /* BFMAccount+Extension.m */; };
+		613AE76D1B9C683800300B22 /* BFMLeaderboardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE76C1B9C683800300B22 /* BFMLeaderboardModel.m */; };
 		619E2BDC1B97564A00886893 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDB1B97564A00886893 /* main.m */; };
 		619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDE1B97564A00886893 /* AppDelegate.m */; };
 		619E2BE71B97564A00886893 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 619E2BE61B97564A00886893 /* Images.xcassets */; };
@@ -88,6 +90,8 @@
 		613AE7651B9B9F7C00300B22 /* BFMAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMAccount.m; path = Classes/Models/User/BFMAccount.m; sourceTree = "<group>"; };
 		613AE7671B9B9FAA00300B22 /* BFMAccount+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMAccount+Extension.h"; path = "Classes/Models/User/BFMAccount+Extension.h"; sourceTree = "<group>"; };
 		613AE7681B9B9FAA00300B22 /* BFMAccount+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMAccount+Extension.m"; path = "Classes/Models/User/BFMAccount+Extension.m"; sourceTree = "<group>"; };
+		613AE76B1B9C683800300B22 /* BFMLeaderboardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMLeaderboardModel.h; path = Classes/Models/Leaderboard/BFMLeaderboardModel.h; sourceTree = "<group>"; };
+		613AE76C1B9C683800300B22 /* BFMLeaderboardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMLeaderboardModel.m; path = Classes/Models/Leaderboard/BFMLeaderboardModel.m; sourceTree = "<group>"; };
 		619E2BD61B97564A00886893 /* eBFMN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eBFMN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		619E2BDA1B97564A00886893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		619E2BDB1B97564A00886893 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -179,6 +183,15 @@
 			path = Misc/Categories/UIStoryboard;
 			sourceTree = "<group>";
 		};
+		613AE76A1B9C671600300B22 /* Leaderboard Record */ = {
+			isa = PBXGroup;
+			children = (
+				613AE76B1B9C683800300B22 /* BFMLeaderboardModel.h */,
+				613AE76C1B9C683800300B22 /* BFMLeaderboardModel.m */,
+			);
+			name = "Leaderboard Record";
+			sourceTree = "<group>";
+		};
 		619E2BCD1B97564A00886893 = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				61C181F11B98D8D800D5FAC8 /* Mapping */,
+				613AE76A1B9C671600300B22 /* Leaderboard Record */,
 				619E2C051B977C9600886893 /* User Credentials */,
 				61C182181B98E89700D5FAC8 /* User */,
 			);
@@ -592,6 +606,7 @@
 				619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */,
 				613AE75A1B9B872C00300B22 /* BFMSysAccount.m in Sources */,
 				619E2BDC1B97564A00886893 /* main.m in Sources */,
+				613AE76D1B9C683800300B22 /* BFMLeaderboardModel.m in Sources */,
 				61C181F01B98D62700D5FAC8 /* BFMSessionManager.m in Sources */,
 				613AE75D1B9B88B000300B22 /* BFMSysAccount+Extension.m in Sources */,
 				613AE74E1B9B78CE00300B22 /* ebfmn.xcdatamodeld in Sources */,

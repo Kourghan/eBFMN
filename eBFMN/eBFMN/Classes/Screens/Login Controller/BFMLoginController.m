@@ -10,13 +10,13 @@
 #import "BFMUserCredentials.h"
 #import "UIStoryboard+BFMStoryboards.h"
 #import "BFMTabBarController.h"
+#import "BFMUser+Extension.h"
 
 #import <SVProgressHUD/SVProgressHUD.h>
 
-
 #pragma mark - DEBUG
 
-#import "BFMUser+Extension.h"
+#import "BFMLeaderboardModel.h"
 
 @interface BFMLoginController () <UITextFieldDelegate>
 
@@ -89,7 +89,9 @@
 }
 
 - (IBAction)termsButtonTapped:(id)sender {
-    
+    [BFMLeaderboardModel getLeaderboardForType:BFMLeaderboardTypePoints completition:^(BOOL success) {
+        
+    }];
 }
 
 - (IBAction)contactUsButtonTapped:(id)sender {
