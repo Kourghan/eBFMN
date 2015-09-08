@@ -2,9 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LdW-F1-2ne">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Mark Simonson - Proxima Nova Bold.otf">
+            <string>ProximaNova-Bold</string>
+            <string>ProximaNova-Bold</string>
+            <string>ProximaNova-Bold</string>
+            <string>ProximaNova-Bold</string>
             <string>ProximaNova-Bold</string>
             <string>ProximaNova-Bold</string>
             <string>ProximaNova-Bold</string>
@@ -14,6 +19,9 @@
             <string>ProximaNova-Light</string>
         </mutableArray>
         <mutableArray key="Mark Simonson - Proxima Nova Regular.otf">
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
             <string>ProximaNova-Regular</string>
             <string>ProximaNova-Regular</string>
             <string>ProximaNova-Regular</string>
@@ -47,7 +55,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="226" sectionHeaderHeight="22" sectionFooterHeight="22" id="goS-ro-MP9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="UXJ-za-D8g">
                                 <cells>
@@ -72,7 +80,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="61s-lW-ZDs" secondAttribute="trailing" id="1wh-3M-MCl"/>
                                                         <constraint firstItem="61s-lW-ZDs" firstAttribute="leading" secondItem="LlG-xN-sde" secondAttribute="trailing" id="2mM-hz-CsF"/>
@@ -97,17 +105,17 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgR-B7-vy2">
                                                                     <rect key="frame" x="18.5" y="0.0" width="9.5" height="18.5"/>
                                                                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="textColor" red="0.1137254902" green="0.30588235289999999" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttM-To-V0q">
                                                                     <rect key="frame" x="28.5" y="0.0" width="53.5" height="18.5"/>
                                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="textColor" red="0.1137254902" green="0.30588235289999999" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="0o8-RQ-YEM"/>
                                                                 <constraint firstAttribute="bottom" secondItem="ttM-To-V0q" secondAttribute="bottom" id="CvU-mP-PMt"/>
@@ -132,17 +140,17 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KG1-PS-vyz">
                                                                     <rect key="frame" x="7" y="0.0" width="9.5" height="18.5"/>
                                                                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="textColor" red="0.1137254902" green="0.30588235289999999" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="999999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clC-R1-dNb">
                                                                     <rect key="frame" x="16" y="0.0" width="53.5" height="18.5"/>
                                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="textColor" red="0.1137254902" green="0.30588235289999999" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="70" id="4PW-WN-1pW"/>
                                                                 <constraint firstItem="KG1-PS-vyz" firstAttribute="top" secondItem="oaG-tw-0yp" secondAttribute="top" id="4vw-Fk-Vti"/>
@@ -188,17 +196,17 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52W-oA-eTh">
                                                                     <rect key="frame" x="6.5" y="0.0" width="9.5" height="18.5"/>
                                                                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="textColor" red="0.1137254902" green="0.30588235289999999" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="999999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NF-xa-2G4">
                                                                     <rect key="frame" x="16" y="0.0" width="53.5" height="18.5"/>
                                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="textColor" red="0.1137254902" green="0.30588235289999999" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="0.0" green="0.54975434919999999" blue="0.77812902709999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstItem="52W-oA-eTh" firstAttribute="leading" secondItem="gwQ-OD-4lr" secondAttribute="leading" id="4fI-Gk-4yw"/>
                                                                 <constraint firstItem="3NF-xa-2G4" firstAttribute="leading" secondItem="52W-oA-eTh" secondAttribute="trailing" id="6mV-Ap-bQ1"/>
@@ -217,7 +225,7 @@
                                                             </variation>
                                                         </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="centerX" secondItem="Uil-EJ-vBs" secondAttribute="centerX" id="0JB-mT-h64"/>
                                                         <constraint firstItem="pPl-Uk-vrV" firstAttribute="leading" secondItem="3yI-D1-wdX" secondAttribute="trailing" id="0rj-uE-rkK"/>
@@ -270,6 +278,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="centerX" secondItem="ZPK-Oe-jlg" secondAttribute="centerX" id="2I8-Xs-fBz"/>
                                                 <constraint firstItem="ZPK-Oe-jlg" firstAttribute="top" secondItem="LeF-du-qb0" secondAttribute="bottom" constant="25" id="6b8-3Y-TdL"/>
@@ -288,12 +297,137 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XzV-oR-GdQ" userLabel="Clients">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XzV-oR-GdQ" id="NjN-P6-rVr">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLIENTS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPp-Is-T71">
+                                                    <rect key="frame" x="124" y="24" width="71.5" height="22"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="toQ-LP-vUx" userLabel="Main View">
+                                                    <rect key="frame" x="109" y="71" width="102" height="102"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_circle_client" translatesAutoresizingMaskIntoConstraints="NO" id="hbu-UD-XE3">
+                                                            <rect key="frame" x="8" y="8" width="86" height="86"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_circle_red_small" translatesAutoresizingMaskIntoConstraints="NO" id="Jjc-kU-WkL">
+                                                            <rect key="frame" x="73" y="0.0" width="29" height="29"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHh-G6-Rba">
+                                                            <rect key="frame" x="10" y="29" width="81.5" height="43"/>
+                                                            <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="35"/>
+                                                            <color key="textColor" red="0.11372549019607843" green="0.30588235294117649" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdf-2M-A31">
+                                                            <rect key="frame" x="78" y="8" width="18.5" height="13.5"/>
+                                                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="11"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Jjc-kU-WkL" secondAttribute="trailing" id="23e-3p-WzR"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="hbu-UD-XE3" secondAttribute="trailing" id="9at-Tf-rW9"/>
+                                                        <constraint firstItem="hbu-UD-XE3" firstAttribute="leading" secondItem="toQ-LP-vUx" secondAttribute="leadingMargin" id="ACh-LX-lr5"/>
+                                                        <constraint firstItem="Jjc-kU-WkL" firstAttribute="top" secondItem="toQ-LP-vUx" secondAttribute="top" id="BaP-TG-SfP"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="hbu-UD-XE3" secondAttribute="bottom" id="LXY-Gp-teo"/>
+                                                        <constraint firstAttribute="width" constant="102" id="Rrc-ni-nzS"/>
+                                                        <constraint firstAttribute="centerX" secondItem="FHh-G6-Rba" secondAttribute="centerX" id="VFf-YA-rnz"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Kdf-2M-A31" secondAttribute="trailing" constant="5" id="X1S-Z3-UUk"/>
+                                                        <constraint firstItem="hbu-UD-XE3" firstAttribute="top" secondItem="toQ-LP-vUx" secondAttribute="topMargin" id="ccu-mn-zS2"/>
+                                                        <constraint firstAttribute="centerY" secondItem="FHh-G6-Rba" secondAttribute="centerY" id="onb-s5-ZTK"/>
+                                                        <constraint firstItem="Kdf-2M-A31" firstAttribute="top" secondItem="toQ-LP-vUx" secondAttribute="top" constant="8" id="qW6-XD-W7a"/>
+                                                        <constraint firstAttribute="height" constant="102" id="ugF-av-UPe"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50Q-mD-3Bg" userLabel="Demo View">
+                                                    <rect key="frame" x="246" y="102" width="40" height="40"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_circle_red_big" translatesAutoresizingMaskIntoConstraints="NO" id="5wg-6m-Fvi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4g-9f-N81">
+                                                            <rect key="frame" x="2" y="11.5" width="35" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="5wg-6m-Fvi" firstAttribute="leading" secondItem="50Q-mD-3Bg" secondAttribute="leading" id="241-po-hgE"/>
+                                                        <constraint firstAttribute="height" constant="40" id="25X-BS-2XB"/>
+                                                        <constraint firstItem="5wg-6m-Fvi" firstAttribute="top" secondItem="50Q-mD-3Bg" secondAttribute="top" id="7AY-hX-VrP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="5wg-6m-Fvi" secondAttribute="bottom" id="A9X-x7-Pbz"/>
+                                                        <constraint firstAttribute="centerY" secondItem="k4g-9f-N81" secondAttribute="centerY" id="jSQ-rd-SMV"/>
+                                                        <constraint firstAttribute="width" constant="40" id="khF-LK-VrZ"/>
+                                                        <constraint firstAttribute="centerX" secondItem="k4g-9f-N81" secondAttribute="centerX" id="liO-ep-pBK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5wg-6m-Fvi" secondAttribute="trailing" id="pkF-1f-1mh"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRS-VK-2n8" userLabel="Live View">
+                                                    <rect key="frame" x="34" y="102" width="40" height="40"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_circle_blue" translatesAutoresizingMaskIntoConstraints="NO" id="ra3-7g-RJA">
+                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04e-Gd-KPn">
+                                                            <rect key="frame" x="2.5" y="11.5" width="35" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="9mW-my-e8t"/>
+                                                        <constraint firstAttribute="centerY" secondItem="04e-Gd-KPn" secondAttribute="centerY" id="YRm-Nr-SyO"/>
+                                                        <constraint firstItem="ra3-7g-RJA" firstAttribute="top" secondItem="KRS-VK-2n8" secondAttribute="top" id="aBB-bJ-44h"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ra3-7g-RJA" secondAttribute="trailing" id="eDY-Ah-gwe"/>
+                                                        <constraint firstItem="ra3-7g-RJA" firstAttribute="leading" secondItem="KRS-VK-2n8" secondAttribute="leading" id="jA0-lc-R46"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ra3-7g-RJA" secondAttribute="bottom" id="jPp-vC-fx3"/>
+                                                        <constraint firstAttribute="centerX" secondItem="04e-Gd-KPn" secondAttribute="centerX" id="oV9-Ai-pcQ"/>
+                                                        <constraint firstAttribute="height" constant="40" id="sZd-hF-dQB"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIVE ACCOUNTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0j-Sv-gng">
+                                                    <rect key="frame" x="20" y="149" width="68" height="11"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="9"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEMO ACCOUNTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKG-OW-Pss">
+                                                    <rect key="frame" x="228" y="149" width="76" height="11"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="9"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="toQ-LP-vUx" firstAttribute="leading" secondItem="KRS-VK-2n8" secondAttribute="trailing" constant="35" id="2P8-oR-bEX"/>
+                                                <constraint firstItem="50Q-mD-3Bg" firstAttribute="leading" secondItem="toQ-LP-vUx" secondAttribute="trailing" constant="35" id="3h3-53-Pqn"/>
+                                                <constraint firstAttribute="centerX" secondItem="toQ-LP-vUx" secondAttribute="centerX" id="6s6-Mb-8Ce"/>
+                                                <constraint firstItem="50Q-mD-3Bg" firstAttribute="centerX" secondItem="sKG-OW-Pss" secondAttribute="centerX" id="EHU-6Q-EGA"/>
+                                                <constraint firstItem="KPp-Is-T71" firstAttribute="top" secondItem="NjN-P6-rVr" secondAttribute="top" constant="24" id="N2L-MM-2oh"/>
+                                                <constraint firstItem="toQ-LP-vUx" firstAttribute="top" secondItem="KPp-Is-T71" secondAttribute="bottom" constant="25" id="cbu-ae-F4T"/>
+                                                <constraint firstItem="K0j-Sv-gng" firstAttribute="top" secondItem="KRS-VK-2n8" secondAttribute="bottom" constant="7" id="e7e-rF-E2U"/>
+                                                <constraint firstItem="sKG-OW-Pss" firstAttribute="top" secondItem="50Q-mD-3Bg" secondAttribute="bottom" constant="7" id="gyv-DG-4WP"/>
+                                                <constraint firstItem="50Q-mD-3Bg" firstAttribute="centerY" secondItem="KRS-VK-2n8" secondAttribute="centerY" id="kPz-Je-WX7"/>
+                                                <constraint firstAttribute="centerX" secondItem="KPp-Is-T71" secondAttribute="centerX" id="nzy-p1-SVO"/>
+                                                <constraint firstItem="toQ-LP-vUx" firstAttribute="centerY" secondItem="50Q-mD-3Bg" secondAttribute="centerY" id="rCA-4a-MnJ"/>
+                                                <constraint firstItem="KRS-VK-2n8" firstAttribute="centerX" secondItem="K0j-Sv-gng" secondAttribute="centerX" id="sEk-qN-N2o"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -311,6 +445,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_circle_blue" width="40" height="40"/>
+        <image name="ic_circle_client" width="105" height="104"/>
+        <image name="ic_circle_red_big" width="40" height="40"/>
+        <image name="ic_circle_red_small" width="29" height="29"/>
         <image name="ic_earnings" width="251" height="104"/>
     </resources>
 </document>
