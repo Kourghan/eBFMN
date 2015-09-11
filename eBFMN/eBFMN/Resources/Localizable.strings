@@ -6,5 +6,17 @@
   Copyright (c) 2015 eBFMN. All rights reserved.
 */
 
+// Login
+
 "login.wrongcredentials" = "Wrong Username or Password";
 "login.emptyfields" = "Fields Must Not Be Empty";
+
+// Dashboard
+
+"dashboard.title.earnings" = "EARNINGS";
+"dashboard.rebates" = "REBATES";
+"dashboard.commissions" = "COMMISSIONS";
+"dashboard.spread" = "SPREAD WIDERING";
+"dashboard.title.clients" = "CLIENTS";
+"dashboard.demoaccounts" = "DEMO ACCOUNTS";
+"dashboard.liveaccounts" = "LIVE ACCOUNTS";

@@ -31,7 +31,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BFMBaseDashboardCell *cell = (BFMBaseDashboardCell *)[super tableView:tableView cellForRowAtIndexPath:indexPath];
     
-    [cell bind:[BFMUser stubUser]];
+    [cell bind:[BFMUser currentUser]];
     
     return cell;
 }

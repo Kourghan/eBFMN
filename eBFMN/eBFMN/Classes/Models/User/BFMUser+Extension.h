@@ -18,6 +18,11 @@
 - (NSNumber *)commissions;
 - (NSNumber *)spread;
 
+- (NSString *)liveAccountsStringValue;
+- (NSString *)demoAccountsStringValue;
+- (NSString *)totalAccountsStringValue;
+- (NSString *)freshAccountsStringValue;
+
 + (BFMUser *)stubUser;
 
 @end

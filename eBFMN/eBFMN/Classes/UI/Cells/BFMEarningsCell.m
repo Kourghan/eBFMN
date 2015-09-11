@@ -12,6 +12,7 @@
 
 @interface BFMEarningsCell ()
 
+@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic, weak) IBOutlet UILabel *rebatesValueLabel;
 @property (nonatomic, weak) IBOutlet UILabel *rebatesLabel;
 @property (nonatomic, weak) IBOutlet UILabel *commissionsValueLabel;
@@ -27,6 +28,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    self.titleLabel.text = NSLocalizedString(@"dashboard.title.earnings", nil);
     self.rebatesLabel.text = NSLocalizedString(@"dashboard.rebates", nil);
     self.commissionsLabel.text = NSLocalizedString(@"dashboard.commissions", nil);
     self.spreadLabel.text = NSLocalizedString(@"dashboard.spread", nil);

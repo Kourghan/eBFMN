@@ -50,13 +50,40 @@
     return [NSNumber numberWithDouble:spread];
 }
 
+- (NSString *)demoAccountsStringValue {
+    if ([self.accCountDemo intValue] > 999) {
+        return @"999+";
+    } else {
+        return [self.accCountDemo stringValue];
+    }
+}
+
+- (NSString *)liveAccountsStringValue {
+    if ([self.accCountLive intValue] > 999) {
+        return @"999+";
+    } else {
+        return [self.accCountLive stringValue];
+    }
+}
+
+- (NSString *)totalAccountsStringValue {
+    int totalAccounts = [self.accCountLive intValue] + [self.accCountDemo intValue];
+    if (totalAccounts > 999) {
+        return @"999+";
+    } else {
+        return [NSString stringWithFormat:@"%i", totalAccounts];
+    }
+}
+
+- (NSString *)freshAccountsStringValue {
+    return @"0";
+}
 
 + (BFMUser *)stubUser {
     NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
     BFMUser *user = [BFMUser MR_createEntityInContext:context];
     
     user.identifier = @(-1);
-    user.accCount = @(17);
     
     return user;
 }
@@ -113,7 +140,8 @@
     [mapping addAttributesFromDictionary:@{
                                            @"identifier" : @"ID",
                                            @"name" : @"Name",
-                                           @"accCount" : @"AccCount",
+                                           @"accCountDemo" : @"AccCountDemo",
+                                           @"accCountLive" : @"AccCountLive",
                                            @"code" : @"Code",
                                            @"type" : @"Type",
                                            @"ibsCount" : @"IbsCount",

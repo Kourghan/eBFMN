@@ -305,6 +305,7 @@
                                             <outlet property="rebatesValueLabel" destination="clC-R1-dNb" id="UUu-M9-WOM"/>
                                             <outlet property="spreadLabel" destination="pPl-Uk-vrV" id="an0-bH-X0M"/>
                                             <outlet property="spreadValueLabel" destination="3NF-xa-2G4" id="iXj-av-Uqj"/>
+                                            <outlet property="titleLabel" destination="LlG-xN-sde" id="Wuq-Ne-bOx"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="clients" id="XzV-oR-GdQ" userLabel="Clients" customClass="BFMClientsCell">
@@ -334,7 +335,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdf-2M-A31">
-                                                            <rect key="frame" x="78" y="8" width="18.5" height="13.5"/>
+                                                            <rect key="frame" x="73" y="8" width="29" height="13.5"/>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="11"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -343,18 +344,27 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="Jjc-kU-WkL" secondAttribute="trailing" id="23e-3p-WzR"/>
+                                                        <constraint firstItem="Jjc-kU-WkL" firstAttribute="centerX" secondItem="Kdf-2M-A31" secondAttribute="centerX" id="5Y5-NQ-oaF"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="hbu-UD-XE3" secondAttribute="trailing" id="9at-Tf-rW9"/>
                                                         <constraint firstItem="hbu-UD-XE3" firstAttribute="leading" secondItem="toQ-LP-vUx" secondAttribute="leadingMargin" id="ACh-LX-lr5"/>
                                                         <constraint firstItem="Jjc-kU-WkL" firstAttribute="top" secondItem="toQ-LP-vUx" secondAttribute="top" id="BaP-TG-SfP"/>
+                                                        <constraint firstItem="Jjc-kU-WkL" firstAttribute="centerY" secondItem="Kdf-2M-A31" secondAttribute="centerY" id="HUB-9F-2DA"/>
                                                         <constraint firstAttribute="bottomMargin" secondItem="hbu-UD-XE3" secondAttribute="bottom" id="LXY-Gp-teo"/>
                                                         <constraint firstAttribute="width" constant="102" id="Rrc-ni-nzS"/>
                                                         <constraint firstAttribute="centerX" secondItem="FHh-G6-Rba" secondAttribute="centerX" id="VFf-YA-rnz"/>
                                                         <constraint firstAttribute="trailing" secondItem="Kdf-2M-A31" secondAttribute="trailing" constant="5" id="X1S-Z3-UUk"/>
                                                         <constraint firstItem="hbu-UD-XE3" firstAttribute="top" secondItem="toQ-LP-vUx" secondAttribute="topMargin" id="ccu-mn-zS2"/>
                                                         <constraint firstAttribute="centerY" secondItem="FHh-G6-Rba" secondAttribute="centerY" id="onb-s5-ZTK"/>
+                                                        <constraint firstItem="Jjc-kU-WkL" firstAttribute="width" secondItem="Kdf-2M-A31" secondAttribute="width" id="p1A-Rd-jeA"/>
                                                         <constraint firstItem="Kdf-2M-A31" firstAttribute="top" secondItem="toQ-LP-vUx" secondAttribute="top" constant="8" id="qW6-XD-W7a"/>
                                                         <constraint firstAttribute="height" constant="102" id="ugF-av-UPe"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="X1S-Z3-UUk"/>
+                                                            <exclude reference="qW6-XD-W7a"/>
+                                                        </mask>
+                                                    </variation>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50Q-mD-3Bg" userLabel="Demo View">
                                                     <rect key="frame" x="246" y="102" width="40" height="40"/>
@@ -363,7 +373,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4g-9f-N81">
-                                                            <rect key="frame" x="2" y="11.5" width="35" height="18.5"/>
+                                                            <rect key="frame" x="2" y="11" width="35" height="18.5"/>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -388,7 +398,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04e-Gd-KPn">
-                                                            <rect key="frame" x="2.5" y="11.5" width="35" height="18.5"/>
+                                                            <rect key="frame" x="2" y="11" width="35" height="18.5"/>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -436,6 +446,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="demoAccountCountLabel" destination="k4g-9f-N81" id="tyF-8A-Fly"/>
+                                            <outlet property="demoAccountLabel" destination="sKG-OW-Pss" id="Gd9-Tw-WDj"/>
+                                            <outlet property="freshAccountsLabel" destination="Kdf-2M-A31" id="WqI-CR-sWR"/>
+                                            <outlet property="liveAccountCountLabel" destination="04e-Gd-KPn" id="Ts3-eJ-y9A"/>
+                                            <outlet property="liveAccountLabel" destination="K0j-Sv-gng" id="dMH-Ay-5pI"/>
+                                            <outlet property="titleLabel" destination="KPp-Is-T71" id="ntb-Ef-nTQ"/>
+                                            <outlet property="totalAccountsCountLabel" destination="FHh-G6-Rba" id="sJj-Px-Cfq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
