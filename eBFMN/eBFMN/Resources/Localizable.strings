@@ -11,6 +11,10 @@
 "login.wrongcredentials" = "Wrong Username or Password";
 "login.emptyfields" = "Fields Must Not Be Empty";
 
+// Tabbar
+
+"tabbar.dashboard" = "Dashboard";
+
 // Dashboard
 
 "dashboard.title" = "DASHBOARD";
