@@ -32,6 +32,9 @@
 		613C28AC1BA31E3900B2856A /* BFMEarningsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28AB1BA31E3900B2856A /* BFMEarningsCell.m */; };
 		613C28AF1BA31E5400B2856A /* BFMClientsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28AE1BA31E5400B2856A /* BFMClientsCell.m */; };
 		613C28B61BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28B51BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m */; };
+		613C28BA1BA33FB800B2856A /* BFMNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28B91BA33FB800B2856A /* BFMNewsViewController.m */; };
+		613C28BD1BA3415C00B2856A /* BFMNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28BC1BA3415C00B2856A /* BFMNewsModel.m */; };
+		613C28C11BA3437700B2856A /* BFMNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28C01BA3437700B2856A /* BFMNewsCell.m */; };
 		619E2BDC1B97564A00886893 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDB1B97564A00886893 /* main.m */; };
 		619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDE1B97564A00886893 /* AppDelegate.m */; };
 		619E2BE71B97564A00886893 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 619E2BE61B97564A00886893 /* Images.xcassets */; };
@@ -115,6 +118,12 @@
 		613C28AE1BA31E5400B2856A /* BFMClientsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMClientsCell.m; path = Classes/UI/Cells/BFMClientsCell.m; sourceTree = "<group>"; };
 		613C28B41BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMDefaultNavagtionBarAppearance.h; path = Classes/UI/Appearance/BFMDefaultNavagtionBarAppearance.h; sourceTree = "<group>"; };
 		613C28B51BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMDefaultNavagtionBarAppearance.m; path = Classes/UI/Appearance/BFMDefaultNavagtionBarAppearance.m; sourceTree = "<group>"; };
+		613C28B81BA33FB800B2856A /* BFMNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNewsViewController.h; path = Classes/Screens/News/BFMNewsViewController.h; sourceTree = "<group>"; };
+		613C28B91BA33FB800B2856A /* BFMNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNewsViewController.m; path = Classes/Screens/News/BFMNewsViewController.m; sourceTree = "<group>"; };
+		613C28BB1BA3415C00B2856A /* BFMNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNewsModel.h; path = "Classes/Models/News Model/BFMNewsModel.h"; sourceTree = "<group>"; };
+		613C28BC1BA3415C00B2856A /* BFMNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNewsModel.m; path = "Classes/Models/News Model/BFMNewsModel.m"; sourceTree = "<group>"; };
+		613C28BF1BA3437700B2856A /* BFMNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNewsCell.h; path = Classes/UI/Cells/BFMNewsCell.h; sourceTree = "<group>"; };
+		613C28C01BA3437700B2856A /* BFMNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNewsCell.m; path = Classes/UI/Cells/BFMNewsCell.m; sourceTree = "<group>"; };
 		619E2BD61B97564A00886893 /* eBFMN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eBFMN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		619E2BDA1B97564A00886893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		619E2BDB1B97564A00886893 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -269,6 +278,8 @@
 				613C28AB1BA31E3900B2856A /* BFMEarningsCell.m */,
 				613C28AD1BA31E5400B2856A /* BFMClientsCell.h */,
 				613C28AE1BA31E5400B2856A /* BFMClientsCell.m */,
+				613C28BF1BA3437700B2856A /* BFMNewsCell.h */,
+				613C28C01BA3437700B2856A /* BFMNewsCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -280,6 +291,24 @@
 				613C28B51BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m */,
 			);
 			name = Appearance;
+			sourceTree = "<group>";
+		};
+		613C28B71BA33F9A00B2856A /* News */ = {
+			isa = PBXGroup;
+			children = (
+				613C28B81BA33FB800B2856A /* BFMNewsViewController.h */,
+				613C28B91BA33FB800B2856A /* BFMNewsViewController.m */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
+		613C28BE1BA3416800B2856A /* News Model */ = {
+			isa = PBXGroup;
+			children = (
+				613C28BB1BA3415C00B2856A /* BFMNewsModel.h */,
+				613C28BC1BA3415C00B2856A /* BFMNewsModel.m */,
+			);
+			name = "News Model";
 			sourceTree = "<group>";
 		};
 		619E2BCD1B97564A00886893 = {
@@ -344,11 +373,11 @@
 		619E2BFF1B977B8900886893 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				613C28A81BA31E0E00B2856A /* UI */,
 				619E2BDD1B97564A00886893 /* AppDelegate.h */,
 				619E2BDE1B97564A00886893 /* AppDelegate.m */,
 				619E2C021B977BA200886893 /* Screens */,
 				619E2C011B977B9C00886893 /* Models */,
+				613C28A81BA31E0E00B2856A /* UI */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -369,6 +398,7 @@
 		619E2C011B977B9C00886893 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				613C28BE1BA3416800B2856A /* News Model */,
 				613AE76A1B9C671600300B22 /* Leaderboard Record */,
 				619E2C051B977C9600886893 /* User Credentials */,
 				61C182181B98E89700D5FAC8 /* User */,
@@ -379,6 +409,7 @@
 		619E2C021B977BA200886893 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				613C28B71BA33F9A00B2856A /* News */,
 				613C28A11BA31AAB00B2856A /* Dashboard */,
 				2CF024EC1B9A3E5A009E8959 /* tabBar */,
 				619E2C031B977BB000886893 /* Login Screen */,
@@ -678,6 +709,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */,
+				613C28BD1BA3415C00B2856A /* BFMNewsModel.m in Sources */,
 				2CF024F31B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m in Sources */,
 				61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */,
 				613C28B61BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m in Sources */,
@@ -688,6 +720,7 @@
 				613AE7731B9CCC9600300B22 /* BFMAccount+Extension.m in Sources */,
 				2CF024EF1B9A409A009E8959 /* BFMTabBarController.m in Sources */,
 				613AE7721B9CC8CA00300B22 /* NINavigationAppearance.m in Sources */,
+				613C28BA1BA33FB800B2856A /* BFMNewsViewController.m in Sources */,
 				613C28AC1BA31E3900B2856A /* BFMEarningsCell.m in Sources */,
 				613AE7811B9CD04400300B22 /* ELAXIBAppearance.m in Sources */,
 				619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */,
@@ -701,6 +734,7 @@
 				613AE7801B9CD04400300B22 /* ELAAppearance.m in Sources */,
 				613AE74E1B9B78CE00300B22 /* ebfmn.xcdatamodeld in Sources */,
 				619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */,
+				613C28C11BA3437700B2856A /* BFMNewsCell.m in Sources */,
 				613C28A71BA31D9C00B2856A /* BFMBaseDashboardCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
