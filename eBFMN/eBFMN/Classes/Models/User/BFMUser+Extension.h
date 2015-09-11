@@ -10,9 +10,30 @@
 
 @class FEMMapping;
 
-@interface BFMUser (Extension)
+@interface BFMUser (Entity)
+
++ (BFMUser *)currentUser;
+
+- (NSNumber *)rebates;
+- (NSNumber *)commissions;
+- (NSNumber *)spread;
+
+- (NSString *)liveAccountsStringValue;
+- (NSString *)demoAccountsStringValue;
+- (NSString *)totalAccountsStringValue;
+- (NSString *)freshAccountsStringValue;
+
++ (BFMUser *)stubUser;
+
+@end
+
+@interface BFMUser (Network)
 
 + (void)getInfoWithCompletitionBlock:(void (^)(BOOL success))completition;
+
+@end
+
+@interface BFMUser (Mapping)
 
 + (FEMMapping *)defaultMapping;
 

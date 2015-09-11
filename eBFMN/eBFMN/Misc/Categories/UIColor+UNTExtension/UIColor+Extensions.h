@@ -12,5 +12,7 @@
 + (UIColor *)colorWithR:(uint)r G:(uint)g B:(uint)b A:(uint)a;
 + (UIColor *)colorWithR:(uint)r G:(uint)g B:(uint)b;
 
++ (UIColor *)bfm_defaultNavigationBlue;
+
 @end
 

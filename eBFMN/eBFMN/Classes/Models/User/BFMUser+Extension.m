@@ -16,7 +16,81 @@
 #import <FastEasyMapping/FastEasyMapping.h>
 #import <MagicalRecord/MagicalRecord.h>
 
-@implementation BFMUser (Extension)
+@implementation BFMUser (Entity)
+
++ (BFMUser *)currentUser {
+    NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+    return [BFMUser MR_findFirstInContext:context];
+}
+
+- (NSNumber *)rebates {
+    double rebates = 0.f;
+    for (BFMSysAccount *sysAcc in self.sysAccounts) {
+        rebates += [sysAcc.rebate doubleValue];
+    }
+    
+    return [NSNumber numberWithDouble:rebates];
+}
+
+- (NSNumber *)commissions {
+    double commission = 0.f;
+    for (BFMSysAccount *sysAcc in self.sysAccounts) {
+        commission += [sysAcc.commission doubleValue];
+    }
+    
+    return [NSNumber numberWithDouble:commission];
+}
+
+- (NSNumber *)spread {
+    double spread = 0.f;
+    for (BFMSysAccount *sysAcc in self.sysAccounts) {
+        spread += [sysAcc.spread doubleValue];
+    }
+    
+    return [NSNumber numberWithDouble:spread];
+}
+
+- (NSString *)demoAccountsStringValue {
+    if ([self.accCountDemo intValue] > 999) {
+        return @"999+";
+    } else {
+        return [self.accCountDemo stringValue];
+    }
+}
+
+- (NSString *)liveAccountsStringValue {
+    if ([self.accCountLive intValue] > 999) {
+        return @"999+";
+    } else {
+        return [self.accCountLive stringValue];
+    }
+}
+
+- (NSString *)totalAccountsStringValue {
+    int totalAccounts = [self.accCountLive intValue] + [self.accCountDemo intValue];
+    if (totalAccounts > 999) {
+        return @"999+";
+    } else {
+        return [NSString stringWithFormat:@"%i", totalAccounts];
+    }
+}
+
+- (NSString *)freshAccountsStringValue {
+    return @"0";
+}
+
++ (BFMUser *)stubUser {
+    NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+    BFMUser *user = [BFMUser MR_createEntityInContext:context];
+    
+    user.identifier = @(-1);
+    
+    return user;
+}
+
+@end
+
+@implementation BFMUser (Network)
 
 + (void)getInfoWithCompletitionBlock:(void (^)(BOOL success))completition {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
@@ -55,6 +129,10 @@
          }];
 }
 
+@end
+
+@implementation BFMUser (Mapping)
+
 + (FEMMapping *)defaultMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"BFMUser" rootPath:@"Data"];
     
@@ -62,7 +140,8 @@
     [mapping addAttributesFromDictionary:@{
                                            @"identifier" : @"ID",
                                            @"name" : @"Name",
-                                           @"accCount" : @"AccCount",
+                                           @"accCountDemo" : @"AccCountDemo",
+                                           @"accCountLive" : @"AccCountLive",
                                            @"code" : @"Code",
                                            @"type" : @"Type",
                                            @"ibsCount" : @"IbsCount",
