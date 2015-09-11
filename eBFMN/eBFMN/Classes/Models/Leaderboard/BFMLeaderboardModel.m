@@ -21,7 +21,6 @@
     [manager GET:@"Reports/GetIBCompetitionResult"
       parameters:@{@"guid" : sessionKey, @"reportType" : @(type)}
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-             
              completition(YES);
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              completition(NO);

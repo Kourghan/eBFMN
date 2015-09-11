@@ -10,9 +10,25 @@
 
 @class FEMMapping;
 
-@interface BFMUser (Extension)
+@interface BFMUser (Entity)
+
++ (BFMUser *)currentUser;
+
+- (NSNumber *)rebates;
+- (NSNumber *)commissions;
+- (NSNumber *)spread;
+
++ (BFMUser *)stubUser;
+
+@end
+
+@interface BFMUser (Network)
 
 + (void)getInfoWithCompletitionBlock:(void (^)(BOOL success))completition;
+
+@end
+
+@interface BFMUser (Mapping)
 
 + (FEMMapping *)defaultMapping;
 

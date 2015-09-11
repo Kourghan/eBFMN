@@ -16,7 +16,54 @@
 #import <FastEasyMapping/FastEasyMapping.h>
 #import <MagicalRecord/MagicalRecord.h>
 
-@implementation BFMUser (Extension)
+@implementation BFMUser (Entity)
+
++ (BFMUser *)currentUser {
+    NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+    return [BFMUser MR_findFirstInContext:context];
+}
+
+- (NSNumber *)rebates {
+    double rebates = 0.f;
+    for (BFMSysAccount *sysAcc in self.sysAccounts) {
+        rebates += [sysAcc.rebate doubleValue];
+    }
+    
+    return [NSNumber numberWithDouble:rebates];
+}
+
+- (NSNumber *)commissions {
+    double commission = 0.f;
+    for (BFMSysAccount *sysAcc in self.sysAccounts) {
+        commission += [sysAcc.commission doubleValue];
+    }
+    
+    return [NSNumber numberWithDouble:commission];
+}
+
+- (NSNumber *)spread {
+    double spread = 0.f;
+    for (BFMSysAccount *sysAcc in self.sysAccounts) {
+        spread += [sysAcc.spread doubleValue];
+    }
+    
+    return [NSNumber numberWithDouble:spread];
+}
+
+
++ (BFMUser *)stubUser {
+    NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+    BFMUser *user = [BFMUser MR_createEntityInContext:context];
+    
+    user.identifier = @(-1);
+    user.accCount = @(17);
+    
+    return user;
+}
+
+@end
+
+@implementation BFMUser (Network)
 
 + (void)getInfoWithCompletitionBlock:(void (^)(BOOL success))completition {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
@@ -54,6 +101,10 @@
              completition(NO);
          }];
 }
+
+@end
+
+@implementation BFMUser (Mapping)
 
 + (FEMMapping *)defaultMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"BFMUser" rootPath:@"Data"];

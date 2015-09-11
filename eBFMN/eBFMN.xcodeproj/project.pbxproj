@@ -27,6 +27,10 @@
 		613AE7731B9CCC9600300B22 /* BFMAccount+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7681B9B9FAA00300B22 /* BFMAccount+Extension.m */; };
 		613AE7801B9CD04400300B22 /* ELAAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE77D1B9CD04400300B22 /* ELAAppearance.m */; };
 		613AE7811B9CD04400300B22 /* ELAXIBAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE77F1B9CD04400300B22 /* ELAXIBAppearance.m */; };
+		613C28A41BA31AF800B2856A /* BFMDashboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28A31BA31AF800B2856A /* BFMDashboardController.m */; };
+		613C28A71BA31D9C00B2856A /* BFMBaseDashboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28A61BA31D9C00B2856A /* BFMBaseDashboardCell.m */; };
+		613C28AC1BA31E3900B2856A /* BFMEarningsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28AB1BA31E3900B2856A /* BFMEarningsCell.m */; };
+		613C28AF1BA31E5400B2856A /* BFMClientsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28AE1BA31E5400B2856A /* BFMClientsCell.m */; };
 		619E2BDC1B97564A00886893 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDB1B97564A00886893 /* main.m */; };
 		619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDE1B97564A00886893 /* AppDelegate.m */; };
 		619E2BE71B97564A00886893 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 619E2BE61B97564A00886893 /* Images.xcassets */; };
@@ -100,6 +104,14 @@
 		613AE77D1B9CD04400300B22 /* ELAAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELAAppearance.m; path = Lib/ELAAppearance/ELAAppearance.m; sourceTree = "<group>"; };
 		613AE77E1B9CD04400300B22 /* ELAXIBAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELAXIBAppearance.h; path = Lib/ELAAppearance/ELAXIBAppearance.h; sourceTree = "<group>"; };
 		613AE77F1B9CD04400300B22 /* ELAXIBAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELAXIBAppearance.m; path = Lib/ELAAppearance/ELAXIBAppearance.m; sourceTree = "<group>"; };
+		613C28A21BA31AF800B2856A /* BFMDashboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMDashboardController.h; path = Classes/Screens/Dashboard/BFMDashboardController.h; sourceTree = "<group>"; };
+		613C28A31BA31AF800B2856A /* BFMDashboardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMDashboardController.m; path = Classes/Screens/Dashboard/BFMDashboardController.m; sourceTree = "<group>"; };
+		613C28A51BA31D9C00B2856A /* BFMBaseDashboardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMBaseDashboardCell.h; path = Classes/UI/Cells/BFMBaseDashboardCell.h; sourceTree = "<group>"; };
+		613C28A61BA31D9C00B2856A /* BFMBaseDashboardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMBaseDashboardCell.m; path = Classes/UI/Cells/BFMBaseDashboardCell.m; sourceTree = "<group>"; };
+		613C28AA1BA31E3900B2856A /* BFMEarningsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMEarningsCell.h; path = Classes/UI/Cells/BFMEarningsCell.h; sourceTree = "<group>"; };
+		613C28AB1BA31E3900B2856A /* BFMEarningsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMEarningsCell.m; path = Classes/UI/Cells/BFMEarningsCell.m; sourceTree = "<group>"; };
+		613C28AD1BA31E5400B2856A /* BFMClientsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMClientsCell.h; path = Classes/UI/Cells/BFMClientsCell.h; sourceTree = "<group>"; };
+		613C28AE1BA31E5400B2856A /* BFMClientsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMClientsCell.m; path = Classes/UI/Cells/BFMClientsCell.m; sourceTree = "<group>"; };
 		619E2BD61B97564A00886893 /* eBFMN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eBFMN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		619E2BDA1B97564A00886893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		619E2BDB1B97564A00886893 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -227,6 +239,36 @@
 			name = ELAppearance;
 			sourceTree = "<group>";
 		};
+		613C28A11BA31AAB00B2856A /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				613C28A21BA31AF800B2856A /* BFMDashboardController.h */,
+				613C28A31BA31AF800B2856A /* BFMDashboardController.m */,
+			);
+			name = Dashboard;
+			sourceTree = "<group>";
+		};
+		613C28A81BA31E0E00B2856A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				613C28A91BA31E1900B2856A /* Cells */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		613C28A91BA31E1900B2856A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				613C28A51BA31D9C00B2856A /* BFMBaseDashboardCell.h */,
+				613C28A61BA31D9C00B2856A /* BFMBaseDashboardCell.m */,
+				613C28AA1BA31E3900B2856A /* BFMEarningsCell.h */,
+				613C28AB1BA31E3900B2856A /* BFMEarningsCell.m */,
+				613C28AD1BA31E5400B2856A /* BFMClientsCell.h */,
+				613C28AE1BA31E5400B2856A /* BFMClientsCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		619E2BCD1B97564A00886893 = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +331,7 @@
 		619E2BFF1B977B8900886893 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				613C28A81BA31E0E00B2856A /* UI */,
 				619E2BDD1B97564A00886893 /* AppDelegate.h */,
 				619E2BDE1B97564A00886893 /* AppDelegate.m */,
 				619E2C021B977BA200886893 /* Screens */,
@@ -323,6 +366,7 @@
 		619E2C021B977BA200886893 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				613C28A11BA31AAB00B2856A /* Dashboard */,
 				2CF024EC1B9A3E5A009E8959 /* tabBar */,
 				619E2C031B977BB000886893 /* Login Screen */,
 			);
@@ -630,16 +674,20 @@
 				613AE7731B9CCC9600300B22 /* BFMAccount+Extension.m in Sources */,
 				2CF024EF1B9A409A009E8959 /* BFMTabBarController.m in Sources */,
 				613AE7721B9CC8CA00300B22 /* NINavigationAppearance.m in Sources */,
+				613C28AC1BA31E3900B2856A /* BFMEarningsCell.m in Sources */,
 				613AE7811B9CD04400300B22 /* ELAXIBAppearance.m in Sources */,
 				619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */,
 				613AE75A1B9B872C00300B22 /* BFMSysAccount.m in Sources */,
 				619E2BDC1B97564A00886893 /* main.m in Sources */,
 				613AE76D1B9C683800300B22 /* BFMLeaderboardModel.m in Sources */,
 				61C181F01B98D62700D5FAC8 /* BFMSessionManager.m in Sources */,
+				613C28A41BA31AF800B2856A /* BFMDashboardController.m in Sources */,
+				613C28AF1BA31E5400B2856A /* BFMClientsCell.m in Sources */,
 				613AE75D1B9B88B000300B22 /* BFMSysAccount+Extension.m in Sources */,
 				613AE7801B9CD04400300B22 /* ELAAppearance.m in Sources */,
 				613AE74E1B9B78CE00300B22 /* ebfmn.xcdatamodeld in Sources */,
 				619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */,
+				613C28A71BA31D9C00B2856A /* BFMBaseDashboardCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
