@@ -31,6 +31,7 @@
 		613C28A71BA31D9C00B2856A /* BFMBaseDashboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28A61BA31D9C00B2856A /* BFMBaseDashboardCell.m */; };
 		613C28AC1BA31E3900B2856A /* BFMEarningsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28AB1BA31E3900B2856A /* BFMEarningsCell.m */; };
 		613C28AF1BA31E5400B2856A /* BFMClientsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28AE1BA31E5400B2856A /* BFMClientsCell.m */; };
+		613C28B61BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28B51BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m */; };
 		619E2BDC1B97564A00886893 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDB1B97564A00886893 /* main.m */; };
 		619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDE1B97564A00886893 /* AppDelegate.m */; };
 		619E2BE71B97564A00886893 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 619E2BE61B97564A00886893 /* Images.xcassets */; };
@@ -112,6 +113,8 @@
 		613C28AB1BA31E3900B2856A /* BFMEarningsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMEarningsCell.m; path = Classes/UI/Cells/BFMEarningsCell.m; sourceTree = "<group>"; };
 		613C28AD1BA31E5400B2856A /* BFMClientsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMClientsCell.h; path = Classes/UI/Cells/BFMClientsCell.h; sourceTree = "<group>"; };
 		613C28AE1BA31E5400B2856A /* BFMClientsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMClientsCell.m; path = Classes/UI/Cells/BFMClientsCell.m; sourceTree = "<group>"; };
+		613C28B41BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMDefaultNavagtionBarAppearance.h; path = Classes/UI/Appearance/BFMDefaultNavagtionBarAppearance.h; sourceTree = "<group>"; };
+		613C28B51BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMDefaultNavagtionBarAppearance.m; path = Classes/UI/Appearance/BFMDefaultNavagtionBarAppearance.m; sourceTree = "<group>"; };
 		619E2BD61B97564A00886893 /* eBFMN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eBFMN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		619E2BDA1B97564A00886893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		619E2BDB1B97564A00886893 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -251,6 +254,7 @@
 		613C28A81BA31E0E00B2856A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				613C28B31BA331E200B2856A /* Appearance */,
 				613C28A91BA31E1900B2856A /* Cells */,
 			);
 			name = UI;
@@ -267,6 +271,15 @@
 				613C28AE1BA31E5400B2856A /* BFMClientsCell.m */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		613C28B31BA331E200B2856A /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				613C28B41BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.h */,
+				613C28B51BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m */,
+			);
+			name = Appearance;
 			sourceTree = "<group>";
 		};
 		619E2BCD1B97564A00886893 = {
@@ -667,6 +680,7 @@
 				619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */,
 				2CF024F31B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m in Sources */,
 				61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */,
+				613C28B61BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m in Sources */,
 				613AE7551B9B7A6800300B22 /* BFMUser+Extension.m in Sources */,
 				613AE7631B9B9EDF00300B22 /* BFMUser.m in Sources */,
 				613AE7661B9B9F7C00300B22 /* BFMAccount.m in Sources */,

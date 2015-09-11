@@ -18,5 +18,9 @@
     return [self colorWithR:r G:g B:b A:255];
 }
 
++ (UIColor *)bfm_defaultNavigationBlue {
+    return [self colorWithR:8 G:69 B:110];
+}
+
 @end
 

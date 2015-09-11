@@ -13,6 +13,9 @@
 #import "BFMClientsCell.h"
 #import "BFMUser+Extension.h"
 
+#import "NINavigationAppearance.h"
+#import "BFMDefaultNavagtionBarAppearance.h"
+
 @interface BFMDashboardController ()
 
 @end
@@ -24,6 +27,21 @@
     
     [self.tableView registerClass:[BFMEarningsCell class] forCellReuseIdentifier:@"earnings"];
     [self.tableView registerClass:[BFMClientsCell class] forCellReuseIdentifier:@"clients"];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [NINavigationAppearance pushAppearanceForNavigationController:self.navigationController];
+    
+    self.navigationItem.title = NSLocalizedString(@"dashboard.title", nil);
+    [BFMDefaultNavagtionBarAppearance applyTo:self.navigationController.navigationBar];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [NINavigationAppearance popAppearanceForNavigationController:self.navigationController];
 }
 
 #pragma mark - Table view data source

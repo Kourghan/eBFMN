@@ -13,6 +13,7 @@
 
 // Dashboard
 
+"dashboard.title" = "DASHBOARD";
 "dashboard.title.earnings" = "EARNINGS";
 "dashboard.rebates" = "REBATES";
 "dashboard.commissions" = "COMMISSIONS";
