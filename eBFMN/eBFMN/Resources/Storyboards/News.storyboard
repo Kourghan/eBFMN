@@ -3,6 +3,11 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Mark Simonson - Proxima Nova Semibold.otf">
+            <string>ProximaNova-Semibold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="efC-gR-J8f">
@@ -33,7 +38,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OJ6-x9-RWU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OJ6-x9-RWU">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -42,6 +47,51 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lac-e2-i2Q" id="ntc-cQ-zXW">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="{title}" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsD-FM-XmW">
+                                                    <rect key="frame" x="15" y="22" width="31.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
+                                                    <color key="textColor" red="0.031372549019607843" green="0.27058823529411763" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day, Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FM0-4L-FJD">
+                                                    <rect key="frame" x="77.5" y="51.5" width="39.5" height="10.5"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="9"/>
+                                                    <color key="textColor" red="0.39607843139999999" green="0.39607843139999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8a-TK-UhQ">
+                                                    <rect key="frame" x="0.0" y="84" width="320" height="1"/>
+                                                    <color key="backgroundColor" red="0.80392156862745101" green="0.80392156862745101" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="CRR-3n-iMp"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@BMFNNews, " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fe-xA-TlV">
+                                                    <rect key="frame" x="15" y="51.5" width="62.5" height="10.5"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="9"/>
+                                                    <color key="textColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="h8a-TK-UhQ" secondAttribute="trailing" id="ClJ-2B-txO"/>
+                                                <constraint firstItem="9fe-xA-TlV" firstAttribute="top" secondItem="jsD-FM-XmW" secondAttribute="bottom" constant="10" id="DHf-vn-8A6"/>
+                                                <constraint firstItem="9fe-xA-TlV" firstAttribute="baseline" secondItem="FM0-4L-FJD" secondAttribute="baseline" id="DvO-Uz-N3k"/>
+                                                <constraint firstItem="jsD-FM-XmW" firstAttribute="leading" secondItem="9fe-xA-TlV" secondAttribute="leading" id="GGJ-50-G2K"/>
+                                                <constraint firstItem="FM0-4L-FJD" firstAttribute="leading" secondItem="9fe-xA-TlV" secondAttribute="trailing" id="NFL-Vu-J1I"/>
+                                                <constraint firstItem="jsD-FM-XmW" firstAttribute="top" secondItem="ntc-cQ-zXW" secondAttribute="top" constant="22" id="Stu-ps-yRM"/>
+                                                <constraint firstItem="h8a-TK-UhQ" firstAttribute="top" secondItem="9fe-xA-TlV" secondAttribute="bottom" constant="22" id="WT6-Aq-6H6"/>
+                                                <constraint firstAttribute="bottom" secondItem="h8a-TK-UhQ" secondAttribute="bottom" id="Ybi-bk-rch"/>
+                                                <constraint firstItem="h8a-TK-UhQ" firstAttribute="leading" secondItem="9fe-xA-TlV" secondAttribute="trailing" id="brZ-9e-ti9"/>
+                                                <constraint firstItem="jsD-FM-XmW" firstAttribute="leading" secondItem="ntc-cQ-zXW" secondAttribute="leading" constant="15" id="jAk-A7-lCK"/>
+                                                <constraint firstItem="h8a-TK-UhQ" firstAttribute="leading" secondItem="ntc-cQ-zXW" secondAttribute="leading" id="l7m-du-Wie"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="brZ-9e-ti9"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
