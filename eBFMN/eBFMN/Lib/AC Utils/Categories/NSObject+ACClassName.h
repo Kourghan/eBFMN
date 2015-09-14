@@ -1,0 +1,13 @@
+//
+// Created by Aleksey on 20.03.14.
+// Copyright (c) 2014 Aleksey Chernish. All rights reserved.
+
+#import <UIKit/UIKit.h>
+
+@interface NSObject (ACClassName)
+
+- (NSString *)ac_className;
++ (NSString *)ac_name;
++ (NSString *)ac_reuseIdentifier;
+
+@end

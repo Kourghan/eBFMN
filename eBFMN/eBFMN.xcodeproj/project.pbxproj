@@ -61,6 +61,31 @@
 		61C182151B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C182071B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold.otf */; };
 		61C182161B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C182081B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf */; };
 		61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C182091B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf */; };
+		61FD3C881BA7021B00F4CEFB /* NSObject+ACClassName.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3C811BA7021B00F4CEFB /* NSObject+ACClassName.m */; };
+		61FD3C891BA7021B00F4CEFB /* UIView+ACAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3C831BA7021B00F4CEFB /* UIView+ACAnimation.m */; };
+		61FD3C8A1BA7021B00F4CEFB /* UIView+ACFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3C851BA7021B00F4CEFB /* UIView+ACFrames.m */; };
+		61FD3C8B1BA7021B00F4CEFB /* UIView+ACNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3C871BA7021B00F4CEFB /* UIView+ACNib.m */; };
+		61FD3CD81BA7025F00F4CEFB /* ACArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3C931BA7025F00F4CEFB /* ACArrayDataSource.m */; };
+		61FD3CD91BA7025F00F4CEFB /* ACComponentsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3C961BA7025F00F4CEFB /* ACComponentsDataSource.m */; };
+		61FD3CDA1BA7025F00F4CEFB /* ACComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3C991BA7025F00F4CEFB /* ACComponent.m */; };
+		61FD3CDB1BA7025F00F4CEFB /* ACFetchedResultsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3C9C1BA7025F00F4CEFB /* ACFetchedResultsDataSource.m */; };
+		61FD3CDC1BA7025F00F4CEFB /* ACSegmentedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3C9F1BA7025F00F4CEFB /* ACSegmentedDataSource.m */; };
+		61FD3CDD1BA7025F00F4CEFB /* UIActionSheet+ACBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CA71BA7025F00F4CEFB /* UIActionSheet+ACBlocks.m */; };
+		61FD3CDE1BA7025F00F4CEFB /* ACActionSheetDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CAA1BA7025F00F4CEFB /* ACActionSheetDelegate.m */; };
+		61FD3CDF1BA7025F00F4CEFB /* UIAlertView+ACBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CAE1BA7025F00F4CEFB /* UIAlertView+ACBlocks.m */; };
+		61FD3CE01BA7025F00F4CEFB /* ACAlertViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CB11BA7025F00F4CEFB /* ACAlertViewDelegate.m */; };
+		61FD3CE11BA7025F00F4CEFB /* ACCollectionViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CB51BA7025F00F4CEFB /* ACCollectionViewAdapter.m */; };
+		61FD3CE21BA7025F00F4CEFB /* UICollectionView+ACAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CB81BA7025F00F4CEFB /* UICollectionView+ACAdapter.m */; };
+		61FD3CE31BA7025F00F4CEFB /* ACEndlessPagingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CBD1BA7025F00F4CEFB /* ACEndlessPagingController.m */; };
+		61FD3CE41BA7025F00F4CEFB /* UIViewController+ACPageNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CC01BA7025F00F4CEFB /* UIViewController+ACPageNumber.m */; };
+		61FD3CE51BA7025F00F4CEFB /* ACPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CC31BA7025F00F4CEFB /* ACPageController.m */; };
+		61FD3CE61BA7025F00F4CEFB /* UIPageViewController+ACPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CC61BA7025F00F4CEFB /* UIPageViewController+ACPageController.m */; };
+		61FD3CE71BA7025F00F4CEFB /* ACPickerViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CCA1BA7025F00F4CEFB /* ACPickerViewAdapter.m */; };
+		61FD3CE81BA7025F00F4CEFB /* UIPickerView+ACAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CCD1BA7025F00F4CEFB /* UIPickerView+ACAdapter.m */; };
+		61FD3CE91BA7025F00F4CEFB /* ACTableViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CD11BA7025F00F4CEFB /* ACTableViewAdapter.m */; };
+		61FD3CEA1BA7025F00F4CEFB /* UITableView+ACAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CD41BA7025F00F4CEFB /* UITableView+ACAdapter.m */; };
+		61FD3CEB1BA7025F00F4CEFB /* DAValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CD71BA7025F00F4CEFB /* DAValidator.m */; };
+		61FD3CEE1BA7036700F4CEFB /* BFMNewsRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CED1BA7036700F4CEFB /* BFMNewsRecord.m */; };
 		7017DF46620972E10C2C25AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDF264433FB8F41C107ADD8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +185,62 @@
 		61C182071B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Semibold.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Semibold.otf"; sourceTree = "<group>"; };
 		61C182081B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Thin Italic.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Thin Italic.otf"; sourceTree = "<group>"; };
 		61C182091B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Thin.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Thin.otf"; sourceTree = "<group>"; };
+		61FD3C7F1BA7021200F4CEFB /* ACUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACUtils.h; path = "Lib/AC Utils/ACUtils.h"; sourceTree = "<group>"; };
+		61FD3C801BA7021B00F4CEFB /* NSObject+ACClassName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+ACClassName.h"; path = "Lib/AC Utils/Categories/NSObject+ACClassName.h"; sourceTree = "<group>"; };
+		61FD3C811BA7021B00F4CEFB /* NSObject+ACClassName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ACClassName.m"; path = "Lib/AC Utils/Categories/NSObject+ACClassName.m"; sourceTree = "<group>"; };
+		61FD3C821BA7021B00F4CEFB /* UIView+ACAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+ACAnimation.h"; path = "Lib/AC Utils/Categories/UIView+ACAnimation.h"; sourceTree = "<group>"; };
+		61FD3C831BA7021B00F4CEFB /* UIView+ACAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+ACAnimation.m"; path = "Lib/AC Utils/Categories/UIView+ACAnimation.m"; sourceTree = "<group>"; };
+		61FD3C841BA7021B00F4CEFB /* UIView+ACFrames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+ACFrames.h"; path = "Lib/AC Utils/Categories/UIView+ACFrames.h"; sourceTree = "<group>"; };
+		61FD3C851BA7021B00F4CEFB /* UIView+ACFrames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+ACFrames.m"; path = "Lib/AC Utils/Categories/UIView+ACFrames.m"; sourceTree = "<group>"; };
+		61FD3C861BA7021B00F4CEFB /* UIView+ACNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+ACNib.h"; path = "Lib/AC Utils/Categories/UIView+ACNib.h"; sourceTree = "<group>"; };
+		61FD3C871BA7021B00F4CEFB /* UIView+ACNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+ACNib.m"; path = "Lib/AC Utils/Categories/UIView+ACNib.m"; sourceTree = "<group>"; };
+		61FD3C8C1BA7022500F4CEFB /* ACObjectConsuming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACObjectConsuming.h; path = "Lib/AC Utils/Protocols/ACObjectConsuming.h"; sourceTree = "<group>"; };
+		61FD3C8D1BA7022500F4CEFB /* ACTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACTableViewCell.h; path = "Lib/AC Utils/Protocols/ACTableViewCell.h"; sourceTree = "<group>"; };
+		61FD3C8E1BA7022500F4CEFB /* ACTableViewHeaderFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACTableViewHeaderFooter.h; path = "Lib/AC Utils/Protocols/ACTableViewHeaderFooter.h"; sourceTree = "<group>"; };
+		61FD3C921BA7025F00F4CEFB /* ACArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACArrayDataSource.h; sourceTree = "<group>"; };
+		61FD3C931BA7025F00F4CEFB /* ACArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACArrayDataSource.m; sourceTree = "<group>"; };
+		61FD3C951BA7025F00F4CEFB /* ACComponentsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACComponentsDataSource.h; sourceTree = "<group>"; };
+		61FD3C961BA7025F00F4CEFB /* ACComponentsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACComponentsDataSource.m; sourceTree = "<group>"; };
+		61FD3C981BA7025F00F4CEFB /* ACComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACComponent.h; sourceTree = "<group>"; };
+		61FD3C991BA7025F00F4CEFB /* ACComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACComponent.m; sourceTree = "<group>"; };
+		61FD3C9B1BA7025F00F4CEFB /* ACFetchedResultsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACFetchedResultsDataSource.h; sourceTree = "<group>"; };
+		61FD3C9C1BA7025F00F4CEFB /* ACFetchedResultsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACFetchedResultsDataSource.m; sourceTree = "<group>"; };
+		61FD3C9E1BA7025F00F4CEFB /* ACSegmentedDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACSegmentedDataSource.h; sourceTree = "<group>"; };
+		61FD3C9F1BA7025F00F4CEFB /* ACSegmentedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACSegmentedDataSource.m; sourceTree = "<group>"; };
+		61FD3CA11BA7025F00F4CEFB /* ACDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACDataSource.h; sourceTree = "<group>"; };
+		61FD3CA31BA7025F00F4CEFB /* ACDataSourceDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACDataSourceDefinitions.h; sourceTree = "<group>"; };
+		61FD3CA61BA7025F00F4CEFB /* UIActionSheet+ACBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+ACBlocks.h"; sourceTree = "<group>"; };
+		61FD3CA71BA7025F00F4CEFB /* UIActionSheet+ACBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+ACBlocks.m"; sourceTree = "<group>"; };
+		61FD3CA91BA7025F00F4CEFB /* ACActionSheetDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACActionSheetDelegate.h; sourceTree = "<group>"; };
+		61FD3CAA1BA7025F00F4CEFB /* ACActionSheetDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACActionSheetDelegate.m; sourceTree = "<group>"; };
+		61FD3CAD1BA7025F00F4CEFB /* UIAlertView+ACBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+ACBlocks.h"; sourceTree = "<group>"; };
+		61FD3CAE1BA7025F00F4CEFB /* UIAlertView+ACBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+ACBlocks.m"; sourceTree = "<group>"; };
+		61FD3CB01BA7025F00F4CEFB /* ACAlertViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAlertViewDelegate.h; sourceTree = "<group>"; };
+		61FD3CB11BA7025F00F4CEFB /* ACAlertViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAlertViewDelegate.m; sourceTree = "<group>"; };
+		61FD3CB41BA7025F00F4CEFB /* ACCollectionViewAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCollectionViewAdapter.h; sourceTree = "<group>"; };
+		61FD3CB51BA7025F00F4CEFB /* ACCollectionViewAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCollectionViewAdapter.m; sourceTree = "<group>"; };
+		61FD3CB71BA7025F00F4CEFB /* UICollectionView+ACAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+ACAdapter.h"; sourceTree = "<group>"; };
+		61FD3CB81BA7025F00F4CEFB /* UICollectionView+ACAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+ACAdapter.m"; sourceTree = "<group>"; };
+		61FD3CBC1BA7025F00F4CEFB /* ACEndlessPagingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEndlessPagingController.h; sourceTree = "<group>"; };
+		61FD3CBD1BA7025F00F4CEFB /* ACEndlessPagingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEndlessPagingController.m; sourceTree = "<group>"; };
+		61FD3CBF1BA7025F00F4CEFB /* UIViewController+ACPageNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ACPageNumber.h"; sourceTree = "<group>"; };
+		61FD3CC01BA7025F00F4CEFB /* UIViewController+ACPageNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ACPageNumber.m"; sourceTree = "<group>"; };
+		61FD3CC21BA7025F00F4CEFB /* ACPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPageController.h; sourceTree = "<group>"; };
+		61FD3CC31BA7025F00F4CEFB /* ACPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPageController.m; sourceTree = "<group>"; };
+		61FD3CC51BA7025F00F4CEFB /* UIPageViewController+ACPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPageViewController+ACPageController.h"; sourceTree = "<group>"; };
+		61FD3CC61BA7025F00F4CEFB /* UIPageViewController+ACPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPageViewController+ACPageController.m"; sourceTree = "<group>"; };
+		61FD3CC91BA7025F00F4CEFB /* ACPickerViewAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPickerViewAdapter.h; sourceTree = "<group>"; };
+		61FD3CCA1BA7025F00F4CEFB /* ACPickerViewAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPickerViewAdapter.m; sourceTree = "<group>"; };
+		61FD3CCC1BA7025F00F4CEFB /* UIPickerView+ACAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPickerView+ACAdapter.h"; sourceTree = "<group>"; };
+		61FD3CCD1BA7025F00F4CEFB /* UIPickerView+ACAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPickerView+ACAdapter.m"; sourceTree = "<group>"; };
+		61FD3CD01BA7025F00F4CEFB /* ACTableViewAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACTableViewAdapter.h; sourceTree = "<group>"; };
+		61FD3CD11BA7025F00F4CEFB /* ACTableViewAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACTableViewAdapter.m; sourceTree = "<group>"; };
+		61FD3CD31BA7025F00F4CEFB /* UITableView+ACAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+ACAdapter.h"; sourceTree = "<group>"; };
+		61FD3CD41BA7025F00F4CEFB /* UITableView+ACAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+ACAdapter.m"; sourceTree = "<group>"; };
+		61FD3CD61BA7025F00F4CEFB /* DAValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAValidator.h; sourceTree = "<group>"; };
+		61FD3CD71BA7025F00F4CEFB /* DAValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAValidator.m; sourceTree = "<group>"; };
+		61FD3CEC1BA7036700F4CEFB /* BFMNewsRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNewsRecord.h; path = Classes/Models/News/BFMNewsRecord.h; sourceTree = "<group>"; };
+		61FD3CED1BA7036700F4CEFB /* BFMNewsRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNewsRecord.m; path = Classes/Models/News/BFMNewsRecord.m; sourceTree = "<group>"; };
 		9A2ED38684585DCC5C04EDB7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ED90EA9A0FFE50580AD1AD04 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,6 +306,7 @@
 		613AE76E1B9CC8B300300B22 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				61FD3C7A1BA7015700F4CEFB /* AC Utils */,
 				613AE77B1B9CD03200300B22 /* ELAppearance */,
 				613AE76F1B9CC8B900300B22 /* Navigation Appearence */,
 			);
@@ -305,6 +387,8 @@
 		613C28BE1BA3416800B2856A /* News Model */ = {
 			isa = PBXGroup;
 			children = (
+				61FD3CEC1BA7036700F4CEFB /* BFMNewsRecord.h */,
+				61FD3CED1BA7036700F4CEFB /* BFMNewsRecord.m */,
 				613C28BB1BA3415C00B2856A /* BFMNewsModel.h */,
 				613C28BC1BA3415C00B2856A /* BFMNewsModel.m */,
 			);
@@ -542,6 +626,347 @@
 			name = User;
 			sourceTree = "<group>";
 		};
+		61FD3C7A1BA7015700F4CEFB /* AC Utils */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3C7F1BA7021200F4CEFB /* ACUtils.h */,
+				61FD3C7E1BA7017C00F4CEFB /* UIKit */,
+				61FD3C7D1BA7017600F4CEFB /* Protocols */,
+				61FD3C7C1BA7017100F4CEFB /* Categories */,
+			);
+			name = "AC Utils";
+			sourceTree = "<group>";
+		};
+		61FD3C7C1BA7017100F4CEFB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3C801BA7021B00F4CEFB /* NSObject+ACClassName.h */,
+				61FD3C811BA7021B00F4CEFB /* NSObject+ACClassName.m */,
+				61FD3C821BA7021B00F4CEFB /* UIView+ACAnimation.h */,
+				61FD3C831BA7021B00F4CEFB /* UIView+ACAnimation.m */,
+				61FD3C841BA7021B00F4CEFB /* UIView+ACFrames.h */,
+				61FD3C851BA7021B00F4CEFB /* UIView+ACFrames.m */,
+				61FD3C861BA7021B00F4CEFB /* UIView+ACNib.h */,
+				61FD3C871BA7021B00F4CEFB /* UIView+ACNib.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		61FD3C7D1BA7017600F4CEFB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3C8C1BA7022500F4CEFB /* ACObjectConsuming.h */,
+				61FD3C8D1BA7022500F4CEFB /* ACTableViewCell.h */,
+				61FD3C8E1BA7022500F4CEFB /* ACTableViewHeaderFooter.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		61FD3C7E1BA7017C00F4CEFB /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3C8F1BA7025F00F4CEFB /* DataSource */,
+				61FD3CA41BA7025F00F4CEFB /* UIActionSheet */,
+				61FD3CAB1BA7025F00F4CEFB /* UIAlertView */,
+				61FD3CB21BA7025F00F4CEFB /* UICollectionView */,
+				61FD3CB91BA7025F00F4CEFB /* UIPageViewController */,
+				61FD3CC71BA7025F00F4CEFB /* UIPickerView */,
+				61FD3CCE1BA7025F00F4CEFB /* UITableView */,
+				61FD3CD51BA7025F00F4CEFB /* Validator */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		61FD3C8F1BA7025F00F4CEFB /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3C901BA7025F00F4CEFB /* Classes */,
+				61FD3CA01BA7025F00F4CEFB /* DataSource Protocol */,
+				61FD3CA21BA7025F00F4CEFB /* Definitions */,
+			);
+			name = DataSource;
+			path = "Lib/AC Utils/UIKit/DataSource";
+			sourceTree = "<group>";
+		};
+		61FD3C901BA7025F00F4CEFB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3C911BA7025F00F4CEFB /* Array Data Source */,
+				61FD3C941BA7025F00F4CEFB /* Components Data Source */,
+				61FD3C9A1BA7025F00F4CEFB /* Fetched Results Data Source */,
+				61FD3C9D1BA7025F00F4CEFB /* Segmented DataSource */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		61FD3C911BA7025F00F4CEFB /* Array Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3C921BA7025F00F4CEFB /* ACArrayDataSource.h */,
+				61FD3C931BA7025F00F4CEFB /* ACArrayDataSource.m */,
+			);
+			path = "Array Data Source";
+			sourceTree = "<group>";
+		};
+		61FD3C941BA7025F00F4CEFB /* Components Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3C951BA7025F00F4CEFB /* ACComponentsDataSource.h */,
+				61FD3C961BA7025F00F4CEFB /* ACComponentsDataSource.m */,
+				61FD3C971BA7025F00F4CEFB /* Component */,
+			);
+			path = "Components Data Source";
+			sourceTree = "<group>";
+		};
+		61FD3C971BA7025F00F4CEFB /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3C981BA7025F00F4CEFB /* ACComponent.h */,
+				61FD3C991BA7025F00F4CEFB /* ACComponent.m */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		61FD3C9A1BA7025F00F4CEFB /* Fetched Results Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3C9B1BA7025F00F4CEFB /* ACFetchedResultsDataSource.h */,
+				61FD3C9C1BA7025F00F4CEFB /* ACFetchedResultsDataSource.m */,
+			);
+			path = "Fetched Results Data Source";
+			sourceTree = "<group>";
+		};
+		61FD3C9D1BA7025F00F4CEFB /* Segmented DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3C9E1BA7025F00F4CEFB /* ACSegmentedDataSource.h */,
+				61FD3C9F1BA7025F00F4CEFB /* ACSegmentedDataSource.m */,
+			);
+			path = "Segmented DataSource";
+			sourceTree = "<group>";
+		};
+		61FD3CA01BA7025F00F4CEFB /* DataSource Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CA11BA7025F00F4CEFB /* ACDataSource.h */,
+			);
+			path = "DataSource Protocol";
+			sourceTree = "<group>";
+		};
+		61FD3CA21BA7025F00F4CEFB /* Definitions */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CA31BA7025F00F4CEFB /* ACDataSourceDefinitions.h */,
+			);
+			path = Definitions;
+			sourceTree = "<group>";
+		};
+		61FD3CA41BA7025F00F4CEFB /* UIActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CA51BA7025F00F4CEFB /* ActionSheet + Blocks */,
+				61FD3CA81BA7025F00F4CEFB /* Delegate */,
+			);
+			name = UIActionSheet;
+			path = "Lib/AC Utils/UIKit/UIActionSheet";
+			sourceTree = "<group>";
+		};
+		61FD3CA51BA7025F00F4CEFB /* ActionSheet + Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CA61BA7025F00F4CEFB /* UIActionSheet+ACBlocks.h */,
+				61FD3CA71BA7025F00F4CEFB /* UIActionSheet+ACBlocks.m */,
+			);
+			path = "ActionSheet + Blocks";
+			sourceTree = "<group>";
+		};
+		61FD3CA81BA7025F00F4CEFB /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CA91BA7025F00F4CEFB /* ACActionSheetDelegate.h */,
+				61FD3CAA1BA7025F00F4CEFB /* ACActionSheetDelegate.m */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		61FD3CAB1BA7025F00F4CEFB /* UIAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CAC1BA7025F00F4CEFB /* AlertView + Blocks */,
+				61FD3CAF1BA7025F00F4CEFB /* Delegate */,
+			);
+			name = UIAlertView;
+			path = "Lib/AC Utils/UIKit/UIAlertView";
+			sourceTree = "<group>";
+		};
+		61FD3CAC1BA7025F00F4CEFB /* AlertView + Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CAD1BA7025F00F4CEFB /* UIAlertView+ACBlocks.h */,
+				61FD3CAE1BA7025F00F4CEFB /* UIAlertView+ACBlocks.m */,
+			);
+			path = "AlertView + Blocks";
+			sourceTree = "<group>";
+		};
+		61FD3CAF1BA7025F00F4CEFB /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CB01BA7025F00F4CEFB /* ACAlertViewDelegate.h */,
+				61FD3CB11BA7025F00F4CEFB /* ACAlertViewDelegate.m */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		61FD3CB21BA7025F00F4CEFB /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CB31BA7025F00F4CEFB /* Adapter */,
+				61FD3CB61BA7025F00F4CEFB /* UICollectionView + ACAdapter */,
+			);
+			name = UICollectionView;
+			path = "Lib/AC Utils/UIKit/UICollectionView";
+			sourceTree = "<group>";
+		};
+		61FD3CB31BA7025F00F4CEFB /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CB41BA7025F00F4CEFB /* ACCollectionViewAdapter.h */,
+				61FD3CB51BA7025F00F4CEFB /* ACCollectionViewAdapter.m */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		61FD3CB61BA7025F00F4CEFB /* UICollectionView + ACAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CB71BA7025F00F4CEFB /* UICollectionView+ACAdapter.h */,
+				61FD3CB81BA7025F00F4CEFB /* UICollectionView+ACAdapter.m */,
+			);
+			path = "UICollectionView + ACAdapter";
+			sourceTree = "<group>";
+		};
+		61FD3CB91BA7025F00F4CEFB /* UIPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CBA1BA7025F00F4CEFB /* Endless Paging Controller */,
+				61FD3CC11BA7025F00F4CEFB /* Page Controller */,
+				61FD3CC41BA7025F00F4CEFB /* UIPageViewController + ACPageController */,
+			);
+			name = UIPageViewController;
+			path = "Lib/AC Utils/UIKit/UIPageViewController";
+			sourceTree = "<group>";
+		};
+		61FD3CBA1BA7025F00F4CEFB /* Endless Paging Controller */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CBB1BA7025F00F4CEFB /* Paging Controller */,
+				61FD3CBE1BA7025F00F4CEFB /* UIViewController + PageNumber */,
+			);
+			path = "Endless Paging Controller";
+			sourceTree = "<group>";
+		};
+		61FD3CBB1BA7025F00F4CEFB /* Paging Controller */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CBC1BA7025F00F4CEFB /* ACEndlessPagingController.h */,
+				61FD3CBD1BA7025F00F4CEFB /* ACEndlessPagingController.m */,
+			);
+			path = "Paging Controller";
+			sourceTree = "<group>";
+		};
+		61FD3CBE1BA7025F00F4CEFB /* UIViewController + PageNumber */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CBF1BA7025F00F4CEFB /* UIViewController+ACPageNumber.h */,
+				61FD3CC01BA7025F00F4CEFB /* UIViewController+ACPageNumber.m */,
+			);
+			path = "UIViewController + PageNumber";
+			sourceTree = "<group>";
+		};
+		61FD3CC11BA7025F00F4CEFB /* Page Controller */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CC21BA7025F00F4CEFB /* ACPageController.h */,
+				61FD3CC31BA7025F00F4CEFB /* ACPageController.m */,
+			);
+			path = "Page Controller";
+			sourceTree = "<group>";
+		};
+		61FD3CC41BA7025F00F4CEFB /* UIPageViewController + ACPageController */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CC51BA7025F00F4CEFB /* UIPageViewController+ACPageController.h */,
+				61FD3CC61BA7025F00F4CEFB /* UIPageViewController+ACPageController.m */,
+			);
+			path = "UIPageViewController + ACPageController";
+			sourceTree = "<group>";
+		};
+		61FD3CC71BA7025F00F4CEFB /* UIPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CC81BA7025F00F4CEFB /* Adapter */,
+				61FD3CCB1BA7025F00F4CEFB /* UIPickerView + ACAdapter */,
+			);
+			name = UIPickerView;
+			path = "Lib/AC Utils/UIKit/UIPickerView";
+			sourceTree = "<group>";
+		};
+		61FD3CC81BA7025F00F4CEFB /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CC91BA7025F00F4CEFB /* ACPickerViewAdapter.h */,
+				61FD3CCA1BA7025F00F4CEFB /* ACPickerViewAdapter.m */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		61FD3CCB1BA7025F00F4CEFB /* UIPickerView + ACAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CCC1BA7025F00F4CEFB /* UIPickerView+ACAdapter.h */,
+				61FD3CCD1BA7025F00F4CEFB /* UIPickerView+ACAdapter.m */,
+			);
+			path = "UIPickerView + ACAdapter";
+			sourceTree = "<group>";
+		};
+		61FD3CCE1BA7025F00F4CEFB /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CCF1BA7025F00F4CEFB /* Adapter */,
+				61FD3CD21BA7025F00F4CEFB /* UITableView + ACAdapter */,
+			);
+			name = UITableView;
+			path = "Lib/AC Utils/UIKit/UITableView";
+			sourceTree = "<group>";
+		};
+		61FD3CCF1BA7025F00F4CEFB /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CD01BA7025F00F4CEFB /* ACTableViewAdapter.h */,
+				61FD3CD11BA7025F00F4CEFB /* ACTableViewAdapter.m */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		61FD3CD21BA7025F00F4CEFB /* UITableView + ACAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CD31BA7025F00F4CEFB /* UITableView+ACAdapter.h */,
+				61FD3CD41BA7025F00F4CEFB /* UITableView+ACAdapter.m */,
+			);
+			path = "UITableView + ACAdapter";
+			sourceTree = "<group>";
+		};
+		61FD3CD51BA7025F00F4CEFB /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3CD61BA7025F00F4CEFB /* DAValidator.h */,
+				61FD3CD71BA7025F00F4CEFB /* DAValidator.m */,
+			);
+			name = Validator;
+			path = "Lib/AC Utils/UIKit/Validator";
+			sourceTree = "<group>";
+		};
 		E50B6C96981474BB1FCC1F9A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,34 +1133,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61FD3CE11BA7025F00F4CEFB /* ACCollectionViewAdapter.m in Sources */,
+				61FD3CEE1BA7036700F4CEFB /* BFMNewsRecord.m in Sources */,
 				619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */,
 				613C28BD1BA3415C00B2856A /* BFMNewsModel.m in Sources */,
+				61FD3CE91BA7025F00F4CEFB /* ACTableViewAdapter.m in Sources */,
 				2CF024F31B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m in Sources */,
+				61FD3CDB1BA7025F00F4CEFB /* ACFetchedResultsDataSource.m in Sources */,
+				61FD3CDE1BA7025F00F4CEFB /* ACActionSheetDelegate.m in Sources */,
 				61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */,
+				61FD3CDD1BA7025F00F4CEFB /* UIActionSheet+ACBlocks.m in Sources */,
 				613C28B61BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m in Sources */,
 				613AE7551B9B7A6800300B22 /* BFMUser+Extension.m in Sources */,
 				613AE7631B9B9EDF00300B22 /* BFMUser.m in Sources */,
 				613AE7661B9B9F7C00300B22 /* BFMAccount.m in Sources */,
 				619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */,
 				613AE7731B9CCC9600300B22 /* BFMAccount+Extension.m in Sources */,
+				61FD3CEB1BA7025F00F4CEFB /* DAValidator.m in Sources */,
+				61FD3CE71BA7025F00F4CEFB /* ACPickerViewAdapter.m in Sources */,
+				61FD3C8B1BA7021B00F4CEFB /* UIView+ACNib.m in Sources */,
 				2CF024EF1B9A409A009E8959 /* BFMTabBarController.m in Sources */,
+				61FD3CE01BA7025F00F4CEFB /* ACAlertViewDelegate.m in Sources */,
+				61FD3CE21BA7025F00F4CEFB /* UICollectionView+ACAdapter.m in Sources */,
 				613AE7721B9CC8CA00300B22 /* NINavigationAppearance.m in Sources */,
 				613C28BA1BA33FB800B2856A /* BFMNewsViewController.m in Sources */,
+				61FD3CEA1BA7025F00F4CEFB /* UITableView+ACAdapter.m in Sources */,
 				613C28AC1BA31E3900B2856A /* BFMEarningsCell.m in Sources */,
+				61FD3CE41BA7025F00F4CEFB /* UIViewController+ACPageNumber.m in Sources */,
 				613AE7811B9CD04400300B22 /* ELAXIBAppearance.m in Sources */,
+				61FD3C891BA7021B00F4CEFB /* UIView+ACAnimation.m in Sources */,
 				619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */,
 				613AE75A1B9B872C00300B22 /* BFMSysAccount.m in Sources */,
+				61FD3CDA1BA7025F00F4CEFB /* ACComponent.m in Sources */,
+				61FD3C8A1BA7021B00F4CEFB /* UIView+ACFrames.m in Sources */,
+				61FD3CE61BA7025F00F4CEFB /* UIPageViewController+ACPageController.m in Sources */,
 				619E2BDC1B97564A00886893 /* main.m in Sources */,
 				613AE76D1B9C683800300B22 /* BFMLeaderboardModel.m in Sources */,
+				61FD3CD81BA7025F00F4CEFB /* ACArrayDataSource.m in Sources */,
 				61C181F01B98D62700D5FAC8 /* BFMSessionManager.m in Sources */,
 				613C28A41BA31AF800B2856A /* BFMDashboardController.m in Sources */,
 				613C28AF1BA31E5400B2856A /* BFMClientsCell.m in Sources */,
+				61FD3C881BA7021B00F4CEFB /* NSObject+ACClassName.m in Sources */,
+				61FD3CE31BA7025F00F4CEFB /* ACEndlessPagingController.m in Sources */,
 				613AE75D1B9B88B000300B22 /* BFMSysAccount+Extension.m in Sources */,
 				613AE7801B9CD04400300B22 /* ELAAppearance.m in Sources */,
+				61FD3CE51BA7025F00F4CEFB /* ACPageController.m in Sources */,
 				613AE74E1B9B78CE00300B22 /* ebfmn.xcdatamodeld in Sources */,
+				61FD3CE81BA7025F00F4CEFB /* UIPickerView+ACAdapter.m in Sources */,
 				619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */,
+				61FD3CDC1BA7025F00F4CEFB /* ACSegmentedDataSource.m in Sources */,
 				613C28C11BA3437700B2856A /* BFMNewsCell.m in Sources */,
+				61FD3CD91BA7025F00F4CEFB /* ACComponentsDataSource.m in Sources */,
 				613C28A71BA31D9C00B2856A /* BFMBaseDashboardCell.m in Sources */,
+				61FD3CDF1BA7025F00F4CEFB /* UIAlertView+ACBlocks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

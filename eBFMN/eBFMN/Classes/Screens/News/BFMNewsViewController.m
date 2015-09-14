@@ -12,6 +12,7 @@
 #import "BFMDefaultNavagtionBarAppearance.h"
 
 #import "BFMNewsModel.h"
+#import "ACUtils.h"
 
 @interface BFMNewsViewController ()
 
