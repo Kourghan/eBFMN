@@ -18,13 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureTabBarItems];
-    self.selectedIndex = 2;
+    self.selectedIndex = 0;
 }
 
 - (void)configureTabBarItems {
     UINavigationController *vc1 = [[UIStoryboard dashboardStoryboard] instantiateInitialViewController];
     vc1.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_dashboard"];
-    vc1.tabBarItem.title = @"Dashboard";
+    vc1.tabBarItem.title = NSLocalizedString(@"tabbar.dashboard", nil);
     
     UINavigationController *vc2 = [[UIStoryboard leaderboardStoryboard] instantiateInitialViewController];
     vc2.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_leaderboard"];
