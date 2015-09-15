@@ -7,17 +7,29 @@
 //
 
 #import "BFMNewsCell.h"
+#import "BFMNewsRecord.h"
+
+@interface BFMNewsCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
+
+@end
 
 @implementation BFMNewsCell
 
-- (void)awakeFromNib {
-    // Initialization code
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    
+    _object = nil;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setObject:(BFMNewsRecord *)object {
+    _object = object;
+    
+    self.titleLabel.text = _object.title;
+//    self.dateLabel.text = []
 }
 
 @end

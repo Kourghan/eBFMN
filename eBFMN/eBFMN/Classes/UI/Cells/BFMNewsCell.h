@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BFMNewsCell : UITableViewCell
+#import "ODSObjectConsuming.h"
+
+@class BFMNewsRecord;
+
+@interface BFMNewsCell : UITableViewCell <ODSObjectConsuming>
+
+@property (nonatomic, strong) BFMNewsRecord *object;
 
 @end

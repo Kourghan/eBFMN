@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@class ACFetchedResultsDataSource;
+@class ODSDataSource;
 
 @interface BFMNewsModel : NSObject
 
 @property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) ACFetchedResultsDataSource *dataSource;
+@property (nonatomic, strong) ODSDataSource *dataSource;
 
 @end

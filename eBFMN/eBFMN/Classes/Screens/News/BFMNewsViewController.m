@@ -12,9 +12,16 @@
 #import "BFMDefaultNavagtionBarAppearance.h"
 
 #import "BFMNewsModel.h"
-#import "ACUtils.h"
+#import "BFMNewsRecord.h"
+#import "BFMNewsCell.h"
+
+#import "BFMNewsTableAdapter.h"
 
 @interface BFMNewsViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) BFMNewsTableAdapter *adapter;
 
 @end
 
@@ -23,7 +30,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.tableView.estimatedRowHeight = 85.f;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    BFMNewsModel *model = [BFMNewsModel new];
+    self.model = model;
+    
     self.navigationItem.title = self.model.title;
+    
+    self.adapter = [BFMNewsTableAdapter new];
+    self.adapter.tableView = self.tableView;
+    self.adapter.dataSource = self.model.dataSource;
+    
+    [self.adapter mapObjectClass:[BFMNewsRecord class] toCellIdentifier:@"BFMNewsCell"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
