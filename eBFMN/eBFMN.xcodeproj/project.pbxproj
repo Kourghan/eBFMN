@@ -79,6 +79,7 @@
 		61FD3D711BA7096D00F4CEFB /* ODSFetchedResultsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D5F1BA7096D00F4CEFB /* ODSFetchedResultsDataSource.m */; };
 		61FD3D721BA7096D00F4CEFB /* NSException+ODSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D631BA7096D00F4CEFB /* NSException+ODSExtension.m */; };
 		61FD3D751BA76AA200F4CEFB /* BFMNewsTableAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D741BA76AA200F4CEFB /* BFMNewsTableAdapter.m */; };
+		61FD3D791BA8438500F4CEFB /* BFMProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D781BA8438500F4CEFB /* BFMProfileViewController.m */; };
 		7017DF46620972E10C2C25AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDF264433FB8F41C107ADD8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -221,6 +222,8 @@
 		61FD3D631BA7096D00F4CEFB /* NSException+ODSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSException+ODSExtension.m"; sourceTree = "<group>"; };
 		61FD3D731BA76AA200F4CEFB /* BFMNewsTableAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNewsTableAdapter.h; path = Classes/Screens/News/BFMNewsTableAdapter.h; sourceTree = "<group>"; };
 		61FD3D741BA76AA200F4CEFB /* BFMNewsTableAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNewsTableAdapter.m; path = Classes/Screens/News/BFMNewsTableAdapter.m; sourceTree = "<group>"; };
+		61FD3D771BA8438500F4CEFB /* BFMProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMProfileViewController.h; path = Classes/Screens/Profile/BFMProfileViewController.h; sourceTree = "<group>"; };
+		61FD3D781BA8438500F4CEFB /* BFMProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMProfileViewController.m; path = Classes/Screens/Profile/BFMProfileViewController.m; sourceTree = "<group>"; };
 		9A2ED38684585DCC5C04EDB7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ED90EA9A0FFE50580AD1AD04 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -477,6 +480,7 @@
 		619E2C021B977BA200886893 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				61FD3D761BA8426600F4CEFB /* Profile */,
 				613C28B71BA33F9A00B2856A /* News */,
 				613C28A11BA31AAB00B2856A /* Dashboard */,
 				2CF024EC1B9A3E5A009E8959 /* tabBar */,
@@ -711,6 +715,15 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		61FD3D761BA8426600F4CEFB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				61FD3D771BA8438500F4CEFB /* BFMProfileViewController.h */,
+				61FD3D781BA8438500F4CEFB /* BFMProfileViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		E50B6C96981474BB1FCC1F9A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -886,6 +899,7 @@
 				61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */,
 				61FD3D751BA76AA200F4CEFB /* BFMNewsTableAdapter.m in Sources */,
 				613C28B61BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m in Sources */,
+				61FD3D791BA8438500F4CEFB /* BFMProfileViewController.m in Sources */,
 				613AE7551B9B7A6800300B22 /* BFMUser+Extension.m in Sources */,
 				613AE7631B9B9EDF00300B22 /* BFMUser.m in Sources */,
 				613AE7661B9B9F7C00300B22 /* BFMAccount.m in Sources */,
