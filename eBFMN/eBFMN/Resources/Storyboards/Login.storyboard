@@ -67,7 +67,7 @@
                                     <action selector="loginButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VBE-uZ-9bq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0r-bf-zXh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0r-bf-zXh">
                                 <rect key="frame" x="23" y="444" width="75" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="s1p-sz-vkk"/>
@@ -80,7 +80,7 @@
                                     <action selector="contactUsButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="H6e-Zq-SfH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1S-ml-ON7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1S-ml-ON7">
                                 <rect key="frame" x="168" y="444" width="130" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="o05-Wk-OCR"/>
@@ -93,14 +93,14 @@
                                     <action selector="termsButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OG7-bt-2sG"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hde-By-f6h">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hde-By-f6h">
                                 <rect key="frame" x="23" y="465" width="75" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="76K-79-M8D"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U3i-zW-E0Q">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3i-zW-E0Q">
                                 <rect key="frame" x="168" y="465" width="130" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
