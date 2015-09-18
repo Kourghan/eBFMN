@@ -35,6 +35,10 @@
 		613C28BA1BA33FB800B2856A /* BFMNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28B91BA33FB800B2856A /* BFMNewsViewController.m */; };
 		613C28BD1BA3415C00B2856A /* BFMNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28BC1BA3415C00B2856A /* BFMNewsModel.m */; };
 		613C28C11BA3437700B2856A /* BFMNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28C01BA3437700B2856A /* BFMNewsCell.m */; };
+		61903C201BAC0CBB0018B3A0 /* BFMNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C1F1BAC0CBB0018B3A0 /* BFMNotification.m */; };
+		61903C241BAC0CE70018B3A0 /* BFMNotificationsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C231BAC0CE70018B3A0 /* BFMNotificationsModel.m */; };
+		61903C281BAC0D960018B3A0 /* BFMNotificationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C271BAC0D960018B3A0 /* BFMNotificationsController.m */; };
+		61903C2B1BAC0DC30018B3A0 /* BFMNotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C2A1BAC0DC30018B3A0 /* BFMNotificationCell.m */; };
 		619E2BDC1B97564A00886893 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDB1B97564A00886893 /* main.m */; };
 		619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2BDE1B97564A00886893 /* AppDelegate.m */; };
 		619E2BE71B97564A00886893 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 619E2BE61B97564A00886893 /* Images.xcassets */; };
@@ -143,6 +147,14 @@
 		613C28BC1BA3415C00B2856A /* BFMNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNewsModel.m; path = "Classes/Models/News Model/BFMNewsModel.m"; sourceTree = "<group>"; };
 		613C28BF1BA3437700B2856A /* BFMNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNewsCell.h; path = Classes/UI/Cells/BFMNewsCell.h; sourceTree = "<group>"; };
 		613C28C01BA3437700B2856A /* BFMNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNewsCell.m; path = Classes/UI/Cells/BFMNewsCell.m; sourceTree = "<group>"; };
+		61903C1E1BAC0CBB0018B3A0 /* BFMNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNotification.h; path = Classes/Models/Notifications/BFMNotification.h; sourceTree = "<group>"; };
+		61903C1F1BAC0CBB0018B3A0 /* BFMNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNotification.m; path = Classes/Models/Notifications/BFMNotification.m; sourceTree = "<group>"; };
+		61903C221BAC0CE70018B3A0 /* BFMNotificationsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNotificationsModel.h; path = Classes/Models/Notifications/BFMNotificationsModel.h; sourceTree = "<group>"; };
+		61903C231BAC0CE70018B3A0 /* BFMNotificationsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNotificationsModel.m; path = Classes/Models/Notifications/BFMNotificationsModel.m; sourceTree = "<group>"; };
+		61903C261BAC0D960018B3A0 /* BFMNotificationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNotificationsController.h; path = Classes/Screens/Notifications/BFMNotificationsController.h; sourceTree = "<group>"; };
+		61903C271BAC0D960018B3A0 /* BFMNotificationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNotificationsController.m; path = Classes/Screens/Notifications/BFMNotificationsController.m; sourceTree = "<group>"; };
+		61903C291BAC0DC30018B3A0 /* BFMNotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNotificationCell.h; path = Classes/UI/Cells/BFMNotificationCell.h; sourceTree = "<group>"; };
+		61903C2A1BAC0DC30018B3A0 /* BFMNotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNotificationCell.m; path = Classes/UI/Cells/BFMNotificationCell.m; sourceTree = "<group>"; };
 		619E2BD61B97564A00886893 /* eBFMN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eBFMN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		619E2BDA1B97564A00886893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		619E2BDB1B97564A00886893 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -347,6 +359,8 @@
 				613C28AE1BA31E5400B2856A /* BFMClientsCell.m */,
 				613C28BF1BA3437700B2856A /* BFMNewsCell.h */,
 				613C28C01BA3437700B2856A /* BFMNewsCell.m */,
+				61903C291BAC0DC30018B3A0 /* BFMNotificationCell.h */,
+				61903C2A1BAC0DC30018B3A0 /* BFMNotificationCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -380,6 +394,26 @@
 				613C28BC1BA3415C00B2856A /* BFMNewsModel.m */,
 			);
 			name = "News Model";
+			sourceTree = "<group>";
+		};
+		61903C211BAC0CC20018B3A0 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				61903C1E1BAC0CBB0018B3A0 /* BFMNotification.h */,
+				61903C1F1BAC0CBB0018B3A0 /* BFMNotification.m */,
+				61903C221BAC0CE70018B3A0 /* BFMNotificationsModel.h */,
+				61903C231BAC0CE70018B3A0 /* BFMNotificationsModel.m */,
+			);
+			name = Notifications;
+			sourceTree = "<group>";
+		};
+		61903C251BAC0D7A0018B3A0 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				61903C261BAC0D960018B3A0 /* BFMNotificationsController.h */,
+				61903C271BAC0D960018B3A0 /* BFMNotificationsController.m */,
+			);
+			name = Notifications;
 			sourceTree = "<group>";
 		};
 		619E2BCD1B97564A00886893 = {
@@ -469,6 +503,7 @@
 		619E2C011B977B9C00886893 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				61903C211BAC0CC20018B3A0 /* Notifications */,
 				613C28BE1BA3416800B2856A /* News Model */,
 				613AE76A1B9C671600300B22 /* Leaderboard Record */,
 				619E2C051B977C9600886893 /* User Credentials */,
@@ -480,6 +515,7 @@
 		619E2C021B977BA200886893 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				61903C251BAC0D7A0018B3A0 /* Notifications */,
 				61FD3D761BA8426600F4CEFB /* Profile */,
 				613C28B71BA33F9A00B2856A /* News */,
 				613C28A11BA31AAB00B2856A /* Dashboard */,
@@ -785,6 +821,7 @@
 				TargetAttributes = {
 					619E2BD51B97564A00886893 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 38YX9V28PF;
 					};
 					619E2BEE1B97564A00886893 = {
 						CreatedOnToolsVersion = 6.4;
@@ -897,6 +934,7 @@
 				61FD3D6B1BA7096D00F4CEFB /* ODSSectionChange.m in Sources */,
 				61FD3D651BA7096D00F4CEFB /* ODSCollectionAdapter.m in Sources */,
 				61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */,
+				61903C2B1BAC0DC30018B3A0 /* BFMNotificationCell.m in Sources */,
 				61FD3D751BA76AA200F4CEFB /* BFMNewsTableAdapter.m in Sources */,
 				613C28B61BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m in Sources */,
 				61FD3D791BA8438500F4CEFB /* BFMProfileViewController.m in Sources */,
@@ -914,6 +952,7 @@
 				61FD3D701BA7096D00F4CEFB /* ODSDataSource.m in Sources */,
 				613AE7811B9CD04400300B22 /* ELAXIBAppearance.m in Sources */,
 				61FD3D361BA7094200F4CEFB /* JGActionSheet.m in Sources */,
+				61903C201BAC0CBB0018B3A0 /* BFMNotification.m in Sources */,
 				619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */,
 				61FD3D6D1BA7096D00F4CEFB /* ODSArraySection.m in Sources */,
 				61FD3D6C1BA7096D00F4CEFB /* ODSFilteringSourceSearchController.m in Sources */,
@@ -921,8 +960,10 @@
 				619E2BDC1B97564A00886893 /* main.m in Sources */,
 				613AE76D1B9C683800300B22 /* BFMLeaderboardModel.m in Sources */,
 				61C181F01B98D62700D5FAC8 /* BFMSessionManager.m in Sources */,
+				61903C281BAC0D960018B3A0 /* BFMNotificationsController.m in Sources */,
 				61FD3D6A1BA7096D00F4CEFB /* ODSObjectChange.m in Sources */,
 				61FD3D711BA7096D00F4CEFB /* ODSFetchedResultsDataSource.m in Sources */,
+				61903C241BAC0CE70018B3A0 /* BFMNotificationsModel.m in Sources */,
 				61FD3D6E1BA7096D00F4CEFB /* ODSFetchedResultsSection.m in Sources */,
 				613C28A41BA31AF800B2856A /* BFMDashboardController.m in Sources */,
 				613C28AF1BA31E5400B2856A /* BFMClientsCell.m in Sources */,
@@ -1006,7 +1047,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1043,7 +1084,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1055,10 +1096,13 @@
 			baseConfigurationReference = 9A2ED38684585DCC5C04EDB7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = eBFMN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1067,10 +1111,13 @@
 			baseConfigurationReference = ED90EA9A0FFE50580AD1AD04 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = eBFMN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

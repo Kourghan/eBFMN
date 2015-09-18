@@ -35,9 +35,26 @@
 }
 
 - (void)bind:(BFMUser *)user {
-    self.rebatesValueLabel.text = [[user rebates] stringValue];
-    self.commissionsValueLabel.text = [[user commissions] stringValue];
-    self.spreadValueLabel.text = [[user spread] stringValue];
+    NSDictionary *attrs = @{NSFontAttributeName:[UIFont fontWithName:@"ProximaNova-Bold" size:15.f]};
+    const NSRange range = NSMakeRange(0,1);
+    
+    NSMutableAttributedString *rebatesAttributedText =
+    [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"$%@", [[user rebates] stringValue]]
+                                           attributes:nil];
+    [rebatesAttributedText setAttributes:attrs range:range];
+    [self.rebatesValueLabel setAttributedText:rebatesAttributedText];
+    
+    NSMutableAttributedString *commissionsAttributedText =
+    [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"$%@", [[user commissions] stringValue]]
+                                           attributes:nil];
+    [commissionsAttributedText setAttributes:attrs range:range];
+    [self.commissionsValueLabel setAttributedText:commissionsAttributedText];
+    
+    NSMutableAttributedString *spreadAttributedText =
+    [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"$%@", [[user spread] stringValue]]
+                                           attributes:nil];
+    [spreadAttributedText setAttributes:attrs range:range];
+    [self.spreadValueLabel setAttributedText:spreadAttributedText];
 }
 
 @end
