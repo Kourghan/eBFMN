@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
-    BFMLeaderboardTypePoints = 1,
-    BFMLeaderboardTypeRebate = 2,
-    BFMLeaderboardTypeVolume = 3,
-    BFMLeaderboardTypePL = 4
-} BFMLeaderboardType;
+enum {
+    BFMLeaderboardTypePoints = 0,
+    BFMLeaderboardTypeRebate = 1,
+    BFMLeaderboardTypeVolume = 2,
+    BFMLeaderboardTypePL = 3
+}; typedef NSUInteger BFMLeaderboardType;
 
 @interface BFMLeaderboardModel : NSObject
 
-+ (void)getLeaderboardForType:(BFMLeaderboardType)type completition:(void (^)(BOOL success))completition;
++ (void)getLeaderboardForType:(BFMLeaderboardType)type success:(void (^)(NSArray *))successBlock failure:(void (^)(NSError *))failureBlock;
 
 @end

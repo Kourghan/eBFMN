@@ -89,9 +89,7 @@
 }
 
 - (IBAction)termsButtonTapped:(id)sender {
-    [BFMLeaderboardModel getLeaderboardForType:BFMLeaderboardTypePoints completition:^(BOOL success) {
-        
-    }];
+
 }
 
 - (IBAction)contactUsButtonTapped:(id)sender {

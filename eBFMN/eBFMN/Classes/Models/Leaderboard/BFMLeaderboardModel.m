@@ -10,10 +10,14 @@
 
 #import "BFMSessionManager.h"
 #import "JNKeychain+UNTExtension.h"
+#import "BFMLeaderboardRecord+Mapping.h"
+#import <FastEasyMapping/FastEasyMapping.h>
+#import <MagicalRecord/MagicalRecord.h>
+#import <AFNetworking/AFHTTPSessionManager.h>
 
 @implementation BFMLeaderboardModel
 
-+ (void)getLeaderboardForType:(BFMLeaderboardType)type completition:(void (^)(BOOL))completition {
++ (void)getLeaderboardForType:(BFMLeaderboardType)type success:(void (^)(NSArray *records))successBlock failure:(void (^)(NSError *error))failureBlock {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
     
     NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
@@ -21,9 +25,12 @@
     [manager GET:@"Reports/GetIBCompetitionResult"
       parameters:@{@"guid" : sessionKey, @"reportType" : @(type)}
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-             completition(YES);
+            // NSLog(@"Response: %@", responseObject);
+             NSArray *records =  [FEMDeserializer collectionFromRepresentation:[responseObject objectForKey:@"Data"] mapping:[BFMLeaderboardRecord defaultMapping]];
+            // NSLog(@"Records: %@", records);
+             successBlock(records);
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
-             completition(NO);
+             failureBlock(error);
          }];
 }
 
