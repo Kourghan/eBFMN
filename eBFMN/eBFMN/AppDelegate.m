@@ -11,6 +11,8 @@
 
 #import "BFMUser+Extension.h"
 
+#import "JNKeychain+UNTExtension.h"
+
 @interface AppDelegate ()
 
 @end
@@ -22,6 +24,16 @@
     
     [MagicalRecord setupAutoMigratingCoreDataStack];
 
+    UINavigationController *controller;
+    if ([JNKeychain loadValueForKey:kBFMSessionKey]) {
+        controller = [UIStoryboard storyboardWithName:@"tabBar" bundle:nil].instantiateInitialViewController;
+    } else {
+        controller = [UIStoryboard storyboardWithName:@"Login" bundle:nil].instantiateInitialViewController;
+    }
+
+    self.window.rootViewController = controller;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

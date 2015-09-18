@@ -123,6 +123,8 @@
              [FEMManagedObjectDeserializer objectFromRepresentation:[response copy]
                                                             mapping:[BFMUser defaultMapping]
                                                             context:context];
+             
+             [context MR_saveToPersistentStoreAndWait];
              completition(YES);
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              completition(NO);
