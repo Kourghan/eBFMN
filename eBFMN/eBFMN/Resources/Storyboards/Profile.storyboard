@@ -3,6 +3,11 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Mark Simonson - Proxima Nova Light.otf">
+            <string>ProximaNova-Light</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="K1F-3D-dCx">
@@ -33,9 +38,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKp-AA-OS2" userLabel="Uppercontentview">
+                                <rect key="frame" x="0.0" y="64" width="320" height="235"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iu9-KH-sBJ">
+                                        <rect key="frame" x="0.0" y="234" width="320" height="1"/>
+                                        <color key="backgroundColor" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="9qs-gZ-fYL"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Iu9-KH-sBJ" secondAttribute="bottom" id="bL3-Jf-gDG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Iu9-KH-sBJ" secondAttribute="trailing" id="iZn-Vc-zGD"/>
+                                    <constraint firstAttribute="height" constant="235" id="uSh-Ye-rpX"/>
+                                    <constraint firstItem="Iu9-KH-sBJ" firstAttribute="leading" secondItem="UKp-AA-OS2" secondAttribute="leading" id="wIa-ZU-hcR"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnO-gz-OCq">
-                                <rect key="frame" x="128.5" y="269" width="63" height="30"/>
+                                <rect key="frame" x="130.5" y="339" width="60" height="31"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="15"/>
                                 <state key="normal" title="LOGOUT">
+                                    <color key="titleColor" red="0.81568627450980391" green="0.21568627450980393" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -45,15 +71,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="dnO-gz-OCq" secondAttribute="centerY" id="5au-kJ-wlW"/>
-                            <constraint firstAttribute="centerX" secondItem="dnO-gz-OCq" secondAttribute="centerX" id="EIh-5C-N0U"/>
+                            <constraint firstItem="dnO-gz-OCq" firstAttribute="top" secondItem="UKp-AA-OS2" secondAttribute="bottom" constant="40" id="D8i-hr-AuN"/>
+                            <constraint firstItem="UKp-AA-OS2" firstAttribute="leading" secondItem="yZy-Wd-keZ" secondAttribute="leading" id="VnM-Gn-ILU"/>
+                            <constraint firstAttribute="centerX" secondItem="dnO-gz-OCq" secondAttribute="centerX" id="fB5-Ts-Evo"/>
+                            <constraint firstAttribute="trailing" secondItem="UKp-AA-OS2" secondAttribute="trailing" id="s97-nP-ny8"/>
+                            <constraint firstItem="UKp-AA-OS2" firstAttribute="top" secondItem="78w-pv-7uF" secondAttribute="bottom" id="zVs-56-KWq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hfD-lJ-m4Q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIP-Te-JYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="160" y="389"/>
+            <point key="canvasLocation" x="130" y="389"/>
         </scene>
     </scenes>
 </document>
