@@ -216,6 +216,7 @@
                                         <connections>
                                             <outlet property="commissionsLabel" destination="3yI-D1-wdX" id="lwX-RC-a9g"/>
                                             <outlet property="commissionsValueLabel" destination="ttM-To-V0q" id="gGP-h3-Q5t"/>
+                                            <outlet property="monthLabel" destination="61s-lW-ZDs" id="nJF-kZ-Fzb"/>
                                             <outlet property="rebatesLabel" destination="S0s-GF-x7N" id="XNW-c0-fcT"/>
                                             <outlet property="rebatesValueLabel" destination="clC-R1-dNb" id="UUu-M9-WOM"/>
                                             <outlet property="spreadLabel" destination="pPl-Uk-vrV" id="an0-bH-X0M"/>

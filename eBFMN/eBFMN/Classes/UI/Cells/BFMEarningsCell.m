@@ -19,7 +19,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *commissionsLabel;
 @property (nonatomic, weak) IBOutlet UILabel *spreadValueLabel;
 @property (nonatomic, weak) IBOutlet UILabel *spreadLabel;
-
+@property (nonatomic, weak) IBOutlet UILabel *monthLabel;
 
 @end
 
@@ -27,6 +27,14 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    dateFormatter.locale = [NSLocale currentLocale];
+    
+    dateFormatter.dateFormat = @"MMMM";
+    NSString * monthString = [[dateFormatter stringFromDate:[NSDate date]] uppercaseString];
+    self.monthLabel.text = monthString;
     
     self.titleLabel.text = NSLocalizedString(@"dashboard.title.earnings", nil);
     self.rebatesLabel.text = NSLocalizedString(@"dashboard.rebates", nil);
