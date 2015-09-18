@@ -2,10 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rum-gs-2SV">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Mark Simonson - Proxima Nova Regular.otf">
-            <string>ProximaNova-Regular</string>
             <string>ProximaNova-Regular</string>
         </mutableArray>
         <mutableArray key="Mark Simonson - Proxima Nova Semibold.otf">
@@ -30,10 +30,10 @@
             </objects>
             <point key="canvasLocation" x="-297" y="389"/>
         </scene>
-        <!--View Controller-->
+        <!--Notifications Controller-->
         <scene sceneID="Grs-zO-OJj">
             <objects>
-                <viewController id="ESS-ax-Vhh" sceneMemberID="viewController">
+                <viewController id="ESS-ax-Vhh" customClass="BFMNotificationsController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Hz-U2-gDK"/>
                         <viewControllerLayoutGuide type="bottom" id="NIX-gE-eXF"/>
@@ -42,51 +42,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NwR-H0-xVD">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="91" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NwR-H0-xVD">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="R59-4z-07d">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BFMNotificationCell" id="R59-4z-07d" customClass="BFMNotificationCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R59-4z-07d" id="HCs-OL-qfz">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tix-Pq-E5L">
-                                                    <rect key="frame" x="8" y="24" width="279" height="21"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQ4-Aa-Wk9" userLabel="Upper separator view">
+                                                    <rect key="frame" x="0.0" y="0.0" width="287" height="3"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="3" id="YsT-tb-6Jc"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYR-cA-hhX" userLabel="Bottom separator view">
+                                                    <rect key="frame" x="0.0" y="88" width="279" height="3"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="3" id="occ-id-wOG"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{content}" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tix-Pq-E5L">
+                                                    <rect key="frame" x="15" y="52" width="257" height="16"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
                                                     <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZr-l2-phK">
-                                                    <rect key="frame" x="13" y="53" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="{datetime}" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZr-l2-phK">
+                                                    <rect key="frame" x="15" y="71" width="39.5" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="12" id="Idz-J1-Kxq"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="9"/>
                                                     <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibY-Ti-KVt">
-                                                    <rect key="frame" x="71" y="53" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="9"/>
-                                                    <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQ4-Aa-Wk9">
-                                                    <rect key="frame" x="104" y="71" width="144" height="14"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="{notification title}" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27r-t8-nuR">
-                                                    <rect key="frame" x="8" y="0.0" width="271" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="{notification title}" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27r-t8-nuR">
+                                                    <rect key="frame" x="15" y="15" width="257" height="32"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
                                                     <color key="textColor" red="0.031372549019607843" green="0.27058823529411763" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="27r-t8-nuR" firstAttribute="leading" secondItem="HCs-OL-qfz" secondAttribute="leading" constant="15" id="6v7-Lx-riy"/>
+                                                <constraint firstItem="DZr-l2-phK" firstAttribute="top" secondItem="tix-Pq-E5L" secondAttribute="bottom" constant="3" id="8AF-se-v27"/>
+                                                <constraint firstItem="tQ4-Aa-Wk9" firstAttribute="leading" secondItem="HCs-OL-qfz" secondAttribute="leading" id="D3U-nF-3ls"/>
+                                                <constraint firstAttribute="trailing" secondItem="tQ4-Aa-Wk9" secondAttribute="trailing" id="GW2-Yv-q5b"/>
+                                                <constraint firstAttribute="trailing" secondItem="BYR-cA-hhX" secondAttribute="trailing" id="K2y-nV-6kW"/>
+                                                <constraint firstAttribute="trailing" secondItem="27r-t8-nuR" secondAttribute="trailing" constant="15" id="Myp-DC-HXW"/>
+                                                <constraint firstItem="BYR-cA-hhX" firstAttribute="top" secondItem="DZr-l2-phK" secondAttribute="bottom" constant="5" id="Y3l-rF-mGv"/>
+                                                <constraint firstItem="tix-Pq-E5L" firstAttribute="top" secondItem="27r-t8-nuR" secondAttribute="bottom" constant="5" id="YgJ-Gj-TO5"/>
+                                                <constraint firstAttribute="trailing" secondItem="tix-Pq-E5L" secondAttribute="trailing" constant="15" id="Yq9-L4-O70"/>
+                                                <constraint firstAttribute="bottom" secondItem="BYR-cA-hhX" secondAttribute="bottom" id="bcX-VN-MGm"/>
+                                                <constraint firstItem="tQ4-Aa-Wk9" firstAttribute="top" secondItem="HCs-OL-qfz" secondAttribute="top" id="ge0-oc-Hoh"/>
+                                                <constraint firstItem="tix-Pq-E5L" firstAttribute="leading" secondItem="27r-t8-nuR" secondAttribute="leading" id="ggG-4F-8i4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="BYR-cA-hhX" secondAttribute="trailing" id="hQ4-Ed-Wsc"/>
+                                                <constraint firstItem="27r-t8-nuR" firstAttribute="top" secondItem="tQ4-Aa-Wk9" secondAttribute="bottom" constant="12" id="jaa-pv-Fh9"/>
+                                                <constraint firstItem="tix-Pq-E5L" firstAttribute="leading" secondItem="DZr-l2-phK" secondAttribute="leading" id="sIj-bh-Crs"/>
+                                                <constraint firstItem="BYR-cA-hhX" firstAttribute="leading" secondItem="HCs-OL-qfz" secondAttribute="leading" id="vpZ-tF-EmJ"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="K2y-nV-6kW"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="contentLabel" destination="tix-Pq-E5L" id="s2P-8I-mSv"/>
+                                            <outlet property="datetimeLabel" destination="DZr-l2-phK" id="9BX-vs-fIA"/>
+                                            <outlet property="titleLabel" destination="27r-t8-nuR" id="gAU-Fz-eQM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="NIX-gE-eXF" firstAttribute="top" secondItem="NwR-H0-xVD" secondAttribute="bottom" id="8hl-1Y-sGQ"/>
                             <constraint firstItem="NwR-H0-xVD" firstAttribute="top" secondItem="Q8F-pE-Mi0" secondAttribute="top" id="bbq-x7-8dm"/>
@@ -95,6 +131,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Tf-0p-yph"/>
+                    <connections>
+                        <outlet property="tableView" destination="NwR-H0-xVD" id="7hz-yi-RJM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyr-d1-Ko7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
