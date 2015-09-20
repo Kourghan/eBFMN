@@ -29,3 +29,10 @@
 // Leaderboard
 
 "leaderboard.title" = "LEADERBOARD";
+
+// Profile
+
+"profile.title" = "PROFILE";
+"profile.benefits" = "BENEFITS";
+"profile.goals" = "GOALS";
+"profile.logout" = "LOGOUT";

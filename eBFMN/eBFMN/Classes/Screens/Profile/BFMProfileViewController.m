@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *idLabel;
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 
+@property (nonatomic, strong) BFMUser *user;
+
 @end
 
 @implementation BFMProfileViewController
@@ -31,7 +33,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.user = [BFMUser currentUser];
+    
     self.navigationItem.title = NSLocalizedString(@"profile.title", nil);
+    self.benefitsLabel.text = NSLocalizedString(@"profile.benefits", nil);
+    self.goalsLabel.text = NSLocalizedString(@"profile.goals", nil);
+    [self.logoutButton setTitle:NSLocalizedString(@"profile.logout", nil) forState:UIControlStateNormal];
+    
+    self.usernameLabel.text = self.user.name;
+    self.idLabel.text = [self.user.identifier stringValue];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
