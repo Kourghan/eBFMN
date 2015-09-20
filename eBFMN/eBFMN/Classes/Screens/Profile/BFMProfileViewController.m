@@ -18,6 +18,12 @@
 
 @interface BFMProfileViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *benefitsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *goalsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *idLabel;
+@property (weak, nonatomic) IBOutlet UIButton *logoutButton;
+
 @end
 
 @implementation BFMProfileViewController
@@ -41,6 +47,8 @@
     [NINavigationAppearance popAppearanceForNavigationController:self.navigationController];
 }
 
+#pragma mark - Handlers
+
 - (IBAction)logout:(id)sender {
     [JNKeychain deleteValueForKey:kBFMSessionKey];
     
@@ -51,5 +59,13 @@
     vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:vc animated:YES completion:NULL];
 }
+
+- (IBAction)benefits:(UIButton *)sender {
+}
+
+- (IBAction)goals:(UIButton *)sender {
+}
+
+
 
 @end
