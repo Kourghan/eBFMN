@@ -71,9 +71,11 @@
 }
 
 - (IBAction)benefits:(UIButton *)sender {
+    
 }
 
 - (IBAction)goals:(UIButton *)sender {
+    
 }
 
 

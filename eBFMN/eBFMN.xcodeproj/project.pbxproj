@@ -20,6 +20,10 @@
 		2CB1B8451B9CC37B00AC16D2 /* tabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1B83F1B9CC37B00AC16D2 /* tabBar.storyboard */; };
 		2CF024EF1B9A409A009E8959 /* BFMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF024EE1B9A409A009E8959 /* BFMTabBarController.m */; };
 		2CF024F31B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF024F21B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m */; };
+		6135F37C1BAF425400B29DE3 /* BFMBenefitsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6135F37B1BAF425400B29DE3 /* BFMBenefitsController.m */; };
+		6135F3801BAF466E00B29DE3 /* BFMBenefitsPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6135F37E1BAF466E00B29DE3 /* BFMBenefitsPageController.m */; };
+		6135F3811BAF466E00B29DE3 /* BFMBenefitsPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6135F37F1BAF466E00B29DE3 /* BFMBenefitsPageController.xib */; };
+		6135F3861BAF4CE700B29DE3 /* BFMBenefitsAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6135F3851BAF4CE700B29DE3 /* BFMBenefitsAdaptor.m */; };
 		613AE74E1B9B78CE00300B22 /* ebfmn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 613AE74C1B9B78CE00300B22 /* ebfmn.xcdatamodeld */; };
 		613AE7551B9B7A6800300B22 /* BFMUser+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7541B9B7A6800300B22 /* BFMUser+Extension.m */; };
 		613AE7571B9B822900300B22 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613AE7561B9B822900300B22 /* CoreData.framework */; };
@@ -124,6 +128,13 @@
 		2CF024EE1B9A409A009E8959 /* BFMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMTabBarController.m; sourceTree = "<group>"; };
 		2CF024F11B9A415F009E8959 /* UIStoryboard+BFMStoryboards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+BFMStoryboards.h"; sourceTree = "<group>"; };
 		2CF024F21B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+BFMStoryboards.m"; sourceTree = "<group>"; };
+		6135F37A1BAF425400B29DE3 /* BFMBenefitsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMBenefitsController.h; path = Classes/Screens/Profile/BFMBenefitsController.h; sourceTree = "<group>"; };
+		6135F37B1BAF425400B29DE3 /* BFMBenefitsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMBenefitsController.m; path = Classes/Screens/Profile/BFMBenefitsController.m; sourceTree = "<group>"; };
+		6135F37D1BAF466E00B29DE3 /* BFMBenefitsPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMBenefitsPageController.h; path = Classes/UI/Views/Benefits/BFMBenefitsPageController.h; sourceTree = "<group>"; };
+		6135F37E1BAF466E00B29DE3 /* BFMBenefitsPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMBenefitsPageController.m; path = Classes/UI/Views/Benefits/BFMBenefitsPageController.m; sourceTree = "<group>"; };
+		6135F37F1BAF466E00B29DE3 /* BFMBenefitsPageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BFMBenefitsPageController.xib; path = Classes/UI/Views/Benefits/BFMBenefitsPageController.xib; sourceTree = "<group>"; };
+		6135F3841BAF4CE700B29DE3 /* BFMBenefitsAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMBenefitsAdaptor.h; path = Classes/Screens/Profile/BFMBenefitsAdaptor.h; sourceTree = "<group>"; };
+		6135F3851BAF4CE700B29DE3 /* BFMBenefitsAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMBenefitsAdaptor.m; path = Classes/Screens/Profile/BFMBenefitsAdaptor.m; sourceTree = "<group>"; };
 		613AE74D1B9B78CE00300B22 /* ebfmn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ebfmn.xcdatamodel; sourceTree = "<group>"; };
 		613AE7531B9B7A6800300B22 /* BFMUser+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMUser+Extension.h"; path = "Classes/Models/User/BFMUser+Extension.h"; sourceTree = "<group>"; };
 		613AE7541B9B7A6800300B22 /* BFMUser+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMUser+Extension.m"; path = "Classes/Models/User/BFMUser+Extension.m"; sourceTree = "<group>"; };
@@ -316,6 +327,35 @@
 			path = Misc/Categories/UIStoryboard;
 			sourceTree = "<group>";
 		};
+		6135F3791BAF423700B29DE3 /* Benefits */ = {
+			isa = PBXGroup;
+			children = (
+				6135F37A1BAF425400B29DE3 /* BFMBenefitsController.h */,
+				6135F37B1BAF425400B29DE3 /* BFMBenefitsController.m */,
+				6135F3841BAF4CE700B29DE3 /* BFMBenefitsAdaptor.h */,
+				6135F3851BAF4CE700B29DE3 /* BFMBenefitsAdaptor.m */,
+			);
+			name = Benefits;
+			sourceTree = "<group>";
+		};
+		6135F3821BAF467600B29DE3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6135F3831BAF467C00B29DE3 /* Benefits */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6135F3831BAF467C00B29DE3 /* Benefits */ = {
+			isa = PBXGroup;
+			children = (
+				6135F37D1BAF466E00B29DE3 /* BFMBenefitsPageController.h */,
+				6135F37E1BAF466E00B29DE3 /* BFMBenefitsPageController.m */,
+				6135F37F1BAF466E00B29DE3 /* BFMBenefitsPageController.xib */,
+			);
+			name = Benefits;
+			sourceTree = "<group>";
+		};
 		613AE76A1B9C671600300B22 /* Leaderboard Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +413,7 @@
 		613C28A81BA31E0E00B2856A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				6135F3821BAF467600B29DE3 /* View */,
 				613C28B31BA331E200B2856A /* Appearance */,
 				613C28A91BA31E1900B2856A /* Cells */,
 			);
@@ -788,6 +829,7 @@
 		61FD3D761BA8426600F4CEFB /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				6135F3791BAF423700B29DE3 /* Benefits */,
 				61FD3D771BA8438500F4CEFB /* BFMProfileViewController.h */,
 				61FD3D781BA8438500F4CEFB /* BFMProfileViewController.m */,
 			);
@@ -903,6 +945,7 @@
 				61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */,
 				61C1820F1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold.otf in Resources */,
 				61C182141B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold Italic.otf in Resources */,
+				6135F3811BAF466E00B29DE3 /* BFMBenefitsPageController.xib in Resources */,
 				61C182131B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Regular.otf in Resources */,
 				61C182161B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */,
 				2CB1B8431B9CC37B00AC16D2 /* Notifications.storyboard in Resources */,
@@ -969,6 +1012,7 @@
 				61FD3D6B1BA7096D00F4CEFB /* ODSSectionChange.m in Sources */,
 				61FD3D651BA7096D00F4CEFB /* ODSCollectionAdapter.m in Sources */,
 				61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */,
+				6135F3801BAF466E00B29DE3 /* BFMBenefitsPageController.m in Sources */,
 				61903C2B1BAC0DC30018B3A0 /* BFMNotificationCell.m in Sources */,
 				61FD3D751BA76AA200F4CEFB /* BFMNewsTableAdapter.m in Sources */,
 				613C28B61BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m in Sources */,
@@ -983,6 +1027,7 @@
 				2CF024EF1B9A409A009E8959 /* BFMTabBarController.m in Sources */,
 				613AE7721B9CC8CA00300B22 /* NINavigationAppearance.m in Sources */,
 				61FD3D681BA7096D00F4CEFB /* ODSEvent.m in Sources */,
+				6135F3861BAF4CE700B29DE3 /* BFMBenefitsAdaptor.m in Sources */,
 				613C28BA1BA33FB800B2856A /* BFMNewsViewController.m in Sources */,
 				613C28AC1BA31E3900B2856A /* BFMEarningsCell.m in Sources */,
 				61FD3D701BA7096D00F4CEFB /* ODSDataSource.m in Sources */,
@@ -996,6 +1041,7 @@
 				619E2BDC1B97564A00886893 /* main.m in Sources */,
 				613AE76D1B9C683800300B22 /* BFMLeaderboardModel.m in Sources */,
 				61C181F01B98D62700D5FAC8 /* BFMSessionManager.m in Sources */,
+				6135F37C1BAF425400B29DE3 /* BFMBenefitsController.m in Sources */,
 				61903C281BAC0D960018B3A0 /* BFMNotificationsController.m in Sources */,
 				61FD3D6A1BA7096D00F4CEFB /* ODSObjectChange.m in Sources */,
 				61FD3D711BA7096D00F4CEFB /* ODSFetchedResultsDataSource.m in Sources */,
