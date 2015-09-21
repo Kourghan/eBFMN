@@ -18,6 +18,14 @@
 
 @interface BFMProfileViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *benefitsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *goalsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *idLabel;
+@property (weak, nonatomic) IBOutlet UIButton *logoutButton;
+
+@property (nonatomic, strong) BFMUser *user;
+
 @end
 
 @implementation BFMProfileViewController
@@ -25,7 +33,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.user = [BFMUser currentUser];
+    
     self.navigationItem.title = NSLocalizedString(@"profile.title", nil);
+    self.benefitsLabel.text = NSLocalizedString(@"profile.benefits", nil);
+    self.goalsLabel.text = NSLocalizedString(@"profile.goals", nil);
+    [self.logoutButton setTitle:NSLocalizedString(@"profile.logout", nil) forState:UIControlStateNormal];
+    
+    self.usernameLabel.text = self.user.name;
+    self.idLabel.text = [self.user.identifier stringValue];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -41,6 +57,8 @@
     [NINavigationAppearance popAppearanceForNavigationController:self.navigationController];
 }
 
+#pragma mark - Handlers
+
 - (IBAction)logout:(id)sender {
     [JNKeychain deleteValueForKey:kBFMSessionKey];
     
@@ -51,5 +69,15 @@
     vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:vc animated:YES completion:NULL];
 }
+
+- (IBAction)benefits:(UIButton *)sender {
+    
+}
+
+- (IBAction)goals:(UIButton *)sender {
+    
+}
+
+
 
 @end

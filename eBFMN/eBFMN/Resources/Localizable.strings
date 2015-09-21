@@ -29,3 +29,17 @@
 // Leaderboard
 
 "leaderboard.title" = "LEADERBOARD";
+
+// Profile
+
+"profile.title" = "PROFILE";
+"profile.benefits" = "BENEFITS";
+"profile.goals" = "GOALS";
+"profile.logout" = "LOGOUT";
+
+// Benefits
+
+"benefits.gold" = "<ul><li>24/7 Dealer/IT Hotline/Personal Support</li><li>2 Free comission withdrawal a month</li><li>1% Discount on RMB Deposits</li><li>Free Hotel Bookings/Airport pick up when visiting our offices depending on availbility</li><li>Confirmed 1 week gift delivery(depending on availbility) </li><li>Weekly written analysis on market from our dealing desk</li></ul>";
+"benefits.diamond" = "<ul><li>24/7 Dealer/IT Hotline/Personal Support</li><li>3 Free comission withdrawal a month</li><li>2.5% Discount on RMB Deposits and withdrawals</li><li>Free Hotel Bookings/Airport Pick up when visiting our offices</li><li>Paid for flights when visting our offices </li> <li>Confirmed 1 week gift delivery(depending on availbility)</li><li>1 Free trip to Boston/Dubai Per year to visit executive team.</li></ul>";
+"benefits.title.gold" = "GOLD BENEFITS";
+"benefits.title.diamond" = "DIAMOND BENEFITS";
