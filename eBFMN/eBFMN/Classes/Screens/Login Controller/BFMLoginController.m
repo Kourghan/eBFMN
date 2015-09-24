@@ -11,6 +11,7 @@
 #import "UIStoryboard+BFMStoryboards.h"
 #import "BFMTabBarController.h"
 #import "BFMUser+Extension.h"
+#import "BFMForgotPasswordController.h"
 
 #import <SVProgressHUD/SVProgressHUD.h>
 
@@ -48,6 +49,17 @@
                                                                           attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     }
 
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"forgotPassword"]) {
+        BFMForgotPasswordController *controller = (BFMForgotPasswordController *)segue.destinationViewController;
+        if ([self.usernameTextField.text length] > 0) {
+            controller.credentials = self.usernameTextField.text;
+        }
+    }
 }
 
 #pragma mark - Private
