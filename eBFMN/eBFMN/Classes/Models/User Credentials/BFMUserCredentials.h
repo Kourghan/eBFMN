@@ -15,6 +15,7 @@
 
 - (instancetype)initWithUsername:(NSString *)username password:(NSString *)password;
 
-- (void)loginWithCompletitionCompletitionBlock:(void (^)(BOOL success, NSError *error))completition;
+- (void)loginWithCompletitionBlock:(void (^)(BOOL success, NSError *error))completition;
+- (void)remindPasswordWithCompletitionBlock:(void (^)(BOOL success, NSError *error))completition;
 
 @end

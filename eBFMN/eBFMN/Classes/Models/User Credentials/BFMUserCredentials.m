@@ -29,7 +29,7 @@ typedef enum {
     return self;
 }
 
-- (void)loginWithCompletitionCompletitionBlock:(void (^)(BOOL success, NSError *error))completition {
+- (void)loginWithCompletitionBlock:(void (^)(BOOL success, NSError *error))completition {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
 
     [manager GET:@"Accounts/Login"
@@ -51,6 +51,23 @@ typedef enum {
              completition(NO, error);
          }
      }];
+}
+
+- (void)remindPasswordWithCompletitionBlock:(void (^)(BOOL, NSError *))completition {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
+    
+    [manager GET:@"Registration/GetPasswordForLogin" parameters:@{@"login" : self.username}
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             if (completition) {
+                 completition(YES, nil);
+             }
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             if (completition) {
+                 completition(NO, error);
+             }
+         }
+     ];
+    
 }
 
 @end

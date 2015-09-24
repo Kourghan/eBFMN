@@ -11,6 +11,7 @@
 #import "UIStoryboard+BFMStoryboards.h"
 #import "BFMTabBarController.h"
 #import "BFMUser+Extension.h"
+#import "BFMForgotPasswordController.h"
 
 #import <SVProgressHUD/SVProgressHUD.h>
 
@@ -50,6 +51,16 @@
 
 }
 
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"forgotPassword"]) {
+        BFMForgotPasswordController *controller = (BFMForgotPasswordController *)segue.destinationViewController;
+        controller.credentials = [[BFMUserCredentials alloc] initWithUsername:self.usernameTextField.text
+                                                                     password:self.passwordTextField.text];
+    }
+}
+
 #pragma mark - Private
 
 - (BOOL)dataVerified {
@@ -60,11 +71,11 @@
 
 - (IBAction)loginButtonTapped:(id)sender {
     if ([self dataVerified]) {
-        [SVProgressHUD show];
+        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
         
         BFMUserCredentials *credentials = [[BFMUserCredentials alloc] initWithUsername:self.usernameTextField.text
                                                                               password:self.passwordTextField.text];
-        [credentials loginWithCompletitionCompletitionBlock:^(BOOL success, NSError *error) {
+        [credentials loginWithCompletitionBlock:^(BOOL success, NSError *error) {
             if (success) {
                 [BFMUser getInfoWithCompletitionBlock:^(BOOL success) {
                     if (success) {

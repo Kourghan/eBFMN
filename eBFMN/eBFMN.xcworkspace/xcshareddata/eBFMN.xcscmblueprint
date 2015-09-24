@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3D1AB2D9ADC0B40988E74575C711F8D1FABBB580",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3D1AB2D9ADC0B40988E74575C711F8D1FABBB580" : 0,
+    "89FF9D47AC0F5E0ACFA8F687756300C56F7F48D8" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9BC34432-7B20-4172-BA11-35E717C2B3FE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3D1AB2D9ADC0B40988E74575C711F8D1FABBB580" : "eBFMN",
+    "89FF9D47AC0F5E0ACFA8F687756300C56F7F48D8" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "eBFMN",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "eBFMN\/eBFMN.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Kourghan\/eBFMN",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3D1AB2D9ADC0B40988E74575C711F8D1FABBB580"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/BAEBeforeAnyoneElse\/bae_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "89FF9D47AC0F5E0ACFA8F687756300C56F7F48D8"
+    }
+  ]
+}
