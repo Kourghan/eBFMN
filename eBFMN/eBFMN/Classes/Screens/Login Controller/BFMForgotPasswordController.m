@@ -7,6 +7,7 @@
 //
 
 #import "BFMForgotPasswordController.h"
+#import "BFMUserCredentials.h"
 
 @interface BFMForgotPasswordController ()
 
@@ -25,6 +26,8 @@
     
     self.usernameTextfield.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.usernameTextfield.placeholder
                                                                                    attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    
+    self.usernameTextfield.text = self.credentials.username;
 }
 
 #pragma mark - handlers
