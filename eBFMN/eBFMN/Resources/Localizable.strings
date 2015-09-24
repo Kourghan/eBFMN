@@ -11,6 +11,10 @@
 "login.wrongcredentials" = "Wrong Username or Password";
 "login.emptyfields" = "Fields Must Not Be Empty";
 
+// Status
+
+"status.failed.passwordReminder" = "Failed to Restore Password";
+
 // Tabbar
 
 "tabbar.dashboard" = "Dashboard";

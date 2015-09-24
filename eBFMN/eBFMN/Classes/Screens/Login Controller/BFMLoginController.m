@@ -71,7 +71,7 @@
 
 - (IBAction)loginButtonTapped:(id)sender {
     if ([self dataVerified]) {
-        [SVProgressHUD show];
+        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
         
         BFMUserCredentials *credentials = [[BFMUserCredentials alloc] initWithUsername:self.usernameTextField.text
                                                                               password:self.passwordTextField.text];

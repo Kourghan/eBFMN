@@ -56,23 +56,17 @@ typedef enum {
 - (void)remindPasswordWithCompletitionBlock:(void (^)(BOOL, NSError *))completition {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
     
-    [manager GET:@"Registration/GetPasswordForLogin" parameters:@{@"login" : self.username} success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-        if ([[responseObject valueForKey:@"State"] integerValue] == BFMLoginResultSuccess) {
-            [JNKeychain saveValue:[responseObject valueForKey:@"Data"] forKey:kBFMSessionKey];
-            [JNKeychain saveValue:self.username forKey:kBFMUsername];
-            if (completition) {
-                completition(YES, nil);
-            }
-        } else {
-            if (completition) {
-                completition(NO, nil);
-            }
-        }
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        if (completition) {
-            completition(NO, error);
-        }
-    }];
+    [manager GET:@"Registration/GetPasswordForLogin" parameters:@{@"login" : self.username}
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             if (completition) {
+                 completition(YES, nil);
+             }
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             if (completition) {
+                 completition(NO, error);
+             }
+         }
+     ];
     
 }
 
