@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class BFMUserCredentials;
+
 @interface BFMForgotPasswordController : UIViewController
 
-@property (nonatomic, strong) NSString *credentials;
+@property (nonatomic, strong) BFMUserCredentials *credentials;
 
 @end

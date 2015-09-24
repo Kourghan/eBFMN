@@ -56,9 +56,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"forgotPassword"]) {
         BFMForgotPasswordController *controller = (BFMForgotPasswordController *)segue.destinationViewController;
-        if ([self.usernameTextField.text length] > 0) {
-            controller.credentials = self.usernameTextField.text;
-        }
+        controller.credentials = [[BFMUserCredentials alloc] initWithUsername:self.usernameTextField.text
+                                                                     password:self.passwordTextField.text];
     }
 }
 
@@ -76,7 +75,7 @@
         
         BFMUserCredentials *credentials = [[BFMUserCredentials alloc] initWithUsername:self.usernameTextField.text
                                                                               password:self.passwordTextField.text];
-        [credentials loginWithCompletitionCompletitionBlock:^(BOOL success, NSError *error) {
+        [credentials loginWithCompletitionBlock:^(BOOL success, NSError *error) {
             if (success) {
                 [BFMUser getInfoWithCompletitionBlock:^(BOOL success) {
                     if (success) {
