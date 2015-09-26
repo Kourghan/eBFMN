@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BFMBasePageController.h"
 
-@interface BFMBenefitsPageController : UIViewController
+@interface BFMBenefitsPageController : BFMBasePageController
 
 - (void)setHTMLString:(NSString *)text title:(NSString *)title;
-
-@property (nonatomic) NSUInteger index;
 
 @end

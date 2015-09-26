@@ -57,6 +57,11 @@
 		619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C071B977CF200886893 /* BFMUserCredentials.m */; };
 		619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C121B977DC400886893 /* JNKeychain+UNTExtension.m */; };
 		619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C151B977DD000886893 /* UIColor+Extensions.m */; };
+		61B1DD2F1BB6D41500DB6D23 /* BFMDashboardAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD2E1BB6D41500DB6D23 /* BFMDashboardAdaptor.m */; settings = {ASSET_TAGS = (); }; };
+		61B1DD321BB6D84200DB6D23 /* BFMEarningsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD311BB6D84200DB6D23 /* BFMEarningsPage.m */; settings = {ASSET_TAGS = (); }; };
+		61B1DD361BB6D86E00DB6D23 /* BFMClientsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD351BB6D86E00DB6D23 /* BFMClientsPage.m */; settings = {ASSET_TAGS = (); }; };
+		61B1DD3A1BB6D97D00DB6D23 /* BFMBasePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD391BB6D97D00DB6D23 /* BFMBasePageController.m */; settings = {ASSET_TAGS = (); }; };
+		61B1DD3D1BB6ED8300DB6D23 /* BFMDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD3C1BB6ED8300DB6D23 /* BFMDashboardViewController.m */; settings = {ASSET_TAGS = (); }; };
 		61C181F01B98D62700D5FAC8 /* BFMSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C181EF1B98D62700D5FAC8 /* BFMSessionManager.m */; };
 		61C181F61B98DF7100D5FAC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61C181F51B98DF7100D5FAC8 /* Localizable.strings */; };
 		61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C181F81B98E04F00D5FAC8 /* BFMLoginController.m */; };
@@ -200,6 +205,16 @@
 		619E2C121B977DC400886893 /* JNKeychain+UNTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JNKeychain+UNTExtension.m"; path = "Misc/Categories/JNKeychain+UNTExtension/JNKeychain+UNTExtension.m"; sourceTree = "<group>"; };
 		619E2C141B977DD000886893 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Extensions.h"; path = "Misc/Categories/UIColor+UNTExtension/UIColor+Extensions.h"; sourceTree = "<group>"; };
 		619E2C151B977DD000886893 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Extensions.m"; path = "Misc/Categories/UIColor+UNTExtension/UIColor+Extensions.m"; sourceTree = "<group>"; };
+		61B1DD2D1BB6D41500DB6D23 /* BFMDashboardAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMDashboardAdaptor.h; path = Classes/Screens/Dashboard/BFMDashboardAdaptor.h; sourceTree = "<group>"; };
+		61B1DD2E1BB6D41500DB6D23 /* BFMDashboardAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMDashboardAdaptor.m; path = Classes/Screens/Dashboard/BFMDashboardAdaptor.m; sourceTree = "<group>"; };
+		61B1DD301BB6D84200DB6D23 /* BFMEarningsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMEarningsPage.h; path = Classes/Screens/Dashboard/BFMEarningsPage.h; sourceTree = "<group>"; };
+		61B1DD311BB6D84200DB6D23 /* BFMEarningsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMEarningsPage.m; path = Classes/Screens/Dashboard/BFMEarningsPage.m; sourceTree = "<group>"; };
+		61B1DD341BB6D86E00DB6D23 /* BFMClientsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMClientsPage.h; path = Classes/Screens/Dashboard/BFMClientsPage.h; sourceTree = "<group>"; };
+		61B1DD351BB6D86E00DB6D23 /* BFMClientsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMClientsPage.m; path = Classes/Screens/Dashboard/BFMClientsPage.m; sourceTree = "<group>"; };
+		61B1DD381BB6D97D00DB6D23 /* BFMBasePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMBasePageController.h; path = Classes/UI/Controllers/BFMBasePageController.h; sourceTree = "<group>"; };
+		61B1DD391BB6D97D00DB6D23 /* BFMBasePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMBasePageController.m; path = Classes/UI/Controllers/BFMBasePageController.m; sourceTree = "<group>"; };
+		61B1DD3B1BB6ED8300DB6D23 /* BFMDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMDashboardViewController.h; path = Classes/Screens/Dashboard/BFMDashboardViewController.h; sourceTree = "<group>"; };
+		61B1DD3C1BB6ED8300DB6D23 /* BFMDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMDashboardViewController.m; path = Classes/Screens/Dashboard/BFMDashboardViewController.m; sourceTree = "<group>"; };
 		61C181EE1B98D62700D5FAC8 /* BFMSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMSessionManager.h; path = Networking/Manager/BFMSessionManager.h; sourceTree = "<group>"; };
 		61C181EF1B98D62700D5FAC8 /* BFMSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMSessionManager.m; path = Networking/Manager/BFMSessionManager.m; sourceTree = "<group>"; };
 		61C181F51B98DF7100D5FAC8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Resources/Localizable.strings; sourceTree = "<group>"; };
@@ -407,8 +422,11 @@
 		613C28A11BA31AAB00B2856A /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				61B1DD331BB6D85000DB6D23 /* Pages */,
 				613C28A21BA31AF800B2856A /* BFMDashboardController.h */,
 				613C28A31BA31AF800B2856A /* BFMDashboardController.m */,
+				61B1DD3B1BB6ED8300DB6D23 /* BFMDashboardViewController.h */,
+				61B1DD3C1BB6ED8300DB6D23 /* BFMDashboardViewController.m */,
 			);
 			name = Dashboard;
 			sourceTree = "<group>";
@@ -416,6 +434,7 @@
 		613C28A81BA31E0E00B2856A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				61B1DD371BB6D95B00DB6D23 /* Base Controller */,
 				6135F3821BAF467600B29DE3 /* View */,
 				613C28B31BA331E200B2856A /* Appearance */,
 				613C28A91BA31E1900B2856A /* Cells */,
@@ -692,6 +711,28 @@
 				61C182091B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		61B1DD331BB6D85000DB6D23 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				61B1DD2D1BB6D41500DB6D23 /* BFMDashboardAdaptor.h */,
+				61B1DD2E1BB6D41500DB6D23 /* BFMDashboardAdaptor.m */,
+				61B1DD301BB6D84200DB6D23 /* BFMEarningsPage.h */,
+				61B1DD311BB6D84200DB6D23 /* BFMEarningsPage.m */,
+				61B1DD341BB6D86E00DB6D23 /* BFMClientsPage.h */,
+				61B1DD351BB6D86E00DB6D23 /* BFMClientsPage.m */,
+			);
+			name = Pages;
+			sourceTree = "<group>";
+		};
+		61B1DD371BB6D95B00DB6D23 /* Base Controller */ = {
+			isa = PBXGroup;
+			children = (
+				61B1DD381BB6D97D00DB6D23 /* BFMBasePageController.h */,
+				61B1DD391BB6D97D00DB6D23 /* BFMBasePageController.m */,
+			);
+			name = "Base Controller";
 			sourceTree = "<group>";
 		};
 		61C181EC1B98D58600D5FAC8 /* Networking */ = {
@@ -1016,7 +1057,9 @@
 				2CF024F31B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m in Sources */,
 				61FD3D6B1BA7096D00F4CEFB /* ODSSectionChange.m in Sources */,
 				61FD3D651BA7096D00F4CEFB /* ODSCollectionAdapter.m in Sources */,
+				61B1DD321BB6D84200DB6D23 /* BFMEarningsPage.m in Sources */,
 				61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */,
+				61B1DD3D1BB6ED8300DB6D23 /* BFMDashboardViewController.m in Sources */,
 				6135F3801BAF466E00B29DE3 /* BFMBenefitsPageController.m in Sources */,
 				61903C2B1BAC0DC30018B3A0 /* BFMNotificationCell.m in Sources */,
 				61FD3D751BA76AA200F4CEFB /* BFMNewsTableAdapter.m in Sources */,
@@ -1043,6 +1086,8 @@
 				619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */,
 				61FD3D6D1BA7096D00F4CEFB /* ODSArraySection.m in Sources */,
 				61FD3D6C1BA7096D00F4CEFB /* ODSFilteringSourceSearchController.m in Sources */,
+				61B1DD3A1BB6D97D00DB6D23 /* BFMBasePageController.m in Sources */,
+				61B1DD2F1BB6D41500DB6D23 /* BFMDashboardAdaptor.m in Sources */,
 				613AE75A1B9B872C00300B22 /* BFMSysAccount.m in Sources */,
 				619E2BDC1B97564A00886893 /* main.m in Sources */,
 				613AE76D1B9C683800300B22 /* BFMLeaderboardModel.m in Sources */,
@@ -1063,6 +1108,7 @@
 				2C4E7B121BAA37E100682A56 /* BFMLeaderboardTableViewController.m in Sources */,
 				61FD3D641BA7096D00F4CEFB /* ODSAdapter.m in Sources */,
 				61FD3D671BA7096D00F4CEFB /* ODSBatchObjectChange.m in Sources */,
+				61B1DD361BB6D86E00DB6D23 /* BFMClientsPage.m in Sources */,
 				61FD3D691BA7096D00F4CEFB /* ODSEventBroadcaster.m in Sources */,
 				613AE7801B9CD04400300B22 /* ELAAppearance.m in Sources */,
 				613AE74E1B9B78CE00300B22 /* ebfmn.xcdatamodeld in Sources */,
