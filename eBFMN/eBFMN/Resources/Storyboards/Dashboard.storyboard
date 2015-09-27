@@ -320,6 +320,7 @@
                         <outlet property="monthLabel" destination="Nld-1y-hxu" id="5UT-6e-kPD"/>
                         <outlet property="reabatesLabel" destination="vsU-tM-tcv" id="wUh-Dw-K5g"/>
                         <outlet property="reabtesValueLabel" destination="zaw-QI-VxE" id="9SD-Bf-gx5"/>
+                        <outlet property="scrollView" destination="uvr-zP-X5f" id="TUd-wC-qYB"/>
                         <outlet property="spreadLabel" destination="F9h-Z2-xXT" id="kGY-lv-6do"/>
                         <outlet property="spreadValueLabel" destination="9o1-ga-Gh5" id="l6Z-ns-pe5"/>
                     </connections>
