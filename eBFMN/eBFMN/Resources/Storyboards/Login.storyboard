@@ -77,7 +77,7 @@
                                     <action selector="loginButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VBE-uZ-9bq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0r-bf-zXh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0r-bf-zXh">
                                 <rect key="frame" x="23" y="531" width="75" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="s1p-sz-vkk"/>
@@ -90,7 +90,7 @@
                                     <action selector="contactUsButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="H6e-Zq-SfH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1S-ml-ON7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1S-ml-ON7">
                                 <rect key="frame" x="167" y="531" width="130" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="o05-Wk-OCR"/>
@@ -103,28 +103,28 @@
                                     <action selector="termsButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OG7-bt-2sG"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hde-By-f6h">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hde-By-f6h">
                                 <rect key="frame" x="23" y="552" width="75" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="76K-79-M8D"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U3i-zW-E0Q">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3i-zW-E0Q">
                                 <rect key="frame" x="167" y="552" width="130" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="8Lc-3v-5LY"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBx-tZ-gxV">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBx-tZ-gxV">
                                 <rect key="frame" x="177.5" y="444" width="120" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="U3O-Wo-tOq"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaG-q7-iti">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaG-q7-iti">
                                 <rect key="frame" x="177.5" y="423" width="120" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="6Dl-iQ-B7H"/>
@@ -215,7 +215,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_login" translatesAutoresizingMaskIntoConstraints="NO" id="IIQ-ey-TkY">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LuZ-Wn-Nzo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LuZ-Wn-Nzo">
                                 <rect key="frame" x="167" y="531" width="130" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ccg-2Z-DHA"/>
@@ -229,7 +229,7 @@
                                     <action selector="termsButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8uv-Vk-wgT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jh-Hm-NQ8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jh-Hm-NQ8">
                                 <rect key="frame" x="23" y="531" width="75" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="6z9-wB-yi7"/>
@@ -243,21 +243,21 @@
                                     <action selector="contactUsButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1nj-z5-reS"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Agh-X9-bEJ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Agh-X9-bEJ">
                                 <rect key="frame" x="167" y="552" width="130" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Gn4-QU-uS8"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7AS-X6-TIv">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7AS-X6-TIv">
                                 <rect key="frame" x="23" y="552" width="75" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="ymB-jI-TMg"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znS-hZ-gLE" userLabel="Login">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znS-hZ-gLE" userLabel="Login">
                                 <rect key="frame" x="22" y="349" width="275" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="15"/>
@@ -272,7 +272,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="EpB-TV-w2T">
                                 <rect key="frame" x="100" y="91" width="119" height="25"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkF-si-dNA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkF-si-dNA">
                                 <rect key="frame" x="20" y="201" width="280.5" height="40.5"/>
                                 <string key="text">You are about to retrieve your password for MYBMFN
 account. Please enter your email address, which was used
@@ -281,7 +281,7 @@ during the registration, or MYBMFN account Login.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="EMAIL/LOGIN" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nki-to-a8U">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="EMAIL/LOGIN" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nki-to-a8U">
                                 <rect key="frame" x="22" y="264" width="275" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -295,9 +295,9 @@ during the registration, or MYBMFN account Login.</string>
                                     <outlet property="delegate" destination="9br-nT-rsA" id="5dK-i8-Tmt"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ok3-CZ-Syg">
-                                <rect key="frame" x="15" y="20" width="46" height="30"/>
-                                <state key="normal" title="&lt;">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ok3-CZ-Syg">
+                                <rect key="frame" x="15" y="43" width="11" height="22"/>
+                                <state key="normal" image="btn_back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -320,9 +320,11 @@ during the registration, or MYBMFN account Login.</string>
                             <constraint firstItem="znS-hZ-gLE" firstAttribute="centerX" secondItem="Nki-to-a8U" secondAttribute="centerX" id="G45-cD-Gnt"/>
                             <constraint firstAttribute="bottom" secondItem="7AS-X6-TIv" secondAttribute="bottom" constant="15" id="JJ4-ZQ-FYP"/>
                             <constraint firstItem="IIQ-ey-TkY" firstAttribute="top" secondItem="LkE-76-4MV" secondAttribute="topMargin" id="NGF-H8-tU9"/>
+                            <constraint firstItem="ok3-CZ-Syg" firstAttribute="leading" secondItem="LkE-76-4MV" secondAttribute="leading" constant="15" id="PGd-Hh-BXJ"/>
                             <constraint firstItem="IIQ-ey-TkY" firstAttribute="top" secondItem="Jyg-zK-L1M" secondAttribute="bottom" id="Qt4-LI-KAo"/>
                             <constraint firstItem="KkF-si-dNA" firstAttribute="centerX" secondItem="LkE-76-4MV" secondAttribute="centerX" id="RrP-RZ-YS8"/>
                             <constraint firstItem="Nki-to-a8U" firstAttribute="centerX" secondItem="LkE-76-4MV" secondAttribute="centerX" id="Sas-ey-FBb"/>
+                            <constraint firstItem="ok3-CZ-Syg" firstAttribute="top" secondItem="Jyg-zK-L1M" secondAttribute="bottom" constant="23" id="Xin-4I-ZGK"/>
                             <constraint firstItem="Nki-to-a8U" firstAttribute="top" secondItem="KkF-si-dNA" secondAttribute="bottom" constant="23" id="Yhz-gY-gMR"/>
                             <constraint firstItem="3Jh-Hm-NQ8" firstAttribute="centerX" secondItem="7AS-X6-TIv" secondAttribute="centerX" id="agg-CH-VuJ"/>
                             <constraint firstAttribute="trailing" secondItem="LuZ-Wn-Nzo" secondAttribute="trailing" constant="23" id="i02-La-PNE"/>
@@ -354,6 +356,7 @@ during the registration, or MYBMFN account Login.</string>
     </scenes>
     <resources>
         <image name="bg_login" width="320" height="568"/>
+        <image name="btn_back" width="11" height="19"/>
         <image name="logo" width="119" height="25"/>
     </resources>
 </document>
