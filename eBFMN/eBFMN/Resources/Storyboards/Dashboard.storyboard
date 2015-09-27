@@ -117,24 +117,12 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZt-du-I6S">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="145"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYB-5d-akx">
-                                                        <rect key="frame" x="10" y="45" width="580" height="20.5"/>
-                                                        <string key="text">Labelfhksjdfh hkjas fj hkh fkh fh ksh fkjhfkash fkshakf hfk hkfh kashfkjsdjkf kfhkjas fkj hjksdfhk asfkjsfhjkdh kjasf jkasfhjashfkjafh kajshfkjasdhfjkasd hkajsfh as fafhkjash ashfkahfkjas hkas</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="145" id="BZD-bp-qb5"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="TxR-pw-vlK"/>
-                                                    <constraint firstItem="uYB-5d-akx" firstAttribute="leading" secondItem="LZt-du-I6S" secondAttribute="leading" constant="10" id="dhG-Y8-ytF"/>
                                                     <constraint firstAttribute="height" constant="145" id="fYy-eu-EYj"/>
-                                                    <constraint firstAttribute="trailing" secondItem="uYB-5d-akx" secondAttribute="trailing" constant="10" id="gXl-KA-7Z6"/>
                                                     <constraint firstAttribute="width" constant="600" id="jYy-ts-DeU"/>
-                                                    <constraint firstItem="uYB-5d-akx" firstAttribute="top" secondItem="LZt-du-I6S" secondAttribute="top" constant="45" id="z9n-Qz-Jg5"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -161,22 +149,22 @@
                                         </variation>
                                     </scrollView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tv-M9-rZj">
-                                        <rect key="frame" x="189.5" y="0.0" width="221.5" height="50"/>
+                                        <rect key="frame" x="188" y="0.0" width="225" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EARNINGS FOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEb-0H-eJs">
-                                                <rect key="frame" x="0.0" y="0.0" width="105" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EARNINGS FOR " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEb-0H-eJs">
+                                                <rect key="frame" x="0.0" y="0.0" width="108.5" height="50"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                 <color key="textColor" red="0.22745098039215686" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEPTEMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nld-1y-hxu">
-                                                <rect key="frame" x="105" y="0.0" width="82.5" height="50"/>
+                                                <rect key="frame" x="108.5" y="0.0" width="82.5" height="50"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                 <color key="textColor" red="0.22745098039215686" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kh2-mN-oym">
-                                                <rect key="frame" x="187.5" y="9.5" width="34" height="31"/>
+                                                <rect key="frame" x="191" y="9.5" width="34" height="31"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                 <state key="normal" title=" USD">
                                                     <color key="titleColor" red="0.031372549019607843" green="0.27058823529411763" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
