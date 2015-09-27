@@ -13,6 +13,8 @@
 #import "NINavigationAppearance.h"
 #import "BFMDefaultNavagtionBarAppearance.h"
 
+#import "UIColor+Extensions.h"
+
 @interface BFMDashboardViewController ()
 
 @property (nonatomic, strong) UIPageViewController *pageController;
@@ -39,6 +41,18 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"embed"]) {
         self.pageController = (UIPageViewController *)segue.destinationViewController;
+        
+        NSArray *subviews = self.pageController.view.subviews;
+        UIPageControl *thisControl = nil;
+        for (int i = 0; i < [subviews count]; i++) {
+            if ([[subviews objectAtIndex:i] isKindOfClass:[UIPageControl class]]) {
+                thisControl = (UIPageControl *)[subviews objectAtIndex:i];
+            }
+        }
+        
+        thisControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+        thisControl.currentPageIndicatorTintColor = [UIColor bfm_defaultNavigationBlue];
+        
         [self.pageController setViewControllers:@[[BFMDashboardAdaptor initialController]]
                                       direction:UIPageViewControllerNavigationDirectionForward
                                        animated:YES
