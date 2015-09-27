@@ -694,6 +694,14 @@
                             <constraint firstItem="Llu-Wu-DUZ" firstAttribute="leading" secondItem="pSW-n2-7pR" secondAttribute="leading" constant="6" id="uft-GE-0B8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clientsLabel" destination="0u7-Ro-L8X" id="fe5-zg-dUt"/>
+                        <outlet property="demoAccountsLabel" destination="EbI-qj-UFk" id="20o-FH-q8b"/>
+                        <outlet property="demoValueClientsLabel" destination="U97-OG-uVO" id="AWU-FF-k1M"/>
+                        <outlet property="liveClientsLabel" destination="8bJ-r4-Pr3" id="5gW-tZ-06r"/>
+                        <outlet property="liveClientsValueLabel" destination="F3M-tg-8Wb" id="arY-uK-J3d"/>
+                        <outlet property="totalClientsValueLabel" destination="RCN-Q1-ec8" id="ucJ-KV-MWw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzq-N9-khu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
