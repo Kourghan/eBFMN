@@ -62,6 +62,11 @@
 		61B1DD361BB6D86E00DB6D23 /* BFMClientsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD351BB6D86E00DB6D23 /* BFMClientsPage.m */; settings = {ASSET_TAGS = (); }; };
 		61B1DD3A1BB6D97D00DB6D23 /* BFMBasePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD391BB6D97D00DB6D23 /* BFMBasePageController.m */; settings = {ASSET_TAGS = (); }; };
 		61B1DD3D1BB6ED8300DB6D23 /* BFMDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD3C1BB6ED8300DB6D23 /* BFMDashboardViewController.m */; settings = {ASSET_TAGS = (); }; };
+		61B1DD4B1BB83BAC00DB6D23 /* MCNewCustomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD411BB83BAC00DB6D23 /* MCNewCustomLayer.m */; settings = {ASSET_TAGS = (); }; };
+		61B1DD4C1BB83BAC00DB6D23 /* MCNewCustomLayeredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD441BB83BAC00DB6D23 /* MCNewCustomLayeredView.m */; settings = {ASSET_TAGS = (); }; };
+		61B1DD4D1BB83BAC00DB6D23 /* MCPercentageDoughnutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD461BB83BAC00DB6D23 /* MCPercentageDoughnutView.m */; settings = {ASSET_TAGS = (); }; };
+		61B1DD4E1BB83BAC00DB6D23 /* MCSliceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD481BB83BAC00DB6D23 /* MCSliceLayer.m */; settings = {ASSET_TAGS = (); }; };
+		61B1DD4F1BB83BAC00DB6D23 /* MCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD4A1BB83BAC00DB6D23 /* MCUtil.m */; settings = {ASSET_TAGS = (); }; };
 		61C181F01B98D62700D5FAC8 /* BFMSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C181EF1B98D62700D5FAC8 /* BFMSessionManager.m */; };
 		61C181F61B98DF7100D5FAC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61C181F51B98DF7100D5FAC8 /* Localizable.strings */; };
 		61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C181F81B98E04F00D5FAC8 /* BFMLoginController.m */; };
@@ -215,6 +220,18 @@
 		61B1DD391BB6D97D00DB6D23 /* BFMBasePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMBasePageController.m; path = Classes/UI/Controllers/BFMBasePageController.m; sourceTree = "<group>"; };
 		61B1DD3B1BB6ED8300DB6D23 /* BFMDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMDashboardViewController.h; path = Classes/Screens/Dashboard/BFMDashboardViewController.h; sourceTree = "<group>"; };
 		61B1DD3C1BB6ED8300DB6D23 /* BFMDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMDashboardViewController.m; path = Classes/Screens/Dashboard/BFMDashboardViewController.m; sourceTree = "<group>"; };
+		61B1DD3F1BB83BAC00DB6D23 /* MCCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCore.h; sourceTree = "<group>"; };
+		61B1DD401BB83BAC00DB6D23 /* MCNewCustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNewCustomLayer.h; sourceTree = "<group>"; };
+		61B1DD411BB83BAC00DB6D23 /* MCNewCustomLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNewCustomLayer.m; sourceTree = "<group>"; };
+		61B1DD421BB83BAC00DB6D23 /* MCNewCustomLayeredView+MCCustomLayeredViewSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MCNewCustomLayeredView+MCCustomLayeredViewSubclass.h"; sourceTree = "<group>"; };
+		61B1DD431BB83BAC00DB6D23 /* MCNewCustomLayeredView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNewCustomLayeredView.h; sourceTree = "<group>"; };
+		61B1DD441BB83BAC00DB6D23 /* MCNewCustomLayeredView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNewCustomLayeredView.m; sourceTree = "<group>"; };
+		61B1DD451BB83BAC00DB6D23 /* MCPercentageDoughnutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCPercentageDoughnutView.h; sourceTree = "<group>"; };
+		61B1DD461BB83BAC00DB6D23 /* MCPercentageDoughnutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCPercentageDoughnutView.m; sourceTree = "<group>"; };
+		61B1DD471BB83BAC00DB6D23 /* MCSliceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSliceLayer.h; sourceTree = "<group>"; };
+		61B1DD481BB83BAC00DB6D23 /* MCSliceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSliceLayer.m; sourceTree = "<group>"; };
+		61B1DD491BB83BAC00DB6D23 /* MCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUtil.h; sourceTree = "<group>"; };
+		61B1DD4A1BB83BAC00DB6D23 /* MCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUtil.m; sourceTree = "<group>"; };
 		61C181EE1B98D62700D5FAC8 /* BFMSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMSessionManager.h; path = Networking/Manager/BFMSessionManager.h; sourceTree = "<group>"; };
 		61C181EF1B98D62700D5FAC8 /* BFMSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMSessionManager.m; path = Networking/Manager/BFMSessionManager.m; sourceTree = "<group>"; };
 		61C181F51B98DF7100D5FAC8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Resources/Localizable.strings; sourceTree = "<group>"; };
@@ -390,6 +407,7 @@
 		613AE76E1B9CC8B300300B22 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				61B1DD3E1BB83BAC00DB6D23 /* CircledView */,
 				61FD3D371BA7096D00F4CEFB /* Objects Data Source */,
 				61FD3D341BA7094200F4CEFB /* JGActionSheet.h */,
 				61FD3D351BA7094200F4CEFB /* JGActionSheet.m */,
@@ -735,6 +753,26 @@
 			name = "Base Controller";
 			sourceTree = "<group>";
 		};
+		61B1DD3E1BB83BAC00DB6D23 /* CircledView */ = {
+			isa = PBXGroup;
+			children = (
+				61B1DD3F1BB83BAC00DB6D23 /* MCCore.h */,
+				61B1DD401BB83BAC00DB6D23 /* MCNewCustomLayer.h */,
+				61B1DD411BB83BAC00DB6D23 /* MCNewCustomLayer.m */,
+				61B1DD421BB83BAC00DB6D23 /* MCNewCustomLayeredView+MCCustomLayeredViewSubclass.h */,
+				61B1DD431BB83BAC00DB6D23 /* MCNewCustomLayeredView.h */,
+				61B1DD441BB83BAC00DB6D23 /* MCNewCustomLayeredView.m */,
+				61B1DD451BB83BAC00DB6D23 /* MCPercentageDoughnutView.h */,
+				61B1DD461BB83BAC00DB6D23 /* MCPercentageDoughnutView.m */,
+				61B1DD471BB83BAC00DB6D23 /* MCSliceLayer.h */,
+				61B1DD481BB83BAC00DB6D23 /* MCSliceLayer.m */,
+				61B1DD491BB83BAC00DB6D23 /* MCUtil.h */,
+				61B1DD4A1BB83BAC00DB6D23 /* MCUtil.m */,
+			);
+			name = CircledView;
+			path = Lib/CircledView;
+			sourceTree = "<group>";
+		};
 		61C181EC1B98D58600D5FAC8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -1070,14 +1108,17 @@
 				2CAD81441BABD54400DEF6F3 /* BFMLeaderboardCell.m in Sources */,
 				613AE7661B9B9F7C00300B22 /* BFMAccount.m in Sources */,
 				619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */,
+				61B1DD4D1BB83BAC00DB6D23 /* MCPercentageDoughnutView.m in Sources */,
 				61FD3D661BA7096D00F4CEFB /* ODSTableAdapter.m in Sources */,
 				613AE7731B9CCC9600300B22 /* BFMAccount+Extension.m in Sources */,
 				2CF024EF1B9A409A009E8959 /* BFMTabBarController.m in Sources */,
 				613AE7721B9CC8CA00300B22 /* NINavigationAppearance.m in Sources */,
+				61B1DD4F1BB83BAC00DB6D23 /* MCUtil.m in Sources */,
 				61FD3D681BA7096D00F4CEFB /* ODSEvent.m in Sources */,
 				6135F3861BAF4CE700B29DE3 /* BFMBenefitsAdaptor.m in Sources */,
 				613C28BA1BA33FB800B2856A /* BFMNewsViewController.m in Sources */,
 				613C28AC1BA31E3900B2856A /* BFMEarningsCell.m in Sources */,
+				61B1DD4E1BB83BAC00DB6D23 /* MCSliceLayer.m in Sources */,
 				61FD3D701BA7096D00F4CEFB /* ODSDataSource.m in Sources */,
 				613AE7811B9CD04400300B22 /* ELAXIBAppearance.m in Sources */,
 				61FD3D361BA7094200F4CEFB /* JGActionSheet.m in Sources */,
@@ -1109,7 +1150,9 @@
 				61FD3D641BA7096D00F4CEFB /* ODSAdapter.m in Sources */,
 				61FD3D671BA7096D00F4CEFB /* ODSBatchObjectChange.m in Sources */,
 				61B1DD361BB6D86E00DB6D23 /* BFMClientsPage.m in Sources */,
+				61B1DD4B1BB83BAC00DB6D23 /* MCNewCustomLayer.m in Sources */,
 				61FD3D691BA7096D00F4CEFB /* ODSEventBroadcaster.m in Sources */,
+				61B1DD4C1BB83BAC00DB6D23 /* MCNewCustomLayeredView.m in Sources */,
 				613AE7801B9CD04400300B22 /* ELAAppearance.m in Sources */,
 				613AE74E1B9B78CE00300B22 /* ebfmn.xcdatamodeld in Sources */,
 				619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */,

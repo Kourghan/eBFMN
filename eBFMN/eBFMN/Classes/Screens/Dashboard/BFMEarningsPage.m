@@ -9,8 +9,11 @@
 #import "BFMEarningsPage.h"
 
 #import "BFMUser+Extension.h"
+#import "MCPercentageDoughnutView.h"
 
-@interface BFMEarningsPage ()
+#import "UIColor+Extensions.h"
+
+@interface BFMEarningsPage () <MCPercentageDoughnutViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UILabel *reabtesValueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *reabatesLabel;
@@ -26,6 +29,12 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *currencyButton;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pointsValueLabel;
+
+@property (weak, nonatomic) IBOutlet MCPercentageDoughnutView *progressView;
 
 @end
 
@@ -46,6 +55,10 @@
     self.reabatesLabel.text = NSLocalizedString(@"dashboard.rebates", nil);
     self.commissionLabel.text = NSLocalizedString(@"dashboard.commissions", nil);
     self.spreadLabel.text = NSLocalizedString(@"dashboard.spread", nil);
+    
+    self.progressView.percentage = .33f;
+    self.progressView.fillColor = [UIColor bfm_defaultNavigationBlue];
+    self.progressView.linePercentage = 0.08f;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
