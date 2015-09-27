@@ -13,7 +13,7 @@
 
 #import "UIColor+Extensions.h"
 
-@interface BFMEarningsPage () <MCPercentageDoughnutViewDataSource>
+@interface BFMEarningsPage ()
 
 @property (weak, nonatomic) IBOutlet UILabel *reabtesValueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *reabatesLabel;
@@ -59,6 +59,7 @@
     self.progressView.percentage = .33f;
     self.progressView.fillColor = [UIColor bfm_defaultNavigationBlue];
     self.progressView.linePercentage = 0.08f;
+    self.progressView.showTextLabel = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -81,7 +82,6 @@
 }
 
 #pragma mark - handlers
-
 
 - (IBAction)currencyTapped:(id)sender {
     
