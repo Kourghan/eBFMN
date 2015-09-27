@@ -22,7 +22,7 @@
 // Dashboard
 
 "dashboard.title" = "DASHBOARD";
-"dashboard.title.earnings" = "EARNINGS";
+"dashboard.title.earnings" = "EARNINGS FOR ";
 "dashboard.rebates" = "REBATES";
 "dashboard.commissions" = "COMMISSIONS";
 "dashboard.spread" = "SPREAD WIDERING";

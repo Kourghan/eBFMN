@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface BFMBenefitsAdaptor : NSObject //<UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@interface BFMBenefitsAdaptor : NSObject
 
 + (NSArray *)startController;
 
