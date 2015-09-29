@@ -64,8 +64,14 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     [self bindUser:[BFMUser currentUser]];
+    [self reloadData];
+}
+
+- (void)reloadData {
+    [BFMUser getInfoWithCompletitionBlock:^(BOOL success) {
+        [self bindUser:[BFMUser currentUser]];
+    }];
 }
 
 - (void)viewDidLayoutSubviews {

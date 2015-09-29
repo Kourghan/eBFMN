@@ -23,8 +23,6 @@
 - (NSString *)totalAccountsStringValue;
 - (NSString *)freshAccountsStringValue;
 
-+ (BFMUser *)stubUser;
-
 @end
 
 @interface BFMUser (Network)

@@ -62,7 +62,14 @@
 - (IBAction)logout:(id)sender {
     [JNKeychain deleteValueForKey:kBFMSessionKey];
     
-    [BFMUser MR_deleteAllMatchingPredicate:[NSPredicate predicateWithFormat:@"identifier != 0"] inContext:[NSManagedObjectContext MR_defaultContext]];
+    NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+    
+    NSArray *users = [BFMUser MR_findAll];
+    for (BFMUser *user in users) {
+        [user MR_deleteEntityInContext:context];
+    }
+    
+    [context MR_saveToPersistentStoreAndWait];
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
     UIViewController *vc = [sb instantiateInitialViewController];

@@ -15,6 +15,8 @@
 
 #import "UIColor+Extensions.h"
 
+#import "BFMUser+Extension.h"
+
 @interface BFMDashboardViewController ()
 
 @property (nonatomic, strong) UIPageViewController *pageController;
@@ -37,6 +39,8 @@
     
     [NINavigationAppearance popAppearanceForNavigationController:self.navigationController];
 }
+
+#pragma mark - Network
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"embed"]) {

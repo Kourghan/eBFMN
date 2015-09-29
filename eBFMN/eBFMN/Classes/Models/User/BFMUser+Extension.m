@@ -79,15 +79,6 @@
     return @"0";
 }
 
-+ (BFMUser *)stubUser {
-    NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
-    BFMUser *user = [BFMUser MR_createEntityInContext:context];
-    
-    user.identifier = @(-1);
-    
-    return user;
-}
-
 @end
 
 @implementation BFMUser (Network)
