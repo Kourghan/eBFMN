@@ -51,6 +51,7 @@
     self.progressView.showTextLabel = NO;
     
     self.carousel.type = iCarouselTypeCylinder;
+    self.carousel.pagingEnabled = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
