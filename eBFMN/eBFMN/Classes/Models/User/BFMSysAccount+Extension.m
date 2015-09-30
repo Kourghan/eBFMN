@@ -47,4 +47,15 @@
     return mapping;
 }
 
+- (NSString *)balanceString {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [formatter setPaddingPosition:NSNumberFormatterPadAfterSuffix];
+    [formatter setMaximumFractionDigits:2];
+    [formatter setMinimumFractionDigits:2];
+    [formatter setDecimalSeparator:@","];
+    
+    return [formatter stringFromNumber:self.balance];
+}
+
 @end

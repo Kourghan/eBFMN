@@ -37,8 +37,6 @@
 		613AE7801B9CD04400300B22 /* ELAAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE77D1B9CD04400300B22 /* ELAAppearance.m */; };
 		613AE7811B9CD04400300B22 /* ELAXIBAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE77F1B9CD04400300B22 /* ELAXIBAppearance.m */; };
 		613C28A71BA31D9C00B2856A /* BFMBaseDashboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28A61BA31D9C00B2856A /* BFMBaseDashboardCell.m */; };
-		613C28AC1BA31E3900B2856A /* BFMEarningsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28AB1BA31E3900B2856A /* BFMEarningsCell.m */; };
-		613C28AF1BA31E5400B2856A /* BFMClientsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28AE1BA31E5400B2856A /* BFMClientsCell.m */; };
 		613C28B61BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28B51BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m */; };
 		613C28BA1BA33FB800B2856A /* BFMNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28B91BA33FB800B2856A /* BFMNewsViewController.m */; };
 		613C28BD1BA3415C00B2856A /* BFMNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28BC1BA3415C00B2856A /* BFMNewsModel.m */; };
@@ -87,6 +85,7 @@
 		61F042F21BBB1F2D000037CF /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F042F11BBB1F2D000037CF /* iCarousel.m */; settings = {ASSET_TAGS = (); }; };
 		61F042F51BBB214A000037CF /* BFMCarouselDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F042F41BBB214A000037CF /* BFMCarouselDataSource.m */; settings = {ASSET_TAGS = (); }; };
 		61F042F71BBB2895000037CF /* earningsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61F042F61BBB2895000037CF /* earningsView.xib */; settings = {ASSET_TAGS = (); }; };
+		61F043071BBBF4B3000037CF /* BFMAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F043061BBBF4B3000037CF /* BFMAccountCell.m */; settings = {ASSET_TAGS = (); }; };
 		61FD3CEE1BA7036700F4CEFB /* BFMNewsRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CED1BA7036700F4CEFB /* BFMNewsRecord.m */; };
 		61FD3D361BA7094200F4CEFB /* JGActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D351BA7094200F4CEFB /* JGActionSheet.m */; };
 		61FD3D641BA7096D00F4CEFB /* ODSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D3B1BA7096D00F4CEFB /* ODSAdapter.m */; };
@@ -172,10 +171,6 @@
 		613AE77F1B9CD04400300B22 /* ELAXIBAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELAXIBAppearance.m; path = Lib/ELAAppearance/ELAXIBAppearance.m; sourceTree = "<group>"; };
 		613C28A51BA31D9C00B2856A /* BFMBaseDashboardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMBaseDashboardCell.h; path = Classes/UI/Cells/BFMBaseDashboardCell.h; sourceTree = "<group>"; };
 		613C28A61BA31D9C00B2856A /* BFMBaseDashboardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMBaseDashboardCell.m; path = Classes/UI/Cells/BFMBaseDashboardCell.m; sourceTree = "<group>"; };
-		613C28AA1BA31E3900B2856A /* BFMEarningsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMEarningsCell.h; path = Classes/UI/Cells/BFMEarningsCell.h; sourceTree = "<group>"; };
-		613C28AB1BA31E3900B2856A /* BFMEarningsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMEarningsCell.m; path = Classes/UI/Cells/BFMEarningsCell.m; sourceTree = "<group>"; };
-		613C28AD1BA31E5400B2856A /* BFMClientsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMClientsCell.h; path = Classes/UI/Cells/BFMClientsCell.h; sourceTree = "<group>"; };
-		613C28AE1BA31E5400B2856A /* BFMClientsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMClientsCell.m; path = Classes/UI/Cells/BFMClientsCell.m; sourceTree = "<group>"; };
 		613C28B41BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMDefaultNavagtionBarAppearance.h; path = Classes/UI/Appearance/BFMDefaultNavagtionBarAppearance.h; sourceTree = "<group>"; };
 		613C28B51BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMDefaultNavagtionBarAppearance.m; path = Classes/UI/Appearance/BFMDefaultNavagtionBarAppearance.m; sourceTree = "<group>"; };
 		613C28B81BA33FB800B2856A /* BFMNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNewsViewController.h; path = Classes/Screens/News/BFMNewsViewController.h; sourceTree = "<group>"; };
@@ -257,6 +252,8 @@
 		61F042F31BBB214A000037CF /* BFMCarouselDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMCarouselDataSource.h; path = Classes/Screens/Dashboard/BFMCarouselDataSource.h; sourceTree = "<group>"; };
 		61F042F41BBB214A000037CF /* BFMCarouselDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMCarouselDataSource.m; path = Classes/Screens/Dashboard/BFMCarouselDataSource.m; sourceTree = "<group>"; };
 		61F042F61BBB2895000037CF /* earningsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = earningsView.xib; path = Classes/UI/Views/earningsView.xib; sourceTree = "<group>"; };
+		61F043051BBBF4B3000037CF /* BFMAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMAccountCell.h; path = Classes/UI/Cells/BFMAccountCell.h; sourceTree = "<group>"; };
+		61F043061BBBF4B3000037CF /* BFMAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMAccountCell.m; path = Classes/UI/Cells/BFMAccountCell.m; sourceTree = "<group>"; };
 		61FD3CEC1BA7036700F4CEFB /* BFMNewsRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNewsRecord.h; path = Classes/Models/News/BFMNewsRecord.h; sourceTree = "<group>"; };
 		61FD3CED1BA7036700F4CEFB /* BFMNewsRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNewsRecord.m; path = Classes/Models/News/BFMNewsRecord.m; sourceTree = "<group>"; };
 		61FD3D341BA7094200F4CEFB /* JGActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGActionSheet.h; path = Lib/JGActionSheet.h; sourceTree = "<group>"; };
@@ -472,16 +469,14 @@
 			children = (
 				613C28A51BA31D9C00B2856A /* BFMBaseDashboardCell.h */,
 				613C28A61BA31D9C00B2856A /* BFMBaseDashboardCell.m */,
-				613C28AA1BA31E3900B2856A /* BFMEarningsCell.h */,
-				613C28AB1BA31E3900B2856A /* BFMEarningsCell.m */,
-				613C28AD1BA31E5400B2856A /* BFMClientsCell.h */,
-				613C28AE1BA31E5400B2856A /* BFMClientsCell.m */,
 				613C28BF1BA3437700B2856A /* BFMNewsCell.h */,
 				613C28C01BA3437700B2856A /* BFMNewsCell.m */,
 				61903C291BAC0DC30018B3A0 /* BFMNotificationCell.h */,
 				61903C2A1BAC0DC30018B3A0 /* BFMNotificationCell.m */,
 				2CAD81421BABD54400DEF6F3 /* BFMLeaderboardCell.h */,
 				2CAD81431BABD54400DEF6F3 /* BFMLeaderboardCell.m */,
+				61F043051BBBF4B3000037CF /* BFMAccountCell.h */,
+				61F043061BBBF4B3000037CF /* BFMAccountCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1137,7 +1132,6 @@
 				61FD3D681BA7096D00F4CEFB /* ODSEvent.m in Sources */,
 				6135F3861BAF4CE700B29DE3 /* BFMBenefitsAdaptor.m in Sources */,
 				613C28BA1BA33FB800B2856A /* BFMNewsViewController.m in Sources */,
-				613C28AC1BA31E3900B2856A /* BFMEarningsCell.m in Sources */,
 				61B1DD4E1BB83BAC00DB6D23 /* MCSliceLayer.m in Sources */,
 				61FD3D701BA7096D00F4CEFB /* ODSDataSource.m in Sources */,
 				613AE7811B9CD04400300B22 /* ELAXIBAppearance.m in Sources */,
@@ -1156,11 +1150,11 @@
 				6135F37C1BAF425400B29DE3 /* BFMBenefitsController.m in Sources */,
 				61903C281BAC0D960018B3A0 /* BFMNotificationsController.m in Sources */,
 				61FD3D6A1BA7096D00F4CEFB /* ODSObjectChange.m in Sources */,
+				61F043071BBBF4B3000037CF /* BFMAccountCell.m in Sources */,
 				61FD3D711BA7096D00F4CEFB /* ODSFetchedResultsDataSource.m in Sources */,
 				61903C241BAC0CE70018B3A0 /* BFMNotificationsModel.m in Sources */,
 				61FD3D6E1BA7096D00F4CEFB /* ODSFetchedResultsSection.m in Sources */,
 				2CAD81481BABDFF900DEF6F3 /* BFMLeaderboardRecord.m in Sources */,
-				613C28AF1BA31E5400B2856A /* BFMClientsCell.m in Sources */,
 				613AE75D1B9B88B000300B22 /* BFMSysAccount+Extension.m in Sources */,
 				61FD3D6F1BA7096D00F4CEFB /* ODSArrayDataSource.m in Sources */,
 				2CAD814B1BABE6E000DEF6F3 /* BFMLeaderboardRecord+Mapping.m in Sources */,

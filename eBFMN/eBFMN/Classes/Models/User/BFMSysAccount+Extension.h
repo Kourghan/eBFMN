@@ -14,4 +14,6 @@
 
 + (FEMMapping *)defaultMapping;
 
+- (NSString *)balanceString;
+
 @end

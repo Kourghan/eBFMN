@@ -41,7 +41,7 @@
     [self.logoutButton setTitle:NSLocalizedString(@"profile.logout", nil) forState:UIControlStateNormal];
     
     self.usernameLabel.text = self.user.name;
-    self.idLabel.text = [self.user.identifier stringValue];
+    self.idLabel.text = [self.user.code stringValue];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
