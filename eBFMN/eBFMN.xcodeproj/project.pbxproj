@@ -36,7 +36,6 @@
 		613AE7731B9CCC9600300B22 /* BFMAccount+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE7681B9B9FAA00300B22 /* BFMAccount+Extension.m */; };
 		613AE7801B9CD04400300B22 /* ELAAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE77D1B9CD04400300B22 /* ELAAppearance.m */; };
 		613AE7811B9CD04400300B22 /* ELAXIBAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 613AE77F1B9CD04400300B22 /* ELAXIBAppearance.m */; };
-		613C28A41BA31AF800B2856A /* BFMDashboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28A31BA31AF800B2856A /* BFMDashboardController.m */; };
 		613C28A71BA31D9C00B2856A /* BFMBaseDashboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28A61BA31D9C00B2856A /* BFMBaseDashboardCell.m */; };
 		613C28AC1BA31E3900B2856A /* BFMEarningsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28AB1BA31E3900B2856A /* BFMEarningsCell.m */; };
 		613C28AF1BA31E5400B2856A /* BFMClientsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28AE1BA31E5400B2856A /* BFMClientsCell.m */; };
@@ -85,6 +84,9 @@
 		61C182151B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C182071B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold.otf */; };
 		61C182161B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C182081B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf */; };
 		61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C182091B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf */; };
+		61F042F21BBB1F2D000037CF /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F042F11BBB1F2D000037CF /* iCarousel.m */; settings = {ASSET_TAGS = (); }; };
+		61F042F51BBB214A000037CF /* BFMCarouselDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F042F41BBB214A000037CF /* BFMCarouselDataSource.m */; settings = {ASSET_TAGS = (); }; };
+		61F042F71BBB2895000037CF /* earningsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61F042F61BBB2895000037CF /* earningsView.xib */; settings = {ASSET_TAGS = (); }; };
 		61FD3CEE1BA7036700F4CEFB /* BFMNewsRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CED1BA7036700F4CEFB /* BFMNewsRecord.m */; };
 		61FD3D361BA7094200F4CEFB /* JGActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D351BA7094200F4CEFB /* JGActionSheet.m */; };
 		61FD3D641BA7096D00F4CEFB /* ODSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D3B1BA7096D00F4CEFB /* ODSAdapter.m */; };
@@ -168,8 +170,6 @@
 		613AE77D1B9CD04400300B22 /* ELAAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELAAppearance.m; path = Lib/ELAAppearance/ELAAppearance.m; sourceTree = "<group>"; };
 		613AE77E1B9CD04400300B22 /* ELAXIBAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELAXIBAppearance.h; path = Lib/ELAAppearance/ELAXIBAppearance.h; sourceTree = "<group>"; };
 		613AE77F1B9CD04400300B22 /* ELAXIBAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELAXIBAppearance.m; path = Lib/ELAAppearance/ELAXIBAppearance.m; sourceTree = "<group>"; };
-		613C28A21BA31AF800B2856A /* BFMDashboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMDashboardController.h; path = Classes/Screens/Dashboard/BFMDashboardController.h; sourceTree = "<group>"; };
-		613C28A31BA31AF800B2856A /* BFMDashboardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMDashboardController.m; path = Classes/Screens/Dashboard/BFMDashboardController.m; sourceTree = "<group>"; };
 		613C28A51BA31D9C00B2856A /* BFMBaseDashboardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMBaseDashboardCell.h; path = Classes/UI/Cells/BFMBaseDashboardCell.h; sourceTree = "<group>"; };
 		613C28A61BA31D9C00B2856A /* BFMBaseDashboardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMBaseDashboardCell.m; path = Classes/UI/Cells/BFMBaseDashboardCell.m; sourceTree = "<group>"; };
 		613C28AA1BA31E3900B2856A /* BFMEarningsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMEarningsCell.h; path = Classes/UI/Cells/BFMEarningsCell.h; sourceTree = "<group>"; };
@@ -252,6 +252,11 @@
 		61C182071B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Semibold.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Semibold.otf"; sourceTree = "<group>"; };
 		61C182081B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Thin Italic.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Thin Italic.otf"; sourceTree = "<group>"; };
 		61C182091B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Thin.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Thin.otf"; sourceTree = "<group>"; };
+		61F042F01BBB1F2D000037CF /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		61F042F11BBB1F2D000037CF /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		61F042F31BBB214A000037CF /* BFMCarouselDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMCarouselDataSource.h; path = Classes/Screens/Dashboard/BFMCarouselDataSource.h; sourceTree = "<group>"; };
+		61F042F41BBB214A000037CF /* BFMCarouselDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMCarouselDataSource.m; path = Classes/Screens/Dashboard/BFMCarouselDataSource.m; sourceTree = "<group>"; };
+		61F042F61BBB2895000037CF /* earningsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = earningsView.xib; path = Classes/UI/Views/earningsView.xib; sourceTree = "<group>"; };
 		61FD3CEC1BA7036700F4CEFB /* BFMNewsRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNewsRecord.h; path = Classes/Models/News/BFMNewsRecord.h; sourceTree = "<group>"; };
 		61FD3CED1BA7036700F4CEFB /* BFMNewsRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNewsRecord.m; path = Classes/Models/News/BFMNewsRecord.m; sourceTree = "<group>"; };
 		61FD3D341BA7094200F4CEFB /* JGActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGActionSheet.h; path = Lib/JGActionSheet.h; sourceTree = "<group>"; };
@@ -377,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				6135F3831BAF467C00B29DE3 /* Benefits */,
+				61F042F61BBB2895000037CF /* earningsView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -407,6 +413,7 @@
 		613AE76E1B9CC8B300300B22 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				61F042EF1BBB1F2D000037CF /* iCarousel */,
 				61B1DD3E1BB83BAC00DB6D23 /* CircledView */,
 				61FD3D371BA7096D00F4CEFB /* Objects Data Source */,
 				61FD3D341BA7094200F4CEFB /* JGActionSheet.h */,
@@ -441,10 +448,10 @@
 			isa = PBXGroup;
 			children = (
 				61B1DD331BB6D85000DB6D23 /* Pages */,
-				613C28A21BA31AF800B2856A /* BFMDashboardController.h */,
-				613C28A31BA31AF800B2856A /* BFMDashboardController.m */,
 				61B1DD3B1BB6ED8300DB6D23 /* BFMDashboardViewController.h */,
 				61B1DD3C1BB6ED8300DB6D23 /* BFMDashboardViewController.m */,
+				61F042F31BBB214A000037CF /* BFMCarouselDataSource.h */,
+				61F042F41BBB214A000037CF /* BFMCarouselDataSource.m */,
 			);
 			name = Dashboard;
 			sourceTree = "<group>";
@@ -809,6 +816,16 @@
 			name = User;
 			sourceTree = "<group>";
 		};
+		61F042EF1BBB1F2D000037CF /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				61F042F01BBB1F2D000037CF /* iCarousel.h */,
+				61F042F11BBB1F2D000037CF /* iCarousel.m */,
+			);
+			name = iCarousel;
+			path = Lib/iCarousel;
+			sourceTree = "<group>";
+		};
 		61FD3D371BA7096D00F4CEFB /* Objects Data Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -1036,6 +1053,7 @@
 				61C1820E1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold Italic.otf in Resources */,
 				2CB1B8451B9CC37B00AC16D2 /* tabBar.storyboard in Resources */,
 				61C1820A1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black Italic.otf in Resources */,
+				61F042F71BBB2895000037CF /* earningsView.xib in Resources */,
 				61C182121B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Regular Italic.otf in Resources */,
 				61C1820D1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Bold.otf in Resources */,
 			);
@@ -1110,7 +1128,9 @@
 				619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */,
 				61B1DD4D1BB83BAC00DB6D23 /* MCPercentageDoughnutView.m in Sources */,
 				61FD3D661BA7096D00F4CEFB /* ODSTableAdapter.m in Sources */,
+				61F042F21BBB1F2D000037CF /* iCarousel.m in Sources */,
 				613AE7731B9CCC9600300B22 /* BFMAccount+Extension.m in Sources */,
+				61F042F51BBB214A000037CF /* BFMCarouselDataSource.m in Sources */,
 				2CF024EF1B9A409A009E8959 /* BFMTabBarController.m in Sources */,
 				613AE7721B9CC8CA00300B22 /* NINavigationAppearance.m in Sources */,
 				61B1DD4F1BB83BAC00DB6D23 /* MCUtil.m in Sources */,
@@ -1139,7 +1159,6 @@
 				61FD3D711BA7096D00F4CEFB /* ODSFetchedResultsDataSource.m in Sources */,
 				61903C241BAC0CE70018B3A0 /* BFMNotificationsModel.m in Sources */,
 				61FD3D6E1BA7096D00F4CEFB /* ODSFetchedResultsSection.m in Sources */,
-				613C28A41BA31AF800B2856A /* BFMDashboardController.m in Sources */,
 				2CAD81481BABDFF900DEF6F3 /* BFMLeaderboardRecord.m in Sources */,
 				613C28AF1BA31E5400B2856A /* BFMClientsCell.m in Sources */,
 				613AE75D1B9B88B000300B22 /* BFMSysAccount+Extension.m in Sources */,

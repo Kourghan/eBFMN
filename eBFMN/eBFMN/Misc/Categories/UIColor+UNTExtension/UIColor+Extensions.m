@@ -24,3 +24,15 @@
 
 @end
 
+@implementation UIColor (Text)
+
++ (UIColor *)bfm_lightGrayColor {
+    return [self colorWithR:57 G:57 B:57];
+}
+
++ (UIColor *)bfm_darkBlueColor {
+    return [self colorWithR:29 G:78 B:114];
+}
+
+@end
+

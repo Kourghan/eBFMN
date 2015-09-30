@@ -16,3 +16,9 @@
 
 @end
 
+@interface UIColor (Text)
+
++ (UIColor *)bfm_lightGrayColor;
++ (UIColor *)bfm_darkBlueColor;
+
+@end
