@@ -81,6 +81,67 @@
 
 @end
 
+@implementation BFMUser (Accounts)
+
+- (NSString *)defaultCurrency {
+    if ([self numberOfCurrencies] == 0) {
+        return nil;
+    } else {
+        return [[self currencies] firstObject];
+    }
+}
+
+- (NSArray *)currencies {
+    NSMutableOrderedSet *set = [[NSMutableOrderedSet alloc] init];
+    for (BFMSysAccount *account in self.sysAccounts) {
+        [set addObject:account.currency];
+    }
+    
+    return [[set copy] allObjects];
+}
+
+- (NSInteger)numberOfCurrencies {
+    return [[self currencies] count];
+}
+
+- (NSNumber *)rebatesForCurrency:(NSString *)currency {
+    NSNumber *rebates = [NSNumber numberWithDouble:0.f];
+    
+    for (BFMSysAccount *account in self.sysAccounts) {
+        if ([account.currency isEqualToString:currency]) {
+            rebates = [NSNumber numberWithDouble:([rebates doubleValue] + [account.rebate doubleValue])];
+        }
+    }
+    
+    return rebates;
+}
+
+- (NSNumber *)commissionsForCurrency:(NSString *)currency {
+    NSNumber *commisions = [NSNumber numberWithDouble:0.f];
+    
+    for (BFMSysAccount *account in self.sysAccounts) {
+        if ([account.currency isEqualToString:currency]) {
+            commisions = [NSNumber numberWithDouble:([commisions doubleValue] + [account.commission doubleValue])];
+        }
+    }
+    
+    return commisions;
+}
+
+- (NSNumber *)spreadForCurrency:(NSString *)currency {
+    NSNumber *spread = [NSNumber numberWithDouble:0.f];
+    
+    for (BFMSysAccount *account in self.sysAccounts) {
+        if ([account.currency isEqualToString:currency]) {
+            spread = [NSNumber numberWithDouble:([spread doubleValue] + [account.spread doubleValue])];
+        }
+    }
+    
+    return spread;
+}
+
+@end
+
 @implementation BFMUser (Network)
 
 + (void)getInfoWithCompletitionBlock:(void (^)(BOOL success))completition {
