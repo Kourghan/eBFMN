@@ -29,6 +29,7 @@
 "dashboard.title.clients" = "CLIENTS";
 "dashboard.demoaccounts" = "DEMO ACCOUNTS";
 "dashboard.liveaccounts" = "LIVE ACCOUNTS";
+"dashboard.earnings.picker.title" = "CURRENCY";
 
 // Leaderboard
 

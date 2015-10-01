@@ -25,6 +25,18 @@
 
 @end
 
+@interface BFMUser (Accounts)
+
+- (NSArray *)currencies;
+- (NSInteger)numberOfCurrencies;
+- (NSString *)defaultCurrency;
+
+- (NSNumber *)rebatesForCurrency:(NSString *)currency;
+- (NSNumber *)commissionsForCurrency:(NSString *)currency;;
+- (NSNumber *)spreadForCurrency:(NSString *)currency;;
+
+@end
+
 @interface BFMUser (Network)
 
 + (void)getInfoWithCompletitionBlock:(void (^)(BOOL success))completition;

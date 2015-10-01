@@ -369,6 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDg-md-poA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="4Bz-ZW-Z4N" customClass="BFMCarouselDataSource"/>
+                <customObject id="EXg-wQ-xZa" customClass="BFMCurrencyPickerDataSource"/>
             </objects>
             <point key="canvasLocation" x="890" y="1080"/>
         </scene>

@@ -24,5 +24,6 @@
 @dynamic accCountLive;
 @dynamic accounts;
 @dynamic sysAccounts;
+@dynamic currentCurrency;
 
 @end

@@ -24,6 +24,7 @@
 @property (nonatomic, retain) NSNumber * accCountLive;
 @property (nonatomic, retain) NSSet *accounts;
 @property (nonatomic, retain) NSSet *sysAccounts;
+@property (nonatomic, retain) NSString *currentCurrency;
 @end
 
 @interface BFMUser (CoreDataGeneratedAccessors)
