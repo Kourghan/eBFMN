@@ -82,9 +82,10 @@
 }
 
 - (void)showPicker {
-    self.picker = [[CZPickerView alloc] initWithHeaderTitle:NSLocalizedString(@"earnings.picker.currency", nil)
+    self.picker = [[CZPickerView alloc] initWithHeaderTitle:NSLocalizedString(@"dashboard.earnings.picker.title", nil)
                                           cancelButtonTitle:NSLocalizedString(@"button.cancel", nil)
                                          confirmButtonTitle:NSLocalizedString(@"button.select", nil)];
+    self.picker.headerBackgroundColor = [UIColor bfm_defaultNavigationBlue];
     self.picker.dataSource = self;
     self.picker.delegate = self;
     
