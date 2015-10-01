@@ -42,6 +42,7 @@
         <attribute name="accCountDemo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="accCountLive" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="code" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="currentCurrency" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="groupType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="ibsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -56,6 +57,6 @@
         <element name="BFMNewsRecord" positionX="-54" positionY="135" width="128" height="105"/>
         <element name="BFMNotification" positionX="-54" positionY="135" width="128" height="120"/>
         <element name="BFMSysAccount" positionX="-36" positionY="63" width="128" height="255"/>
-        <element name="BFMUser" positionX="-63" positionY="-18" width="128" height="210"/>
+        <element name="BFMUser" positionX="-63" positionY="-18" width="128" height="225"/>
     </elements>
 </model>

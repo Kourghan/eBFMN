@@ -54,6 +54,7 @@
 		619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C071B977CF200886893 /* BFMUserCredentials.m */; };
 		619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C121B977DC400886893 /* JNKeychain+UNTExtension.m */; };
 		619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C151B977DD000886893 /* UIColor+Extensions.m */; };
+		619F0F061BBC8E0900916B0B /* BFMCurrencyPickerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 619F0F051BBC8E0900916B0B /* BFMCurrencyPickerDataSource.m */; settings = {ASSET_TAGS = (); }; };
 		61B1DD2F1BB6D41500DB6D23 /* BFMDashboardAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD2E1BB6D41500DB6D23 /* BFMDashboardAdaptor.m */; settings = {ASSET_TAGS = (); }; };
 		61B1DD321BB6D84200DB6D23 /* BFMEarningsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD311BB6D84200DB6D23 /* BFMEarningsPage.m */; settings = {ASSET_TAGS = (); }; };
 		61B1DD361BB6D86E00DB6D23 /* BFMClientsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD351BB6D86E00DB6D23 /* BFMClientsPage.m */; settings = {ASSET_TAGS = (); }; };
@@ -205,6 +206,8 @@
 		619E2C121B977DC400886893 /* JNKeychain+UNTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JNKeychain+UNTExtension.m"; path = "Misc/Categories/JNKeychain+UNTExtension/JNKeychain+UNTExtension.m"; sourceTree = "<group>"; };
 		619E2C141B977DD000886893 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Extensions.h"; path = "Misc/Categories/UIColor+UNTExtension/UIColor+Extensions.h"; sourceTree = "<group>"; };
 		619E2C151B977DD000886893 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Extensions.m"; path = "Misc/Categories/UIColor+UNTExtension/UIColor+Extensions.m"; sourceTree = "<group>"; };
+		619F0F041BBC8E0900916B0B /* BFMCurrencyPickerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMCurrencyPickerDataSource.h; path = Classes/Screens/Dashboard/BFMCurrencyPickerDataSource.h; sourceTree = "<group>"; };
+		619F0F051BBC8E0900916B0B /* BFMCurrencyPickerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMCurrencyPickerDataSource.m; path = Classes/Screens/Dashboard/BFMCurrencyPickerDataSource.m; sourceTree = "<group>"; };
 		61B1DD2D1BB6D41500DB6D23 /* BFMDashboardAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMDashboardAdaptor.h; path = Classes/Screens/Dashboard/BFMDashboardAdaptor.h; sourceTree = "<group>"; };
 		61B1DD2E1BB6D41500DB6D23 /* BFMDashboardAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMDashboardAdaptor.m; path = Classes/Screens/Dashboard/BFMDashboardAdaptor.m; sourceTree = "<group>"; };
 		61B1DD301BB6D84200DB6D23 /* BFMEarningsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMEarningsPage.h; path = Classes/Screens/Dashboard/BFMEarningsPage.h; sourceTree = "<group>"; };
@@ -449,6 +452,8 @@
 				61B1DD3C1BB6ED8300DB6D23 /* BFMDashboardViewController.m */,
 				61F042F31BBB214A000037CF /* BFMCarouselDataSource.h */,
 				61F042F41BBB214A000037CF /* BFMCarouselDataSource.m */,
+				619F0F041BBC8E0900916B0B /* BFMCurrencyPickerDataSource.h */,
+				619F0F051BBC8E0900916B0B /* BFMCurrencyPickerDataSource.m */,
 			);
 			name = Dashboard;
 			sourceTree = "<group>";
@@ -1135,6 +1140,7 @@
 				61B1DD4E1BB83BAC00DB6D23 /* MCSliceLayer.m in Sources */,
 				61FD3D701BA7096D00F4CEFB /* ODSDataSource.m in Sources */,
 				613AE7811B9CD04400300B22 /* ELAXIBAppearance.m in Sources */,
+				619F0F061BBC8E0900916B0B /* BFMCurrencyPickerDataSource.m in Sources */,
 				61FD3D361BA7094200F4CEFB /* JGActionSheet.m in Sources */,
 				614BC2441BB4B33D0060C8E8 /* BFMForgotPasswordController.m in Sources */,
 				61903C201BAC0CBB0018B3A0 /* BFMNotification.m in Sources */,

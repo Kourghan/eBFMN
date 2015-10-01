@@ -83,6 +83,17 @@
 
 @implementation BFMUser (Accounts)
 
+- (NSString *)currentCurrency {
+    [self willAccessValueForKey:@"currentCurrency"];
+    NSString *preview = [self primitiveValueForKey:@"currentCurrency"];
+    [self didAccessValueForKey:@"currentCurrency"];
+    if (preview == nil) {
+        preview = [self defaultCurrency];
+        [self setPrimitiveValue:preview forKey:@"currentCurrency"];
+    }
+    return preview;
+}
+
 - (NSString *)defaultCurrency {
     if ([self numberOfCurrencies] == 0) {
         return nil;

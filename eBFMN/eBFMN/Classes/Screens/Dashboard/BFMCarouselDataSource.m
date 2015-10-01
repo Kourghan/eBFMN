@@ -54,15 +54,15 @@ typedef enum {
     switch (index) {
         case BFMCarouselItemTypeSpread:
             type.text = NSLocalizedString(@"dashboard.spread", nil);
-            value.text = [[user spread] stringValue];
+            value.text = [[user spreadForCurrency:user.currentCurrency] stringValue];
             break;
         case BFMCarouselItemTypeCommission:
             type.text = NSLocalizedString(@"dashboard.commissions", nil);
-            value.text = [[user commissions] stringValue];
+            value.text = [[user commissionsForCurrency:user.currentCurrency] stringValue];
             break;
         case BFMCarouselItemTypeRebates:
             type.text = NSLocalizedString(@"dashboard.rebates", nil);
-            value.text = [[user rebates] stringValue];
+            value.text = [[user rebatesForCurrency:user.currentCurrency] stringValue];
             break;
         default:
             break;
