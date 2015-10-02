@@ -20,6 +20,7 @@
 @implementation BFMLeaderboardCell
 
 - (void)configureWithLeaderboardRecord:(BFMLeaderboardRecord *)record{
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.pointsLabel.text = record.value.stringValue;
     self.nameLabel.text = [NSString stringWithFormat:@"%@ | %@",record.groupName, record.groupID.stringValue];
     if ([record.groupName isEqualToString:[BFMUser currentUser].name]) {

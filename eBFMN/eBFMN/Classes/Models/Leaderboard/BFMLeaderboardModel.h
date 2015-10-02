@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 enum {
-    BFMLeaderboardTypePoints = 0,
-    BFMLeaderboardTypeRebate = 1,
-    BFMLeaderboardTypeVolume = 2,
-    BFMLeaderboardTypePL = 3
+    BFMLeaderboardTypePoints = 1,
+    BFMLeaderboardTypeRebate = 2,
+    BFMLeaderboardTypeVolume = 3,
+    BFMLeaderboardTypePL = 4
 }; typedef NSUInteger BFMLeaderboardType;
 
 @interface BFMLeaderboardModel : NSObject

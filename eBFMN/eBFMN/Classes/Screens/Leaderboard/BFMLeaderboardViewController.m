@@ -14,6 +14,7 @@
 #import "BFMLeaderboardModel.h"
 #import "BFMUser+Extension.h"
 #import "UIColor+Extensions.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface BFMLeaderboardViewController() <UITableViewDataSource, UITableViewDelegate>
 
@@ -37,6 +38,7 @@
     self.tableView.dataSource = self;
     self.navigationItem.title = NSLocalizedString(@"leaderboard.title", nil);
     [self setupSegmentedControllAppearance];
+    [self getLeaderboardRecordsWithType:0];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -62,14 +64,22 @@
 }
 
 - (IBAction)segmentedControlValueChanged:(UISegmentedControl *)sender {
-    [BFMLeaderboardModel getLeaderboardForType:sender.selectedSegmentIndex success:^(NSArray *records) {
+    [self getLeaderboardRecordsWithType:sender.selectedSegmentIndex];
+    [self setupSegmentedControllAppearance];
+}
+
+- (void)getLeaderboardRecordsWithType:(NSInteger) type {
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+    [BFMLeaderboardModel getLeaderboardForType:type+1 success:^(NSArray *records) { //+1 is needed because backend enumeration starts with 1
+        [SVProgressHUD dismiss];
         self.records = records;
         [self findUserRecord];
         [self.tableView reloadData];
     } failure:^(NSError *error) {
+        [SVProgressHUD dismiss];
         //handle error
     }];
-    [self setupSegmentedControllAppearance];
+    
 }
 
 - (void)findUserRecord {
@@ -77,7 +87,7 @@
         if ([record.groupName isEqualToString:[BFMUser currentUser].name]) {
             self.userRecordValue.text = record.value.stringValue;
             self.userRecordName.text = [NSString stringWithFormat:@"%@ | %@",record.groupName, record.groupID.stringValue];
-            self.userRecordNumber.text = @([self.records indexOfObject:record]).stringValue;
+            self.userRecordNumber.text = @([self.records indexOfObject:record]+1).stringValue;
         }
     }
 }
@@ -88,7 +98,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BFMLeaderboardCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LeaderboardCell"];
-    cell.numberLabel.text = @(indexPath.row).stringValue;
+    cell.numberLabel.text = @(indexPath.row+1).stringValue;
     BFMLeaderboardRecord *record = [self.records objectAtIndex:indexPath.row];
     [cell configureWithLeaderboardRecord:record];
     return cell;
