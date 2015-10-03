@@ -77,7 +77,7 @@
 
 - (void)bindUser:(BFMUser *)user {
     self.currencies = [user currencies];
-    [self.currencyButton setTitle:[user defaultCurrency]
+    [self.currencyButton setTitle:[user currentCurrency]
                          forState:UIControlStateNormal];
     [self.carousel reloadData];
 }

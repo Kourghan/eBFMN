@@ -53,7 +53,7 @@
     [formatter setPaddingPosition:NSNumberFormatterPadAfterSuffix];
     [formatter setMaximumFractionDigits:2];
     [formatter setMinimumFractionDigits:2];
-    [formatter setDecimalSeparator:@","];
+    [formatter setDecimalSeparator:@"."];
     
     return [formatter stringFromNumber:self.balance];
 }
