@@ -79,6 +79,7 @@
     self.currencies = [user currencies];
     [self.currencyButton setTitle:[user currentCurrency]
                          forState:UIControlStateNormal];
+    self.currencyButton.enabled = ([user numberOfCurrencies] > 1);
     [self.carousel reloadData];
 }
 
