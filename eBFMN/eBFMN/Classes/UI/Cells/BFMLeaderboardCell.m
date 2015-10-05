@@ -23,23 +23,16 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.nameLabel.text = [NSString stringWithFormat:@"%@ | %@",record.groupName, record.groupID.stringValue];
     
-    NSArray *stringComponents = [record.value.stringValue componentsSeparatedByString:@"."];
-    NSMutableString *integerPartString = [NSMutableString stringWithString:stringComponents[0]];
-    
-    for (int i = 1; i != [stringComponents[0] length]; i++) {
-        if (i%3 == 0) {
-          [integerPartString insertString:@"," atIndex:i];
-        }
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [formatter setPaddingPosition:NSNumberFormatterPadAfterSuffix];
+    if (leaderBoardType != BFMLeaderboardTypePoints) {
+        [formatter setMaximumFractionDigits:2];
     }
+    [formatter setMinimumFractionDigits:0];
+    [formatter setDecimalSeparator:@"."];
     
-    if (stringComponents.count > 1 && leaderBoardType != BFMLeaderboardTypePoints) {
-        NSMutableString *fractionString = [NSMutableString stringWithString:stringComponents[1]];
-        [fractionString setString:[fractionString substringToIndex:1]];
-        self.pointsLabel.text = [[integerPartString stringByAppendingString:@","] stringByAppendingString:fractionString];
-    } else {
-        self.pointsLabel.text = integerPartString;
-    }
-    
+    self.pointsLabel.text = [formatter stringFromNumber:record.value];
     if ([record.groupName isEqualToString:[BFMUser currentUser].name]) {
         self.backgroundColor = [UIColor bfm_defaultNavigationBlue];
         self.nameLabel.textColor = [UIColor whiteColor];

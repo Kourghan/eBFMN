@@ -86,23 +86,16 @@
     for (BFMLeaderboardRecord *record in self.records) {
         if ([record.groupName isEqualToString:[BFMUser currentUser].name]) {
             
-            NSArray *stringComponents = [record.value.stringValue componentsSeparatedByString:@"."];
-            NSMutableString *integerPartString = [NSMutableString stringWithString:stringComponents[0]];
-            
-            for (int i = 1; i != [stringComponents[0] length]; i++) {
-                if (i%3 == 0) {
-                    [integerPartString insertString:@"," atIndex:i];
-                }
+            NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+            [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+            [formatter setPaddingPosition:NSNumberFormatterPadAfterSuffix];
+            if (self.segmentedControl.selectedSegmentIndex != 0) {
+                [formatter setMaximumFractionDigits:2];
             }
+            [formatter setMinimumFractionDigits:0];
+            [formatter setDecimalSeparator:@"."];
             
-            if (stringComponents.count > 1 && self.segmentedControl.selectedSegmentIndex != 0) {
-                NSMutableString *fractionString = [NSMutableString stringWithString:stringComponents[1]];
-                [fractionString setString:[fractionString substringToIndex:1]];
-                self.userRecordValue.text = [[integerPartString stringByAppendingString:@","] stringByAppendingString:fractionString];
-            } else {
-                self.userRecordValue.text = integerPartString;
-            }
-            
+            self.userRecordValue.text = [formatter stringFromNumber:record.value];
             self.userRecordName.text = [NSString stringWithFormat:@"%@ | %@",record.groupName, record.groupID.stringValue];
             self.userRecordNumber.text = @([self.records indexOfObject:record]+1).stringValue;
         }
