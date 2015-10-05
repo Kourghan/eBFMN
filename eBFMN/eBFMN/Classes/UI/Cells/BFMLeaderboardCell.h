@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BFMLeaderboardRecord.h"
+#import "BFMLeaderboardModel.h"
 
 @interface BFMLeaderboardCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UILabel *numberLabel;
 
-- (void)configureWithLeaderboardRecord:(BFMLeaderboardRecord *)record;
+- (void)configureWithLeaderboardRecord:(BFMLeaderboardRecord *)record andLeaderboardType:(BFMLeaderboardType)leaderBoardType;
 
 @end
