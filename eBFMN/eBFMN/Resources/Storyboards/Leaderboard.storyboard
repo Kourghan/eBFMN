@@ -60,7 +60,7 @@
                                         <rect key="frame" x="0.0" y="1" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iqB-i8-ljF" id="bI6-Zh-i6B">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbY-z1-dHQ">
@@ -69,23 +69,28 @@
                                                         <constraint firstAttribute="width" constant="35" id="esZ-oV-UnT"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwo-cF-Bs0">
                                                     <rect key="frame" x="51" y="19" width="47" height="22"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EwO-C4-1zW">
-                                                    <rect key="frame" x="292" y="19" width="75" height="22"/>
+                                                    <rect key="frame" x="318" y="19" width="48.5" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="iON-Fa-9kC"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="iON-Fa-9kC"/>
+                                                        </mask>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -144,13 +149,18 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yh0-12-gNP">
-                                        <rect key="frame" x="282" y="19" width="85" height="22"/>
+                                        <rect key="frame" x="317" y="19" width="50" height="22"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="85" id="kAx-1i-JI2"/>
+                                            <constraint firstAttribute="width" constant="75" id="kAx-1i-JI2"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="kAx-1i-JI2"/>
+                                            </mask>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JlI-2e-Uu0">
                                         <rect key="frame" x="51" y="19" width="48" height="22"/>
@@ -161,14 +171,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.031372549019607843" green="0.27058823529411763" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="98f-UY-NYy" secondAttribute="centerY" constant="0.5" id="13u-YQ-fE5"/>
+                                    <constraint firstAttribute="centerY" secondItem="98f-UY-NYy" secondAttribute="centerY" id="13u-YQ-fE5"/>
                                     <constraint firstAttribute="trailing" secondItem="yh0-12-gNP" secondAttribute="trailing" constant="8" id="DPu-2d-XW3"/>
                                     <constraint firstAttribute="height" constant="60" id="HhT-dh-BGq"/>
                                     <constraint firstItem="98f-UY-NYy" firstAttribute="leading" secondItem="3pT-Cf-Dvx" secondAttribute="leading" constant="8" id="HpH-w0-AI5"/>
                                     <constraint firstItem="yh0-12-gNP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JlI-2e-Uu0" secondAttribute="trailing" constant="8" id="Z2K-wn-ciX"/>
                                     <constraint firstItem="JlI-2e-Uu0" firstAttribute="leading" secondItem="98f-UY-NYy" secondAttribute="trailing" constant="8" id="igJ-Sw-ldO"/>
                                     <constraint firstAttribute="centerY" secondItem="JlI-2e-Uu0" secondAttribute="centerY" id="ow1-W4-szl"/>
-                                    <constraint firstAttribute="centerY" secondItem="yh0-12-gNP" secondAttribute="centerY" constant="0.5" id="rHo-Dx-YK4"/>
+                                    <constraint firstAttribute="centerY" secondItem="yh0-12-gNP" secondAttribute="centerY" id="rHo-Dx-YK4"/>
                                 </constraints>
                             </view>
                         </subviews>
