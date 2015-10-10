@@ -14,12 +14,13 @@
 #import "BFMForgotPasswordController.h"
 
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <MessageUI/MessageUI.h>
 
 #pragma mark - DEBUG
 
 #import "BFMLeaderboardModel.h"
 
-@interface BFMLoginController () <UITextFieldDelegate>
+@interface BFMLoginController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -104,7 +105,24 @@
 }
 
 - (IBAction)contactUsButtonTapped:(id)sender {
-    
+    [self openMailComposer];
+}
+
+#pragma mark - Mail Composer
+
+- (void)openMailComposer {
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *composeViewController = [MFMailComposeViewController new];
+        [composeViewController setMailComposeDelegate:self];
+        [composeViewController setToRecipients:@[@"techsupport@bmfn.com"]];
+        [self showViewController:composeViewController sender:nil];
+    }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError *)error {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - TextField Delegate
