@@ -15,6 +15,7 @@
 
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <MessageUI/MessageUI.h>
+#import <ALAlertBanner/ALAlertBanner.h>
 
 #pragma mark - DEBUG
 
@@ -68,6 +69,15 @@
     return [self.passwordTextField.text length] > 0 && [self.usernameTextField.text length] > 0;
 }
 
+- (void)showErrorWithText:(NSString *)text {
+    ALAlertBanner *banner = [ALAlertBanner alertBannerForView:self.view.window
+                                                        style:ALAlertBannerStyleFailure
+                                                     position:ALAlertBannerPositionTop
+                                                        title:NSLocalizedString(@"error.error", nil)
+                                                     subtitle:text];
+    [banner show];
+}
+
 #pragma mark - Handlers
 
 - (IBAction)loginButtonTapped:(id)sender {
@@ -76,27 +86,28 @@
         
         BFMUserCredentials *credentials = [[BFMUserCredentials alloc] initWithUsername:self.usernameTextField.text
                                                                               password:self.passwordTextField.text];
+        __weak typeof(self) weakSelf = self;
         [credentials loginWithCompletitionBlock:^(BOOL success, NSError *error) {
+            [SVProgressHUD dismiss];
             if (success) {
                 [BFMUser getInfoWithCompletitionBlock:^(BOOL success) {
                     if (success) {
                         BFMTabBarController *tabBarVC = [[UIStoryboard tabBarStoryboard] instantiateInitialViewController];
-                        [self showViewController:tabBarVC sender:self];
+                        [weakSelf showViewController:tabBarVC sender:weakSelf];
                     } else {
-                        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"login.wrongcredentials", @"")];
+                        [weakSelf showErrorWithText:NSLocalizedString(@"login.wrongcredentials", @"")];
                     }
-                    [SVProgressHUD dismiss];
                 }];
             } else {
                 if (error) {
-                    [SVProgressHUD showErrorWithStatus:error.description];
+                    [weakSelf showErrorWithText:NSLocalizedString(@"error.connection", nil)];
                 } else {
-                    [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"login.wrongcredentials", @"")];
+                    [weakSelf showErrorWithText:NSLocalizedString(@"login.wrongcredentials", @"")];
                 }
             }
         }];
     } else {
-        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"login.emptyfields", @"")];
+        [self showErrorWithText:NSLocalizedString(@"login.emptyfields", @"")];
     }
 }
 
