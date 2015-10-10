@@ -65,6 +65,10 @@
     [super viewWillAppear:animated];
     [self bindUser:[BFMUser currentUser]];
     [self reloadData];
+    
+    self.currencyButton.transform = CGAffineTransformMakeScale(-1.0, 1.0);
+    self.currencyButton.titleLabel.transform = CGAffineTransformMakeScale(-1.0, 1.0);
+    self.currencyButton.imageView.transform = CGAffineTransformMakeScale(-1.0, 1.0);
 }
 
 #pragma mark - private methods
