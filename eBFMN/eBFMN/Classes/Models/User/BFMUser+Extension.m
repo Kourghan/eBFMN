@@ -115,7 +115,14 @@
     return [[self currencies] count];
 }
 
-- (NSNumber *)rebatesForCurrency:(NSString *)currency {
+- (NSString *)rebatesForCurrency:(NSString *)currency {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [formatter setPaddingPosition:NSNumberFormatterPadAfterSuffix];
+    [formatter setMaximumFractionDigits:2];
+    [formatter setMinimumFractionDigits:2];
+    [formatter setDecimalSeparator:@"."];
+    
     NSNumber *rebates = [NSNumber numberWithDouble:0.f];
     
     for (BFMSysAccount *account in self.sysAccounts) {
@@ -124,10 +131,16 @@
         }
     }
     
-    return rebates;
+    return [formatter stringFromNumber:rebates];
 }
 
-- (NSNumber *)commissionsForCurrency:(NSString *)currency {
+- (NSString *)commissionsForCurrency:(NSString *)currency {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [formatter setPaddingPosition:NSNumberFormatterPadAfterSuffix];
+    [formatter setMaximumFractionDigits:2];
+    [formatter setMinimumFractionDigits:2];
+    [formatter setDecimalSeparator:@"."];
     NSNumber *commisions = [NSNumber numberWithDouble:0.f];
     
     for (BFMSysAccount *account in self.sysAccounts) {
@@ -136,10 +149,16 @@
         }
     }
     
-    return commisions;
+    return [formatter stringFromNumber:commisions];
 }
 
-- (NSNumber *)spreadForCurrency:(NSString *)currency {
+- (NSString *)spreadForCurrency:(NSString *)currency {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [formatter setPaddingPosition:NSNumberFormatterPadAfterSuffix];
+    [formatter setMaximumFractionDigits:2];
+    [formatter setMinimumFractionDigits:2];
+    [formatter setDecimalSeparator:@"."];
     NSNumber *spread = [NSNumber numberWithDouble:0.f];
     
     for (BFMSysAccount *account in self.sysAccounts) {
@@ -148,7 +167,7 @@
         }
     }
     
-    return spread;
+    return [formatter stringFromNumber:spread];
 }
 
 @end
