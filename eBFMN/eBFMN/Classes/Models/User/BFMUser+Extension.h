@@ -31,9 +31,9 @@
 - (NSInteger)numberOfCurrencies;
 - (NSString *)defaultCurrency;
 
-- (NSNumber *)rebatesForCurrency:(NSString *)currency;
-- (NSNumber *)commissionsForCurrency:(NSString *)currency;;
-- (NSNumber *)spreadForCurrency:(NSString *)currency;;
+- (NSString *)rebatesForCurrency:(NSString *)currency;
+- (NSString *)commissionsForCurrency:(NSString *)currency;;
+- (NSString *)spreadForCurrency:(NSString *)currency;;
 
 @end
 

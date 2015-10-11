@@ -6,6 +6,11 @@
   Copyright (c) 2015 eBFMN. All rights reserved.
 */
 
+// Error
+
+"error.error" = "ERROR";
+"error.connection" = "Cannot reach server, try again later.";
+
 // Login
 
 "login.wrongcredentials" = "Wrong Username or Password";
@@ -25,7 +30,7 @@
 "dashboard.title.earnings" = "EARNINGS FOR ";
 "dashboard.rebates" = "REBATES";
 "dashboard.commissions" = "COMMISSIONS";
-"dashboard.spread" = "SPREAD WIDERING";
+"dashboard.spread" = "SPREAD WIDENING";
 "dashboard.title.clients" = "CLIENTS";
 "dashboard.demoaccounts" = "DEMO ACCOUNTS";
 "dashboard.liveaccounts" = "LIVE ACCOUNTS";

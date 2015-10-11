@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ALAlertBanner.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>CZPicker-CZPicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,12 +67,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>261D419A10B5240C548A728AA44A85CF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>49B106F91B6C75053CCD9C56B2012512</key>
+		<key>2BBB221B8E01BB12689E6922F286EE49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,17 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5C79E1FC43BB193CA745CE1703D449C8</key>
+		<key>50D630A40547EEA21FA0FFF75E9E31E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7B764792C3A72142F428870DF3F613BE</key>
+		<key>639E50BC0C487B653ACE373B3DAA9AD0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE0AA646D69F24852F2F8A725C897F36</key>
+		<key>8FED5B0A7CE18A3F23E67095F0BA0B99</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9EAE762192E4F3F342923605CBC50B5E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,12 +102,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BAC15D04D0F88C0D1D06117331B6EC19</key>
+		<key>B9326499E043EBF574A4FC53DF3D1E16</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DE098F4D69D5418241F1501AA801C467</key>
+		<key>D57ECBB77E2F2A79AFC35BE614A01CB2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,7 +117,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E680F1DBB9819CEA0EF3DD69C19A01A1</key>
+		<key>E4F9DAE1E3524A299658F6150DA723FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FAB0DFC5A8B36FB176D541A3204E1E31</key>
 		<dict>
 			<key>primary</key>
 			<true/>

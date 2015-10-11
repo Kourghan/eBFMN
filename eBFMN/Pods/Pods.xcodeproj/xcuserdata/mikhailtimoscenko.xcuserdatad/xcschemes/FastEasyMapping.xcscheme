@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5485720AEEED476FE419FD90"
+               BlueprintIdentifier = "C1AAAA25F2CD980EEA04C0BC"
                BuildableName = "libFastEasyMapping.a"
                BlueprintName = "FastEasyMapping"
                ReferencedContainer = "container:Pods.xcodeproj">
