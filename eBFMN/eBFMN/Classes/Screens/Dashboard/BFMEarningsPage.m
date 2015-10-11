@@ -118,6 +118,10 @@
 
 #pragma mark - handlers
 
+- (IBAction)prizesTapped:(id)sender {
+    
+}
+
 - (IBAction)currencyTapped:(id)sender {
     [self showPicker];
 }
