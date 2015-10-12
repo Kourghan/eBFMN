@@ -10,8 +10,9 @@
 #import "BFMUserCredentials.h"
 
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <MessageUI/MessageUI.h>
 
-@interface BFMForgotPasswordController ()
+@interface BFMForgotPasswordController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextfield;
 
@@ -34,19 +35,21 @@
 
 - (IBAction)getPassword:(id)sender {
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
-    [self.credentials remindPasswordWithCompletitionBlock:^(BOOL success, NSError *error) {
-        if (success) {
-            [SVProgressHUD dismiss];
-            [self.presentingViewController dismissViewControllerAnimated:YES
+    __weak typeof(self) weakSelf = self;
+    self.credentials.username = self.usernameTextfield.text;
+    [self.credentials remindPasswordWithCompletitionBlock:^(NSInteger code, NSError *error) {
+        [SVProgressHUD dismiss];
+        if (code == BFMNetworkStateSuccess) {
+            [weakSelf.presentingViewController dismissViewControllerAnimated:YES
                                                               completion:nil];
-        } else {
+        } else if (code == BFMNetworkStateFailed) {
             [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"status.failed.passwordReminder", nil)];
         }
     }];
 }
 
 - (IBAction)contactUs:(id)sender {
-    
+    [self openMailComposer];
 }
 
 - (IBAction)termsAndConditions:(id)sender {
@@ -56,6 +59,32 @@
 - (IBAction)back:(id)sender {
     [self.presentingViewController dismissViewControllerAnimated:YES
                                                       completion:nil];
+}
+
+#pragma mark - Mail Composer
+
+- (void)openMailComposer {
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *composeViewController = [MFMailComposeViewController new];
+        [composeViewController setMailComposeDelegate:self];
+        [composeViewController setToRecipients:@[@"techsupport@bmfn.com"]];
+        [self showViewController:composeViewController sender:nil];
+    }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError *)error {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UITextField Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.view endEditing:YES];
+    [self getPassword:nil];
+    
+    return YES;
 }
 
 @end

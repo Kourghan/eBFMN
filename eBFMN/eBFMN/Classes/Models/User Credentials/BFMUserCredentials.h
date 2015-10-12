@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "BFMSessionManager.h"
+
 @interface BFMUserCredentials : NSObject
 
 @property (nonatomic, strong) NSString *username;
@@ -16,6 +18,6 @@
 - (instancetype)initWithUsername:(NSString *)username password:(NSString *)password;
 
 - (void)loginWithCompletitionBlock:(void (^)(BOOL success, NSError *error))completition;
-- (void)remindPasswordWithCompletitionBlock:(void (^)(BOOL success, NSError *error))completition;
+- (void)remindPasswordWithCompletitionBlock:(void (^)(NSInteger code, NSError *error))completition;
 
 @end

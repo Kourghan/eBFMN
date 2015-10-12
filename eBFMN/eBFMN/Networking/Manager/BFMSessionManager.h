@@ -8,6 +8,11 @@
 
 #import "AFHTTPSessionManager.h"
 
+typedef enum {
+    BFMNetworkStateSuccess = 0,
+    BFMNetworkStateFailed = 1
+} BFMNetworkState;
+
 @interface BFMSessionManager : AFHTTPSessionManager
 
 + (instancetype)sharedManager;

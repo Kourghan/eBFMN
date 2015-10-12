@@ -9,7 +9,6 @@
 #import "BFMUserCredentials.h"
 
 #import <AFNetworking/AFNetworking.h>
-#import "BFMSessionManager.h"
 
 #import "JNKeychain+UNTExtension.h"
 
@@ -53,17 +52,16 @@ typedef enum {
      }];
 }
 
-- (void)remindPasswordWithCompletitionBlock:(void (^)(BOOL, NSError *))completition {
+- (void)remindPasswordWithCompletitionBlock:(void (^)(NSInteger, NSError *))completition {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
-    
-    [manager GET:@"Registration/GetPasswordForLogin" parameters:@{@"login" : @"sdfsdf"}
+    [manager GET:@"Registration/GetPasswordForLogin" parameters:@{@"login" : self.username}
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
              if (completition) {
-                 completition(YES, nil);
+                 completition([[responseObject valueForKey:@"State"] integerValue], nil);
              }
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              if (completition) {
-                 completition(NO, error);
+                 completition(BFMNetworkStateFailed, error);
              }
          }
      ];
