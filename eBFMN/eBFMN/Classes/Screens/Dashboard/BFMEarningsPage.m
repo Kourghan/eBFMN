@@ -119,7 +119,9 @@
 #pragma mark - handlers
 
 - (IBAction)prizesTapped:(id)sender {
-    
+    if ([self.delegate respondsToSelector:@selector(showPrizes)]) {
+        [self.delegate showPrizes];
+    }
 }
 
 - (IBAction)currencyTapped:(id)sender {

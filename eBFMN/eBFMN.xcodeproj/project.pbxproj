@@ -87,6 +87,7 @@
 		61EC27E51BCA837100DD3812 /* BFMShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E41BCA837100DD3812 /* BFMShopModel.m */; settings = {ASSET_TAGS = (); }; };
 		61EC27EA1BCA858900DD3812 /* BFMPrize+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E71BCA858900DD3812 /* BFMPrize+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		61EC27EB1BCA858900DD3812 /* BFMPrize.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E91BCA858900DD3812 /* BFMPrize.m */; settings = {ASSET_TAGS = (); }; };
+		61EC27EF1BCA951700DD3812 /* BFMPrizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27EE1BCA951700DD3812 /* BFMPrizeCell.m */; settings = {ASSET_TAGS = (); }; };
 		61F042F21BBB1F2D000037CF /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F042F11BBB1F2D000037CF /* iCarousel.m */; settings = {ASSET_TAGS = (); }; };
 		61F042F51BBB214A000037CF /* BFMCarouselDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F042F41BBB214A000037CF /* BFMCarouselDataSource.m */; settings = {ASSET_TAGS = (); }; };
 		61F042F71BBB2895000037CF /* earningsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61F042F61BBB2895000037CF /* earningsView.xib */; settings = {ASSET_TAGS = (); }; };
@@ -262,6 +263,8 @@
 		61EC27E71BCA858900DD3812 /* BFMPrize+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMPrize+CoreDataProperties.m"; path = "Classes/Models/Prize/BFMPrize+CoreDataProperties.m"; sourceTree = "<group>"; };
 		61EC27E81BCA858900DD3812 /* BFMPrize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPrize.h; path = Classes/Models/Prize/BFMPrize.h; sourceTree = "<group>"; };
 		61EC27E91BCA858900DD3812 /* BFMPrize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMPrize.m; path = Classes/Models/Prize/BFMPrize.m; sourceTree = "<group>"; };
+		61EC27ED1BCA951700DD3812 /* BFMPrizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPrizeCell.h; path = Classes/UI/Cells/BFMPrizeCell.h; sourceTree = "<group>"; };
+		61EC27EE1BCA951700DD3812 /* BFMPrizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMPrizeCell.m; path = Classes/UI/Cells/BFMPrizeCell.m; sourceTree = "<group>"; };
 		61F042F01BBB1F2D000037CF /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		61F042F11BBB1F2D000037CF /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		61F042F31BBB214A000037CF /* BFMCarouselDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMCarouselDataSource.h; path = Classes/Screens/Dashboard/BFMCarouselDataSource.h; sourceTree = "<group>"; };
@@ -494,6 +497,8 @@
 				2CAD81431BABD54400DEF6F3 /* BFMLeaderboardCell.m */,
 				61F043051BBBF4B3000037CF /* BFMAccountCell.h */,
 				61F043061BBBF4B3000037CF /* BFMAccountCell.m */,
+				61EC27ED1BCA951700DD3812 /* BFMPrizeCell.h */,
+				61EC27EE1BCA951700DD3812 /* BFMPrizeCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1210,6 +1215,7 @@
 				61FD3D671BA7096D00F4CEFB /* ODSBatchObjectChange.m in Sources */,
 				61B1DD361BB6D86E00DB6D23 /* BFMClientsPage.m in Sources */,
 				61B1DD4B1BB83BAC00DB6D23 /* MCNewCustomLayer.m in Sources */,
+				61EC27EF1BCA951700DD3812 /* BFMPrizeCell.m in Sources */,
 				61FD3D691BA7096D00F4CEFB /* ODSEventBroadcaster.m in Sources */,
 				61B1DD4C1BB83BAC00DB6D23 /* MCNewCustomLayeredView.m in Sources */,
 				613AE7801B9CD04400300B22 /* ELAAppearance.m in Sources */,
