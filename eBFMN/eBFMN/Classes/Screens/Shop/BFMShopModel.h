@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#import "ODSDataSource.h"
+
 @interface BFMShopModel : NSObject
+
+@property (nonatomic, strong) ODSDataSource *dataSource;
 
 @end

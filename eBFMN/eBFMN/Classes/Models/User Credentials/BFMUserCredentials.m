@@ -56,7 +56,7 @@ typedef enum {
 - (void)remindPasswordWithCompletitionBlock:(void (^)(BOOL, NSError *))completition {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
     
-    [manager GET:@"Registration/GetPasswordForLogin" parameters:@{@"login" : self.username}
+    [manager GET:@"Registration/GetPasswordForLogin" parameters:@{@"login" : @"sdfsdf"}
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
              if (completition) {
                  completition(YES, nil);
