@@ -73,4 +73,14 @@
     self.liveClientsValueLabel.text = [user liveAccountsStringValue];
 }
 
+#pragma mark - handlers
+
+- (IBAction)liveTapped:(id)sender {
+    
+}
+
+- (IBAction)demoTapped:(id)sender {
+    
+}
+
 @end
