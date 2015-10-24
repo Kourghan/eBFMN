@@ -8,6 +8,13 @@
 
 #import "BFMUser.h"
 
+typedef enum {
+    BFMLeagueTypeSilver = 1,
+    BFMLeagueTypeGold = 2,
+    BFMLeagueTypePlatinum = 3,
+    BFMLeagueTypeDiamand = 4
+} BFMLeagueType;
+
 @class FEMMapping;
 
 @interface BFMUser (Entity)
@@ -40,6 +47,13 @@
 @interface BFMUser (Network)
 
 + (void)getInfoWithCompletitionBlock:(void (^)(BOOL success))completition;
++ (void)getIBLeagues:(void (^)(NSArray *leagues))completition;
++ (void)getAllIBLeagueGoals:(void (^)(NSArray *leagues))completition;
++ (void)getAllIBLeagueBenefits:(void (^)(NSArray *leagues))completition;
++ (void)getIBLeagueBenefitsForType:(BFMLeagueType)type
+                   completition:(void (^)(NSArray *leagues))completition;
++ (void)getIBLeagueGoalsForType:(BFMLeagueType)type
+                   completition:(void (^)(NSArray *leagues))completition;
 
 @end
 

@@ -46,7 +46,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+
     [NINavigationAppearance pushAppearanceForNavigationController:self.navigationController];
     [BFMDefaultNavagtionBarAppearance applyTo:self.navigationController.navigationBar];
 }
