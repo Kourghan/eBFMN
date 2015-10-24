@@ -351,7 +351,7 @@ during the registration, or MYBMFN account Login.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJA-IA-UBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="740" y="167"/>
+            <point key="canvasLocation" x="795" y="256"/>
         </scene>
     </scenes>
     <resources>
