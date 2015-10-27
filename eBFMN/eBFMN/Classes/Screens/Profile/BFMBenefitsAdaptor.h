@@ -10,8 +10,14 @@
 #import <UIKit/UIKit.h>
 
 
-@interface BFMBenefitsAdaptor : NSObject
+@class BFMBenefitsPageController;
 
-+ (NSArray *)startController;
+@interface BFMBenefitsAdaptor : NSObject <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+
+- (instancetype)initWithData:(NSDictionary *)data;
+
+- (BFMBenefitsPageController *)goldPage;
+- (BFMBenefitsPageController *)platinumPage;
+- (BFMBenefitsPageController *)diamandPage;
 
 @end

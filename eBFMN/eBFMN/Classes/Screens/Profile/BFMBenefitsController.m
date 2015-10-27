@@ -18,6 +18,7 @@
 
 @property (nonatomic, strong) UIPageViewController *pageController;
 @property (nonatomic, strong) BFMGoalsAdapter *goalsAdapter;
+@property (nonatomic, strong) BFMBenefitsAdaptor *benefitsAdapter;
 
 @end
 
@@ -38,7 +39,10 @@
         self.pageController = (UIPageViewController *)segue.destinationViewController;
         switch (self.type) {
             case BFMProfileInfoTypeBenefits:
-                [self.pageController setViewControllers:[BFMBenefitsAdaptor startController] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+                _benefitsAdapter = [[BFMBenefitsAdaptor alloc] initWithData:self.data];
+                self.pageController.dataSource = _benefitsAdapter;
+                self.pageController.delegate = _benefitsAdapter;
+                [self.pageController setViewControllers:@[[_benefitsAdapter goldPage]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
                 break;
             case BFMProfileInfoTypeGoals:
                 _goalsAdapter = [[BFMGoalsAdapter alloc] initWithData:self.data];

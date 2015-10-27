@@ -210,6 +210,7 @@
                         <outlet property="logoutButton" destination="dnO-gz-OCq" id="STf-rF-x50"/>
                         <outlet property="usernameLabel" destination="BdA-fO-uS3" id="897-nr-dXz"/>
                         <segue destination="6PD-q0-9lx" kind="presentation" identifier="goals" modalPresentationStyle="overCurrentContext" id="Qkg-uC-x1n"/>
+                        <segue destination="6PD-q0-9lx" kind="presentation" identifier="benefits" modalPresentationStyle="overCurrentContext" id="saU-Dy-XYF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIP-Te-JYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -284,4 +285,7 @@
         <image name="btn_goals" width="20" height="20"/>
         <image name="ic_silver" width="102" height="102"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="saU-Dy-XYF"/>
+    </inferredMetricsTieBreakers>
 </document>

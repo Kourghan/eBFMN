@@ -164,38 +164,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eBFMN/Classes/Models/User/BFMUser+Extension.m"
-            timestampString = "467592167.66557"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "255"
-            endingLineNumber = "255"
-            landmarkName = "+getAllIBLeagueBenefits:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "eBFMN/Classes/Models/User/BFMUser+Extension.m"
-            timestampString = "467592167.66557"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
-            landmarkName = "+getAllIBLeagueBenefits:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "eBFMN/Classes/Models/User/BFMUser+Extension.m"
             timestampString = "467593427.155812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"

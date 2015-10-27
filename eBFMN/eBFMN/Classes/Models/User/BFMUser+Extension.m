@@ -252,9 +252,9 @@
     [manager GET:@"Bonus/GetAllIBLeagueBenefits"
       parameters:@{@"guid" : sessionKey}
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-             NSLog(@"");
+             completition([responseObject valueForKey:@"Data"], nil);
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
-             NSLog(@"");
+             completition(nil, error);
          }
      ];
 }
@@ -309,7 +309,7 @@
     
     NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
     
-    [manager GET:@"Accounts/GetLinkForOffice"
+    [manager GET:@"Bonus/GetSelectedPrize"
       parameters:@{@"guid" : sessionKey}
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
              NSLog(@"");

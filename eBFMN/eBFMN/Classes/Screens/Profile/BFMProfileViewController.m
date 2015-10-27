@@ -114,8 +114,8 @@
 
 - (IBAction)benefits:(UIButton *)sender {
     [BFMUser getAllIBLeagueBenefits:^(NSDictionary *leagues, NSError *error) {
-        [self.navigationController performSegueWithIdentifier:@"benefits"
-                                                       sender:leagues];
+        [self performSegueWithIdentifier:@"benefits"
+                                  sender:leagues];
     }];
 }
 
