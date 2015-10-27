@@ -10,12 +10,15 @@
 
 #import "BFMBenefitsPageController.h"
 #import "BFMBenefitsAdaptor.h"
+#import "BFMGoalsAdapter.h"
 
 #import "UIColor+Extensions.h"
 
 @interface BFMBenefitsController ()
 
 @property (nonatomic, strong) UIPageViewController *pageController;
+@property (nonatomic, strong) BFMGoalsAdapter *goalsAdapter;
+@property (nonatomic, strong) BFMBenefitsAdaptor *benefitsAdapter;
 
 @end
 
@@ -23,33 +26,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+
     UIPageControl *pageControl = [UIPageControl appearanceWhenContainedIn:[self class], nil];
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
     pageControl.currentPageIndicatorTintColor = [UIColor bfm_defaultNavigationBlue];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"embed"]) {
         self.pageController = (UIPageViewController *)segue.destinationViewController;
-        [self.pageController setViewControllers:[BFMBenefitsAdaptor startController] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+        switch (self.type) {
+            case BFMProfileInfoTypeBenefits:
+                _benefitsAdapter = [[BFMBenefitsAdaptor alloc] initWithData:self.data];
+                self.pageController.dataSource = _benefitsAdapter;
+                self.pageController.delegate = _benefitsAdapter;
+                [self.pageController setViewControllers:@[[_benefitsAdapter goldPage]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+                break;
+            case BFMProfileInfoTypeGoals:
+                _goalsAdapter = [[BFMGoalsAdapter alloc] initWithData:self.data];
+                self.pageController.dataSource = _goalsAdapter;
+                self.pageController.delegate = _goalsAdapter;
+                
+                [self.pageController setViewControllers:@[[_goalsAdapter silverPage]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+                break;
+            default:
+                break;
+        }
     }
 }
 
 - (IBAction)viewTapped:(UITapGestureRecognizer *)sender {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
-
-
 
 @end

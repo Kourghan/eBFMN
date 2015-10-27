@@ -1,21 +1,21 @@
 //
-//  BFMBenefitsAdaptor.h
+//  BFMGoalsAdapter.h
 //  eBFMN
 //
-//  Created by Mikhail Timoscenko on 20.09.15.
-//  Copyright (c) 2015 eBFMN. All rights reserved.
+//  Created by Mikhail Timoscenko on 27.10.15.
+//  Copyright © 2015 eBFMN. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-
 @class BFMBenefitsPageController;
 
-@interface BFMBenefitsAdaptor : NSObject <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@interface BFMGoalsAdapter : NSObject <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 - (instancetype)initWithData:(NSDictionary *)data;
 
+- (BFMBenefitsPageController *)silverPage;
 - (BFMBenefitsPageController *)goldPage;
 - (BFMBenefitsPageController *)platinumPage;
 - (BFMBenefitsPageController *)diamandPage;

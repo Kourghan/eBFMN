@@ -76,11 +76,15 @@
 #pragma mark - handlers
 
 - (IBAction)liveTapped:(id)sender {
-    
+    [BFMUser getLinkForOffice:^(NSString *link, NSError *error) {
+        NSLog(@"");
+    }];
 }
 
 - (IBAction)demoTapped:(id)sender {
-    
+    [BFMUser getLinkForOffice:^(NSString *link, NSError *error) {
+        NSLog(@"");
+    }];
 }
 
 @end

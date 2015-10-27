@@ -1,24 +1,24 @@
 //
-//  BFMBenefitsAdaptor.m
+//  BFMGoalsAdapter.m
 //  eBFMN
 //
-//  Created by Mikhail Timoscenko on 20.09.15.
-//  Copyright (c) 2015 eBFMN. All rights reserved.
+//  Created by Mikhail Timoscenko on 27.10.15.
+//  Copyright © 2015 eBFMN. All rights reserved.
 //
 
-#import "BFMBenefitsAdaptor.h"
+#import "BFMGoalsAdapter.h"
 #import "BFMBenefitsPageController.h"
 
-const NSUInteger maxBenefitsPageIndex = 3;
-const NSUInteger startBenefitsPageIndex = 0;
+const NSUInteger maxGoalsPageIndex = 4;
+const NSUInteger startGoalsPageIndex = 0;
 
-@interface BFMBenefitsAdaptor ()
+@interface BFMGoalsAdapter ()
 
 @property (nonatomic, strong) NSDictionary *data;
 
 @end
 
-@implementation BFMBenefitsAdaptor
+@implementation BFMGoalsAdapter
 
 - (instancetype)initWithData:(NSDictionary *)data {
     if (self = [super init]) {
@@ -27,26 +27,30 @@ const NSUInteger startBenefitsPageIndex = 0;
     return self;
 }
 
-- (BFMBenefitsPageController *)goldPage {
+- (BFMBenefitsPageController *)silverPage {
     BFMBenefitsPageController *controller = [self viewControllerAtIndex:0];
-    NSString *webString = [self webStringFromString:[[self.data valueForKey:@"Gold"] firstObject]];
-    [controller setHTMLString:webString title:NSLocalizedString(@"benefits.title.gold", nil)];
+    [controller setHTMLString:[[self.data valueForKey:@"Silver"] firstObject] title:NSLocalizedString(@"benefits.title.silver", nil)];
+    
+    return controller;
+}
+
+- (BFMBenefitsPageController *)goldPage {
+    BFMBenefitsPageController *controller = [self viewControllerAtIndex:1];
+    [controller setHTMLString:[[self.data valueForKey:@"Gold"] firstObject] title:NSLocalizedString(@"benefits.title.gold", nil)];
     
     return controller;
 }
 
 - (BFMBenefitsPageController *)platinumPage {
-    BFMBenefitsPageController *controller = [self viewControllerAtIndex:1];
-    NSString *webString = [self webStringFromString:[[self.data valueForKey:@"Platinum"] firstObject]];
-    [controller setHTMLString:webString title:NSLocalizedString(@"benefits.title.platinum", nil)];
+    BFMBenefitsPageController *controller = [self viewControllerAtIndex:2];
+    [controller setHTMLString:[[self.data valueForKey:@"Platinum"] firstObject] title:NSLocalizedString(@"benefits.title.platinum", nil)];
     
     return controller;
 }
 
 - (BFMBenefitsPageController *)diamandPage {
-    BFMBenefitsPageController *controller = [self viewControllerAtIndex:2];
-    NSString *webString = [self webStringFromString:[[self.data valueForKey:@"Diamond"] firstObject]];
-    [controller setHTMLString:webString title:NSLocalizedString(@"benefits.title.diamand", nil)];
+    BFMBenefitsPageController *controller = [self viewControllerAtIndex:3];
+    [controller setHTMLString:[[self.data valueForKey:@"Diamond"] firstObject] title:NSLocalizedString(@"benefits.title.diamand", nil)];
     
     return controller;
 }
@@ -62,16 +66,15 @@ const NSUInteger startBenefitsPageIndex = 0;
 - (BFMBenefitsPageController *)controllerForIndex:(NSUInteger)index {
     switch (index) {
         case 0:
-            return [self goldPage];
-            break;
+            return [self silverPage];
         case 1:
-            return [self platinumPage];
-            break;
-        case 2:
-            return [self diamandPage];
-            break;
-        default:
             return [self goldPage];
+        case 2:
+            return [self platinumPage];
+        case 3:
+            return [self diamandPage];
+        default:
+            return [self silverPage];
             break;
     }
 }
@@ -82,7 +85,7 @@ const NSUInteger startBenefitsPageIndex = 0;
     
     index++;
     
-    if (index == maxBenefitsPageIndex) {
+    if (index == maxGoalsPageIndex) {
         return nil;
     }
     
@@ -92,7 +95,7 @@ const NSUInteger startBenefitsPageIndex = 0;
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
     NSUInteger index = [(BFMBenefitsPageController *)viewController index];
     
-    if (index == startBenefitsPageIndex) {
+    if (index == startGoalsPageIndex) {
         return nil;
     }
     
@@ -102,27 +105,11 @@ const NSUInteger startBenefitsPageIndex = 0;
 }
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
-    return 3;
+    return 4;
 }
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
     return 0;
-}
-
-- (NSString *)webStringFromString:(NSString *)baseString {
-    NSMutableString *webString = [NSMutableString stringWithString:@""];
-    
-    NSArray *points = [baseString componentsSeparatedByString:@"\\r\\n"];
-    
-    if ([points count] > 0) {
-        [webString appendString:@"<ul>"];
-        for (NSString *point in points) {
-            [webString appendString:[NSString stringWithFormat:@"<li>%@</li>", point]];
-        }
-        [webString appendString:@"</ul>"];
-    }
-    
-    return [webString copy];
 }
 
 @end

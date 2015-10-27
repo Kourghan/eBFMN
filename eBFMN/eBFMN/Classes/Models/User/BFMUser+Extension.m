@@ -174,6 +174,22 @@
 
 @implementation BFMUser (Network)
 
+- (void)getIBLeagueWithCompletitionBlock:(void (^)(BFMLeagueType, NSError *))completition {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
+    
+    NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+    
+    [manager GET:@"Bonus/GetIBLeague"
+      parameters:@{@"guid" : sessionKey}
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             NSDictionary *rawData = [responseObject valueForKey:@"Data"];
+             completition([[rawData valueForKey:@"Id"] intValue], nil);
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             completition(BFMLeagueTypeUndefined, error);
+         }
+     ];
+}
+
 + (void)getInfoWithCompletitionBlock:(void (^)(BOOL success))completition {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
     
@@ -211,6 +227,96 @@
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              completition(NO);
          }];
+}
+
++ (void)getIBLeagues:(void (^)(NSArray *))completition {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
+    
+    NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+    
+    [manager GET:@"Bonus/GetIBLeagues"
+      parameters:@{@"guid" : sessionKey}
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             NSLog(@"");
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             NSLog(@"");
+         }
+     ];
+}
+
++ (void)getAllIBLeagueBenefits:(void (^)(NSDictionary *, NSError *))completition {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
+    
+    NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+    
+    [manager GET:@"Bonus/GetAllIBLeagueBenefits"
+      parameters:@{@"guid" : sessionKey}
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             completition([responseObject valueForKey:@"Data"], nil);
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             completition(nil, error);
+         }
+     ];
+}
+
++ (void)getAllIBLeagueGoals:(void (^)(NSDictionary *, NSError *))completition {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
+    
+    NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+    
+    [manager GET:@"Bonus/GetAllIBLeagueGoals"
+      parameters:@{@"guid" : sessionKey}
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             completition([responseObject valueForKey:@"Data"], nil);
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             completition(nil, error);
+         }
+     ];
+}
+
++ (void)getIBLeagueBenefitsType:(BFMLeagueType)type completition:(void (^)(NSArray *))completition {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
+    
+    NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+    
+    [manager GET:@"Bonus/GetIBLeagueBenefits"
+      parameters:@{@"guid" : sessionKey, @"leagueID": @(type)}
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             NSLog(@"");
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             NSLog(@"");
+         }
+     ];
+}
+
++ (void)getIBLeagueGoalsForType:(BFMLeagueType)type completition:(void (^)(NSArray *))completition {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
+    
+    NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+    
+    [manager GET:@"Bonus/GetIBLeagueGoals"
+      parameters:@{@"guid" : sessionKey, @"leagueID": @(type)}
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             NSLog(@"");
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             NSLog(@"");
+         }
+     ];
+}
+
++ (void)getLinkForOffice:(void (^)(NSString *, NSError *))completition {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
+    
+    NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+    
+    [manager GET:@"Bonus/GetSelectedPrize"
+      parameters:@{@"guid" : sessionKey}
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             NSLog(@"");
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             NSLog(@"");
+         }
+     ];
 }
 
 @end

@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    BFMProfileInfoTypeBenefits = 0,
+    BFMProfileInfoTypeGoals = 1
+} BFMProfileInfoType;
+
 @interface BFMBenefitsController : UIViewController
+
+@property (nonatomic) BFMProfileInfoType type;
+@property (nonatomic, strong) NSDictionary *data;
 
 @end
