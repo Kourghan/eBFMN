@@ -7,6 +7,8 @@
 //
 
 #import "BFMShopViewController.h"
+
+#import "BFMShopCollectionAdapter.h"
 #import "BFMShopModel.h"
 #import "BFMPrize.h"
 
@@ -23,18 +25,33 @@
 
 @end
 
+static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
+
 @implementation BFMShopViewController
+
+#pragma mark - View lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setupCollectionView];
+    [self setupModels];
+}
+
+#pragma mark - Private (setup)
+
+- (void)setupCollectionView {
+    UINib *nib = [UINib nibWithNibName:kBFMShopCellID bundle:nil];
+    [self.collectionView registerNib:nib
+          forCellWithReuseIdentifier:kBFMShopCellID];
+}
+
+- (void)setupModels {
     [BFMPrize stubIfNeededInContext:[NSManagedObjectContext MR_defaultContext]];
     
-    self.adapter = [[ODSCollectionAdapter alloc] init];
-    
-    [self.adapter mapObjectClass:[BFMPrize class] toCellIdentifier:@"prizeCell"];
-    
     self.model = [BFMShopModel new];
+    
+    self.adapter = [[BFMShopCollectionAdapter alloc] init];
+    [self.adapter mapObjectClass:[BFMPrize class] toCellIdentifier:kBFMShopCellID];
     self.adapter.dataSource = self.model.dataSource;
     self.adapter.collectionView = self.collectionView;
 }

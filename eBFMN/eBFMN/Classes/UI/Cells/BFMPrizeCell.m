@@ -18,11 +18,21 @@
 
 @implementation BFMPrizeCell
 
+#pragma mark - Override
+
 - (void)prepareForReuse {
     [super prepareForReuse];
     
     _object = nil;
 }
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.backgroundColor = [UIColor clearColor];
+    self.contentView.backgroundColor = [UIColor clearColor];
+}
+
+#pragma mark - Property
 
 - (void)setObject:(BFMPrize *)object {
     _object = object;
