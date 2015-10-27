@@ -34,15 +34,22 @@
     
     BFMPrize *prize4 = [BFMPrize MR_createEntityInContext:context];
     
-    prize4.identifier = @(1);
+    prize4.identifier = @(4);
     prize4.name = @"Case";
     
     BFMPrize *prize5 = [BFMPrize MR_createEntityInContext:context];
     
-    prize5.identifier = @(1);
+    prize5.identifier = @(5);
     prize5.name = @"Apple Watch";
     
     [context MR_saveToPersistentStoreAndWait];
+}
+
++ (void)stubIfNeededInContext:(NSManagedObjectContext *)context {
+    NSUInteger count = [BFMPrize MR_countOfEntities];
+    if (!count) {
+        [self stubInContext:context];
+    }
 }
 
 @end

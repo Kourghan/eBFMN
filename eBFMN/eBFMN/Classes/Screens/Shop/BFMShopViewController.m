@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [BFMPrize stubInContext:[NSManagedObjectContext MR_defaultContext]];
+    [BFMPrize stubIfNeededInContext:[NSManagedObjectContext MR_defaultContext]];
     
     self.adapter = [[ODSCollectionAdapter alloc] init];
     

@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BFMPrize : NSManagedObject
 
 + (void)stubInContext:(NSManagedObjectContext *)context;
++ (void)stubIfNeededInContext:(NSManagedObjectContext *)context;
 
 @end
 
