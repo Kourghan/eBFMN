@@ -244,7 +244,7 @@
      ];
 }
 
-+ (void)getAllIBLeagueBenefits:(void (^)(NSArray *))completition {
++ (void)getAllIBLeagueBenefits:(void (^)(NSDictionary *, NSError *))completition {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
     
     NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
@@ -259,7 +259,7 @@
      ];
 }
 
-+ (void)getAllIBLeagueGoals:(void (^)(NSArray *))completition {
++ (void)getAllIBLeagueGoals:(void (^)(NSDictionary *, NSError *))completition {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
     
     NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
@@ -267,9 +267,9 @@
     [manager GET:@"Bonus/GetAllIBLeagueGoals"
       parameters:@{@"guid" : sessionKey}
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-             NSLog(@"");
+             completition([responseObject valueForKey:@"Data"], nil);
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
-             NSLog(@"");
+             completition(nil, error);
          }
      ];
 }

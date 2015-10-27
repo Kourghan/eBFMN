@@ -13,6 +13,7 @@
 
 #import "BFMUser+Extension.h"
 #import "JNKeychain+UNTExtension.h"
+#import "BFMBenefitsController.h"
 
 #import <MagicalRecord/MagicalRecord.h>
 
@@ -112,17 +113,32 @@
 }
 
 - (IBAction)benefits:(UIButton *)sender {
-    [BFMUser getAllIBLeagueBenefits:^(NSArray *leagues) {
-        
+    [BFMUser getAllIBLeagueBenefits:^(NSDictionary *leagues, NSError *error) {
+        [self.navigationController performSegueWithIdentifier:@"benefits"
+                                                       sender:leagues];
     }];
 }
 
 - (IBAction)goals:(UIButton *)sender {
-    [BFMUser getAllIBLeagueGoals:^(NSArray *leagues) {
-        
+    [BFMUser getAllIBLeagueGoals:^(NSDictionary *leagues, NSError *error) {
+        [self performSegueWithIdentifier:@"goals"
+                                  sender:leagues];
     }];
 }
 
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"goals"]) {
+        BFMBenefitsController *controller = (BFMBenefitsController *)[segue destinationViewController];
+        controller.type = BFMProfileInfoTypeGoals;
+        controller.data = sender;
+    } else if ([segue.identifier isEqualToString:@"benefits"]) {
+        BFMBenefitsController *controller = (BFMBenefitsController *)[segue destinationViewController];
+        controller.type = BFMProfileInfoTypeBenefits;
+        controller.data = sender;
+    }
+}
 
 
 @end

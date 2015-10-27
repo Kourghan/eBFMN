@@ -51,8 +51,8 @@ typedef enum {
 
 + (void)getInfoWithCompletitionBlock:(void (^)(BOOL success))completition;
 + (void)getIBLeagues:(void (^)(NSArray *leagues))completition;
-+ (void)getAllIBLeagueGoals:(void (^)(NSArray *leagues))completition;
-+ (void)getAllIBLeagueBenefits:(void (^)(NSArray *leagues))completition;
++ (void)getAllIBLeagueGoals:(void (^)(NSDictionary *leagues, NSError *error))completition;
++ (void)getAllIBLeagueBenefits:(void (^)(NSDictionary *leagues, NSError *error))completition;
 + (void)getIBLeagueBenefitsForType:(BFMLeagueType)type
                    completition:(void (^)(NSArray *leagues))completition;
 + (void)getIBLeagueGoalsForType:(BFMLeagueType)type

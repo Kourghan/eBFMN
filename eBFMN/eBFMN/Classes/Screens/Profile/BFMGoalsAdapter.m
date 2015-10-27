@@ -1,55 +1,61 @@
 //
-//  BFMBenefitsAdaptor.m
+//  BFMGoalsAdapter.m
 //  eBFMN
 //
-//  Created by Mikhail Timoscenko on 20.09.15.
-//  Copyright (c) 2015 eBFMN. All rights reserved.
+//  Created by Mikhail Timoscenko on 27.10.15.
+//  Copyright © 2015 eBFMN. All rights reserved.
 //
 
-#import "BFMBenefitsAdaptor.h"
-
+#import "BFMGoalsAdapter.h"
 #import "BFMBenefitsPageController.h"
 
-const NSUInteger maxPageIndex = 4;
-const NSUInteger startPageIndex = 0;
+const NSUInteger maxGoalsPageIndex = 4;
+const NSUInteger startGoalsPageIndex = 0;
 
-@implementation BFMBenefitsAdaptor
+@interface BFMGoalsAdapter ()
 
-#pragma mark - PageViewController
+@property (nonatomic, strong) NSDictionary *data;
 
-+ (NSArray *)startController {
-    return @[[self fisrtPage]];
+@end
+
+@implementation BFMGoalsAdapter
+
+- (instancetype)initWithData:(NSDictionary *)data {
+    if (self = [super init]) {
+        _data = data;
+    }
+    return self;
 }
 
-+ (BFMBenefitsPageController *)fisrtPage {
+- (BFMBenefitsPageController *)silverPage {
     BFMBenefitsPageController *controller = [self viewControllerAtIndex:0];
-    [controller setHTMLString:NSLocalizedString(@"benefits.gold", nil) title:NSLocalizedString(@"benefits.title.gold", nil)];
+    [controller setHTMLString:[[self.data valueForKey:@"Silver"] firstObject] title:NSLocalizedString(@"benefits.title.silver", nil)];
     
     return controller;
 }
 
-+ (BFMBenefitsPageController *)secondPage {
+- (BFMBenefitsPageController *)goldPage {
     BFMBenefitsPageController *controller = [self viewControllerAtIndex:1];
-    [controller setHTMLString:NSLocalizedString(@"benefits.diamond", nil) title:NSLocalizedString(@"benefits.title.diamond", nil)];
+    [controller setHTMLString:[[self.data valueForKey:@"Gold"] firstObject] title:NSLocalizedString(@"benefits.title.gold", nil)];
     
     return controller;
 }
 
-+ (BFMBenefitsPageController *)thirdPage {
+- (BFMBenefitsPageController *)platinumPage {
     BFMBenefitsPageController *controller = [self viewControllerAtIndex:2];
-    [controller setHTMLString:NSLocalizedString(@"benefits.gold", nil) title:NSLocalizedString(@"benefits.title.gold", nil)];
+    [controller setHTMLString:[[self.data valueForKey:@"Platinum"] firstObject] title:NSLocalizedString(@"benefits.title.platinum", nil)];
     
     return controller;
 }
 
-+ (BFMBenefitsPageController *)lastPage {
+- (BFMBenefitsPageController *)diamandPage {
     BFMBenefitsPageController *controller = [self viewControllerAtIndex:3];
-    [controller setHTMLString:NSLocalizedString(@"benefits.gold", nil) title:NSLocalizedString(@"benefits.title.gold", nil)];
+    [controller setHTMLString:[[self.data valueForKey:@"Diamond"] firstObject] title:NSLocalizedString(@"benefits.title.diamand", nil)];
     
     return controller;
 }
 
-+ (BFMBenefitsPageController *)viewControllerAtIndex:(NSUInteger)index {
+- (BFMBenefitsPageController *)viewControllerAtIndex:(NSUInteger)index {
     
     BFMBenefitsPageController *childViewController = [[BFMBenefitsPageController alloc] initWithNibName:@"BFMBenefitsPageController" bundle:nil];
     childViewController.index = index;
@@ -60,15 +66,15 @@ const NSUInteger startPageIndex = 0;
 - (BFMBenefitsPageController *)controllerForIndex:(NSUInteger)index {
     switch (index) {
         case 0:
-            return [BFMBenefitsAdaptor fisrtPage];
+            return [self silverPage];
         case 1:
-            return [BFMBenefitsAdaptor secondPage];
+            return [self goldPage];
         case 2:
-            return [BFMBenefitsAdaptor thirdPage];
+            return [self platinumPage];
         case 3:
-            return [BFMBenefitsAdaptor lastPage];
+            return [self diamandPage];
         default:
-            return [BFMBenefitsAdaptor fisrtPage];
+            return [self silverPage];
             break;
     }
 }
@@ -79,7 +85,7 @@ const NSUInteger startPageIndex = 0;
     
     index++;
     
-    if (index == maxPageIndex) {
+    if (index == maxGoalsPageIndex) {
         return nil;
     }
     
@@ -89,7 +95,7 @@ const NSUInteger startPageIndex = 0;
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
     NSUInteger index = [(BFMBenefitsPageController *)viewController index];
     
-    if (index == startPageIndex) {
+    if (index == startGoalsPageIndex) {
         return nil;
     }
     
@@ -99,11 +105,11 @@ const NSUInteger startPageIndex = 0;
 }
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
-    return maxPageIndex;
+    return 4;
 }
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
-    return startPageIndex;
+    return 0;
 }
 
 @end

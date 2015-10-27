@@ -86,7 +86,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="benefits:" destination="Dgx-vF-3YV" eventType="touchUpInside" id="H6D-OM-ckV"/>
-                                            <segue destination="6PD-q0-9lx" kind="presentation" modalPresentationStyle="overCurrentContext" id="b9d-Uc-W3f"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8R-yq-G2v" userLabel="Goals">
@@ -210,6 +209,7 @@
                         <outlet property="leagueImageView" destination="6Bw-F6-1en" id="Z53-pm-GOj"/>
                         <outlet property="logoutButton" destination="dnO-gz-OCq" id="STf-rF-x50"/>
                         <outlet property="usernameLabel" destination="BdA-fO-uS3" id="897-nr-dXz"/>
+                        <segue destination="6PD-q0-9lx" kind="presentation" identifier="goals" modalPresentationStyle="overCurrentContext" id="Qkg-uC-x1n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIP-Te-JYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -273,16 +273,10 @@
         <!--Page View Controller-->
         <scene sceneID="wUN-69-f59">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="0Ue-Oe-dhU" sceneMemberID="viewController">
-                    <connections>
-                        <outlet property="dataSource" destination="YtQ-PU-cbU" id="7Hb-fH-bNq"/>
-                        <outlet property="delegate" destination="YtQ-PU-cbU" id="UaV-1D-64K"/>
-                    </connections>
-                </pageViewController>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="0Ue-Oe-dhU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgU-Q1-c4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="YtQ-PU-cbU" customClass="BFMBenefitsAdaptor"/>
             </objects>
-            <point key="canvasLocation" x="1060" y="389"/>
+            <point key="canvasLocation" x="1097" y="389"/>
         </scene>
     </scenes>
     <resources>
