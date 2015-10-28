@@ -28,11 +28,11 @@
     
     UINavigationController *vc2 = [[UIStoryboard leaderboardStoryboard] instantiateInitialViewController];
     vc2.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_leaderboard"];
-    vc2.tabBarItem.title = @"Leaderboard";
+    vc2.tabBarItem.title = NSLocalizedString(@"tabbar.leaderboard", nil);
     
     UINavigationController *vc3 = [[UIStoryboard newsStoryboard] instantiateInitialViewController];
     vc3.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_news"];
-    vc3.tabBarItem.title = @"News";
+    vc3.tabBarItem.title = NSLocalizedString(@"tabbar.news", nil);
 //    
 //    UINavigationController *vc4 = [[UIStoryboard notificationsStoryboard] instantiateInitialViewController];
 //    vc4.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_notifications"];
@@ -40,7 +40,7 @@
     
     UINavigationController *vc5 = [[UIStoryboard profileStoryboard] instantiateInitialViewController];
     vc5.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_profile"];
-    vc5.tabBarItem.title = @"Profile";
+    vc5.tabBarItem.title = NSLocalizedString(@"tabbar.profile", nil);
     
     self.viewControllers = @[vc1, vc2, vc3, vc5];
 }
