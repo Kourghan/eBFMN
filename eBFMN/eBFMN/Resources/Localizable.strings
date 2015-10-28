@@ -23,6 +23,9 @@
 // Tabbar
 
 "tabbar.dashboard" = "Dashboard";
+"tabbar.leaderboard" = "Leaderboard";
+"tabbar.profile" = "Profile";
+"tabbar.news" = "News";
 
 // Dashboard
 
