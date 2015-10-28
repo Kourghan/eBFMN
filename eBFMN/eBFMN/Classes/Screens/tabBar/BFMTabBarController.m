@@ -33,16 +33,16 @@
     UINavigationController *vc3 = [[UIStoryboard newsStoryboard] instantiateInitialViewController];
     vc3.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_news"];
     vc3.tabBarItem.title = @"News";
-    
-    UINavigationController *vc4 = [[UIStoryboard notificationsStoryboard] instantiateInitialViewController];
-    vc4.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_notifications"];
-    vc4.tabBarItem.title = @"Notifications";
+//    
+//    UINavigationController *vc4 = [[UIStoryboard notificationsStoryboard] instantiateInitialViewController];
+//    vc4.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_notifications"];
+//    vc4.tabBarItem.title = @"Notifications";
     
     UINavigationController *vc5 = [[UIStoryboard profileStoryboard] instantiateInitialViewController];
     vc5.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_profile"];
     vc5.tabBarItem.title = @"Profile";
     
-    self.viewControllers = @[vc1, vc2, vc3, vc4, vc5];
+    self.viewControllers = @[vc1, vc2, vc3, vc5];
 }
 
 @end
