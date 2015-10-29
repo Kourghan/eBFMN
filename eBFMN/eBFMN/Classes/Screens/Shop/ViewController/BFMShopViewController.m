@@ -21,7 +21,7 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) BFMShopModel *model;
-@property (nonatomic, strong) ODSCollectionAdapter *adapter;
+@property (nonatomic, strong) BFMShopCollectionAdapter *adapter;
 
 @end
 
@@ -54,6 +54,29 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
     [self.adapter mapObjectClass:[BFMPrize class] toCellIdentifier:kBFMShopCellID];
     self.adapter.dataSource = self.model.dataSource;
     self.adapter.collectionView = self.collectionView;
+}
+
+#pragma mark - Private (action)
+
+- (void)saveIfPossible {
+    NSInteger index = self.adapter.selectedIndex;
+    
+    if (index == NSNotFound) {
+        //not selected
+        
+        return;
+    }
+    
+    NSIndexPath *path = [NSIndexPath indexPathForRow:index inSection:0];
+    BFMPrize *prize = [self.adapter.dataSource objectAtIndexPath:path];
+    
+    //use prize id or whatever
+}
+
+#pragma mark - IBAction
+
+- (IBAction)saveButtonTap:(id)sender {
+    [self saveIfPossible];
 }
 
 @end

@@ -13,6 +13,7 @@
 
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *pointsLabel;
+@property (nonatomic, weak) IBOutlet UIView *bgSelectionView;
 
 @end
 
@@ -30,6 +31,17 @@
     [super awakeFromNib];
     self.backgroundColor = [UIColor clearColor];
     self.contentView.backgroundColor = [UIColor clearColor];
+}
+
+#pragma mark - Public
+
+- (void)configureSelected:(BOOL)selected {
+    UIColor *color1 = [UIColor colorWithRed:220.f / 255.f
+                                      green:222.f / 255.f
+                                       blue:242.f / 255.f
+                                      alpha:1.f];
+    UIColor *color2 = [UIColor whiteColor];
+    self.bgSelectionView.backgroundColor = selected ? color1 : color2;
 }
 
 #pragma mark - Property

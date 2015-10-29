@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Mark Simonson - Proxima Nova Extrabold.otf">
@@ -18,7 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="ixF-uL-rVL">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="ixF-uL-rVL" customClass="BFMPrizeCell">
             <rect key="frame" x="0.0" y="0.0" width="157" height="163"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -26,7 +25,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tt9-ow-HWJ">
-                        <rect key="frame" x="3" y="3" width="151" height="157"/>
+                        <rect key="frame" x="2" y="2" width="153" height="159"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_prize_circle" translatesAutoresizingMaskIntoConstraints="NO" id="ocf-Tk-VqI">
@@ -67,7 +66,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ia3-TW-ZZq" firstAttribute="centerY" secondItem="ohf-ik-NAL" secondAttribute="centerY" id="2Cc-ZS-yyA"/>
                             <constraint firstItem="ia3-TW-ZZq" firstAttribute="leading" secondItem="NaJ-JD-LeT" secondAttribute="trailing" id="2Up-ZS-syD"/>
@@ -86,19 +85,22 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="nDh-BF-wSz" firstAttribute="centerY" secondItem="ocf-Tk-VqI" secondAttribute="centerY" id="G7q-P3-hS7"/>
-                <constraint firstItem="ocf-Tk-VqI" firstAttribute="top" secondItem="ixF-uL-rVL" secondAttribute="topMargin" constant="25" id="Jm5-3x-gGl"/>
+                <constraint firstItem="ocf-Tk-VqI" firstAttribute="centerY" secondItem="ixF-uL-rVL" secondAttribute="centerY" constant="-11" id="G9P-FG-p9I"/>
                 <constraint firstItem="ICe-nm-cFG" firstAttribute="centerX" secondItem="ixF-uL-rVL" secondAttribute="centerX" id="P4Y-bR-Qhm"/>
-                <constraint firstItem="tt9-ow-HWJ" firstAttribute="top" secondItem="ixF-uL-rVL" secondAttribute="top" constant="3" id="VIH-df-tIm"/>
+                <constraint firstItem="tt9-ow-HWJ" firstAttribute="top" secondItem="ixF-uL-rVL" secondAttribute="top" constant="2" id="VIH-df-tIm"/>
                 <constraint firstItem="ocf-Tk-VqI" firstAttribute="centerX" secondItem="ixF-uL-rVL" secondAttribute="centerX" id="b4L-ha-4o6"/>
                 <constraint firstItem="ICe-nm-cFG" firstAttribute="top" secondItem="ocf-Tk-VqI" secondAttribute="bottom" constant="10" id="cYQ-mE-i5Z"/>
                 <constraint firstItem="ohf-ik-NAL" firstAttribute="top" secondItem="ICe-nm-cFG" secondAttribute="bottom" id="jIy-DV-3IB"/>
-                <constraint firstAttribute="trailing" secondItem="tt9-ow-HWJ" secondAttribute="trailing" constant="3" id="n8p-DX-kmi"/>
-                <constraint firstAttribute="bottom" secondItem="tt9-ow-HWJ" secondAttribute="bottom" constant="3" id="noS-Mb-fm4"/>
-                <constraint firstItem="tt9-ow-HWJ" firstAttribute="leading" secondItem="ixF-uL-rVL" secondAttribute="leading" constant="3" id="nsj-dd-ClM"/>
+                <constraint firstAttribute="trailing" secondItem="tt9-ow-HWJ" secondAttribute="trailing" constant="2" id="n8p-DX-kmi"/>
+                <constraint firstAttribute="bottom" secondItem="tt9-ow-HWJ" secondAttribute="bottom" constant="2" id="noS-Mb-fm4"/>
+                <constraint firstItem="tt9-ow-HWJ" firstAttribute="leading" secondItem="ixF-uL-rVL" secondAttribute="leading" constant="2" id="nsj-dd-ClM"/>
                 <constraint firstItem="nDh-BF-wSz" firstAttribute="centerX" secondItem="ocf-Tk-VqI" secondAttribute="centerX" id="sg3-68-vIX"/>
                 <constraint firstItem="ohf-ik-NAL" firstAttribute="centerX" secondItem="ixF-uL-rVL" secondAttribute="centerX" id="wxp-pa-YWN"/>
             </constraints>
             <size key="customSize" width="157" height="163"/>
+            <connections>
+                <outlet property="bgSelectionView" destination="tt9-ow-HWJ" id="qFv-GJ-e5p"/>
+            </connections>
         </collectionViewCell>
     </objects>
     <resources>

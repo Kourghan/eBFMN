@@ -16,4 +16,6 @@
 
 @property (nonatomic, strong) BFMPrize *object;
 
+- (void)configureSelected:(BOOL)selected;
+
 @end

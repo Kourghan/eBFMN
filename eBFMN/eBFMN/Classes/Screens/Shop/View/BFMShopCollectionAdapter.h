@@ -10,4 +10,6 @@
 
 @interface BFMShopCollectionAdapter : ODSCollectionAdapter
 
+@property (nonatomic, assign) NSInteger selectedIndex;
+
 @end
