@@ -51,9 +51,19 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
     self.model = [BFMShopModel new];
     
     self.adapter = [[BFMShopCollectionAdapter alloc] init];
-    [self.adapter mapObjectClass:[BFMPrize class] toCellIdentifier:kBFMShopCellID];
+    [self.adapter mapObjectClass:[BFMPrize class]
+                toCellIdentifier:kBFMShopCellID];
     self.adapter.dataSource = self.model.dataSource;
     self.adapter.collectionView = self.collectionView;
+    
+    __weak typeof(self) weakSelf = self;
+    self.adapter.selection = ^(NSInteger selectedIndex) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf showSaveButton:(selectedIndex != NSNotFound)];
+    };
+    
+    //if you want to setup selection on screen creation do it here
+    self.adapter.selectedIndex = NSNotFound;
 }
 
 #pragma mark - Private (action)
@@ -71,6 +81,21 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
     BFMPrize *prize = [self.adapter.dataSource objectAtIndexPath:path];
     
     //use prize id or whatever
+}
+
+- (void)showSaveButton:(BOOL)show {
+    if (!show) {
+        self.navigationItem.rightBarButtonItem = nil;
+    } else {
+        UIBarButtonItemStyle style = UIBarButtonItemStylePlain;
+        SEL sel = @selector(saveButtonTap:);
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Save"
+                                                                 style:style
+                                                                target:self
+                                                                action:sel];
+
+        self.navigationItem.rightBarButtonItem = item;
+    }
 }
 
 #pragma mark - IBAction

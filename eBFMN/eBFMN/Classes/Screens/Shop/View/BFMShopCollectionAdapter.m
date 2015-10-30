@@ -26,6 +26,15 @@ static CGFloat const kBFMShopCellSideRatio6Plus = 24.f / 20.f;
     return self;
 }
 
+#pragma mark - Property
+
+- (void)setSelectedIndex:(NSInteger)selectedIndex {
+    _selectedIndex = selectedIndex;
+    if (self.selection) {
+        self.selection(self.selectedIndex);
+    }
+}
+
 #pragma mark - UICollectionViewDataSource
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView

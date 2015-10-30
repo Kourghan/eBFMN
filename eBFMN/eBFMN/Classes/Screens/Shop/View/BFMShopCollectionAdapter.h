@@ -8,8 +8,11 @@
 
 #import "ODSCollectionAdapter.h"
 
+typedef void (^BFMShopCollectionSelection)(NSInteger index);
+
 @interface BFMShopCollectionAdapter : ODSCollectionAdapter
 
 @property (nonatomic, assign) NSInteger selectedIndex;
+@property (nonatomic, copy) BFMShopCollectionSelection selection;
 
 @end
