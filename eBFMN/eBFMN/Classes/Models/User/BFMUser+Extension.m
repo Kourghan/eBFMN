@@ -319,6 +319,21 @@
      ];
 }
 
++ (void)getPointsCount:(void (^)(NSNumber *, NSError *))completition {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
+    
+    NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+    
+    [manager GET:@"Bonus/GetIBPointsData"
+      parameters:@{@"guid" : sessionKey}
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             completition([responseObject valueForKey:@"Data"], nil);
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             completition(nil, error);
+         }
+     ];
+}
+
 @end
 
 @implementation BFMUser (Mapping)

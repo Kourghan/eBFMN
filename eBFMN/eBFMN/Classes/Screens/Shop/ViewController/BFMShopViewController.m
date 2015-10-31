@@ -80,7 +80,9 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
     NSIndexPath *path = [NSIndexPath indexPathForRow:index inSection:0];
     BFMPrize *prize = [self.adapter.dataSource objectAtIndexPath:path];
     
-    //use prize id or whatever
+    [BFMPrize savePrize:prize withCompletition:^(NSArray * _Nonnull prizes, NSError * _Nonnull error) {
+        
+    }];
 }
 
 - (void)showSaveButton:(BOOL)show {

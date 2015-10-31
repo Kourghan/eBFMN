@@ -10,11 +10,14 @@
 
 #import "BFMUser+Extension.h"
 #import "MCPercentageDoughnutView.h"
+#import "BFMPrize.h"
 
 #import "UIColor+Extensions.h"
 #import "iCarousel.h"
 
 #import <CZPicker/CZPicker.h>
+
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface BFMEarningsPage () <CZPickerViewDataSource, CZPickerViewDelegate>
 
@@ -27,6 +30,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pointsValueLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *prizeImageView;
 
 @property (weak, nonatomic) IBOutlet MCPercentageDoughnutView *progressView;
 
@@ -34,6 +38,8 @@
 @property (nonatomic, strong) NSString *selectedCurrency;
 
 @property (nonatomic, strong) CZPickerView *picker;
+
+@property (nonatomic, strong) NSNumber *points;
 
 @end
 
@@ -52,8 +58,8 @@
     
     self.earningsLabel.text = NSLocalizedString(@"dashboard.title.earnings", nil);
     
-    self.progressView.percentage = .33f;
     self.progressView.fillColor = [UIColor bfm_defaultNavigationBlue];
+    self.progressView.percentage = 0.f;
     self.progressView.linePercentage = 0.08f;
     self.progressView.showTextLabel = NO;
     
@@ -74,8 +80,16 @@
 #pragma mark - private methods
 
 - (void)reloadData {
+    __weak typeof(self) weakSelf = self;
     [BFMUser getInfoWithCompletitionBlock:^(BOOL success) {
-        [self bindUser:[BFMUser currentUser]];
+        [weakSelf bindUser:[BFMUser currentUser]];
+    }];
+    
+    [BFMUser getPointsCount:^(NSNumber *points, NSError *error) {
+        weakSelf.points = points;
+        [BFMPrize currentPrizeWithComplatition:^(BFMPrize * prize, NSError * error) {
+            [weakSelf bindPrize:prize];
+        }];
     }];
 }
 
@@ -86,6 +100,16 @@
     self.currencyButton.enabled = ([user numberOfCurrencies] > 1);
     [self.carousel reloadData];
 }
+
+- (void)bindPrize:(BFMPrize *)prize {
+    [self.pointsValueLabel setText:[NSString stringWithFormat:@"%@/%@",
+                                    [self.points stringValue],
+                                    [prize.points stringValue]
+                                    ]
+     ];
+    NSURL *url = [NSURL URLWithString:[prize.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    [self.prizeImageView setImageWithURL:url
+                    placeholderImage:[UIImage imageNamed:@"ic_prize1"]];}
 
 - (void)showPicker {
     self.picker = [[CZPickerView alloc] initWithHeaderTitle:NSLocalizedString(@"dashboard.earnings.picker.title", nil)

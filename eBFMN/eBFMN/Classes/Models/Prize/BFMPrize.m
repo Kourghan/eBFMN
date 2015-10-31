@@ -42,12 +42,51 @@
      ];
 }
 
-+ (void)savePrize:(BFMPrize *)prize withCompletition:(void (^)(NSArray * _Nonnull, NSError * _Nonnull))completition {
++ (void)savePrize:(BFMPrize *)prize withCompletition:(void (^)(NSArray * result, NSError * error))completition {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
     
+    NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+    
+    [manager GET:@"Bonus/SetSelectedPrize"
+      parameters:@{
+                   @"guid" : sessionKey,
+                   @"prizeID" : prize.identifier
+                   }
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"]) {
+                 completition(nil, [NSError new]);
+             }
+             
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             completition(nil, error);
+         }
+     ];
 }
 
-+ (void)currentPrizeWithComplatition:(void (^)(BFMPrize * _Nonnull, NSError * _Nonnull))completition {
++ (void)currentPrizeWithComplatition:(void (^)(BFMPrize * prize, NSError * error))completition {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
     
+    NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+    
+    [manager GET:@"Bonus/GetSelectedPrize"
+      parameters:@{
+                   @"guid" : sessionKey
+                   }
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"]) {
+                 completition(nil, [NSError new]);
+             } else {
+                 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+                 BFMPrize *prize = [FEMDeserializer  objectFromRepresentation:[responseObject valueForKey:@"Data"]
+                                                                      mapping:[BFMPrize defaultMapping]
+                                                                      context:context];
+                 [context MR_saveToPersistentStoreAndWait];
+                 completition(prize, nil);
+             }
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             completition(nil, error);
+         }
+     ];
 }
 
 @end

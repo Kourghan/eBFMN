@@ -60,6 +60,8 @@ typedef enum {
 
 + (void)getLinkForOffice:(void (^)(NSString * link, NSError *error))completition;
 
++ (void)getPointsCount:(void (^)(NSNumber * points, NSError *error))completition;
+
 @end
 
 @interface BFMUser (Mapping)
