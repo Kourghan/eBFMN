@@ -15,4 +15,6 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) ODSDataSource *dataSource;
 
+- (void)refresh;
+
 @end
