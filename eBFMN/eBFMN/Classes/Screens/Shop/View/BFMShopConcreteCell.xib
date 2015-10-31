@@ -35,8 +35,12 @@
                             <constraint firstAttribute="width" constant="75" id="ebW-O1-GBf"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_prize1" translatesAutoresizingMaskIntoConstraints="NO" id="nDh-BF-wSz">
-                        <rect key="frame" x="48" y="36" width="60" height="68"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_prize1" translatesAutoresizingMaskIntoConstraints="NO" id="nDh-BF-wSz">
+                        <rect key="frame" x="40.5" y="32.5" width="75" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="mWN-1e-c0w"/>
+                            <constraint firstAttribute="height" constant="75" id="xiZ-JP-NLb"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{Name}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="ICe-nm-cFG">
                         <rect key="frame" x="53" y="118" width="50" height="18.5"/>

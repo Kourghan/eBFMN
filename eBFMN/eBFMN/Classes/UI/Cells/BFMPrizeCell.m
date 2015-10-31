@@ -9,6 +9,8 @@
 #import "BFMPrizeCell.h"
 #import "BFMPrize.h"
 
+#import <AFNetworking/UIImageView+AFNetworking.h>
+
 @interface BFMPrizeCell ()
 
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
@@ -51,6 +53,9 @@
     _object = object;
     self.nameLabel.text = object.name;
     self.pointsLabel.text = [object.points stringValue];
+    NSURL *url = [NSURL URLWithString:[object.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    [self.prizeImage setImageWithURL:url
+                    placeholderImage:[UIImage imageNamed:@"ic_prize1"]];
 }
 
 @end
