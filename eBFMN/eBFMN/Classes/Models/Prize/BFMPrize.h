@@ -9,11 +9,21 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+#import <FastEasyMapping/FastEasyMapping.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BFMPrize : NSManagedObject
 
-+ (void)stubInContext:(NSManagedObjectContext *)context;
++ (void)prizesWithCompletition:(void (^)(NSArray *prizes, NSError *error))completition;
++ (void)currentPrizeWithComplatition:(void (^)(BFMPrize *prize, NSError *error))completition;
++ (void)savePrize:(BFMPrize *)prize withCompletition:(void (^)(NSArray *prizes, NSError *error))completition;
+
+@end
+
+@interface BFMPrize (Mapping)
+
++ (FEMMapping *)defaultMapping;
 
 @end
 

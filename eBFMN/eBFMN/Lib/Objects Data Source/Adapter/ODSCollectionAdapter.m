@@ -147,7 +147,7 @@
             break;
 
         case ODSEventTypeBatchObjectChange:
-            abort();
+//            abort();
             break;
 
         case ODSEventTypeObjectChange: {

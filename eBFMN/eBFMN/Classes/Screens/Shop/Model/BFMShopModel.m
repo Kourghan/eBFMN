@@ -35,4 +35,12 @@
     return self;
 }
 
+- (void)loadPrizes {
+    __weak typeof(self) weakSelf = self;
+    [BFMPrize prizesWithCompletition:^(NSArray * prizes, NSError * error) {
+        
+        NSLog(@"");
+    }];
+}
+
 @end

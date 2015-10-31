@@ -7,42 +7,66 @@
 //
 
 #import "BFMPrize.h"
+#import "BFMSessionManager.h"
+#import "JNKeychain+UNTExtension.h"
 
+#import <FastEasyMapping/FastEasyMapping.h>
 #import <MagicalRecord/MagicalRecord.h>
 
 @implementation BFMPrize
 
-+ (void)stubInContext:(NSManagedObjectContext *)context {
-    if (!context) {
-        context = [NSManagedObjectContext MR_defaultContext];
-    }
++ (void)prizesWithCompletition:(void (^)(NSArray * prizes, NSError * error))completition {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
     
-    BFMPrize *prize1 = [BFMPrize MR_createEntityInContext:context];
+    NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
     
-    prize1.identifier = @(1);
-    prize1.name = @"Apple Watch";
+    [manager GET:@"Bonus/GetPrizeList"
+      parameters:@{@"guid" : sessionKey,
+                   @"sort" : @"",
+                   @"pageSize" : @(100),
+                   @"page" : @(0),
+                   @"desc" : @"false",
+                   @"filter" : @""}
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+             NSArray *values = [[responseObject valueForKey:@"Data"] valueForKey:@"Value"];
+             NSArray *prizes = [FEMDeserializer collectionFromRepresentation:values
+                                                   mapping:[BFMPrize defaultMapping]
+                                                   context:context];
+             
+             [context MR_saveToPersistentStoreAndWait];
+             completition(prizes, nil);
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             completition(nil, error);
+         }
+     ];
+}
 
-    BFMPrize *prize2 = [BFMPrize MR_createEntityInContext:context];
++ (void)savePrize:(BFMPrize *)prize withCompletition:(void (^)(NSArray * _Nonnull, NSError * _Nonnull))completition {
     
-    prize2.identifier = @(2);
-    prize2.name = @"Apple MacBook";
+}
+
++ (void)currentPrizeWithComplatition:(void (^)(BFMPrize * _Nonnull, NSError * _Nonnull))completition {
     
-    BFMPrize *prize3 = [BFMPrize MR_createEntityInContext:context];
+}
+
+@end
+
+@implementation BFMPrize (Mapping)
+
++ (FEMMapping *)defaultMapping {
+    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"BFMPrize"];
     
-    prize3.identifier = @(3);
-    prize3.name = @"Apple Iphone 6S";
+    [mapping setPrimaryKey:@"identifier"];
+    [mapping addAttributesFromDictionary:@{
+                                           @"identifier" : @"Id",
+                                           @"name" : @"Name",
+                                           @"points" : @"IBPoints",
+                                           @"iconURL" : @"DocumentLink"
+                                           }
+     ];
     
-    BFMPrize *prize4 = [BFMPrize MR_createEntityInContext:context];
-    
-    prize4.identifier = @(1);
-    prize4.name = @"Case";
-    
-    BFMPrize *prize5 = [BFMPrize MR_createEntityInContext:context];
-    
-    prize5.identifier = @(1);
-    prize5.name = @"Apple Watch";
-    
-    [context MR_saveToPersistentStoreAndWait];
+    return mapping;
 }
 
 @end
