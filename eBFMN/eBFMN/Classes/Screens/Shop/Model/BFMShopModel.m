@@ -10,6 +10,7 @@
 #import "ODSFetchedResultsDataSource.h"
 
 #import "BFMPrize.h"
+#import "BFMUser+Extension.h"
 
 #import <MagicalRecord/MagicalRecord.h>
 
@@ -39,11 +40,15 @@
     return NSLocalizedString(@"prizes.title", nil);
 }
 
-- (void)loadPrizes {
-    __weak typeof(self) weakSelf = self;
+- (void)loadPointsWithCallback:(void (^)(NSNumber *points, NSError *error))completition {
+    [BFMUser getPointsCount:^(NSNumber *points, NSError *error) {
+        completition(points, error);
+    }];
+}
+
+- (void)loadPrizesWithCallback:(void (^)(NSError *))completition {
     [BFMPrize prizesWithCompletition:^(NSArray * prizes, NSError * error) {
-        
-        NSLog(@"");
+        completition(error);
     }];
 }
 

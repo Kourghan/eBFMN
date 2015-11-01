@@ -16,6 +16,7 @@
 #import "BFMDefaultNavagtionBarAppearance.h"
 
 #import <MagicalRecord/MagicalRecord.h>
+#import <ALAlertBanner/ALAlertBanner.h>
 
 #import "ODSCollectionAdapter.h"
 #import "ODSCollectionAdapter.h"
@@ -25,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) BFMShopModel *model;
 @property (nonatomic, strong) BFMShopCollectionAdapter *adapter;
+@property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
 
 @end
 
@@ -73,9 +75,36 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
     self.adapter.dataSource = self.model.dataSource;
     self.adapter.collectionView = self.collectionView;
     
-    [self.model loadPrizes];
     
     __weak typeof(self) weakSelf = self;
+    [self.model loadPrizesWithCallback:^(NSError *error) {
+        if (error) {
+            ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
+                                                                style:ALAlertBannerStyleFailure
+                                                             position:ALAlertBannerPositionTop
+                                                                title:NSLocalizedString(@"error.error", nil)
+                                                             subtitle:NSLocalizedString(@"error.prizes", nil)];
+            [banner show];
+        }
+    }];
+    
+    [self.model loadPointsWithCallback:^(NSNumber *points, NSError *error) {
+        if (error) {
+            ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
+                                                                style:ALAlertBannerStyleFailure
+                                                             position:ALAlertBannerPositionTop
+                                                                title:NSLocalizedString(@"error.error", nil)
+                                                             subtitle:NSLocalizedString(@"error.points", nil)];
+            [banner show];
+        } else {
+            weakSelf.pointsLabel.text = [NSString stringWithFormat:@"%@ %@ %@",
+                                         NSLocalizedString(@"prizes.youhave", nil),
+                                         [points stringValue],
+                                         NSLocalizedString(@"prizes.ibpoints", nil)
+                                         ];
+        }
+    }];
+    
     self.adapter.selection = ^(NSInteger selectedIndex) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf showSaveButton:(selectedIndex != NSNotFound)];

@@ -21,6 +21,7 @@
             <string>ProximaNova-Light</string>
             <string>ProximaNova-Light</string>
             <string>ProximaNova-Light</string>
+            <string>ProximaNova-Light</string>
         </mutableArray>
         <mutableArray key="Mark Simonson - Proxima Nova Regular.otf">
             <string>ProximaNova-Regular</string>
@@ -101,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="16O-NO-eTg">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <rect key="frame" x="0.0" y="117" width="600" height="434"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ncB-p6-VGN">
                                     <size key="itemSize" width="150" height="163"/>
@@ -186,12 +187,32 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivi-Ry-b0U">
+                                <rect key="frame" x="0.0" y="64" width="600" height="53"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have: 0 IB POINTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gb7-ZT-paz">
+                                        <rect key="frame" x="211.5" y="16" width="177" height="22"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gb7-ZT-paz" firstAttribute="centerX" secondItem="ivi-Ry-b0U" secondAttribute="centerX" id="3hh-PH-q1O"/>
+                                    <constraint firstAttribute="height" constant="53" id="ZnZ-Cv-ab9"/>
+                                    <constraint firstItem="gb7-ZT-paz" firstAttribute="centerY" secondItem="ivi-Ry-b0U" secondAttribute="centerY" id="lLd-RB-fMH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ivi-Ry-b0U" firstAttribute="leading" secondItem="dSO-8c-h5C" secondAttribute="leading" id="02y-rS-BVB"/>
+                            <constraint firstAttribute="trailing" secondItem="ivi-Ry-b0U" secondAttribute="trailing" id="7F4-ct-mjH"/>
                             <constraint firstItem="p7S-Yi-oko" firstAttribute="top" secondItem="16O-NO-eTg" secondAttribute="bottom" id="Vjq-RX-hBi"/>
-                            <constraint firstItem="16O-NO-eTg" firstAttribute="top" secondItem="6Yb-6U-v0E" secondAttribute="bottom" id="g0W-dr-73D"/>
+                            <constraint firstItem="ivi-Ry-b0U" firstAttribute="top" secondItem="6Yb-6U-v0E" secondAttribute="bottom" id="eWR-k4-rFq"/>
                             <constraint firstAttribute="trailing" secondItem="16O-NO-eTg" secondAttribute="trailing" id="iDs-Fq-qF9"/>
+                            <constraint firstItem="16O-NO-eTg" firstAttribute="top" secondItem="ivi-Ry-b0U" secondAttribute="bottom" id="mxe-nR-sUW"/>
                             <constraint firstItem="16O-NO-eTg" firstAttribute="leading" secondItem="dSO-8c-h5C" secondAttribute="leading" id="ywj-ts-wIL"/>
                         </constraints>
                     </view>
@@ -200,6 +221,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="16O-NO-eTg" id="kKv-25-pw9"/>
+                        <outlet property="pointsLabel" destination="gb7-ZT-paz" id="Go9-Z8-UHX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fxh-cS-xfB" userLabel="First Responder" sceneMemberID="firstResponder"/>

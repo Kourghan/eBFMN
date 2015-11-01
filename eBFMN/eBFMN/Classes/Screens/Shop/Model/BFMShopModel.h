@@ -16,6 +16,7 @@
 
 @property (nonatomic, strong) NSString *title;
 
-- (void)loadPrizes;
+- (void)loadPrizesWithCallback:(void (^)(NSError *error))completition;;
+- (void)loadPointsWithCallback:(void (^)(NSNumber *points, NSError *error))completition;
 
 @end

@@ -10,6 +10,8 @@
 
 "error.error" = "ERROR";
 "error.connection" = "Cannot reach server, try again later.";
+"error.prizes" = "Cannot load prizes from server, try again later";
+"error.points" = "Cannot load your points from server, try again later";
 
 // Login
 
@@ -42,6 +44,8 @@
 // Prizes
 
 "prizes.title" = "PRIZES";
+"prizes.youhave" = "YOU HAVE:";
+"prizes.ibpoints" = "IB POINTS";
 
 // Leaderboard
 
