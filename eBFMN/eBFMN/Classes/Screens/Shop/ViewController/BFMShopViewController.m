@@ -12,6 +12,9 @@
 #import "BFMShopModel.h"
 #import "BFMPrize.h"
 
+#import "NINavigationAppearance.h"
+#import "BFMDefaultNavagtionBarAppearance.h"
+
 #import <MagicalRecord/MagicalRecord.h>
 
 #import "ODSCollectionAdapter.h"
@@ -35,6 +38,22 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
     [super viewDidLoad];
     [self setupCollectionView];
     [self setupModels];
+    
+    self.title = self.model.title;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [NINavigationAppearance pushAppearanceForNavigationController:self.navigationController];
+    [BFMDefaultNavagtionBarAppearance applyTo:self.navigationController.navigationBar];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [NINavigationAppearance popAppearanceForNavigationController:self.navigationController];
 }
 
 #pragma mark - Private (setup)

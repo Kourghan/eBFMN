@@ -35,6 +35,10 @@
     return self;
 }
 
+- (NSString *)title {
+    return NSLocalizedString(@"prizes.title", nil);
+}
+
 - (void)loadPrizes {
     __weak typeof(self) weakSelf = self;
     [BFMPrize prizesWithCompletition:^(NSArray * prizes, NSError * error) {

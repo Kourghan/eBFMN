@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) ODSDataSource *dataSource;
 
+@property (nonatomic, strong) NSString *title;
+
 - (void)loadPrizes;
 
 @end

@@ -39,6 +39,10 @@
 "dashboard.liveaccounts" = "LIVE ACCOUNTS";
 "dashboard.earnings.picker.title" = "CURRENCY";
 
+// Prizes
+
+"prizes.title" = "PRIZES";
+
 // Leaderboard
 
 "leaderboard.title" = "LEADERBOARD";

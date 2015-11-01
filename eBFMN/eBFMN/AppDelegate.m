@@ -34,6 +34,9 @@
     self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
     
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
+    
     return YES;
 }
 
