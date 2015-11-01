@@ -14,5 +14,10 @@
 @implementation BFMPointsRecord (CoreDataProperties)
 
 @dynamic identifier;
+@dynamic type;
+@dynamic deposit;
+@dynamic requiredLots;
+@dynamic points;
+@dynamic expirationDate;
 
 @end

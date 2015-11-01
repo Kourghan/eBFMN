@@ -32,6 +32,13 @@
     
     self.navigationItem.title = NSLocalizedString(@"dashboard.title", nil);
     [BFMDefaultNavagtionBarAppearance applyTo:self.navigationController.navigationBar];
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@""
+                                                                 style:UIBarButtonItemStylePlain
+                                                                target:nil
+                                                                action:nil];
+    
+    [self.navigationItem setBackBarButtonItem:backItem];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

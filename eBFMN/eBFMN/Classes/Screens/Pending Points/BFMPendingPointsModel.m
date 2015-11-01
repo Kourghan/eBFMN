@@ -18,27 +18,27 @@
 - (void)loadDataWithCallback:(void (^)(NSError *))callback {
     __weak typeof(self) weakSelf = self;
     
-    [BFMPointsRecord pendingBonusDataHistory:^(NSArray *points, NSError *error) {
-        if (!error) {
-            callback(nil);
-        } else {
-            callback(error);
-        }
-    }];
-    
-//    [BFMPointsRecord currentPendingBonusData:^(NSArray *points, NSError *error) {
+//    [BFMPointsRecord pendingBonusDataHistory:^(NSArray *points, NSError *error) {
 //        if (!error) {
-//            [BFMPointsRecord pendingBonusDataHistory:^(NSArray *points, NSError *error) {
-//                if (!error) {
-//                    callback(nil);
-//                } else {
-//                    callback(error);
-//                }
-//            }];
+//            callback(nil);
 //        } else {
 //            callback(error);
 //        }
 //    }];
+    
+    [BFMPointsRecord currentPendingBonusData:^(NSArray *points, NSError *error) {
+        if (!error) {
+            [BFMPointsRecord pendingBonusDataHistory:^(NSArray *points, NSError *error) {
+                if (!error) {
+                    callback(nil);
+                } else {
+                    callback(error);
+                }
+            }];
+        } else {
+            callback(error);
+        }
+    }];
 }
 
 @end

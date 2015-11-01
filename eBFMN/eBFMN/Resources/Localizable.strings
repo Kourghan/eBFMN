@@ -52,6 +52,7 @@
 "prizes.youhave" = "YOU HAVE:";
 "prizes.ibpoints" = "IB POINTS";
 "prizes.saving" = "Cannot save selected prize. Try again later.";
+"prizes.save" = "Save";
 
 // Leaderboard
 

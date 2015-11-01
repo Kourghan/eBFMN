@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+typedef enum {
+    BFMTransactionTypeNotStared = 0,
+    BFMTransactionTypeInProgress = 1,
+    BFMTransactionTypeExpired = 2,
+    BFMTransactionTypeCompleted = 3
+} BFMTransactionType;
+
 @class FEMMapping;
 
 NS_ASSUME_NONNULL_BEGIN

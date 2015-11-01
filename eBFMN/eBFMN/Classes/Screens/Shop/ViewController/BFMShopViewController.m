@@ -81,7 +81,7 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
         if (error) {
             ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
                                                                 style:ALAlertBannerStyleFailure
-                                                             position:ALAlertBannerPositionTop
+                                                             position:ALAlertBannerPositionUnderNavBar
                                                                 title:NSLocalizedString(@"error.error", nil)
                                                              subtitle:NSLocalizedString(@"error.prizes", nil)];
             [banner show];
@@ -92,7 +92,7 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
         if (error) {
             ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
                                                                 style:ALAlertBannerStyleFailure
-                                                             position:ALAlertBannerPositionTop
+                                                             position:ALAlertBannerPositionUnderNavBar
                                                                 title:NSLocalizedString(@"error.error", nil)
                                                              subtitle:NSLocalizedString(@"error.points", nil)];
             [banner show];
@@ -133,7 +133,7 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
         if (error) {
             ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
                                                                 style:ALAlertBannerStyleFailure
-                                                             position:ALAlertBannerPositionTop
+                                                             position:ALAlertBannerPositionUnderNavBar
                                                                 title:NSLocalizedString(@"error.error", nil)
                                                              subtitle:NSLocalizedString(@"error.saving", nil)];
             [banner show];
@@ -149,7 +149,7 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
     } else {
         UIBarButtonItemStyle style = UIBarButtonItemStylePlain;
         SEL sel = @selector(saveButtonTap:);
-        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Save"
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"prizes.save", nil)
                                                                  style:style
                                                                 target:self
                                                                 action:sel];
