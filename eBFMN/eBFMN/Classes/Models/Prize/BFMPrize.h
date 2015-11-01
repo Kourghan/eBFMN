@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)prizesWithCompletition:(void (^)(NSArray *prizes, NSError *error))completition;
 + (void)currentPrizeWithComplatition:(void (^)(BFMPrize *prize, NSError *error))completition;
-+ (void)savePrize:(BFMPrize *)prize withCompletition:(void (^)(NSArray *prizes, NSError *error))completition;
++ (void)savePrize:(BFMPrize *)prize withCompletition:(void (^)(NSError *error))completition;
 
 @end
 

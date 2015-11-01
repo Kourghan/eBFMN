@@ -806,10 +806,10 @@
             </objects>
             <point key="canvasLocation" x="1612" y="1080"/>
         </scene>
-        <!--View Controller-->
+        <!--Pending Points Controller-->
         <scene sceneID="Sag-HC-FPd">
             <objects>
-                <viewController id="wrP-Gf-aM1" sceneMemberID="viewController">
+                <viewController id="wrP-Gf-aM1" customClass="BFMPendingPointsController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="84e-9B-38n"/>
                         <viewControllerLayoutGuide type="bottom" id="Ufh-fK-4f7"/>

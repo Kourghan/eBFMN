@@ -20,20 +20,17 @@
     
     NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
     
-    [manager GET:@"Bonus/GetSelectedPrize"
+    [manager GET:@"Bonus/GetPendingBonusDataHistory"
       parameters:@{
-                   @"guid" : sessionKey
+                   @"guid" : sessionKey,
+                   @"from" : @(0),
+                   @"to" : [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]],
+                   @"countRowsTable" : @INT32_MAX,
+                   @"page" : @(0)
                    }
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
              if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"]) {
                  completition(nil, [NSError new]);
-             } else {
-                 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
-                 BFMPointsRecord *prize = [FEMDeserializer  objectFromRepresentation:[responseObject valueForKey:@"Data"]
-                                                                      mapping:[BFMPointsRecord defaultMapping]
-                                                                      context:context];
-                 [context MR_saveToPersistentStoreAndWait];
-                 completition(prize, nil);
              }
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              completition(nil, error);
@@ -46,20 +43,13 @@
     
     NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
     
-    [manager GET:@"Bonus/GetSelectedPrize"
+    [manager GET:@"Bonus/GetCurrentPendingBonusData"
       parameters:@{
                    @"guid" : sessionKey
                    }
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
              if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"]) {
                  completition(nil, [NSError new]);
-             } else {
-                 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
-                 BFMPointsRecord *prize = [FEMDeserializer  objectFromRepresentation:[responseObject valueForKey:@"Data"]
-                                                                      mapping:[BFMPointsRecord defaultMapping]
-                                                                      context:context];
-                 [context MR_saveToPersistentStoreAndWait];
-                 completition(prize, nil);
              }
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              completition(nil, error);

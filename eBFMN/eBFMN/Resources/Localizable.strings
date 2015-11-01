@@ -41,11 +41,17 @@
 "dashboard.liveaccounts" = "LIVE ACCOUNTS";
 "dashboard.earnings.picker.title" = "CURRENCY";
 
+// Points
+
+"points.badrequest" = "Cannot load pending points list.";
+"points.title" = "PENDING POINTS";
+
 // Prizes
 
 "prizes.title" = "PRIZES";
 "prizes.youhave" = "YOU HAVE:";
 "prizes.ibpoints" = "IB POINTS";
+"prizes.saving" = "Cannot save selected prize. Try again later.";
 
 // Leaderboard
 

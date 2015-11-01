@@ -88,6 +88,8 @@
 		61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C182091B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf */; };
 		61E477541BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E477511BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.m */; };
 		61E477551BE66C9C00C2659D /* BFMPointsRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E477531BE66C9C00C2659D /* BFMPointsRecord.m */; };
+		61E4775A1BE66F5300C2659D /* BFMPendingPointsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E477591BE66F5300C2659D /* BFMPendingPointsController.m */; };
+		61E4775D1BE66F8900C2659D /* BFMPendingPointsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E4775C1BE66F8900C2659D /* BFMPendingPointsModel.m */; };
 		61EC27EA1BCA858900DD3812 /* BFMPrize+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E71BCA858900DD3812 /* BFMPrize+CoreDataProperties.m */; };
 		61EC27EB1BCA858900DD3812 /* BFMPrize.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E91BCA858900DD3812 /* BFMPrize.m */; };
 		61EC27EF1BCA951700DD3812 /* BFMPrizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27EE1BCA951700DD3812 /* BFMPrizeCell.m */; };
@@ -272,6 +274,10 @@
 		61E477511BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMPointsRecord+CoreDataProperties.m"; path = "Classes/Models/Points Record/BFMPointsRecord+CoreDataProperties.m"; sourceTree = "<group>"; };
 		61E477521BE66C9C00C2659D /* BFMPointsRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPointsRecord.h; path = "Classes/Models/Points Record/BFMPointsRecord.h"; sourceTree = "<group>"; };
 		61E477531BE66C9C00C2659D /* BFMPointsRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMPointsRecord.m; path = "Classes/Models/Points Record/BFMPointsRecord.m"; sourceTree = "<group>"; };
+		61E477581BE66F5300C2659D /* BFMPendingPointsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPendingPointsController.h; path = "Classes/Screens/Pending Points/BFMPendingPointsController.h"; sourceTree = "<group>"; };
+		61E477591BE66F5300C2659D /* BFMPendingPointsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMPendingPointsController.m; path = "Classes/Screens/Pending Points/BFMPendingPointsController.m"; sourceTree = "<group>"; };
+		61E4775B1BE66F8900C2659D /* BFMPendingPointsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPendingPointsModel.h; path = "Classes/Screens/Pending Points/BFMPendingPointsModel.h"; sourceTree = "<group>"; };
+		61E4775C1BE66F8900C2659D /* BFMPendingPointsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMPendingPointsModel.m; path = "Classes/Screens/Pending Points/BFMPendingPointsModel.m"; sourceTree = "<group>"; };
 		61EC27E61BCA858900DD3812 /* BFMPrize+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMPrize+CoreDataProperties.h"; path = "Classes/Models/Prize/BFMPrize+CoreDataProperties.h"; sourceTree = "<group>"; };
 		61EC27E71BCA858900DD3812 /* BFMPrize+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMPrize+CoreDataProperties.m"; path = "Classes/Models/Prize/BFMPrize+CoreDataProperties.m"; sourceTree = "<group>"; };
 		61EC27E81BCA858900DD3812 /* BFMPrize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPrize.h; path = Classes/Models/Prize/BFMPrize.h; sourceTree = "<group>"; };
@@ -679,6 +685,7 @@
 		619E2C021B977BA200886893 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				61E477571BE66F2300C2659D /* Pending Points */,
 				61EC27DF1BCA832E00DD3812 /* Shop */,
 				61903C251BAC0D7A0018B3A0 /* Notifications */,
 				2C4E7B0C1BAA374600682A56 /* Leaderboard */,
@@ -878,6 +885,17 @@
 				61E477531BE66C9C00C2659D /* BFMPointsRecord.m */,
 			);
 			name = "Points Record";
+			sourceTree = "<group>";
+		};
+		61E477571BE66F2300C2659D /* Pending Points */ = {
+			isa = PBXGroup;
+			children = (
+				61E477581BE66F5300C2659D /* BFMPendingPointsController.h */,
+				61E477591BE66F5300C2659D /* BFMPendingPointsController.m */,
+				61E4775B1BE66F8900C2659D /* BFMPendingPointsModel.h */,
+				61E4775C1BE66F8900C2659D /* BFMPendingPointsModel.m */,
+			);
+			name = "Pending Points";
 			sourceTree = "<group>";
 		};
 		61EC27DF1BCA832E00DD3812 /* Shop */ = {
@@ -1257,10 +1275,12 @@
 				F99096A31BE020CB00E1D629 /* BFMShopCollectionAdapter.m in Sources */,
 				6135F3861BAF4CE700B29DE3 /* BFMBenefitsAdaptor.m in Sources */,
 				613C28BA1BA33FB800B2856A /* BFMNewsViewController.m in Sources */,
+				61E4775A1BE66F5300C2659D /* BFMPendingPointsController.m in Sources */,
 				61B1DD4E1BB83BAC00DB6D23 /* MCSliceLayer.m in Sources */,
 				61FD3D701BA7096D00F4CEFB /* ODSDataSource.m in Sources */,
 				613AE7811B9CD04400300B22 /* ELAXIBAppearance.m in Sources */,
 				619F0F061BBC8E0900916B0B /* BFMCurrencyPickerDataSource.m in Sources */,
+				61E4775D1BE66F8900C2659D /* BFMPendingPointsModel.m in Sources */,
 				61EC27EB1BCA858900DD3812 /* BFMPrize.m in Sources */,
 				61FD3D361BA7094200F4CEFB /* JGActionSheet.m in Sources */,
 				614BC2441BB4B33D0060C8E8 /* BFMForgotPasswordController.m in Sources */,

@@ -42,7 +42,7 @@
      ];
 }
 
-+ (void)savePrize:(BFMPrize *)prize withCompletition:(void (^)(NSArray * result, NSError * error))completition {
++ (void)savePrize:(BFMPrize *)prize withCompletition:(void (^)(NSError * error))completition {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
     
     NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
@@ -53,12 +53,13 @@
                    @"prizeID" : prize.identifier
                    }
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-             if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"]) {
-                 completition(nil, [NSError new]);
+             if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
+                 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
+                 completition([NSError new]);
              }
-             
+             completition(nil);
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
-             completition(nil, error);
+             completition(error);
          }
      ];
 }
@@ -73,7 +74,8 @@
                    @"guid" : sessionKey
                    }
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-             if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"]) {
+             if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
+                 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
                  completition(nil, [NSError new]);
              } else {
                  NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
