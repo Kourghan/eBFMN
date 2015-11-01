@@ -128,8 +128,18 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
     NSIndexPath *path = [NSIndexPath indexPathForRow:index inSection:0];
     BFMPrize *prize = [self.adapter.dataSource objectAtIndexPath:path];
     
-    [BFMPrize savePrize:prize withCompletition:^(NSArray * _Nonnull prizes, NSError * _Nonnull error) {
-        
+    __weak typeof(self) weakSelf = self;
+    [BFMPrize savePrize:prize withCompletition:^(NSError * error) {
+        if (error) {
+            ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
+                                                                style:ALAlertBannerStyleFailure
+                                                             position:ALAlertBannerPositionTop
+                                                                title:NSLocalizedString(@"error.error", nil)
+                                                             subtitle:NSLocalizedString(@"error.saving", nil)];
+            [banner show];
+        } else {
+            [weakSelf.navigationController popViewControllerAnimated:TRUE];
+        }
     }];
 }
 
