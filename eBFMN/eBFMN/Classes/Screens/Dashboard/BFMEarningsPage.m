@@ -109,7 +109,12 @@
      ];
     NSURL *url = [NSURL URLWithString:[prize.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     [self.prizeImageView setImageWithURL:url
-                    placeholderImage:[UIImage imageNamed:@"ic_prize1"]];}
+                    placeholderImage:[UIImage imageNamed:@"ic_prize1"]];
+    if ([self.points integerValue] > 0) {
+        double percent = ([self.points integerValue] >= [prize.points integerValue]) ? 1.f : [self.points doubleValue] / [prize.points doubleValue];
+        self.progressView.percentage = percent;
+    }
+}
 
 - (void)showPicker {
     self.picker = [[CZPickerView alloc] initWithHeaderTitle:NSLocalizedString(@"dashboard.earnings.picker.title", nil)
