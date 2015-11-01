@@ -22,6 +22,9 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="viewed" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
+    <entity name="BFMPointsRecord" representedClassName="BFMPointsRecord" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
     <entity name="BFMPrize" representedClassName="BFMPrize" syncable="YES">
         <attribute name="iconURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -68,5 +71,6 @@
         <element name="BFMPrize" positionX="-54" positionY="135" width="128" height="105"/>
         <element name="BFMSysAccount" positionX="-36" positionY="63" width="128" height="255"/>
         <element name="BFMUser" positionX="-63" positionY="-18" width="128" height="225"/>
+        <element name="BFMPointsRecord" positionX="-54" positionY="135" width="128" height="60"/>
     </elements>
 </model>

@@ -46,7 +46,7 @@ static NSString *kLastNewsUpdateUserDefaultsKey = @"kLastNewsUpdateUserDefaultsK
 }
 
 - (void)refresh {
-    //[self fetchNews];
+    [self fetchNews];
 }
 
 - (void) fetchNews {
@@ -57,7 +57,7 @@ static NSString *kLastNewsUpdateUserDefaultsKey = @"kLastNewsUpdateUserDefaultsK
                 savedRecord = record;
             }
         } failure:^(NSError *error) {
-            
+            NSLog(@"");
         }];
     } else {
         NSDate *date = [[NSDate alloc] init];
