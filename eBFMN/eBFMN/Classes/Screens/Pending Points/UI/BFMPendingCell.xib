@@ -185,6 +185,7 @@
                 <outlet property="lotsLabel" destination="f7J-6q-HhH" id="uZB-Rm-5xY"/>
                 <outlet property="pointsLabel" destination="cLF-QP-xf9" id="DK8-cF-flO"/>
                 <outlet property="statusImageView" destination="ZAK-kd-cP6" id="wBr-lq-HgL"/>
+                <outletCollection property="enableViews" destination="QDc-DF-5lY" id="QvK-nH-lEa"/>
             </connections>
             <point key="canvasLocation" x="208" y="241"/>
         </tableViewCell>

@@ -7,6 +7,8 @@
 //
 
 #import "BFMPendingPointsController.h"
+
+#import <MagicalRecord/MagicalRecord.h>
 #import "BFMPendingPointsModel.h"
 #import "BFMPointsRecord.h"
 
@@ -35,6 +37,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupUI];
     [self setupModels];
     
     self.title = self.model.title;
@@ -59,6 +62,8 @@
 - (void)setupModels {
     self.model = [BFMPendingPointsModel new];
     
+    [self stub];
+    
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
     __weak typeof(self) weakSelf = self;
@@ -77,12 +82,88 @@
     
     self.pendingAdapter = [[BFMPendingTableAdapter alloc] init];
     self.pendingAdapter.tableView = self.tableView;
+}
+
+- (void)setupUI {
+    self.view.backgroundColor = [UIColor colorWithRed:245.f / 255.f
+                                                green:245.f / 255.f
+                                                 blue:245.f / 255.f
+                                                alpha:1.f];
+    self.tableView.backgroundColor = [UIColor clearColor];
+}
+
+- (void)stub {
+    NSManagedObjectContext *ctx = [NSManagedObjectContext MR_defaultContext];
     
-//    self.adapter = [[ODSTableAdapter alloc] init];
-//    [self.adapter mapObjectClass:[BFMPointsRecord class]
-//                toCellIdentifier:@"BFMTransactionCell"];
-//    self.adapter.dataSource = self.model.dataSource;
-//    self.adapter.tableView = self.tableView;
+    {
+        NSNumber *identifier = @101;
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", identifier];
+        BFMPointsRecord *rec = [BFMPointsRecord MR_findFirstWithPredicate:predicate inContext:ctx];
+        if (!rec) {
+            rec = [BFMPointsRecord MR_createEntityInContext:ctx];
+        }
+        
+        rec.identifier = identifier;
+        rec.type = @0;
+        rec.requiredLots = @240;
+        rec.points = @10000;
+        rec.deposit = @8000;
+        rec.expirationDate = [NSDate dateWithTimeIntervalSinceNow:87000];
+    }
+    
+    {
+        NSNumber *identifier = @102;
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", identifier];
+        BFMPointsRecord *rec = [BFMPointsRecord MR_findFirstWithPredicate:predicate inContext:ctx];
+        if (!rec) {
+            rec = [BFMPointsRecord MR_createEntityInContext:ctx];
+        }
+        
+        rec.identifier = identifier;
+        rec.type = @1;
+        rec.requiredLots = @240;
+        rec.points = @10000;
+        rec.deposit = @8000;
+        rec.expirationDate = [NSDate dateWithTimeIntervalSinceNow:87200];
+    }
+    
+    {
+        NSNumber *identifier = @103;
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", identifier];
+        BFMPointsRecord *rec = [BFMPointsRecord MR_findFirstWithPredicate:predicate inContext:ctx];
+        if (!rec) {
+            rec = [BFMPointsRecord MR_createEntityInContext:ctx];
+        }
+        
+        rec.identifier = identifier;
+        rec.type = @1;
+        rec.requiredLots = @240;
+        rec.points = @10000;
+        rec.deposit = @8000;
+        rec.expirationDate = [NSDate dateWithTimeIntervalSinceNow:88000];
+    }
+    
+    {
+        NSNumber *identifier = @104;
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", identifier];
+        BFMPointsRecord *rec = [BFMPointsRecord MR_findFirstWithPredicate:predicate inContext:ctx];
+        if (!rec) {
+            rec = [BFMPointsRecord MR_createEntityInContext:ctx];
+        }
+        
+        rec.identifier = identifier;
+        rec.type = @0;
+        rec.requiredLots = @240;
+        rec.points = @10000;
+        rec.deposit = @8000;
+        rec.expirationDate = [NSDate dateWithTimeIntervalSinceNow:87050];
+    }
+    
+    [ctx MR_saveToPersistentStoreAndWait];
 }
 
 @end

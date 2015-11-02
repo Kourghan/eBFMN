@@ -28,18 +28,25 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        NSString *n = NSStringFromClass([BFMPointsRecord class]);
-        NSSortDescriptor *desc = [NSSortDescriptor sortDescriptorWithKey:@"expirationDate" ascending:NO];
-        NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:n];
-        request.sortDescriptors = @[desc];
-        NSManagedObjectContext *ct = [NSManagedObjectContext MR_defaultContext];
-        NSString *section = @"expirationDate";
-        _pendingFRC = [[BFM_FRC alloc] initWithFetchRequest:request
-                                       managedObjectContext:ct
-                                         sectionNameKeyPath:section
-                                                  cacheName:nil];
+        [self setupFRC];
     }
     return self;
+}
+
+- (void)setupFRC {
+    NSString *name = NSStringFromClass([BFMPointsRecord class]);
+    NSString *key = @"expirationDate";
+    NSSortDescriptor *desc = [NSSortDescriptor sortDescriptorWithKey:key
+                                                           ascending:NO];
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:name];
+    request.sortDescriptors = @[desc];
+    NSManagedObjectContext *ct = [NSManagedObjectContext MR_defaultContext];
+    NSString *section = @"dayStartDate";
+    _pendingFRC = [[BFM_FRC alloc] initWithFetchRequest:request
+                                   managedObjectContext:ct
+                                     sectionNameKeyPath:section
+                                              cacheName:nil];
+    [_pendingFRC performFetch:nil];
 }
 
 #pragma mark - Property
@@ -47,7 +54,7 @@
 - (void)setTableView:(UITableView *)tableView {
     if (self.tableView != tableView) {
         _tableView = tableView;
-        NSString *identifier = NSStringFromClass([BFMPointsRecord class]);
+        NSString *identifier = NSStringFromClass([BFMPendingCell class]);
         UINib *nib = [UINib nibWithNibName:identifier bundle:nil];
         [self.tableView registerNib:nib forCellReuseIdentifier:identifier];
         self.tableView.dataSource = self;
@@ -178,8 +185,31 @@ viewForHeaderInSection:(NSInteger)section {
     NSBundle *bundle = [NSBundle mainBundle];
     NSArray *objects = [bundle loadNibNamed:name owner:nil options:nil];
     BFMPendingDateHeaderView *view = objects.firstObject;
-    view.dateLabel.text = @":)";
+    
+    id sectionInfo = [[self.pendingFRC sections] objectAtIndex:section];
+    if ([sectionInfo numberOfObjects]) {
+        NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:section];
+        BFMPointsRecord *record = [self.pendingFRC objectAtIndexPath:path];
+        NSDateFormatter *formatter = [[self class] pendingHeaderFormatter];
+        NSString *text = [formatter stringFromDate:[record dayStartDate]];
+        view.dateLabel.text = text;
+    } else {
+        view.dateLabel.text = @"";
+    }
+    
     return view;
+}
+
+#pragma mark - Private
+
++ (NSDateFormatter *)pendingHeaderFormatter {
+    static NSDateFormatter *internalHeaderFormatter;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        internalHeaderFormatter = [NSDateFormatter new];
+        internalHeaderFormatter.dateFormat = @"EEEE, MMMM d, yyyy";
+    });
+    return internalHeaderFormatter;
 }
 
 @end
