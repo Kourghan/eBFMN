@@ -8,6 +8,7 @@
 
 #import "BFMPendingPointsController.h"
 #import "BFMPendingPointsModel.h"
+#import "BFMPointsRecord.h"
 
 #import "NINavigationAppearance.h"
 #import "BFMDefaultNavagtionBarAppearance.h"
@@ -15,9 +16,14 @@
 #import <ALAlertBanner/ALAlertBanner.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 
+#import "ODSTableAdapter.h"
+
 @interface BFMPendingPointsController ()
 
 @property (nonatomic, strong) BFMPendingPointsModel *model;
+@property (nonatomic, strong) ODSTableAdapter *adapter;
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end
 
@@ -60,12 +66,18 @@
         if (error) {
             ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
                                                                 style:ALAlertBannerStyleFailure
-                                                             position:ALAlertBannerPositionTop
+                                                             position:ALAlertBannerPositionUnderNavBar
                                                                 title:NSLocalizedString(@"error.error", nil)
                                                              subtitle:NSLocalizedString(@"points.badrequest", nil)];
             [banner show];
         }
     }];
+    
+    self.adapter = [[ODSTableAdapter alloc] init];
+    [self.adapter mapObjectClass:[BFMPointsRecord class]
+                toCellIdentifier:@"BFMTransactionCell"];
+    self.adapter.dataSource = self.model.dataSource;
+    self.adapter.tableView = self.tableView;
 }
 
 @end

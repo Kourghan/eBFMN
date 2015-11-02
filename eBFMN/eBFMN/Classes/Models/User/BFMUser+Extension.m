@@ -309,12 +309,12 @@
     
     NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
     
-    [manager GET:@"Bonus/GetSelectedPrize"
+    [manager GET:@"Accounts/GetLinkForOffice"
       parameters:@{@"guid" : sessionKey}
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-             NSLog(@"");
+             completition([responseObject valueForKey:@"Data"], nil);
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
-             NSLog(@"");
+             completition(nil, error);
          }
      ];
 }

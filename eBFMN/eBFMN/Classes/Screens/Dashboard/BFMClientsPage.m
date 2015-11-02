@@ -16,6 +16,8 @@
 #import "ODSDataSource.h"
 #import "ODSArrayDataSource.h"
 
+#import "JNKeychain+UNTExtension.h"
+
 @interface BFMClientsPage ()
 
 @property (weak, nonatomic) IBOutlet UILabel *clientsLabel;
@@ -49,7 +51,25 @@
     
     self.adapter.tableView = self.accountTableView;
     self.adapter.dataSource = self.dataSource;
-    [self.adapter mapObjectClass:[BFMSysAccount class] toCellIdentifier:@"bfmnAccountCell"];
+    [self.adapter mapObjectClass:[BFMSysAccount class]
+                toCellIdentifier:@"bfmnAccountCell"];
+    
+    //my.fxcentral.com/login.html?guid=08c410b0-120d-40fa-b650-72e66b19f4ab&goto=/funds/internalTransfer.html?acc=8079 (USD)
+
+    
+    [self.adapter setDidSelectObject:^(ODSTableAdapter *sender, BFMSysAccount *object, NSIndexPath *indexPath) {
+        [BFMUser getLinkForOffice:^(NSString *link, NSError *error) {
+            NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+            NSString *urlString = [NSString stringWithFormat:@"%@/login.html?guid=%@&goto=/funds/internalTransfer.html?acc=%@",
+                                   link,
+                                   sessionKey,
+                                   object.identifier
+                                   ];
+            NSURL *url = [[NSURL alloc] initWithString:urlString];
+            [[UIApplication sharedApplication] openURL:url];
+        }];
+    }];
+
 }
 
 
@@ -77,13 +97,25 @@
 
 - (IBAction)liveTapped:(id)sender {
     [BFMUser getLinkForOffice:^(NSString *link, NSError *error) {
-        NSLog(@"");
+        NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+        NSString *urlString = [NSString stringWithFormat:@"%@/login.html?guid=%@&goto=/ib/account-list.html?accountType=1",
+                               link,
+                               sessionKey
+                               ];
+        NSURL *url = [[NSURL alloc] initWithString:urlString];
+        [[UIApplication sharedApplication] openURL:url];
     }];
 }
 
 - (IBAction)demoTapped:(id)sender {
     [BFMUser getLinkForOffice:^(NSString *link, NSError *error) {
-        NSLog(@"");
+        NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+        NSString *urlString = [NSString stringWithFormat:@"%@/login.html?guid=%@&goto=/ib/account-list.html?accountType=2",
+                               link,
+                               sessionKey
+                               ];
+        NSURL *url = [[NSURL alloc] initWithString:urlString];
+        [[UIApplication sharedApplication] openURL:url];
     }];
 }
 

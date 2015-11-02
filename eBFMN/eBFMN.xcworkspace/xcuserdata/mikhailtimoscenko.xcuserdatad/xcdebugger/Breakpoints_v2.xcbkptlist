@@ -107,6 +107,38 @@
             endingLineNumber = "55"
             landmarkName = "-fetchNews"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__25-[BFMNewsModel fetchNews]_block_invoke"
+                  moduleName = "eBFMN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikhailtimoscenko/Documents/Projects/eBFMN/eBFMN/eBFMN/Classes/Models/News%20Model/BFMNewsModel.m"
+                  timestampString = "468160361.638195"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__25-[BFMNewsModel fetchNews]_block_invoke_2"
+                  moduleName = "eBFMN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikhailtimoscenko/Documents/Projects/eBFMN/eBFMN/eBFMN/Classes/Models/News%20Model/BFMNewsModel.m"
+                  timestampString = "468160361.638486"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "43">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -243,13 +275,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eBFMN/Classes/Models/Prize/BFMPrize.m"
-            timestampString = "468090866.366705"
+            filePath = "eBFMN/Classes/Screens/Pending Points/BFMPendingPointsModel.m"
+            timestampString = "468111058.170225"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "+currentPrizeWithComplatition:"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-loadDataWithCallback:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -259,76 +291,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eBFMN/Classes/Models/Prize/BFMPrize.m"
-            timestampString = "468090866.366705"
+            filePath = "eBFMN/Classes/Models/Points Record/BFMPointsRecord.m"
+            timestampString = "468107181.507318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "+currentPrizeWithComplatition:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__41+[BFMPrize currentPrizeWithComplatition:]_block_invoke82"
-                  moduleName = "eBFMN"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mikhailtimoscenko/Documents/Projects/eBFMN/eBFMN/eBFMN/Classes/Models/Prize/BFMPrize.m"
-                  timestampString = "468091838.441514"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "117">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_83"
-                  moduleName = "eBFMN"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mikhailtimoscenko/Documents/Projects/eBFMN/eBFMN/eBFMN/Classes/Models/Prize/BFMPrize.m"
-                  timestampString = "468091838.441813"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "21">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_84"
-                  moduleName = "eBFMN"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mikhailtimoscenko/Documents/Projects/eBFMN/eBFMN/eBFMN/Classes/Models/Prize/BFMPrize.m"
-                  timestampString = "468091838.44207"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "eBFMN/Classes/Models/Prize/BFMPrize.m"
-            timestampString = "468091492.982373"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "+savePrize:withCompletition:"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "+currentPendingBonusData:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -338,13 +307,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eBFMN/Classes/Models/Prize/BFMPrize.m"
-            timestampString = "468091494.342814"
+            filePath = "eBFMN/Classes/Screens/Pending Points/BFMPendingPointsModel.m"
+            timestampString = "468111058.170225"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "+savePrize:withCompletition:"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "-loadDataWithCallback:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eBFMN/Classes/Screens/Pending Points/BFMPendingPointsModel.m"
+            timestampString = "468111058.170225"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-loadDataWithCallback:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

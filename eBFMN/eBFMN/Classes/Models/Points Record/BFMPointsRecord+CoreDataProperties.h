@@ -16,6 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BFMPointsRecord (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSNumber *identifier;
+@property (nullable, nonatomic, retain) NSNumber *type;
+@property (nullable, nonatomic, retain) NSNumber *deposit;
+@property (nullable, nonatomic, retain) NSNumber *requiredLots;
+@property (nullable, nonatomic, retain) NSNumber *points;
+@property (nullable, nonatomic, retain) NSDate *expirationDate;
 
 @end
 

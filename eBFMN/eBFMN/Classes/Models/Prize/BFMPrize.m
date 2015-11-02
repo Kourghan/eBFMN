@@ -56,8 +56,9 @@
              if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
                  [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
                  completition([NSError new]);
+             } else {
+                 completition(nil);
              }
-             completition(nil);
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              completition(error);
          }
