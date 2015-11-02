@@ -52,10 +52,6 @@ static NSString *kLastNewsUpdateUserDefaultsKey = @"kLastNewsUpdateUserDefaultsK
 - (void) fetchNews {
     if ([[NSUserDefaults standardUserDefaults] stringForKey:kLastNewsUpdateUserDefaultsKey]) {
         [self getNewsFromDateInUnix:[[NSUserDefaults standardUserDefaults] stringForKey:kLastNewsUpdateUserDefaultsKey] success:^(NSArray *records) {
-            for (BFMNewsRecord *record in records) {
-                BFMNewsRecord *savedRecord = [BFMNewsRecord MR_createEntityInContext:[NSManagedObjectContext MR_defaultContext]];
-                savedRecord = record;
-            }
         } failure:^(NSError *error) {
             NSLog(@"");
         }];
@@ -79,18 +75,23 @@ static NSString *kLastNewsUpdateUserDefaultsKey = @"kLastNewsUpdateUserDefaultsK
     
     NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
     
-    NSDictionary *params = @{@"guid" : sessionKey, @"from" :  dateInUnixFormat};
+    NSDictionary *params = @{@"guid" : sessionKey, @"from" :  @0};
     [manager GET:@"Reports/GetNews"
       parameters:params
-         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-            // NSLog(@"Response: %@", responseObject);
+         success:^(NSURLSessionDataTask *task, NSArray *responseObject) {
              if (![responseObject isEqual: @[]]) {
-                 NSArray *records =  [FEMDeserializer collectionFromRepresentation:[responseObject objectForKey:@"Data"] mapping:[BFMNewsRecord defaultMapping]];
-                // NSLog(@"Records: %@", records);
-                 successBlock(records);
+                 NSManagedObjectContext *ctx = [NSManagedObjectContext MR_defaultContext];
+                 NSArray *records = [BFMNewsRecord MR_importFromArray:responseObject
+                                                            inContext:ctx];
+                 [ctx MR_saveOnlySelfAndWait];
+                 if (successBlock) {
+                     successBlock(records);
+                 }
              }
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
-             failureBlock(error);
+             if (failureBlock) {
+                 failureBlock(error);
+             }
          }];
 }
 
