@@ -32,7 +32,7 @@
             </userInfo>
         </attribute>
         <userInfo>
-            <entry key="mappedKeyName" value="_id"/>
+            <entry key="relatedByAttribute" value="identifier"/>
         </userInfo>
     </entity>
     <entity name="BFMNotification" representedClassName="BFMNotification" syncable="YES">

@@ -100,6 +100,7 @@ static NSString *kLastNewsUpdateUserDefaultsKey = @"kLastNewsUpdateUserDefaultsK
 }
 
 - (void)stubInContext:(NSManagedObjectContext *)context {
+#if 0
     BFMNewsRecord *rec1 = [BFMNewsRecord MR_createEntityInContext:context];
     rec1.title = @"This is short title";
     rec1.text = @"A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text A long text. Finished.";
@@ -124,7 +125,7 @@ static NSString *kLastNewsUpdateUserDefaultsKey = @"kLastNewsUpdateUserDefaultsK
     rec5.title = @"This is This is short title  title";
     rec5.text = @"This is a short text This is a short text This";
     rec5.date = [NSDate date];
-    
+#endif
 }
 
 @end
