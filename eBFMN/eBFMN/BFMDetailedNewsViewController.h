@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BFMNewsRecord.h"
+
+@class BFMNewsRecord;
 
 @interface BFMDetailedNewsViewController : UIViewController
 
