@@ -18,7 +18,7 @@
 
 #import "BFMNewsTableAdapter.h"
 
-@interface BFMNewsViewController ()
+@interface BFMNewsViewController ()<UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -27,6 +27,8 @@
 @end
 
 @implementation BFMNewsViewController
+
+#pragma mark - View lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -61,10 +63,17 @@
     [NINavigationAppearance popAppearanceForNavigationController:self.navigationController];
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     BFMNewsRecord *record =  [self.model.dataSource objectAtIndexPath:indexPath];
-    BFMDetailedNewsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"detailedNewsViewController"];
+    
+    NSString *identifier = NSStringFromClass([BFMDetailedNewsViewController class]);
+//    NSString *identifier = @"detailedNewsViewController"
+    
+    BFMDetailedNewsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
     controller.record = record;
     [self showViewController:controller sender:self];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 @end
