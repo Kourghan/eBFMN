@@ -16,12 +16,14 @@
 #import <ALAlertBanner/ALAlertBanner.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 
+#import "BFMPendingTableAdapter.h"
 #import "ODSTableAdapter.h"
 
 @interface BFMPendingPointsController ()
 
 @property (nonatomic, strong) BFMPendingPointsModel *model;
 @property (nonatomic, strong) ODSTableAdapter *adapter;
+@property (nonatomic, strong) BFMPendingTableAdapter *pendingAdapter;
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
@@ -73,11 +75,14 @@
         }
     }];
     
-    self.adapter = [[ODSTableAdapter alloc] init];
-    [self.adapter mapObjectClass:[BFMPointsRecord class]
-                toCellIdentifier:@"BFMTransactionCell"];
-    self.adapter.dataSource = self.model.dataSource;
-    self.adapter.tableView = self.tableView;
+    self.pendingAdapter = [[BFMPendingTableAdapter alloc] init];
+    self.pendingAdapter.tableView = self.tableView;
+    
+//    self.adapter = [[ODSTableAdapter alloc] init];
+//    [self.adapter mapObjectClass:[BFMPointsRecord class]
+//                toCellIdentifier:@"BFMTransactionCell"];
+//    self.adapter.dataSource = self.model.dataSource;
+//    self.adapter.tableView = self.tableView;
 }
 
 @end
