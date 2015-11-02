@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class ODSDataSource;
+
 @interface BFMPendingPointsModel : NSObject
 
 @property (nonatomic, strong) NSString *title;
+
+@property (nonatomic, strong) ODSDataSource *dataSource;
 
 - (void)loadDataWithCallback:(void (^)(NSError *error))callback;
 

@@ -90,6 +90,7 @@
 		61E477551BE66C9C00C2659D /* BFMPointsRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E477531BE66C9C00C2659D /* BFMPointsRecord.m */; };
 		61E4775A1BE66F5300C2659D /* BFMPendingPointsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E477591BE66F5300C2659D /* BFMPendingPointsController.m */; };
 		61E4775D1BE66F8900C2659D /* BFMPendingPointsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E4775C1BE66F8900C2659D /* BFMPendingPointsModel.m */; };
+		61E477631BE6CA4500C2659D /* BFMTransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E477621BE6CA4500C2659D /* BFMTransactionCell.m */; };
 		61EC27EA1BCA858900DD3812 /* BFMPrize+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E71BCA858900DD3812 /* BFMPrize+CoreDataProperties.m */; };
 		61EC27EB1BCA858900DD3812 /* BFMPrize.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E91BCA858900DD3812 /* BFMPrize.m */; };
 		61EC27EF1BCA951700DD3812 /* BFMPrizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27EE1BCA951700DD3812 /* BFMPrizeCell.m */; };
@@ -278,6 +279,8 @@
 		61E477591BE66F5300C2659D /* BFMPendingPointsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMPendingPointsController.m; path = "Classes/Screens/Pending Points/BFMPendingPointsController.m"; sourceTree = "<group>"; };
 		61E4775B1BE66F8900C2659D /* BFMPendingPointsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPendingPointsModel.h; path = "Classes/Screens/Pending Points/BFMPendingPointsModel.h"; sourceTree = "<group>"; };
 		61E4775C1BE66F8900C2659D /* BFMPendingPointsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMPendingPointsModel.m; path = "Classes/Screens/Pending Points/BFMPendingPointsModel.m"; sourceTree = "<group>"; };
+		61E477611BE6CA4500C2659D /* BFMTransactionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMTransactionCell.h; path = Classes/UI/Cells/BFMTransactionCell.h; sourceTree = "<group>"; };
+		61E477621BE6CA4500C2659D /* BFMTransactionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMTransactionCell.m; path = Classes/UI/Cells/BFMTransactionCell.m; sourceTree = "<group>"; };
 		61EC27E61BCA858900DD3812 /* BFMPrize+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMPrize+CoreDataProperties.h"; path = "Classes/Models/Prize/BFMPrize+CoreDataProperties.h"; sourceTree = "<group>"; };
 		61EC27E71BCA858900DD3812 /* BFMPrize+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMPrize+CoreDataProperties.m"; path = "Classes/Models/Prize/BFMPrize+CoreDataProperties.m"; sourceTree = "<group>"; };
 		61EC27E81BCA858900DD3812 /* BFMPrize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPrize.h; path = Classes/Models/Prize/BFMPrize.h; sourceTree = "<group>"; };
@@ -525,6 +528,8 @@
 				61F043061BBBF4B3000037CF /* BFMAccountCell.m */,
 				61EC27ED1BCA951700DD3812 /* BFMPrizeCell.h */,
 				61EC27EE1BCA951700DD3812 /* BFMPrizeCell.m */,
+				61E477611BE6CA4500C2659D /* BFMTransactionCell.h */,
+				61E477621BE6CA4500C2659D /* BFMTransactionCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1242,6 +1247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E477631BE6CA4500C2659D /* BFMTransactionCell.m in Sources */,
 				2CAD81411BABCF4A00DEF6F3 /* BFMLeaderboardViewController.m in Sources */,
 				61FD3CEE1BA7036700F4CEFB /* BFMNewsRecord.m in Sources */,
 				619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */,
