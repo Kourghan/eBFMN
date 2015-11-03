@@ -46,6 +46,7 @@
                                    managedObjectContext:ct
                                      sectionNameKeyPath:section
                                               cacheName:nil];
+    _pendingFRC.delegate = self;
     [_pendingFRC performFetch:nil];
 }
 
