@@ -96,4 +96,22 @@
     return mapping;
 }
 
+- (NSDate *)dayStartDate {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSTimeZone *timeZone = [NSTimeZone systemTimeZone];
+    [calendar setTimeZone:timeZone];
+    
+    NSCalendarUnit unit = NSCalendarUnitYear
+    | NSCalendarUnitMonth
+    | NSCalendarUnitDay;
+    NSDateComponents *dateComps = [calendar components:unit
+                                              fromDate:self.expirationDate];
+    
+    [dateComps setHour:0];
+    [dateComps setMinute:0];
+    [dateComps setSecond:0];
+    
+    return [calendar dateFromComponents:dateComps];
+}
+
 @end

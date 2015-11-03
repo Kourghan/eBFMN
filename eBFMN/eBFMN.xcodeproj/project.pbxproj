@@ -118,12 +118,18 @@
 		61FD3D751BA76AA200F4CEFB /* BFMNewsTableAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D741BA76AA200F4CEFB /* BFMNewsTableAdapter.m */; };
 		61FD3D791BA8438500F4CEFB /* BFMProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D781BA8438500F4CEFB /* BFMProfileViewController.m */; };
 		7017DF46620972E10C2C25AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDF264433FB8F41C107ADD8 /* libPods.a */; };
-		F96073E41BE723D800704692 /* BFMNewsTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E31BE723D800704692 /* BFMNewsTextCell.m */; };
-		F96073E61BE7264200704692 /* BFMNewsTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E51BE7264200704692 /* BFMNewsTextCell.xib */; };
-		F96073EA1BE72D5000704692 /* BFMNewsActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E81BE72D5000704692 /* BFMNewsActionCell.m */; };
-		F96073EB1BE72D5000704692 /* BFMNewsActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E91BE72D5000704692 /* BFMNewsActionCell.xib */; };
-		F96073EF1BE72E9E00704692 /* BFMNewsSingleActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073ED1BE72E9E00704692 /* BFMNewsSingleActionCell.m */; };
-		F96073F01BE72E9E00704692 /* BFMNewsSingleActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073EE1BE72E9E00704692 /* BFMNewsSingleActionCell.xib */; };
+		F919C91E1BE7ECB70022CB02 /* BFMPendingTableAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C91D1BE7ECB70022CB02 /* BFMPendingTableAdapter.m */; settings = {ASSET_TAGS = (); }; };
+		F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9201BE806510022CB02 /* BFMPendingCell.m */; settings = {ASSET_TAGS = (); }; };
+		F919C9231BE806510022CB02 /* BFMPendingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F919C9211BE806510022CB02 /* BFMPendingCell.xib */; settings = {ASSET_TAGS = (); }; };
+		F919C9261BE819360022CB02 /* BFMPendingDateHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		F919C9281BE819650022CB02 /* BFMPendingDateHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F919C9271BE819650022CB02 /* BFMPendingDateHeaderView.xib */; settings = {ASSET_TAGS = (); }; };
+		F919C92C1BE827300022CB02 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C92B1BE827300022CB02 /* NSDate+Utilities.m */; settings = {ASSET_TAGS = (); }; };
+		F96073E41BE723D800704692 /* BFMNewsTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E31BE723D800704692 /* BFMNewsTextCell.m */; settings = {ASSET_TAGS = (); }; };
+		F96073E61BE7264200704692 /* BFMNewsTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E51BE7264200704692 /* BFMNewsTextCell.xib */; settings = {ASSET_TAGS = (); }; };
+		F96073EA1BE72D5000704692 /* BFMNewsActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E81BE72D5000704692 /* BFMNewsActionCell.m */; settings = {ASSET_TAGS = (); }; };
+		F96073EB1BE72D5000704692 /* BFMNewsActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E91BE72D5000704692 /* BFMNewsActionCell.xib */; settings = {ASSET_TAGS = (); }; };
+		F96073EF1BE72E9E00704692 /* BFMNewsSingleActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073ED1BE72E9E00704692 /* BFMNewsSingleActionCell.m */; settings = {ASSET_TAGS = (); }; };
+		F96073F01BE72E9E00704692 /* BFMNewsSingleActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073EE1BE72E9E00704692 /* BFMNewsSingleActionCell.xib */; settings = {ASSET_TAGS = (); }; };
 		F99096A21BE020CB00E1D629 /* BFMShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969B1BE020CB00E1D629 /* BFMShopModel.m */; };
 		F99096A31BE020CB00E1D629 /* BFMShopCollectionAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */; };
 		F99096A41BE020CB00E1D629 /* BFMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99096A11BE020CB00E1D629 /* BFMShopViewController.m */; };
@@ -347,6 +353,16 @@
 		61FD3D781BA8438500F4CEFB /* BFMProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMProfileViewController.m; path = Classes/Screens/Profile/BFMProfileViewController.m; sourceTree = "<group>"; };
 		9A2ED38684585DCC5C04EDB7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ED90EA9A0FFE50580AD1AD04 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F919C91C1BE7ECB70022CB02 /* BFMPendingTableAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPendingTableAdapter.h; sourceTree = "<group>"; };
+		F919C91D1BE7ECB70022CB02 /* BFMPendingTableAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPendingTableAdapter.m; sourceTree = "<group>"; };
+		F919C91F1BE806510022CB02 /* BFMPendingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPendingCell.h; sourceTree = "<group>"; };
+		F919C9201BE806510022CB02 /* BFMPendingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPendingCell.m; sourceTree = "<group>"; };
+		F919C9211BE806510022CB02 /* BFMPendingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMPendingCell.xib; sourceTree = "<group>"; };
+		F919C9241BE819360022CB02 /* BFMPendingDateHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPendingDateHeaderView.h; sourceTree = "<group>"; };
+		F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPendingDateHeaderView.m; sourceTree = "<group>"; };
+		F919C9271BE819650022CB02 /* BFMPendingDateHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMPendingDateHeaderView.xib; sourceTree = "<group>"; };
+		F919C92A1BE827300022CB02 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		F919C92B1BE827300022CB02 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		F96073E21BE723D800704692 /* BFMNewsTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMNewsTextCell.h; sourceTree = "<group>"; };
 		F96073E31BE723D800704692 /* BFMNewsTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMNewsTextCell.m; sourceTree = "<group>"; };
 		F96073E51BE7264200704692 /* BFMNewsTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMNewsTextCell.xib; sourceTree = "<group>"; };
@@ -472,6 +488,7 @@
 		613AE76E1B9CC8B300300B22 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				F919C9291BE8271D0022CB02 /* NSDate-Utilities */,
 				61F042EF1BBB1F2D000037CF /* iCarousel */,
 				61B1DD3E1BB83BAC00DB6D23 /* CircledView */,
 				61FD3D371BA7096D00F4CEFB /* Objects Data Source */,
@@ -911,6 +928,7 @@
 		61E477571BE66F2300C2659D /* Pending Points */ = {
 			isa = PBXGroup;
 			children = (
+				F919C9151BE7EB6B0022CB02 /* UI */,
 				61E477581BE66F5300C2659D /* BFMPendingPointsController.h */,
 				61E477591BE66F5300C2659D /* BFMPendingPointsController.m */,
 				61E4775B1BE66F8900C2659D /* BFMPendingPointsModel.h */,
@@ -1071,6 +1089,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F919C9151BE7EB6B0022CB02 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F919C91C1BE7ECB70022CB02 /* BFMPendingTableAdapter.h */,
+				F919C91D1BE7ECB70022CB02 /* BFMPendingTableAdapter.m */,
+				F919C91F1BE806510022CB02 /* BFMPendingCell.h */,
+				F919C9201BE806510022CB02 /* BFMPendingCell.m */,
+				F919C9211BE806510022CB02 /* BFMPendingCell.xib */,
+				F919C9241BE819360022CB02 /* BFMPendingDateHeaderView.h */,
+				F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */,
+				F919C9271BE819650022CB02 /* BFMPendingDateHeaderView.xib */,
+			);
+			name = UI;
+			path = "Classes/Screens/Pending Points/UI";
+			sourceTree = "<group>";
+		};
+		F919C9291BE8271D0022CB02 /* NSDate-Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F919C92A1BE827300022CB02 /* NSDate+Utilities.h */,
+				F919C92B1BE827300022CB02 /* NSDate+Utilities.m */,
+			);
+			name = "NSDate-Utilities";
+			path = "Lib/NSDate-Utilities";
+			sourceTree = "<group>";
+		};
 		F96073E11BE7239900704692 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1212,8 +1256,10 @@
 				619E2BEA1B97564A00886893 /* LaunchScreen.xib in Resources */,
 				F96073E61BE7264200704692 /* BFMNewsTextCell.xib in Resources */,
 				2CB1B8441B9CC37B00AC16D2 /* Profile.storyboard in Resources */,
+				F919C9281BE819650022CB02 /* BFMPendingDateHeaderView.xib in Resources */,
 				2CB1B8401B9CC37B00AC16D2 /* Dashboard.storyboard in Resources */,
 				61C181F61B98DF7100D5FAC8 /* Localizable.strings in Resources */,
+				F919C9231BE806510022CB02 /* BFMPendingCell.xib in Resources */,
 				619E2BE71B97564A00886893 /* Images.xcassets in Resources */,
 				F96073F01BE72E9E00704692 /* BFMNewsSingleActionCell.xib in Resources */,
 				61C182101B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Light Italic.otf in Resources */,
@@ -1305,6 +1351,8 @@
 				613AE7661B9B9F7C00300B22 /* BFMAccount.m in Sources */,
 				619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */,
 				61B1DD4D1BB83BAC00DB6D23 /* MCPercentageDoughnutView.m in Sources */,
+				F919C91E1BE7ECB70022CB02 /* BFMPendingTableAdapter.m in Sources */,
+				F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */,
 				61FD3D661BA7096D00F4CEFB /* ODSTableAdapter.m in Sources */,
 				61F042F21BBB1F2D000037CF /* iCarousel.m in Sources */,
 				613AE7731B9CCC9600300B22 /* BFMAccount+Extension.m in Sources */,
@@ -1316,6 +1364,7 @@
 				61FD3D681BA7096D00F4CEFB /* ODSEvent.m in Sources */,
 				F99096A31BE020CB00E1D629 /* BFMShopCollectionAdapter.m in Sources */,
 				F96073E41BE723D800704692 /* BFMNewsTextCell.m in Sources */,
+				F919C92C1BE827300022CB02 /* NSDate+Utilities.m in Sources */,
 				6135F3861BAF4CE700B29DE3 /* BFMBenefitsAdaptor.m in Sources */,
 				613C28BA1BA33FB800B2856A /* BFMNewsViewController.m in Sources */,
 				61E4775A1BE66F5300C2659D /* BFMPendingPointsController.m in Sources */,
@@ -1333,6 +1382,7 @@
 				61EC27EA1BCA858900DD3812 /* BFMPrize+CoreDataProperties.m in Sources */,
 				61FD3D6D1BA7096D00F4CEFB /* ODSArraySection.m in Sources */,
 				61FD3D6C1BA7096D00F4CEFB /* ODSFilteringSourceSearchController.m in Sources */,
+				F919C9261BE819360022CB02 /* BFMPendingDateHeaderView.m in Sources */,
 				61B1DD3A1BB6D97D00DB6D23 /* BFMBasePageController.m in Sources */,
 				61B1DD2F1BB6D41500DB6D23 /* BFMDashboardAdaptor.m in Sources */,
 				61E477541BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.m in Sources */,

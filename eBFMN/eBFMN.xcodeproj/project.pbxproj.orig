@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C4E7B121BAA37E100682A56 /* BFMLeaderboardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E7B111BAA37E100682A56 /* BFMLeaderboardTableViewController.m */; };
-<<<<<<< Updated upstream
-		2C8E49EE1BDF9C6500A9F8F9 /* BFMDetailedNewsControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8E49ED1BDF9C6500A9F8F9 /* BFMDetailedNewsControllerViewController.m */; settings = {ASSET_TAGS = (); }; };
-=======
-		2C90DADA1BDE31CE005A2723 /* BFMNewsRecord+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C90DAD91BDE31CE005A2723 /* BFMNewsRecord+Mapping.m */; settings = {ASSET_TAGS = (); }; };
->>>>>>> Stashed changes
+		2C8E49EE1BDF9C6500A9F8F9 /* BFMDetailedNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8E49ED1BDF9C6500A9F8F9 /* BFMDetailedNewsViewController.m */; };
+		2C90DADA1BDE31CE005A2723 /* BFMNewsRecord+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C90DAD91BDE31CE005A2723 /* BFMNewsRecord+Mapping.m */; };
 		2CAD81411BABCF4A00DEF6F3 /* BFMLeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD81401BABCF4A00DEF6F3 /* BFMLeaderboardViewController.m */; };
 		2CAD81441BABD54400DEF6F3 /* BFMLeaderboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD81431BABD54400DEF6F3 /* BFMLeaderboardCell.m */; };
 		2CAD81481BABDFF900DEF6F3 /* BFMLeaderboardRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD81471BABDFF900DEF6F3 /* BFMLeaderboardRecord.m */; };
@@ -46,7 +43,7 @@
 		613C28BA1BA33FB800B2856A /* BFMNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28B91BA33FB800B2856A /* BFMNewsViewController.m */; };
 		613C28BD1BA3415C00B2856A /* BFMNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28BC1BA3415C00B2856A /* BFMNewsModel.m */; };
 		613C28C11BA3437700B2856A /* BFMNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28C01BA3437700B2856A /* BFMNewsCell.m */; };
-		614BC2441BB4B33D0060C8E8 /* BFMForgotPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614BC2431BB4B33D0060C8E8 /* BFMForgotPasswordController.m */; settings = {ASSET_TAGS = (); }; };
+		614BC2441BB4B33D0060C8E8 /* BFMForgotPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614BC2431BB4B33D0060C8E8 /* BFMForgotPasswordController.m */; };
 		61903C201BAC0CBB0018B3A0 /* BFMNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C1F1BAC0CBB0018B3A0 /* BFMNotification.m */; };
 		61903C241BAC0CE70018B3A0 /* BFMNotificationsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C231BAC0CE70018B3A0 /* BFMNotificationsModel.m */; };
 		61903C281BAC0D960018B3A0 /* BFMNotificationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C271BAC0D960018B3A0 /* BFMNotificationsController.m */; };
@@ -59,17 +56,18 @@
 		619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C071B977CF200886893 /* BFMUserCredentials.m */; };
 		619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C121B977DC400886893 /* JNKeychain+UNTExtension.m */; };
 		619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 619E2C151B977DD000886893 /* UIColor+Extensions.m */; };
-		619F0F061BBC8E0900916B0B /* BFMCurrencyPickerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 619F0F051BBC8E0900916B0B /* BFMCurrencyPickerDataSource.m */; settings = {ASSET_TAGS = (); }; };
-		61B1DD2F1BB6D41500DB6D23 /* BFMDashboardAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD2E1BB6D41500DB6D23 /* BFMDashboardAdaptor.m */; settings = {ASSET_TAGS = (); }; };
-		61B1DD321BB6D84200DB6D23 /* BFMEarningsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD311BB6D84200DB6D23 /* BFMEarningsPage.m */; settings = {ASSET_TAGS = (); }; };
-		61B1DD361BB6D86E00DB6D23 /* BFMClientsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD351BB6D86E00DB6D23 /* BFMClientsPage.m */; settings = {ASSET_TAGS = (); }; };
-		61B1DD3A1BB6D97D00DB6D23 /* BFMBasePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD391BB6D97D00DB6D23 /* BFMBasePageController.m */; settings = {ASSET_TAGS = (); }; };
-		61B1DD3D1BB6ED8300DB6D23 /* BFMDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD3C1BB6ED8300DB6D23 /* BFMDashboardViewController.m */; settings = {ASSET_TAGS = (); }; };
-		61B1DD4B1BB83BAC00DB6D23 /* MCNewCustomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD411BB83BAC00DB6D23 /* MCNewCustomLayer.m */; settings = {ASSET_TAGS = (); }; };
-		61B1DD4C1BB83BAC00DB6D23 /* MCNewCustomLayeredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD441BB83BAC00DB6D23 /* MCNewCustomLayeredView.m */; settings = {ASSET_TAGS = (); }; };
-		61B1DD4D1BB83BAC00DB6D23 /* MCPercentageDoughnutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD461BB83BAC00DB6D23 /* MCPercentageDoughnutView.m */; settings = {ASSET_TAGS = (); }; };
-		61B1DD4E1BB83BAC00DB6D23 /* MCSliceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD481BB83BAC00DB6D23 /* MCSliceLayer.m */; settings = {ASSET_TAGS = (); }; };
-		61B1DD4F1BB83BAC00DB6D23 /* MCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD4A1BB83BAC00DB6D23 /* MCUtil.m */; settings = {ASSET_TAGS = (); }; };
+		619F0F061BBC8E0900916B0B /* BFMCurrencyPickerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 619F0F051BBC8E0900916B0B /* BFMCurrencyPickerDataSource.m */; };
+		61B1DD2F1BB6D41500DB6D23 /* BFMDashboardAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD2E1BB6D41500DB6D23 /* BFMDashboardAdaptor.m */; };
+		61B1DD321BB6D84200DB6D23 /* BFMEarningsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD311BB6D84200DB6D23 /* BFMEarningsPage.m */; };
+		61B1DD361BB6D86E00DB6D23 /* BFMClientsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD351BB6D86E00DB6D23 /* BFMClientsPage.m */; };
+		61B1DD3A1BB6D97D00DB6D23 /* BFMBasePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD391BB6D97D00DB6D23 /* BFMBasePageController.m */; };
+		61B1DD3D1BB6ED8300DB6D23 /* BFMDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD3C1BB6ED8300DB6D23 /* BFMDashboardViewController.m */; };
+		61B1DD4B1BB83BAC00DB6D23 /* MCNewCustomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD411BB83BAC00DB6D23 /* MCNewCustomLayer.m */; };
+		61B1DD4C1BB83BAC00DB6D23 /* MCNewCustomLayeredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD441BB83BAC00DB6D23 /* MCNewCustomLayeredView.m */; };
+		61B1DD4D1BB83BAC00DB6D23 /* MCPercentageDoughnutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD461BB83BAC00DB6D23 /* MCPercentageDoughnutView.m */; };
+		61B1DD4E1BB83BAC00DB6D23 /* MCSliceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD481BB83BAC00DB6D23 /* MCSliceLayer.m */; };
+		61B1DD4F1BB83BAC00DB6D23 /* MCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD4A1BB83BAC00DB6D23 /* MCUtil.m */; };
+		61BEFE351BDEF1E00030A05D /* BFMGoalsAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BEFE341BDEF1E00030A05D /* BFMGoalsAdapter.m */; };
 		61C181F01B98D62700D5FAC8 /* BFMSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C181EF1B98D62700D5FAC8 /* BFMSessionManager.m */; };
 		61C181F61B98DF7100D5FAC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61C181F51B98DF7100D5FAC8 /* Localizable.strings */; };
 		61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C181F81B98E04F00D5FAC8 /* BFMLoginController.m */; };
@@ -88,15 +86,18 @@
 		61C182151B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C182071B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold.otf */; };
 		61C182161B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C182081B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf */; };
 		61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C182091B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf */; };
-		61EC27E21BCA835A00DD3812 /* BFMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E11BCA835A00DD3812 /* BFMShopViewController.m */; settings = {ASSET_TAGS = (); }; };
-		61EC27E51BCA837100DD3812 /* BFMShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E41BCA837100DD3812 /* BFMShopModel.m */; settings = {ASSET_TAGS = (); }; };
-		61EC27EA1BCA858900DD3812 /* BFMPrize+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E71BCA858900DD3812 /* BFMPrize+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		61EC27EB1BCA858900DD3812 /* BFMPrize.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E91BCA858900DD3812 /* BFMPrize.m */; settings = {ASSET_TAGS = (); }; };
-		61EC27EF1BCA951700DD3812 /* BFMPrizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27EE1BCA951700DD3812 /* BFMPrizeCell.m */; settings = {ASSET_TAGS = (); }; };
-		61F042F21BBB1F2D000037CF /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F042F11BBB1F2D000037CF /* iCarousel.m */; settings = {ASSET_TAGS = (); }; };
-		61F042F51BBB214A000037CF /* BFMCarouselDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F042F41BBB214A000037CF /* BFMCarouselDataSource.m */; settings = {ASSET_TAGS = (); }; };
-		61F042F71BBB2895000037CF /* earningsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61F042F61BBB2895000037CF /* earningsView.xib */; settings = {ASSET_TAGS = (); }; };
-		61F043071BBBF4B3000037CF /* BFMAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F043061BBBF4B3000037CF /* BFMAccountCell.m */; settings = {ASSET_TAGS = (); }; };
+		61E477541BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E477511BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.m */; };
+		61E477551BE66C9C00C2659D /* BFMPointsRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E477531BE66C9C00C2659D /* BFMPointsRecord.m */; };
+		61E4775A1BE66F5300C2659D /* BFMPendingPointsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E477591BE66F5300C2659D /* BFMPendingPointsController.m */; };
+		61E4775D1BE66F8900C2659D /* BFMPendingPointsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E4775C1BE66F8900C2659D /* BFMPendingPointsModel.m */; };
+		61E477631BE6CA4500C2659D /* BFMTransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E477621BE6CA4500C2659D /* BFMTransactionCell.m */; };
+		61EC27EA1BCA858900DD3812 /* BFMPrize+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E71BCA858900DD3812 /* BFMPrize+CoreDataProperties.m */; };
+		61EC27EB1BCA858900DD3812 /* BFMPrize.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E91BCA858900DD3812 /* BFMPrize.m */; };
+		61EC27EF1BCA951700DD3812 /* BFMPrizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27EE1BCA951700DD3812 /* BFMPrizeCell.m */; };
+		61F042F21BBB1F2D000037CF /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F042F11BBB1F2D000037CF /* iCarousel.m */; };
+		61F042F51BBB214A000037CF /* BFMCarouselDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F042F41BBB214A000037CF /* BFMCarouselDataSource.m */; };
+		61F042F71BBB2895000037CF /* earningsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61F042F61BBB2895000037CF /* earningsView.xib */; };
+		61F043071BBBF4B3000037CF /* BFMAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F043061BBBF4B3000037CF /* BFMAccountCell.m */; };
 		61FD3CEE1BA7036700F4CEFB /* BFMNewsRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3CED1BA7036700F4CEFB /* BFMNewsRecord.m */; };
 		61FD3D361BA7094200F4CEFB /* JGActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D351BA7094200F4CEFB /* JGActionSheet.m */; };
 		61FD3D641BA7096D00F4CEFB /* ODSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D3B1BA7096D00F4CEFB /* ODSAdapter.m */; };
@@ -117,6 +118,31 @@
 		61FD3D751BA76AA200F4CEFB /* BFMNewsTableAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D741BA76AA200F4CEFB /* BFMNewsTableAdapter.m */; };
 		61FD3D791BA8438500F4CEFB /* BFMProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D781BA8438500F4CEFB /* BFMProfileViewController.m */; };
 		7017DF46620972E10C2C25AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDF264433FB8F41C107ADD8 /* libPods.a */; };
+<<<<<<< HEAD
+		F96073E41BE723D800704692 /* BFMNewsTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E31BE723D800704692 /* BFMNewsTextCell.m */; };
+		F96073E61BE7264200704692 /* BFMNewsTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E51BE7264200704692 /* BFMNewsTextCell.xib */; };
+		F96073EA1BE72D5000704692 /* BFMNewsActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E81BE72D5000704692 /* BFMNewsActionCell.m */; };
+		F96073EB1BE72D5000704692 /* BFMNewsActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E91BE72D5000704692 /* BFMNewsActionCell.xib */; };
+		F96073EF1BE72E9E00704692 /* BFMNewsSingleActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073ED1BE72E9E00704692 /* BFMNewsSingleActionCell.m */; };
+		F96073F01BE72E9E00704692 /* BFMNewsSingleActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073EE1BE72E9E00704692 /* BFMNewsSingleActionCell.xib */; };
+=======
+		F919C91E1BE7ECB70022CB02 /* BFMPendingTableAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C91D1BE7ECB70022CB02 /* BFMPendingTableAdapter.m */; settings = {ASSET_TAGS = (); }; };
+		F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9201BE806510022CB02 /* BFMPendingCell.m */; settings = {ASSET_TAGS = (); }; };
+		F919C9231BE806510022CB02 /* BFMPendingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F919C9211BE806510022CB02 /* BFMPendingCell.xib */; settings = {ASSET_TAGS = (); }; };
+		F919C9261BE819360022CB02 /* BFMPendingDateHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		F919C9281BE819650022CB02 /* BFMPendingDateHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F919C9271BE819650022CB02 /* BFMPendingDateHeaderView.xib */; settings = {ASSET_TAGS = (); }; };
+		F919C92C1BE827300022CB02 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C92B1BE827300022CB02 /* NSDate+Utilities.m */; settings = {ASSET_TAGS = (); }; };
+		F96073E41BE723D800704692 /* BFMNewsTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E31BE723D800704692 /* BFMNewsTextCell.m */; settings = {ASSET_TAGS = (); }; };
+		F96073E61BE7264200704692 /* BFMNewsTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E51BE7264200704692 /* BFMNewsTextCell.xib */; settings = {ASSET_TAGS = (); }; };
+		F96073EA1BE72D5000704692 /* BFMNewsActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E81BE72D5000704692 /* BFMNewsActionCell.m */; settings = {ASSET_TAGS = (); }; };
+		F96073EB1BE72D5000704692 /* BFMNewsActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E91BE72D5000704692 /* BFMNewsActionCell.xib */; settings = {ASSET_TAGS = (); }; };
+		F96073EF1BE72E9E00704692 /* BFMNewsSingleActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073ED1BE72E9E00704692 /* BFMNewsSingleActionCell.m */; settings = {ASSET_TAGS = (); }; };
+		F96073F01BE72E9E00704692 /* BFMNewsSingleActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073EE1BE72E9E00704692 /* BFMNewsSingleActionCell.xib */; settings = {ASSET_TAGS = (); }; };
+>>>>>>> 30004cc38040b7ba2710bea07ea7d27ab9267104
+		F99096A21BE020CB00E1D629 /* BFMShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969B1BE020CB00E1D629 /* BFMShopModel.m */; };
+		F99096A31BE020CB00E1D629 /* BFMShopCollectionAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */; };
+		F99096A41BE020CB00E1D629 /* BFMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99096A11BE020CB00E1D629 /* BFMShopViewController.m */; };
+		F99096A61BE0229F00E1D629 /* BFMShopConcreteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F99096A51BE0229F00E1D629 /* BFMShopConcreteCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,13 +159,10 @@
 		1FDF264433FB8F41C107ADD8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4E7B101BAA37E100682A56 /* BFMLeaderboardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMLeaderboardTableViewController.h; sourceTree = "<group>"; };
 		2C4E7B111BAA37E100682A56 /* BFMLeaderboardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMLeaderboardTableViewController.m; sourceTree = "<group>"; };
-<<<<<<< Updated upstream
-		2C8E49EC1BDF9C6500A9F8F9 /* BFMDetailedNewsControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMDetailedNewsControllerViewController.h; sourceTree = "<group>"; };
-		2C8E49ED1BDF9C6500A9F8F9 /* BFMDetailedNewsControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMDetailedNewsControllerViewController.m; sourceTree = "<group>"; };
-=======
+		2C8E49EC1BDF9C6500A9F8F9 /* BFMDetailedNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMDetailedNewsViewController.h; sourceTree = "<group>"; };
+		2C8E49ED1BDF9C6500A9F8F9 /* BFMDetailedNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMDetailedNewsViewController.m; sourceTree = "<group>"; };
 		2C90DAD81BDE31CE005A2723 /* BFMNewsRecord+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMNewsRecord+Mapping.h"; path = "Classes/BFMNewsRecord+Mapping.h"; sourceTree = "<group>"; };
 		2C90DAD91BDE31CE005A2723 /* BFMNewsRecord+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMNewsRecord+Mapping.m"; path = "Classes/BFMNewsRecord+Mapping.m"; sourceTree = "<group>"; };
->>>>>>> Stashed changes
 		2CAD813F1BABCF4A00DEF6F3 /* BFMLeaderboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMLeaderboardViewController.h; sourceTree = "<group>"; };
 		2CAD81401BABCF4A00DEF6F3 /* BFMLeaderboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMLeaderboardViewController.m; sourceTree = "<group>"; };
 		2CAD81421BABD54400DEF6F3 /* BFMLeaderboardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMLeaderboardCell.h; path = Classes/UI/Cells/BFMLeaderboardCell.h; sourceTree = "<group>"; };
@@ -247,6 +270,8 @@
 		61B1DD481BB83BAC00DB6D23 /* MCSliceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSliceLayer.m; sourceTree = "<group>"; };
 		61B1DD491BB83BAC00DB6D23 /* MCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUtil.h; sourceTree = "<group>"; };
 		61B1DD4A1BB83BAC00DB6D23 /* MCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUtil.m; sourceTree = "<group>"; };
+		61BEFE331BDEF1E00030A05D /* BFMGoalsAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMGoalsAdapter.h; path = Classes/Screens/Profile/BFMGoalsAdapter.h; sourceTree = "<group>"; };
+		61BEFE341BDEF1E00030A05D /* BFMGoalsAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMGoalsAdapter.m; path = Classes/Screens/Profile/BFMGoalsAdapter.m; sourceTree = "<group>"; };
 		61C181EE1B98D62700D5FAC8 /* BFMSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMSessionManager.h; path = Networking/Manager/BFMSessionManager.h; sourceTree = "<group>"; };
 		61C181EF1B98D62700D5FAC8 /* BFMSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMSessionManager.m; path = Networking/Manager/BFMSessionManager.m; sourceTree = "<group>"; };
 		61C181F51B98DF7100D5FAC8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Resources/Localizable.strings; sourceTree = "<group>"; };
@@ -267,10 +292,16 @@
 		61C182071B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Semibold.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Semibold.otf"; sourceTree = "<group>"; };
 		61C182081B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Thin Italic.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Thin Italic.otf"; sourceTree = "<group>"; };
 		61C182091B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Thin.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Thin.otf"; sourceTree = "<group>"; };
-		61EC27E01BCA835A00DD3812 /* BFMShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMShopViewController.h; path = Classes/Screens/Shop/BFMShopViewController.h; sourceTree = "<group>"; };
-		61EC27E11BCA835A00DD3812 /* BFMShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMShopViewController.m; path = Classes/Screens/Shop/BFMShopViewController.m; sourceTree = "<group>"; };
-		61EC27E31BCA837100DD3812 /* BFMShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMShopModel.h; path = Classes/Screens/Shop/BFMShopModel.h; sourceTree = "<group>"; };
-		61EC27E41BCA837100DD3812 /* BFMShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMShopModel.m; path = Classes/Screens/Shop/BFMShopModel.m; sourceTree = "<group>"; };
+		61E477501BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMPointsRecord+CoreDataProperties.h"; path = "Classes/Models/Points Record/BFMPointsRecord+CoreDataProperties.h"; sourceTree = "<group>"; };
+		61E477511BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMPointsRecord+CoreDataProperties.m"; path = "Classes/Models/Points Record/BFMPointsRecord+CoreDataProperties.m"; sourceTree = "<group>"; };
+		61E477521BE66C9C00C2659D /* BFMPointsRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPointsRecord.h; path = "Classes/Models/Points Record/BFMPointsRecord.h"; sourceTree = "<group>"; };
+		61E477531BE66C9C00C2659D /* BFMPointsRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMPointsRecord.m; path = "Classes/Models/Points Record/BFMPointsRecord.m"; sourceTree = "<group>"; };
+		61E477581BE66F5300C2659D /* BFMPendingPointsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPendingPointsController.h; path = "Classes/Screens/Pending Points/BFMPendingPointsController.h"; sourceTree = "<group>"; };
+		61E477591BE66F5300C2659D /* BFMPendingPointsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMPendingPointsController.m; path = "Classes/Screens/Pending Points/BFMPendingPointsController.m"; sourceTree = "<group>"; };
+		61E4775B1BE66F8900C2659D /* BFMPendingPointsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPendingPointsModel.h; path = "Classes/Screens/Pending Points/BFMPendingPointsModel.h"; sourceTree = "<group>"; };
+		61E4775C1BE66F8900C2659D /* BFMPendingPointsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMPendingPointsModel.m; path = "Classes/Screens/Pending Points/BFMPendingPointsModel.m"; sourceTree = "<group>"; };
+		61E477611BE6CA4500C2659D /* BFMTransactionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMTransactionCell.h; path = Classes/UI/Cells/BFMTransactionCell.h; sourceTree = "<group>"; };
+		61E477621BE6CA4500C2659D /* BFMTransactionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMTransactionCell.m; path = Classes/UI/Cells/BFMTransactionCell.m; sourceTree = "<group>"; };
 		61EC27E61BCA858900DD3812 /* BFMPrize+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMPrize+CoreDataProperties.h"; path = "Classes/Models/Prize/BFMPrize+CoreDataProperties.h"; sourceTree = "<group>"; };
 		61EC27E71BCA858900DD3812 /* BFMPrize+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMPrize+CoreDataProperties.m"; path = "Classes/Models/Prize/BFMPrize+CoreDataProperties.m"; sourceTree = "<group>"; };
 		61EC27E81BCA858900DD3812 /* BFMPrize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPrize.h; path = Classes/Models/Prize/BFMPrize.h; sourceTree = "<group>"; };
@@ -331,6 +362,32 @@
 		61FD3D781BA8438500F4CEFB /* BFMProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMProfileViewController.m; path = Classes/Screens/Profile/BFMProfileViewController.m; sourceTree = "<group>"; };
 		9A2ED38684585DCC5C04EDB7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ED90EA9A0FFE50580AD1AD04 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F919C91C1BE7ECB70022CB02 /* BFMPendingTableAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPendingTableAdapter.h; sourceTree = "<group>"; };
+		F919C91D1BE7ECB70022CB02 /* BFMPendingTableAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPendingTableAdapter.m; sourceTree = "<group>"; };
+		F919C91F1BE806510022CB02 /* BFMPendingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPendingCell.h; sourceTree = "<group>"; };
+		F919C9201BE806510022CB02 /* BFMPendingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPendingCell.m; sourceTree = "<group>"; };
+		F919C9211BE806510022CB02 /* BFMPendingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMPendingCell.xib; sourceTree = "<group>"; };
+		F919C9241BE819360022CB02 /* BFMPendingDateHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPendingDateHeaderView.h; sourceTree = "<group>"; };
+		F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPendingDateHeaderView.m; sourceTree = "<group>"; };
+		F919C9271BE819650022CB02 /* BFMPendingDateHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMPendingDateHeaderView.xib; sourceTree = "<group>"; };
+		F919C92A1BE827300022CB02 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		F919C92B1BE827300022CB02 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		F96073E21BE723D800704692 /* BFMNewsTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMNewsTextCell.h; sourceTree = "<group>"; };
+		F96073E31BE723D800704692 /* BFMNewsTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMNewsTextCell.m; sourceTree = "<group>"; };
+		F96073E51BE7264200704692 /* BFMNewsTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMNewsTextCell.xib; sourceTree = "<group>"; };
+		F96073E71BE72D5000704692 /* BFMNewsActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMNewsActionCell.h; sourceTree = "<group>"; };
+		F96073E81BE72D5000704692 /* BFMNewsActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMNewsActionCell.m; sourceTree = "<group>"; };
+		F96073E91BE72D5000704692 /* BFMNewsActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMNewsActionCell.xib; sourceTree = "<group>"; };
+		F96073EC1BE72E9E00704692 /* BFMNewsSingleActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMNewsSingleActionCell.h; sourceTree = "<group>"; };
+		F96073ED1BE72E9E00704692 /* BFMNewsSingleActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMNewsSingleActionCell.m; sourceTree = "<group>"; };
+		F96073EE1BE72E9E00704692 /* BFMNewsSingleActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMNewsSingleActionCell.xib; sourceTree = "<group>"; };
+		F990969A1BE020CB00E1D629 /* BFMShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMShopModel.h; sourceTree = "<group>"; };
+		F990969B1BE020CB00E1D629 /* BFMShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMShopModel.m; sourceTree = "<group>"; };
+		F990969D1BE020CB00E1D629 /* BFMShopCollectionAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMShopCollectionAdapter.h; sourceTree = "<group>"; };
+		F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMShopCollectionAdapter.m; sourceTree = "<group>"; };
+		F99096A01BE020CB00E1D629 /* BFMShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMShopViewController.h; sourceTree = "<group>"; };
+		F99096A11BE020CB00E1D629 /* BFMShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMShopViewController.m; sourceTree = "<group>"; };
+		F99096A51BE0229F00E1D629 /* BFMShopConcreteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMShopConcreteCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,6 +497,7 @@
 		613AE76E1B9CC8B300300B22 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				F919C9291BE8271D0022CB02 /* NSDate-Utilities */,
 				61F042EF1BBB1F2D000037CF /* iCarousel */,
 				61B1DD3E1BB83BAC00DB6D23 /* CircledView */,
 				61FD3D371BA7096D00F4CEFB /* Objects Data Source */,
@@ -511,6 +569,8 @@
 				61F043061BBBF4B3000037CF /* BFMAccountCell.m */,
 				61EC27ED1BCA951700DD3812 /* BFMPrizeCell.h */,
 				61EC27EE1BCA951700DD3812 /* BFMPrizeCell.m */,
+				61E477611BE6CA4500C2659D /* BFMTransactionCell.h */,
+				61E477621BE6CA4500C2659D /* BFMTransactionCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -527,12 +587,13 @@
 		613C28B71BA33F9A00B2856A /* News */ = {
 			isa = PBXGroup;
 			children = (
+				F96073E11BE7239900704692 /* View */,
 				613C28B81BA33FB800B2856A /* BFMNewsViewController.h */,
 				613C28B91BA33FB800B2856A /* BFMNewsViewController.m */,
 				61FD3D731BA76AA200F4CEFB /* BFMNewsTableAdapter.h */,
 				61FD3D741BA76AA200F4CEFB /* BFMNewsTableAdapter.m */,
-				2C8E49EC1BDF9C6500A9F8F9 /* BFMDetailedNewsControllerViewController.h */,
-				2C8E49ED1BDF9C6500A9F8F9 /* BFMDetailedNewsControllerViewController.m */,
+				2C8E49EC1BDF9C6500A9F8F9 /* BFMDetailedNewsViewController.h */,
+				2C8E49ED1BDF9C6500A9F8F9 /* BFMDetailedNewsViewController.m */,
 			);
 			name = News;
 			sourceTree = "<group>";
@@ -657,6 +718,7 @@
 		619E2C011B977B9C00886893 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				61E477561BE66CA700C2659D /* Points Record */,
 				61EC27EC1BCA85B900DD3812 /* Prize */,
 				61903C211BAC0CC20018B3A0 /* Notifications */,
 				613C28BE1BA3416800B2856A /* News Model */,
@@ -670,6 +732,7 @@
 		619E2C021B977BA200886893 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				61E477571BE66F2300C2659D /* Pending Points */,
 				61EC27DF1BCA832E00DD3812 /* Shop */,
 				61903C251BAC0D7A0018B3A0 /* Notifications */,
 				2C4E7B0C1BAA374600682A56 /* Leaderboard */,
@@ -815,6 +878,15 @@
 			path = Lib/CircledView;
 			sourceTree = "<group>";
 		};
+		61BEFE321BDEF1BE0030A05D /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				61BEFE331BDEF1E00030A05D /* BFMGoalsAdapter.h */,
+				61BEFE341BDEF1E00030A05D /* BFMGoalsAdapter.m */,
+			);
+			name = Goals;
+			sourceTree = "<group>";
+		};
 		61C181EC1B98D58600D5FAC8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -851,13 +923,35 @@
 			name = User;
 			sourceTree = "<group>";
 		};
+		61E477561BE66CA700C2659D /* Points Record */ = {
+			isa = PBXGroup;
+			children = (
+				61E477501BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.h */,
+				61E477511BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.m */,
+				61E477521BE66C9C00C2659D /* BFMPointsRecord.h */,
+				61E477531BE66C9C00C2659D /* BFMPointsRecord.m */,
+			);
+			name = "Points Record";
+			sourceTree = "<group>";
+		};
+		61E477571BE66F2300C2659D /* Pending Points */ = {
+			isa = PBXGroup;
+			children = (
+				F919C9151BE7EB6B0022CB02 /* UI */,
+				61E477581BE66F5300C2659D /* BFMPendingPointsController.h */,
+				61E477591BE66F5300C2659D /* BFMPendingPointsController.m */,
+				61E4775B1BE66F8900C2659D /* BFMPendingPointsModel.h */,
+				61E4775C1BE66F8900C2659D /* BFMPendingPointsModel.m */,
+			);
+			name = "Pending Points";
+			sourceTree = "<group>";
+		};
 		61EC27DF1BCA832E00DD3812 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
-				61EC27E01BCA835A00DD3812 /* BFMShopViewController.h */,
-				61EC27E11BCA835A00DD3812 /* BFMShopViewController.m */,
-				61EC27E31BCA837100DD3812 /* BFMShopModel.h */,
-				61EC27E41BCA837100DD3812 /* BFMShopModel.m */,
+				F99096991BE020CB00E1D629 /* Model */,
+				F990969C1BE020CB00E1D629 /* View */,
+				F990969F1BE020CB00E1D629 /* ViewController */,
 			);
 			name = Shop;
 			sourceTree = "<group>";
@@ -987,6 +1081,7 @@
 		61FD3D761BA8426600F4CEFB /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				61BEFE321BDEF1BE0030A05D /* Goals */,
 				6135F3791BAF423700B29DE3 /* Benefits */,
 				61FD3D771BA8438500F4CEFB /* BFMProfileViewController.h */,
 				61FD3D781BA8438500F4CEFB /* BFMProfileViewController.m */,
@@ -1001,6 +1096,80 @@
 				1FDF264433FB8F41C107ADD8 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F919C9151BE7EB6B0022CB02 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F919C91C1BE7ECB70022CB02 /* BFMPendingTableAdapter.h */,
+				F919C91D1BE7ECB70022CB02 /* BFMPendingTableAdapter.m */,
+				F919C91F1BE806510022CB02 /* BFMPendingCell.h */,
+				F919C9201BE806510022CB02 /* BFMPendingCell.m */,
+				F919C9211BE806510022CB02 /* BFMPendingCell.xib */,
+				F919C9241BE819360022CB02 /* BFMPendingDateHeaderView.h */,
+				F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */,
+				F919C9271BE819650022CB02 /* BFMPendingDateHeaderView.xib */,
+			);
+			name = UI;
+			path = "Classes/Screens/Pending Points/UI";
+			sourceTree = "<group>";
+		};
+		F919C9291BE8271D0022CB02 /* NSDate-Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F919C92A1BE827300022CB02 /* NSDate+Utilities.h */,
+				F919C92B1BE827300022CB02 /* NSDate+Utilities.m */,
+			);
+			name = "NSDate-Utilities";
+			path = "Lib/NSDate-Utilities";
+			sourceTree = "<group>";
+		};
+		F96073E11BE7239900704692 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F96073E21BE723D800704692 /* BFMNewsTextCell.h */,
+				F96073E31BE723D800704692 /* BFMNewsTextCell.m */,
+				F96073E51BE7264200704692 /* BFMNewsTextCell.xib */,
+				F96073E71BE72D5000704692 /* BFMNewsActionCell.h */,
+				F96073E81BE72D5000704692 /* BFMNewsActionCell.m */,
+				F96073E91BE72D5000704692 /* BFMNewsActionCell.xib */,
+				F96073EC1BE72E9E00704692 /* BFMNewsSingleActionCell.h */,
+				F96073ED1BE72E9E00704692 /* BFMNewsSingleActionCell.m */,
+				F96073EE1BE72E9E00704692 /* BFMNewsSingleActionCell.xib */,
+			);
+			name = View;
+			path = Classes/Screens/News/View;
+			sourceTree = "<group>";
+		};
+		F99096991BE020CB00E1D629 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F990969A1BE020CB00E1D629 /* BFMShopModel.h */,
+				F990969B1BE020CB00E1D629 /* BFMShopModel.m */,
+			);
+			name = Model;
+			path = Classes/Screens/Shop/Model;
+			sourceTree = "<group>";
+		};
+		F990969C1BE020CB00E1D629 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F990969D1BE020CB00E1D629 /* BFMShopCollectionAdapter.h */,
+				F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */,
+				F99096A51BE0229F00E1D629 /* BFMShopConcreteCell.xib */,
+			);
+			name = View;
+			path = Classes/Screens/Shop/View;
+			sourceTree = "<group>";
+		};
+		F990969F1BE020CB00E1D629 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F99096A01BE020CB00E1D629 /* BFMShopViewController.h */,
+				F99096A11BE020CB00E1D629 /* BFMShopViewController.m */,
+			);
+			name = ViewController;
+			path = Classes/Screens/Shop/ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1094,10 +1263,14 @@
 				2CB1B8421B9CC37B00AC16D2 /* News.storyboard in Resources */,
 				61C182111B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Light.otf in Resources */,
 				619E2BEA1B97564A00886893 /* LaunchScreen.xib in Resources */,
+				F96073E61BE7264200704692 /* BFMNewsTextCell.xib in Resources */,
 				2CB1B8441B9CC37B00AC16D2 /* Profile.storyboard in Resources */,
+				F919C9281BE819650022CB02 /* BFMPendingDateHeaderView.xib in Resources */,
 				2CB1B8401B9CC37B00AC16D2 /* Dashboard.storyboard in Resources */,
 				61C181F61B98DF7100D5FAC8 /* Localizable.strings in Resources */,
+				F919C9231BE806510022CB02 /* BFMPendingCell.xib in Resources */,
 				619E2BE71B97564A00886893 /* Images.xcassets in Resources */,
+				F96073F01BE72E9E00704692 /* BFMNewsSingleActionCell.xib in Resources */,
 				61C182101B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Light Italic.otf in Resources */,
 				2CB1B8411B9CC37B00AC16D2 /* Leaderboard.storyboard in Resources */,
 				61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */,
@@ -1105,9 +1278,11 @@
 				61C182141B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold Italic.otf in Resources */,
 				6135F3811BAF466E00B29DE3 /* BFMBenefitsPageController.xib in Resources */,
 				61C182131B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Regular.otf in Resources */,
+				F99096A61BE0229F00E1D629 /* BFMShopConcreteCell.xib in Resources */,
 				61C182161B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */,
 				2CB1B8431B9CC37B00AC16D2 /* Notifications.storyboard in Resources */,
 				61C1820E1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold Italic.otf in Resources */,
+				F96073EB1BE72D5000704692 /* BFMNewsActionCell.xib in Resources */,
 				2CB1B8451B9CC37B00AC16D2 /* tabBar.storyboard in Resources */,
 				61C1820A1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black Italic.otf in Resources */,
 				61F042F71BBB2895000037CF /* earningsView.xib in Resources */,
@@ -1163,6 +1338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E477631BE6CA4500C2659D /* BFMTransactionCell.m in Sources */,
 				2CAD81411BABCF4A00DEF6F3 /* BFMLeaderboardViewController.m in Sources */,
 				61FD3CEE1BA7036700F4CEFB /* BFMNewsRecord.m in Sources */,
 				619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */,
@@ -1179,12 +1355,13 @@
 				613C28B61BA3321C00B2856A /* BFMDefaultNavagtionBarAppearance.m in Sources */,
 				61FD3D791BA8438500F4CEFB /* BFMProfileViewController.m in Sources */,
 				613AE7551B9B7A6800300B22 /* BFMUser+Extension.m in Sources */,
-				61EC27E21BCA835A00DD3812 /* BFMShopViewController.m in Sources */,
 				613AE7631B9B9EDF00300B22 /* BFMUser.m in Sources */,
 				2CAD81441BABD54400DEF6F3 /* BFMLeaderboardCell.m in Sources */,
 				613AE7661B9B9F7C00300B22 /* BFMAccount.m in Sources */,
 				619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */,
 				61B1DD4D1BB83BAC00DB6D23 /* MCPercentageDoughnutView.m in Sources */,
+				F919C91E1BE7ECB70022CB02 /* BFMPendingTableAdapter.m in Sources */,
+				F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */,
 				61FD3D661BA7096D00F4CEFB /* ODSTableAdapter.m in Sources */,
 				61F042F21BBB1F2D000037CF /* iCarousel.m in Sources */,
 				613AE7731B9CCC9600300B22 /* BFMAccount+Extension.m in Sources */,
@@ -1194,23 +1371,30 @@
 				613AE7721B9CC8CA00300B22 /* NINavigationAppearance.m in Sources */,
 				61B1DD4F1BB83BAC00DB6D23 /* MCUtil.m in Sources */,
 				61FD3D681BA7096D00F4CEFB /* ODSEvent.m in Sources */,
+				F99096A31BE020CB00E1D629 /* BFMShopCollectionAdapter.m in Sources */,
+				F96073E41BE723D800704692 /* BFMNewsTextCell.m in Sources */,
+				F919C92C1BE827300022CB02 /* NSDate+Utilities.m in Sources */,
 				6135F3861BAF4CE700B29DE3 /* BFMBenefitsAdaptor.m in Sources */,
 				613C28BA1BA33FB800B2856A /* BFMNewsViewController.m in Sources */,
+				61E4775A1BE66F5300C2659D /* BFMPendingPointsController.m in Sources */,
 				61B1DD4E1BB83BAC00DB6D23 /* MCSliceLayer.m in Sources */,
 				61FD3D701BA7096D00F4CEFB /* ODSDataSource.m in Sources */,
 				613AE7811B9CD04400300B22 /* ELAXIBAppearance.m in Sources */,
 				619F0F061BBC8E0900916B0B /* BFMCurrencyPickerDataSource.m in Sources */,
+				61E4775D1BE66F8900C2659D /* BFMPendingPointsModel.m in Sources */,
 				61EC27EB1BCA858900DD3812 /* BFMPrize.m in Sources */,
 				61FD3D361BA7094200F4CEFB /* JGActionSheet.m in Sources */,
 				614BC2441BB4B33D0060C8E8 /* BFMForgotPasswordController.m in Sources */,
 				61903C201BAC0CBB0018B3A0 /* BFMNotification.m in Sources */,
 				619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */,
+				F96073EF1BE72E9E00704692 /* BFMNewsSingleActionCell.m in Sources */,
 				61EC27EA1BCA858900DD3812 /* BFMPrize+CoreDataProperties.m in Sources */,
 				61FD3D6D1BA7096D00F4CEFB /* ODSArraySection.m in Sources */,
 				61FD3D6C1BA7096D00F4CEFB /* ODSFilteringSourceSearchController.m in Sources */,
+				F919C9261BE819360022CB02 /* BFMPendingDateHeaderView.m in Sources */,
 				61B1DD3A1BB6D97D00DB6D23 /* BFMBasePageController.m in Sources */,
-				61EC27E51BCA837100DD3812 /* BFMShopModel.m in Sources */,
 				61B1DD2F1BB6D41500DB6D23 /* BFMDashboardAdaptor.m in Sources */,
+				61E477541BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.m in Sources */,
 				613AE75A1B9B872C00300B22 /* BFMSysAccount.m in Sources */,
 				619E2BDC1B97564A00886893 /* main.m in Sources */,
 				613AE76D1B9C683800300B22 /* BFMLeaderboardModel.m in Sources */,
@@ -1218,10 +1402,13 @@
 				6135F37C1BAF425400B29DE3 /* BFMBenefitsController.m in Sources */,
 				61903C281BAC0D960018B3A0 /* BFMNotificationsController.m in Sources */,
 				61FD3D6A1BA7096D00F4CEFB /* ODSObjectChange.m in Sources */,
-				2C8E49EE1BDF9C6500A9F8F9 /* BFMDetailedNewsControllerViewController.m in Sources */,
+				F96073EA1BE72D5000704692 /* BFMNewsActionCell.m in Sources */,
+				2C8E49EE1BDF9C6500A9F8F9 /* BFMDetailedNewsViewController.m in Sources */,
 				61F043071BBBF4B3000037CF /* BFMAccountCell.m in Sources */,
 				61FD3D711BA7096D00F4CEFB /* ODSFetchedResultsDataSource.m in Sources */,
+				61BEFE351BDEF1E00030A05D /* BFMGoalsAdapter.m in Sources */,
 				61903C241BAC0CE70018B3A0 /* BFMNotificationsModel.m in Sources */,
+				F99096A41BE020CB00E1D629 /* BFMShopViewController.m in Sources */,
 				61FD3D6E1BA7096D00F4CEFB /* ODSFetchedResultsSection.m in Sources */,
 				2CAD81481BABDFF900DEF6F3 /* BFMLeaderboardRecord.m in Sources */,
 				613AE75D1B9B88B000300B22 /* BFMSysAccount+Extension.m in Sources */,
@@ -1232,11 +1419,13 @@
 				61FD3D641BA7096D00F4CEFB /* ODSAdapter.m in Sources */,
 				61FD3D671BA7096D00F4CEFB /* ODSBatchObjectChange.m in Sources */,
 				61B1DD361BB6D86E00DB6D23 /* BFMClientsPage.m in Sources */,
+				F99096A21BE020CB00E1D629 /* BFMShopModel.m in Sources */,
 				61B1DD4B1BB83BAC00DB6D23 /* MCNewCustomLayer.m in Sources */,
 				61EC27EF1BCA951700DD3812 /* BFMPrizeCell.m in Sources */,
 				61FD3D691BA7096D00F4CEFB /* ODSEventBroadcaster.m in Sources */,
 				61B1DD4C1BB83BAC00DB6D23 /* MCNewCustomLayeredView.m in Sources */,
 				613AE7801B9CD04400300B22 /* ELAAppearance.m in Sources */,
+				61E477551BE66C9C00C2659D /* BFMPointsRecord.m in Sources */,
 				613AE74E1B9B78CE00300B22 /* ebfmn.xcdatamodeld in Sources */,
 				619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */,
 				613C28C11BA3437700B2856A /* BFMNewsCell.m in Sources */,
@@ -1314,7 +1503,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "b8bf014c-80b0-4fd4-91ca-149e1d0758ad";
+				PROVISIONING_PROFILE = "95dce0b3-61c3-42c1-96f6-d1a43504cd99";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1352,7 +1541,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "b8bf014c-80b0-4fd4-91ca-149e1d0758ad";
+				PROVISIONING_PROFILE = "95dce0b3-61c3-42c1-96f6-d1a43504cd99";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1370,7 +1559,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebfmn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b8bf014c-80b0-4fd4-91ca-149e1d0758ad";
+				PROVISIONING_PROFILE = "95dce0b3-61c3-42c1-96f6-d1a43504cd99";
 			};
 			name = Debug;
 		};
@@ -1386,7 +1575,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebfmn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b8bf014c-80b0-4fd4-91ca-149e1d0758ad";
+				PROVISIONING_PROFILE = "95dce0b3-61c3-42c1-96f6-d1a43504cd99";
 			};
 			name = Release;
 		};
