@@ -24,7 +24,6 @@
 @interface BFMPendingPointsController ()
 
 @property (nonatomic, strong) BFMPendingPointsModel *model;
-@property (nonatomic, strong) ODSTableAdapter *adapter;
 @property (nonatomic, strong) BFMPendingTableAdapter *pendingAdapter;
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
@@ -76,7 +75,7 @@
                                                              subtitle:NSLocalizedString(@"points.badrequest", nil)];
             [banner show];
         } else {
-            [weakSelf.adapter.tableView reloadData];
+
         }
     }];
     
