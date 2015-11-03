@@ -84,7 +84,7 @@
                   moduleName = "eBFMN"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mikhailtimoscenko/Documents/Projects/eBFMN/eBFMN/eBFMN/Classes/Models/News%20Model/BFMNewsModel.m"
-                  timestampString = "468280463.892064"
+                  timestampString = "468281650.909384"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "55"
@@ -99,7 +99,7 @@
                   moduleName = "eBFMN"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mikhailtimoscenko/Documents/Projects/eBFMN/eBFMN/eBFMN/Classes/Models/News%20Model/BFMNewsModel.m"
-                  timestampString = "468280463.892378"
+                  timestampString = "468281650.909678"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "55"
@@ -195,22 +195,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eBFMN/Classes/Models/Points Record/BFMPointsRecord.m"
-            timestampString = "468273669.922132"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "+currentPendingBonusData:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "eBFMN/Classes/Screens/Pending Points/UI/BFMPendingTableAdapter.m"
             timestampString = "468275284.2598"
             startingColumnNumber = "9223372036854775807"
@@ -259,13 +243,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eBFMN/Classes/Screens/Dashboard/BFMEarningsPage.m"
-            timestampString = "468280404.35999"
+            filePath = "eBFMN/Classes/Models/Points Record/BFMPointsRecord.m"
+            timestampString = "468281481.301654"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "-reloadData"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "+pendingBonusDataHistoryFromDate:toDate:completition:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -275,13 +259,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eBFMN/Classes/Screens/Dashboard/BFMEarningsPage.m"
-            timestampString = "468280417.580787"
+            filePath = "eBFMN/Classes/Models/Points Record/BFMPointsRecord.m"
+            timestampString = "468281484.118758"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "-bindPrize:"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "+currentPendingBonusData:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -29,15 +29,32 @@
     self.pointsLabel.text = record.points.stringValue;
     self.lotsLabel.text = record.requiredLots.stringValue;
     
-    [self configureEnabled:(record.type.integerValue == 0)];
+    [self configureEnabledForType:[record.type intValue]];
+    [self configureIconForType:[record.type intValue]];
 }
 
 #pragma mark - Private
 
-- (void)configureEnabled:(BOOL)enabled {
+- (void)configureEnabledForType:(BFMTransactionType)type {
     for (UIView *view in self.enableViews) {
-        view.alpha = enabled ? 1.f : .35f;
+        view.alpha = (type == BFMTransactionTypeInProgress || type == BFMTransactionTypeNotStared) ? 1.f : .35f;
     }
+}
+
+- (void)configureIconForType:(BFMTransactionType)type {
+    UIImage *iconImage = [UIImage imageNamed:@"ic_processed"];
+    switch (type) {
+        case BFMTransactionTypeExpired:
+            iconImage = [UIImage imageNamed:@"ic_canceled"];
+            break;
+        case BFMTransactionTypeCompleted:
+            iconImage = [UIImage imageNamed:@"ic_finished"];
+            break;
+        default:
+            break;
+    }
+    
+    [self.imageView setImage:iconImage];
 }
 
 @end

@@ -81,7 +81,7 @@
     
     [mapping setPrimaryKey:@"identifier"];
     [mapping addAttributesFromDictionary:@{
-                                           @"type" : @"type",
+                                           @"type" : @"Type",
                                            @"points" : @"Points",
                                            @"deposit" : @"Deposit",
                                            @"requiredLots" : @"RequiredLots"
@@ -127,7 +127,7 @@
     [mapping setPrimaryKey:@"identifier"];
     [mapping addAttributesFromDictionary:@{
                                            @"identifier" : @"_id",
-                                           @"type" : @"type",
+                                           @"type" : @"Type",
                                            @"points" : @"Points",
                                            @"deposit" : @"Deposit",
                                            @"requiredLots" : @"RequiredLots"
