@@ -15,22 +15,34 @@
 
 @implementation BFMPointsRecord
 
-+ (void)pendingBonusDataHistory:(void (^)(NSArray * points, NSError * error))completition {
++ (void)pendingBonusDataHistoryFromDate:(NSDate *)dateFrom
+                                 toDate:(NSDate *)dateTo
+                           completition:(void (^)(NSArray * transactions, NSError * error))completition {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
     
     NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
     
+    NSInteger intervalTo = [dateTo timeIntervalSince1970];
+    NSInteger intervalFrom = [dateFrom timeIntervalSince1970];
+    
     [manager GET:@"Bonus/GetPendingBonusDataHistory"
       parameters:@{
                    @"guid" : sessionKey,
-                   @"from" : @(0),
-                   @"to" : [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]],
+                   @"from" : [NSNumber numberWithInteger:intervalFrom],
+                   @"to" : [NSNumber numberWithInteger:intervalTo],
                    @"countRowsTable" : @INT32_MAX,
                    @"page" : @(0)
                    }
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
              if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"]) {
                  completition(nil, [NSError new]);
+             } else {
+                 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+                 NSArray *transactions = [FEMDeserializer  collectionFromRepresentation:[responseObject valueForKey:@"Data"]
+                                                                                mapping:[BFMPointsRecord historyMapping]
+                                                                                context:context];
+                 [context MR_saveToPersistentStoreAndWait];
+                 completition(transactions, nil);
              }
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              completition(nil, error);
@@ -57,7 +69,6 @@
                                                                                 context:context];
                  [context MR_saveToPersistentStoreAndWait];
                  completition(transactions, nil);
-
              }
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              completition(nil, error);
@@ -70,13 +81,27 @@
     
     [mapping setPrimaryKey:@"identifier"];
     [mapping addAttributesFromDictionary:@{
-                                           @"identifier" : @"Id",
                                            @"type" : @"type",
                                            @"points" : @"Points",
                                            @"deposit" : @"Deposit",
                                            @"requiredLots" : @"RequiredLots"
                                            }
      ];
+    
+    FEMAttribute *keyAttribute = [[FEMAttribute alloc] initWithProperty:@"identifier"
+                                                                keyPath:@"Id"
+                                                                    map:^id(id value) {
+                                                                        if ([value isKindOfClass:[NSNumber class]]) {
+                                                                            return [(NSNumber *)value stringValue];
+                                                                        }
+                                                                        return nil;
+                                                                    } reverseMap:^id(id value) {
+                                                                        NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+                                                                        f.numberStyle = NSNumberFormatterNoStyle;
+                                                                        return [f numberFromString:value];
+                                                                    }];
+    
+    [mapping addAttribute:keyAttribute];
     
     FEMAttribute *attribute = [[FEMAttribute alloc] initWithProperty:@"expirationDate"
                                                              keyPath:@"ExpirationDate"
@@ -92,6 +117,37 @@
                                                                  }];
     [mapping addAttribute:attribute];
 
+    
+    return mapping;
+}
+
++ (FEMMapping *)historyMapping {
+    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"BFMPointsRecord"];
+    
+    [mapping setPrimaryKey:@"identifier"];
+    [mapping addAttributesFromDictionary:@{
+                                           @"identifier" : @"_id",
+                                           @"type" : @"type",
+                                           @"points" : @"Points",
+                                           @"deposit" : @"Deposit",
+                                           @"requiredLots" : @"RequiredLots"
+                                           }
+     ];
+    
+    FEMAttribute *attribute = [[FEMAttribute alloc] initWithProperty:@"expirationDate"
+                                                             keyPath:@"ExpirationDate"
+                                                                 map:^id(id value) {
+                                                                     if ([value isKindOfClass:[NSString class]]) {
+                                                                         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                                                                         [formatter setDateFormat:@"yyyy-MM-dd'T'hh:mm:ss.SSS'Z'"];
+                                                                         return [formatter dateFromString:value];
+                                                                     }
+                                                                     return nil;
+                                                                 } reverseMap:^id(id value) {
+                                                                     return [value stringValue];
+                                                                 }];
+    [mapping addAttribute:attribute];
+    
     
     return mapping;
 }

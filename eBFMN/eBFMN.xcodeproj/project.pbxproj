@@ -14,11 +14,7 @@
 		2CAD81441BABD54400DEF6F3 /* BFMLeaderboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD81431BABD54400DEF6F3 /* BFMLeaderboardCell.m */; };
 		2CAD81481BABDFF900DEF6F3 /* BFMLeaderboardRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD81471BABDFF900DEF6F3 /* BFMLeaderboardRecord.m */; };
 		2CAD814B1BABE6E000DEF6F3 /* BFMLeaderboardRecord+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD814A1BABE6E000DEF6F3 /* BFMLeaderboardRecord+Mapping.m */; };
-		2CB1B8401B9CC37B00AC16D2 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1B83A1B9CC37B00AC16D2 /* Dashboard.storyboard */; };
-		2CB1B8411B9CC37B00AC16D2 /* Leaderboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1B83B1B9CC37B00AC16D2 /* Leaderboard.storyboard */; };
-		2CB1B8421B9CC37B00AC16D2 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1B83C1B9CC37B00AC16D2 /* News.storyboard */; };
 		2CB1B8431B9CC37B00AC16D2 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1B83D1B9CC37B00AC16D2 /* Notifications.storyboard */; };
-		2CB1B8441B9CC37B00AC16D2 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1B83E1B9CC37B00AC16D2 /* Profile.storyboard */; };
 		2CB1B8451B9CC37B00AC16D2 /* tabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1B83F1B9CC37B00AC16D2 /* tabBar.storyboard */; };
 		2CF024EF1B9A409A009E8959 /* BFMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF024EE1B9A409A009E8959 /* BFMTabBarController.m */; };
 		2CF024F31B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF024F21B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m */; };
@@ -71,7 +67,6 @@
 		61C181F01B98D62700D5FAC8 /* BFMSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C181EF1B98D62700D5FAC8 /* BFMSessionManager.m */; };
 		61C181F61B98DF7100D5FAC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61C181F51B98DF7100D5FAC8 /* Localizable.strings */; };
 		61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C181F81B98E04F00D5FAC8 /* BFMLoginController.m */; };
-		61C181FB1B98E06200D5FAC8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C181FA1B98E06200D5FAC8 /* Login.storyboard */; };
 		61C1820A1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C181FC1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black Italic.otf */; };
 		61C1820B1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C181FD1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black.otf */; };
 		61C1820C1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C181FE1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Bold Italic.otf */; };
@@ -91,6 +86,11 @@
 		61E4775A1BE66F5300C2659D /* BFMPendingPointsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E477591BE66F5300C2659D /* BFMPendingPointsController.m */; };
 		61E4775D1BE66F8900C2659D /* BFMPendingPointsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E4775C1BE66F8900C2659D /* BFMPendingPointsModel.m */; };
 		61E477631BE6CA4500C2659D /* BFMTransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E477621BE6CA4500C2659D /* BFMTransactionCell.m */; };
+		61E477641BE8EF2D00C2659D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E477661BE8EF2D00C2659D /* Login.storyboard */; };
+		61E477671BE8EF3300C2659D /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E477691BE8EF3300C2659D /* Dashboard.storyboard */; };
+		61E4776A1BE8EF3A00C2659D /* Leaderboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E4776C1BE8EF3A00C2659D /* Leaderboard.storyboard */; };
+		61E4776D1BE8EF3E00C2659D /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E4776F1BE8EF3E00C2659D /* News.storyboard */; };
+		61E477701BE8EF4200C2659D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E477721BE8EF4200C2659D /* Profile.storyboard */; };
 		61EC27EA1BCA858900DD3812 /* BFMPrize+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E71BCA858900DD3812 /* BFMPrize+CoreDataProperties.m */; };
 		61EC27EB1BCA858900DD3812 /* BFMPrize.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E91BCA858900DD3812 /* BFMPrize.m */; };
 		61EC27EF1BCA951700DD3812 /* BFMPrizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27EE1BCA951700DD3812 /* BFMPrizeCell.m */; };
@@ -118,18 +118,18 @@
 		61FD3D751BA76AA200F4CEFB /* BFMNewsTableAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D741BA76AA200F4CEFB /* BFMNewsTableAdapter.m */; };
 		61FD3D791BA8438500F4CEFB /* BFMProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D781BA8438500F4CEFB /* BFMProfileViewController.m */; };
 		7017DF46620972E10C2C25AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDF264433FB8F41C107ADD8 /* libPods.a */; };
-		F919C91E1BE7ECB70022CB02 /* BFMPendingTableAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C91D1BE7ECB70022CB02 /* BFMPendingTableAdapter.m */; settings = {ASSET_TAGS = (); }; };
-		F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9201BE806510022CB02 /* BFMPendingCell.m */; settings = {ASSET_TAGS = (); }; };
-		F919C9231BE806510022CB02 /* BFMPendingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F919C9211BE806510022CB02 /* BFMPendingCell.xib */; settings = {ASSET_TAGS = (); }; };
-		F919C9261BE819360022CB02 /* BFMPendingDateHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */; settings = {ASSET_TAGS = (); }; };
-		F919C9281BE819650022CB02 /* BFMPendingDateHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F919C9271BE819650022CB02 /* BFMPendingDateHeaderView.xib */; settings = {ASSET_TAGS = (); }; };
-		F919C92C1BE827300022CB02 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C92B1BE827300022CB02 /* NSDate+Utilities.m */; settings = {ASSET_TAGS = (); }; };
-		F96073E41BE723D800704692 /* BFMNewsTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E31BE723D800704692 /* BFMNewsTextCell.m */; settings = {ASSET_TAGS = (); }; };
-		F96073E61BE7264200704692 /* BFMNewsTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E51BE7264200704692 /* BFMNewsTextCell.xib */; settings = {ASSET_TAGS = (); }; };
-		F96073EA1BE72D5000704692 /* BFMNewsActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E81BE72D5000704692 /* BFMNewsActionCell.m */; settings = {ASSET_TAGS = (); }; };
-		F96073EB1BE72D5000704692 /* BFMNewsActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E91BE72D5000704692 /* BFMNewsActionCell.xib */; settings = {ASSET_TAGS = (); }; };
-		F96073EF1BE72E9E00704692 /* BFMNewsSingleActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073ED1BE72E9E00704692 /* BFMNewsSingleActionCell.m */; settings = {ASSET_TAGS = (); }; };
-		F96073F01BE72E9E00704692 /* BFMNewsSingleActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073EE1BE72E9E00704692 /* BFMNewsSingleActionCell.xib */; settings = {ASSET_TAGS = (); }; };
+		F919C91E1BE7ECB70022CB02 /* BFMPendingTableAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C91D1BE7ECB70022CB02 /* BFMPendingTableAdapter.m */; };
+		F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9201BE806510022CB02 /* BFMPendingCell.m */; };
+		F919C9231BE806510022CB02 /* BFMPendingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F919C9211BE806510022CB02 /* BFMPendingCell.xib */; };
+		F919C9261BE819360022CB02 /* BFMPendingDateHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */; };
+		F919C9281BE819650022CB02 /* BFMPendingDateHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F919C9271BE819650022CB02 /* BFMPendingDateHeaderView.xib */; };
+		F919C92C1BE827300022CB02 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C92B1BE827300022CB02 /* NSDate+Utilities.m */; };
+		F96073E41BE723D800704692 /* BFMNewsTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E31BE723D800704692 /* BFMNewsTextCell.m */; };
+		F96073E61BE7264200704692 /* BFMNewsTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E51BE7264200704692 /* BFMNewsTextCell.xib */; };
+		F96073EA1BE72D5000704692 /* BFMNewsActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E81BE72D5000704692 /* BFMNewsActionCell.m */; };
+		F96073EB1BE72D5000704692 /* BFMNewsActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E91BE72D5000704692 /* BFMNewsActionCell.xib */; };
+		F96073EF1BE72E9E00704692 /* BFMNewsSingleActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073ED1BE72E9E00704692 /* BFMNewsSingleActionCell.m */; };
+		F96073F01BE72E9E00704692 /* BFMNewsSingleActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073EE1BE72E9E00704692 /* BFMNewsSingleActionCell.xib */; };
 		F99096A21BE020CB00E1D629 /* BFMShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969B1BE020CB00E1D629 /* BFMShopModel.m */; };
 		F99096A31BE020CB00E1D629 /* BFMShopCollectionAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */; };
 		F99096A41BE020CB00E1D629 /* BFMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99096A11BE020CB00E1D629 /* BFMShopViewController.m */; };
@@ -162,11 +162,7 @@
 		2CAD81471BABDFF900DEF6F3 /* BFMLeaderboardRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMLeaderboardRecord.m; path = Classes/Models/Leaderboard/BFMLeaderboardRecord.m; sourceTree = "<group>"; };
 		2CAD81491BABE6E000DEF6F3 /* BFMLeaderboardRecord+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMLeaderboardRecord+Mapping.h"; path = "Classes/Models/Leaderboard/BFMLeaderboardRecord+Mapping.h"; sourceTree = "<group>"; };
 		2CAD814A1BABE6E000DEF6F3 /* BFMLeaderboardRecord+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMLeaderboardRecord+Mapping.m"; path = "Classes/Models/Leaderboard/BFMLeaderboardRecord+Mapping.m"; sourceTree = "<group>"; };
-		2CB1B83A1B9CC37B00AC16D2 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Dashboard.storyboard; path = Resources/Storyboards/Dashboard.storyboard; sourceTree = "<group>"; };
-		2CB1B83B1B9CC37B00AC16D2 /* Leaderboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Leaderboard.storyboard; path = Resources/Storyboards/Leaderboard.storyboard; sourceTree = "<group>"; };
-		2CB1B83C1B9CC37B00AC16D2 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = News.storyboard; path = Resources/Storyboards/News.storyboard; sourceTree = "<group>"; };
 		2CB1B83D1B9CC37B00AC16D2 /* Notifications.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Notifications.storyboard; path = Resources/Storyboards/Notifications.storyboard; sourceTree = "<group>"; };
-		2CB1B83E1B9CC37B00AC16D2 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Resources/Storyboards/Profile.storyboard; sourceTree = "<group>"; };
 		2CB1B83F1B9CC37B00AC16D2 /* tabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = tabBar.storyboard; path = Resources/Storyboards/tabBar.storyboard; sourceTree = "<group>"; };
 		2CF024ED1B9A409A009E8959 /* BFMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMTabBarController.h; sourceTree = "<group>"; };
 		2CF024EE1B9A409A009E8959 /* BFMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMTabBarController.m; sourceTree = "<group>"; };
@@ -268,7 +264,6 @@
 		61C181F51B98DF7100D5FAC8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Resources/Localizable.strings; sourceTree = "<group>"; };
 		61C181F71B98E04F00D5FAC8 /* BFMLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMLoginController.h; path = "Classes/Screens/Login Controller/BFMLoginController.h"; sourceTree = "<group>"; };
 		61C181F81B98E04F00D5FAC8 /* BFMLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMLoginController.m; path = "Classes/Screens/Login Controller/BFMLoginController.m"; sourceTree = "<group>"; };
-		61C181FA1B98E06200D5FAC8 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Resources/Storyboards/Login.storyboard; sourceTree = "<group>"; };
 		61C181FC1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Black Italic.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Black Italic.otf"; sourceTree = "<group>"; };
 		61C181FD1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Black.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Black.otf"; sourceTree = "<group>"; };
 		61C181FE1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Bold Italic.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Bold Italic.otf"; sourceTree = "<group>"; };
@@ -293,6 +288,11 @@
 		61E4775C1BE66F8900C2659D /* BFMPendingPointsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMPendingPointsModel.m; path = "Classes/Screens/Pending Points/BFMPendingPointsModel.m"; sourceTree = "<group>"; };
 		61E477611BE6CA4500C2659D /* BFMTransactionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMTransactionCell.h; path = Classes/UI/Cells/BFMTransactionCell.h; sourceTree = "<group>"; };
 		61E477621BE6CA4500C2659D /* BFMTransactionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMTransactionCell.m; path = Classes/UI/Cells/BFMTransactionCell.m; sourceTree = "<group>"; };
+		61E477651BE8EF2D00C2659D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		61E477681BE8EF3300C2659D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Dashboard.storyboard; sourceTree = "<group>"; };
+		61E4776B1BE8EF3A00C2659D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Leaderboard.storyboard; sourceTree = "<group>"; };
+		61E4776E1BE8EF3E00C2659D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/News.storyboard; sourceTree = "<group>"; };
+		61E477711BE8EF4200C2659D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		61EC27E61BCA858900DD3812 /* BFMPrize+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMPrize+CoreDataProperties.h"; path = "Classes/Models/Prize/BFMPrize+CoreDataProperties.h"; sourceTree = "<group>"; };
 		61EC27E71BCA858900DD3812 /* BFMPrize+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMPrize+CoreDataProperties.m"; path = "Classes/Models/Prize/BFMPrize+CoreDataProperties.m"; sourceTree = "<group>"; };
 		61EC27E81BCA858900DD3812 /* BFMPrize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPrize.h; path = Classes/Models/Prize/BFMPrize.h; sourceTree = "<group>"; };
@@ -750,12 +750,12 @@
 		619E2C041B977BDD00886893 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				61C181FA1B98E06200D5FAC8 /* Login.storyboard */,
-				2CB1B83A1B9CC37B00AC16D2 /* Dashboard.storyboard */,
-				2CB1B83B1B9CC37B00AC16D2 /* Leaderboard.storyboard */,
-				2CB1B83C1B9CC37B00AC16D2 /* News.storyboard */,
+				61E477661BE8EF2D00C2659D /* Login.storyboard */,
+				61E477691BE8EF3300C2659D /* Dashboard.storyboard */,
+				61E4776C1BE8EF3A00C2659D /* Leaderboard.storyboard */,
+				61E4776F1BE8EF3E00C2659D /* News.storyboard */,
 				2CB1B83D1B9CC37B00AC16D2 /* Notifications.storyboard */,
-				2CB1B83E1B9CC37B00AC16D2 /* Profile.storyboard */,
+				61E477721BE8EF4200C2659D /* Profile.storyboard */,
 				2CB1B83F1B9CC37B00AC16D2 /* tabBar.storyboard */,
 			);
 			name = Storyboards;
@@ -1250,20 +1250,20 @@
 				61C1820C1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Bold Italic.otf in Resources */,
 				61C182151B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold.otf in Resources */,
 				61C1820B1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black.otf in Resources */,
-				61C181FB1B98E06200D5FAC8 /* Login.storyboard in Resources */,
-				2CB1B8421B9CC37B00AC16D2 /* News.storyboard in Resources */,
+				61E477641BE8EF2D00C2659D /* Login.storyboard in Resources */,
+				61E4776D1BE8EF3E00C2659D /* News.storyboard in Resources */,
 				61C182111B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Light.otf in Resources */,
 				619E2BEA1B97564A00886893 /* LaunchScreen.xib in Resources */,
 				F96073E61BE7264200704692 /* BFMNewsTextCell.xib in Resources */,
-				2CB1B8441B9CC37B00AC16D2 /* Profile.storyboard in Resources */,
+				61E477701BE8EF4200C2659D /* Profile.storyboard in Resources */,
 				F919C9281BE819650022CB02 /* BFMPendingDateHeaderView.xib in Resources */,
-				2CB1B8401B9CC37B00AC16D2 /* Dashboard.storyboard in Resources */,
+				61E477671BE8EF3300C2659D /* Dashboard.storyboard in Resources */,
 				61C181F61B98DF7100D5FAC8 /* Localizable.strings in Resources */,
 				F919C9231BE806510022CB02 /* BFMPendingCell.xib in Resources */,
 				619E2BE71B97564A00886893 /* Images.xcassets in Resources */,
 				F96073F01BE72E9E00704692 /* BFMNewsSingleActionCell.xib in Resources */,
 				61C182101B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Light Italic.otf in Resources */,
-				2CB1B8411B9CC37B00AC16D2 /* Leaderboard.storyboard in Resources */,
+				61E4776A1BE8EF3A00C2659D /* Leaderboard.storyboard in Resources */,
 				61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */,
 				61C1820F1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold.otf in Resources */,
 				61C182141B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold Italic.otf in Resources */,
@@ -1449,6 +1449,51 @@
 				619E2BE91B97564A00886893 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		61E477661BE8EF2D00C2659D /* Login.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61E477651BE8EF2D00C2659D /* Base */,
+			);
+			name = Login.storyboard;
+			path = Resources/Storyboards;
+			sourceTree = "<group>";
+		};
+		61E477691BE8EF3300C2659D /* Dashboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61E477681BE8EF3300C2659D /* Base */,
+			);
+			name = Dashboard.storyboard;
+			path = Resources/Storyboards;
+			sourceTree = "<group>";
+		};
+		61E4776C1BE8EF3A00C2659D /* Leaderboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61E4776B1BE8EF3A00C2659D /* Base */,
+			);
+			name = Leaderboard.storyboard;
+			path = Resources/Storyboards;
+			sourceTree = "<group>";
+		};
+		61E4776F1BE8EF3E00C2659D /* News.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61E4776E1BE8EF3E00C2659D /* Base */,
+			);
+			name = News.storyboard;
+			path = Resources/Storyboards;
+			sourceTree = "<group>";
+		};
+		61E477721BE8EF4200C2659D /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61E477711BE8EF4200C2659D /* Base */,
+			);
+			name = Profile.storyboard;
+			path = Resources/Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

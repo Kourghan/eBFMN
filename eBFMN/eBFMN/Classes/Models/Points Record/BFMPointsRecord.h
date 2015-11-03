@@ -23,9 +23,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BFMPointsRecord : NSManagedObject
 
 + (void)currentPendingBonusData:(void (^)(NSArray *points, NSError *error))completition;
-+ (void)pendingBonusDataHistory:(void (^)(NSArray *points, NSError *error))completition;
++ (void)pendingBonusDataHistoryFromDate:(NSDate *)dateFrom
+                                 toDate:(NSDate *)dateTo
+                           completition:(void (^)(NSArray *points, NSError *error))completition;
 
 + (FEMMapping *)defaultMapping;
++ (FEMMapping *)historyMapping;
 - (NSDate *)dayStartDate;
 
 @end

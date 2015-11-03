@@ -45,6 +45,9 @@
 
 "points.badrequest" = "Cannot load pending points list.";
 "points.title" = "PENDING POINTS";
+"points.deposit" = "Deposit";
+"points.lots" = "Required Lots";
+"points.points" = "Points";
 
 // Prizes
 

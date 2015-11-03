@@ -12,10 +12,23 @@
 #import "ODSFetchedResultsDataSource.h"
 #import <MagicalRecord/MagicalRecord.h>
 
+@interface BFMPendingPointsModel ()
+
+@property (nonatomic, strong) NSDate *dateFrom;
+@property (nonatomic, strong) NSDate *dateTo;
+
+@property (nonatomic) BOOL allLoaded;
+
+@end
+
 @implementation BFMPendingPointsModel
 
 - (instancetype)init {
     if (self = [super init]) {
+        
+        _allLoaded = NO;
+        
+        
         NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
         
         NSFetchRequest *request = [BFMPointsRecord MR_requestAllSortedBy:@"identifier"
@@ -39,19 +52,35 @@
 }
 
 - (void)loadDataWithCallback:(void (^)(NSError *))callback {
-    [BFMPointsRecord currentPendingBonusData:^(NSArray *points, NSError *error) {
-        if (!error) {
-            [BFMPointsRecord pendingBonusDataHistory:^(NSArray *points, NSError *error) {
-                if (!error) {
-                    callback(nil);
-                } else {
-                    callback(error);
-                }
-            }];
+    if (self.allLoaded) {
+        callback(nil);
+    } else {
+        __weak typeof(self) weakSelf = self;
+        if (self.dateFrom && self.dateTo) {
+            self.dateTo = [_dateFrom copy];
         } else {
-            callback(error);
+            self.dateTo = [NSDate date];
         }
-    }];
+        self.dateFrom = [_dateTo dateByAddingTimeInterval:-(60 * 60 * 24 * 60)];
+        [BFMPointsRecord currentPendingBonusData:^(NSArray *points, NSError *error) {
+            if (!error) {
+                [BFMPointsRecord pendingBonusDataHistoryFromDate:weakSelf.dateFrom
+                                                          toDate:weakSelf.dateTo
+                                                    completition:^(NSArray *points, NSError *error) {
+                                                        if (!error) {
+                                                            if ([points count] == 0) {
+                                                                weakSelf.allLoaded = TRUE;
+                                                            }
+                                                            callback(nil);
+                                                        } else {
+                                                            callback(error);
+                                                        }
+                                                    }];
+            } else {
+                callback(error);
+            }
+        }];
+    }
 }
 
 @end
