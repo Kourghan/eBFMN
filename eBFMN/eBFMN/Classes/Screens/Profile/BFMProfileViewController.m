@@ -12,6 +12,7 @@
 #import "BFMDefaultNavagtionBarAppearance.h"
 
 #import "BFMUser+Extension.h"
+#import "BFMPointsRecord.h"
 #import "JNKeychain+UNTExtension.h"
 #import "BFMBenefitsController.h"
 
@@ -102,6 +103,11 @@
     NSArray *users = [BFMUser MR_findAll];
     for (BFMUser *user in users) {
         [user MR_deleteEntityInContext:context];
+    }
+    
+    NSArray *points = [BFMPointsRecord MR_findAll];
+    for (BFMPointsRecord *record in points) {
+        [record MR_deleteEntityInContext:context];
     }
     
     [context MR_saveToPersistentStoreAndWait];
