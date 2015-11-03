@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Mark Simonson - Proxima Nova Bold.otf">
@@ -840,39 +841,61 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHf-gY-b3H">
-                                                    <rect key="frame" x="0.0" y="50.5" width="600" height="2"/>
+                                                    <rect key="frame" x="0.0" y="51" width="600" height="2"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="2" id="1pa-92-Xt2"/>
                                                     </constraints>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_processed" translatesAutoresizingMaskIntoConstraints="NO" id="eMz-ZV-fYE">
-                                                    <rect key="frame" x="22" y="18.5" width="17" height="17"/>
+                                                    <rect key="frame" x="22" y="18" width="17" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="3WY-T5-Wo2"/>
                                                         <constraint firstAttribute="width" constant="17" id="zWE-Zw-2Im"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Deposit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-eK-xIQ">
-                                                    <rect key="frame" x="78" y="8" width="295" height="11"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deposit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-eK-xIQ">
+                                                    <rect key="frame" x="78" y="8" width="31" height="11"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="9"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Required Lots" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmd-eI-3a2">
-                                                    <rect key="frame" x="537.5" y="8" width="54.5" height="11"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Required Lots" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmd-eI-3a2">
+                                                    <rect key="frame" x="273" y="8" width="54.5" height="11"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="9"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aI-ki-iJ4">
-                                                    <rect key="frame" x="443" y="8" width="24.5" height="11"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aI-ki-iJ4">
+                                                    <rect key="frame" x="179" y="8" width="24.5" height="11"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="9"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9a-xb-UeZ">
+                                                    <rect key="frame" x="39" y="2" width="561" height="49.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWJ-3x-4RW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="195.5" height="49.5"/>
+                                                            <color key="backgroundColor" red="0.031372549020000001" green="0.27058823529999998" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qv7-Sg-Dtw">
+                                                            <rect key="frame" x="193" y="0.0" width="215" height="49.5"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.81568627449999997" green="0.2156862745" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="iWJ-3x-4RW" firstAttribute="leading" secondItem="K9a-xb-UeZ" secondAttribute="leading" id="11g-8d-aNZ"/>
+                                                        <constraint firstItem="iWJ-3x-4RW" firstAttribute="width" secondItem="K9a-xb-UeZ" secondAttribute="width" multiplier="100:287" id="cqu-GU-vhP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="iWJ-3x-4RW" secondAttribute="bottom" id="dDG-3V-oAV"/>
+                                                        <constraint firstItem="iWJ-3x-4RW" firstAttribute="top" secondItem="K9a-xb-UeZ" secondAttribute="top" id="h7Y-KC-tOO"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="K9a-xb-UeZ" firstAttribute="top" secondItem="s5w-Cj-T2g" secondAttribute="bottom" id="18r-kL-VTK"/>
+                                                <constraint firstItem="K9a-xb-UeZ" firstAttribute="leading" secondItem="eMz-ZV-fYE" secondAttribute="trailing" id="4sT-pG-Usg"/>
                                                 <constraint firstItem="2aI-ki-iJ4" firstAttribute="leading" secondItem="ILB-eK-xIQ" secondAttribute="trailing" priority="750" constant="70" id="5VD-sO-Mhj"/>
                                                 <constraint firstItem="eMz-ZV-fYE" firstAttribute="leading" secondItem="acH-qv-vZE" secondAttribute="leading" constant="22" id="7jF-Ob-aMR"/>
                                                 <constraint firstAttribute="trailing" secondItem="s5w-Cj-T2g" secondAttribute="trailing" id="8zd-J7-i2M"/>
@@ -884,10 +907,12 @@
                                                 <constraint firstItem="s5w-Cj-T2g" firstAttribute="top" secondItem="acH-qv-vZE" secondAttribute="top" id="S87-Bb-oya"/>
                                                 <constraint firstItem="ILB-eK-xIQ" firstAttribute="leading" secondItem="eMz-ZV-fYE" secondAttribute="trailing" constant="39" id="Vqd-3n-ra1"/>
                                                 <constraint firstItem="s5w-Cj-T2g" firstAttribute="leading" secondItem="acH-qv-vZE" secondAttribute="leading" id="abM-gu-Fu3"/>
+                                                <constraint firstItem="bHf-gY-b3H" firstAttribute="top" secondItem="K9a-xb-UeZ" secondAttribute="bottom" id="fWw-lJ-BX1"/>
                                                 <constraint firstItem="lmd-eI-3a2" firstAttribute="leading" secondItem="2aI-ki-iJ4" secondAttribute="trailing" priority="750" constant="70" id="hCF-Bz-F4y"/>
                                                 <constraint firstItem="bHf-gY-b3H" firstAttribute="leading" secondItem="acH-qv-vZE" secondAttribute="leading" id="hX0-2s-rma"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lmd-eI-3a2" secondAttribute="trailing" constant="8" id="hv8-zs-GP7"/>
                                                 <constraint firstAttribute="trailing" secondItem="bHf-gY-b3H" secondAttribute="trailing" id="sEe-XO-QaQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="K9a-xb-UeZ" secondAttribute="trailing" id="sUQ-pT-SgM"/>
                                                 <constraint firstAttribute="bottom" secondItem="bHf-gY-b3H" secondAttribute="bottom" id="vNS-de-UGz"/>
                                             </constraints>
                                             <variation key="default">
