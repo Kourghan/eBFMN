@@ -40,6 +40,11 @@
 		613C28BD1BA3415C00B2856A /* BFMNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28BC1BA3415C00B2856A /* BFMNewsModel.m */; };
 		613C28C11BA3437700B2856A /* BFMNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28C01BA3437700B2856A /* BFMNewsCell.m */; };
 		614BC2441BB4B33D0060C8E8 /* BFMForgotPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614BC2431BB4B33D0060C8E8 /* BFMForgotPasswordController.m */; };
+		6189D8401BEA2288009880B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6189D8421BEA2288009880B1 /* Localizable.strings */; };
+		6189D8441BEA2346009880B1 /* BFMPendingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6189D8461BEA2346009880B1 /* BFMPendingCell.xib */; };
+		6189D8481BEA2352009880B1 /* BFMPendingDateHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6189D84A1BEA2352009880B1 /* BFMPendingDateHeaderView.xib */; };
+		6189D84D1BEA235E009880B1 /* BFMShopConcreteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6189D84F1BEA235E009880B1 /* BFMShopConcreteCell.xib */; };
+		6189D8521BEA2370009880B1 /* BFMNewsTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6189D8541BEA2370009880B1 /* BFMNewsTextCell.xib */; };
 		61903C201BAC0CBB0018B3A0 /* BFMNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C1F1BAC0CBB0018B3A0 /* BFMNotification.m */; };
 		61903C241BAC0CE70018B3A0 /* BFMNotificationsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C231BAC0CE70018B3A0 /* BFMNotificationsModel.m */; };
 		61903C281BAC0D960018B3A0 /* BFMNotificationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C271BAC0D960018B3A0 /* BFMNotificationsController.m */; };
@@ -65,7 +70,6 @@
 		61B1DD4F1BB83BAC00DB6D23 /* MCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DD4A1BB83BAC00DB6D23 /* MCUtil.m */; };
 		61BEFE351BDEF1E00030A05D /* BFMGoalsAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BEFE341BDEF1E00030A05D /* BFMGoalsAdapter.m */; };
 		61C181F01B98D62700D5FAC8 /* BFMSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C181EF1B98D62700D5FAC8 /* BFMSessionManager.m */; };
-		61C181F61B98DF7100D5FAC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61C181F51B98DF7100D5FAC8 /* Localizable.strings */; };
 		61C181F91B98E04F00D5FAC8 /* BFMLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C181F81B98E04F00D5FAC8 /* BFMLoginController.m */; };
 		61C1820A1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C181FC1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black Italic.otf */; };
 		61C1820B1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C181FD1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black.otf */; };
@@ -120,12 +124,9 @@
 		7017DF46620972E10C2C25AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDF264433FB8F41C107ADD8 /* libPods.a */; };
 		F919C91E1BE7ECB70022CB02 /* BFMPendingTableAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C91D1BE7ECB70022CB02 /* BFMPendingTableAdapter.m */; };
 		F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9201BE806510022CB02 /* BFMPendingCell.m */; };
-		F919C9231BE806510022CB02 /* BFMPendingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F919C9211BE806510022CB02 /* BFMPendingCell.xib */; };
 		F919C9261BE819360022CB02 /* BFMPendingDateHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */; };
-		F919C9281BE819650022CB02 /* BFMPendingDateHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F919C9271BE819650022CB02 /* BFMPendingDateHeaderView.xib */; };
 		F919C92C1BE827300022CB02 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C92B1BE827300022CB02 /* NSDate+Utilities.m */; };
 		F96073E41BE723D800704692 /* BFMNewsTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E31BE723D800704692 /* BFMNewsTextCell.m */; };
-		F96073E61BE7264200704692 /* BFMNewsTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E51BE7264200704692 /* BFMNewsTextCell.xib */; };
 		F96073EA1BE72D5000704692 /* BFMNewsActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E81BE72D5000704692 /* BFMNewsActionCell.m */; };
 		F96073EB1BE72D5000704692 /* BFMNewsActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E91BE72D5000704692 /* BFMNewsActionCell.xib */; };
 		F96073EF1BE72E9E00704692 /* BFMNewsSingleActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073ED1BE72E9E00704692 /* BFMNewsSingleActionCell.m */; };
@@ -133,7 +134,6 @@
 		F99096A21BE020CB00E1D629 /* BFMShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969B1BE020CB00E1D629 /* BFMShopModel.m */; };
 		F99096A31BE020CB00E1D629 /* BFMShopCollectionAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */; };
 		F99096A41BE020CB00E1D629 /* BFMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99096A11BE020CB00E1D629 /* BFMShopViewController.m */; };
-		F99096A61BE0229F00E1D629 /* BFMShopConcreteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F99096A51BE0229F00E1D629 /* BFMShopConcreteCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +209,22 @@
 		613C28C01BA3437700B2856A /* BFMNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNewsCell.m; path = Classes/UI/Cells/BFMNewsCell.m; sourceTree = "<group>"; };
 		614BC2421BB4B33D0060C8E8 /* BFMForgotPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMForgotPasswordController.h; path = "Classes/Screens/Login Controller/BFMForgotPasswordController.h"; sourceTree = "<group>"; };
 		614BC2431BB4B33D0060C8E8 /* BFMForgotPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMForgotPasswordController.m; path = "Classes/Screens/Login Controller/BFMForgotPasswordController.m"; sourceTree = "<group>"; };
+		6189D83A1BEA221B009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Login.strings"; sourceTree = "<group>"; };
+		6189D83B1BEA221B009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Dashboard.strings"; sourceTree = "<group>"; };
+		6189D83C1BEA221B009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Leaderboard.strings"; sourceTree = "<group>"; };
+		6189D83D1BEA221B009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/News.strings"; sourceTree = "<group>"; };
+		6189D83E1BEA221B009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Profile.strings"; sourceTree = "<group>"; };
+		6189D83F1BEA221B009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		6189D8411BEA2288009880B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6189D8431BEA228B009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6189D8451BEA2346009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/BFMPendingCell.xib"; sourceTree = "<group>"; };
+		6189D8471BEA2349009880B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BFMPendingCell.xib; sourceTree = "<group>"; };
+		6189D8491BEA2352009880B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BFMPendingDateHeaderView.xib; sourceTree = "<group>"; };
+		6189D84C1BEA2356009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BFMPendingDateHeaderView.strings"; sourceTree = "<group>"; };
+		6189D84E1BEA235E009880B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BFMShopConcreteCell.xib; sourceTree = "<group>"; };
+		6189D8511BEA2361009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BFMShopConcreteCell.strings"; sourceTree = "<group>"; };
+		6189D8531BEA2370009880B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BFMNewsTextCell.xib; sourceTree = "<group>"; };
+		6189D8561BEA2374009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BFMNewsTextCell.strings"; sourceTree = "<group>"; };
 		61903C1E1BAC0CBB0018B3A0 /* BFMNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNotification.h; path = Classes/Models/Notifications/BFMNotification.h; sourceTree = "<group>"; };
 		61903C1F1BAC0CBB0018B3A0 /* BFMNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNotification.m; path = Classes/Models/Notifications/BFMNotification.m; sourceTree = "<group>"; };
 		61903C221BAC0CE70018B3A0 /* BFMNotificationsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNotificationsModel.h; path = Classes/Models/Notifications/BFMNotificationsModel.h; sourceTree = "<group>"; };
@@ -261,7 +277,6 @@
 		61BEFE341BDEF1E00030A05D /* BFMGoalsAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMGoalsAdapter.m; path = Classes/Screens/Profile/BFMGoalsAdapter.m; sourceTree = "<group>"; };
 		61C181EE1B98D62700D5FAC8 /* BFMSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMSessionManager.h; path = Networking/Manager/BFMSessionManager.h; sourceTree = "<group>"; };
 		61C181EF1B98D62700D5FAC8 /* BFMSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMSessionManager.m; path = Networking/Manager/BFMSessionManager.m; sourceTree = "<group>"; };
-		61C181F51B98DF7100D5FAC8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Resources/Localizable.strings; sourceTree = "<group>"; };
 		61C181F71B98E04F00D5FAC8 /* BFMLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMLoginController.h; path = "Classes/Screens/Login Controller/BFMLoginController.h"; sourceTree = "<group>"; };
 		61C181F81B98E04F00D5FAC8 /* BFMLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMLoginController.m; path = "Classes/Screens/Login Controller/BFMLoginController.m"; sourceTree = "<group>"; };
 		61C181FC1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Black Italic.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Black Italic.otf"; sourceTree = "<group>"; };
@@ -357,15 +372,12 @@
 		F919C91D1BE7ECB70022CB02 /* BFMPendingTableAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPendingTableAdapter.m; sourceTree = "<group>"; };
 		F919C91F1BE806510022CB02 /* BFMPendingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPendingCell.h; sourceTree = "<group>"; };
 		F919C9201BE806510022CB02 /* BFMPendingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPendingCell.m; sourceTree = "<group>"; };
-		F919C9211BE806510022CB02 /* BFMPendingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMPendingCell.xib; sourceTree = "<group>"; };
 		F919C9241BE819360022CB02 /* BFMPendingDateHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPendingDateHeaderView.h; sourceTree = "<group>"; };
 		F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPendingDateHeaderView.m; sourceTree = "<group>"; };
-		F919C9271BE819650022CB02 /* BFMPendingDateHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMPendingDateHeaderView.xib; sourceTree = "<group>"; };
 		F919C92A1BE827300022CB02 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		F919C92B1BE827300022CB02 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		F96073E21BE723D800704692 /* BFMNewsTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMNewsTextCell.h; sourceTree = "<group>"; };
 		F96073E31BE723D800704692 /* BFMNewsTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMNewsTextCell.m; sourceTree = "<group>"; };
-		F96073E51BE7264200704692 /* BFMNewsTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMNewsTextCell.xib; sourceTree = "<group>"; };
 		F96073E71BE72D5000704692 /* BFMNewsActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMNewsActionCell.h; sourceTree = "<group>"; };
 		F96073E81BE72D5000704692 /* BFMNewsActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMNewsActionCell.m; sourceTree = "<group>"; };
 		F96073E91BE72D5000704692 /* BFMNewsActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMNewsActionCell.xib; sourceTree = "<group>"; };
@@ -378,7 +390,6 @@
 		F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMShopCollectionAdapter.m; sourceTree = "<group>"; };
 		F99096A01BE020CB00E1D629 /* BFMShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMShopViewController.h; sourceTree = "<group>"; };
 		F99096A11BE020CB00E1D629 /* BFMShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMShopViewController.m; sourceTree = "<group>"; };
-		F99096A51BE0229F00E1D629 /* BFMShopConcreteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMShopConcreteCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -700,7 +711,7 @@
 				619E2C171B9780D800886893 /* Fonts */,
 				619E2BE81B97564A00886893 /* LaunchScreen.xib */,
 				619E2BE61B97564A00886893 /* Images.xcassets */,
-				61C181F51B98DF7100D5FAC8 /* Localizable.strings */,
+				6189D8421BEA2288009880B1 /* Localizable.strings */,
 				613AE74C1B9B78CE00300B22 /* ebfmn.xcdatamodeld */,
 			);
 			name = Resources;
@@ -1096,10 +1107,10 @@
 				F919C91D1BE7ECB70022CB02 /* BFMPendingTableAdapter.m */,
 				F919C91F1BE806510022CB02 /* BFMPendingCell.h */,
 				F919C9201BE806510022CB02 /* BFMPendingCell.m */,
-				F919C9211BE806510022CB02 /* BFMPendingCell.xib */,
+				6189D8461BEA2346009880B1 /* BFMPendingCell.xib */,
 				F919C9241BE819360022CB02 /* BFMPendingDateHeaderView.h */,
 				F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */,
-				F919C9271BE819650022CB02 /* BFMPendingDateHeaderView.xib */,
+				6189D84A1BEA2352009880B1 /* BFMPendingDateHeaderView.xib */,
 			);
 			name = UI;
 			path = "Classes/Screens/Pending Points/UI";
@@ -1120,7 +1131,7 @@
 			children = (
 				F96073E21BE723D800704692 /* BFMNewsTextCell.h */,
 				F96073E31BE723D800704692 /* BFMNewsTextCell.m */,
-				F96073E51BE7264200704692 /* BFMNewsTextCell.xib */,
+				6189D8541BEA2370009880B1 /* BFMNewsTextCell.xib */,
 				F96073E71BE72D5000704692 /* BFMNewsActionCell.h */,
 				F96073E81BE72D5000704692 /* BFMNewsActionCell.m */,
 				F96073E91BE72D5000704692 /* BFMNewsActionCell.xib */,
@@ -1147,7 +1158,7 @@
 			children = (
 				F990969D1BE020CB00E1D629 /* BFMShopCollectionAdapter.h */,
 				F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */,
-				F99096A51BE0229F00E1D629 /* BFMShopConcreteCell.xib */,
+				6189D84F1BEA235E009880B1 /* BFMShopConcreteCell.xib */,
 			);
 			name = View;
 			path = Classes/Screens/Shop/View;
@@ -1230,6 +1241,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 619E2BCD1B97564A00886893;
 			productRefGroup = 619E2BD71B97564A00886893 /* Products */;
@@ -1254,12 +1266,12 @@
 				61E4776D1BE8EF3E00C2659D /* News.storyboard in Resources */,
 				61C182111B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Light.otf in Resources */,
 				619E2BEA1B97564A00886893 /* LaunchScreen.xib in Resources */,
-				F96073E61BE7264200704692 /* BFMNewsTextCell.xib in Resources */,
+				6189D8521BEA2370009880B1 /* BFMNewsTextCell.xib in Resources */,
 				61E477701BE8EF4200C2659D /* Profile.storyboard in Resources */,
-				F919C9281BE819650022CB02 /* BFMPendingDateHeaderView.xib in Resources */,
+				6189D8481BEA2352009880B1 /* BFMPendingDateHeaderView.xib in Resources */,
 				61E477671BE8EF3300C2659D /* Dashboard.storyboard in Resources */,
-				61C181F61B98DF7100D5FAC8 /* Localizable.strings in Resources */,
-				F919C9231BE806510022CB02 /* BFMPendingCell.xib in Resources */,
+				6189D8401BEA2288009880B1 /* Localizable.strings in Resources */,
+				6189D8441BEA2346009880B1 /* BFMPendingCell.xib in Resources */,
 				619E2BE71B97564A00886893 /* Images.xcassets in Resources */,
 				F96073F01BE72E9E00704692 /* BFMNewsSingleActionCell.xib in Resources */,
 				61C182101B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Light Italic.otf in Resources */,
@@ -1269,7 +1281,7 @@
 				61C182141B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold Italic.otf in Resources */,
 				6135F3811BAF466E00B29DE3 /* BFMBenefitsPageController.xib in Resources */,
 				61C182131B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Regular.otf in Resources */,
-				F99096A61BE0229F00E1D629 /* BFMShopConcreteCell.xib in Resources */,
+				6189D84D1BEA235E009880B1 /* BFMShopConcreteCell.xib in Resources */,
 				61C182161B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */,
 				2CB1B8431B9CC37B00AC16D2 /* Notifications.storyboard in Resources */,
 				61C1820E1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold Italic.otf in Resources */,
@@ -1443,10 +1455,57 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6189D8421BEA2288009880B1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6189D8411BEA2288009880B1 /* Base */,
+				6189D8431BEA228B009880B1 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6189D8461BEA2346009880B1 /* BFMPendingCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6189D8451BEA2346009880B1 /* zh-Hans */,
+				6189D8471BEA2349009880B1 /* Base */,
+			);
+			name = BFMPendingCell.xib;
+			sourceTree = "<group>";
+		};
+		6189D84A1BEA2352009880B1 /* BFMPendingDateHeaderView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6189D8491BEA2352009880B1 /* Base */,
+				6189D84C1BEA2356009880B1 /* zh-Hans */,
+			);
+			name = BFMPendingDateHeaderView.xib;
+			sourceTree = "<group>";
+		};
+		6189D84F1BEA235E009880B1 /* BFMShopConcreteCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6189D84E1BEA235E009880B1 /* Base */,
+				6189D8511BEA2361009880B1 /* zh-Hans */,
+			);
+			name = BFMShopConcreteCell.xib;
+			sourceTree = "<group>";
+		};
+		6189D8541BEA2370009880B1 /* BFMNewsTextCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6189D8531BEA2370009880B1 /* Base */,
+				6189D8561BEA2374009880B1 /* zh-Hans */,
+			);
+			name = BFMNewsTextCell.xib;
+			sourceTree = "<group>";
+		};
 		619E2BE81B97564A00886893 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				619E2BE91B97564A00886893 /* Base */,
+				6189D83F1BEA221B009880B1 /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -1455,6 +1514,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				61E477651BE8EF2D00C2659D /* Base */,
+				6189D83A1BEA221B009880B1 /* zh-Hans */,
 			);
 			name = Login.storyboard;
 			path = Resources/Storyboards;
@@ -1464,6 +1524,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				61E477681BE8EF3300C2659D /* Base */,
+				6189D83B1BEA221B009880B1 /* zh-Hans */,
 			);
 			name = Dashboard.storyboard;
 			path = Resources/Storyboards;
@@ -1473,6 +1534,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				61E4776B1BE8EF3A00C2659D /* Base */,
+				6189D83C1BEA221B009880B1 /* zh-Hans */,
 			);
 			name = Leaderboard.storyboard;
 			path = Resources/Storyboards;
@@ -1482,6 +1544,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				61E4776E1BE8EF3E00C2659D /* Base */,
+				6189D83D1BEA221B009880B1 /* zh-Hans */,
 			);
 			name = News.storyboard;
 			path = Resources/Storyboards;
@@ -1491,6 +1554,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				61E477711BE8EF4200C2659D /* Base */,
+				6189D83E1BEA221B009880B1 /* zh-Hans */,
 			);
 			name = Profile.storyboard;
 			path = Resources/Storyboards;

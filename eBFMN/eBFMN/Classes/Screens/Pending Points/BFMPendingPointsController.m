@@ -24,7 +24,6 @@
 @interface BFMPendingPointsController ()
 
 @property (nonatomic, strong) BFMPendingPointsModel *model;
-@property (nonatomic, strong) ODSTableAdapter *adapter;
 @property (nonatomic, strong) BFMPendingTableAdapter *pendingAdapter;
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
@@ -61,12 +60,6 @@
 
 - (void)setupModels {
     self.model = [BFMPendingPointsModel new];
-    
-    [self stub];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self stub2];
-    });
 
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
@@ -82,7 +75,7 @@
                                                              subtitle:NSLocalizedString(@"points.badrequest", nil)];
             [banner show];
         } else {
-            [weakSelf.adapter.tableView reloadData];
+
         }
     }];
     
