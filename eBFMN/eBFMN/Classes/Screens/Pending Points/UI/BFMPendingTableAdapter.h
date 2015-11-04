@@ -15,5 +15,6 @@ UITableViewDelegate,
 NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic, copy) void (^onBottomReached)();
 
 @end

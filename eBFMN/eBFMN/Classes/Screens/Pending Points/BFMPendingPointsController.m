@@ -87,6 +87,11 @@
     }];
     
     self.pendingAdapter = [[BFMPendingTableAdapter alloc] init];
+    
+    self.pendingAdapter.onBottomReached = ^{
+        NSLog(@"BOTTOM REACHED");
+    };
+    
     self.pendingAdapter.tableView = self.tableView;
 }
 
@@ -156,6 +161,142 @@
     
     {
         NSString *identifier = @"104";
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", identifier];
+        BFMPointsRecord *rec = [BFMPointsRecord MR_findFirstWithPredicate:predicate inContext:ctx];
+        if (!rec) {
+            rec = [BFMPointsRecord MR_createEntityInContext:ctx];
+        }
+        
+        rec.identifier = identifier;
+        rec.type = @0;
+        rec.requiredLots = @240;
+        rec.points = @10000;
+        rec.deposit = @8000;
+        rec.expirationDate = [NSDate dateWithTimeIntervalSinceNow:87050];
+    }
+    
+    {
+        NSString *identifier = @"105";
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", identifier];
+        BFMPointsRecord *rec = [BFMPointsRecord MR_findFirstWithPredicate:predicate inContext:ctx];
+        if (!rec) {
+            rec = [BFMPointsRecord MR_createEntityInContext:ctx];
+        }
+        
+        rec.identifier = identifier;
+        rec.type = @0;
+        rec.requiredLots = @240;
+        rec.points = @10000;
+        rec.deposit = @8000;
+        rec.expirationDate = [NSDate dateWithTimeIntervalSinceNow:87000];
+    }
+    
+    {
+        NSString *identifier = @"106";
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", identifier];
+        BFMPointsRecord *rec = [BFMPointsRecord MR_findFirstWithPredicate:predicate inContext:ctx];
+        if (!rec) {
+            rec = [BFMPointsRecord MR_createEntityInContext:ctx];
+        }
+        
+        rec.identifier = identifier;
+        rec.type = @1;
+        rec.requiredLots = @240;
+        rec.points = @10000;
+        rec.deposit = @8000;
+        rec.expirationDate = [NSDate dateWithTimeIntervalSinceNow:87200];
+    }
+    
+    {
+        NSString *identifier = @"107";
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", identifier];
+        BFMPointsRecord *rec = [BFMPointsRecord MR_findFirstWithPredicate:predicate inContext:ctx];
+        if (!rec) {
+            rec = [BFMPointsRecord MR_createEntityInContext:ctx];
+        }
+        
+        rec.identifier = identifier;
+        rec.type = @1;
+        rec.requiredLots = @240;
+        rec.points = @10000;
+        rec.deposit = @8000;
+        rec.expirationDate = [NSDate dateWithTimeIntervalSinceNow:88000];
+    }
+    
+    {
+        NSString *identifier = @"108";
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", identifier];
+        BFMPointsRecord *rec = [BFMPointsRecord MR_findFirstWithPredicate:predicate inContext:ctx];
+        if (!rec) {
+            rec = [BFMPointsRecord MR_createEntityInContext:ctx];
+        }
+        
+        rec.identifier = identifier;
+        rec.type = @0;
+        rec.requiredLots = @240;
+        rec.points = @10000;
+        rec.deposit = @8000;
+        rec.expirationDate = [NSDate dateWithTimeIntervalSinceNow:87050];
+    }
+    
+    {
+        NSString *identifier = @"109";
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", identifier];
+        BFMPointsRecord *rec = [BFMPointsRecord MR_findFirstWithPredicate:predicate inContext:ctx];
+        if (!rec) {
+            rec = [BFMPointsRecord MR_createEntityInContext:ctx];
+        }
+        
+        rec.identifier = identifier;
+        rec.type = @0;
+        rec.requiredLots = @240;
+        rec.points = @10000;
+        rec.deposit = @8000;
+        rec.expirationDate = [NSDate dateWithTimeIntervalSinceNow:87000];
+    }
+    
+    {
+        NSString *identifier = @"10200";
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", identifier];
+        BFMPointsRecord *rec = [BFMPointsRecord MR_findFirstWithPredicate:predicate inContext:ctx];
+        if (!rec) {
+            rec = [BFMPointsRecord MR_createEntityInContext:ctx];
+        }
+        
+        rec.identifier = identifier;
+        rec.type = @1;
+        rec.requiredLots = @240;
+        rec.points = @10000;
+        rec.deposit = @8000;
+        rec.expirationDate = [NSDate dateWithTimeIntervalSinceNow:87200];
+    }
+    
+    {
+        NSString *identifier = @"10300";
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", identifier];
+        BFMPointsRecord *rec = [BFMPointsRecord MR_findFirstWithPredicate:predicate inContext:ctx];
+        if (!rec) {
+            rec = [BFMPointsRecord MR_createEntityInContext:ctx];
+        }
+        
+        rec.identifier = identifier;
+        rec.type = @1;
+        rec.requiredLots = @240;
+        rec.points = @10000;
+        rec.deposit = @8000;
+        rec.expirationDate = [NSDate dateWithTimeIntervalSinceNow:88000];
+    }
+    
+    {
+        NSString *identifier = @"10400";
         
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", identifier];
         BFMPointsRecord *rec = [BFMPointsRecord MR_findFirstWithPredicate:predicate inContext:ctx];

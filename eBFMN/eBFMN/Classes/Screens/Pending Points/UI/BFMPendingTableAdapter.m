@@ -201,6 +201,20 @@ viewForHeaderInSection:(NSInteger)section {
     return view;
 }
 
+- (void)tableView:(UITableView *)tableView
+  willDisplayCell:(UITableViewCell *)cell
+forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSInteger section = indexPath.section;
+    if (section >= self.pendingFRC.sections.count - 1) {
+        id sectionInfo = [self.pendingFRC.sections objectAtIndex:section];
+        if (indexPath.row >= [sectionInfo numberOfObjects] - 1) {
+            if (self.onBottomReached) {
+                self.onBottomReached();
+            }
+        }
+    }
+}
+
 #pragma mark - Private
 
 + (NSDateFormatter *)pendingHeaderFormatter {
