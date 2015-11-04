@@ -17,6 +17,8 @@
 
 + (NSInteger)unixLatestNewsDate;
 
+- (NSString *)formattedDate;
+
 @end
 
 @interface BFMNewsRecord (Mapping)

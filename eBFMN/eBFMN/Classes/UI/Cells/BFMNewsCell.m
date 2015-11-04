@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *shortTextLabel;
 
 
 @end
@@ -29,7 +30,8 @@
     _object = object;
     
     self.titleLabel.text = _object.title;
-//    self.dateLabel.text = []
+    self.shortTextLabel.text = _object.shortText;
+    self.dateLabel.text = [_object formattedDate];
 }
 
 @end

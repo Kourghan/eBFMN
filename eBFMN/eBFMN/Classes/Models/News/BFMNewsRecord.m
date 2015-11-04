@@ -51,6 +51,20 @@
     }
 }
 
+- (NSString *)formattedDate {
+    return [[BFMNewsRecord recordDateFormatter] stringFromDate:self.date];
+}
+
++ (NSDateFormatter *)recordDateFormatter {
+    static NSDateFormatter *internalRecordDateFormatter;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        internalRecordDateFormatter = [NSDateFormatter new];
+        internalRecordDateFormatter.dateFormat = @"EEEE, dd/mm/yyyy";
+    });
+    return internalRecordDateFormatter;
+}
+
 @end
 
 @implementation BFMNewsRecord (Mapping)
