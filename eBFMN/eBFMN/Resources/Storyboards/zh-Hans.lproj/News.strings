@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "@BMFNNews"; ObjectID = "89M-fY-CLW"; */
+"89M-fY-CLW.text" = "@BMFNNews";
+
+/* Class = "UILabel"; text = "@BMFNNews, "; ObjectID = "9fe-xA-TlV"; */
+"9fe-xA-TlV.text" = "@BMFNNews, ";
+
+/* Class = "UILabel"; text = "Day, Date"; ObjectID = "FM0-4L-FJD"; */
+"FM0-4L-FJD.text" = "Day, Date";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "Vsy-VU-0fQ"; */
+"Vsy-VU-0fQ.text" = "Date";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "ZEs-Gb-LuM"; */
+"ZEs-Gb-LuM.text" = "Title";
+
+/* Class = "UILabel"; text = "{title}"; ObjectID = "jsD-FM-XmW"; */
+"jsD-FM-XmW.text" = "{title}";
+
+/* Class = "UILabel"; text = "Text"; ObjectID = "rus-th-eSa"; */
+"rus-th-eSa.text" = "Text";

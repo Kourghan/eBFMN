@@ -1,0 +1,83 @@
+/* 
+  Localizable.strings
+  eBFMN
+
+  Created by Mikhail Timoscenko on 03.09.15.
+  Copyright (c) 2015 eBFMN. All rights reserved.
+*/
+
+// Error
+
+"error.error" = "ERROR";
+"error.connection" = "Cannot reach server, try again later.";
+"error.prizes" = "Cannot load prizes from server, try again later";
+"error.points" = "Cannot load your points from server, try again later";
+
+// Login
+
+"login.wrongcredentials" = "Wrong Username or Password";
+"login.emptyfields" = "Fields Must Not Be Empty";
+
+// Status
+
+"status.failed.passwordReminder" = "Failed to Restore Password";
+
+// Tabbar
+
+"tabbar.dashboard" = "Dashboard";
+"tabbar.leaderboard" = "Leaderboard";
+"tabbar.profile" = "Profile";
+"tabbar.news" = "News";
+
+// Dashboard
+
+"dashboard.title" = "DASHBOARD";
+"dashboard.title.earnings" = "EARNINGS FOR ";
+"dashboard.rebates" = "REBATES";
+"dashboard.commissions" = "COMMISSIONS";
+"dashboard.spread" = "SPREAD WIDENING";
+"dashboard.title.clients" = "CLIENTS";
+"dashboard.demoaccounts" = "DEMO ACCOUNTS";
+"dashboard.liveaccounts" = "LIVE ACCOUNTS";
+"dashboard.earnings.picker.title" = "CURRENCY";
+
+// Points
+
+"points.badrequest" = "Cannot load pending points list.";
+"points.title" = "PENDING POINTS";
+"points.deposit" = "Deposit";
+"points.lots" = "Required Lots";
+"points.points" = "Points";
+
+// Prizes
+
+"prizes.title" = "PRIZES";
+"prizes.youhave" = "YOU HAVE:";
+"prizes.ibpoints" = "IB POINTS";
+"prizes.saving" = "Cannot save selected prize. Try again later.";
+"prizes.save" = "Save";
+
+// Leaderboard
+
+"leaderboard.title" = "LEADERBOARD";
+
+// Profile
+
+"profile.title" = "PROFILE";
+"profile.benefits" = "BENEFITS";
+"profile.goals" = "GOALS";
+"profile.logout" = "LOGOUT";
+
+// Benefits
+
+"benefits.title.silver" = "SILVER BENEFITS";
+"benefits.title.gold" = "GOLD BENEFITS";
+"benefits.title.platinum" = "PLATINUM BENEFITS";
+"benefits.title.diamand" = "DIAMOND BENEFITS";
+
+// Goals
+
+"goals.title.silver" = "SILVER GOALS";
+"goals.title.gold" = "GOLD GOALS";
+"goals.title.platinum" = "PLATINUM GOALS";
+"goals.title.diamand" = "DIAMOND GOALS";

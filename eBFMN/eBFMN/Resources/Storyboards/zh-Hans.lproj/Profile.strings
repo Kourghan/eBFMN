@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "GOALS"; ObjectID = "5do-k4-DIr"; */
+"5do-k4-DIr.text" = "GOALS";
+
+/* Class = "UILabel"; text = "USERNAME"; ObjectID = "BdA-fO-uS3"; */
+"BdA-fO-uS3.text" = "USERNAME";
+
+/* Class = "UILabel"; text = "BENEFITS"; ObjectID = "Yzc-hE-6cH"; */
+"Yzc-hE-6cH.text" = "BENEFITS";
+
+/* Class = "UILabel"; text = "12345678"; ObjectID = "Zb0-lE-1mA"; */
+"Zb0-lE-1mA.text" = "12345678";
+
+/* Class = "UIButton"; normalTitle = "LOGOUT"; ObjectID = "dnO-gz-OCq"; */
+"dnO-gz-OCq.normalTitle" = "LOGOUT";
+
+/* Class = "UILabel"; text = "ID"; ObjectID = "q5j-S8-RB1"; */
+"q5j-S8-RB1.text" = "ID";
