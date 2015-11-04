@@ -9,12 +9,20 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class FEMMapping;
 
 @interface BFMNewsRecord : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * identifier;
-@property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSString * text;
-@property (nonatomic, retain) NSDate * date;
++ (void)getNewsFromDate:(NSInteger)date withCompletition:(void (^)(NSArray *prizes, NSError *error))completition;
+
++ (NSInteger)unixLatestNewsDate;
 
 @end
+
+@interface BFMNewsRecord (Mapping)
+
++ (FEMMapping *)defaultMapping;
+
+@end
+
+#import "BFMNewsRecord+CoreDataProperties.h"

@@ -13,6 +13,8 @@
 
 #import "BFMUser+Extension.h"
 #import "BFMPointsRecord.h"
+#import "BFMNewsRecord.h"
+
 #import "JNKeychain+UNTExtension.h"
 #import "BFMBenefitsController.h"
 
@@ -107,6 +109,11 @@
     
     NSArray *points = [BFMPointsRecord MR_findAll];
     for (BFMPointsRecord *record in points) {
+        [record MR_deleteEntityInContext:context];
+    }
+    
+    NSArray *news = [BFMNewsRecord MR_findAll];
+    for (BFMNewsRecord *record in news) {
         [record MR_deleteEntityInContext:context];
     }
     

@@ -18,6 +18,8 @@
 
 #import "BFMNewsTableAdapter.h"
 
+#import <ALAlertBanner/ALAlertBanner.h>
+
 @interface BFMNewsViewController ()<UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -37,10 +39,9 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.delegate = self;
     
-    BFMNewsModel *model = [BFMNewsModel new];
-    self.model = model;
+    self.model = [BFMNewsModel new];
 
-    self.navigationItem.title = self.model.title;
+    self.title = [self.model.title uppercaseString];
     
     self.adapter = [BFMNewsTableAdapter new];
     self.adapter.tableView = self.tableView;
@@ -48,11 +49,21 @@
     self.adapter.tableView.delegate = self;
     
     [self.adapter mapObjectClass:[BFMNewsRecord class] toCellIdentifier:@"BFMNewsCell"];
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    
+    [refreshControl addTarget:self
+                       action:@selector(refreshNews:)
+             forControlEvents:UIControlEventValueChanged];
+    
+    [self.tableView addSubview:refreshControl];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.model refresh];
+    
+    [self refreshNews:nil];
+
     [NINavigationAppearance pushAppearanceForNavigationController:self.navigationController];
     [BFMDefaultNavagtionBarAppearance applyTo:self.navigationController.navigationBar];
 }
@@ -61,6 +72,23 @@
     [super viewWillDisappear:animated];
     
     [NINavigationAppearance popAppearanceForNavigationController:self.navigationController];
+}
+
+- (void)refreshNews:(UIRefreshControl *)control {
+    __weak typeof(self) weakSelf = self;
+    [self.model refreshWithCallback:^(NSError *error) {
+        if (control) {
+            [control endRefreshing];
+        }
+        if (error) {
+            ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
+                                                                style:ALAlertBannerStyleFailure
+                                                             position:ALAlertBannerPositionTop
+                                                                title:NSLocalizedString(@"error.error", nil)
+                                                             subtitle:NSLocalizedString(@"error.connection", nil)];
+            [banner show];
+        }
+    }];
 }
 
 #pragma mark - UITableViewDelegate

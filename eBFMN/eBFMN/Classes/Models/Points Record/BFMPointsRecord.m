@@ -139,7 +139,7 @@
                                                                  map:^id(id value) {
                                                                      if ([value isKindOfClass:[NSString class]]) {
                                                                          NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                                                                         [formatter setDateFormat:@"yyyy-MM-dd'T'hh:mm:ss.SSS'Z'"];
+                                                                         [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
                                                                          return [formatter dateFromString:value];
                                                                      }
                                                                      return nil;
