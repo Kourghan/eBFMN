@@ -24,7 +24,7 @@
 
 - (void)configureWithRecord:(BFMNewsRecord *)record {
     self.recordTitleLabel.text = record.title;
-    self.recordTextLabel.text = record.text;
+    self.recordTextLabel.text = record.shortText;
     
     NSDateFormatter *formatter = [[self class] recordDateFormatter];
     self.recordDateLabel.text = [formatter stringFromDate:record.date];
