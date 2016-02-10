@@ -37,7 +37,39 @@
              }
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              completition(nil, error);
-         }];
+         }
+     ];
+}
+
+- (void)getDetailsWithCompletition:(void (^)(BFMNewsRecord *, NSError *))completition {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
+    
+    NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+    
+    NSInteger date = [self.date timeIntervalSince1970];
+    
+    NSDictionary *params = @{
+                             @"guid" : sessionKey,
+                             @"date" : @(date),
+                             @"id" : self.identifier
+                             };
+    [manager GET:@"Reports/GetNewsTextRecord"
+      parameters:params
+         success:^(NSURLSessionDataTask *task, NSArray *responseObject) {
+             if (![responseObject isEqual: @[]]) {
+                 NSManagedObjectContext *ctx = [NSManagedObjectContext MR_defaultContext];
+                 NSArray *records = [FEMDeserializer collectionFromRepresentation:responseObject
+                                                                          mapping:[BFMNewsRecord defaultMapping]
+                                                                          context:ctx];
+                 [ctx MR_saveToPersistentStoreAndWait];
+                 completition(records, nil);
+             } else {
+                 completition(nil, nil);
+             }
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             completition(nil, error);
+         }
+     ];
 }
 
 + (NSInteger)unixLatestNewsDate {

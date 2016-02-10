@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class BFMNewsRecord;
+@class BFMDetailedNewsModel;
 
 @interface BFMDetailedNewsViewController : UIViewController
 
-@property (strong, nonatomic) BFMNewsRecord *record;
+@property (nonatomic, strong) BFMDetailedNewsModel *model;
 
 @end

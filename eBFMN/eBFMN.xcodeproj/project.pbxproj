@@ -40,6 +40,7 @@
 		613C28C11BA3437700B2856A /* BFMNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 613C28C01BA3437700B2856A /* BFMNewsCell.m */; };
 		614BC2441BB4B33D0060C8E8 /* BFMForgotPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614BC2431BB4B33D0060C8E8 /* BFMForgotPasswordController.m */; };
 		617BA1BD1BEA470D00AADD0C /* BFMNewsRecord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 617BA1BC1BEA470D00AADD0C /* BFMNewsRecord+CoreDataProperties.m */; };
+		617BA1C01BEABAD800AADD0C /* BFMDetailedNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 617BA1BF1BEABAD800AADD0C /* BFMDetailedNewsModel.m */; };
 		6189D8401BEA2288009880B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6189D8421BEA2288009880B1 /* Localizable.strings */; };
 		6189D8441BEA2346009880B1 /* BFMPendingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6189D8461BEA2346009880B1 /* BFMPendingCell.xib */; };
 		6189D8481BEA2352009880B1 /* BFMPendingDateHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6189D84A1BEA2352009880B1 /* BFMPendingDateHeaderView.xib */; };
@@ -209,6 +210,8 @@
 		614BC2431BB4B33D0060C8E8 /* BFMForgotPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMForgotPasswordController.m; path = "Classes/Screens/Login Controller/BFMForgotPasswordController.m"; sourceTree = "<group>"; };
 		617BA1BB1BEA470D00AADD0C /* BFMNewsRecord+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMNewsRecord+CoreDataProperties.h"; path = "Classes/Models/News/BFMNewsRecord+CoreDataProperties.h"; sourceTree = "<group>"; };
 		617BA1BC1BEA470D00AADD0C /* BFMNewsRecord+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMNewsRecord+CoreDataProperties.m"; path = "Classes/Models/News/BFMNewsRecord+CoreDataProperties.m"; sourceTree = "<group>"; };
+		617BA1BE1BEABAD800AADD0C /* BFMDetailedNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMDetailedNewsModel.h; path = "Classes/Models/News Model/BFMDetailedNewsModel.h"; sourceTree = "<group>"; };
+		617BA1BF1BEABAD800AADD0C /* BFMDetailedNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMDetailedNewsModel.m; path = "Classes/Models/News Model/BFMDetailedNewsModel.m"; sourceTree = "<group>"; };
 		6189D83A1BEA221B009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Login.strings"; sourceTree = "<group>"; };
 		6189D83B1BEA221B009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Dashboard.strings"; sourceTree = "<group>"; };
 		6189D83C1BEA221B009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Leaderboard.strings"; sourceTree = "<group>"; };
@@ -596,6 +599,8 @@
 				61FD3D741BA76AA200F4CEFB /* BFMNewsTableAdapter.m */,
 				2C8E49EC1BDF9C6500A9F8F9 /* BFMDetailedNewsViewController.h */,
 				2C8E49ED1BDF9C6500A9F8F9 /* BFMDetailedNewsViewController.m */,
+				617BA1BE1BEABAD800AADD0C /* BFMDetailedNewsModel.h */,
+				617BA1BF1BEABAD800AADD0C /* BFMDetailedNewsModel.m */,
 			);
 			name = News;
 			sourceTree = "<group>";
@@ -1386,6 +1391,7 @@
 				619F0F061BBC8E0900916B0B /* BFMCurrencyPickerDataSource.m in Sources */,
 				61E4775D1BE66F8900C2659D /* BFMPendingPointsModel.m in Sources */,
 				61EC27EB1BCA858900DD3812 /* BFMPrize.m in Sources */,
+				617BA1C01BEABAD800AADD0C /* BFMDetailedNewsModel.m in Sources */,
 				61FD3D361BA7094200F4CEFB /* JGActionSheet.m in Sources */,
 				614BC2441BB4B33D0060C8E8 /* BFMForgotPasswordController.m in Sources */,
 				61903C201BAC0CBB0018B3A0 /* BFMNotification.m in Sources */,

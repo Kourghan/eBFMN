@@ -19,8 +19,10 @@
 
 @interface BFMNotificationsController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
+//@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) ODSTableAdapter *adapter;
 
 @end
@@ -43,6 +45,8 @@
     self.adapter.dataSource = self.model.dataSource;
     
     [self.adapter mapObjectClass:[BFMNotification class] toCellIdentifier:@"BFMNotificationCell"];
+    
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.investing.com/economic-calendar/"]]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

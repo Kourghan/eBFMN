@@ -19,6 +19,8 @@
     [super viewDidLoad];
     [self configureTabBarItems];
     self.selectedIndex = 0;
+    
+    self.tabBar.tintColor = [UIColor whiteColor];
 }
 
 - (void)configureTabBarItems {
@@ -34,15 +36,15 @@
     vc3.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_news"];
     vc3.tabBarItem.title = NSLocalizedString(@"tabbar.news", nil);
 //    
-//    UINavigationController *vc4 = [[UIStoryboard notificationsStoryboard] instantiateInitialViewController];
-//    vc4.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_notifications"];
-//    vc4.tabBarItem.title = @"Notifications";
+    UINavigationController *vc4 = [[UIStoryboard notificationsStoryboard] instantiateInitialViewController];
+    vc4.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_notifications"];
+    vc4.tabBarItem.title = @"Notifications";
     
     UINavigationController *vc5 = [[UIStoryboard profileStoryboard] instantiateInitialViewController];
     vc5.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_profile"];
     vc5.tabBarItem.title = NSLocalizedString(@"tabbar.profile", nil);
     
-    self.viewControllers = @[vc1, vc2, vc3, vc5];
+    self.viewControllers = @[vc1, vc2, vc3, vc4, vc5];
 }
 
 @end

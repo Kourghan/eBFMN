@@ -11,6 +11,7 @@
 #import "NINavigationAppearance.h"
 #import "BFMDefaultNavagtionBarAppearance.h"
 #import "BFMDetailedNewsViewController.h"
+#import "BFMDetailedNewsModel.h"
 #import "BFMNewsModel.h"
 #import "BFMNewsRecord.h"
 #import "BFMNewsCell.h"
@@ -91,17 +92,14 @@
     }];
 }
 
-#pragma mark - UITableViewDelegate
+#pragma mark - Navigation
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    BFMNewsRecord *record =  [self.model.dataSource objectAtIndexPath:indexPath];
-    
-    NSString *identifier = NSStringFromClass([BFMDetailedNewsViewController class]);
-//    NSString *identifier = @"detailedNewsViewController"
-    
-    BFMDetailedNewsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
-    controller.record = record;
-    [self showViewController:controller sender:self];
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(BFMNewsCell *)sender {
+    if ([segue.identifier isEqualToString:@"detailedView"]) {
+        BFMDetailedNewsViewController *controller = (BFMDetailedNewsViewController *)segue.destinationViewController;
+        BFMDetailedNewsModel *model = [[BFMDetailedNewsModel alloc] initWithRecord:sender.object];
+        controller.model = model;
+    }
 }
+
 @end

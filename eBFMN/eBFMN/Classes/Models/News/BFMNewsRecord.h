@@ -15,6 +15,8 @@
 
 + (void)getNewsFromDate:(NSInteger)date withCompletition:(void (^)(NSArray *prizes, NSError *error))completition;
 
+- (void)getDetailsWithCompletition:(void (^)(BFMNewsRecord *record, NSError *error))completition;
+
 + (NSInteger)unixLatestNewsDate;
 
 - (NSString *)formattedDate;

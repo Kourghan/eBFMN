@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="q94-5a-GXA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="q94-5a-GXA">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -47,7 +47,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BFMNewsCell" id="lac-e2-i2Q" customClass="BFMNewsCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="BFMNewsCell" id="lac-e2-i2Q" customClass="BFMNewsCell">
                                         <rect key="frame" x="0.0" y="86" width="320" height="144"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lac-e2-i2Q" id="ntc-cQ-zXW">
@@ -119,6 +119,7 @@
                                             <outlet property="dateLabel" destination="FM0-4L-FJD" id="ntk-H0-faL"/>
                                             <outlet property="shortTextLabel" destination="3iG-41-2wf" id="ZXG-sM-qGJ"/>
                                             <outlet property="titleLabel" destination="jsD-FM-XmW" id="wev-C2-IhE"/>
+                                            <segue destination="1g4-LO-3eN" kind="show" identifier="detailedView" id="NdU-pa-Qb6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -155,34 +156,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iOw-he-Kgh">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="399"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="379"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GVF-Qn-Wsc">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEs-Gb-LuM">
-                                                <rect key="frame" x="8" y="8" width="304" height="35"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEs-Gb-LuM">
+                                                <rect key="frame" x="8" y="8" width="304" height="34.5"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="28"/>
                                                 <color key="textColor" red="0.031372549020000001" green="0.27058823529999998" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rus-th-eSa">
-                                                <rect key="frame" x="8" y="51" width="304" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="248" misplaced="YES" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rus-th-eSa">
+                                                <rect key="frame" x="8" y="50" width="304" height="24"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsy-VU-0fQ">
-                                                <rect key="frame" x="160" y="83" width="152" height="14"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsy-VU-0fQ">
+                                                <rect key="frame" x="160" y="82" width="152" height="13.5"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@BMFNNews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89M-fY-CLW">
-                                                <rect key="frame" x="8" y="83" width="152" height="14"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@BMFNNews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89M-fY-CLW">
+                                                <rect key="frame" x="8" y="82" width="152" height="13.5"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -211,6 +212,13 @@
                                             <constraint firstItem="89M-fY-CLW" firstAttribute="top" secondItem="rus-th-eSa" secondAttribute="bottom" constant="8" id="xrt-wu-OQ9"/>
                                             <constraint firstAttribute="trailing" secondItem="Vsy-VU-0fQ" secondAttribute="trailing" constant="8" id="yTF-JJ-ftp"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="RH8-Wz-nH4"/>
+                                                <exclude reference="xrt-wu-OQ9"/>
+                                                <exclude reference="jEN-yP-CM9"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <animations/>
@@ -240,19 +248,24 @@
                             <constraint firstAttribute="trailing" secondItem="Lx0-Ka-1fr" secondAttribute="trailing" id="PpG-yf-Tlv"/>
                             <constraint firstItem="Lx0-Ka-1fr" firstAttribute="top" secondItem="iOw-he-Kgh" secondAttribute="bottom" id="QKh-C7-QwA"/>
                             <constraint firstItem="GVF-Qn-Wsc" firstAttribute="width" secondItem="Lx0-Ka-1fr" secondAttribute="width" id="Twc-G3-HiB"/>
+                            <constraint firstItem="iOw-he-Kgh" firstAttribute="top" secondItem="LRI-7P-EY8" secondAttribute="bottom" id="dcD-op-lNp"/>
                             <constraint firstItem="iOw-he-Kgh" firstAttribute="top" secondItem="GOI-Y2-tyl" secondAttribute="topMargin" id="jeY-x5-fUo"/>
+                            <constraint firstItem="iOw-he-Kgh" firstAttribute="top" secondItem="GOI-Y2-tyl" secondAttribute="topMargin" constant="20" id="mnd-9h-iSK"/>
                             <constraint firstAttribute="trailing" secondItem="iOw-he-Kgh" secondAttribute="trailing" id="nKE-ja-UID"/>
                             <constraint firstItem="1WN-G1-Pri" firstAttribute="top" secondItem="Lx0-Ka-1fr" secondAttribute="bottom" id="rGi-2N-Rzq"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="9CX-pv-H5S"/>
+                                <exclude reference="dcD-op-lNp"/>
+                                <exclude reference="jeY-x5-fUo"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="dateLabel" destination="Vsy-VU-0fQ" id="fc8-K7-y9c"/>
+                        <outlet property="scrollView" destination="iOw-he-Kgh" id="4cj-jJ-sKj"/>
                         <outlet property="textLabel" destination="rus-th-eSa" id="hBr-3c-Q62"/>
                         <outlet property="titleLabel" destination="ZEs-Gb-LuM" id="Sqp-ie-7ms"/>
                     </connections>
@@ -260,52 +273,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2el-4h-cvD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="640" y="123"/>
-        </scene>
-        <!--Detailed News View Controller-->
-        <scene sceneID="9hN-uv-2Bc">
-            <objects>
-                <viewController storyboardIdentifier="BFMDetailedNewsViewController" automaticallyAdjustsScrollViewInsets="NO" id="75T-ba-6U8" customClass="BFMDetailedNewsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TK0-Hq-Av6"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ms0-1A-m7i"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Xq2-IY-DZr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pkg-Mz-Psl">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="75T-ba-6U8" id="Nr6-Wp-TYJ"/>
-                                    <outlet property="delegate" destination="75T-ba-6U8" id="urT-NS-LIh"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="pkg-Mz-Psl" firstAttribute="top" secondItem="TK0-Hq-Av6" secondAttribute="bottom" id="GpI-Vy-J1n"/>
-                            <constraint firstItem="Ms0-1A-m7i" firstAttribute="top" secondItem="pkg-Mz-Psl" secondAttribute="bottom" id="H6i-ef-3mV"/>
-                            <constraint firstAttribute="trailing" secondItem="pkg-Mz-Psl" secondAttribute="trailing" id="Mvf-HO-Q3u"/>
-                            <constraint firstItem="pkg-Mz-Psl" firstAttribute="top" secondItem="Xq2-IY-DZr" secondAttribute="top" id="WP7-Ek-JB2"/>
-                            <constraint firstItem="pkg-Mz-Psl" firstAttribute="leading" secondItem="Xq2-IY-DZr" secondAttribute="leading" id="o5q-2y-AFg"/>
-                            <constraint firstItem="Ms0-1A-m7i" firstAttribute="top" secondItem="pkg-Mz-Psl" secondAttribute="bottom" id="pg6-uv-X5H"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="WP7-Ek-JB2"/>
-                                <exclude reference="pg6-uv-X5H"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="tableView" destination="pkg-Mz-Psl" id="GTx-Bm-34a"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rS7-dx-ujd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="637" y="726"/>
         </scene>
     </scenes>
 </document>
