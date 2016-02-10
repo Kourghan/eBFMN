@@ -135,6 +135,11 @@
 		F99096A21BE020CB00E1D629 /* BFMShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969B1BE020CB00E1D629 /* BFMShopModel.m */; };
 		F99096A31BE020CB00E1D629 /* BFMShopCollectionAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */; };
 		F99096A41BE020CB00E1D629 /* BFMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99096A11BE020CB00E1D629 /* BFMShopViewController.m */; };
+		F9F262551C6B799600402983 /* BFMCardPresentingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F262541C6B799600402983 /* BFMCardPresentingView.m */; settings = {ASSET_TAGS = (); }; };
+		F9F262581C6B873300402983 /* BFMCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F262571C6B873300402983 /* BFMCardView.m */; settings = {ASSET_TAGS = (); }; };
+		F9F2625A1C6B875200402983 /* BFMCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9F262591C6B875200402983 /* BFMCardView.xib */; settings = {ASSET_TAGS = (); }; };
+		F9F2625C1C6B884E00402983 /* BFMCardView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9F2625B1C6B884E00402983 /* BFMCardView1.xib */; settings = {ASSET_TAGS = (); }; };
+		F9F2625E1C6B8EF500402983 /* ocraextended.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9F2625D1C6B8EF500402983 /* ocraextended.ttf */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -393,6 +398,13 @@
 		F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMShopCollectionAdapter.m; sourceTree = "<group>"; };
 		F99096A01BE020CB00E1D629 /* BFMShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMShopViewController.h; sourceTree = "<group>"; };
 		F99096A11BE020CB00E1D629 /* BFMShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMShopViewController.m; sourceTree = "<group>"; };
+		F9F262531C6B799600402983 /* BFMCardPresentingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMCardPresentingView.h; sourceTree = "<group>"; };
+		F9F262541C6B799600402983 /* BFMCardPresentingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMCardPresentingView.m; sourceTree = "<group>"; };
+		F9F262561C6B873300402983 /* BFMCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMCardView.h; sourceTree = "<group>"; };
+		F9F262571C6B873300402983 /* BFMCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMCardView.m; sourceTree = "<group>"; };
+		F9F262591C6B875200402983 /* BFMCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMCardView.xib; sourceTree = "<group>"; };
+		F9F2625B1C6B884E00402983 /* BFMCardView1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMCardView1.xib; sourceTree = "<group>"; };
+		F9F2625D1C6B8EF500402983 /* ocraextended.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ocraextended.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1088,6 +1100,7 @@
 		61FD3D761BA8426600F4CEFB /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				F9F262521C6B796300402983 /* Card View */,
 				61BEFE321BDEF1BE0030A05D /* Goals */,
 				6135F3791BAF423700B29DE3 /* Benefits */,
 				61FD3D771BA8438500F4CEFB /* BFMProfileViewController.h */,
@@ -1177,6 +1190,20 @@
 			);
 			name = ViewController;
 			path = Classes/Screens/Shop/ViewController;
+			sourceTree = "<group>";
+		};
+		F9F262521C6B796300402983 /* Card View */ = {
+			isa = PBXGroup;
+			children = (
+				F9F262531C6B799600402983 /* BFMCardPresentingView.h */,
+				F9F262541C6B799600402983 /* BFMCardPresentingView.m */,
+				F9F262561C6B873300402983 /* BFMCardView.h */,
+				F9F262571C6B873300402983 /* BFMCardView.m */,
+				F9F262591C6B875200402983 /* BFMCardView.xib */,
+				F9F2625B1C6B884E00402983 /* BFMCardView1.xib */,
+				F9F2625D1C6B8EF500402983 /* ocraextended.ttf */,
+			);
+			name = "Card View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1280,6 +1307,8 @@
 				619E2BE71B97564A00886893 /* Images.xcassets in Resources */,
 				F96073F01BE72E9E00704692 /* BFMNewsSingleActionCell.xib in Resources */,
 				61C182101B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Light Italic.otf in Resources */,
+				F9F2625C1C6B884E00402983 /* BFMCardView1.xib in Resources */,
+				F9F2625A1C6B875200402983 /* BFMCardView.xib in Resources */,
 				61E4776A1BE8EF3A00C2659D /* Leaderboard.storyboard in Resources */,
 				61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */,
 				61C1820F1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold.otf in Resources */,
@@ -1294,6 +1323,7 @@
 				2CB1B8451B9CC37B00AC16D2 /* tabBar.storyboard in Resources */,
 				61C1820A1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black Italic.otf in Resources */,
 				61F042F71BBB2895000037CF /* earningsView.xib in Resources */,
+				F9F2625E1C6B8EF500402983 /* ocraextended.ttf in Resources */,
 				61C182121B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Regular Italic.otf in Resources */,
 				61C1820D1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Bold.otf in Resources */,
 			);
@@ -1401,8 +1431,10 @@
 				61FD3D6D1BA7096D00F4CEFB /* ODSArraySection.m in Sources */,
 				61FD3D6C1BA7096D00F4CEFB /* ODSFilteringSourceSearchController.m in Sources */,
 				F919C9261BE819360022CB02 /* BFMPendingDateHeaderView.m in Sources */,
+				F9F262551C6B799600402983 /* BFMCardPresentingView.m in Sources */,
 				61B1DD3A1BB6D97D00DB6D23 /* BFMBasePageController.m in Sources */,
 				61B1DD2F1BB6D41500DB6D23 /* BFMDashboardAdaptor.m in Sources */,
+				F9F262581C6B873300402983 /* BFMCardView.m in Sources */,
 				61E477541BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.m in Sources */,
 				613AE75A1B9B872C00300B22 /* BFMSysAccount.m in Sources */,
 				619E2BDC1B97564A00886893 /* main.m in Sources */,

@@ -17,6 +17,7 @@
 
 #import "JNKeychain+UNTExtension.h"
 #import "BFMBenefitsController.h"
+#import "BFMCardPresentingView.h"
 
 #import <MagicalRecord/MagicalRecord.h>
 
@@ -28,6 +29,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *idLabel;
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 @property (weak, nonatomic) IBOutlet UIImageView *leagueImageView;
+@property (weak, nonatomic) IBOutlet BFMCardPresentingView *cardPresentingView;
 
 @end
 
@@ -37,6 +39,7 @@
     [super viewDidLoad];
     
     [self bindUser:[BFMUser currentUser]];
+    [self setupCardPresentingView];
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -56,6 +59,15 @@
     [super viewWillDisappear:animated];
     
     [NINavigationAppearance popAppearanceForNavigationController:self.navigationController];
+}
+
+#pragma mark - Private (setup)
+
+- (void)setupCardPresentingView {
+    BFMCardPresentingView *presView = self.cardPresentingView;
+    [presView loadNib:@"BFMCardView" side:BFMCardPresentingViewSideFront];
+    [presView loadNib:@"BFMCardView1" side:BFMCardPresentingViewSideBack];
+    [presView showSide:BFMCardPresentingViewSideFront animated:NO];
 }
 
 #pragma mark - private
@@ -137,6 +149,12 @@
         [self performSegueWithIdentifier:@"goals"
                                   sender:leagues];
     }];
+}
+
+#pragma mark - IBAction
+
+- (IBAction)swapButtonTap {
+    [self.cardPresentingView switchSide];
 }
 
 #pragma mark - Navigation
