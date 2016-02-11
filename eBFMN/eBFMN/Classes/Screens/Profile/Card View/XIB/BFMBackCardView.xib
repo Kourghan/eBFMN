@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleAspectFill" id="ErP-Xi-vEW">
+        <view contentMode="scaleAspectFill" id="ErP-Xi-vEW" customClass="BFMBackCardView">
             <rect key="frame" x="0.0" y="0.0" width="340" height="214"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -24,6 +24,9 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backgroundImageView" destination="9cX-PY-gTP" id="pTW-L8-w71"/>
+            </connections>
             <point key="canvasLocation" x="243" y="229"/>
         </view>
     </objects>

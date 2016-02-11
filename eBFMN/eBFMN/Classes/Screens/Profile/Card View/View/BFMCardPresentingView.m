@@ -8,7 +8,7 @@
 
 #import "BFMCardPresentingView.h"
 
-static NSTimeInterval const kBFMCardAnimationDuration = 1.0;
+static NSTimeInterval const kBFMCardAnimationDuration = .95;
 static CGFloat const kBFMAdoptionScreeWidth = 320.f;
 static CGSize const kBFMCardSideAt320PtWidthScreen = (CGSize){306.f, 193.f};
 
@@ -74,7 +74,10 @@ static CGSize const kBFMCardSideAt320PtWidthScreen = (CGSize){306.f, 193.f};
     }
     
     self.animating = YES;
-    UIViewAnimationOptions opt1 = UIViewAnimationOptionTransitionFlipFromLeft;
+    UIViewAnimationOptions left = UIViewAnimationOptionTransitionFlipFromLeft;
+    UIViewAnimationOptions rig = UIViewAnimationOptionTransitionFlipFromRight;
+    BFMCardPresentingViewSide back = BFMCardPresentingViewSideBack;
+    UIViewAnimationOptions opt1 = (self.currentSide == back) ? rig : left;
     UIViewAnimationOptions opt2 = UIViewAnimationOptionBeginFromCurrentState;
     UIViewAnimationOptions opt3 = UIViewAnimationOptionCurveEaseInOut;
     UIView *fromView = [self viewForSide:self.currentSide];
@@ -96,8 +99,6 @@ static CGSize const kBFMCardSideAt320PtWidthScreen = (CGSize){306.f, 193.f};
           animated:YES];
 }
 
-#pragma mark - Private (accessor methods)
-
 - (void)setupView:(UIView *)view side:(BFMCardPresentingViewSide)side {
     if (side == BFMCardPresentingViewSideFront) {
         self.frontView = view;
@@ -105,6 +106,8 @@ static CGSize const kBFMCardSideAt320PtWidthScreen = (CGSize){306.f, 193.f};
         self.backView = view;
     }
 }
+
+#pragma mark - Private (accessor methods)
 
 - (UIView *)viewForSide:(BFMCardPresentingViewSide)side {
     if (side == BFMCardPresentingViewSideFront) {

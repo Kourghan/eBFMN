@@ -20,6 +20,7 @@ typedef NS_ENUM(NSInteger, BFMCardPresentingViewSide) {
 
 - (void)loadNib:(NSString *)nibName side:(BFMCardPresentingViewSide)side;
 - (void)showSide:(BFMCardPresentingViewSide)side animated:(BOOL)animated;
+- (void)setupView:(UIView *)view side:(BFMCardPresentingViewSide)side;
 - (void)switchSide;
 
 @end

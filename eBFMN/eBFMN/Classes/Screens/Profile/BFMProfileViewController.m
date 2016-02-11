@@ -65,8 +65,8 @@
 
 - (void)setupCardPresentingView {
     BFMCardPresentingView *presView = self.cardPresentingView;
-    [presView loadNib:@"BFMCardView" side:BFMCardPresentingViewSideFront];
-    [presView loadNib:@"BFMCardView1" side:BFMCardPresentingViewSideBack];
+    [presView loadNib:@"BFMFrontCardView" side:BFMCardPresentingViewSideFront];
+    [presView loadNib:@"BFMBackCardView" side:BFMCardPresentingViewSideBack];
     [presView showSide:BFMCardPresentingViewSideFront animated:NO];
 }
 
