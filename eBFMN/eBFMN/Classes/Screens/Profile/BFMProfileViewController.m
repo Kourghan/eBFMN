@@ -17,7 +17,12 @@
 
 #import "JNKeychain+UNTExtension.h"
 #import "BFMBenefitsController.h"
+
 #import "BFMCardPresentingView.h"
+#import "BFMUser+BFMCardView.h"
+#import "BFMFrontCardView.h"
+#import "BFMBackCardView.h"
+#import "UIView+BFMLoad.h"
 
 #import <MagicalRecord/MagicalRecord.h>
 
@@ -65,8 +70,15 @@
 
 - (void)setupCardPresentingView {
     BFMCardPresentingView *presView = self.cardPresentingView;
-    [presView loadNib:@"BFMFrontCardView" side:BFMCardPresentingViewSideFront];
-    [presView loadNib:@"BFMBackCardView" side:BFMCardPresentingViewSideBack];
+    
+    BFMFrontCardView *frontView = [BFMFrontCardView bfm_load];
+    [frontView configureWithDataProvider:[BFMUser currentUser]];
+    [presView setupView:frontView side:BFMCardPresentingViewSideFront];
+    
+    BFMBackCardView *backView = [BFMBackCardView bfm_load];
+    [backView configureWithDataProvider:[BFMUser currentUser]];
+    [presView setupView:backView side:BFMCardPresentingViewSideBack];
+    
     [presView showSide:BFMCardPresentingViewSideFront animated:NO];
 }
 

@@ -138,6 +138,8 @@
 		F97464861C6D285E00FF6F44 /* BFMFrontCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F97464801C6D285E00FF6F44 /* BFMFrontCardView.m */; settings = {ASSET_TAGS = (); }; };
 		F97464871C6D285E00FF6F44 /* BFMBackCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97464821C6D285E00FF6F44 /* BFMBackCardView.xib */; settings = {ASSET_TAGS = (); }; };
 		F97464881C6D285E00FF6F44 /* BFMFrontCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97464831C6D285E00FF6F44 /* BFMFrontCardView.xib */; settings = {ASSET_TAGS = (); }; };
+		F974648F1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F974648E1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.m */; settings = {ASSET_TAGS = (); }; };
+		F97464921C6D2E2600FF6F44 /* UIView+BFMLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = F97464911C6D2E2600FF6F44 /* UIView+BFMLoad.m */; settings = {ASSET_TAGS = (); }; };
 		F99096A21BE020CB00E1D629 /* BFMShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969B1BE020CB00E1D629 /* BFMShopModel.m */; };
 		F99096A31BE020CB00E1D629 /* BFMShopCollectionAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */; };
 		F99096A41BE020CB00E1D629 /* BFMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99096A11BE020CB00E1D629 /* BFMShopViewController.m */; };
@@ -404,6 +406,10 @@
 		F97464801C6D285E00FF6F44 /* BFMFrontCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMFrontCardView.m; sourceTree = "<group>"; };
 		F97464821C6D285E00FF6F44 /* BFMBackCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMBackCardView.xib; sourceTree = "<group>"; };
 		F97464831C6D285E00FF6F44 /* BFMFrontCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMFrontCardView.xib; sourceTree = "<group>"; };
+		F974648D1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BFMUser+BFMCardView.h"; sourceTree = "<group>"; };
+		F974648E1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BFMUser+BFMCardView.m"; sourceTree = "<group>"; };
+		F97464901C6D2E2600FF6F44 /* UIView+BFMLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BFMLoad.h"; sourceTree = "<group>"; };
+		F97464911C6D2E2600FF6F44 /* UIView+BFMLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BFMLoad.m"; sourceTree = "<group>"; };
 		F990969A1BE020CB00E1D629 /* BFMShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMShopModel.h; sourceTree = "<group>"; };
 		F990969B1BE020CB00E1D629 /* BFMShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMShopModel.m; sourceTree = "<group>"; };
 		F990969D1BE020CB00E1D629 /* BFMShopCollectionAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMShopCollectionAdapter.h; sourceTree = "<group>"; };
@@ -1152,6 +1158,7 @@
 		F93D3BC01C6D25BE002456D6 /* Card View */ = {
 			isa = PBXGroup;
 			children = (
+				F974648C1C6D2DFA00FF6F44 /* Category */,
 				F97464771C6D285E00FF6F44 /* Protocol */,
 				F974647A1C6D285E00FF6F44 /* View */,
 				F97464811C6D285E00FF6F44 /* XIB */,
@@ -1207,6 +1214,17 @@
 				F97464831C6D285E00FF6F44 /* BFMFrontCardView.xib */,
 			);
 			path = XIB;
+			sourceTree = "<group>";
+		};
+		F974648C1C6D2DFA00FF6F44 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F974648D1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.h */,
+				F974648E1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.m */,
+				F97464901C6D2E2600FF6F44 /* UIView+BFMLoad.h */,
+				F97464911C6D2E2600FF6F44 /* UIView+BFMLoad.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		F99096991BE020CB00E1D629 /* Model */ = {
@@ -1438,7 +1456,9 @@
 				F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */,
 				61FD3D661BA7096D00F4CEFB /* ODSTableAdapter.m in Sources */,
 				61F042F21BBB1F2D000037CF /* iCarousel.m in Sources */,
+				F974648F1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.m in Sources */,
 				613AE7731B9CCC9600300B22 /* BFMAccount+Extension.m in Sources */,
+				F97464921C6D2E2600FF6F44 /* UIView+BFMLoad.m in Sources */,
 				61F042F51BBB214A000037CF /* BFMCarouselDataSource.m in Sources */,
 				2CF024EF1B9A409A009E8959 /* BFMTabBarController.m in Sources */,
 				613AE7721B9CC8CA00300B22 /* NINavigationAppearance.m in Sources */,
