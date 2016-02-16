@@ -14,11 +14,14 @@
 
 #pragma mark - PageViewController
 
-+ (UIViewController *)initialController {
-    BFMBasePageController *controller = [[UIStoryboard dashboardStoryboard] instantiateViewControllerWithIdentifier:@"earningsPage"];
-    controller.index = 0;
-    
-    return controller;
++ (UIViewController *)initialControllerWithDelegate:(id<BFMEarningsPageDelegate>)delegate; {
+	BFMBasePageController *controller = [[UIStoryboard dashboardStoryboard] instantiateViewControllerWithIdentifier:@"earningsPage"];
+	controller.index = 0;
+	if ([controller isKindOfClass:[BFMEarningsPage class]]) {
+		[(BFMEarningsPage *)controller setDelegate:delegate];
+	}
+	
+	return controller;
 }
 
 

@@ -14,8 +14,10 @@
 #import "BFMDefaultNavagtionBarAppearance.h"
 
 #import "UIColor+Extensions.h"
-
+#import "UIStoryboard+BFMStoryboards.h"
 #import "BFMUser+Extension.h"
+
+#import "BFMPrizeCategorisController.h"
 
 @interface BFMDashboardViewController ()
 
@@ -47,6 +49,13 @@
     [NINavigationAppearance popAppearanceForNavigationController:self.navigationController];
 }
 
+#pragma mark - Protocol
+
+- (void)showPrizes {
+	BFMPrizeCategorisController *categories = [[UIStoryboard prizesStoryboard] instantiateViewControllerWithIdentifier:@"categories"];
+	[self.navigationController pushViewController:categories animated:YES];
+}
+
 #pragma mark - Network
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -63,8 +72,8 @@
         
         thisControl.pageIndicatorTintColor = [UIColor lightGrayColor];
         thisControl.currentPageIndicatorTintColor = [UIColor bfm_defaultNavigationBlue];
-        
-        [self.pageController setViewControllers:@[[BFMDashboardAdaptor initialController]]
+			
+        [self.pageController setViewControllers:@[[BFMDashboardAdaptor initialControllerWithDelegate:self]]
                                       direction:UIPageViewControllerNavigationDirectionForward
                                        animated:YES
                                      completion:nil];

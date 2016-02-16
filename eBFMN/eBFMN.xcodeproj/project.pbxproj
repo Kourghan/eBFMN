@@ -86,6 +86,9 @@
 		61C182151B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C182071B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold.otf */; };
 		61C182161B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C182081B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf */; };
 		61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C182091B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf */; };
+		61CFBC211C6CA1CA00AACBC0 /* BFMPrizeCategorisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CFBC201C6CA1CA00AACBC0 /* BFMPrizeCategorisController.m */; };
+		61CFBC231C6CA21200AACBC0 /* Prize.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CFBC221C6CA21200AACBC0 /* Prize.storyboard */; };
+		61CFBC361C6CCF2800AACBC0 /* BFMPrizeCategoriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CFBC351C6CCF2800AACBC0 /* BFMPrizeCategoriesViewModel.m */; };
 		61E477541BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E477511BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.m */; };
 		61E477551BE66C9C00C2659D /* BFMPointsRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E477531BE66C9C00C2659D /* BFMPointsRecord.m */; };
 		61E4775A1BE66F5300C2659D /* BFMPendingPointsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E477591BE66F5300C2659D /* BFMPendingPointsController.m */; };
@@ -296,6 +299,13 @@
 		61C182071B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Semibold.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Semibold.otf"; sourceTree = "<group>"; };
 		61C182081B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Thin Italic.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Thin Italic.otf"; sourceTree = "<group>"; };
 		61C182091B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mark Simonson - Proxima Nova Thin.otf"; path = "Resources/Fonts/Mark Simonson - Proxima Nova Thin.otf"; sourceTree = "<group>"; };
+		61CFBC1F1C6CA1CA00AACBC0 /* BFMPrizeCategorisController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPrizeCategorisController.h; sourceTree = "<group>"; };
+		61CFBC201C6CA1CA00AACBC0 /* BFMPrizeCategorisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPrizeCategorisController.m; sourceTree = "<group>"; };
+		61CFBC221C6CA21200AACBC0 /* Prize.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Prize.storyboard; path = Resources/Storyboards/Prize.storyboard; sourceTree = "<group>"; };
+		61CFBC301C6CA70A00AACBC0 /* eBFMN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eBFMN-Bridging-Header.h"; sourceTree = "<group>"; };
+		61CFBC331C6CC9D400AACBC0 /* eBFMN-Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "eBFMN-Swift.h"; sourceTree = "<group>"; };
+		61CFBC341C6CCF2800AACBC0 /* BFMPrizeCategoriesViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPrizeCategoriesViewModel.h; sourceTree = "<group>"; };
+		61CFBC351C6CCF2800AACBC0 /* BFMPrizeCategoriesViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPrizeCategoriesViewModel.m; sourceTree = "<group>"; };
 		61E477501BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMPointsRecord+CoreDataProperties.h"; path = "Classes/Models/Points Record/BFMPointsRecord+CoreDataProperties.h"; sourceTree = "<group>"; };
 		61E477511BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMPointsRecord+CoreDataProperties.m"; path = "Classes/Models/Points Record/BFMPointsRecord+CoreDataProperties.m"; sourceTree = "<group>"; };
 		61E477521BE66C9C00C2659D /* BFMPointsRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPointsRecord.h; path = "Classes/Models/Points Record/BFMPointsRecord.h"; sourceTree = "<group>"; };
@@ -674,8 +684,10 @@
 		619E2BD91B97564A00886893 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				61CFBC301C6CA70A00AACBC0 /* eBFMN-Bridging-Header.h */,
 				619E2BDA1B97564A00886893 /* Info.plist */,
 				619E2BDB1B97564A00886893 /* main.m */,
+				61CFBC331C6CC9D400AACBC0 /* eBFMN-Swift.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -773,6 +785,7 @@
 				2CB1B83D1B9CC37B00AC16D2 /* Notifications.storyboard */,
 				61E477721BE8EF4200C2659D /* Profile.storyboard */,
 				2CB1B83F1B9CC37B00AC16D2 /* tabBar.storyboard */,
+				61CFBC221C6CA21200AACBC0 /* Prize.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -1153,6 +1166,8 @@
 			children = (
 				F990969A1BE020CB00E1D629 /* BFMShopModel.h */,
 				F990969B1BE020CB00E1D629 /* BFMShopModel.m */,
+				61CFBC341C6CCF2800AACBC0 /* BFMPrizeCategoriesViewModel.h */,
+				61CFBC351C6CCF2800AACBC0 /* BFMPrizeCategoriesViewModel.m */,
 			);
 			name = Model;
 			path = Classes/Screens/Shop/Model;
@@ -1174,6 +1189,8 @@
 			children = (
 				F99096A01BE020CB00E1D629 /* BFMShopViewController.h */,
 				F99096A11BE020CB00E1D629 /* BFMShopViewController.m */,
+				61CFBC1F1C6CA1CA00AACBC0 /* BFMPrizeCategorisController.h */,
+				61CFBC201C6CA1CA00AACBC0 /* BFMPrizeCategorisController.m */,
 			);
 			name = ViewController;
 			path = Classes/Screens/Shop/ViewController;
@@ -1226,6 +1243,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BFM;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = eBFMN;
 				TargetAttributes = {
@@ -1294,6 +1312,7 @@
 				2CB1B8451B9CC37B00AC16D2 /* tabBar.storyboard in Resources */,
 				61C1820A1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black Italic.otf in Resources */,
 				61F042F71BBB2895000037CF /* earningsView.xib in Resources */,
+				61CFBC231C6CA21200AACBC0 /* Prize.storyboard in Resources */,
 				61C182121B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Regular Italic.otf in Resources */,
 				61C1820D1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Bold.otf in Resources */,
 			);
@@ -1368,6 +1387,7 @@
 				613AE7661B9B9F7C00300B22 /* BFMAccount.m in Sources */,
 				619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */,
 				61B1DD4D1BB83BAC00DB6D23 /* MCPercentageDoughnutView.m in Sources */,
+				61CFBC361C6CCF2800AACBC0 /* BFMPrizeCategoriesViewModel.m in Sources */,
 				F919C91E1BE7ECB70022CB02 /* BFMPendingTableAdapter.m in Sources */,
 				F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */,
 				61FD3D661BA7096D00F4CEFB /* ODSTableAdapter.m in Sources */,
@@ -1406,6 +1426,7 @@
 				61E477541BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.m in Sources */,
 				613AE75A1B9B872C00300B22 /* BFMSysAccount.m in Sources */,
 				619E2BDC1B97564A00886893 /* main.m in Sources */,
+				61CFBC211C6CA1CA00AACBC0 /* BFMPrizeCategorisController.m in Sources */,
 				613AE76D1B9C683800300B22 /* BFMLeaderboardModel.m in Sources */,
 				61C181F01B98D62700D5FAC8 /* BFMSessionManager.m in Sources */,
 				6135F37C1BAF425400B29DE3 /* BFMBenefitsController.m in Sources */,
@@ -1658,6 +1679,7 @@
 			baseConfigurationReference = 9A2ED38684585DCC5C04EDB7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Paul Belogour (38YX9V28PF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Paul Belogour (38YX9V28PF)";
 				INFOPLIST_FILE = eBFMN/Info.plist;
@@ -1666,6 +1688,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebfmn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "95dce0b3-61c3-42c1-96f6-d1a43504cd99";
+				SWIFT_OBJC_BRIDGING_HEADER = "eBFMN/eBFMN-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1674,6 +1698,7 @@
 			baseConfigurationReference = ED90EA9A0FFE50580AD1AD04 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Paul Belogour (38YX9V28PF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Paul Belogour (38YX9V28PF)";
 				INFOPLIST_FILE = eBFMN/Info.plist;
@@ -1682,6 +1707,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebfmn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "95dce0b3-61c3-42c1-96f6-d1a43504cd99";
+				SWIFT_OBJC_BRIDGING_HEADER = "eBFMN/eBFMN-Bridging-Header.h";
 			};
 			name = Release;
 		};

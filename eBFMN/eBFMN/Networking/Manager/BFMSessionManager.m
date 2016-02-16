@@ -9,7 +9,7 @@
 #import "BFMSessionManager.h"
 
 static NSString *developmentServerURL = @"http://164.40.131.211:80/API/";
-static NSString *productionServerURL = @"";
+static NSString *productionServerURL = @"http://134.213.70.134:81/API/";
 
 @implementation BFMSessionManager
 
@@ -17,7 +17,7 @@ static NSString *productionServerURL = @"";
     static BFMSessionManager *sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedManager = [[BFMSessionManager alloc] initWithBaseURL:[NSURL URLWithString:developmentServerURL]];
+        sharedManager = [[BFMSessionManager alloc] initWithBaseURL:[NSURL URLWithString:productionServerURL]];
     });
     
     return sharedManager;

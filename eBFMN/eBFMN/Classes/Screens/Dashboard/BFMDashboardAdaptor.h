@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "BFMEarningsPage.h"
 
 @interface BFMDashboardAdaptor : NSObject
 
-+ (UIViewController *)initialController;
++ (UIViewController *)initialControllerWithDelegate:(id<BFMEarningsPageDelegate>)delegate;
 
 @end

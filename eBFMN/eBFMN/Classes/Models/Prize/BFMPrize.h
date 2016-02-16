@@ -15,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BFMPrize : NSManagedObject
 
-+ (void)prizesWithCompletition:(void (^)(NSArray *prizes, NSError *error))completition;
++ (void)prizeCategoriesWithCompletion:(void (^)(NSArray *categories, NSError *error))completition;
++ (void)prizesInCategory:(NSString *)idCategory withCompletion:(void (^)(NSArray *prizes, NSError *error))completition;
++ (void)prizeBannerWithCompletion:(void (^)(NSArray *banners, NSError *error))completition;
 + (void)currentPrizeWithComplatition:(void (^)(BFMPrize *prize, NSError *error))completition;
 + (void)savePrize:(BFMPrize *)prize withCompletition:(void (^)(NSError *error))completition;
 

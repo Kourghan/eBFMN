@@ -47,9 +47,12 @@
 }
 
 - (void)loadPrizesWithCallback:(void (^)(NSError *))completition {
-    [BFMPrize prizesWithCompletition:^(NSArray * prizes, NSError * error) {
-        completition(error);
-    }];
+	[BFMPrize prizeCategoriesWithCompletion:^(NSArray *categories, NSError *error) {
+		completition(error);
+	}];
+//    [BFMPrize prizesWithCompletition:^(NSArray * prizes, NSError * error) {
+//        completition(error);
+//    }];
 }
 
 @end

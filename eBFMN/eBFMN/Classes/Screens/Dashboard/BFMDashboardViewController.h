@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BFMEarningsPage.h"
 
-@interface BFMDashboardViewController : UIViewController
+@interface BFMDashboardViewController : UIViewController<BFMEarningsPageDelegate>
 
 @end
