@@ -17,7 +17,7 @@ static NSString *productionServerURL = @"http://134.213.70.134:81/API/";
     static BFMSessionManager *sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedManager = [[BFMSessionManager alloc] initWithBaseURL:[NSURL URLWithString:productionServerURL]];
+        sharedManager = [[BFMSessionManager alloc] initWithBaseURL:[NSURL URLWithString:developmentServerURL]];
     });
     
     return sharedManager;

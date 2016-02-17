@@ -81,8 +81,8 @@
 				 } else {
 					 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
 					 BFMPrize *prize = [FEMDeserializer  objectFromRepresentation:[responseObject valueForKey:@"Data"]
-																																mapping:[BFMPrize defaultMapping]
-																																context:context];
+																		  mapping:[BFMPrize defaultMapping]
+																		  context:context];
 					 [context MR_saveToPersistentStoreAndWait];
 					 completition(prize, nil);
 				 }

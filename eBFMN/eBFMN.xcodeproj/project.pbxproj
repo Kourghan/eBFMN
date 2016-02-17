@@ -46,6 +46,8 @@
 		6189D8481BEA2352009880B1 /* BFMPendingDateHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6189D84A1BEA2352009880B1 /* BFMPendingDateHeaderView.xib */; };
 		6189D84D1BEA235E009880B1 /* BFMShopConcreteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6189D84F1BEA235E009880B1 /* BFMShopConcreteCell.xib */; };
 		6189D8521BEA2370009880B1 /* BFMNewsTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6189D8541BEA2370009880B1 /* BFMNewsTextCell.xib */; };
+		618AC45E1C747253005FB7C5 /* BFMPrizeCategory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 618AC45B1C747253005FB7C5 /* BFMPrizeCategory+CoreDataProperties.m */; };
+		618AC45F1C747253005FB7C5 /* BFMPrizeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 618AC45D1C747253005FB7C5 /* BFMPrizeCategory.m */; };
 		61903C201BAC0CBB0018B3A0 /* BFMNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C1F1BAC0CBB0018B3A0 /* BFMNotification.m */; };
 		61903C241BAC0CE70018B3A0 /* BFMNotificationsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C231BAC0CE70018B3A0 /* BFMNotificationsModel.m */; };
 		61903C281BAC0D960018B3A0 /* BFMNotificationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C271BAC0D960018B3A0 /* BFMNotificationsController.m */; };
@@ -231,6 +233,10 @@
 		6189D8511BEA2361009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BFMShopConcreteCell.strings"; sourceTree = "<group>"; };
 		6189D8531BEA2370009880B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BFMNewsTextCell.xib; sourceTree = "<group>"; };
 		6189D8561BEA2374009880B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BFMNewsTextCell.strings"; sourceTree = "<group>"; };
+		618AC45A1C747253005FB7C5 /* BFMPrizeCategory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMPrizeCategory+CoreDataProperties.h"; path = "Classes/Models/Prize/BFMPrizeCategory+CoreDataProperties.h"; sourceTree = "<group>"; };
+		618AC45B1C747253005FB7C5 /* BFMPrizeCategory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMPrizeCategory+CoreDataProperties.m"; path = "Classes/Models/Prize/BFMPrizeCategory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		618AC45C1C747253005FB7C5 /* BFMPrizeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPrizeCategory.h; path = Classes/Models/Prize/BFMPrizeCategory.h; sourceTree = "<group>"; };
+		618AC45D1C747253005FB7C5 /* BFMPrizeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMPrizeCategory.m; path = Classes/Models/Prize/BFMPrizeCategory.m; sourceTree = "<group>"; };
 		61903C1E1BAC0CBB0018B3A0 /* BFMNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNotification.h; path = Classes/Models/Notifications/BFMNotification.h; sourceTree = "<group>"; };
 		61903C1F1BAC0CBB0018B3A0 /* BFMNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNotification.m; path = Classes/Models/Notifications/BFMNotification.m; sourceTree = "<group>"; };
 		61903C221BAC0CE70018B3A0 /* BFMNotificationsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNotificationsModel.h; path = Classes/Models/Notifications/BFMNotificationsModel.h; sourceTree = "<group>"; };
@@ -979,6 +985,10 @@
 		61EC27EC1BCA85B900DD3812 /* Prize */ = {
 			isa = PBXGroup;
 			children = (
+				618AC45A1C747253005FB7C5 /* BFMPrizeCategory+CoreDataProperties.h */,
+				618AC45B1C747253005FB7C5 /* BFMPrizeCategory+CoreDataProperties.m */,
+				618AC45C1C747253005FB7C5 /* BFMPrizeCategory.h */,
+				618AC45D1C747253005FB7C5 /* BFMPrizeCategory.m */,
 				61EC27E61BCA858900DD3812 /* BFMPrize+CoreDataProperties.h */,
 				61EC27E71BCA858900DD3812 /* BFMPrize+CoreDataProperties.m */,
 				61EC27E81BCA858900DD3812 /* BFMPrize.h */,
@@ -1368,6 +1378,7 @@
 				61E477631BE6CA4500C2659D /* BFMTransactionCell.m in Sources */,
 				2CAD81411BABCF4A00DEF6F3 /* BFMLeaderboardViewController.m in Sources */,
 				61FD3CEE1BA7036700F4CEFB /* BFMNewsRecord.m in Sources */,
+				618AC45F1C747253005FB7C5 /* BFMPrizeCategory.m in Sources */,
 				619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */,
 				613C28BD1BA3415C00B2856A /* BFMNewsModel.m in Sources */,
 				2CF024F31B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m in Sources */,
@@ -1453,6 +1464,7 @@
 				61B1DD4B1BB83BAC00DB6D23 /* MCNewCustomLayer.m in Sources */,
 				61EC27EF1BCA951700DD3812 /* BFMPrizeCell.m in Sources */,
 				61FD3D691BA7096D00F4CEFB /* ODSEventBroadcaster.m in Sources */,
+				618AC45E1C747253005FB7C5 /* BFMPrizeCategory+CoreDataProperties.m in Sources */,
 				61B1DD4C1BB83BAC00DB6D23 /* MCNewCustomLayeredView.m in Sources */,
 				613AE7801B9CD04400300B22 /* ELAAppearance.m in Sources */,
 				61E477551BE66C9C00C2659D /* BFMPointsRecord.m in Sources */,
