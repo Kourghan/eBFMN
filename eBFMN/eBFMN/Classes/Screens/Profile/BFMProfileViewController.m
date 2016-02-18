@@ -35,6 +35,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 @property (weak, nonatomic) IBOutlet UIImageView *leagueImageView;
 @property (weak, nonatomic) IBOutlet BFMCardPresentingView *cardPresentingView;
+@property (weak, nonatomic) IBOutlet BFMCardPresentingView *botCardView;
 
 @end
 
@@ -69,7 +70,26 @@
 #pragma mark - Private (setup)
 
 - (void)setupCardPresentingView {
+    [self setupTopCardView];
+    [self setupBottomCardView];
+}
+
+- (void)setupTopCardView {
     BFMCardPresentingView *presView = self.cardPresentingView;
+    
+    BFMFrontCardView *frontView = [BFMFrontCardView bfm_load];
+    [frontView configureWithDataProvider:[BFMUser currentUser]];
+    [presView setupView:frontView side:BFMCardPresentingViewSideFront];
+    
+    BFMBackCardView *backView = [BFMBackCardView bfm_load];
+    [backView configureWithDataProvider:[BFMUser currentUser]];
+    [presView setupView:backView side:BFMCardPresentingViewSideBack];
+    
+    [presView showSide:BFMCardPresentingViewSideFront animated:NO];
+}
+
+- (void)setupBottomCardView {
+    BFMCardPresentingView *presView = self.botCardView;
     
     BFMFrontCardView *frontView = [BFMFrontCardView bfm_load];
     [frontView configureWithDataProvider:[BFMUser currentUser]];
@@ -167,6 +187,10 @@
 
 - (IBAction)swapButtonTap {
     [self.cardPresentingView switchSide];
+}
+
+- (IBAction)botSwapButtonTap {
+    [self.botCardView switchSide];
 }
 
 #pragma mark - Navigation
