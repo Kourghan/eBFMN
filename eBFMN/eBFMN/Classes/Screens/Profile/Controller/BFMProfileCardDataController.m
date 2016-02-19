@@ -134,7 +134,7 @@ static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
         }
             
         case  BFMLeagueTypeDiamand: {
-            return @"Sapphire";
+            return @"Diamond";
         }
             
         default:
