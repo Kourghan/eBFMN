@@ -127,6 +127,8 @@
 		F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9201BE806510022CB02 /* BFMPendingCell.m */; };
 		F919C9261BE819360022CB02 /* BFMPendingDateHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */; };
 		F919C92C1BE827300022CB02 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C92B1BE827300022CB02 /* NSDate+Utilities.m */; };
+		F92367F01C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = F92367EF1C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.m */; settings = {ASSET_TAGS = (); }; };
+		F92367F41C76838B000F5DEE /* BFMProfileCardDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = F92367F31C76838B000F5DEE /* BFMProfileCardDataController.m */; settings = {ASSET_TAGS = (); }; };
 		F93D3BD31C6D25BE002456D6 /* ocraextended.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F93D3BCC1C6D25BE002456D6 /* ocraextended.ttf */; settings = {ASSET_TAGS = (); }; };
 		F96073E41BE723D800704692 /* BFMNewsTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E31BE723D800704692 /* BFMNewsTextCell.m */; };
 		F96073EA1BE72D5000704692 /* BFMNewsActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E81BE72D5000704692 /* BFMNewsActionCell.m */; };
@@ -387,6 +389,10 @@
 		F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPendingDateHeaderView.m; sourceTree = "<group>"; };
 		F919C92A1BE827300022CB02 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		F919C92B1BE827300022CB02 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		F92367EE1C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+BFMAdjust.h"; sourceTree = "<group>"; };
+		F92367EF1C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+BFMAdjust.m"; sourceTree = "<group>"; };
+		F92367F21C76838B000F5DEE /* BFMProfileCardDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMProfileCardDataController.h; sourceTree = "<group>"; };
+		F92367F31C76838B000F5DEE /* BFMProfileCardDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMProfileCardDataController.m; sourceTree = "<group>"; };
 		F93D3BCC1C6D25BE002456D6 /* ocraextended.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ocraextended.ttf; sourceTree = "<group>"; };
 		F96073E21BE723D800704692 /* BFMNewsTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMNewsTextCell.h; sourceTree = "<group>"; };
 		F96073E31BE723D800704692 /* BFMNewsTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMNewsTextCell.m; sourceTree = "<group>"; };
@@ -820,6 +826,7 @@
 		619E2C0A1B977D4800886893 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				F92367ED1C767FD4000F5DEE /* NSLayoutConstraint */,
 				2CF024F01B9A413C009E8959 /* UIStoryboard */,
 				619E2C101B977DB400886893 /* UIColor */,
 				619E2C0F1B977DAC00886893 /* Keychain */,
@@ -1111,6 +1118,7 @@
 		61FD3D761BA8426600F4CEFB /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				F92367F11C76836E000F5DEE /* Controller */,
 				F93D3BC01C6D25BE002456D6 /* Card View */,
 				61BEFE321BDEF1BE0030A05D /* Goals */,
 				6135F3791BAF423700B29DE3 /* Benefits */,
@@ -1153,6 +1161,26 @@
 			);
 			name = "NSDate-Utilities";
 			path = "Lib/NSDate-Utilities";
+			sourceTree = "<group>";
+		};
+		F92367ED1C767FD4000F5DEE /* NSLayoutConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				F92367EE1C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.h */,
+				F92367EF1C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.m */,
+			);
+			name = NSLayoutConstraint;
+			path = Misc/Categories/NSLayoutConstraint;
+			sourceTree = "<group>";
+		};
+		F92367F11C76836E000F5DEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F92367F21C76838B000F5DEE /* BFMProfileCardDataController.h */,
+				F92367F31C76838B000F5DEE /* BFMProfileCardDataController.m */,
+			);
+			name = Controller;
+			path = Classes/Screens/Profile/Controller;
 			sourceTree = "<group>";
 		};
 		F93D3BC01C6D25BE002456D6 /* Card View */ = {
@@ -1500,6 +1528,7 @@
 				F96073EA1BE72D5000704692 /* BFMNewsActionCell.m in Sources */,
 				2C8E49EE1BDF9C6500A9F8F9 /* BFMDetailedNewsViewController.m in Sources */,
 				61F043071BBBF4B3000037CF /* BFMAccountCell.m in Sources */,
+				F92367F01C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.m in Sources */,
 				61FD3D711BA7096D00F4CEFB /* ODSFetchedResultsDataSource.m in Sources */,
 				F97464841C6D285E00FF6F44 /* BFMBackCardView.m in Sources */,
 				61BEFE351BDEF1E00030A05D /* BFMGoalsAdapter.m in Sources */,
@@ -1522,6 +1551,7 @@
 				61B1DD4C1BB83BAC00DB6D23 /* MCNewCustomLayeredView.m in Sources */,
 				613AE7801B9CD04400300B22 /* ELAAppearance.m in Sources */,
 				61E477551BE66C9C00C2659D /* BFMPointsRecord.m in Sources */,
+				F92367F41C76838B000F5DEE /* BFMProfileCardDataController.m in Sources */,
 				613AE74E1B9B78CE00300B22 /* ebfmn.xcdatamodeld in Sources */,
 				619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */,
 				613C28C11BA3437700B2856A /* BFMNewsCell.m in Sources */,

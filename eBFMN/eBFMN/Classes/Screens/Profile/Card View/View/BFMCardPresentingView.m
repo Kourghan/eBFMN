@@ -20,8 +20,8 @@ static CGSize const kBFMCardSideAt320PtWidthScreen = (CGSize){306.f, 193.f};
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *heightConstraint;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *widthConstraint;
 
-@property (nonatomic, strong) UIView *frontView;
-@property (nonatomic, strong) UIView *backView;
+@property (nonatomic, strong, readwrite) UIView *frontView;
+@property (nonatomic, strong, readwrite) UIView *backView;
 
 @end
 

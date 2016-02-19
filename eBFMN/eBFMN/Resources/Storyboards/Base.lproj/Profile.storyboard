@@ -95,7 +95,13 @@
                             <constraint firstItem="Rpy-xm-LgG" firstAttribute="width" secondItem="gof-Np-xaK" secondAttribute="width" id="Hba-LD-DN1"/>
                             <constraint firstItem="njf-4S-NRM" firstAttribute="top" secondItem="dnO-gz-OCq" secondAttribute="bottom" constant="40" id="NJm-qz-iYA"/>
                             <constraint firstItem="Rpy-xm-LgG" firstAttribute="height" secondItem="gof-Np-xaK" secondAttribute="height" id="RmE-uk-oJP"/>
-                            <constraint firstItem="gof-Np-xaK" firstAttribute="top" secondItem="78w-pv-7uF" secondAttribute="bottom" constant="45" id="VEb-QX-SvF"/>
+                            <constraint firstItem="gof-Np-xaK" firstAttribute="top" secondItem="78w-pv-7uF" secondAttribute="bottom" constant="45" id="VEb-QX-SvF">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bfm_phone4Const">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
                             <constraint firstItem="o3z-4a-1BR" firstAttribute="bottom" secondItem="Rpy-xm-LgG" secondAttribute="bottom" id="bLh-so-hr2"/>
                             <constraint firstItem="o3z-4a-1BR" firstAttribute="trailing" secondItem="Rpy-xm-LgG" secondAttribute="trailing" id="dO8-oe-eBZ"/>
                             <constraint firstItem="TMz-zq-HaX" firstAttribute="bottom" secondItem="gof-Np-xaK" secondAttribute="bottom" id="dXr-vx-bv1"/>
@@ -107,7 +113,13 @@
                             <constraint firstItem="Rpy-xm-LgG" firstAttribute="centerX" secondItem="yZy-Wd-keZ" secondAttribute="centerX" id="s0p-x2-0UG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hfD-lJ-m4Q"/>
+                    <navigationItem key="navigationItem" id="hfD-lJ-m4Q">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="btc-Xp-Hk5">
+                            <connections>
+                                <action selector="logout:" destination="Dgx-vF-3YV" id="D2r-cT-sxm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="botCardView" destination="Rpy-xm-LgG" id="4ax-9G-rAc"/>
                         <outlet property="cardPresentingView" destination="gof-Np-xaK" id="eRq-Rz-DGn"/>

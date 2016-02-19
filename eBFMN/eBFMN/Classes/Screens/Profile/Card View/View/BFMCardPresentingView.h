@@ -17,6 +17,8 @@ typedef NS_ENUM(NSInteger, BFMCardPresentingViewSide) {
 
 @property (nonatomic, readonly) BFMCardPresentingViewSide currentSide;
 @property (nonatomic, readonly, getter = isAnimating) BOOL animating;
+@property (nonatomic, strong, readonly) UIView *frontView;
+@property (nonatomic, strong, readonly) UIView *backView;
 
 - (void)loadNib:(NSString *)nibName side:(BFMCardPresentingViewSide)side;
 - (void)showSide:(BFMCardPresentingViewSide)side animated:(BOOL)animated;

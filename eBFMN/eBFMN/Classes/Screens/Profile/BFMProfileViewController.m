@@ -15,6 +15,7 @@
 #import "BFMPointsRecord.h"
 #import "BFMNewsRecord.h"
 
+#import "BFMProfileCardDataController.h"
 #import "JNKeychain+UNTExtension.h"
 #import "BFMBenefitsController.h"
 
@@ -25,6 +26,8 @@
 #import "UIView+BFMLoad.h"
 
 #import <MagicalRecord/MagicalRecord.h>
+
+#define BFM_CARD_CON BFMProfileCardDataController
 
 @interface BFMProfileViewController ()
 
@@ -59,6 +62,9 @@
     
     [NINavigationAppearance pushAppearanceForNavigationController:self.navigationController];
     [BFMDefaultNavagtionBarAppearance applyTo:self.navigationController.navigationBar];
+    
+    [self loadBenefits];
+    [self loadGoals];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -115,28 +121,21 @@
 }
 
 - (void)bindType:(BFMLeagueType)type {
-    UIImage *image;
+    [BFMProfileCardDataController setCurrentType:type];
+    [self updateUI];
+}
+
+- (void)updateUI {
+    UIImage *frontImage = [BFM_CARD_CON imageForCurrentType:NO];
+    UIImage *backImage = [BFM_CARD_CON imageForCurrentType:YES];
+    NSString *benefitTitle = [BFM_CARD_CON backHeaderForCurrentType];
+    NSString *benefitText = [BFM_CARD_CON benefitsTextForCurrentLeague];
+    NSString *goalText = [BFM_CARD_CON goalsTextForCurrentLeague];
     
-    switch (type) {
-        case BFMLeagueTypeSilver:
-            image = [UIImage imageNamed:@"ic_silver"];
-            break;
-        case BFMLeagueTypeGold:
-            image = [UIImage imageNamed:@"ic_gold"];
-            break;
-        case BFMLeagueTypePlatinum:
-            image = [UIImage imageNamed:@"ic_platinum"];
-            break;
-        case BFMLeagueTypeDiamand:
-            image = [UIImage imageNamed:@"ic_diamand"];
-            break;
-        default:
-            break;
-    }
-    
-    if (image) {
-        self.leagueImageView.image = image;
-    }
+    BFMCardPresentingView *presView = self.cardPresentingView;
+    BFMFrontCardView *frontCard = (id)presView.frontView;
+    [frontCard configureWithDataProvider:[BFMUser currentUser]];
+    frontCard.backgroundImageView.image = frontImage;
 }
 
 #pragma mark - Handlers
@@ -163,23 +162,25 @@
     
     [context MR_saveToPersistentStoreAndWait];
     
+    [BFMProfileCardDataController clear];
+    
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
     UIViewController *vc = [sb instantiateInitialViewController];
     vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:vc animated:YES completion:NULL];
 }
 
-- (IBAction)benefits:(UIButton *)sender {
+- (void)loadBenefits {
     [BFMUser getAllIBLeagueBenefits:^(NSDictionary *leagues, NSError *error) {
-        [self performSegueWithIdentifier:@"benefits"
-                                  sender:leagues];
+        [BFMProfileCardDataController setBenefits:leagues];
+        [self updateUI];
     }];
 }
 
-- (IBAction)goals:(UIButton *)sender {
+- (void)loadGoals {
     [BFMUser getAllIBLeagueGoals:^(NSDictionary *leagues, NSError *error) {
-        [self performSegueWithIdentifier:@"goals"
-                                  sender:leagues];
+        [BFMProfileCardDataController setGoals:leagues];
+        [self updateUI];
     }];
 }
 
