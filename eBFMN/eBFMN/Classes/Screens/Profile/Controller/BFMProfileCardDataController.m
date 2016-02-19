@@ -8,6 +8,9 @@
 
 #import "BFMProfileCardDataController.h"
 
+#import <UIKit/NSAttributedString.h>
+#import "BFMUtils.h"
+
 static NSString *const kBFMProfileDataBenefits = @"kBFMProfileDataBenefits";
 static NSString *const kBFMProfileDataGoals = @"kBFMProfileDataGoals";
 static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
@@ -148,21 +151,38 @@ static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
     return [self dictKeyForLeagueType:[self currentType]];
 }
 
-+ (NSString *)benefitsTextForLeagueType:(BFMLeagueType)type {
++ (NSAttributedString *)benefitsTextForLeagueType:(BFMLeagueType)type {
     NSString *key = [self dictKeyForLeagueType:type];
     
     if (!key.length) {
-        return @"";
+        return [[NSAttributedString alloc] initWithString:@""];
     }
     
     NSDictionary *benefits = [self benefits];
-    NSString *benefit = benefits[key];
+    NSArray *benefitContainer = benefits[key];
     
-    if ([benefit isKindOfClass:[NSString class]]) {
-        return benefit;
+    if ([benefitContainer isKindOfClass:[NSArray class]]) {
+        NSString *text = benefitContainer.firstObject;
+        NSString *webString = bfm_webStringFromString(text);
+        NSData *data = [webString dataUsingEncoding:NSUnicodeStringEncoding];
+        
+        
+        NSMutableDictionary *options = [NSMutableDictionary new];
+        [options setValue:NSHTMLTextDocumentType
+                   forKey:NSDocumentTypeDocumentAttribute];
+        [options setValue:[self benefitFont]
+                   forKey:NSFontAttributeName];
+        [options setValue:[UIColor whiteColor]
+                   forKey:NSForegroundColorAttributeName];
+        
+        NSAttributedString *attText = [[NSAttributedString alloc] initWithData:data
+                                                                       options:options
+                                                            documentAttributes:nil
+                                                                         error:nil];
+        return attText;
     }
     
-    return @"";
+    return [[NSAttributedString alloc] initWithString:@""];
 }
 
 + (NSString *)benefitsTextForCurrentLeague {
@@ -188,6 +208,12 @@ static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
 
 + (NSString *)goalsTextForCurrentLeague {
     return [self goalsTextForLeagueType:[self currentType]];
+}
+
+#pragma mark -
+
++ (UIFont *)benefitFont {
+    return [UIFont fontWithName:@"ProximaNova-Light" size:15.f];
 }
 
 @end

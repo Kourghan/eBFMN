@@ -27,7 +27,7 @@
 + (NSString *)dictKeyForLeagueType:(BFMLeagueType)type;
 + (NSString *)dictKeyForCurrentType;
 + (NSString *)benefitsTextForLeagueType:(BFMLeagueType)type;
-+ (NSString *)benefitsTextForCurrentLeague;
++ (NSAttributedString *)benefitsTextForCurrentLeague;
 + (NSString *)goalsTextForLeagueType:(BFMLeagueType)type;
 + (NSString *)goalsTextForCurrentLeague;
 

@@ -129,13 +129,19 @@
     UIImage *frontImage = [BFM_CARD_CON imageForCurrentType:NO];
     UIImage *backImage = [BFM_CARD_CON imageForCurrentType:YES];
     NSString *benefitTitle = [BFM_CARD_CON backHeaderForCurrentType];
-    NSString *benefitText = [BFM_CARD_CON benefitsTextForCurrentLeague];
+    NSAttributedString *benefitText = [BFM_CARD_CON benefitsTextForCurrentLeague];
     NSString *goalText = [BFM_CARD_CON goalsTextForCurrentLeague];
     
     BFMCardPresentingView *presView = self.cardPresentingView;
+    
     BFMFrontCardView *frontCard = (id)presView.frontView;
     [frontCard configureWithDataProvider:[BFMUser currentUser]];
     frontCard.backgroundImageView.image = frontImage;
+    
+    BFMBackCardView *backCard = (id)presView.backView;
+    backCard.backgroundImageView.image = backImage;
+    backCard.titleLabel.text = benefitTitle;
+    backCard.textLabel.attributedText = benefitText;
 }
 
 #pragma mark - Handlers

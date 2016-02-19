@@ -8,14 +8,6 @@
 
 #import "BFMBackCardView.h"
 
-@interface BFMBackCardView ()
-
-@property (nonatomic, weak) IBOutlet UIImageView *backgroundImageView;
-@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
-@property (nonatomic, weak) IBOutlet UILabel *textLabel;
-
-@end
-
 @implementation BFMBackCardView
 
 - (void)configureWithDataProvider:(id<BFMBackCardDataProvider>)provider {
