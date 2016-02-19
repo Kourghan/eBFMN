@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="340" height="214"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold" translatesAutoresizingMaskIntoConstraints="NO" id="9cX-PY-gTP">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9cX-PY-gTP">
                     <rect key="frame" x="0.0" y="0.0" width="340" height="214"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1S3-eH-uBs">
@@ -59,7 +59,4 @@
             <point key="canvasLocation" x="243" y="229"/>
         </view>
     </objects>
-    <resources>
-        <image name="gold" width="340" height="214"/>
-    </resources>
 </document>

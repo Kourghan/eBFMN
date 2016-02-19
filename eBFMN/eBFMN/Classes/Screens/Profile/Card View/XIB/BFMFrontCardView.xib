@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="340" height="214"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sapphire" translatesAutoresizingMaskIntoConstraints="NO" id="wmy-2A-9bX" userLabel="bg image view">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wmy-2A-9bX" userLabel="bg image view">
                     <rect key="frame" x="0.0" y="0.0" width="340" height="214"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pr_logo" translatesAutoresizingMaskIntoConstraints="NO" id="93S-j9-9Hr">
@@ -114,6 +114,5 @@
     </objects>
     <resources>
         <image name="pr_logo" width="106" height="82"/>
-        <image name="sapphire" width="340" height="214"/>
     </resources>
 </document>

@@ -68,60 +68,21 @@
                                     <action selector="swapButtonTap" destination="Dgx-vF-3YV" eventType="touchUpInside" id="uBC-jg-mq2"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rpy-xm-LgG" userLabel="bot card view" customClass="BFMCardPresentingView">
-                                <rect key="frame" x="-10" y="331" width="340" height="214"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="340" id="Efn-kp-CbZ"/>
-                                    <constraint firstAttribute="height" constant="214" id="bmQ-5z-BV2"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="heightConstraint" destination="bmQ-5z-BV2" id="5j4-n4-kch"/>
-                                    <outlet property="widthConstraint" destination="Efn-kp-CbZ" id="Nvn-3Z-YHj"/>
-                                </connections>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3z-4a-1BR" userLabel="bot button">
-                                <rect key="frame" x="-10" y="331" width="340" height="214"/>
-                                <connections>
-                                    <action selector="botSwapButtonTap" destination="Dgx-vF-3YV" eventType="touchUpInside" id="loX-yq-xm1"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="o3z-4a-1BR" firstAttribute="leading" secondItem="Rpy-xm-LgG" secondAttribute="leading" id="2x7-AR-myD"/>
                             <constraint firstItem="TMz-zq-HaX" firstAttribute="top" secondItem="gof-Np-xaK" secondAttribute="top" id="B70-Vx-DHp"/>
                             <constraint firstItem="gof-Np-xaK" firstAttribute="centerX" secondItem="yZy-Wd-keZ" secondAttribute="centerX" id="F8n-q3-mEu"/>
-                            <constraint firstItem="Rpy-xm-LgG" firstAttribute="width" secondItem="gof-Np-xaK" secondAttribute="width" id="Hba-LD-DN1"/>
                             <constraint firstItem="njf-4S-NRM" firstAttribute="top" secondItem="dnO-gz-OCq" secondAttribute="bottom" constant="40" id="NJm-qz-iYA"/>
-                            <constraint firstItem="Rpy-xm-LgG" firstAttribute="height" secondItem="gof-Np-xaK" secondAttribute="height" id="RmE-uk-oJP"/>
-                            <constraint firstItem="gof-Np-xaK" firstAttribute="top" secondItem="78w-pv-7uF" secondAttribute="bottom" constant="45" id="VEb-QX-SvF">
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="bfm_phone4Const">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </constraint>
-                            <constraint firstItem="o3z-4a-1BR" firstAttribute="bottom" secondItem="Rpy-xm-LgG" secondAttribute="bottom" id="bLh-so-hr2"/>
-                            <constraint firstItem="o3z-4a-1BR" firstAttribute="trailing" secondItem="Rpy-xm-LgG" secondAttribute="trailing" id="dO8-oe-eBZ"/>
+                            <constraint firstItem="gof-Np-xaK" firstAttribute="top" secondItem="78w-pv-7uF" secondAttribute="bottom" constant="45" id="VEb-QX-SvF"/>
                             <constraint firstItem="TMz-zq-HaX" firstAttribute="bottom" secondItem="gof-Np-xaK" secondAttribute="bottom" id="dXr-vx-bv1"/>
-                            <constraint firstItem="Rpy-xm-LgG" firstAttribute="top" secondItem="TMz-zq-HaX" secondAttribute="bottom" constant="8" id="eL9-bC-xbv"/>
                             <constraint firstAttribute="centerX" secondItem="dnO-gz-OCq" secondAttribute="centerX" id="fB5-Ts-Evo"/>
-                            <constraint firstItem="o3z-4a-1BR" firstAttribute="top" secondItem="Rpy-xm-LgG" secondAttribute="top" id="hkh-VG-fZJ"/>
                             <constraint firstItem="TMz-zq-HaX" firstAttribute="trailing" secondItem="gof-Np-xaK" secondAttribute="trailing" id="mHa-UG-dry"/>
                             <constraint firstItem="TMz-zq-HaX" firstAttribute="leading" secondItem="gof-Np-xaK" secondAttribute="leading" id="rCi-uP-oeR"/>
-                            <constraint firstItem="Rpy-xm-LgG" firstAttribute="centerX" secondItem="yZy-Wd-keZ" secondAttribute="centerX" id="s0p-x2-0UG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hfD-lJ-m4Q">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="btc-Xp-Hk5">
-                            <connections>
-                                <action selector="logout:" destination="Dgx-vF-3YV" id="D2r-cT-sxm"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="hfD-lJ-m4Q"/>
                     <connections>
-                        <outlet property="botCardView" destination="Rpy-xm-LgG" id="4ax-9G-rAc"/>
                         <outlet property="cardPresentingView" destination="gof-Np-xaK" id="eRq-Rz-DGn"/>
                         <outlet property="logoutButton" destination="dnO-gz-OCq" id="STf-rF-x50"/>
                         <segue destination="6PD-q0-9lx" kind="presentation" identifier="goals" modalPresentationStyle="overCurrentContext" id="Qkg-uC-x1n"/>
