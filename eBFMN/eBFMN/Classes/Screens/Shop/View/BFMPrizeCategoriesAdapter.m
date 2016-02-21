@@ -10,8 +10,8 @@
 #import "BFMPrizeCategoryCell.h"
 
 // height / width
-static CGFloat const kBFMShopCellSideRatio = 21.f / 20.f;
-static CGFloat const kBFMShopCellSideRatio6Plus =  356.f / 371.f;
+static CGFloat const kBFMShopCellSideRatio = 175.f / 160.f;
+static CGFloat const kBFMShopCellSideRatio6Plus =  175.f / 138.f;
 
 @implementation BFMPrizeCategoriesAdapter
 
@@ -71,8 +71,8 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 	}
 	
 	CGFloat width = floor(screenWidth / coef);
-//	CGFloat height = floor(width * ratio);
-	return CGSizeMake(width, 190.f);
+	CGFloat height = floor(width * ratio);
+	return CGSizeMake(width, height);
 }
 
 @end
