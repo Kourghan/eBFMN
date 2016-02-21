@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Mark Simonson - Proxima Nova Semibold.otf">
+            <string>ProximaNova-Semibold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFill" id="ErP-Xi-vEW" customClass="BFMBackCardView">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="214"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9cX-PY-gTP">
+                    <rect key="frame" x="0.0" y="0.0" width="340" height="214"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1S3-eH-uBs">
+                    <rect key="frame" x="65" y="22" width="209" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="AMD-gM-khZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oVu-Nh-Ipe">
+                    <rect key="frame" x="15" y="40" width="310" height="162"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="9cX-PY-gTP" firstAttribute="leading" secondItem="ErP-Xi-vEW" secondAttribute="leading" id="D7L-qT-IFI"/>
+                <constraint firstAttribute="bottom" secondItem="9cX-PY-gTP" secondAttribute="bottom" id="ITD-kI-rSB"/>
+                <constraint firstItem="oVu-Nh-Ipe" firstAttribute="leading" secondItem="ErP-Xi-vEW" secondAttribute="leading" constant="15" id="RvP-s7-u1u"/>
+                <constraint firstAttribute="trailing" secondItem="9cX-PY-gTP" secondAttribute="trailing" id="XgE-Sq-cfY"/>
+                <constraint firstItem="9cX-PY-gTP" firstAttribute="top" secondItem="ErP-Xi-vEW" secondAttribute="top" id="bQf-Zs-4Db"/>
+                <constraint firstItem="1S3-eH-uBs" firstAttribute="top" secondItem="ErP-Xi-vEW" secondAttribute="top" constant="22" id="kE5-bL-WcU"/>
+                <constraint firstAttribute="trailing" secondItem="1S3-eH-uBs" secondAttribute="trailing" constant="66" id="lsN-MW-eJf"/>
+                <constraint firstItem="1S3-eH-uBs" firstAttribute="leading" secondItem="ErP-Xi-vEW" secondAttribute="leading" constant="65" id="oTq-l3-yi9"/>
+                <constraint firstAttribute="trailing" secondItem="oVu-Nh-Ipe" secondAttribute="trailing" constant="15" id="sNm-qS-bF2"/>
+                <constraint firstItem="oVu-Nh-Ipe" firstAttribute="top" secondItem="1S3-eH-uBs" secondAttribute="bottom" constant="-3" id="y0x-1Z-TiR"/>
+                <constraint firstAttribute="bottom" secondItem="oVu-Nh-Ipe" secondAttribute="bottom" constant="12" id="z2M-Hr-RdS"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backgroundImageView" destination="9cX-PY-gTP" id="pTW-L8-w71"/>
+                <outlet property="textLabel" destination="oVu-Nh-Ipe" id="Xtq-9M-VO4"/>
+                <outlet property="titleLabel" destination="1S3-eH-uBs" id="saK-zU-ics"/>
+            </connections>
+            <point key="canvasLocation" x="243" y="229"/>
+        </view>
+    </objects>
+</document>

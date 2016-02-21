@@ -8,6 +8,7 @@
 
 #import "BFMBenefitsAdaptor.h"
 #import "BFMBenefitsPageController.h"
+#import "BFMUtils.h"
 
 const NSUInteger maxBenefitsPageIndex = 3;
 const NSUInteger startBenefitsPageIndex = 0;
@@ -110,19 +111,7 @@ const NSUInteger startBenefitsPageIndex = 0;
 }
 
 - (NSString *)webStringFromString:(NSString *)baseString {
-    NSMutableString *webString = [NSMutableString stringWithString:@""];
-    
-    NSArray *points = [baseString componentsSeparatedByString:@"\\r\\n"];
-    
-    if ([points count] > 0) {
-        [webString appendString:@"<ul>"];
-        for (NSString *point in points) {
-            [webString appendString:[NSString stringWithFormat:@"<li>%@</li>", point]];
-        }
-        [webString appendString:@"</ul>"];
-    }
-    
-    return [webString copy];
+    return bfm_webStringFromString(baseString);
 }
 
 @end

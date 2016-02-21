@@ -127,11 +127,22 @@
 		F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9201BE806510022CB02 /* BFMPendingCell.m */; };
 		F919C9261BE819360022CB02 /* BFMPendingDateHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */; };
 		F919C92C1BE827300022CB02 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C92B1BE827300022CB02 /* NSDate+Utilities.m */; };
+		F92367F01C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = F92367EF1C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.m */; settings = {ASSET_TAGS = (); }; };
+		F92367F41C76838B000F5DEE /* BFMProfileCardDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = F92367F31C76838B000F5DEE /* BFMProfileCardDataController.m */; settings = {ASSET_TAGS = (); }; };
+		F92367F81C771C5B000F5DEE /* BFMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F92367F71C771C5B000F5DEE /* BFMUtils.m */; settings = {ASSET_TAGS = (); }; };
+		F93D3BD31C6D25BE002456D6 /* ocraextended.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F93D3BCC1C6D25BE002456D6 /* ocraextended.ttf */; settings = {ASSET_TAGS = (); }; };
 		F96073E41BE723D800704692 /* BFMNewsTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E31BE723D800704692 /* BFMNewsTextCell.m */; };
 		F96073EA1BE72D5000704692 /* BFMNewsActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E81BE72D5000704692 /* BFMNewsActionCell.m */; };
 		F96073EB1BE72D5000704692 /* BFMNewsActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E91BE72D5000704692 /* BFMNewsActionCell.xib */; };
 		F96073EF1BE72E9E00704692 /* BFMNewsSingleActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073ED1BE72E9E00704692 /* BFMNewsSingleActionCell.m */; };
 		F96073F01BE72E9E00704692 /* BFMNewsSingleActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073EE1BE72E9E00704692 /* BFMNewsSingleActionCell.xib */; };
+		F97464841C6D285E00FF6F44 /* BFMBackCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F974647C1C6D285E00FF6F44 /* BFMBackCardView.m */; settings = {ASSET_TAGS = (); }; };
+		F97464851C6D285E00FF6F44 /* BFMCardPresentingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F974647E1C6D285E00FF6F44 /* BFMCardPresentingView.m */; settings = {ASSET_TAGS = (); }; };
+		F97464861C6D285E00FF6F44 /* BFMFrontCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F97464801C6D285E00FF6F44 /* BFMFrontCardView.m */; settings = {ASSET_TAGS = (); }; };
+		F97464871C6D285E00FF6F44 /* BFMBackCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97464821C6D285E00FF6F44 /* BFMBackCardView.xib */; settings = {ASSET_TAGS = (); }; };
+		F97464881C6D285E00FF6F44 /* BFMFrontCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97464831C6D285E00FF6F44 /* BFMFrontCardView.xib */; settings = {ASSET_TAGS = (); }; };
+		F974648F1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F974648E1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.m */; settings = {ASSET_TAGS = (); }; };
+		F97464921C6D2E2600FF6F44 /* UIView+BFMLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = F97464911C6D2E2600FF6F44 /* UIView+BFMLoad.m */; settings = {ASSET_TAGS = (); }; };
 		F99096A21BE020CB00E1D629 /* BFMShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969B1BE020CB00E1D629 /* BFMShopModel.m */; };
 		F99096A31BE020CB00E1D629 /* BFMShopCollectionAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */; };
 		F99096A41BE020CB00E1D629 /* BFMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99096A11BE020CB00E1D629 /* BFMShopViewController.m */; };
@@ -379,6 +390,13 @@
 		F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPendingDateHeaderView.m; sourceTree = "<group>"; };
 		F919C92A1BE827300022CB02 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		F919C92B1BE827300022CB02 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		F92367EE1C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+BFMAdjust.h"; sourceTree = "<group>"; };
+		F92367EF1C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+BFMAdjust.m"; sourceTree = "<group>"; };
+		F92367F21C76838B000F5DEE /* BFMProfileCardDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMProfileCardDataController.h; sourceTree = "<group>"; };
+		F92367F31C76838B000F5DEE /* BFMProfileCardDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMProfileCardDataController.m; sourceTree = "<group>"; };
+		F92367F61C771C5B000F5DEE /* BFMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMUtils.h; sourceTree = "<group>"; };
+		F92367F71C771C5B000F5DEE /* BFMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMUtils.m; sourceTree = "<group>"; };
+		F93D3BCC1C6D25BE002456D6 /* ocraextended.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ocraextended.ttf; sourceTree = "<group>"; };
 		F96073E21BE723D800704692 /* BFMNewsTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMNewsTextCell.h; sourceTree = "<group>"; };
 		F96073E31BE723D800704692 /* BFMNewsTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMNewsTextCell.m; sourceTree = "<group>"; };
 		F96073E71BE72D5000704692 /* BFMNewsActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMNewsActionCell.h; sourceTree = "<group>"; };
@@ -387,6 +405,19 @@
 		F96073EC1BE72E9E00704692 /* BFMNewsSingleActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMNewsSingleActionCell.h; sourceTree = "<group>"; };
 		F96073ED1BE72E9E00704692 /* BFMNewsSingleActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMNewsSingleActionCell.m; sourceTree = "<group>"; };
 		F96073EE1BE72E9E00704692 /* BFMNewsSingleActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMNewsSingleActionCell.xib; sourceTree = "<group>"; };
+		F97464791C6D285E00FF6F44 /* BFMFrontCardDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMFrontCardDataProvider.h; sourceTree = "<group>"; };
+		F974647B1C6D285E00FF6F44 /* BFMBackCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMBackCardView.h; sourceTree = "<group>"; };
+		F974647C1C6D285E00FF6F44 /* BFMBackCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMBackCardView.m; sourceTree = "<group>"; };
+		F974647D1C6D285E00FF6F44 /* BFMCardPresentingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMCardPresentingView.h; sourceTree = "<group>"; };
+		F974647E1C6D285E00FF6F44 /* BFMCardPresentingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMCardPresentingView.m; sourceTree = "<group>"; };
+		F974647F1C6D285E00FF6F44 /* BFMFrontCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMFrontCardView.h; sourceTree = "<group>"; };
+		F97464801C6D285E00FF6F44 /* BFMFrontCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMFrontCardView.m; sourceTree = "<group>"; };
+		F97464821C6D285E00FF6F44 /* BFMBackCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMBackCardView.xib; sourceTree = "<group>"; };
+		F97464831C6D285E00FF6F44 /* BFMFrontCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMFrontCardView.xib; sourceTree = "<group>"; };
+		F974648D1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BFMUser+BFMCardView.h"; sourceTree = "<group>"; };
+		F974648E1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BFMUser+BFMCardView.m"; sourceTree = "<group>"; };
+		F97464901C6D2E2600FF6F44 /* UIView+BFMLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BFMLoad.h"; sourceTree = "<group>"; };
+		F97464911C6D2E2600FF6F44 /* UIView+BFMLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BFMLoad.m"; sourceTree = "<group>"; };
 		F990969A1BE020CB00E1D629 /* BFMShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMShopModel.h; sourceTree = "<group>"; };
 		F990969B1BE020CB00E1D629 /* BFMShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMShopModel.m; sourceTree = "<group>"; };
 		F990969D1BE020CB00E1D629 /* BFMShopCollectionAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMShopCollectionAdapter.h; sourceTree = "<group>"; };
@@ -789,6 +820,7 @@
 		619E2C091B977D4000886893 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				F92367F51C771C46000F5DEE /* Utils */,
 				619E2C0A1B977D4800886893 /* Categories */,
 			);
 			name = Misc;
@@ -797,6 +829,7 @@
 		619E2C0A1B977D4800886893 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				F92367ED1C767FD4000F5DEE /* NSLayoutConstraint */,
 				2CF024F01B9A413C009E8959 /* UIStoryboard */,
 				619E2C101B977DB400886893 /* UIColor */,
 				619E2C0F1B977DAC00886893 /* Keychain */,
@@ -1088,6 +1121,8 @@
 		61FD3D761BA8426600F4CEFB /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				F92367F11C76836E000F5DEE /* Controller */,
+				F93D3BC01C6D25BE002456D6 /* Card View */,
 				61BEFE321BDEF1BE0030A05D /* Goals */,
 				6135F3791BAF423700B29DE3 /* Benefits */,
 				61FD3D771BA8438500F4CEFB /* BFMProfileViewController.h */,
@@ -1131,6 +1166,49 @@
 			path = "Lib/NSDate-Utilities";
 			sourceTree = "<group>";
 		};
+		F92367ED1C767FD4000F5DEE /* NSLayoutConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				F92367EE1C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.h */,
+				F92367EF1C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.m */,
+			);
+			name = NSLayoutConstraint;
+			path = Misc/Categories/NSLayoutConstraint;
+			sourceTree = "<group>";
+		};
+		F92367F11C76836E000F5DEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F92367F21C76838B000F5DEE /* BFMProfileCardDataController.h */,
+				F92367F31C76838B000F5DEE /* BFMProfileCardDataController.m */,
+			);
+			name = Controller;
+			path = Classes/Screens/Profile/Controller;
+			sourceTree = "<group>";
+		};
+		F92367F51C771C46000F5DEE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F92367F61C771C5B000F5DEE /* BFMUtils.h */,
+				F92367F71C771C5B000F5DEE /* BFMUtils.m */,
+			);
+			name = Utils;
+			path = Misc/Utils;
+			sourceTree = "<group>";
+		};
+		F93D3BC01C6D25BE002456D6 /* Card View */ = {
+			isa = PBXGroup;
+			children = (
+				F974648C1C6D2DFA00FF6F44 /* Category */,
+				F97464771C6D285E00FF6F44 /* Protocol */,
+				F974647A1C6D285E00FF6F44 /* View */,
+				F97464811C6D285E00FF6F44 /* XIB */,
+				F93D3BCC1C6D25BE002456D6 /* ocraextended.ttf */,
+			);
+			name = "Card View";
+			path = "Classes/Screens/Profile/Card View";
+			sourceTree = "<group>";
+		};
 		F96073E11BE7239900704692 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1146,6 +1224,47 @@
 			);
 			name = View;
 			path = Classes/Screens/News/View;
+			sourceTree = "<group>";
+		};
+		F97464771C6D285E00FF6F44 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F97464791C6D285E00FF6F44 /* BFMFrontCardDataProvider.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F974647A1C6D285E00FF6F44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F974647F1C6D285E00FF6F44 /* BFMFrontCardView.h */,
+				F97464801C6D285E00FF6F44 /* BFMFrontCardView.m */,
+				F974647B1C6D285E00FF6F44 /* BFMBackCardView.h */,
+				F974647C1C6D285E00FF6F44 /* BFMBackCardView.m */,
+				F974647D1C6D285E00FF6F44 /* BFMCardPresentingView.h */,
+				F974647E1C6D285E00FF6F44 /* BFMCardPresentingView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F97464811C6D285E00FF6F44 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				F97464821C6D285E00FF6F44 /* BFMBackCardView.xib */,
+				F97464831C6D285E00FF6F44 /* BFMFrontCardView.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		F974648C1C6D2DFA00FF6F44 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F974648D1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.h */,
+				F974648E1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.m */,
+				F97464901C6D2E2600FF6F44 /* UIView+BFMLoad.h */,
+				F97464911C6D2E2600FF6F44 /* UIView+BFMLoad.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		F99096991BE020CB00E1D629 /* Model */ = {
@@ -1280,6 +1399,7 @@
 				619E2BE71B97564A00886893 /* Images.xcassets in Resources */,
 				F96073F01BE72E9E00704692 /* BFMNewsSingleActionCell.xib in Resources */,
 				61C182101B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Light Italic.otf in Resources */,
+				F97464871C6D285E00FF6F44 /* BFMBackCardView.xib in Resources */,
 				61E4776A1BE8EF3A00C2659D /* Leaderboard.storyboard in Resources */,
 				61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */,
 				61C1820F1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold.otf in Resources */,
@@ -1287,6 +1407,7 @@
 				6135F3811BAF466E00B29DE3 /* BFMBenefitsPageController.xib in Resources */,
 				61C182131B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Regular.otf in Resources */,
 				6189D84D1BEA235E009880B1 /* BFMShopConcreteCell.xib in Resources */,
+				F97464881C6D285E00FF6F44 /* BFMFrontCardView.xib in Resources */,
 				61C182161B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */,
 				2CB1B8431B9CC37B00AC16D2 /* Notifications.storyboard in Resources */,
 				61C1820E1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold Italic.otf in Resources */,
@@ -1294,6 +1415,7 @@
 				2CB1B8451B9CC37B00AC16D2 /* tabBar.storyboard in Resources */,
 				61C1820A1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black Italic.otf in Resources */,
 				61F042F71BBB2895000037CF /* earningsView.xib in Resources */,
+				F93D3BD31C6D25BE002456D6 /* ocraextended.ttf in Resources */,
 				61C182121B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Regular Italic.otf in Resources */,
 				61C1820D1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Bold.otf in Resources */,
 			);
@@ -1346,11 +1468,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97464861C6D285E00FF6F44 /* BFMFrontCardView.m in Sources */,
 				61E477631BE6CA4500C2659D /* BFMTransactionCell.m in Sources */,
 				2CAD81411BABCF4A00DEF6F3 /* BFMLeaderboardViewController.m in Sources */,
 				61FD3CEE1BA7036700F4CEFB /* BFMNewsRecord.m in Sources */,
 				619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */,
 				613C28BD1BA3415C00B2856A /* BFMNewsModel.m in Sources */,
+				F97464851C6D285E00FF6F44 /* BFMCardPresentingView.m in Sources */,
 				2CF024F31B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m in Sources */,
 				61FD3D6B1BA7096D00F4CEFB /* ODSSectionChange.m in Sources */,
 				61FD3D651BA7096D00F4CEFB /* ODSCollectionAdapter.m in Sources */,
@@ -1368,11 +1492,14 @@
 				613AE7661B9B9F7C00300B22 /* BFMAccount.m in Sources */,
 				619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */,
 				61B1DD4D1BB83BAC00DB6D23 /* MCPercentageDoughnutView.m in Sources */,
+				F92367F81C771C5B000F5DEE /* BFMUtils.m in Sources */,
 				F919C91E1BE7ECB70022CB02 /* BFMPendingTableAdapter.m in Sources */,
 				F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */,
 				61FD3D661BA7096D00F4CEFB /* ODSTableAdapter.m in Sources */,
 				61F042F21BBB1F2D000037CF /* iCarousel.m in Sources */,
+				F974648F1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.m in Sources */,
 				613AE7731B9CCC9600300B22 /* BFMAccount+Extension.m in Sources */,
+				F97464921C6D2E2600FF6F44 /* UIView+BFMLoad.m in Sources */,
 				61F042F51BBB214A000037CF /* BFMCarouselDataSource.m in Sources */,
 				2CF024EF1B9A409A009E8959 /* BFMTabBarController.m in Sources */,
 				613AE7721B9CC8CA00300B22 /* NINavigationAppearance.m in Sources */,
@@ -1414,7 +1541,9 @@
 				F96073EA1BE72D5000704692 /* BFMNewsActionCell.m in Sources */,
 				2C8E49EE1BDF9C6500A9F8F9 /* BFMDetailedNewsViewController.m in Sources */,
 				61F043071BBBF4B3000037CF /* BFMAccountCell.m in Sources */,
+				F92367F01C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.m in Sources */,
 				61FD3D711BA7096D00F4CEFB /* ODSFetchedResultsDataSource.m in Sources */,
+				F97464841C6D285E00FF6F44 /* BFMBackCardView.m in Sources */,
 				61BEFE351BDEF1E00030A05D /* BFMGoalsAdapter.m in Sources */,
 				61903C241BAC0CE70018B3A0 /* BFMNotificationsModel.m in Sources */,
 				F99096A41BE020CB00E1D629 /* BFMShopViewController.m in Sources */,
@@ -1435,6 +1564,7 @@
 				61B1DD4C1BB83BAC00DB6D23 /* MCNewCustomLayeredView.m in Sources */,
 				613AE7801B9CD04400300B22 /* ELAAppearance.m in Sources */,
 				61E477551BE66C9C00C2659D /* BFMPointsRecord.m in Sources */,
+				F92367F41C76838B000F5DEE /* BFMProfileCardDataController.m in Sources */,
 				613AE74E1B9B78CE00300B22 /* ebfmn.xcdatamodeld in Sources */,
 				619E2C161B977DD000886893 /* UIColor+Extensions.m in Sources */,
 				613C28C11BA3437700B2856A /* BFMNewsCell.m in Sources */,
