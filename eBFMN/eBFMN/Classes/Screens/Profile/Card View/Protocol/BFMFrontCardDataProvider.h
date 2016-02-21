@@ -12,7 +12,6 @@
 @protocol BFMFrontCardDataProvider <NSObject>
 
 @required
-- (UIImage *)frontCardBackgroundImage;
 - (NSString *)frontCardTitleText;
 - (NSString *)frontCardExpirationText;
 - (NSString *)frontCardCodeText;

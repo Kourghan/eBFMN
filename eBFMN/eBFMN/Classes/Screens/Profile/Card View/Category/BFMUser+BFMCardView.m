@@ -10,10 +10,6 @@
 
 @implementation BFMUser (BFMCardView)
 
-- (UIImage *)frontCardBackgroundImage {
-    return [UIImage imageNamed:@"platinum"];
-}
-
 - (NSString *)frontCardTitleText {
     return self.name.uppercaseString;
 }
@@ -24,18 +20,6 @@
 
 - (NSString *)frontCardCodeText {
     return [NSString stringWithFormat:@"Code: %@", self.code];
-}
-
-- (UIImage *)backCardBackgroundImage {
-    return [UIImage imageNamed:@"platinumback"];
-}
-
-- (NSString *)backCardTitleText {
-    return nil;
-}
-
-- (NSString *)backCardContentText {
-    return nil;
 }
 
 @end

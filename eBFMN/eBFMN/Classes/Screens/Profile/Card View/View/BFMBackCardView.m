@@ -10,10 +10,4 @@
 
 @implementation BFMBackCardView
 
-- (void)configureWithDataProvider:(id<BFMBackCardDataProvider>)provider {
-    self.backgroundImageView.image = [provider backCardBackgroundImage];
-    self.titleLabel.text = [provider backCardTitleText];
-    self.textLabel.text = [provider backCardContentText];
-}
-
 @end

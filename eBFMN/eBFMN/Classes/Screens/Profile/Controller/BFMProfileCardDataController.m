@@ -94,7 +94,7 @@ static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
         case BFMLeagueTypeUndefined: return @"";
             
         case BFMLeagueTypeSilver: {
-            return NSLocalizedString(@"SILVER BENEFITS", nil);
+            return NSLocalizedString(@"", nil);
         }
             
         case BFMLeagueTypeGold: {
@@ -170,15 +170,19 @@ static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
         NSMutableDictionary *options = [NSMutableDictionary new];
         [options setValue:NSHTMLTextDocumentType
                    forKey:NSDocumentTypeDocumentAttribute];
-        [options setValue:[self benefitFont]
-                   forKey:NSFontAttributeName];
-        [options setValue:[UIColor whiteColor]
-                   forKey:NSForegroundColorAttributeName];
         
-        NSAttributedString *attText = [[NSAttributedString alloc] initWithData:data
-                                                                       options:options
-                                                            documentAttributes:nil
-                                                                         error:nil];
+        NSMutableAttributedString *attText = [[NSMutableAttributedString alloc] initWithData:data
+                                                                                     options:options
+                                                                          documentAttributes:nil
+                                                                                       error:nil];
+        NSRange range = NSMakeRange(0, attText.length);
+        [attText addAttribute:NSFontAttributeName
+                        value:[self benefitFont]
+                        range:range];
+        [attText addAttribute:NSForegroundColorAttributeName
+                        value:[UIColor whiteColor]
+                        range:range];
+        
         return attText;
     }
     

@@ -405,7 +405,6 @@
 		F96073EC1BE72E9E00704692 /* BFMNewsSingleActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMNewsSingleActionCell.h; sourceTree = "<group>"; };
 		F96073ED1BE72E9E00704692 /* BFMNewsSingleActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMNewsSingleActionCell.m; sourceTree = "<group>"; };
 		F96073EE1BE72E9E00704692 /* BFMNewsSingleActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMNewsSingleActionCell.xib; sourceTree = "<group>"; };
-		F97464781C6D285E00FF6F44 /* BFMBackCardDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMBackCardDataProvider.h; sourceTree = "<group>"; };
 		F97464791C6D285E00FF6F44 /* BFMFrontCardDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMFrontCardDataProvider.h; sourceTree = "<group>"; };
 		F974647B1C6D285E00FF6F44 /* BFMBackCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMBackCardView.h; sourceTree = "<group>"; };
 		F974647C1C6D285E00FF6F44 /* BFMBackCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMBackCardView.m; sourceTree = "<group>"; };
@@ -1230,7 +1229,6 @@
 		F97464771C6D285E00FF6F44 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				F97464781C6D285E00FF6F44 /* BFMBackCardDataProvider.h */,
 				F97464791C6D285E00FF6F44 /* BFMFrontCardDataProvider.h */,
 			);
 			path = Protocol;

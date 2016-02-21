@@ -9,9 +9,7 @@
 #import "BFMUser.h"
 
 #import "BFMFrontCardDataProvider.h"
-#import "BFMBackCardDataProvider.h"
 
-@interface BFMUser (BFMCardView)
-<BFMFrontCardDataProvider, BFMBackCardDataProvider>
+@interface BFMUser (BFMCardView)<BFMFrontCardDataProvider>
 
 @end

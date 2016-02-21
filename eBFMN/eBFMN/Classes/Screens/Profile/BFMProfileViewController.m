@@ -128,7 +128,12 @@
     BFMBackCardView *backCard = (id)presView.backView;
     backCard.backgroundImageView.image = backImage;
     backCard.titleLabel.text = benefitTitle;
+    
+    backCard.textLabel.adjustsFontSizeToFitWidth = true;
     backCard.textLabel.attributedText = benefitText;
+    backCard.textLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    
+    presView.hidden = ([BFM_CARD_CON currentType] == BFMLeagueTypeUndefined);
 }
 
 #pragma mark - Handlers
