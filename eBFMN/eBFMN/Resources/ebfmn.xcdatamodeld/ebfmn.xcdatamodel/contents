@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F27" minimumToolsVersion="Xcode 4.3">
+    <entity name="BFMAccount" representedClassName="BFMAccount" syncable="YES">
+        <attribute name="balance" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="managed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="platform" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="platformType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BFMUser" inverseName="accounts" inverseEntity="BFMUser" syncable="YES"/>
+    </entity>
+    <entity name="BFMNewsRecord" representedClassName="BFMNewsRecord" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"/>
+                <entry key="mappedKeyName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="_id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="shortText" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="ShortText"/>
+            </userInfo>
+        </attribute>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="Title"/>
+            </userInfo>
+        </attribute>
+        <userInfo>
+            <entry key="relatedByAttribute" value="identifier"/>
+        </userInfo>
+    </entity>
+    <entity name="BFMNotification" representedClassName="BFMNotification" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="viewed" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <entity name="BFMPointsRecord" representedClassName="BFMPointsRecord" syncable="YES">
+        <attribute name="deposit" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="expirationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="points" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="requiredLots" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="BFMPrize" representedClassName="BFMPrize" syncable="YES">
+        <attribute name="iconURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="points" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <userInfo>
+            <entry key="relatedByAttribute" value="identifier"/>
+        </userInfo>
+    </entity>
+    <entity name="BFMSysAccount" representedClassName="BFMSysAccount" syncable="YES">
+        <attribute name="balance" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="commission" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="managed" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <attribute name="netDeposit" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="platform" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="platformType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="prewNetDeposit" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="prewTotalDeposit" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rebate" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="spread" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="totalDeposit" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BFMUser" inverseName="sysAccounts" inverseEntity="BFMUser" syncable="YES"/>
+    </entity>
+    <entity name="BFMUser" representedClassName="BFMUser" syncable="YES">
+        <attribute name="accCountDemo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="accCountLive" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="code" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="currentCurrency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="ibsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="main" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="accounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BFMAccount" inverseName="user" inverseEntity="BFMAccount" syncable="YES"/>
+        <relationship name="sysAccounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BFMSysAccount" inverseName="user" inverseEntity="BFMSysAccount" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BFMAccount" positionX="-54" positionY="54" width="128" height="150"/>
+        <element name="BFMNewsRecord" positionX="-54" positionY="135" width="128" height="105"/>
+        <element name="BFMNotification" positionX="-54" positionY="135" width="128" height="120"/>
+        <element name="BFMPointsRecord" positionX="-54" positionY="135" width="128" height="135"/>
+        <element name="BFMPrize" positionX="-54" positionY="135" width="128" height="105"/>
+        <element name="BFMSysAccount" positionX="-36" positionY="63" width="128" height="255"/>
+        <element name="BFMUser" positionX="-63" positionY="-18" width="128" height="225"/>
+    </elements>
+</model>

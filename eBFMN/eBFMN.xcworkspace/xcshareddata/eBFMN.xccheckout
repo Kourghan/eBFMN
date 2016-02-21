@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9BC34432-7B20-4172-BA11-35E717C2B3FE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>eBFMN</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3D1AB2D9ADC0B40988E74575C711F8D1FABBB580</key>
+		<string>https://github.com/Kourghan/eBFMN</string>
+		<key>89FF9D47AC0F5E0ACFA8F687756300C56F7F48D8</key>
+		<string>https://github.com/BAEBeforeAnyoneElse/bae_ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>eBFMN/eBFMN.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3D1AB2D9ADC0B40988E74575C711F8D1FABBB580</key>
+		<string>../..</string>
+		<key>89FF9D47AC0F5E0ACFA8F687756300C56F7F48D8</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Kourghan/eBFMN</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3D1AB2D9ADC0B40988E74575C711F8D1FABBB580</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>89FF9D47AC0F5E0ACFA8F687756300C56F7F48D8</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3D1AB2D9ADC0B40988E74575C711F8D1FABBB580</string>
+			<key>IDESourceControlWCCName</key>
+			<string>eBFMN</string>
+		</dict>
+	</array>
+</dict>
+</plist>

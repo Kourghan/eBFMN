@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_circle" translatesAutoresizingMaskIntoConstraints="NO" id="1xM-yb-Tbe">
+                    <rect key="frame" x="21.5" y="0.0" width="107" height="107"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="107" id="8Pc-Pm-2xn"/>
+                        <constraint firstAttribute="height" constant="107" id="SCT-Hy-E11"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="000000.00" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27h-iy-f6W">
+                    <rect key="frame" x="32.5" y="43" width="86" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="typeValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sv-Qc-sld">
+                    <rect key="frame" x="38" y="123" width="75.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="27h-iy-f6W" firstAttribute="centerY" secondItem="1xM-yb-Tbe" secondAttribute="centerY" id="4Np-Pf-Yoe"/>
+                <constraint firstItem="27h-iy-f6W" firstAttribute="centerX" secondItem="1xM-yb-Tbe" secondAttribute="centerX" id="Iye-A8-JWN"/>
+                <constraint firstItem="1Sv-Qc-sld" firstAttribute="top" secondItem="1xM-yb-Tbe" secondAttribute="bottom" constant="16" id="NCJ-OI-oHS"/>
+                <constraint firstItem="1xM-yb-Tbe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Noi-kA-Pn2"/>
+                <constraint firstItem="1xM-yb-Tbe" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ORA-43-5kA"/>
+                <constraint firstItem="1Sv-Qc-sld" firstAttribute="centerX" secondItem="1xM-yb-Tbe" secondAttribute="centerX" id="QqT-FE-SXU"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="274" y="93"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_circle" width="107" height="107"/>
+    </resources>
+</document>

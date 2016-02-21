@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "{Name}"; ObjectID = "ICe-nm-cFG"; */
+"ICe-nm-cFG.text" = "{Name}";
+
+/* Class = "UILabel"; text = "IB"; ObjectID = "NaJ-JD-LeT"; */
+"NaJ-JD-LeT.text" = "IB";
+
+/* Class = "UILabel"; text = "{count}"; ObjectID = "ZWC-jZ-vxZ"; */
+"ZWC-jZ-vxZ.text" = "{count}";
+
+/* Class = "UILabel"; text = "POINTS"; ObjectID = "ia3-TW-ZZq"; */
+"ia3-TW-ZZq.text" = "POINTS";

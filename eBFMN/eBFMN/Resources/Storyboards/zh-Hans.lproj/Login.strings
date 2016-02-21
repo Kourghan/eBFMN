@@ -1,0 +1,39 @@
+
+/* Class = "UIButton"; normalTitle = "Contact Us"; ObjectID = "3Jh-Hm-NQ8"; */
+"3Jh-Hm-NQ8.normalTitle" = "Contact Us";
+
+/* Class = "UILabel"; text = "You are about to retrieve your password for MYBMFN\naccount. Please enter your email address, which was used\nduring the registration, or MYBMFN account Login."; ObjectID = "KkF-si-dNA"; */
+"KkF-si-dNA.text" = "You are about to retrieve your password for MYBMFN\naccount. Please enter your email address, which was used\nduring the registration, or MYBMFN account Login.";
+
+/* Class = "UIButton"; normalTitle = "Terms & Conditions"; ObjectID = "L1S-ml-ON7"; */
+"L1S-ml-ON7.normalTitle" = "Terms & Conditions";
+
+/* Class = "UIButton"; normalTitle = "Terms & Conditions"; ObjectID = "LuZ-Wn-Nzo"; */
+"LuZ-Wn-Nzo.normalTitle" = "Terms & Conditions";
+
+/* Class = "UITextField"; placeholder = "EMAIL/LOGIN"; ObjectID = "Nki-to-a8U"; */
+"Nki-to-a8U.placeholder" = "EMAIL/LOGIN";
+
+/* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "OHI-qD-dx2"; */
+"OHI-qD-dx2.normalTitle" = "LOGIN";
+
+/* Class = "UIButton"; normalTitle = "Forgot Password?"; ObjectID = "eaG-q7-iti"; */
+"eaG-q7-iti.normalTitle" = "Forgot Password?";
+
+/* Class = "UIButton"; normalTitle = "Contact Us"; ObjectID = "l0r-bf-zXh"; */
+"l0r-bf-zXh.normalTitle" = "Contact Us";
+
+/* Class = "UITextField"; placeholder = "USERNAME"; ObjectID = "oam-C3-doM"; */
+"oam-C3-doM.placeholder" = "USERNAME";
+
+/* Class = "UITextField"; text = "1000083661"; ObjectID = "oam-C3-doM"; */
+"oam-C3-doM.text" = "1000083661";
+
+/* Class = "UITextField"; placeholder = "PASSWORD"; ObjectID = "qoS-L1-mBU"; */
+"qoS-L1-mBU.placeholder" = "PASSWORD";
+
+/* Class = "UITextField"; text = "RuQUJsvDU0x"; ObjectID = "qoS-L1-mBU"; */
+"qoS-L1-mBU.text" = "RuQUJsvDU0x";
+
+/* Class = "UIButton"; normalTitle = "GET PASSWORD"; ObjectID = "znS-hZ-gLE"; */
+"znS-hZ-gLE.normalTitle" = "GET PASSWORD";

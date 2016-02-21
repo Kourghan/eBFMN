@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dca-dP-VFF">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Mark Simonson - Proxima Nova Light.otf">
+            <string>ProximaNova-Light</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="K1F-3D-dCx">
+            <objects>
+                <navigationController id="dca-dP-VFF" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="489-ho-BYR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Dgx-vF-3YV" kind="relationship" relationship="rootViewController" id="LPW-9z-kuc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSu-n4-N9e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-297" y="389"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="fih-2u-jqA">
+            <objects>
+                <viewController id="Dgx-vF-3YV" customClass="BFMProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="78w-pv-7uF"/>
+                        <viewControllerLayoutGuide type="bottom" id="njf-4S-NRM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yZy-Wd-keZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnO-gz-OCq">
+                                <rect key="frame" x="130" y="497" width="60" height="31"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="15"/>
+                                <state key="normal" title="LOGOUT">
+                                    <color key="titleColor" red="0.81568627450980391" green="0.21568627450980393" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout:" destination="Dgx-vF-3YV" eventType="touchUpInside" id="j0K-ur-GFZ"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gof-Np-xaK" customClass="BFMCardPresentingView">
+                                <rect key="frame" x="-10" y="109" width="340" height="214"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="340" id="86Q-bj-vsT"/>
+                                    <constraint firstAttribute="height" constant="214" id="XDX-on-4Ej"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="heightConstraint" destination="XDX-on-4Ej" id="x9l-iv-Mi1"/>
+                                    <outlet property="widthConstraint" destination="86Q-bj-vsT" id="juK-eX-vIt"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMz-zq-HaX" userLabel="Card Button">
+                                <rect key="frame" x="-10" y="109" width="340" height="214"/>
+                                <connections>
+                                    <action selector="swapButtonTap" destination="Dgx-vF-3YV" eventType="touchUpInside" id="uBC-jg-mq2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TMz-zq-HaX" firstAttribute="top" secondItem="gof-Np-xaK" secondAttribute="top" id="B70-Vx-DHp"/>
+                            <constraint firstItem="gof-Np-xaK" firstAttribute="centerX" secondItem="yZy-Wd-keZ" secondAttribute="centerX" id="F8n-q3-mEu"/>
+                            <constraint firstItem="njf-4S-NRM" firstAttribute="top" secondItem="dnO-gz-OCq" secondAttribute="bottom" constant="40" id="NJm-qz-iYA"/>
+                            <constraint firstItem="gof-Np-xaK" firstAttribute="top" secondItem="78w-pv-7uF" secondAttribute="bottom" constant="45" id="VEb-QX-SvF"/>
+                            <constraint firstItem="TMz-zq-HaX" firstAttribute="bottom" secondItem="gof-Np-xaK" secondAttribute="bottom" id="dXr-vx-bv1"/>
+                            <constraint firstAttribute="centerX" secondItem="dnO-gz-OCq" secondAttribute="centerX" id="fB5-Ts-Evo"/>
+                            <constraint firstItem="TMz-zq-HaX" firstAttribute="trailing" secondItem="gof-Np-xaK" secondAttribute="trailing" id="mHa-UG-dry"/>
+                            <constraint firstItem="TMz-zq-HaX" firstAttribute="leading" secondItem="gof-Np-xaK" secondAttribute="leading" id="rCi-uP-oeR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hfD-lJ-m4Q"/>
+                    <connections>
+                        <outlet property="cardPresentingView" destination="gof-Np-xaK" id="eRq-Rz-DGn"/>
+                        <outlet property="logoutButton" destination="dnO-gz-OCq" id="STf-rF-x50"/>
+                        <segue destination="6PD-q0-9lx" kind="presentation" identifier="goals" modalPresentationStyle="overCurrentContext" id="Qkg-uC-x1n"/>
+                        <segue destination="6PD-q0-9lx" kind="presentation" identifier="benefits" modalPresentationStyle="overCurrentContext" id="saU-Dy-XYF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GIP-Te-JYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="389"/>
+        </scene>
+        <!--Benefits Controller-->
+        <scene sceneID="2Be-j4-dbi">
+            <objects>
+                <viewController id="6PD-q0-9lx" customClass="BFMBenefitsController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pqr-bg-VZP"/>
+                        <viewControllerLayoutGuide type="bottom" id="XuF-n1-Hic"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1to-e2-M0x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XkI-VV-jPi" userLabel="Container">
+                                <rect key="frame" x="15" y="79" width="290" height="380"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTg-hZ-Met">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="380"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="0Ue-Oe-dhU" kind="embed" identifier="embed" id="Bug-4H-O4o"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="nTg-hZ-Met" firstAttribute="leading" secondItem="XkI-VV-jPi" secondAttribute="leading" id="LPV-yj-R2J"/>
+                                    <constraint firstItem="nTg-hZ-Met" firstAttribute="top" secondItem="XkI-VV-jPi" secondAttribute="top" id="VAN-Wd-Wjg"/>
+                                    <constraint firstAttribute="trailing" secondItem="nTg-hZ-Met" secondAttribute="trailing" id="aGY-Hj-gBO"/>
+                                    <constraint firstAttribute="bottom" secondItem="nTg-hZ-Met" secondAttribute="bottom" id="bMV-yX-Orl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.41000000000000003" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="XkI-VV-jPi" firstAttribute="top" secondItem="Pqr-bg-VZP" secondAttribute="bottom" constant="59" id="H2q-Dk-5oM"/>
+                            <constraint firstAttribute="trailing" secondItem="XkI-VV-jPi" secondAttribute="trailing" constant="15" id="ig6-2b-KNx"/>
+                            <constraint firstItem="XkI-VV-jPi" firstAttribute="leading" secondItem="1to-e2-M0x" secondAttribute="leading" constant="15" id="o66-ri-MTJ"/>
+                            <constraint firstAttribute="bottom" secondItem="XkI-VV-jPi" secondAttribute="bottom" constant="109" id="szk-Kf-jmS"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="lpa-Qy-BBd" appends="YES" id="N7A-5o-3Wz"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWp-ZB-jLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lpa-Qy-BBd">
+                    <connections>
+                        <action selector="viewTapped:" destination="6PD-q0-9lx" id="D6h-mK-Kw4"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="634" y="389"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="wUN-69-f59">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="0Ue-Oe-dhU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SgU-Q1-c4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1097" y="389"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="saU-Dy-XYF"/>
+    </inferredMetricsTieBreakers>
+</document>
