@@ -1,0 +1,75 @@
+
+/* Class = "UILabel"; text = "CLIENTS"; ObjectID = "0u7-Ro-L8X"; */
+"0u7-Ro-L8X.text" = "CLIENTS";
+
+/* Class = "UILabel"; text = "POINTS"; ObjectID = "1nE-Ei-eQt"; */
+"1nE-Ei-eQt.text" = "POINTS";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "2aI-ki-iJ4"; */
+"2aI-ki-iJ4.text" = "Points";
+
+/* Class = "UILabel"; text = "000000"; ObjectID = "35e-QP-bL9"; */
+"35e-QP-bL9.text" = "000000";
+
+/* Class = "UILabel"; text = "LIVE ACCOUNTS"; ObjectID = "8bJ-r4-Pr3"; */
+"8bJ-r4-Pr3.text" = "LIVE ACCOUNTS";
+
+/* Class = "UILabel"; text = "DEMO ACCOUNTS"; ObjectID = "EbI-qj-UFk"; */
+"EbI-qj-UFk.text" = "DEMO ACCOUNTS";
+
+/* Class = "UILabel"; text = "999+"; ObjectID = "F3M-tg-8Wb"; */
+"F3M-tg-8Wb.text" = "999+";
+
+/* Class = "UILabel"; text = "123456,00"; ObjectID = "Fh1-a5-VuQ"; */
+"Fh1-a5-VuQ.text" = "123456,00";
+
+/* Class = "UILabel"; text = "EARNINGS FOR "; ObjectID = "GEb-0H-eJs"; */
+"GEb-0H-eJs.text" = "EARNINGS FOR ";
+
+/* Class = "UILabel"; text = "{count}"; ObjectID = "I4K-v5-cQ2"; */
+"I4K-v5-cQ2.text" = "{count}";
+
+/* Class = "UILabel"; text = "Deposit"; ObjectID = "ILB-eK-xIQ"; */
+"ILB-eK-xIQ.text" = "Deposit";
+
+/* Class = "UILabel"; text = "SEPTEMBER"; ObjectID = "Nld-1y-hxu"; */
+"Nld-1y-hxu.text" = "SEPTEMBER";
+
+/* Class = "UILabel"; text = "999+"; ObjectID = "RCN-Q1-ec8"; */
+"RCN-Q1-ec8.text" = "999+";
+
+/* Class = "UILabel"; text = "999+"; ObjectID = "U97-OG-uVO"; */
+"U97-OG-uVO.text" = "999+";
+
+/* Class = "UILabel"; text = "USD"; ObjectID = "WCe-vN-Nzx"; */
+"WCe-vN-Nzx.text" = "USD";
+
+/* Class = "UILabel"; text = "You have: 0 IB POINTS"; ObjectID = "gb7-ZT-paz"; */
+"gb7-ZT-paz.text" = "You have: 0 IB POINTS";
+
+/* Class = "UILabel"; text = "PENDING POINTS"; ObjectID = "i5M-sm-Dnp"; */
+"i5M-sm-Dnp.text" = "PENDING POINTS";
+
+/* Class = "UIButton"; normalTitle = " USD"; ObjectID = "kh2-mN-oym"; */
+"kh2-mN-oym.normalTitle" = " USD";
+
+/* Class = "UILabel"; text = "Required Lots"; ObjectID = "lmd-eI-3a2"; */
+"lmd-eI-3a2.text" = "Required Lots";
+
+/* Class = "UILabel"; text = "IB POINTS"; ObjectID = "mZe-jC-vI9"; */
+"mZe-jC-vI9.text" = "IB POINTS";
+
+/* Class = "UILabel"; text = "BMFN ACCOUNT"; ObjectID = "nB9-RS-76z"; */
+"nB9-RS-76z.text" = "BMFN ACCOUNT";
+
+/* Class = "UILabel"; text = "1000/1000"; ObjectID = "og1-Lu-2Rn"; */
+"og1-Lu-2Rn.text" = "1000/1000";
+
+/* Class = "UILabel"; text = "IB"; ObjectID = "otr-p1-Wrr"; */
+"otr-p1-Wrr.text" = "IB";
+
+/* Class = "UILabel"; text = "PRIZES"; ObjectID = "sKY-8E-Ldl"; */
+"sKY-8E-Ldl.text" = "PRIZES";
+
+/* Class = "UILabel"; text = "{Name}"; ObjectID = "w50-5p-vPd"; */
+"w50-5p-vPd.text" = "{Name}";

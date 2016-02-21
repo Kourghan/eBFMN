@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "1"; ObjectID = "98f-UY-NYy"; */
+"98f-UY-NYy.text" = "1";
+
+/* Class = "UINavigationItem"; title = "LEADERBOARD"; ObjectID = "9Lq-i3-uUF"; */
+"9Lq-i3-uUF.title" = "LEADERBOARD";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "EwO-C4-1zW"; */
+"EwO-C4-1zW.text" = "Points";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "JlI-2e-Uu0"; */
+"JlI-2e-Uu0.text" = "Name";
+
+/* Class = "UISegmentedControl"; Ka0-Mh-yBc.segmentTitles[0] = "Points"; ObjectID = "Ka0-Mh-yBc"; */
+"Ka0-Mh-yBc.segmentTitles[0]" = "Points";
+
+/* Class = "UISegmentedControl"; Ka0-Mh-yBc.segmentTitles[1] = "Rebates"; ObjectID = "Ka0-Mh-yBc"; */
+"Ka0-Mh-yBc.segmentTitles[1]" = "Rebates";
+
+/* Class = "UISegmentedControl"; Ka0-Mh-yBc.segmentTitles[2] = "Volume"; ObjectID = "Ka0-Mh-yBc"; */
+"Ka0-Mh-yBc.segmentTitles[2]" = "Volume";
+
+/* Class = "UISegmentedControl"; Ka0-Mh-yBc.segmentTitles[3] = "P/L"; ObjectID = "Ka0-Mh-yBc"; */
+"Ka0-Mh-yBc.segmentTitles[3]" = "P/L";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "cwo-cF-Bs0"; */
+"cwo-cF-Bs0.text" = "Name";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "yh0-12-gNP"; */
+"yh0-12-gNP.text" = "Points";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "zbY-z1-dHQ"; */
+"zbY-z1-dHQ.text" = "1";
