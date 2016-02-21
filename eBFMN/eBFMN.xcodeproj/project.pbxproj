@@ -48,6 +48,9 @@
 		6189D8521BEA2370009880B1 /* BFMNewsTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6189D8541BEA2370009880B1 /* BFMNewsTextCell.xib */; };
 		618AC45E1C747253005FB7C5 /* BFMPrizeCategory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 618AC45B1C747253005FB7C5 /* BFMPrizeCategory+CoreDataProperties.m */; };
 		618AC45F1C747253005FB7C5 /* BFMPrizeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 618AC45D1C747253005FB7C5 /* BFMPrizeCategory.m */; };
+		618AC4611C748071005FB7C5 /* BFMPrizeCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 618AC4601C748071005FB7C5 /* BFMPrizeCategoryCell.xib */; };
+		618AC4641C7481FA005FB7C5 /* BFMPrizeCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 618AC4631C7481FA005FB7C5 /* BFMPrizeCategoryCell.m */; };
+		618AC4671C74CED8005FB7C5 /* BFMPrizeCategoriesAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 618AC4661C74CED8005FB7C5 /* BFMPrizeCategoriesAdapter.m */; };
 		61903C201BAC0CBB0018B3A0 /* BFMNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C1F1BAC0CBB0018B3A0 /* BFMNotification.m */; };
 		61903C241BAC0CE70018B3A0 /* BFMNotificationsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C231BAC0CE70018B3A0 /* BFMNotificationsModel.m */; };
 		61903C281BAC0D960018B3A0 /* BFMNotificationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61903C271BAC0D960018B3A0 /* BFMNotificationsController.m */; };
@@ -237,6 +240,11 @@
 		618AC45B1C747253005FB7C5 /* BFMPrizeCategory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMPrizeCategory+CoreDataProperties.m"; path = "Classes/Models/Prize/BFMPrizeCategory+CoreDataProperties.m"; sourceTree = "<group>"; };
 		618AC45C1C747253005FB7C5 /* BFMPrizeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPrizeCategory.h; path = Classes/Models/Prize/BFMPrizeCategory.h; sourceTree = "<group>"; };
 		618AC45D1C747253005FB7C5 /* BFMPrizeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMPrizeCategory.m; path = Classes/Models/Prize/BFMPrizeCategory.m; sourceTree = "<group>"; };
+		618AC4601C748071005FB7C5 /* BFMPrizeCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMPrizeCategoryCell.xib; sourceTree = "<group>"; };
+		618AC4621C7481FA005FB7C5 /* BFMPrizeCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPrizeCategoryCell.h; path = Classes/UI/Cells/BFMPrizeCategoryCell.h; sourceTree = "<group>"; };
+		618AC4631C7481FA005FB7C5 /* BFMPrizeCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMPrizeCategoryCell.m; path = Classes/UI/Cells/BFMPrizeCategoryCell.m; sourceTree = "<group>"; };
+		618AC4651C74CED8005FB7C5 /* BFMPrizeCategoriesAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPrizeCategoriesAdapter.h; sourceTree = "<group>"; };
+		618AC4661C74CED8005FB7C5 /* BFMPrizeCategoriesAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPrizeCategoriesAdapter.m; sourceTree = "<group>"; };
 		61903C1E1BAC0CBB0018B3A0 /* BFMNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNotification.h; path = Classes/Models/Notifications/BFMNotification.h; sourceTree = "<group>"; };
 		61903C1F1BAC0CBB0018B3A0 /* BFMNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMNotification.m; path = Classes/Models/Notifications/BFMNotification.m; sourceTree = "<group>"; };
 		61903C221BAC0CE70018B3A0 /* BFMNotificationsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMNotificationsModel.h; path = Classes/Models/Notifications/BFMNotificationsModel.h; sourceTree = "<group>"; };
@@ -592,6 +600,8 @@
 				61EC27EE1BCA951700DD3812 /* BFMPrizeCell.m */,
 				61E477611BE6CA4500C2659D /* BFMTransactionCell.h */,
 				61E477621BE6CA4500C2659D /* BFMTransactionCell.m */,
+				618AC4621C7481FA005FB7C5 /* BFMPrizeCategoryCell.h */,
+				618AC4631C7481FA005FB7C5 /* BFMPrizeCategoryCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1189,6 +1199,9 @@
 				F990969D1BE020CB00E1D629 /* BFMShopCollectionAdapter.h */,
 				F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */,
 				6189D84F1BEA235E009880B1 /* BFMShopConcreteCell.xib */,
+				618AC4601C748071005FB7C5 /* BFMPrizeCategoryCell.xib */,
+				618AC4651C74CED8005FB7C5 /* BFMPrizeCategoriesAdapter.h */,
+				618AC4661C74CED8005FB7C5 /* BFMPrizeCategoriesAdapter.m */,
 			);
 			name = View;
 			path = Classes/Screens/Shop/View;
@@ -1311,6 +1324,7 @@
 				61E4776A1BE8EF3A00C2659D /* Leaderboard.storyboard in Resources */,
 				61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */,
 				61C1820F1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold.otf in Resources */,
+				618AC4611C748071005FB7C5 /* BFMPrizeCategoryCell.xib in Resources */,
 				61C182141B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold Italic.otf in Resources */,
 				6135F3811BAF466E00B29DE3 /* BFMBenefitsPageController.xib in Resources */,
 				61C182131B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Regular.otf in Resources */,
@@ -1401,6 +1415,7 @@
 				61CFBC361C6CCF2800AACBC0 /* BFMPrizeCategoriesViewModel.m in Sources */,
 				F919C91E1BE7ECB70022CB02 /* BFMPendingTableAdapter.m in Sources */,
 				F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */,
+				618AC4641C7481FA005FB7C5 /* BFMPrizeCategoryCell.m in Sources */,
 				61FD3D661BA7096D00F4CEFB /* ODSTableAdapter.m in Sources */,
 				61F042F21BBB1F2D000037CF /* iCarousel.m in Sources */,
 				613AE7731B9CCC9600300B22 /* BFMAccount+Extension.m in Sources */,
@@ -1444,6 +1459,7 @@
 				61903C281BAC0D960018B3A0 /* BFMNotificationsController.m in Sources */,
 				61FD3D6A1BA7096D00F4CEFB /* ODSObjectChange.m in Sources */,
 				F96073EA1BE72D5000704692 /* BFMNewsActionCell.m in Sources */,
+				618AC4671C74CED8005FB7C5 /* BFMPrizeCategoriesAdapter.m in Sources */,
 				2C8E49EE1BDF9C6500A9F8F9 /* BFMDetailedNewsViewController.m in Sources */,
 				61F043071BBBF4B3000037CF /* BFMAccountCell.m in Sources */,
 				61FD3D711BA7096D00F4CEFB /* ODSFetchedResultsDataSource.m in Sources */,

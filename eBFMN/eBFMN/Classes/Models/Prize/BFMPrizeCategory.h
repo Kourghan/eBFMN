@@ -12,6 +12,7 @@
 
 @interface BFMPrizeCategory : NSManagedObject
 
++ (void)prizeCategoriesWithCompletion:(void (^)(NSArray *categories, NSError *error))completition;
 
 @end
 

@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+#import "ODSDataSource.h"
+
 @interface BFMPrizeCategoriesViewModel : NSObject
+
+@property (nonatomic, strong) ODSDataSource *dataSource;
 
 - (void)loadCategoriesWithCallback:(void (^)(NSError *error))completion;
 

@@ -7,10 +7,40 @@
 //
 
 #import "BFMPrizeCategory.h"
+#import "BFMSessionManager.h"
+#import "JNKeychain+UNTExtension.h"
+
+#import <FastEasyMapping/FastEasyMapping.h>
+#import <MagicalRecord/MagicalRecord.h>
 
 @implementation BFMPrizeCategory
 
-// Insert code here to add functionality to your managed object subclass
++ (void)prizeCategoriesWithCompletion:(void (^)(NSArray *categories, NSError *error))completition {
+	BFMSessionManager *manager = [BFMSessionManager sharedManager];
+	
+	NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+	
+	[manager GET:@"Bonus/GetPrizeCategories"
+	  parameters:@{
+				   @"guid" : sessionKey
+				   }
+		 success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+			 if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
+				 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
+				 completition(nil, [NSError new]);
+			 } else {
+				 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+				 NSArray *categories = [FEMDeserializer collectionFromRepresentation:[responseObject valueForKey:@"Data"]
+																			 mapping:[BFMPrizeCategory defaultMapping]
+																			 context:context];
+				 [context MR_saveToPersistentStoreAndWait];
+				 completition(categories, nil);
+			 }
+		 } failure:^(NSURLSessionDataTask *task, NSError *error) {
+			 completition(nil, error);
+		 }
+	 ];
+}
 
 @end
 
