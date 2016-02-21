@@ -57,23 +57,23 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 
-//- (CGSize)collectionView:(UICollectionView *)collectionView
-//				  layout:(UICollectionViewLayout *)collectionViewLayout
-//  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-//	
-//	CGFloat screenWidth = CGRectGetWidth([UIScreen mainScreen].bounds);
-//	
-//	CGFloat coef = 2.f;
-//	CGFloat ratio = kBFMShopCellSideRatio;
-//	if (screenWidth >= 414.f) {
-//		coef = 3.f;
-//		ratio = kBFMShopCellSideRatio6Plus;
-//	}
-//	
-//	CGFloat width = floor(screenWidth / coef);
+- (CGSize)collectionView:(UICollectionView *)collectionView
+				  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+	
+	CGFloat screenWidth = CGRectGetWidth([UIScreen mainScreen].bounds);
+	
+	CGFloat coef = 2.f;
+	CGFloat ratio = kBFMShopCellSideRatio;
+	if (screenWidth >= 414.f) {
+		coef = 3.f;
+		ratio = kBFMShopCellSideRatio6Plus;
+	}
+	
+	CGFloat width = floor(screenWidth / coef);
 //	CGFloat height = floor(width * ratio);
-//	return CGSizeMake(width, height);
-//}
+	return CGSizeMake(width, 190.f);
+}
 
 @end
 
