@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BFMBackCardDataProvider.h"
 
 @interface BFMBackCardView : UIView
 

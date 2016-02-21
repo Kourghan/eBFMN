@@ -79,7 +79,6 @@
     [presView setupView:frontView side:BFMCardPresentingViewSideFront];
     
     BFMBackCardView *backView = [BFMBackCardView bfm_load];
-    [backView configureWithDataProvider:[BFMUser currentUser]];
     [presView setupView:backView side:BFMCardPresentingViewSideBack];
     
     [presView showSide:BFMCardPresentingViewSideFront animated:NO];
