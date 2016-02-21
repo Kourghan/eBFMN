@@ -13,6 +13,8 @@ typedef enum {
     BFMNetworkStateFailed = 1
 } BFMNetworkState;
 
+extern NSString *const kBFMLogoutNotification;
+
 @interface BFMSessionManager : AFHTTPSessionManager
 
 + (instancetype)sharedManager;

@@ -24,6 +24,7 @@
 #import "BFMFrontCardView.h"
 #import "BFMBackCardView.h"
 #import "UIView+BFMLoad.h"
+#import "BFMSessionManager.h"
 
 #import <MagicalRecord/MagicalRecord.h>
 
@@ -43,11 +44,18 @@
 
 @implementation BFMProfileViewController
 
+#pragma mark - Memory management
+
+- (void)dealloc {
+    [self unsubscribeLogoutNotification];
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self subscribeLogoutNotification];
     [self bindUser:[BFMUser currentUser]];
     [self setupCardPresentingView];
 }
@@ -67,6 +75,23 @@
     [super viewWillDisappear:animated];
     
     [NINavigationAppearance popAppearanceForNavigationController:self.navigationController];
+}
+
+#pragma mark - NSNotification Handling
+
+- (void)subscribeLogoutNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleLogoutNotification:)
+                                                 name:kBFMLogoutNotification
+                                               object:nil];
+}
+
+- (void)unsubscribeLogoutNotification {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)handleLogoutNotification:(NSNotification *)notif {
+    [self logout:nil];
 }
 
 #pragma mark - Private (Setup)
