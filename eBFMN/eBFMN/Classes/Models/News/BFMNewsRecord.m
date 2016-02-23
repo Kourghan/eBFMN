@@ -16,13 +16,20 @@
 
 @implementation BFMNewsRecord
 
-+ (void)getNewsFromDate:(NSInteger)date withCompletition:(void (^)(NSArray *, NSError *))completition {
++ (void)getNews:(NSInteger)page pageSize:(NSInteger)pageSize withCompletition:(void (^)(NSArray *, NSError *))completition {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
     
     NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
-    
-    NSDictionary *params = @{@"guid" : sessionKey, @"from" : @(date)};
-    [manager GET:@"Reports/GetNews"
+	
+	// (string guid, string language, int pageSize, int page)
+	
+    NSDictionary *params = @{
+							 @"guid" : sessionKey,
+							 @"page" : @(page),
+							 @"pageSize" : @(pageSize),
+							 @"language" : @"en" // temp lang
+							 };
+    [manager GET:@"Reports/GetCabinetNews"
       parameters:params
          success:^(NSURLSessionDataTask *task, NSArray *responseObject) {
              if (![responseObject isEqual: @[]]) {
@@ -92,7 +99,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         internalRecordDateFormatter = [NSDateFormatter new];
-        internalRecordDateFormatter.dateFormat = @"EEEE, dd/mm/yyyy";
+        internalRecordDateFormatter.dateFormat = @"EEEE, dd/MM/yyyy";
     });
     return internalRecordDateFormatter;
 }
@@ -117,7 +124,7 @@
                                                                  map:^id(id value) {
                                                                      if ([value isKindOfClass:[NSString class]]) {
                                                                          NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                                                                         [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
+                                                                         [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
                                                                          return [formatter dateFromString:value];
                                                                      }
                                                                      return nil;

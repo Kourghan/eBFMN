@@ -13,7 +13,7 @@
 
 @interface BFMNewsRecord : NSManagedObject
 
-+ (void)getNewsFromDate:(NSInteger)date withCompletition:(void (^)(NSArray *prizes, NSError *error))completition;
++ (void)getNews:(NSInteger)page pageSize:(NSInteger)pageSize withCompletition:(void (^)(NSArray *prizes, NSError *error))completition;
 
 - (void)getDetailsWithCompletition:(void (^)(BFMNewsRecord *record, NSError *error))completition;
 

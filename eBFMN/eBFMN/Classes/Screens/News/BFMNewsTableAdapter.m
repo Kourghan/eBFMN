@@ -18,6 +18,16 @@
 
 @implementation BFMNewsTableAdapter
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+	NSInteger sectionsAmount = [tableView numberOfSections];
+	NSInteger rowsAmount = [tableView numberOfRowsInSection:[indexPath section]];
+	if ([indexPath section] == sectionsAmount - 1 && [indexPath row] == rowsAmount - 1) {
+		if ([self.delegate respondsToSelector:@selector(adapterWillDisplayeLastCell:)]) {
+			[self.delegate adapterWillDisplayeLastCell:self];
+		}
+	}
+}
+
 /*
 override func tableView(_: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     let activity = activities[indexPath.row]

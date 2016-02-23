@@ -8,6 +8,16 @@
 
 #import "ODSTableAdapter.h"
 
+@protocol BFMNewsTableAdapterProtocol;
+
 @interface BFMNewsTableAdapter : ODSTableAdapter
+
+@property (nonatomic, weak) id<BFMNewsTableAdapterProtocol> delegate;
+
+@end
+
+@protocol BFMNewsTableAdapterProtocol <NSObject>
+
+- (void)adapterWillDisplayeLastCell:(BFMNewsTableAdapter *)adapter;
 
 @end

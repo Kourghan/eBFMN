@@ -19,6 +19,12 @@
 
 static NSString *kLastNewsUpdateUserDefaultsKey = @"kLastNewsUpdateUserDefaultsKey";
 
+@interface BFMNewsModel ()
+
+@property (nonatomic) int page;
+
+@end
+
 @implementation BFMNewsModel
 
 - (instancetype)init {
@@ -39,13 +45,23 @@ static NSString *kLastNewsUpdateUserDefaultsKey = @"kLastNewsUpdateUserDefaultsK
         
     self.dataSource = [[ODSFetchedResultsDataSource alloc] initWithFetchedResultsController:controller];
     //[self fetchNews]; // Uncoment+Test when backend implement neews feed
+		
+		self.page = 0;
+		
     }
     return self;
 }
 
-- (void)refreshWithCallback:(void (^)(NSError *))callback {
-    [BFMNewsRecord getNewsFromDate:[BFMNewsRecord unixLatestNewsDate]
+- (void)loadNewsReset:(BOOL)reset callback:(void (^)(NSError *))callback {
+	if (reset == YES) {
+		self.page = 0;
+	}
+	[BFMNewsRecord getNews:self.page
+				  pageSize:10
                   withCompletition:^(NSArray *prizes, NSError *error) {
+					  if (!error) {
+						  self.page += 1;
+					  }
                       callback(error);
                   }
      ];
