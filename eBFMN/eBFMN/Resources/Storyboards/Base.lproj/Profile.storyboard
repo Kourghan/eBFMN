@@ -4,11 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="Mark Simonson - Proxima Nova Light.otf">
-            <string>ProximaNova-Light</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="K1F-3D-dCx">
@@ -39,17 +34,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnO-gz-OCq">
-                                <rect key="frame" x="130" y="497" width="60" height="31"/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="15"/>
-                                <state key="normal" title="LOGOUT">
-                                    <color key="titleColor" red="0.81568627450980391" green="0.21568627450980393" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logout:" destination="Dgx-vF-3YV" eventType="touchUpInside" id="j0K-ur-GFZ"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gof-Np-xaK" customClass="BFMCardPresentingView">
                                 <rect key="frame" x="-10" y="109" width="340" height="214"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -68,23 +52,99 @@
                                     <action selector="swapButtonTap" destination="Dgx-vF-3YV" eventType="touchUpInside" id="uBC-jg-mq2"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAc-qC-eKF" userLabel="arrow cont">
+                                <rect key="frame" x="20" y="341" width="280" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lVA-aQ-jko" customClass="BFMCardArrowView">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="G8Q-Fd-oQt"/>
+                                    <constraint firstItem="lVA-aQ-jko" firstAttribute="top" secondItem="yAc-qC-eKF" secondAttribute="top" id="Of9-ga-1ej"/>
+                                    <constraint firstAttribute="bottom" secondItem="lVA-aQ-jko" secondAttribute="bottom" id="Uve-q5-ZUk"/>
+                                    <constraint firstAttribute="trailing" secondItem="lVA-aQ-jko" secondAttribute="trailing" id="X1i-qT-Aah"/>
+                                    <constraint firstAttribute="height" constant="40" id="Y5v-tq-qSO"/>
+                                    <constraint firstItem="lVA-aQ-jko" firstAttribute="leading" secondItem="yAc-qC-eKF" secondAttribute="leading" id="a24-9e-HQ4"/>
+                                </constraints>
+                            </view>
+                            <view opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJI-u3-MWN" userLabel="goal card" customClass="BFMCardPresentingView">
+                                <rect key="frame" x="-10" y="389" width="340" height="214"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="214" id="uPG-NX-wmT"/>
+                                    <constraint firstAttribute="width" constant="340" id="yOA-p3-FAC"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="heightConstraint" destination="uPG-NX-wmT" id="W36-kc-3E1"/>
+                                    <outlet property="widthConstraint" destination="yOA-p3-FAC" id="yLr-ZG-EQT"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1G-pI-FuN" userLabel="goal button">
+                                <rect key="frame" x="-10" y="389" width="340" height="214"/>
+                                <connections>
+                                    <action selector="goalSwapButtonTap" destination="Dgx-vF-3YV" eventType="touchUpInside" id="wUh-0y-BZ5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nJI-u3-MWN" firstAttribute="top" secondItem="TMz-zq-HaX" secondAttribute="bottom" constant="8" id="3cZ-ib-t2I"/>
                             <constraint firstItem="TMz-zq-HaX" firstAttribute="top" secondItem="gof-Np-xaK" secondAttribute="top" id="B70-Vx-DHp"/>
+                            <constraint firstItem="d1G-pI-FuN" firstAttribute="trailing" secondItem="nJI-u3-MWN" secondAttribute="trailing" id="CCM-f7-6Mk"/>
+                            <constraint firstItem="yAc-qC-eKF" firstAttribute="centerX" secondItem="yZy-Wd-keZ" secondAttribute="centerX" id="EBU-4u-lO9"/>
                             <constraint firstItem="gof-Np-xaK" firstAttribute="centerX" secondItem="yZy-Wd-keZ" secondAttribute="centerX" id="F8n-q3-mEu"/>
-                            <constraint firstItem="njf-4S-NRM" firstAttribute="top" secondItem="dnO-gz-OCq" secondAttribute="bottom" constant="40" id="NJm-qz-iYA"/>
-                            <constraint firstItem="gof-Np-xaK" firstAttribute="top" secondItem="78w-pv-7uF" secondAttribute="bottom" constant="45" id="VEb-QX-SvF"/>
+                            <constraint firstItem="nJI-u3-MWN" firstAttribute="centerX" secondItem="yZy-Wd-keZ" secondAttribute="centerX" id="NKY-NL-kCZ"/>
+                            <constraint firstItem="d1G-pI-FuN" firstAttribute="leading" secondItem="nJI-u3-MWN" secondAttribute="leading" id="T45-kM-eqH"/>
+                            <constraint firstItem="gof-Np-xaK" firstAttribute="top" secondItem="78w-pv-7uF" secondAttribute="bottom" constant="45" id="VEb-QX-SvF">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sbf_phone4">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sbf_phone5">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="d1G-pI-FuN" firstAttribute="bottom" secondItem="nJI-u3-MWN" secondAttribute="bottom" id="VNU-Fq-BQL"/>
+                            <constraint firstItem="nJI-u3-MWN" firstAttribute="top" secondItem="yAc-qC-eKF" secondAttribute="bottom" constant="8" id="WYg-pW-SFq"/>
                             <constraint firstItem="TMz-zq-HaX" firstAttribute="bottom" secondItem="gof-Np-xaK" secondAttribute="bottom" id="dXr-vx-bv1"/>
-                            <constraint firstAttribute="centerX" secondItem="dnO-gz-OCq" secondAttribute="centerX" id="fB5-Ts-Evo"/>
+                            <constraint firstItem="yAc-qC-eKF" firstAttribute="top" secondItem="TMz-zq-HaX" secondAttribute="bottom" constant="18" id="gAE-YZ-Gcb">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sbf_phone4">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sbf_phone5">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
                             <constraint firstItem="TMz-zq-HaX" firstAttribute="trailing" secondItem="gof-Np-xaK" secondAttribute="trailing" id="mHa-UG-dry"/>
                             <constraint firstItem="TMz-zq-HaX" firstAttribute="leading" secondItem="gof-Np-xaK" secondAttribute="leading" id="rCi-uP-oeR"/>
+                            <constraint firstItem="d1G-pI-FuN" firstAttribute="top" secondItem="nJI-u3-MWN" secondAttribute="top" id="uEH-L3-hGn"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3cZ-ib-t2I"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="hfD-lJ-m4Q"/>
+                    <navigationItem key="navigationItem" id="hfD-lJ-m4Q">
+                        <barButtonItem key="rightBarButtonItem" image="pr_logout" id="TKB-8L-k6m">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="logout:" destination="Dgx-vF-3YV" id="0v2-l9-sGY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="cardPresentingView" destination="gof-Np-xaK" id="eRq-Rz-DGn"/>
-                        <outlet property="logoutButton" destination="dnO-gz-OCq" id="STf-rF-x50"/>
+                        <outlet property="goalCardView" destination="nJI-u3-MWN" id="TqK-Sl-fNU"/>
+                        <outletCollection property="goalsViews" destination="yAc-qC-eKF" id="o0R-qK-mEZ"/>
+                        <outletCollection property="goalsViews" destination="d1G-pI-FuN" id="Cfz-zi-zZD"/>
+                        <outletCollection property="goalsViews" destination="nJI-u3-MWN" id="2Mp-n0-LT2"/>
                         <segue destination="6PD-q0-9lx" kind="presentation" identifier="goals" modalPresentationStyle="overCurrentContext" id="Qkg-uC-x1n"/>
                         <segue destination="6PD-q0-9lx" kind="presentation" identifier="benefits" modalPresentationStyle="overCurrentContext" id="saU-Dy-XYF"/>
                     </connections>
@@ -156,6 +216,9 @@
             <point key="canvasLocation" x="1097" y="389"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pr_logout" width="20" height="20"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="saU-Dy-XYF"/>
     </inferredMetricsTieBreakers>

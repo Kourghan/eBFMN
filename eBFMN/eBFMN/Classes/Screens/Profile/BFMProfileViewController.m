@@ -38,7 +38,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *idLabel;
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 @property (weak, nonatomic) IBOutlet UIImageView *leagueImageView;
+
 @property (weak, nonatomic) IBOutlet BFMCardPresentingView *cardPresentingView;
+@property (weak, nonatomic) IBOutlet BFMCardPresentingView *goalCardView;
+@property (strong, nonatomic) IBOutletCollection(UIView) NSArray *goalsViews;
 
 @end
 
@@ -97,16 +100,25 @@
 #pragma mark - Private (Setup)
 
 - (void)setupCardPresentingView {
-    BFMCardPresentingView *presView = self.cardPresentingView;
+    {
+        BFMCardPresentingView *presView = self.cardPresentingView;
+        BFMFrontCardView *frontView = [BFMFrontCardView bfm_load];
+        [frontView configureWithDataProvider:[BFMUser currentUser]];
+        [presView setupView:frontView side:BFMCardPresentingViewSideFront];
+        BFMBackCardView *backView = [BFMBackCardView bfm_load];
+        [presView setupView:backView side:BFMCardPresentingViewSideBack];
+        [presView showSide:BFMCardPresentingViewSideFront animated:NO];
+    }
     
-    BFMFrontCardView *frontView = [BFMFrontCardView bfm_load];
-    [frontView configureWithDataProvider:[BFMUser currentUser]];
-    [presView setupView:frontView side:BFMCardPresentingViewSideFront];
-    
-    BFMBackCardView *backView = [BFMBackCardView bfm_load];
-    [presView setupView:backView side:BFMCardPresentingViewSideBack];
-    
-    [presView showSide:BFMCardPresentingViewSideFront animated:NO];
+    {
+        BFMCardPresentingView *presView = self.goalCardView;
+        BFMFrontCardView *frontView = [BFMFrontCardView bfm_load];
+        [frontView configureWithDataProvider:[BFMUser currentUser]];
+        [presView setupView:frontView side:BFMCardPresentingViewSideFront];
+        BFMBackCardView *backView = [BFMBackCardView bfm_load];
+        [presView setupView:backView side:BFMCardPresentingViewSideBack];
+        [presView showSide:BFMCardPresentingViewSideFront animated:NO];
+    }
 }
 
 #pragma mark - Private
@@ -138,26 +150,54 @@
 }
 
 - (void)updateUI {
-    UIImage *frontImage = [BFM_CARD_CON imageForCurrentType:NO];
-    UIImage *backImage = [BFM_CARD_CON imageForCurrentType:YES];
-    NSString *benefitTitle = [BFM_CARD_CON backHeaderForCurrentType];
-    NSAttributedString *benefitText = [BFM_CARD_CON benefitsTextForCurrentLeague];
+    {
+        UIImage *frontImage = [BFM_CARD_CON imageForCurrentType:NO];
+        UIImage *backImage = [BFM_CARD_CON imageForCurrentType:YES];
+        NSString *benefitTitle = [BFM_CARD_CON backHeaderForCurrentType];
+        NSAttributedString *benefitText = [BFM_CARD_CON benefitsTextForCurrentLeague];
+        
+        BFMCardPresentingView *presView = self.cardPresentingView;
+        
+        BFMFrontCardView *frontCard = (id)presView.frontView;
+        [frontCard configureWithDataProvider:[BFMUser currentUser]];
+        frontCard.backgroundImageView.image = frontImage;
+        
+        BFMBackCardView *backCard = (id)presView.backView;
+        backCard.backgroundImageView.image = backImage;
+        backCard.titleLabel.text = benefitTitle;
+        
+        backCard.textLabel.adjustsFontSizeToFitWidth = true;
+        backCard.textLabel.attributedText = benefitText;
+        backCard.textLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+        
+        presView.hidden = ([BFM_CARD_CON currentType] == BFMLeagueTypeUndefined);
+    }
     
-    BFMCardPresentingView *presView = self.cardPresentingView;
-    
-    BFMFrontCardView *frontCard = (id)presView.frontView;
-    [frontCard configureWithDataProvider:[BFMUser currentUser]];
-    frontCard.backgroundImageView.image = frontImage;
-    
-    BFMBackCardView *backCard = (id)presView.backView;
-    backCard.backgroundImageView.image = backImage;
-    backCard.titleLabel.text = benefitTitle;
-    
-    backCard.textLabel.adjustsFontSizeToFitWidth = true;
-    backCard.textLabel.attributedText = benefitText;
-    backCard.textLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-    
-    presView.hidden = ([BFM_CARD_CON currentType] == BFMLeagueTypeUndefined);
+    {
+        UIImage *frontImage = [BFM_CARD_CON imageForNextType:NO];
+        UIImage *backImage = [BFM_CARD_CON imageForNextType:YES];
+        NSString *benefitTitle = [BFM_CARD_CON backHeaderForNextType];
+        NSString *goalText = [BFM_CARD_CON goalsTextForNextLeague];
+        
+        BFMCardPresentingView *presView = self.goalCardView;
+        
+        BFMFrontCardView *frontCard = (id)presView.frontView;
+        [frontCard configureWithDataProvider:[BFMUser currentUser]];
+        frontCard.backgroundImageView.image = frontImage;
+        
+        BFMBackCardView *backCard = (id)presView.backView;
+        backCard.backgroundImageView.image = backImage;
+        backCard.titleLabel.text = benefitTitle;
+        
+        backCard.textLabel.adjustsFontSizeToFitWidth = true;
+        backCard.textLabel.text = goalText;
+        backCard.textLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+        
+        BOOL shouldShow = [BFM_CARD_CON shouldShowNextType];
+        for (UIView *goalView in self.goalsViews) {
+            goalView.hidden = !shouldShow;
+        }
+    }
 }
 
 #pragma mark - Handlers
@@ -210,6 +250,10 @@
 
 - (IBAction)swapButtonTap {
     [self.cardPresentingView switchSide];
+}
+
+- (IBAction)goalSwapButtonTap {
+    [self.goalCardView switchSide];
 }
 
 #pragma mark - Navigation

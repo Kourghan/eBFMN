@@ -39,8 +39,8 @@ static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
     [BFM_DEFS synchronize];
 }
 
-+ (NSInteger)currentType {
-    return [BFM_DEFS integerForKey:kBFMProfileDataCurrent];
++ (BFMLeagueType)currentType {
+    return (BFMLeagueType)[BFM_DEFS integerForKey:kBFMProfileDataCurrent];
 }
 
 + (void)setCurrentType:(NSInteger)currentType {
@@ -189,7 +189,7 @@ static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
     return [[NSAttributedString alloc] initWithString:@""];
 }
 
-+ (NSString *)benefitsTextForCurrentLeague {
++ (NSAttributedString *)benefitsTextForCurrentLeague {
     return [self benefitsTextForLeagueType:[self currentType]];
 }
 
@@ -201,10 +201,13 @@ static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
     }
     
     NSDictionary *goals = [self goals];
-    NSString *goal = goals[key];
+    NSArray *goalCont = goals[key];
     
-    if ([goal isKindOfClass:[NSString class]]) {
-        return goal;
+    if ([goalCont isKindOfClass:[NSArray class]]) {
+        NSString *goal = goalCont.firstObject;
+        if ([goal isKindOfClass:[NSString class]]) {
+            return goal;
+        }
     }
     
     return @"";
@@ -212,6 +215,42 @@ static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
 
 + (NSString *)goalsTextForCurrentLeague {
     return [self goalsTextForLeagueType:[self currentType]];
+}
+
+#pragma mark - Next UI
+
++ (BFMLeagueType)nextType {
+    BFMLeagueType type = [self currentType];
+    switch (type) {
+        case BFMLeagueTypeSilver: return BFMLeagueTypeGold;
+        case BFMLeagueTypeGold: return BFMLeagueTypePlatinum;
+        case BFMLeagueTypePlatinum: return BFMLeagueTypeDiamand;
+        default: return BFMLeagueTypeUndefined;
+    }
+}
+
++ (BOOL)shouldShowNextType {
+    return [self nextType] != BFMLeagueTypeUndefined;
+}
+
++ (UIImage *)imageForNextType:(BOOL)back {
+    return [self imageForLeagueType:[self nextType] back:back];
+}
+
++ (NSString *)backHeaderForNextType {
+    return [self backHeaderForLeagueType:[self nextType]];
+}
+
++ (NSString *)dictKeyForNextType {
+    return [self dictKeyForLeagueType:[self nextType]];
+}
+
++ (NSAttributedString *)benefitsTextForNextLeague {
+    return [self benefitsTextForLeagueType:[self nextType]];
+}
+
++ (NSString *)goalsTextForNextLeague {
+    return [self goalsTextForLeagueType:[self nextType]];
 }
 
 #pragma mark -
