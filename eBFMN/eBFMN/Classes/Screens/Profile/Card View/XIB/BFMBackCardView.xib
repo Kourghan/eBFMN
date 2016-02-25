@@ -5,6 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Mark Simonson - Proxima Nova Light.otf">
+            <string>ProximaNova-Light</string>
+        </mutableArray>
         <mutableArray key="Mark Simonson - Proxima Nova Semibold.otf">
             <string>ProximaNova-Semibold</string>
         </mutableArray>
@@ -30,7 +33,7 @@
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oVu-Nh-Ipe">
                     <rect key="frame" x="22" y="40" width="296" height="162"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="16"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -53,6 +56,8 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="backgroundImageView" destination="9cX-PY-gTP" id="pTW-L8-w71"/>
+                <outlet property="leftConstr" destination="RvP-s7-u1u" id="ZWa-FQ-k1N"/>
+                <outlet property="rightConstr" destination="sNm-qS-bF2" id="KFz-GR-H7s"/>
                 <outlet property="textLabel" destination="oVu-Nh-Ipe" id="Xtq-9M-VO4"/>
                 <outlet property="titleLabel" destination="1S3-eH-uBs" id="saK-zU-ics"/>
             </connections>

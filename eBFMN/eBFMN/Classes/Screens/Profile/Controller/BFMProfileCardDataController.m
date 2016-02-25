@@ -89,7 +89,10 @@ static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
     return [self imageForLeagueType:[self currentType] back:back];
 }
 
-+ (NSString *)backHeaderForLeagueType:(BFMLeagueType)type {
++ (NSString *)backHeaderForLeagueType:(BFMLeagueType)type isGoal:(BOOL)isGoal {
+    
+    NSString *suff = isGoal ? NSLocalizedString(@"GOALS", nil) : NSLocalizedString(@"BENEFITS", nil);
+    
     switch (type) {
         case BFMLeagueTypeUndefined: return @"";
             
@@ -98,15 +101,21 @@ static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
         }
             
         case BFMLeagueTypeGold: {
-            return NSLocalizedString(@"GOLD BENEFITS", nil);
+            return [NSString stringWithFormat:@"%@ %@",
+                    NSLocalizedString(@"GOLD", nil),
+                    suff];
         }
             
         case BFMLeagueTypePlatinum: {
-            return NSLocalizedString(@"PLATINUM BENEFITS", nil);
+            return [NSString stringWithFormat:@"%@ %@",
+                    NSLocalizedString(@"PLATINUM", nil),
+                    suff];
         }
             
         case  BFMLeagueTypeDiamand: {
-            return NSLocalizedString(@"SAPPHIRE BENEFITS", nil);
+            return [NSString stringWithFormat:@"%@ %@",
+                    NSLocalizedString(@"SAPPHIRE", nil),
+                    suff];
         }
             
         default:
@@ -117,7 +126,7 @@ static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
 }
 
 + (NSString *)backHeaderForCurrentType {
-    return [self backHeaderForLeagueType:[self currentType]];
+    return [self backHeaderForLeagueType:[self currentType] isGoal:NO];
 }
 
 + (NSString *)dictKeyForLeagueType:(BFMLeagueType)type {
@@ -238,7 +247,7 @@ static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
 }
 
 + (NSString *)backHeaderForNextType {
-    return [self backHeaderForLeagueType:[self nextType]];
+    return [self backHeaderForLeagueType:[self nextType] isGoal:YES];
 }
 
 + (NSString *)dictKeyForNextType {

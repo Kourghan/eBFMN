@@ -27,7 +27,7 @@
 + (UIImage *)imageForCurrentType:(BOOL)back;
 + (UIImage *)imageForNextType:(BOOL)back;
 
-+ (NSString *)backHeaderForLeagueType:(BFMLeagueType)type;
++ (NSString *)backHeaderForLeagueType:(BFMLeagueType)type isGoal:(BOOL)isGoal;
 + (NSString *)backHeaderForCurrentType;
 + (NSString *)backHeaderForNextType;
 

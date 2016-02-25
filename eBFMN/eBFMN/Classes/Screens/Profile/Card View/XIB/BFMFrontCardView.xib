@@ -22,34 +22,33 @@
                     <rect key="frame" x="0.0" y="0.0" width="340" height="214"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pr_logo" translatesAutoresizingMaskIntoConstraints="NO" id="93S-j9-9Hr">
-                    <rect key="frame" x="117" y="35" width="106" height="82"/>
+                    <rect key="frame" x="117" y="32" width="106" height="82"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="106" id="4fe-7I-axp"/>
                         <constraint firstAttribute="height" constant="82" id="Wct-3t-cFb"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cs6-12-jRg" userLabel="separator view">
-                    <rect key="frame" x="50" y="132" width="240" height="1"/>
+                    <rect key="frame" x="30" y="129" width="280" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="Lwy-bR-QnC"/>
-                        <constraint firstAttribute="width" constant="240" id="tJu-b0-jTn"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdI-NX-uEd">
-                    <rect key="frame" x="33" y="146" width="282" height="44"/>
+                    <rect key="frame" x="30" y="143" width="280" height="47"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hartwig Kauko" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BM7-zq-JrB">
-                            <rect key="frame" x="0.0" y="0.0" width="282" height="21"/>
+                            <rect key="frame" x="0.0" y="0.0" width="280" height="23"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="21" id="LY5-RI-Jmh"/>
+                                <constraint firstAttribute="height" constant="23" id="LY5-RI-Jmh"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="OCRAExtended" family="OCR A Extended" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="OCRAExtended" family="OCR A Extended" pointSize="16"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code: 7309" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMK-u4-WWw">
-                            <rect key="frame" x="0.0" y="23" width="80" height="21"/>
+                            <rect key="frame" x="0.0" y="26" width="80" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="MMT-TX-rmW"/>
                                 <constraint firstAttribute="width" constant="80" id="u7N-A1-UtI"/>
@@ -59,7 +58,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiration date: 10/17" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="px8-Iv-Q8H">
-                            <rect key="frame" x="80" y="23" width="202" height="21"/>
+                            <rect key="frame" x="80" y="26" width="200" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="V4L-2c-pAN"/>
                             </constraints>
@@ -84,14 +83,15 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="wmy-2A-9bX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="18M-gU-i8X"/>
-                <constraint firstItem="Cs6-12-jRg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4QF-q3-EG1"/>
-                <constraint firstAttribute="trailing" secondItem="fdI-NX-uEd" secondAttribute="trailing" constant="25" id="AdW-L5-Wn4"/>
+                <constraint firstAttribute="trailing" secondItem="fdI-NX-uEd" secondAttribute="trailing" constant="30" id="AdW-L5-Wn4"/>
+                <constraint firstAttribute="trailing" secondItem="Cs6-12-jRg" secondAttribute="trailing" constant="30" id="Cbn-lj-ieM"/>
                 <constraint firstItem="Cs6-12-jRg" firstAttribute="top" secondItem="93S-j9-9Hr" secondAttribute="bottom" constant="15" id="FLN-AM-wQE"/>
                 <constraint firstAttribute="bottom" secondItem="wmy-2A-9bX" secondAttribute="bottom" id="PFG-CG-cOK"/>
-                <constraint firstItem="93S-j9-9Hr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="35" id="QKl-H1-zP5"/>
-                <constraint firstItem="fdI-NX-uEd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="33" id="cbx-Wo-IsA"/>
+                <constraint firstItem="93S-j9-9Hr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="QKl-H1-zP5"/>
+                <constraint firstItem="fdI-NX-uEd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="cbx-Wo-IsA"/>
                 <constraint firstItem="wmy-2A-9bX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eZ4-yx-WPf"/>
                 <constraint firstItem="fdI-NX-uEd" firstAttribute="top" secondItem="Cs6-12-jRg" secondAttribute="bottom" constant="13" id="exb-1S-yiZ"/>
+                <constraint firstItem="Cs6-12-jRg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="f06-1d-HDv"/>
                 <constraint firstItem="93S-j9-9Hr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fTd-S6-yBm"/>
                 <constraint firstAttribute="bottom" secondItem="fdI-NX-uEd" secondAttribute="bottom" constant="24" id="i7o-iw-BRN"/>
                 <constraint firstAttribute="trailing" secondItem="wmy-2A-9bX" secondAttribute="trailing" id="isQ-ME-1AX"/>

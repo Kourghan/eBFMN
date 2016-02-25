@@ -4,6 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Mark Simonson - Proxima Nova Semibold.otf">
+            <string>ProximaNova-Semibold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="K1F-3D-dCx">
@@ -35,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gof-Np-xaK" customClass="BFMCardPresentingView">
-                                <rect key="frame" x="-10" y="109" width="340" height="214"/>
+                                <rect key="frame" x="-10" y="82" width="340" height="214"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="340" id="86Q-bj-vsT"/>
@@ -47,17 +52,35 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMz-zq-HaX" userLabel="Card Button">
-                                <rect key="frame" x="-10" y="109" width="340" height="214"/>
+                                <rect key="frame" x="-10" y="82" width="340" height="214"/>
                                 <connections>
                                     <action selector="swapButtonTap" destination="Dgx-vF-3YV" eventType="touchUpInside" id="uBC-jg-mq2"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAc-qC-eKF" userLabel="arrow cont">
-                                <rect key="frame" x="20" y="341" width="280" height="40"/>
+                                <rect key="frame" x="20" y="314" width="280" height="40"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lVA-aQ-jko" customClass="BFMCardArrowView">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTj-CJ-0fY">
+                                        <rect key="frame" x="15" y="5" width="250" height="22"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW TO REACH YOUR NEXT STATUS?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSy-TG-mIa">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="22"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="13"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="KSy-TG-mIa" secondAttribute="trailing" id="Sji-dn-pVs"/>
+                                            <constraint firstItem="KSy-TG-mIa" firstAttribute="top" secondItem="OTj-CJ-0fY" secondAttribute="top" id="UQb-TB-80P"/>
+                                            <constraint firstAttribute="bottom" secondItem="KSy-TG-mIa" secondAttribute="bottom" id="e8s-KX-C40"/>
+                                            <constraint firstItem="KSy-TG-mIa" firstAttribute="leading" secondItem="OTj-CJ-0fY" secondAttribute="leading" id="oXa-hn-9Od"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -68,10 +91,14 @@
                                     <constraint firstAttribute="trailing" secondItem="lVA-aQ-jko" secondAttribute="trailing" id="X1i-qT-Aah"/>
                                     <constraint firstAttribute="height" constant="40" id="Y5v-tq-qSO"/>
                                     <constraint firstItem="lVA-aQ-jko" firstAttribute="leading" secondItem="yAc-qC-eKF" secondAttribute="leading" id="a24-9e-HQ4"/>
+                                    <constraint firstItem="OTj-CJ-0fY" firstAttribute="leading" secondItem="yAc-qC-eKF" secondAttribute="leading" constant="15" id="jIa-jJ-Vqw"/>
+                                    <constraint firstItem="OTj-CJ-0fY" firstAttribute="top" secondItem="yAc-qC-eKF" secondAttribute="top" constant="5" id="jji-xh-08L"/>
+                                    <constraint firstAttribute="bottom" secondItem="OTj-CJ-0fY" secondAttribute="bottom" constant="13" id="kDV-u9-mIj"/>
+                                    <constraint firstAttribute="trailing" secondItem="OTj-CJ-0fY" secondAttribute="trailing" constant="15" id="r2e-oQ-fkP"/>
                                 </constraints>
                             </view>
-                            <view opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJI-u3-MWN" userLabel="goal card" customClass="BFMCardPresentingView">
-                                <rect key="frame" x="-10" y="389" width="340" height="214"/>
+                            <view opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJI-u3-MWN" userLabel="goal card" customClass="BFMCardPresentingView">
+                                <rect key="frame" x="-10" y="370" width="340" height="214"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="214" id="uPG-NX-wmT"/>
@@ -83,7 +110,7 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1G-pI-FuN" userLabel="goal button">
-                                <rect key="frame" x="-10" y="389" width="340" height="214"/>
+                                <rect key="frame" x="-10" y="370" width="340" height="214"/>
                                 <connections>
                                     <action selector="goalSwapButtonTap" destination="Dgx-vF-3YV" eventType="touchUpInside" id="wUh-0y-BZ5"/>
                                 </connections>
@@ -98,7 +125,7 @@
                             <constraint firstItem="gof-Np-xaK" firstAttribute="centerX" secondItem="yZy-Wd-keZ" secondAttribute="centerX" id="F8n-q3-mEu"/>
                             <constraint firstItem="nJI-u3-MWN" firstAttribute="centerX" secondItem="yZy-Wd-keZ" secondAttribute="centerX" id="NKY-NL-kCZ"/>
                             <constraint firstItem="d1G-pI-FuN" firstAttribute="leading" secondItem="nJI-u3-MWN" secondAttribute="leading" id="T45-kM-eqH"/>
-                            <constraint firstItem="gof-Np-xaK" firstAttribute="top" secondItem="78w-pv-7uF" secondAttribute="bottom" constant="45" id="VEb-QX-SvF">
+                            <constraint firstItem="gof-Np-xaK" firstAttribute="top" secondItem="78w-pv-7uF" secondAttribute="bottom" constant="18" id="VEb-QX-SvF">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="sbf_phone4">
                                         <integer key="value" value="8"/>
@@ -109,7 +136,16 @@
                                 </userDefinedRuntimeAttributes>
                             </constraint>
                             <constraint firstItem="d1G-pI-FuN" firstAttribute="bottom" secondItem="nJI-u3-MWN" secondAttribute="bottom" id="VNU-Fq-BQL"/>
-                            <constraint firstItem="nJI-u3-MWN" firstAttribute="top" secondItem="yAc-qC-eKF" secondAttribute="bottom" constant="8" id="WYg-pW-SFq"/>
+                            <constraint firstItem="nJI-u3-MWN" firstAttribute="top" secondItem="yAc-qC-eKF" secondAttribute="bottom" constant="16" id="WYg-pW-SFq">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sbf_phone4">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sbf_phone5">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
                             <constraint firstItem="TMz-zq-HaX" firstAttribute="bottom" secondItem="gof-Np-xaK" secondAttribute="bottom" id="dXr-vx-bv1"/>
                             <constraint firstItem="yAc-qC-eKF" firstAttribute="top" secondItem="TMz-zq-HaX" secondAttribute="bottom" constant="18" id="gAE-YZ-Gcb">
                                 <userDefinedRuntimeAttributes>

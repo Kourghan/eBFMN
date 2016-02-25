@@ -22,6 +22,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    application.statusBarStyle = UIStatusBarStyleLightContent;
+    
     [MagicalRecord setupAutoMigratingCoreDataStack];
 
     UINavigationController *controller;

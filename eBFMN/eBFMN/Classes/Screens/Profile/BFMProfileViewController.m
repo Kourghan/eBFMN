@@ -58,6 +58,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    for (UIView *view in self.goalsViews) {
+        view.hidden = YES;
+    }
+    self.cardPresentingView.hidden = YES;
+    
     [self subscribeLogoutNotification];
     [self bindUser:[BFMUser currentUser]];
     [self setupCardPresentingView];
@@ -169,6 +174,7 @@
         backCard.textLabel.adjustsFontSizeToFitWidth = true;
         backCard.textLabel.attributedText = benefitText;
         backCard.textLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+        [backCard updateAsGoal:NO];
         
         presView.hidden = ([BFM_CARD_CON currentType] == BFMLeagueTypeUndefined);
     }
@@ -192,6 +198,7 @@
         backCard.textLabel.adjustsFontSizeToFitWidth = true;
         backCard.textLabel.text = goalText;
         backCard.textLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+        [backCard updateAsGoal:YES];
         
         BOOL shouldShow = [BFM_CARD_CON shouldShowNextType];
         for (UIView *goalView in self.goalsViews) {
