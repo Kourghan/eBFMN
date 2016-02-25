@@ -97,6 +97,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(BFMNewsCell *)sender {
     if ([segue.identifier isEqualToString:@"detailedView"]) {
+		self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
         BFMDetailedNewsViewController *controller = (BFMDetailedNewsViewController *)segue.destinationViewController;
         BFMDetailedNewsModel *model = [[BFMDetailedNewsModel alloc] initWithRecord:sender.object];
         controller.model = model;

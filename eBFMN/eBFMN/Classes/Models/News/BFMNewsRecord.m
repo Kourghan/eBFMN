@@ -68,7 +68,7 @@
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
              if (responseObject) {
 				 NSManagedObjectContext *ctx = weakSelf.managedObjectContext;
-				 weakSelf.text = responseObject[@"Text"];
+				 weakSelf.text = [self stringByStrippingHTML:responseObject[@"Text"]];
                  [ctx MR_saveToPersistentStoreAndWait];
                  completition(self, nil);
              } else {
@@ -103,6 +103,14 @@
         internalRecordDateFormatter.dateFormat = @"EEEE, dd/MM/yyyy";
     });
     return internalRecordDateFormatter;
+}
+
+- (NSString *)stringByStrippingHTML:(NSString *)original {
+	NSRange r;
+	NSString *s = [original copy];
+	while ((r = [s rangeOfString:@"<[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound)
+		s = [s stringByReplacingCharactersInRange:r withString:@""];
+	return s;
 }
 
 @end

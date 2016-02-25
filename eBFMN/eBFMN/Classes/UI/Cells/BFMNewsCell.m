@@ -29,9 +29,17 @@
 - (void)setObject:(BFMNewsRecord *)object {
     _object = object;
     
-    self.titleLabel.text = _object.title;
-    self.shortTextLabel.text = _object.shortText;
+    self.titleLabel.text = [self stringByStrippingHTML:_object.title];
+    self.shortTextLabel.text = [self stringByStrippingHTML:_object.shortText];
     self.dateLabel.text = [_object formattedDate];
+}
+
+- (NSString *)stringByStrippingHTML:(NSString *)original {
+	NSRange r;
+	NSString *s = [original copy];
+	while ((r = [s rangeOfString:@"<[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound)
+		s = [s stringByReplacingCharactersInRange:r withString:@""];
+	return s;
 }
 
 @end

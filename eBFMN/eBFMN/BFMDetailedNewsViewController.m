@@ -11,6 +11,9 @@
 #import "BFMNewsRecord.h"
 #import "BFMDetailedNewsModel.h"
 
+#import "NINavigationAppearance.h"
+#import "BFMDefaultNavagtionBarAppearance.h"
+
 @interface BFMDetailedNewsViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
@@ -28,9 +31,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = self.model.title;
-    
+	self.title = [NSLocalizedString(@"tabbar.news", nil) uppercaseString];
+	
+	self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+	self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+	
     [self loadDetails];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	
+	[NINavigationAppearance pushAppearanceForNavigationController:self.navigationController];
+	[BFMDefaultNavagtionBarAppearance applyTo:self.navigationController.navigationBar];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+	
+	[NINavigationAppearance popAppearanceForNavigationController:self.navigationController];
 }
 
 - (void)loadDetails {
