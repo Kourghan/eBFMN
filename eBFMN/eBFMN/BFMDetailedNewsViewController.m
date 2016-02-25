@@ -34,9 +34,16 @@
 }
 
 - (void)loadDetails {
-    [self.model fetchDetailedWithCallback:^(NSError *error) {
-        NSLog(@"");
-    }];
+	__weak typeof(self) weakSelf = self;
+    [self.model fetchDetailedWithCallback:^(BFMNewsRecord *record, NSError *error) {
+		if (error) {
+			
+		} else if (record) {
+			weakSelf.titleLabel.text = record.title;
+			weakSelf.dateLabel.text = [record formattedDate];
+			weakSelf.textLabel.text = record.text;
+		}
+	}];
 }
 
 @end

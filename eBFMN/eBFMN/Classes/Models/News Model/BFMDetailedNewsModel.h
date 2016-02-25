@@ -16,6 +16,6 @@
 
 @property (nonatomic, strong) NSString *title;
 
-- (void)fetchDetailedWithCallback:(void (^)(NSError *error))callback;
+- (void)fetchDetailedWithCallback:(void (^)(BFMNewsRecord *record, NSError *error))callback;
 
 @end

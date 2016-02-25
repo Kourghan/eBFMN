@@ -147,10 +147,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iOw-he-Kgh">
-                                <rect key="frame" x="0.0" y="20" width="320" height="379"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVF-Qn-Wsc">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="110.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEs-Gb-LuM">
                                                 <rect key="frame" x="8" y="8" width="304" height="34.5"/>
@@ -159,21 +159,21 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="248" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rus-th-eSa">
-                                                <rect key="frame" x="8" y="50" width="304" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="8" y="50" width="304" height="31.5"/>
+                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="28"/>
+                                                <color key="textColor" red="0.054901960784313725" green="0.054901960784313725" blue="0.054901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsy-VU-0fQ">
-                                                <rect key="frame" x="160" y="82" width="152" height="13.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <rect key="frame" x="160" y="89.5" width="152" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
+                                                <color key="textColor" red="0.39607843139999999" green="0.39607843139999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@BMFNNews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89M-fY-CLW">
-                                                <rect key="frame" x="8" y="82" width="152" height="13.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <rect key="frame" x="8" y="89.5" width="152" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
+                                                <color key="textColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -210,32 +210,23 @@
                                 <constraints>
                                     <constraint firstItem="GVF-Qn-Wsc" firstAttribute="top" secondItem="iOw-he-Kgh" secondAttribute="top" id="GTd-9t-PpV"/>
                                     <constraint firstAttribute="bottom" secondItem="GVF-Qn-Wsc" secondAttribute="bottom" id="ZkG-Y7-bmD"/>
+                                    <constraint firstItem="GVF-Qn-Wsc" firstAttribute="width" secondItem="iOw-he-Kgh" secondAttribute="width" id="k9n-RO-8bF"/>
                                     <constraint firstItem="GVF-Qn-Wsc" firstAttribute="leading" secondItem="iOw-he-Kgh" secondAttribute="leading" id="oaF-Sk-ReG"/>
                                     <constraint firstAttribute="trailing" secondItem="GVF-Qn-Wsc" secondAttribute="trailing" id="tWD-9D-pAh"/>
                                 </constraints>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-20"/>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lx0-Ka-1fr">
-                                <rect key="frame" x="0.0" y="399" width="320" height="81"/>
-                                <color key="backgroundColor" red="0.031372549020000001" green="0.27058823529999998" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="81" id="rNW-zK-eAX"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iOw-he-Kgh" firstAttribute="top" secondItem="LRI-7P-EY8" secondAttribute="bottom" id="9CX-pv-H5S"/>
-                            <constraint firstItem="Lx0-Ka-1fr" firstAttribute="leading" secondItem="GOI-Y2-tyl" secondAttribute="leading" id="EMX-VV-M2h"/>
                             <constraint firstItem="iOw-he-Kgh" firstAttribute="leading" secondItem="GOI-Y2-tyl" secondAttribute="leading" id="FIU-eV-ZSv"/>
-                            <constraint firstAttribute="trailing" secondItem="Lx0-Ka-1fr" secondAttribute="trailing" id="PpG-yf-Tlv"/>
-                            <constraint firstItem="Lx0-Ka-1fr" firstAttribute="top" secondItem="iOw-he-Kgh" secondAttribute="bottom" id="QKh-C7-QwA"/>
-                            <constraint firstItem="GVF-Qn-Wsc" firstAttribute="width" secondItem="Lx0-Ka-1fr" secondAttribute="width" id="Twc-G3-HiB"/>
                             <constraint firstItem="iOw-he-Kgh" firstAttribute="top" secondItem="LRI-7P-EY8" secondAttribute="bottom" id="dcD-op-lNp"/>
+                            <constraint firstItem="iOw-he-Kgh" firstAttribute="width" secondItem="GOI-Y2-tyl" secondAttribute="width" id="i4i-QQ-F6e"/>
                             <constraint firstItem="iOw-he-Kgh" firstAttribute="top" secondItem="GOI-Y2-tyl" secondAttribute="topMargin" id="jeY-x5-fUo"/>
                             <constraint firstItem="iOw-he-Kgh" firstAttribute="top" secondItem="GOI-Y2-tyl" secondAttribute="topMargin" constant="20" id="mnd-9h-iSK"/>
                             <constraint firstAttribute="trailing" secondItem="iOw-he-Kgh" secondAttribute="trailing" id="nKE-ja-UID"/>
-                            <constraint firstItem="1WN-G1-Pri" firstAttribute="top" secondItem="Lx0-Ka-1fr" secondAttribute="bottom" id="rGi-2N-Rzq"/>
+                            <constraint firstItem="1WN-G1-Pri" firstAttribute="top" secondItem="iOw-he-Kgh" secondAttribute="bottom" id="y2S-Sb-1nH"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

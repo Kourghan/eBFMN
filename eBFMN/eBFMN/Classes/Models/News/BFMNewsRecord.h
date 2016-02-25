@@ -26,6 +26,7 @@
 @interface BFMNewsRecord (Mapping)
 
 + (FEMMapping *)defaultMapping;
++ (FEMMapping *)detailsMapping;
 
 @end
 

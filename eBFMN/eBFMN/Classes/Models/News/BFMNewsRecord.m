@@ -58,18 +58,19 @@
     NSDictionary *params = @{
                              @"guid" : sessionKey,
                              @"date" : @(date),
-                             @"id" : self.identifier
+                             @"id" : self.textIdentifier
                              };
+	
+	__weak typeof(self) weakSelf = self;
+	
     [manager GET:@"Reports/GetNewsTextRecord"
       parameters:params
-         success:^(NSURLSessionDataTask *task, NSArray *responseObject) {
-             if (![responseObject isEqual: @[]]) {
-                 NSManagedObjectContext *ctx = [NSManagedObjectContext MR_defaultContext];
-                 NSArray *records = [FEMDeserializer collectionFromRepresentation:responseObject
-                                                                          mapping:[BFMNewsRecord defaultMapping]
-                                                                          context:ctx];
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             if (responseObject) {
+				 NSManagedObjectContext *ctx = weakSelf.managedObjectContext;
+				 weakSelf.text = responseObject[@"Text"];
                  [ctx MR_saveToPersistentStoreAndWait];
-                 completition(records, nil);
+                 completition(self, nil);
              } else {
                  completition(nil, nil);
              }
@@ -108,6 +109,19 @@
 
 @implementation BFMNewsRecord (Mapping)
 
++ (FEMMapping *)detailsMapping {
+	FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"BFMNewsRecord"];
+	mapping.primaryKey = @"identifier";
+	
+	
+	[mapping addAttributesFromDictionary:@{
+										   @"identifier" : @"_id",
+										   @"text" : @"Text"
+										   }];
+	
+	return mapping;
+}
+
 + (FEMMapping *)defaultMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"BFMNewsRecord"];
     mapping.primaryKey = @"identifier";
@@ -116,7 +130,8 @@
     [mapping addAttributesFromDictionary:@{
                                            @"identifier" : @"_id",
                                            @"title" : @"Title",
-                                           @"shortText" : @"ShortText"
+                                           @"shortText" : @"ShortText",
+										   @"textIdentifier" : @"NewsTextID"
                                            }];
     
     FEMAttribute *attribute = [[FEMAttribute alloc] initWithProperty:@"date"
