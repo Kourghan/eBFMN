@@ -55,6 +55,7 @@ static NSString *kLastNewsUpdateUserDefaultsKey = @"kLastNewsUpdateUserDefaultsK
 - (void)loadNewsReset:(BOOL)reset callback:(void (^)(NSError *))callback {
 	if (reset == YES) {
 		self.page = 0;
+		[BFMNewsRecord deleteAll];
 	}
 	[BFMNewsRecord getNews:self.page
 				  pageSize:10

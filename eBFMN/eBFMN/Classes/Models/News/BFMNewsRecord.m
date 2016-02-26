@@ -113,6 +113,24 @@
 	return s;
 }
 
++ (void)deleteAll {
+	NSManagedObjectContext *ctx = [NSManagedObjectContext MR_defaultContext];
+	
+	NSFetchRequest *allNews = [[NSFetchRequest alloc] init];
+	[allNews setEntity:[NSEntityDescription entityForName:@"BFMNewsRecord" inManagedObjectContext:ctx]];
+	[allNews setIncludesPropertyValues:NO]; //only fetch the managedObjectID
+	
+	NSError *error = nil;
+	NSArray *news = [ctx executeFetchRequest:allNews error:&error];
+	
+	//error handling goes here
+	for (NSManagedObject *record in news) {
+		[ctx deleteObject:record];
+	}
+	NSError *saveError = nil;
+	[ctx save:&saveError];
+}
+
 @end
 
 @implementation BFMNewsRecord (Mapping)

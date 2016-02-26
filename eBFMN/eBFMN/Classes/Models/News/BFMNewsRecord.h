@@ -21,6 +21,8 @@
 
 - (NSString *)formattedDate;
 
++ (void)deleteAll;
+
 @end
 
 @interface BFMNewsRecord (Mapping)
