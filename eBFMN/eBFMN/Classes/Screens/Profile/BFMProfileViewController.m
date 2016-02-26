@@ -101,7 +101,7 @@
 }
 
 - (void)handleLogoutNotification:(NSNotification *)notif {
-    [self logout:nil];
+//    [self logout:nil];
 }
 
 #pragma mark - Private (Setup)
