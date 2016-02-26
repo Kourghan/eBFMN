@@ -21,7 +21,7 @@
 
 #import <ALAlertBanner/ALAlertBanner.h>
 
-@interface BFMNewsViewController ()<UITableViewDelegate>
+@interface BFMNewsViewController ()<UITableViewDelegate, BFMNewsTableAdapterProtocol>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -47,7 +47,8 @@
     self.adapter = [BFMNewsTableAdapter new];
     self.adapter.tableView = self.tableView;
     self.adapter.dataSource = self.model.dataSource;
-    self.adapter.tableView.delegate = self;
+//    self.adapter.tableView.delegate = self;
+	self.adapter.delegate = self;
     
     [self.adapter mapObjectClass:[BFMNewsRecord class] toCellIdentifier:@"BFMNewsCell"];
     
@@ -77,14 +78,14 @@
 
 - (void)refreshNews:(UIRefreshControl *)control {
     __weak typeof(self) weakSelf = self;
-    [self.model refreshWithCallback:^(NSError *error) {
+    [self.model loadNewsReset:(control != nil) callback:^(NSError *error) {
         if (control) {
             [control endRefreshing];
         }
         if (error) {
             ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
                                                                 style:ALAlertBannerStyleFailure
-                                                             position:ALAlertBannerPositionTop
+                                                             position:ALAlertBannerPositionUnderNavBar
                                                                 title:NSLocalizedString(@"error.error", nil)
                                                              subtitle:NSLocalizedString(@"error.connection", nil)];
             [banner show];
@@ -96,10 +97,15 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(BFMNewsCell *)sender {
     if ([segue.identifier isEqualToString:@"detailedView"]) {
+		self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
         BFMDetailedNewsViewController *controller = (BFMDetailedNewsViewController *)segue.destinationViewController;
         BFMDetailedNewsModel *model = [[BFMDetailedNewsModel alloc] initWithRecord:sender.object];
         controller.model = model;
     }
+}
+
+- (void)adapterWillDisplayeLastCell:(BFMNewsTableAdapter *)adapter {
+	[self refreshNews:nil];
 }
 
 @end

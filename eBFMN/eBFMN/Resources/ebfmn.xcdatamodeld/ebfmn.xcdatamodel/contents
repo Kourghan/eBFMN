@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F27" minimumToolsVersion="Xcode 4.3">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1509" minimumToolsVersion="Xcode 4.3">
     <entity name="BFMAccount" representedClassName="BFMAccount" syncable="YES">
         <attribute name="balance" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
@@ -26,6 +26,8 @@
                 <entry key="mappedKeyName" value="ShortText"/>
             </userInfo>
         </attribute>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="textIdentifier" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="Title"/>
@@ -91,7 +93,7 @@
     </entity>
     <elements>
         <element name="BFMAccount" positionX="-54" positionY="54" width="128" height="150"/>
-        <element name="BFMNewsRecord" positionX="-54" positionY="135" width="128" height="105"/>
+        <element name="BFMNewsRecord" positionX="-54" positionY="135" width="128" height="135"/>
         <element name="BFMNotification" positionX="-54" positionY="135" width="128" height="120"/>
         <element name="BFMPointsRecord" positionX="-54" positionY="135" width="128" height="135"/>
         <element name="BFMPrize" positionX="-54" positionY="135" width="128" height="105"/>

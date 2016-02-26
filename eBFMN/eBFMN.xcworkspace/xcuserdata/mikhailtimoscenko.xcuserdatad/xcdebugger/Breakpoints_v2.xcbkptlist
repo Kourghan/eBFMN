@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eBFMN/Classes/Screens/News/BFMNewsTableAdapter.m"
-            timestampString = "463956836.142585"
+            timestampString = "477955831.908813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "@implementation BFMNewsTableAdapter"
             landmarkType = "3">
          </BreakpointContent>
@@ -163,29 +163,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eBFMN/Classes/Screens/News/BFMNewsViewController.m"
-            timestampString = "468368884.623458"
+            filePath = "eBFMN/Classes/UI/Cells/BFMNewsCell.m"
+            timestampString = "477955021.64275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "-refreshNews:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "eBFMN/Classes/Models/News/BFMNewsRecord.m"
-            timestampString = "468369555.355934"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "-getDetailsWithCompletition:"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-setObject:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -195,13 +179,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eBFMN/Classes/Models/News/BFMNewsRecord.m"
-            timestampString = "468370025.841814"
+            filePath = "eBFMN/Classes/Screens/News/BFMNewsTableAdapter.m"
+            timestampString = "477955956.486752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "-getDetailsWithCompletition:"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "-tableView:willDisplayCell:forRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -211,61 +195,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eBFMN/Classes/Models/News/BFMNewsRecord.m"
-            timestampString = "468370025.841814"
+            filePath = "eBFMN/Classes/Screens/News/View/BFMNewsTextCell.m"
+            timestampString = "478109576.243893"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "-getDetailsWithCompletition:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "eBFMN/BFMDetailedNewsViewController.m"
-            timestampString = "468369827.520049"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "-loadDetails"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "eBFMN/Classes/Models/News/BFMNewsRecord.m"
-            timestampString = "468369920.487919"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "+getNewsFromDate:withCompletition:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "eBFMN/Classes/Models/User/BFMUser+Extension.m"
-            timestampString = "474371070.007613"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
-            landmarkName = "+getInfoWithCompletitionBlock:"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "-configureWithRecord:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

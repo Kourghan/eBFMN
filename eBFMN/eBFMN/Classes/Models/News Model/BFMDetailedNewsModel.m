@@ -26,9 +26,9 @@
     return self;
 }
 
-- (void)fetchDetailedWithCallback:(void (^)(NSError *))callback {
+- (void)fetchDetailedWithCallback:(void (^)(BFMNewsRecord *record, NSError *))callback {
     [self.record getDetailsWithCompletition:^(BFMNewsRecord *record, NSError *error) {
-        callback(error);
+        callback(record, error);
     }];
 }
 

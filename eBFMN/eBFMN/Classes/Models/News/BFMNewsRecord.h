@@ -13,7 +13,7 @@
 
 @interface BFMNewsRecord : NSManagedObject
 
-+ (void)getNewsFromDate:(NSInteger)date withCompletition:(void (^)(NSArray *prizes, NSError *error))completition;
++ (void)getNews:(NSInteger)page pageSize:(NSInteger)pageSize withCompletition:(void (^)(NSArray *prizes, NSError *error))completition;
 
 - (void)getDetailsWithCompletition:(void (^)(BFMNewsRecord *record, NSError *error))completition;
 
@@ -21,11 +21,14 @@
 
 - (NSString *)formattedDate;
 
++ (void)deleteAll;
+
 @end
 
 @interface BFMNewsRecord (Mapping)
 
 + (FEMMapping *)defaultMapping;
++ (FEMMapping *)detailsMapping;
 
 @end
 
