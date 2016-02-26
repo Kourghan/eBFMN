@@ -21,6 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - ALAlertBanner (0.3.1)
+  - CNPPopupController (0.3.1)
   - CZPicker (0.3.6)
   - FastEasyMapping (1.0)
   - JNKeychain (0.1.2)
@@ -35,6 +36,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - ALAlertBanner
+  - CNPPopupController (= 0.3.1)
   - CZPicker
   - FastEasyMapping
   - JNKeychain
@@ -45,6 +47,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   ALAlertBanner: 08d82be509cd9b70c4ac0ee1e7ac250003a8b34b
+  CNPPopupController: 67dc2ca5a3f88cd49a27bb1b0aeb78a24d423d79
   CZPicker: bf966778ebd3af6c291b4a4190d08a0e2c5c6974
   FastEasyMapping: f5ecdce05f39595aa921275d6bbaf4fb8aa60d89
   JNKeychain: 3428e123958aca6672b55d615a8a45cdf7b82c71
@@ -54,4 +57,4 @@ SPEC CHECKSUMS:
   SDCAutoLayout: e6885bb39ab8e2ec2ff84d158f38035f025f7420
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

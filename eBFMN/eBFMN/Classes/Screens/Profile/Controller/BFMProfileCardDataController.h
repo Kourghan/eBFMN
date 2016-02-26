@@ -16,19 +16,31 @@
 + (void)setBenefits:(NSDictionary *)benefits;
 + (NSDictionary *)goals;
 + (void)setGoals:(NSDictionary *)goals;
-+ (NSInteger)currentType;
++ (BFMLeagueType)currentType;
 + (void)setCurrentType:(NSInteger)currentType;
 + (void)clear;
 
++ (BOOL)shouldShowNextType;
++ (BFMLeagueType)nextType;
+
 + (UIImage *)imageForLeagueType:(BFMLeagueType)type back:(BOOL)back;
 + (UIImage *)imageForCurrentType:(BOOL)back;
-+ (NSString *)backHeaderForLeagueType:(BFMLeagueType)type;
++ (UIImage *)imageForNextType:(BOOL)back;
+
++ (NSString *)backHeaderForLeagueType:(BFMLeagueType)type isGoal:(BOOL)isGoal;
 + (NSString *)backHeaderForCurrentType;
++ (NSString *)backHeaderForNextType;
+
 + (NSString *)dictKeyForLeagueType:(BFMLeagueType)type;
 + (NSString *)dictKeyForCurrentType;
-+ (NSString *)benefitsTextForLeagueType:(BFMLeagueType)type;
++ (NSString *)dictKeyForNextType;
+
++ (NSAttributedString *)benefitsTextForLeagueType:(BFMLeagueType)type;
 + (NSAttributedString *)benefitsTextForCurrentLeague;
++ (NSAttributedString *)benefitsTextForNextLeague;
+
 + (NSString *)goalsTextForLeagueType:(BFMLeagueType)type;
 + (NSString *)goalsTextForCurrentLeague;
++ (NSString *)goalsTextForNextLeague;
 
 @end
