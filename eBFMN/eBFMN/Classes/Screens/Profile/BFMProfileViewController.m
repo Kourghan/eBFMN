@@ -121,11 +121,18 @@
         BFMCardPresentingView *presView = self.goalCardView;
         BFMFrontCardView *frontView = [BFMFrontCardView bfm_load];
         [frontView configureWithDataProvider:[BFMUser currentUser]];
-        frontView.overlayView.hidden = NO;
         [presView setupView:frontView side:BFMCardPresentingViewSideFront];
+        UIView *frontOverlay = frontView.overlayView;
+        frontOverlay.hidden = NO;
+        frontOverlay.layer.cornerRadius = 5.f;
+        frontOverlay.layer.masksToBounds = YES;
+        
         BFMBackCardView *backView = [BFMBackCardView bfm_load];
         [presView setupView:backView side:BFMCardPresentingViewSideBack];
-        backView.overlayView.hidden = NO;
+        UIView *backOverlay = backView.overlayView;
+        backOverlay.hidden = NO;
+        backOverlay.layer.cornerRadius = 5.f;
+        backOverlay.layer.masksToBounds = YES;
         [presView showSide:BFMCardPresentingViewSideFront animated:NO];
     }
 }
