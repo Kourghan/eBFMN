@@ -19,6 +19,7 @@
 #import "JNKeychain+UNTExtension.h"
 #import "BFMBenefitsController.h"
 
+#import <CNPPopupController/CNPPopupController.h>
 #import "BFMCardPresentingView.h"
 #import "BFMUser+BFMCardView.h"
 #import "BFMFrontCardView.h"
@@ -42,6 +43,7 @@
 @property (weak, nonatomic) IBOutlet BFMCardPresentingView *cardPresentingView;
 @property (weak, nonatomic) IBOutlet BFMCardPresentingView *goalCardView;
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *goalsViews;
+@property (strong, nonatomic) CNPPopupController *popupController;
 
 @end
 
@@ -119,9 +121,11 @@
         BFMCardPresentingView *presView = self.goalCardView;
         BFMFrontCardView *frontView = [BFMFrontCardView bfm_load];
         [frontView configureWithDataProvider:[BFMUser currentUser]];
+        frontView.overlayView.hidden = NO;
         [presView setupView:frontView side:BFMCardPresentingViewSideFront];
         BFMBackCardView *backView = [BFMBackCardView bfm_load];
         [presView setupView:backView side:BFMCardPresentingViewSideBack];
+        backView.overlayView.hidden = NO;
         [presView showSide:BFMCardPresentingViewSideFront animated:NO];
     }
 }
@@ -183,7 +187,7 @@
         UIImage *frontImage = [BFM_CARD_CON imageForNextType:NO];
         UIImage *backImage = [BFM_CARD_CON imageForNextType:YES];
         NSString *benefitTitle = [BFM_CARD_CON backHeaderForNextType];
-        NSString *goalText = [BFM_CARD_CON goalsTextForNextLeague];
+        NSAttributedString *goalText = [BFM_CARD_CON benefitsTextForNextLeague];
         
         BFMCardPresentingView *presView = self.goalCardView;
         
@@ -196,15 +200,53 @@
         backCard.titleLabel.text = benefitTitle;
         
         backCard.textLabel.adjustsFontSizeToFitWidth = true;
-        backCard.textLabel.text = goalText;
+        backCard.textLabel.attributedText = goalText;
         backCard.textLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-        [backCard updateAsGoal:YES];
+        [backCard updateAsGoal:NO];
         
         BOOL shouldShow = [BFM_CARD_CON shouldShowNextType];
         for (UIView *goalView in self.goalsViews) {
             goalView.hidden = !shouldShow;
         }
     }
+}
+
+- (void)showGoalPopup {
+    NSMutableParagraphStyle *paragraphStyle = NSMutableParagraphStyle.new;
+    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+
+    UIColor *blueColor = [UIColor colorWithRed:6.f/255.f
+                                         green:69.f/255.f
+                                          blue:109.f/255.f
+                                         alpha:1.f];
+    
+    NSAttributedString *title = [[NSAttributedString alloc] initWithString:[BFM_CARD_CON backHeaderForLeagueType:[BFM_CARD_CON nextType] isGoal:YES] attributes:@{NSFontAttributeName : [UIFont fontWithName:@"ProximaNova-Semibold" size:22.f], NSParagraphStyleAttributeName : paragraphStyle}];
+    
+    NSAttributedString *lineTwo = [[NSAttributedString alloc] initWithString:[BFM_CARD_CON goalsTextForNextLeague] attributes:@{NSFontAttributeName : [UIFont fontWithName:@"ProximaNova-Regular" size:16.f], NSForegroundColorAttributeName : blueColor, NSParagraphStyleAttributeName : paragraphStyle}];
+    
+    CNPPopupButton *button = [[CNPPopupButton alloc] initWithFrame:CGRectMake(0, 0, 200, 45)];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont boldSystemFontOfSize:18];
+    [button setTitle:@"OK" forState:UIControlStateNormal];
+    button.backgroundColor = blueColor;
+    button.layer.cornerRadius = 4;
+    button.selectionHandler = ^(CNPPopupButton *button){
+        [self.popupController dismissPopupControllerAnimated:YES];
+    };
+    
+    UILabel *titleLabel = [[UILabel alloc] init];
+    titleLabel.numberOfLines = 0;
+    titleLabel.attributedText = title;
+    
+    UILabel *lineTwoLabel = [[UILabel alloc] init];
+    lineTwoLabel.numberOfLines = 0;
+    lineTwoLabel.attributedText = lineTwo;
+    
+    self.popupController = [[CNPPopupController alloc] initWithContents:@[titleLabel, lineTwoLabel, button]];
+    self.popupController.theme = [CNPPopupTheme defaultTheme];
+    self.popupController.theme.popupStyle = CNPPopupStyleCentered;
+    [self.popupController presentPopupControllerAnimated:YES];
 }
 
 #pragma mark - Handlers
@@ -261,6 +303,10 @@
 
 - (IBAction)goalSwapButtonTap {
     [self.goalCardView switchSide];
+}
+
+- (IBAction)goalButtonTap:(id)sender {
+    [self showGoalPopup];
 }
 
 #pragma mark - Navigation

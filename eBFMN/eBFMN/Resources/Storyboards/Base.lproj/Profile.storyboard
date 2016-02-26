@@ -65,21 +65,35 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTj-CJ-0fY">
-                                        <rect key="frame" x="15" y="5" width="250" height="22"/>
+                                        <rect key="frame" x="15" y="2" width="250" height="24"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW TO REACH YOUR NEXT STATUS?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSy-TG-mIa">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="22"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ge-jz-Eet">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="24"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="13"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="HOW TO REACH YOUR NEXT STATUS?">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goalButtonTap:" destination="Dgx-vF-3YV" eventType="touchUpInside" id="wBn-dZ-uMN"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvY-7e-hfV">
+                                                <rect key="frame" x="8" y="21" width="234" height="2"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="234" id="Md5-yM-iZR"/>
+                                                    <constraint firstAttribute="height" constant="2" id="xa7-RS-T8Y"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="KSy-TG-mIa" secondAttribute="trailing" id="Sji-dn-pVs"/>
-                                            <constraint firstItem="KSy-TG-mIa" firstAttribute="top" secondItem="OTj-CJ-0fY" secondAttribute="top" id="UQb-TB-80P"/>
-                                            <constraint firstAttribute="bottom" secondItem="KSy-TG-mIa" secondAttribute="bottom" id="e8s-KX-C40"/>
-                                            <constraint firstItem="KSy-TG-mIa" firstAttribute="leading" secondItem="OTj-CJ-0fY" secondAttribute="leading" id="oXa-hn-9Od"/>
+                                            <constraint firstAttribute="bottom" secondItem="0Ge-jz-Eet" secondAttribute="bottom" id="4Ui-It-l6I"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Ge-jz-Eet" secondAttribute="trailing" id="azt-xq-VPj"/>
+                                            <constraint firstItem="0Ge-jz-Eet" firstAttribute="leading" secondItem="OTj-CJ-0fY" secondAttribute="leading" id="hfY-WE-GqA"/>
+                                            <constraint firstItem="dvY-7e-hfV" firstAttribute="centerX" secondItem="OTj-CJ-0fY" secondAttribute="centerX" id="hgy-aP-aPJ"/>
+                                            <constraint firstItem="0Ge-jz-Eet" firstAttribute="top" secondItem="OTj-CJ-0fY" secondAttribute="top" id="iS7-IQ-jdc"/>
+                                            <constraint firstAttribute="bottom" secondItem="dvY-7e-hfV" secondAttribute="bottom" constant="1" id="kDj-Dp-vwg"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -92,12 +106,12 @@
                                     <constraint firstAttribute="height" constant="40" id="Y5v-tq-qSO"/>
                                     <constraint firstItem="lVA-aQ-jko" firstAttribute="leading" secondItem="yAc-qC-eKF" secondAttribute="leading" id="a24-9e-HQ4"/>
                                     <constraint firstItem="OTj-CJ-0fY" firstAttribute="leading" secondItem="yAc-qC-eKF" secondAttribute="leading" constant="15" id="jIa-jJ-Vqw"/>
-                                    <constraint firstItem="OTj-CJ-0fY" firstAttribute="top" secondItem="yAc-qC-eKF" secondAttribute="top" constant="5" id="jji-xh-08L"/>
-                                    <constraint firstAttribute="bottom" secondItem="OTj-CJ-0fY" secondAttribute="bottom" constant="13" id="kDV-u9-mIj"/>
+                                    <constraint firstItem="OTj-CJ-0fY" firstAttribute="top" secondItem="yAc-qC-eKF" secondAttribute="top" constant="2" id="jji-xh-08L"/>
+                                    <constraint firstAttribute="bottom" secondItem="OTj-CJ-0fY" secondAttribute="bottom" constant="14" id="kDV-u9-mIj"/>
                                     <constraint firstAttribute="trailing" secondItem="OTj-CJ-0fY" secondAttribute="trailing" constant="15" id="r2e-oQ-fkP"/>
                                 </constraints>
                             </view>
-                            <view opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJI-u3-MWN" userLabel="goal card" customClass="BFMCardPresentingView">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJI-u3-MWN" userLabel="goal card" customClass="BFMCardPresentingView">
                                 <rect key="frame" x="-10" y="370" width="340" height="214"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>

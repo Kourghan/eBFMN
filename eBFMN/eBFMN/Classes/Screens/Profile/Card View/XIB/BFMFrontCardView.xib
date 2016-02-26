@@ -21,6 +21,10 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wmy-2A-9bX" userLabel="bg image view">
                     <rect key="frame" x="0.0" y="0.0" width="340" height="214"/>
                 </imageView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yE-le-2B1" userLabel="overlay view">
+                    <rect key="frame" x="0.0" y="0.0" width="340" height="214"/>
+                    <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pr_logo" translatesAutoresizingMaskIntoConstraints="NO" id="93S-j9-9Hr">
                     <rect key="frame" x="117" y="32" width="106" height="82"/>
                     <constraints>
@@ -83,11 +87,15 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="wmy-2A-9bX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="18M-gU-i8X"/>
+                <constraint firstItem="5yE-le-2B1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3NQ-hy-T8w"/>
                 <constraint firstAttribute="trailing" secondItem="fdI-NX-uEd" secondAttribute="trailing" constant="30" id="AdW-L5-Wn4"/>
                 <constraint firstAttribute="trailing" secondItem="Cs6-12-jRg" secondAttribute="trailing" constant="30" id="Cbn-lj-ieM"/>
                 <constraint firstItem="Cs6-12-jRg" firstAttribute="top" secondItem="93S-j9-9Hr" secondAttribute="bottom" constant="15" id="FLN-AM-wQE"/>
+                <constraint firstItem="5yE-le-2B1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MAM-6W-alj"/>
                 <constraint firstAttribute="bottom" secondItem="wmy-2A-9bX" secondAttribute="bottom" id="PFG-CG-cOK"/>
                 <constraint firstItem="93S-j9-9Hr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="QKl-H1-zP5"/>
+                <constraint firstAttribute="bottom" secondItem="5yE-le-2B1" secondAttribute="bottom" id="QaV-FW-upx"/>
+                <constraint firstAttribute="trailing" secondItem="5yE-le-2B1" secondAttribute="trailing" id="Uqf-rc-JPN"/>
                 <constraint firstItem="fdI-NX-uEd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="cbx-Wo-IsA"/>
                 <constraint firstItem="wmy-2A-9bX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eZ4-yx-WPf"/>
                 <constraint firstItem="fdI-NX-uEd" firstAttribute="top" secondItem="Cs6-12-jRg" secondAttribute="bottom" constant="13" id="exb-1S-yiZ"/>
@@ -102,6 +110,7 @@
                 <outlet property="backgroundImageView" destination="wmy-2A-9bX" id="1fI-wJ-Hc9"/>
                 <outlet property="codeLabel" destination="RMK-u4-WWw" id="FLa-M7-GO7"/>
                 <outlet property="expirationLabel" destination="px8-Iv-Q8H" id="Bvi-D3-CNc"/>
+                <outlet property="overlayView" destination="5yE-le-2B1" id="Bt0-Kg-0Cx"/>
                 <outlet property="separatorBotConstraint" destination="exb-1S-yiZ" id="UQT-eY-zQS"/>
                 <outlet property="separatorTopConstraint" destination="FLN-AM-wQE" id="at7-ve-vPu"/>
                 <outlet property="titleLabel" destination="BM7-zq-JrB" id="AHq-PM-5aD"/>

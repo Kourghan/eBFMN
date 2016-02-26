@@ -22,6 +22,10 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9cX-PY-gTP">
                     <rect key="frame" x="0.0" y="0.0" width="340" height="214"/>
                 </imageView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hd-6P-rF1" userLabel="overlay view">
+                    <rect key="frame" x="0.0" y="0.0" width="340" height="214"/>
+                    <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1S3-eH-uBs">
                     <rect key="frame" x="65" y="22" width="209" height="21"/>
                     <constraints>
@@ -44,11 +48,15 @@
                 <constraint firstAttribute="bottom" secondItem="9cX-PY-gTP" secondAttribute="bottom" id="ITD-kI-rSB"/>
                 <constraint firstItem="oVu-Nh-Ipe" firstAttribute="leading" secondItem="ErP-Xi-vEW" secondAttribute="leading" constant="22" id="RvP-s7-u1u"/>
                 <constraint firstAttribute="trailing" secondItem="9cX-PY-gTP" secondAttribute="trailing" id="XgE-Sq-cfY"/>
+                <constraint firstItem="0hd-6P-rF1" firstAttribute="top" secondItem="ErP-Xi-vEW" secondAttribute="top" id="Yaz-nR-Gcp"/>
+                <constraint firstAttribute="bottom" secondItem="0hd-6P-rF1" secondAttribute="bottom" id="Zzu-Ld-rIq"/>
                 <constraint firstItem="9cX-PY-gTP" firstAttribute="top" secondItem="ErP-Xi-vEW" secondAttribute="top" id="bQf-Zs-4Db"/>
                 <constraint firstItem="1S3-eH-uBs" firstAttribute="top" secondItem="ErP-Xi-vEW" secondAttribute="top" constant="22" id="kE5-bL-WcU"/>
                 <constraint firstAttribute="trailing" secondItem="1S3-eH-uBs" secondAttribute="trailing" constant="66" id="lsN-MW-eJf"/>
                 <constraint firstItem="1S3-eH-uBs" firstAttribute="leading" secondItem="ErP-Xi-vEW" secondAttribute="leading" constant="65" id="oTq-l3-yi9"/>
+                <constraint firstAttribute="trailing" secondItem="0hd-6P-rF1" secondAttribute="trailing" id="qpG-Em-oec"/>
                 <constraint firstAttribute="trailing" secondItem="oVu-Nh-Ipe" secondAttribute="trailing" constant="22" id="sNm-qS-bF2"/>
+                <constraint firstItem="0hd-6P-rF1" firstAttribute="leading" secondItem="ErP-Xi-vEW" secondAttribute="leading" id="uY2-UH-HuB"/>
                 <constraint firstItem="oVu-Nh-Ipe" firstAttribute="top" secondItem="1S3-eH-uBs" secondAttribute="bottom" constant="-3" id="y0x-1Z-TiR"/>
                 <constraint firstAttribute="bottom" secondItem="oVu-Nh-Ipe" secondAttribute="bottom" constant="12" id="z2M-Hr-RdS"/>
             </constraints>
@@ -57,6 +65,7 @@
             <connections>
                 <outlet property="backgroundImageView" destination="9cX-PY-gTP" id="pTW-L8-w71"/>
                 <outlet property="leftConstr" destination="RvP-s7-u1u" id="ZWa-FQ-k1N"/>
+                <outlet property="overlayView" destination="0hd-6P-rF1" id="aag-ak-fT1"/>
                 <outlet property="rightConstr" destination="sNm-qS-bF2" id="KFz-GR-H7s"/>
                 <outlet property="textLabel" destination="oVu-Nh-Ipe" id="Xtq-9M-VO4"/>
                 <outlet property="titleLabel" destination="1S3-eH-uBs" id="saK-zU-ics"/>

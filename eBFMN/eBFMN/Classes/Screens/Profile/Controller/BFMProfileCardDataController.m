@@ -247,7 +247,7 @@ static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
 }
 
 + (NSString *)backHeaderForNextType {
-    return [self backHeaderForLeagueType:[self nextType] isGoal:YES];
+    return [self backHeaderForLeagueType:[self nextType] isGoal:NO];
 }
 
 + (NSString *)dictKeyForNextType {

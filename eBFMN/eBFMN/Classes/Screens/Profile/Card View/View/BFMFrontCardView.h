@@ -16,6 +16,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic, weak) IBOutlet UILabel *expirationLabel;
 @property (nonatomic, weak) IBOutlet UILabel *codeLabel;
+@property (nonatomic, weak) IBOutlet UIView *overlayView;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *topLogoConstraint;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *separatorTopConstraint;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *separatorBotConstraint;
