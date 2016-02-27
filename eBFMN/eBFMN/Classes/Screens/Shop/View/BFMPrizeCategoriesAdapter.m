@@ -40,9 +40,6 @@ static CGFloat const kBFMShopCellSideRatio6Plus =  180.f / 138.f;
 				  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 	BFMPrizeCategoryCell *cell = (id)[super collectionView:collectionView
 							cellForItemAtIndexPath:indexPath];
-	if ([cell isKindOfClass:[BFMPrizeCategoryCell class]]) {
-		[cell configureSelected:(self.selectedIndex == indexPath.row)];
-	}
 	return cell;
 }
 

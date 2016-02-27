@@ -116,7 +116,7 @@
                   moduleName = "eBFMN"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mikhailtimoscenko/Documents/Projects/eBFMN/eBFMN/eBFMN/Classes/Models/News/BFMNewsRecord.m"
-                  timestampString = "478292324.054836"
+                  timestampString = "478299978.673299"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -131,7 +131,7 @@
                   moduleName = "eBFMN"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mikhailtimoscenko/Documents/Projects/eBFMN/eBFMN/eBFMN/Classes/Models/News/BFMNewsRecord.m"
-                  timestampString = "478292324.055006"
+                  timestampString = "478299978.673442"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -146,7 +146,7 @@
                   moduleName = "eBFMN"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mikhailtimoscenko/Documents/Projects/eBFMN/eBFMN/eBFMN/Classes/Models/News/BFMNewsRecord.m"
-                  timestampString = "478292324.055187"
+                  timestampString = "478299978.673644"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -161,7 +161,7 @@
                   moduleName = "eBFMN"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mikhailtimoscenko/Documents/Projects/eBFMN/eBFMN/eBFMN/Classes/Models/News/BFMNewsRecord.m"
-                  timestampString = "478292324.0553"
+                  timestampString = "478299978.673817"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -312,6 +312,70 @@
             startingLineNumber = "120"
             endingLineNumber = "120"
             landmarkName = "-identifierForObjectAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eBFMN/Classes/Models/Prize/BFMPrize.m"
+            timestampString = "478293216.543953"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "+prizesInCategory:withCompletion:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eBFMN/Classes/Screens/Shop/ViewController/BFMPrizeCategorisController.m"
+            timestampString = "478299929.803472"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "-setupModels"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eBFMN/Classes/Models/Prize/BFMPrize.m"
+            timestampString = "478293508.050717"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "+prizesInCategory:withCompletion:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eBFMN/Classes/Screens/Shop/ViewController/BFMPrizeCategorisController.m"
+            timestampString = "478299929.238964"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "-setupBannerModel"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

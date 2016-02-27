@@ -12,11 +12,15 @@
 #import "BFMDefaultNavagtionBarAppearance.h"
 #import "BFMPrizeCategoriesAdapter.h"
 #import "BFMPrizeCategory.h"
+#import "BFMPrize.h"
+#import "BFMPrizeBannerAdapter.h"
+#import "BFMBanner.h"
 
 
 #import "ALAlertBanner.h"
 
 static NSString *const kBFMCategoryCellID = @"BFMPrizeCategoryCell";
+static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 
 @interface BFMPrizeCategorisController ()
 
@@ -25,7 +29,7 @@ static NSString *const kBFMCategoryCellID = @"BFMPrizeCategoryCell";
 @property (nonatomic, strong) BFMPrizeCategoriesAdapter *adapter;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *bannerCollectionView;
-@property (nonatomic, strong) BFMPrizeCategoriesAdapter *bannerAdapter;
+@property (nonatomic, strong) BFMPrizeBannerAdapter *bannerAdapter;
 
 @end
 
@@ -38,6 +42,9 @@ static NSString *const kBFMCategoryCellID = @"BFMPrizeCategoryCell";
 
 	[self setupCollectionView];
 	[self setupModels];
+	
+	[self setupBannerView];
+	[self setupBannerModel];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -60,6 +67,46 @@ static NSString *const kBFMCategoryCellID = @"BFMPrizeCategoryCell";
 	UINib *nib = [UINib nibWithNibName:kBFMCategoryCellID bundle:nil];
 	[self.collectionView registerNib:nib
 		  forCellWithReuseIdentifier:kBFMCategoryCellID];
+}
+
+- (void)setupBannerView {
+	UINib *nib = [UINib nibWithNibName:kBFMPrizeBannerCellID bundle:nil];
+	[self.collectionView registerNib:nib
+		  forCellWithReuseIdentifier:kBFMPrizeBannerCellID];
+}
+
+- (void)setupBannerModel {
+	self.bannerAdapter = [[BFMPrizeBannerAdapter alloc] init];
+	[self.bannerAdapter mapObjectClass:[BFMBanner class]
+				toCellIdentifier:kBFMPrizeBannerCellID];
+	self.bannerAdapter.dataSource = self.model.dataSource;
+	self.bannerAdapter.collectionView = self.collectionView;
+	
+	
+	__weak typeof(self) weakSelf = self;
+	[self.model loadBannersWithCallback:^(NSError *error) {
+		if (error) {
+			ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
+																style:ALAlertBannerStyleFailure
+															 position:ALAlertBannerPositionUnderNavBar
+																title:NSLocalizedString(@"error.error", nil)
+															 subtitle:NSLocalizedString(@"error.prizes", nil)];
+			[banner show];
+		}
+	}];
+	
+	self.bannerAdapter.selection = ^(NSInteger selectedIndex) {
+		__strong typeof(weakSelf) strongSelf = weakSelf;
+		
+		if (selectedIndex == NSNotFound) {
+			//not selected
+			
+			return;
+		}
+	};
+	
+	//if you want to setup selection on screen creation do it here
+	self.bannerAdapter.selectedIndex = NSNotFound;
 }
 
 - (void)setupModels {
@@ -88,6 +135,18 @@ static NSString *const kBFMCategoryCellID = @"BFMPrizeCategoryCell";
 	self.adapter.selection = ^(NSInteger selectedIndex) {
 		__strong typeof(weakSelf) strongSelf = weakSelf;
 
+		if (selectedIndex == NSNotFound) {
+			//not selected
+			
+			return;
+		}
+		
+		NSIndexPath *path = [NSIndexPath indexPathForRow:selectedIndex inSection:0];
+		BFMPrizeCategory *category = [strongSelf.adapter.dataSource objectAtIndexPath:path];
+
+		[BFMPrize prizesInCategory:[category.identifier stringValue] withCompletion:^(NSArray *prizes, NSError *error) {
+			NSLog(@"");
+		}];
 	};
 	
 	//if you want to setup selection on screen creation do it here

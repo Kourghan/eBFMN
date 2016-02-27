@@ -13,7 +13,9 @@
 @interface BFMPrizeCategoriesViewModel : NSObject
 
 @property (nonatomic, strong) ODSDataSource *dataSource;
+@property (nonatomic, strong) ODSDataSource *bannerDataSource;
 
 - (void)loadCategoriesWithCallback:(void (^)(NSError *error))completion;
+- (void)loadBannersWithCallback:(void (^)(NSError *error))completion;
 
 @end

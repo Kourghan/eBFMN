@@ -9,6 +9,8 @@
 #import "BFMPrizeCategoriesViewModel.h"
 #import "BFMPrizeCategory.h"
 #import "ODSFetchedResultsDataSource.h"
+#import "BFMPrize.h"
+#import "BFMBanner.h"
 
 #import "MagicalRecord.h"
 
@@ -36,6 +38,12 @@
 
 - (void)loadCategoriesWithCallback:(void (^)(NSError *))completion {
 	[BFMPrizeCategory prizeCategoriesWithCompletion:^(NSArray *categories, NSError *error) {
+		completion(error);
+	}];
+}
+
+- (void)loadBannersWithCallback:(void (^)(NSError *))completion {
+	[BFMBanner bannersWithCompletion:^(NSArray *banners, NSError *error) {
 		completion(error);
 	}];
 }
