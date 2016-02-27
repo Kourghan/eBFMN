@@ -1,135 +1,142 @@
 # SDCAlertView
 
-`SDCAlertView` doesn't just look like a system alert in terms of user interface elements, it is the result of completely reverse-engineering `UIAlertView`. View hierarchy, labels, buttons, animations, user interaction; everything has been looked at and incorporated as much as possible.
+![CI Status](https://travis-ci.org/sberrevoets/SDCAlertView.svg?branch=master)
+![CocoaPods](https://img.shields.io/cocoapods/v/SDCAlertView.svg)
+![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)
 
-You can think of `SDCAlertView` as `UIAlertView` on steroids. It has added functionality such as a `contentView` property and block syntax, while still keeping the `UIAlertView` look.
+`SDCAlertView` started out as an alert that looked identical to `UIAlertView`, but had support for a custom content view. With the introduction of `UIAlertController` in iOS 8, the project was updated to the more modern API that `UIAlertController` brought.
 
-![SDCAlertController](http://sberrevoets.github.io/SDCAlertView/SDCAlertController.png)
+<div align="center">
+    <img src="http://sberrevoets.github.io/SDCAlertView/ActionSheet.gif">
+    <img src="http://sberrevoets.github.io/SDCAlertView/Alert.gif">
+</div>
 
-## iOS 8 & `UIAlertController`
-In iOS 8, `UIAlertView` was deprecated in favor of `UIAlertController`. `SDCAlertView` was also updated to include `SDCAlertController`, whose API matches its `UI` counterpart.
+## Features
 
-But that wasn't all, the entire view hierarchy changed again and even the way of presenting the alert changed. Fortunately, the new implementation was a lot easier to copy, though some sacrifices had to be made in terms of likeness. The culprits, two private classes by the name of `_UIBackdropView` and `_UIBlendingHighlightView`, were used quite a bit, and although `UIVisualEffectView` comes close to making it look exactly right, there are differences.
+- [x] Most `UIAlertController` functionality
+- [x] Custom content views
+- [x] Preventing controllers from dismissing when the user taps a button
+- [x] Easy presentation/dismissal
+- [x] Attributed title label, message label, and buttons
+- [x] Appearance customization
+- [x] Usable from Swift and Objective-C
+- [x] Understandable button placement
+- [x] UI tests
+- [x] Custom alert behavior
+- [x] CocoaPods/Carthage/Swift Package Manager support
+- [ ] Easy queueing of alerts
 
-Ignoring minor differences (that you would really only see if you looked for them), everything that was possible in `SDCAlertView` is also possible in `SDCAlertController`, though probably in the form of a new API. `SDCAlertController` is backwards compatible with `SDCAlertView`, meaning you can replace your existing `SDCAlertView` instances with `SDCAlertController` instances, even if your deployment target is iOS 7.
+# Requirements
 
-**This means that you should rarely use `SDCAlertView` anymore. Consider it, just like `UIAlertView`, deprecated and only use `SDCAlertController` moving forward. If you want to keep using `SDCAlertView` because it has functionality `SDCAlertController` does not, open an issue. This is considered a bug.**
+ - Xcode 7 or higher
+ - iOS 8 or higher
 
-## Installation
-The easiest way to install is, of course, by using CocoaPods. The name of the pod is `SDCAlertView`.
+If you want to use the library on iOS 7, please use version 2.5.4 (the latest 2.x release). SDCAlertView is not available on iOS 6.1 or below.
 
-If you're not using CocoaPods, you need all classes in the [Source](https://github.com/sberrevoets/SDCAlertView/tree/master/SDCAlertView/Source) directory.
+# Installation
 
-The project also depends on [RBBAnimation](https://github.com/robb/RBBAnimation) (`SDCAlertView` only) and [SDCAutoLayout](https://github.com/sberrevoets/SDCAutoLayout). These dependencies are automatically handled for you if you use CocoaPods.
+## CocoaPods
+To install SDCAlertView using CocoaPods, please integrate it in your existing Podfile, or create a new Podfile:
 
-## Usage
-`SDCAlertController` is for use in iOS 7 or higher only. It will not work properly on iOS 6.1 or below. Using the library is very simple: just import SDCAlertController.h and use it as you would `UIAlertController`.
+```ruby
+platform :ios, '8.0'
+use_frameworks!
 
-### Basic
-
-Showing a basic `SDCAlertController` alert looks just like showing a basic `UIAlertController` alert:
-```objc
-SDCAlertController *alert = [SDCAlertController alertControllerWithTitle:@"Title"
-																 message:@"This is a message"
-														  preferredStyle:SDCAlertControllerStyleAlert];
-[alert addAction:[SDCAlertAction actionWithTitle:@"OK" style:SDCAlertActionStyleDefault handler:nil]];
-[alert presentWithCompletion:nil];
+target 'MyApp' do
+  pod 'SDCAlertView', '~> 4.0'
+end
 ```
 
-Or you can use one of the convenience methods:
-```objc
-[SDCAlertController showAlertControllerWithTitle:@"Title" message:@"This is a message" actionTitle:@"OK"]
+Then run `pod install`.
+
+## Carthage
+To install with Carthage, add the following line to your `Cartfile`:
+
+```ruby
+"sberrevoets/SDCAlertView" ~> 4.0
 ```
 
-### `contentView`
+Run `carthage update` and drag `SDCAlertView.framework` in the `Build` folder into your project.
 
-Of course, you're not using `SDCAlertView`'s full potential unless you are using the `contentView`:
-```objc
-SDCAlertController *alert = [SDCAlertController alertControllerWithTitle:@"Title"
-																 message:@"This is a message"
-														  preferredStyle:SDCAlertControllerStyleAlert];
-[alert addAction:[SDCAlertAction actionWithTitle:@"OK" style:SDCAlertActionStyleDefault handler:nil]];
+## Swift Package Manager
+To use the Swift Package Manager, add the following to your `Package.swift` file: 
 
-UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] init];
-spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-[spinner setTranslatesAutoresizingMaskIntoConstraints:NO];
-[spinner startAnimating];
+```swift
+import PackageDescription
 
-[alert.contentView addSubview:spinner];
-[spinner sdc_horizontallyCenterInSuperview];
-[alert.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[spinner]-|"
-																		  options:0
-																		  metrics:nil
-																			views:NSDictionaryOfVariableBindings(spinner)]];
-
-[alert presentWithCompletion:nil];
+let package = Package(
+    name: "<your project name>"
+    dependencies: [
+        .Package(url: "https://github.com/sberrevoets/SDCAlertView/SDCAlertView.git", majorVersion: 4.0)
+    ])
 ```
 
-### Dismissal Prevention
+# Alerts vs. Action Sheets
 
-You can use the `shouldDismissBlock` to prevent an alert from being dismissed:
+Starting with version 4.0, `SDCAlertController` also supports the presentation of action sheets. Some things to keep in mind when using action sheets:
 
-```objc
-SDCAlertController *alert = [SDCAlertController alertControllerWithTitle:@"Title"
-																 message:@"This is a message"
-														  preferredStyle:SDCAlertControllerStyleAlert];
-[alert addAction:[SDCAlertAction actionWithTitle:@"OK" style:SDCAlertActionStyleDefault handler:nil]];
+- It does not properly adapt on iPad. This is because iOS doesn't support `UIModalPresentationStyle.Custom` for adaptive presentations (such as when presenting an action sheet from a bar button item).
+- The new `AlertBehaviors` is, due to limitations in the Swift/Objective-C interop, not available when using `SDCAlertController` from Swift. This affects `AlertControllerStyle.Alert` as well.
+- When adding subviews to the custom content view, that view will replace the title and message labels.
 
-alert.shouldDismissBlock = ^ BOOL(SDCAlertAction *action) {
-	return NO;
-};
+# Usage
+`SDCAlertView` is written in Swift, but can be used in both Swift and
+Objective-C. Classes in Objective-C have the same name they do in Swift, but
+with an `SDC` prefix. Once Swift [supports prefixing enums](https://github.com/apple/swift/pull/618) they will also get the `SDC` prefix.
 
-[alert presentWithCompletion:nil];
+Unfortunately the Swift/Objective-C interop is not perfect, so not all functionality that's available in Swift is available in Objective-C.
+## Basic
+
+```swift
+let alert = AlertController(title: "Title", message: "This is a message", preferredStyle: .Alert)
+alert.addAction(AlertAction(title: "Cancel", style: .Default))
+alert.addAction(AlertAction(title: "OK", style: .Preferred))
+alert.present()
+
+// or use the convenience methods:
+
+AlertController.alertWithTitle("Title", message: "This is a message", actionTitle: "OK")
+AlertController.sheetWithTitle("Action sheet title", "Action sheet message", actions: ["OK", "Cancel"])
 ```
 
-### Styling and Appearance
+## Custom Content Views
 
-`SDCAlertController` is a normal view controller, so applying a `tintColor` to its `view` will color the buttons and any subviews you add to the `contentView`. If you are looking for more customizations, create a class that conforms to the `SDCAlertControllerVisualStyle` protocol and set it as the `visualStyle` on an `SDCAlertController` instance. You can also subclass `SDCAlertControllerDefaultVisualStyle` for a set of default values that you can then override as needed.
+```swift
+let spinner = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+spinner.translatesAutoresizingMaskIntoConstraints = false
+spinner.startAnimating()
 
-If you're feeling particularly adventurous, you can use a different transition/animation by creating a class that conforms to `UIViewControllerTransitioningDelegate` and setting it as the alert's `transitionCoordinator`. Transitioning is implemented using default iOS 8 custom view controller transitions, so anything you can do with a normal view controller, you can do with an alert controller.
+let alert = AlertController(title: "Title", message: "Please wait...")
+alert.contentView.addSubview(spinner)
 
-## Backwards compatibility
+spinner.centerXAnchor.constraintEqualToAnchor(alert.contentView.centerXAnchor).active = true
+spinner.topAnchor.constraintEqualToAnchor(alert.contentView.topAnchor).active = true
+spinner.bottomAnchor.constraintEqualToAnchor(alert.contentView.bottomAnchor).active = true
 
-`SDCAlertController` will in most cases be backwards compatible with `SDCAlertView`. However, most is not all, and if you need to fine-tune an alert just for iOS 7, you can still do that:
-
-```objc
-SDCAlertController *alert = [SDCAlertController alertWithTitle:@"Title" message:@"Message" preferredStyle:SDCAlertControllerStyleAlert];
-// ... configure alert with content view, text fields, buttons, etc ...
-
-if (alert.legacyAlertView) {
-	// ... use alert.legacyAlertView to make iOS 7 modifications
-} else {
-	// Keep using original alert
-}
-
-[alert presentWithCompletion:nil];
+alert.present()
 ```
 
-## Behavior different from `UIAlertController`
+## Dismissal Prevention
 
-With the introduction of `SDCAlertController`, pretty much all behavior in alerts could be replicated. If you use the legacy `SDCAlertView`, you may run into some additional problems as described below:
+```swift
+let alert = AlertController(title: "Title", message: "This is a message")
+alert.addAction(AlertAction(title: "Dismiss", style: .Preferred))
+alert.addAction(AlertAction(title: "Don't dismiss", style: .Default))
+alert.shouldDismissHandler = { $0.title == "Dismiss" }
+alert.present()
+```
 
-- Special interaction with the system. The system does not consider instances of `SDCAlertController` actual alerts, which means that won't experience the normal system interaction you'd expect from a normal alert. This also means that combining `UIAlertView` with `SDCAlertView` (or `SDCAlertController`) is a **bad idea**.
-- **`SDCAlertView` only:** `UITextField` placeholders in different languages. "Login" and "Password" are entered as localized strings, but they aren't actually translated.
-- **`SDCAlertView` only:** Some behavior is purposely not ported from `UIAlertView`. These cases are discussed in SDCAlertView.h.
+## Styling and Appearance
 
-## New in 2.0
+`SDCAlertController` is a normal view controller, so applying a `tintColor` to its `view` will color the buttons and any subviews you add to the `contentView`.
 
-**What's New:**
-- All new API that matches and extends `UIAlertController`
-- Ability to always show buttons horizontally or vertically
-- Backwards compatible with `SDCAlertView` (1.0)
-- More stylistic elements you can style (alert width, button separators, text fields, etc.)
+If you are looking for more customizations, create a type that conforms to `VisualStyle` and use `visualStyle` on the `AlertController` instance. You can also subclass `DefaultVisualStyle` for a set of default values that you can then override as needed.
 
-## Support
+# Support
 I'm pretty active on [Stack Overflow](http://stackoverflow.com/users/751268/scott-berrevoets), so please use that if you have any questions. You can also use [Twitter](http://twitter.com/ScottBerrevoets) to contact me directly.
 
-If you are experiencing bugs, feel free to post an issue or submit a pull request. I don't bite, promise!
+If you are experiencing bugs, feel free to post an issue or submit a pull request.
 
-## Credits
-Some credits are in order:
+# License
 
-- Robert Böhnke ([@robb](https://github.com/robb)): [RBBAnimation](https://github.com/robb/RBBAnimation)
-- Lee McDermott ([@lmcd](https://github.com/lmcd)) for reverse-engineering the showing and dismissing animations.
-
-And everyone else who contributed by reporting issues, creating pull requests, or in some other way!
+SDCAlertView is distributed under the MIT license.

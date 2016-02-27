@@ -16,13 +16,20 @@
 
 @implementation BFMNewsRecord
 
-+ (void)getNewsFromDate:(NSInteger)date withCompletition:(void (^)(NSArray *, NSError *))completition {
++ (void)getNews:(NSInteger)page pageSize:(NSInteger)pageSize withCompletition:(void (^)(NSArray *, NSError *))completition {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
     
     NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
-    
-    NSDictionary *params = @{@"guid" : sessionKey, @"from" : @(date)};
-    [manager GET:@"Reports/GetNews"
+	
+	// (string guid, string language, int pageSize, int page)
+	
+    NSDictionary *params = @{
+							 @"guid" : sessionKey,
+							 @"page" : @(page),
+							 @"pageSize" : @(pageSize),
+							 @"language" : @"en" // temp lang
+							 };
+    [manager GET:@"Reports/GetCabinetNews"
       parameters:params
          success:^(NSURLSessionDataTask *task, NSArray *responseObject) {
              if (![responseObject isEqual: @[]]) {
@@ -51,18 +58,19 @@
     NSDictionary *params = @{
                              @"guid" : sessionKey,
                              @"date" : @(date),
-                             @"id" : self.identifier
+                             @"id" : self.textIdentifier
                              };
+	
+	__weak typeof(self) weakSelf = self;
+	
     [manager GET:@"Reports/GetNewsTextRecord"
       parameters:params
-         success:^(NSURLSessionDataTask *task, NSArray *responseObject) {
-             if (![responseObject isEqual: @[]]) {
-                 NSManagedObjectContext *ctx = [NSManagedObjectContext MR_defaultContext];
-                 NSArray *records = [FEMDeserializer collectionFromRepresentation:responseObject
-                                                                          mapping:[BFMNewsRecord defaultMapping]
-                                                                          context:ctx];
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             if (responseObject) {
+				 NSManagedObjectContext *ctx = weakSelf.managedObjectContext;
+				 weakSelf.text = [self stringByStrippingHTML:responseObject[@"Text"]];
                  [ctx MR_saveToPersistentStoreAndWait];
-                 completition(records, nil);
+                 completition(self, nil);
              } else {
                  completition(nil, nil);
              }
@@ -92,14 +100,53 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         internalRecordDateFormatter = [NSDateFormatter new];
-        internalRecordDateFormatter.dateFormat = @"EEEE, dd/mm/yyyy";
+        internalRecordDateFormatter.dateFormat = @"EEEE, dd/MM/yyyy";
     });
     return internalRecordDateFormatter;
+}
+
+- (NSString *)stringByStrippingHTML:(NSString *)original {
+	NSRange r;
+	NSString *s = [original copy];
+	while ((r = [s rangeOfString:@"<[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound)
+		s = [s stringByReplacingCharactersInRange:r withString:@""];
+	return s;
+}
+
++ (void)deleteAll {
+	NSManagedObjectContext *ctx = [NSManagedObjectContext MR_defaultContext];
+	
+	NSFetchRequest *allNews = [[NSFetchRequest alloc] init];
+	[allNews setEntity:[NSEntityDescription entityForName:@"BFMNewsRecord" inManagedObjectContext:ctx]];
+	[allNews setIncludesPropertyValues:NO]; //only fetch the managedObjectID
+	
+	NSError *error = nil;
+	NSArray *news = [ctx executeFetchRequest:allNews error:&error];
+	
+	//error handling goes here
+	for (NSManagedObject *record in news) {
+		[ctx deleteObject:record];
+	}
+	NSError *saveError = nil;
+	[ctx save:&saveError];
 }
 
 @end
 
 @implementation BFMNewsRecord (Mapping)
+
++ (FEMMapping *)detailsMapping {
+	FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"BFMNewsRecord"];
+	mapping.primaryKey = @"identifier";
+	
+	
+	[mapping addAttributesFromDictionary:@{
+										   @"identifier" : @"_id",
+										   @"text" : @"Text"
+										   }];
+	
+	return mapping;
+}
 
 + (FEMMapping *)defaultMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"BFMNewsRecord"];
@@ -109,7 +156,8 @@
     [mapping addAttributesFromDictionary:@{
                                            @"identifier" : @"_id",
                                            @"title" : @"Title",
-                                           @"shortText" : @"ShortText"
+                                           @"shortText" : @"ShortText",
+										   @"textIdentifier" : @"NewsTextID"
                                            }];
     
     FEMAttribute *attribute = [[FEMAttribute alloc] initWithProperty:@"date"
@@ -117,7 +165,7 @@
                                                                  map:^id(id value) {
                                                                      if ([value isKindOfClass:[NSString class]]) {
                                                                          NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                                                                         [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
+                                                                         [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
                                                                          return [formatter dateFromString:value];
                                                                      }
                                                                      return nil;

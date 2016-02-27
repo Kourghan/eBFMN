@@ -10,7 +10,7 @@
 #import "BFMPrizeCategory.h"
 #import "ODSFetchedResultsDataSource.h"
 
-#import <MagicalRecord.h>
+#import "MagicalRecord.h"
 
 @implementation BFMPrizeCategoriesViewModel
 

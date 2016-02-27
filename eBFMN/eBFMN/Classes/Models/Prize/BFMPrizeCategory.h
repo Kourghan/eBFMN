@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import <FastEasyMapping.h>
+#import "FastEasyMapping.h"
 
 @interface BFMPrizeCategory : NSManagedObject
 
