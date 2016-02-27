@@ -71,7 +71,7 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 
 - (void)setupBannerView {
 	UINib *nib = [UINib nibWithNibName:kBFMPrizeBannerCellID bundle:nil];
-	[self.collectionView registerNib:nib
+	[self.bannerCollectionView registerNib:nib
 		  forCellWithReuseIdentifier:kBFMPrizeBannerCellID];
 }
 
@@ -79,8 +79,8 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 	self.bannerAdapter = [[BFMPrizeBannerAdapter alloc] init];
 	[self.bannerAdapter mapObjectClass:[BFMBanner class]
 				toCellIdentifier:kBFMPrizeBannerCellID];
-	self.bannerAdapter.dataSource = self.model.dataSource;
-	self.bannerAdapter.collectionView = self.collectionView;
+	self.bannerAdapter.dataSource = self.model.bannerDataSource;
+	self.bannerAdapter.collectionView = self.bannerCollectionView;
 	
 	
 	__weak typeof(self) weakSelf = self;
