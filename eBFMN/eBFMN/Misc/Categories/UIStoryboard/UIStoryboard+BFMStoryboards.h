@@ -16,5 +16,6 @@
 + (UIStoryboard *)notificationsStoryboard;
 + (UIStoryboard *)profileStoryboard;
 + (UIStoryboard *)tabBarStoryboard;
++ (UIStoryboard *)prizesStoryboard;
 
 @end

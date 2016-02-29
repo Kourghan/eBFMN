@@ -34,4 +34,8 @@
     return [UIStoryboard storyboardWithName:@"tabBar" bundle:nil];
 }
 
++ (UIStoryboard *)prizesStoryboard {
+	return [UIStoryboard storyboardWithName:@"Prize" bundle:nil];
+}
+
 @end

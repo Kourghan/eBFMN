@@ -10,13 +10,17 @@
 
 #import "ODSDataSource.h"
 
+@class BFMPrizeCategory;
+
 @interface BFMShopModel : NSObject
+
+- (instancetype)initWithCategory:(BFMPrizeCategory *)category;
 
 @property (nonatomic, strong) ODSDataSource *dataSource;
 
 @property (nonatomic, strong) NSString *title;
 
-- (void)loadPrizesWithCallback:(void (^)(NSError *error))completition;;
+- (void)loadPrizesWithCallback:(void (^)(NSError *error))completition;
 - (void)loadPointsWithCallback:(void (^)(NSNumber *points, NSError *error))completition;
 
 @end

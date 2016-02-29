@@ -24,7 +24,7 @@
 @interface BFMShopViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (nonatomic, strong) BFMShopModel *model;
+
 @property (nonatomic, strong) BFMShopCollectionAdapter *adapter;
 @property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
 
@@ -46,6 +46,9 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+	
+	[BFMPrize deleteAllPrizes];
+	[self loadData];
     
     [NINavigationAppearance pushAppearanceForNavigationController:self.navigationController];
     [BFMDefaultNavagtionBarAppearance applyTo:self.navigationController.navigationBar];
@@ -66,50 +69,52 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
           forCellWithReuseIdentifier:kBFMShopCellID];
 }
 
-- (void)setupModels {    
-    self.model = [BFMShopModel new];
-    
+- (void)loadData {
+	__weak typeof(self) weakSelf = self;
+	
+	[self.model loadPrizesWithCallback:^(NSError *error) {
+		if (error) {
+			ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
+																style:ALAlertBannerStyleFailure
+															 position:ALAlertBannerPositionUnderNavBar
+																title:NSLocalizedString(@"error.error", nil)
+															 subtitle:NSLocalizedString(@"error.prizes", nil)];
+			[banner show];
+		}
+	}];
+	
+	[self.model loadPointsWithCallback:^(NSNumber *points, NSError *error) {
+		if (error) {
+			ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
+																style:ALAlertBannerStyleFailure
+															 position:ALAlertBannerPositionUnderNavBar
+																title:NSLocalizedString(@"error.error", nil)
+															 subtitle:NSLocalizedString(@"error.points", nil)];
+			[banner show];
+		} else {
+			weakSelf.pointsLabel.text = [NSString stringWithFormat:@"%@ %@ %@",
+										 NSLocalizedString(@"prizes.youhave", nil),
+										 [points stringValue],
+										 NSLocalizedString(@"prizes.ibpoints", nil)
+										 ];
+		}
+	}];
+}
+
+- (void)setupModels {
     self.adapter = [[BFMShopCollectionAdapter alloc] init];
     [self.adapter mapObjectClass:[BFMPrize class]
                 toCellIdentifier:kBFMShopCellID];
     self.adapter.dataSource = self.model.dataSource;
     self.adapter.collectionView = self.collectionView;
-    
-    
-    __weak typeof(self) weakSelf = self;
-    [self.model loadPrizesWithCallback:^(NSError *error) {
-        if (error) {
-            ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
-                                                                style:ALAlertBannerStyleFailure
-                                                             position:ALAlertBannerPositionUnderNavBar
-                                                                title:NSLocalizedString(@"error.error", nil)
-                                                             subtitle:NSLocalizedString(@"error.prizes", nil)];
-            [banner show];
-        }
-    }];
-    
-    [self.model loadPointsWithCallback:^(NSNumber *points, NSError *error) {
-        if (error) {
-            ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
-                                                                style:ALAlertBannerStyleFailure
-                                                             position:ALAlertBannerPositionUnderNavBar
-                                                                title:NSLocalizedString(@"error.error", nil)
-                                                             subtitle:NSLocalizedString(@"error.points", nil)];
-            [banner show];
-        } else {
-            weakSelf.pointsLabel.text = [NSString stringWithFormat:@"%@ %@ %@",
-                                         NSLocalizedString(@"prizes.youhave", nil),
-                                         [points stringValue],
-                                         NSLocalizedString(@"prizes.ibpoints", nil)
-                                         ];
-        }
-    }];
-    
+	
+	__weak typeof(self) weakSelf = self;
+
     self.adapter.selection = ^(NSInteger selectedIndex) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf showSaveButton:(selectedIndex != NSNotFound)];
     };
-    
+	
     //if you want to setup selection on screen creation do it here
     self.adapter.selectedIndex = NSNotFound;
 }

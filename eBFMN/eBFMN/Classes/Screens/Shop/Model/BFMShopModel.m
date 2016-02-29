@@ -11,14 +11,24 @@
 
 #import "BFMPrize.h"
 #import "BFMUser+Extension.h"
+#import "BFMPrizeCategory.h"
 
 #import <MagicalRecord/MagicalRecord.h>
 
+@interface BFMShopModel ()
+
+@property (nonatomic, strong) BFMPrizeCategory *category;
+
+@end
+
 @implementation BFMShopModel
 
-- (instancetype)init {
+- (instancetype)initWithCategory:(BFMPrizeCategory *)category {
     if (self = [super init]) {
+		self.category = category;
         NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+		
+		NSPredicate *predicate = [NSPredicate predicateWithFormat:@"categoryId == %@", [self.category.identifier stringValue]];
         
         NSFetchRequest *request = [BFMPrize MR_requestAllSortedBy:@"identifier"
                                                         ascending:YES
@@ -47,9 +57,9 @@
 }
 
 - (void)loadPrizesWithCallback:(void (^)(NSError *))completition {
-    [BFMPrize prizesWithCompletition:^(NSArray * prizes, NSError * error) {
-        completition(error);
-    }];
+	[BFMPrize prizesInCategory:[self.category.identifier stringValue] withCompletion:^(NSArray *prizes, NSError *error) {
+		completition(error);
+	}];
 }
 
 @end

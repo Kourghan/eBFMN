@@ -9,7 +9,7 @@
 #import "BFMSessionManager.h"
 
 static NSString *developmentServerURL = @"http://164.40.131.211:80/API/";
-static NSString *productionServerURL = @"";
+static NSString *productionServerURL = @"http://134.213.70.134:81/API/";
 
 NSString *const kBFMLogoutNotification= @"kBFMLogoutNotification";
 
