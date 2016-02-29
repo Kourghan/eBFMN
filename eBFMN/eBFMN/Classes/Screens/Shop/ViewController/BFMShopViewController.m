@@ -112,7 +112,34 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
 
     self.adapter.selection = ^(NSInteger selectedIndex) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        [strongSelf showSaveButton:(selectedIndex != NSNotFound)];
+		
+		if (selectedIndex == NSNotFound) {
+			//not selected
+			
+			return;
+		}
+		
+		NSIndexPath *path = [NSIndexPath indexPathForRow:selectedIndex inSection:0];
+		BFMPrize *prize = [strongSelf.adapter.dataSource objectAtIndexPath:path];
+		
+		switch ([prize.prizeType integerValue]) {
+			case BFMPrizeTypeColor:
+				[BFMPrize getChildPrizesFrom:prize withCompletion:^(NSArray *prizes, NSError *error) {
+					NSLog(@"");
+				}];
+				break;
+			case BFMPrizeTypeText:
+				[BFMPrize getChildPrizesFrom:prize withCompletion:^(NSArray *prizes, NSError *error) {
+					NSLog(@"");
+				}];
+				break;
+			case BFMPrizeTypePlain:
+				[strongSelf showSaveButton:(selectedIndex != NSNotFound)];
+				break;
+			default:
+				[strongSelf showSaveButton:(selectedIndex != NSNotFound)];
+				break;
+		}
     };
 	
     //if you want to setup selection on screen creation do it here

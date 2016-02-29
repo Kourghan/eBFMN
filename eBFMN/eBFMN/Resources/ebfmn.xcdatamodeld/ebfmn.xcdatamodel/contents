@@ -58,10 +58,14 @@
         <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="BFMPrize" representedClassName="BFMPrize" syncable="YES">
+        <attribute name="categoryId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="iconURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oldPoints" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="points" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="prizeType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
         <userInfo>
             <entry key="relatedByAttribute" value="identifier"/>
         </userInfo>
@@ -103,13 +107,13 @@
     </entity>
     <elements>
         <element name="BFMAccount" positionX="-54" positionY="54" width="128" height="150"/>
+        <element name="BFMBanner" positionX="-54" positionY="135" width="128" height="90"/>
         <element name="BFMNewsRecord" positionX="-54" positionY="135" width="128" height="135"/>
         <element name="BFMNotification" positionX="-54" positionY="135" width="128" height="120"/>
         <element name="BFMPointsRecord" positionX="-54" positionY="135" width="128" height="135"/>
-        <element name="BFMPrize" positionX="-54" positionY="135" width="128" height="105"/>
+        <element name="BFMPrize" positionX="-54" positionY="135" width="128" height="165"/>
         <element name="BFMPrizeCategory" positionX="-54" positionY="135" width="128" height="90"/>
         <element name="BFMSysAccount" positionX="-36" positionY="63" width="128" height="255"/>
         <element name="BFMUser" positionX="-63" positionY="-18" width="128" height="225"/>
-        <element name="BFMBanner" positionX="-54" positionY="135" width="128" height="90"/>
     </elements>
 </model>

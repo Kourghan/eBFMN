@@ -11,9 +11,15 @@
 
 #import <FastEasyMapping/FastEasyMapping.h>
 
-NS_ASSUME_NONNULL_BEGIN
+typedef enum {
+	BFMPrizeTypeColor = 0,
+	BFMPrizeTypeText = 1,
+	BFMPrizeTypePlain = 2
+} BFMPrizeType;
 
 @interface BFMPrize : NSManagedObject
+
++ (void)getChildPrizesFrom:(BFMPrize *)prize withCompletion:(void (^)(NSArray *prizes, NSError *error))completition;
 
 + (void)prizesInCategory:(NSString *)idCategory withCompletion:(void (^)(NSArray *prizes, NSError *error))completition;
 + (void)currentPrizeWithComplatition:(void (^)(BFMPrize *prize, NSError *error))completition;
@@ -28,7 +34,5 @@ NS_ASSUME_NONNULL_BEGIN
 + (FEMMapping *)defaultMapping;
 
 @end
-
-NS_ASSUME_NONNULL_END
 
 #import "BFMPrize+CoreDataProperties.h"

@@ -113,6 +113,35 @@
 	[ctx save:&saveError];
 }
 
++ (void)getChildPrizesFrom:(BFMPrize *)prize withCompletion:(void (^)(NSArray *, NSError *))completition {
+	NSString *suffix = (prize.prizeType == BFMPrizeTypeColor) ? @"GetPrizeWithColorDetails" : @"GetPrizeWithDescriptions";
+	
+	BFMSessionManager *manager = [BFMSessionManager sharedManager];
+	
+	NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+	
+	[manager GET:[NSString stringWithFormat:@"Bonus/%@", suffix]
+	  parameters:@{@"prizeId" : [prize.identifier stringValue],
+				   @"guid" : sessionKey
+				   }
+		 success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+			 if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
+				 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
+				 completition(nil, [NSError new]);
+			 } else {
+				 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+				 NSArray *prizes = [FEMDeserializer  collectionFromRepresentation:[responseObject valueForKey:@"Data"]
+																		  mapping:[BFMPrize defaultMapping]
+																		  context:context];
+				 [context MR_saveToPersistentStoreAndWait];
+				 completition(prizes, nil);
+			 }
+		 } failure:^(NSURLSessionDataTask *task, NSError *error) {
+			 completition(nil, error);
+		 }
+	 ];
+}
+
 @end
 
 @implementation BFMPrize (Mapping)
@@ -125,7 +154,11 @@
 										   @"identifier" : @"Id",
 										   @"name" : @"Name",
 										   @"points" : @"IBPoints",
-										   @"iconURL" : @"DocumentLink"
+										   @"iconURL" : @"DocumentLink",
+										   @"categoryId" : @"CategoryId",
+										   @"prizeType" : @"PrizeType",
+										   @"oldPoints" : @"OldIBPoints",
+										   @"summary" : @"Description"
 										   }
 	 ];
 	
