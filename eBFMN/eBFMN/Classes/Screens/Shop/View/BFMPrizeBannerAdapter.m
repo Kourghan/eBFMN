@@ -9,6 +9,8 @@
 #import "BFMPrizeBannerAdapter.h"
 #import "BFMPrizeBannerCell.h"
 
+static CGFloat const kBFMPrizeBannerAspectRatio = 2.15f;
+
 @implementation BFMPrizeBannerAdapter
 
 #pragma mark - Init
@@ -53,7 +55,8 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 - (CGSize)collectionView:(UICollectionView *)collectionView
 				  layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return collectionView.frame.size;
+    CGFloat screenWidth = CGRectGetWidth([UIScreen mainScreen].bounds);
+	return CGSizeMake(screenWidth, screenWidth / kBFMPrizeBannerAspectRatio);
 }
 
 

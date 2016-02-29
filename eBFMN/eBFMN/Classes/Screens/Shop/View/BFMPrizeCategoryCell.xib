@@ -16,10 +16,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0p-xF-ECl">
-                        <rect key="frame" x="2" y="2" width="156" height="176"/>
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="180"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ev7-yG-OI5">
-                                <rect key="frame" x="20" y="20" width="116" height="116"/>
+                                <rect key="frame" x="20" y="20" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ev7-yG-OI5" secondAttribute="height" multiplier="343:289" id="9tv-wz-kJ3"/>
                                     <constraint firstAttribute="width" secondItem="Ev7-yG-OI5" secondAttribute="height" multiplier="1:1" id="S8y-cT-345"/>
@@ -31,7 +31,7 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joC-cC-bis">
-                                <rect key="frame" x="57" y="146" width="42" height="20"/>
+                                <rect key="frame" x="59" y="150" width="42" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -58,12 +58,12 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
             <constraints>
-                <constraint firstItem="g0p-xF-ECl" firstAttribute="leading" secondItem="BfT-2o-Ukd" secondAttribute="leading" constant="2" id="4pV-pM-ypY"/>
-                <constraint firstAttribute="bottom" secondItem="g0p-xF-ECl" secondAttribute="bottom" constant="2" id="B9w-zD-i2L"/>
-                <constraint firstItem="g0p-xF-ECl" firstAttribute="top" secondItem="BfT-2o-Ukd" secondAttribute="top" constant="2" id="Iex-Bm-1ai"/>
-                <constraint firstAttribute="trailing" secondItem="g0p-xF-ECl" secondAttribute="trailing" constant="2" id="QN3-U9-pT4"/>
+                <constraint firstItem="g0p-xF-ECl" firstAttribute="leading" secondItem="BfT-2o-Ukd" secondAttribute="leading" id="4pV-pM-ypY"/>
+                <constraint firstAttribute="bottom" secondItem="g0p-xF-ECl" secondAttribute="bottom" id="B9w-zD-i2L"/>
+                <constraint firstItem="g0p-xF-ECl" firstAttribute="top" secondItem="BfT-2o-Ukd" secondAttribute="top" id="Iex-Bm-1ai"/>
+                <constraint firstAttribute="trailing" secondItem="g0p-xF-ECl" secondAttribute="trailing" id="QN3-U9-pT4"/>
             </constraints>
             <size key="customSize" width="385" height="175"/>
             <connections>
