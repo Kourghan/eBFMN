@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class BFMShopModel;
+
 @interface BFMShopViewController : UIViewController
+
+@property (nonatomic, strong) BFMShopModel *model;
 
 @end

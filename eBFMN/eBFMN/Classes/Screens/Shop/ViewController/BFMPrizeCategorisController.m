@@ -19,6 +19,9 @@
 
 #import "ALAlertBanner.h"
 
+#import "BFMShopViewController.h"
+#import "BFMShopModel.h"
+
 static NSString *const kBFMCategoryCellID = @"BFMPrizeCategoryCell";
 static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 
@@ -144,15 +147,19 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 		NSIndexPath *path = [NSIndexPath indexPathForRow:selectedIndex inSection:0];
 		BFMPrizeCategory *category = [strongSelf.adapter.dataSource objectAtIndexPath:path];
 
-		[BFMPrize prizesInCategory:[category.identifier stringValue] withCompletion:^(NSArray *prizes, NSError *error) {
-			NSLog(@"");
-		}];
+		[strongSelf performSegueWithIdentifier:@"prizeList" sender:category];
 	};
 	
 	//if you want to setup selection on screen creation do it here
 	self.adapter.selectedIndex = NSNotFound;
 }
 
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	if ([segue.identifier isEqualToString:@"prizeList"]) {
+		BFMShopModel *model = [[BFMShopModel alloc] initWithCategory:sender];
+		BFMShopViewController *controller = [segue destinationViewController];
+		controller.model = model;
+	}
+}
 
 @end

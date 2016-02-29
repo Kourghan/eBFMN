@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)currentPrizeWithComplatition:(void (^)(BFMPrize *prize, NSError *error))completition;
 + (void)savePrize:(BFMPrize *)prize withCompletition:(void (^)(NSError *error))completition;
 
++ (void)deleteAllPrizes;
+
 @end
 
 @interface BFMPrize (Mapping)

@@ -73,7 +73,7 @@
 	
 	NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
 	
-	[manager GET:@"Bonus/GetPrizesByCategory"
+	[manager GET:@"Bonus/GetPrizeByCategoryForClient"
 	  parameters:@{@"prizeCategoryId" : idCategory,
 				   @"guid" : sessionKey
 				   }
@@ -93,6 +93,24 @@
 			 completition(nil, error);
 		 }
 	 ];
+}
+
++ (void)deleteAllPrizes {
+	NSManagedObjectContext *ctx = [NSManagedObjectContext MR_defaultContext];
+	
+	NSFetchRequest *request = [[NSFetchRequest alloc] init];
+	[request setEntity:[NSEntityDescription entityForName:@"BFMPrize" inManagedObjectContext:ctx]];
+	[request setIncludesPropertyValues:NO]; //only fetch the managedObjectID
+	
+	NSError *error = nil;
+	NSArray *objects = [ctx executeFetchRequest:request error:&error];
+	
+	//error handling goes here
+	for (NSManagedObject *record in objects) {
+		[ctx deleteObject:record];
+	}
+	NSError *saveError = nil;
+	[ctx save:&saveError];
 }
 
 @end

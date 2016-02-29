@@ -10,7 +10,11 @@
 
 #import "ODSDataSource.h"
 
+@class BFMPrizeCategory;
+
 @interface BFMShopModel : NSObject
+
+- (instancetype)initWithCategory:(BFMPrizeCategory *)category;
 
 @property (nonatomic, strong) ODSDataSource *dataSource;
 
