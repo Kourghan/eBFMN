@@ -21,7 +21,7 @@
         <!--PRIZES-->
         <scene sceneID="BwH-1W-PuA">
             <objects>
-                <viewController storyboardIdentifier="categories" id="ppV-yd-ugD" customClass="BFMPrizeCategorisController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="categories" automaticallyAdjustsScrollViewInsets="NO" id="ppV-yd-ugD" customClass="BFMPrizeCategorisController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KxJ-6n-Oca"/>
                         <viewControllerLayoutGuide type="bottom" id="WV0-Fy-8v4"/>
@@ -31,10 +31,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imd-X4-ICJ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="173"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="174.5"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xZP-at-Hzr">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="173"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="174.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ZWm-0X-e2O">
                                             <size key="itemSize" width="0.0" height="0.0"/>
@@ -44,7 +44,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" id="IaV-c8-IhA">
-                                                <rect key="frame" x="0.0" y="118.5" width="0.0" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="87.5" width="0.0" height="0.0"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <autoresizingMask key="autoresizingMask"/>
@@ -56,7 +56,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="imd-X4-ICJ" secondAttribute="height" multiplier="1125:519" id="86P-n4-BbJ"/>
+                                    <constraint firstAttribute="width" secondItem="imd-X4-ICJ" secondAttribute="height" multiplier="215:100" id="86P-n4-BbJ"/>
                                     <constraint firstItem="xZP-at-Hzr" firstAttribute="leading" secondItem="imd-X4-ICJ" secondAttribute="leading" id="aBE-h1-jSY"/>
                                     <constraint firstAttribute="bottom" secondItem="xZP-at-Hzr" secondAttribute="bottom" id="qpE-Du-Ps7"/>
                                     <constraint firstItem="xZP-at-Hzr" firstAttribute="top" secondItem="imd-X4-ICJ" secondAttribute="top" id="wDt-bK-Onc"/>
@@ -64,9 +64,9 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aDM-om-P6t">
-                                <rect key="frame" x="0.0" y="237" width="375" height="430"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hkx-PT-Hqf">
+                                <rect key="frame" x="0.0" y="238" width="375" height="428.5"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="hkx-PT-Hqf">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
