@@ -18,6 +18,8 @@
 @property (nonatomic, weak) IBOutlet UIView *bgSelectionView;
 @property (weak, nonatomic) IBOutlet UIImageView *prizeImage;
 @property (weak, nonatomic) IBOutlet UIView *pointsView;
+@property (weak, nonatomic) IBOutlet UIView *discountView;
+@property (weak, nonatomic) IBOutlet UILabel *discountPriceLabel;
 
 @end
 
@@ -29,6 +31,7 @@
     [super prepareForReuse];
 	
 	self.pointsView.hidden = NO;
+	self.discountView.hidden = YES;
     _object = nil;
 }
 
@@ -54,14 +57,31 @@
 - (void)setObject:(BFMPrize *)object {
     _object = object;
 	if ([object.prizeType integerValue] == BFMPrizeTypePlain) {
-		self.pointsLabel.text = [object.points stringValue];
+		if ([object.oldPoints integerValue] == 0) {
+			self.pointsLabel.text = [object.points stringValue];
+			self.discountView.hidden = YES;
+		} else {
+			self.discountView.hidden = NO;
+			self.discountPriceLabel.text = [object.points stringValue];
+			self.pointsLabel.text = [object.oldPoints stringValue];
+			[UIView beginAnimations:nil context:NULL]; // arguments are optional
+			[UIView setAnimationDuration:0];
+			self.discountView.transform = CGAffineTransformMakeRotation(-45.f);
+			[UIView commitAnimations];
+		}
 	} else {
 		self.pointsView.hidden = YES;
 	}
+	
+	
+	
     self.nameLabel.text = object.name;
     NSURL *url = [NSURL URLWithString:[object.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     [self.prizeImage setImageWithURL:url
                     placeholderImage:[UIImage imageNamed:@"ic_prize1"]];
+	
+	
+	
 }
 
 @end
