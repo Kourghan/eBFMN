@@ -156,6 +156,7 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	if ([segue.identifier isEqualToString:@"prizeList"]) {
+		self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 		BFMShopModel *model = [[BFMShopModel alloc] initWithCategory:sender];
 		BFMShopViewController *controller = [segue destinationViewController];
 		controller.model = model;

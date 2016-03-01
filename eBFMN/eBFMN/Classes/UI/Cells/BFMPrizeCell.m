@@ -17,6 +17,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *pointsLabel;
 @property (nonatomic, weak) IBOutlet UIView *bgSelectionView;
 @property (weak, nonatomic) IBOutlet UIImageView *prizeImage;
+@property (weak, nonatomic) IBOutlet UIView *pointsView;
 
 @end
 
@@ -26,7 +27,8 @@
 
 - (void)prepareForReuse {
     [super prepareForReuse];
-    
+	
+	self.pointsView.hidden = NO;
     _object = nil;
 }
 
@@ -51,8 +53,12 @@
 
 - (void)setObject:(BFMPrize *)object {
     _object = object;
+	if ([object.prizeType integerValue] == BFMPrizeTypePlain) {
+		self.pointsLabel.text = [object.points stringValue];
+	} else {
+		self.pointsView.hidden = YES;
+	}
     self.nameLabel.text = object.name;
-    self.pointsLabel.text = [object.points stringValue];
     NSURL *url = [NSURL URLWithString:[object.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     [self.prizeImage setImageWithURL:url
                     placeholderImage:[UIImage imageNamed:@"ic_prize1"]];

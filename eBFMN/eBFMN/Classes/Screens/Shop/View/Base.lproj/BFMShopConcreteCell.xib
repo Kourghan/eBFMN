@@ -108,6 +108,7 @@
                 <outlet property="bgSelectionView" destination="tt9-ow-HWJ" id="qFv-GJ-e5p"/>
                 <outlet property="nameLabel" destination="ICe-nm-cFG" id="MiB-HT-vI3"/>
                 <outlet property="pointsLabel" destination="ZWC-jZ-vxZ" id="aH8-Bv-2le"/>
+                <outlet property="pointsView" destination="ohf-ik-NAL" id="GuV-tH-rrH"/>
                 <outlet property="prizeImage" destination="nDh-BF-wSz" id="nVM-6l-wCI"/>
             </connections>
         </collectionViewCell>
