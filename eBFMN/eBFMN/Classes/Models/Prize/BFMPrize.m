@@ -114,7 +114,7 @@
 }
 
 + (void)getChildPrizesFrom:(BFMPrize *)prize withCompletion:(void (^)(NSArray *, NSError *))completition {
-	NSString *suffix = (prize.prizeType == BFMPrizeTypeColor) ? @"GetPrizeWithColorDetails" : @"GetPrizeWithDescriptions";
+	NSString *suffix = ([prize.prizeType integerValue]== BFMPrizeTypeColor) ? @"GetPrizeWithColorDetails" : @"GetPrizeWithDescriptions";
 	
 	BFMSessionManager *manager = [BFMSessionManager sharedManager];
 	
