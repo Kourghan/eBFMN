@@ -49,6 +49,7 @@
     };
     self.linesView.topAdapter.isOutline = NO;
     self.linesView.bottomAdapter.isOutline = YES;
+    self.linesView.bottomAdapter.shouldPresentSummary = YES;
     
     [self loadData];
 }

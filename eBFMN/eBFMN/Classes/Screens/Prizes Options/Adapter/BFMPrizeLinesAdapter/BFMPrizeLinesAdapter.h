@@ -28,5 +28,6 @@ UICollectionViewDelegateFlowLayout
 @property (nonatomic, weak) UICollectionView *collectionView;
 @property (nonatomic, assign) CGSize collectionSize;
 @property (nonatomic, assign) BOOL isOutline;
+@property (nonatomic, assign) BOOL shouldPresentSummary;
 
 @end

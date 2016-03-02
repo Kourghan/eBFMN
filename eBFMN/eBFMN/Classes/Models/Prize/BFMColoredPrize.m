@@ -29,6 +29,10 @@
     return self.name;
 }
 
+- (NSString *)bfm_summary {
+    return self.name;
+}
+
 + (UIColor *)colorFromHexString:(NSString *)hexString {
     unsigned rgbValue = 0;
     NSScanner *scanner = [NSScanner scannerWithString:hexString];

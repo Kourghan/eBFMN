@@ -14,7 +14,8 @@
 
 - (void)configureWithObject:(id<BFMPrizeLinesObject>)object
                    selected:(BOOL)selected
-                    outline:(BOOL)outline;
+                    outline:(BOOL)outline
+                  isSummary:(BOOL)isSummary;
 - (void)showBottomLine:(BOOL)showBottom showRightLine:(BOOL)showRight;
 
 @end

@@ -52,7 +52,8 @@
     id<BFMPrizeLinesObject> obj = self.objects[path.row];
     [cell configureWithObject:obj
                      selected:(path.row == self.selectedIndex)
-                      outline:self.isOutline];
+                      outline:self.isOutline
+                    isSummary:self.shouldPresentSummary];
     [cell showBottomLine:YES showRightLine:(path.row < self.objects.count - 1)];
     return cell;
 }

@@ -32,6 +32,10 @@
     return dict;
 }
 
+- (NSString *)bfm_summary {
+    return self.title;
+}
+
 - (NSString *)bfm_points {
     return @"";
 }

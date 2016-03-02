@@ -29,7 +29,8 @@
 
 - (void)configureWithObject:(id<BFMPrizeLinesObject>)object
                    selected:(BOOL)selected
-                    outline:(BOOL)outline {
+                    outline:(BOOL)outline
+                  isSummary:(BOOL)isSummary {
     
     if (selected) {
         UIColor *selectedColor = [UIColor colorWithRed:108.f/255.f
@@ -54,7 +55,7 @@
         self.checkMarkImageView.image = nil;
     }
     
-    self.selectTitleLabel.text = [object bfm_title];
+    self.selectTitleLabel.text = isSummary ? [object bfm_summary] : [object bfm_title];
 
     NSString *points = [object bfm_points];
 	self.pointsCount.text = points;

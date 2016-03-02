@@ -28,4 +28,8 @@
 	return [self.points stringValue];
 }
 
+- (NSString *)bfm_summary {
+    return self.summary;
+}
+
 @end
