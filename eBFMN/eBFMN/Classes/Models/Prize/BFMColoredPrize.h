@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 
 #import <FastEasyMapping/FastEasyMapping.h>
+#import "BFMPrizeLinesObject.h"
 
-@interface BFMColoredPrize : NSObject
+@interface BFMColoredPrize : NSObject<BFMPrizeLinesObject>
 
 @property (nonatomic, strong) NSArray *prizes;
 @property (nonatomic, strong) NSString *name;

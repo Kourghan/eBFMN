@@ -16,6 +16,8 @@
 @property (nonatomic, weak) IBOutlet UIView *rightSepView;
 @property (nonatomic, weak) IBOutlet UIView *bottomSepView;
 @property (weak, nonatomic) IBOutlet UILabel *pointsCount;
+@property (nonatomic, weak) IBOutlet UILabel *IBLabel;
+@property (nonatomic, weak) IBOutlet UILabel *pointsLabel;
 
 @end
 
@@ -53,7 +55,11 @@
     }
     
     self.selectTitleLabel.text = [object bfm_title];
-	self.pointsCount.text = [object bfm_points];
+
+    NSString *points = [object bfm_points];
+	self.pointsCount.text = points;
+    self.IBLabel.hidden = (points.length == 0);
+    self.pointsLabel.hidden = (points.length == 0);
 }
 
 - (void)showBottomLine:(BOOL)showBottom showRightLine:(BOOL)showRight {

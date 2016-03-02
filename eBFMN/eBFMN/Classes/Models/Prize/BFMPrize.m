@@ -123,6 +123,10 @@
 }
 
 + (void)getColoredPrizesForPrize:(BFMPrize *)prize withCompletion:(void (^)(NSArray *, NSError *))completition {
+    if (!prize) {
+        return;
+    }
+    
 	BFMSessionManager *manager = [BFMSessionManager sharedManager];
 	
 	NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];

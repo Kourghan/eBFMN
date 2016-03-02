@@ -154,6 +154,7 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
 	UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrize2Lines"
 													bundle:nil];
 	BFMPrizeLineAndDescriptionViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
+    VC.selectedPrize = prize;
 	[self.navigationController pushViewController:VC animated:YES];
 }
 

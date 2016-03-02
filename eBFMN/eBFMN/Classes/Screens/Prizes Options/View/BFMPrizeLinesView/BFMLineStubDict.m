@@ -32,6 +32,10 @@
     return dict;
 }
 
+- (NSString *)bfm_points {
+    return @"";
+}
+
 + (NSArray *)stubs {
     return @[
              
