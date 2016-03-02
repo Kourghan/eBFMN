@@ -162,6 +162,7 @@
 		F99096A21BE020CB00E1D629 /* BFMShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969B1BE020CB00E1D629 /* BFMShopModel.m */; };
 		F99096A31BE020CB00E1D629 /* BFMShopCollectionAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */; };
 		F99096A41BE020CB00E1D629 /* BFMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99096A11BE020CB00E1D629 /* BFMShopViewController.m */; };
+		F9D52A5B1C8743F700B85F81 /* BFMPrize+BFMPrizeLines.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D52A5A1C8743F700B85F81 /* BFMPrize+BFMPrizeLines.m */; settings = {ASSET_TAGS = (); }; };
 		F9EB69591C862A880031BB7D /* BFMPrize2LinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB69581C862A880031BB7D /* BFMPrize2LinesViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F9EB695C1C862AA50031BB7D /* BFMPrizeLinesView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB695B1C862AA50031BB7D /* BFMPrizeLinesView.m */; settings = {ASSET_TAGS = (); }; };
 		F9EB695F1C862AB80031BB7D /* BFMPrizeLinesAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB695E1C862AB80031BB7D /* BFMPrizeLinesAdapter.m */; settings = {ASSET_TAGS = (); }; };
@@ -483,6 +484,8 @@
 		F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMShopCollectionAdapter.m; sourceTree = "<group>"; };
 		F99096A01BE020CB00E1D629 /* BFMShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMShopViewController.h; sourceTree = "<group>"; };
 		F99096A11BE020CB00E1D629 /* BFMShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMShopViewController.m; sourceTree = "<group>"; };
+		F9D52A591C8743F700B85F81 /* BFMPrize+BFMPrizeLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BFMPrize+BFMPrizeLines.h"; sourceTree = "<group>"; };
+		F9D52A5A1C8743F700B85F81 /* BFMPrize+BFMPrizeLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BFMPrize+BFMPrizeLines.m"; sourceTree = "<group>"; };
 		F9EB69571C862A880031BB7D /* BFMPrize2LinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPrize2LinesViewController.h; sourceTree = "<group>"; };
 		F9EB69581C862A880031BB7D /* BFMPrize2LinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPrize2LinesViewController.m; sourceTree = "<group>"; };
 		F9EB695A1C862AA50031BB7D /* BFMPrizeLinesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPrizeLinesView.h; sourceTree = "<group>"; };
@@ -1418,6 +1421,23 @@
 			path = Classes/Screens/Shop/ViewController;
 			sourceTree = "<group>";
 		};
+		F9D52A571C8743D200B85F81 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F9D52A581C8743D200B85F81 /* BFMPrize+BFMPrizeLinesObject */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F9D52A581C8743D200B85F81 /* BFMPrize+BFMPrizeLinesObject */ = {
+			isa = PBXGroup;
+			children = (
+				F9D52A591C8743F700B85F81 /* BFMPrize+BFMPrizeLines.h */,
+				F9D52A5A1C8743F700B85F81 /* BFMPrize+BFMPrizeLines.m */,
+			);
+			path = "BFMPrize+BFMPrizeLinesObject";
+			sourceTree = "<group>";
+		};
 		F9EB69501C8629920031BB7D /* Prizes Options */ = {
 			isa = PBXGroup;
 			children = (
@@ -1503,6 +1523,7 @@
 		F9EB69661C862B930031BB7D /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				F9D52A571C8743D200B85F81 /* Category */,
 				F9EB69671C862B930031BB7D /* Protocol */,
 			);
 			path = Misc;
@@ -1796,6 +1817,7 @@
 				61FD3D361BA7094200F4CEFB /* JGActionSheet.m in Sources */,
 				614BC2441BB4B33D0060C8E8 /* BFMForgotPasswordController.m in Sources */,
 				61903C201BAC0CBB0018B3A0 /* BFMNotification.m in Sources */,
+				F9D52A5B1C8743F700B85F81 /* BFMPrize+BFMPrizeLines.m in Sources */,
 				619E2BDF1B97564A00886893 /* AppDelegate.m in Sources */,
 				F96073EF1BE72E9E00704692 /* BFMNewsSingleActionCell.m in Sources */,
 				61EC27EA1BCA858900DD3812 /* BFMPrize+CoreDataProperties.m in Sources */,

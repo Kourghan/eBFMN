@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class BFMPrize;
+
 @interface BFMPrize2LinesViewController : UIViewController
+
+@property (nonatomic, strong) BFMPrize *selectedPrize;
 
 @end

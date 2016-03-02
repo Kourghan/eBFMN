@@ -12,6 +12,7 @@
 
 @property (nonatomic, weak) IBOutlet UIImageView *selectImageView;
 @property (nonatomic, weak) IBOutlet UILabel *selectTitleLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *checkMarkImageView;
 @property (nonatomic, weak) IBOutlet UIView *rightSepView;
 @property (nonatomic, weak) IBOutlet UIView *bottomSepView;
 
@@ -35,16 +36,19 @@
         self.selectImageView.backgroundColor = selectedColor;
         self.selectImageView.layer.borderColor = selectedColor.CGColor;
         self.selectImageView.layer.borderWidth = 2.f;
+        self.checkMarkImageView.image = [UIImage imageNamed:@"ic_save"];
     } else if (!outline) {
         UIColor *selectedColor = [object bfm_color];
         self.selectImageView.backgroundColor = selectedColor;
         self.selectImageView.layer.borderColor = selectedColor.CGColor;
         self.selectImageView.layer.borderWidth = 2.f;
+        self.checkMarkImageView.image = nil;
     } else {
         UIColor *selectedColor = [object bfm_color];
         self.selectImageView.backgroundColor = [UIColor clearColor];
         self.selectImageView.layer.borderColor = selectedColor.CGColor;
         self.selectImageView.layer.borderWidth = 2.f;
+        self.checkMarkImageView.image = nil;
     }
     
     self.selectTitleLabel.text = [object bfm_title];

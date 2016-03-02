@@ -22,6 +22,12 @@
         __strong typeof(weakSelf) sSelf = weakSelf;
         adapter.selectedIndex = idx;
         sSelf.bottomAdapter.selectedIndex = 0;
+        
+        if (sSelf.selection) {
+            sSelf.selection(sSelf,
+                            sSelf.topAdapter.selectedIndex,
+                            sSelf.bottomAdapter.selectedIndex);
+        }
     };
     self.topAdapter.objects = [BFMLineStubDict stubs];
     
