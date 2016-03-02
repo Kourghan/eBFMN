@@ -15,5 +15,6 @@
 - (UIColor *)bfm_color;
 - (BOOL)bfm_isFill; // return YES if fill, NO if stroke
 - (NSString *)bfm_title;
+- (NSString *)bfm_points;
 
 @end

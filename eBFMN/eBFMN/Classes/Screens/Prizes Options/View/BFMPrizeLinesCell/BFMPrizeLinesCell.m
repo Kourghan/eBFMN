@@ -15,6 +15,7 @@
 @property (nonatomic, weak) IBOutlet UIImageView *checkMarkImageView;
 @property (nonatomic, weak) IBOutlet UIView *rightSepView;
 @property (nonatomic, weak) IBOutlet UIView *bottomSepView;
+@property (weak, nonatomic) IBOutlet UILabel *pointsCount;
 
 @end
 
@@ -52,6 +53,7 @@
     }
     
     self.selectTitleLabel.text = [object bfm_title];
+	self.pointsCount.text = [object bfm_points];
 }
 
 - (void)showBottomLine:(BOOL)showBottom showRightLine:(BOOL)showRight {

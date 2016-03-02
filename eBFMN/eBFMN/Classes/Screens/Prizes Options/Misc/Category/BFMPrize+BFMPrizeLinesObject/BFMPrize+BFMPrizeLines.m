@@ -24,4 +24,8 @@
     return self.name;
 }
 
+- (NSString *)bfm_points {
+	return [self.points stringValue];
+}
+
 @end

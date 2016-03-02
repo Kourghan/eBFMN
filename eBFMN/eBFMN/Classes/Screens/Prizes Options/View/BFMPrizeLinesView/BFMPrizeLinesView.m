@@ -34,8 +34,8 @@
                             sSelf.bottomAdapter.selectedIndex);
         }
     };
-    self.topAdapter.objects = [BFMLineStubDict stubs];
-    
+//    self.topAdapter.objects = [BFMLineStubDict stubs];
+	
     self.bottomAdapter = [BFMPrizeLinesAdapter new];
     self.bottomAdapter.collectionView = self.bottomCV;
     self.bottomAdapter.selection = ^(BFMPrizeLinesAdapter *adapter, NSInteger idx) {
