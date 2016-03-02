@@ -50,7 +50,6 @@
         }
     };
     self.bottomAdapter.isOutline = YES;
-    self.bottomAdapter.objects = [BFMLineStubDict stubs2];
     
     [self setupAdaptersContentSizes];
 }
