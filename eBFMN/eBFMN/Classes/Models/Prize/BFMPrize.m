@@ -114,13 +114,46 @@
 }
 
 + (void)getChildPrizesFrom:(BFMPrize *)prize withCompletion:(void (^)(NSArray *, NSError *))completition {
-	NSString *suffix = ([prize.prizeType integerValue]== BFMPrizeTypeColor) ? @"GetPrizeWithColorDetails" : @"GetPrizeWithDescriptions";
-	
+	if ([prize.prizeType integerValue] == BFMPrizeTypeText) {
+		[BFMPrize getTextPrizesForPrize:prize withCompletion:completition];
+	} else {
+		[BFMPrize getColoredPrizesForPrize:prize withCompletion:completition];
+	}
+}
+
++ (void)getColoredPrizesForPrize:(BFMPrize *)prize withCompletion:(void (^)(NSArray *, NSError *))completition {
 	BFMSessionManager *manager = [BFMSessionManager sharedManager];
 	
 	NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
 	
-	[manager GET:[NSString stringWithFormat:@"Bonus/%@", suffix]
+	[manager GET:@"Bonus/GetPrizeWithDescriptions"
+	  parameters:@{@"prizeId" : [prize.identifier stringValue],
+				   @"guid" : sessionKey
+				   }
+		 success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+			 if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
+				 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
+				 completition(nil, [NSError new]);
+			 } else {
+				 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+				 NSArray *prizes = [FEMDeserializer  collectionFromRepresentation:[responseObject valueForKey:@"Data"]
+																		  mapping:[BFMPrize defaultMapping]
+																		  context:context];
+				 [context MR_saveToPersistentStoreAndWait];
+				 completition(prizes, nil);
+			 }
+		 } failure:^(NSURLSessionDataTask *task, NSError *error) {
+			 completition(nil, error);
+		 }
+	 ];
+}
+
++ (void)getTextPrizesForPrize:(BFMPrize *)prize withCompletion:(void (^)(NSArray *, NSError *))completition {
+	BFMSessionManager *manager = [BFMSessionManager sharedManager];
+	
+	NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+	
+	[manager GET:@"Bonus/GetPrizeWithColorDetails"
 	  parameters:@{@"prizeId" : [prize.identifier stringValue],
 				   @"guid" : sessionKey
 				   }

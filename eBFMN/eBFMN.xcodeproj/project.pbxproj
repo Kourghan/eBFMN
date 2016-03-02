@@ -108,6 +108,7 @@
 		61E4776A1BE8EF3A00C2659D /* Leaderboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E4776C1BE8EF3A00C2659D /* Leaderboard.storyboard */; };
 		61E4776D1BE8EF3E00C2659D /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E4776F1BE8EF3E00C2659D /* News.storyboard */; };
 		61E477701BE8EF4200C2659D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E477721BE8EF4200C2659D /* Profile.storyboard */; };
+		61E8C96C1C85F3690079DC25 /* BFMColoredPrize.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E8C96B1C85F3690079DC25 /* BFMColoredPrize.m */; };
 		61EC27EA1BCA858900DD3812 /* BFMPrize+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E71BCA858900DD3812 /* BFMPrize+CoreDataProperties.m */; };
 		61EC27EB1BCA858900DD3812 /* BFMPrize.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27E91BCA858900DD3812 /* BFMPrize.m */; };
 		61EC27EF1BCA951700DD3812 /* BFMPrizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC27EE1BCA951700DD3812 /* BFMPrizeCell.m */; };
@@ -360,6 +361,8 @@
 		61E4776B1BE8EF3A00C2659D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Leaderboard.storyboard; sourceTree = "<group>"; };
 		61E4776E1BE8EF3E00C2659D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/News.storyboard; sourceTree = "<group>"; };
 		61E477711BE8EF4200C2659D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		61E8C96A1C85F3690079DC25 /* BFMColoredPrize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMColoredPrize.h; path = Classes/Models/Prize/BFMColoredPrize.h; sourceTree = "<group>"; };
+		61E8C96B1C85F3690079DC25 /* BFMColoredPrize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMColoredPrize.m; path = Classes/Models/Prize/BFMColoredPrize.m; sourceTree = "<group>"; };
 		61EC27E61BCA858900DD3812 /* BFMPrize+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMPrize+CoreDataProperties.h"; path = "Classes/Models/Prize/BFMPrize+CoreDataProperties.h"; sourceTree = "<group>"; };
 		61EC27E71BCA858900DD3812 /* BFMPrize+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BFMPrize+CoreDataProperties.m"; path = "Classes/Models/Prize/BFMPrize+CoreDataProperties.m"; sourceTree = "<group>"; };
 		61EC27E81BCA858900DD3812 /* BFMPrize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMPrize.h; path = Classes/Models/Prize/BFMPrize.h; sourceTree = "<group>"; };
@@ -1057,6 +1060,8 @@
 				61EC27E71BCA858900DD3812 /* BFMPrize+CoreDataProperties.m */,
 				61EC27E81BCA858900DD3812 /* BFMPrize.h */,
 				61EC27E91BCA858900DD3812 /* BFMPrize.m */,
+				61E8C96A1C85F3690079DC25 /* BFMColoredPrize.h */,
+				61E8C96B1C85F3690079DC25 /* BFMColoredPrize.m */,
 			);
 			name = Prize;
 			sourceTree = "<group>";
@@ -1669,6 +1674,7 @@
 				61FD3D641BA7096D00F4CEFB /* ODSAdapter.m in Sources */,
 				61FD3D671BA7096D00F4CEFB /* ODSBatchObjectChange.m in Sources */,
 				61B1DD361BB6D86E00DB6D23 /* BFMClientsPage.m in Sources */,
+				61E8C96C1C85F3690079DC25 /* BFMColoredPrize.m in Sources */,
 				F99096A21BE020CB00E1D629 /* BFMShopModel.m in Sources */,
 				61B1DD4B1BB83BAC00DB6D23 /* MCNewCustomLayer.m in Sources */,
 				61EC27EF1BCA951700DD3812 /* BFMPrizeCell.m in Sources */,
