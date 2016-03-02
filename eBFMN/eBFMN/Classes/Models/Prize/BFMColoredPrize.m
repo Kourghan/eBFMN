@@ -26,8 +26,6 @@
 										   }
 	 ];
 	
-	[mapping addRelationshipMapping:[BFMPrize defaultMapping] forProperty:@"prizes" keyPath:@"Prizes"];
-	
 	return mapping;
 }
 

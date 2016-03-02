@@ -10,6 +10,7 @@
 #import "BFMSessionManager.h"
 #import "JNKeychain+UNTExtension.h"
 #import "BFMPrizeCategory.h"
+#import "BFMColoredPrize.h"
 
 #import <FastEasyMapping/FastEasyMapping.h>
 #import <MagicalRecord/MagicalRecord.h>
@@ -126,7 +127,7 @@
 	
 	NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
 	
-	[manager GET:@"Bonus/GetPrizeWithDescriptions"
+	[manager GET:@"Bonus/GetPrizeWithColorDetails"
 	  parameters:@{@"prizeId" : [prize.identifier stringValue],
 				   @"guid" : sessionKey
 				   }
@@ -135,12 +136,21 @@
 				 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
 				 completition(nil, [NSError new]);
 			 } else {
+				 NSArray *rawData = [responseObject valueForKey:@"Data"];
+				 NSMutableArray *prizes = [NSMutableArray array];
+				 
 				 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
-				 NSArray *prizes = [FEMDeserializer  collectionFromRepresentation:[responseObject valueForKey:@"Data"]
-																		  mapping:[BFMPrize defaultMapping]
-																		  context:context];
+				 
+				 for (NSDictionary *singleData in rawData) {
+					 BFMColoredPrize *coloredPrize = [FEMDeserializer objectFromRepresentation:singleData mapping:[BFMColoredPrize defaultMapping]];
+					 NSArray *subPrizes = [FEMDeserializer collectionFromRepresentation:[singleData valueForKey:@"Prizes"] mapping:[BFMPrize defaultMapping] context:context];
+					 coloredPrize.prizes = subPrizes;
+					 
+					 [prizes addObject:coloredPrize];
+				 }
+				 
 				 [context MR_saveToPersistentStoreAndWait];
-				 completition(prizes, nil);
+				 completition([prizes copy], nil);
 			 }
 		 } failure:^(NSURLSessionDataTask *task, NSError *error) {
 			 completition(nil, error);
@@ -153,7 +163,7 @@
 	
 	NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
 	
-	[manager GET:@"Bonus/GetPrizeWithColorDetails"
+	[manager GET:@"Bonus/GetPrizeWithDescriptions"
 	  parameters:@{@"prizeId" : [prize.identifier stringValue],
 				   @"guid" : sessionKey
 				   }

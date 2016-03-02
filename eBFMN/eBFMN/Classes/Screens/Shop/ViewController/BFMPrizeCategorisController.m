@@ -150,19 +150,7 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 		NSIndexPath *path = [NSIndexPath indexPathForRow:selectedIndex inSection:0];
 		BFMPrizeCategory *category = [strongSelf.adapter.dataSource objectAtIndexPath:path];
 
-//		[strongSelf performSegueWithIdentifier:@"prizeList" sender:category];
-        
-        if (selectedIndex % 2) {
-            UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrize2Lines"
-                                                            bundle:nil];
-            BFMPrize2LinesViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
-            [strongSelf.navigationController pushViewController:VC animated:YES];
-        } else {
-            UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrizeLineAndDescription"
-                                                            bundle:nil];
-            BFMPrize2LinesViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
-            [strongSelf.navigationController pushViewController:VC animated:YES];
-        }
+		[strongSelf performSegueWithIdentifier:@"prizeList" sender:category];
     };
 	
 	//if you want to setup selection on screen creation do it here

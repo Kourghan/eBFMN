@@ -119,6 +119,20 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
 			return;
 		}
 		
+		
+//		
+//		if (selectedIndex % 2) {
+//			UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrize2Lines"
+//															bundle:nil];
+//			BFMPrize2LinesViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
+//			[strongSelf.navigationController pushViewController:VC animated:YES];
+//		} else {
+//			UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrizeLineAndDescription"
+//															bundle:nil];
+//			BFMPrize2LinesViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
+//			[strongSelf.navigationController pushViewController:VC animated:YES];
+//		}
+		
 		NSIndexPath *path = [NSIndexPath indexPathForRow:selectedIndex inSection:0];
 		BFMPrize *prize = [strongSelf.adapter.dataSource objectAtIndexPath:path];
 		

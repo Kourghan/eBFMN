@@ -12,7 +12,7 @@
 
 @interface BFMColoredPrize : NSObject
 
-@property (nonatomic, strong) NSSet *prizes;
+@property (nonatomic, strong) NSArray *prizes;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *hex;
 @property (nonatomic, strong) NSString *link;
