@@ -33,7 +33,6 @@
 }
 
 + (NSArray *)stubs {
-    return nil;
     return @[
              
              [self withTitle:@"Silver"],
