@@ -31,7 +31,7 @@
 	_object = object;
 	NSURL *url = [NSURL URLWithString:[object.link stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 	[self.bannerImageView setImageWithURL:url
-						 placeholderImage:[UIImage imageNamed:@"ic_prize1"]];
+						 placeholderImage:[UIImage imageNamed:@"ic_banner"]];
 }
 
 @end

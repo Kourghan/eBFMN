@@ -21,6 +21,8 @@
 #import "ODSCollectionAdapter.h"
 #import "ODSCollectionAdapter.h"
 
+#import "BFMPrize2LinesViewController.h"
+
 @interface BFMShopViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -119,33 +121,15 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
 			return;
 		}
 		
-		
-//		
-//		if (selectedIndex % 2) {
-//			UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrize2Lines"
-//															bundle:nil];
-//			BFMPrize2LinesViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
-//			[strongSelf.navigationController pushViewController:VC animated:YES];
-//		} else {
-//			UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrizeLineAndDescription"
-//															bundle:nil];
-//			BFMPrize2LinesViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
-//			[strongSelf.navigationController pushViewController:VC animated:YES];
-//		}
-		
 		NSIndexPath *path = [NSIndexPath indexPathForRow:selectedIndex inSection:0];
 		BFMPrize *prize = [strongSelf.adapter.dataSource objectAtIndexPath:path];
 		
 		switch ([prize.prizeType integerValue]) {
 			case BFMPrizeTypeColor:
-				[BFMPrize getChildPrizesFrom:prize withCompletion:^(NSArray *prizes, NSError *error) {
-					NSLog(@"");
-				}];
+				[strongSelf showColoredPrize];
 				break;
 			case BFMPrizeTypeText:
-				[BFMPrize getChildPrizesFrom:prize withCompletion:^(NSArray *prizes, NSError *error) {
-					NSLog(@"");
-				}];
+				[strongSelf showTextPrize];
 				break;
 			case BFMPrizeTypePlain:
 				[strongSelf showSaveButton:(selectedIndex != NSNotFound)];
@@ -158,6 +142,20 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
 	
     //if you want to setup selection on screen creation do it here
     self.adapter.selectedIndex = NSNotFound;
+}
+
+- (void)showColoredPrize {
+	UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrize2Lines"
+													bundle:nil];
+	BFMPrize2LinesViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
+	[self.navigationController pushViewController:VC animated:YES];
+}
+
+- (void)showTextPrize {
+	UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrizeLineAndDescription"
+													bundle:nil];
+	BFMPrize2LinesViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
+	[self.navigationController pushViewController:VC animated:YES];
 }
 
 #pragma mark - Private (action)
