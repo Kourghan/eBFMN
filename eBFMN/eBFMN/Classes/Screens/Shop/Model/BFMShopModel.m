@@ -28,7 +28,7 @@
 		self.category = category;
         NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
 		
-		NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier != NULL"];
+		NSPredicate *predicate = [NSPredicate predicateWithFormat:@"categoryId != -1"];
         
         NSFetchRequest *request = [BFMPrize MR_requestAllSortedBy:@"identifier"
                                                         ascending:YES

@@ -148,6 +148,11 @@
 				 for (NSDictionary *singleData in rawData) {
 					 BFMColoredPrize *coloredPrize = [FEMDeserializer objectFromRepresentation:singleData mapping:[BFMColoredPrize defaultMapping]];
 					 NSArray *subPrizes = [FEMDeserializer collectionFromRepresentation:[singleData valueForKey:@"Prizes"] mapping:[BFMPrize defaultMapping] context:context];
+					 
+					 for (BFMPrize *newPrize in subPrizes) {
+						 newPrize.categoryId = @(-1);
+					 }
+					 
 					 coloredPrize.prizes = subPrizes;
 					 
 					 [prizes addObject:coloredPrize];
@@ -176,10 +181,14 @@
 				 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
 				 completition(nil, [NSError new]);
 			 } else {
-				 NSManagedObjectContext *context = [NSManagedObjectContext MR_contextWithParent:[NSManagedObjectContext MR_defaultContext]];
+				 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
 				 NSArray *prizes = [FEMDeserializer  collectionFromRepresentation:[responseObject valueForKey:@"Data"]
 																		  mapping:[BFMPrize defaultMapping]
 																		  context:context];
+				 for (BFMPrize *newPrize in prizes) {
+					 newPrize.categoryId = @(-1);
+				 }
+				 [context MR_saveToPersistentStoreAndWait];
 				 completition(prizes, nil);
 			 }
 		 } failure:^(NSURLSessionDataTask *task, NSError *error) {
