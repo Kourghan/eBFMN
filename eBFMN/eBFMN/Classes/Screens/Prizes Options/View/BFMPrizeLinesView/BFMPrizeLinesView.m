@@ -11,18 +11,14 @@
 #import "BFMPrizeLinesAdapter.h"
 #import "BFMLineStubDict.h"
 
-@interface BFMPrizeLinesView ()
-
-@property (nonatomic, weak) IBOutlet UICollectionView *topCV;
-@property (nonatomic, weak) IBOutlet UICollectionView *bottomCV;
-
-@end
-
 @implementation BFMPrizeLinesView
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
+    [self setupPrizeViews];
+}
+
+- (void)setupPrizeViews {
     self.topAdapter = [BFMPrizeLinesAdapter new];
     self.topAdapter.collectionView = self.topCV;
     
@@ -42,12 +38,16 @@
     self.bottomAdapter.isOutline = YES;
     self.bottomAdapter.objects = [BFMLineStubDict stubs2];
     
+    [self setupAdaptersContentSizes];
+}
+
+- (void)setupAdaptersContentSizes {
     self.topAdapter.collectionSize = self.bottomAdapter.collectionSize = self.bounds.size;
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.topAdapter.collectionSize = self.bottomAdapter.collectionSize = self.bounds.size;
+    [self setupAdaptersContentSizes];
     [self.topCV.collectionViewLayout invalidateLayout];
     [self.bottomCV.collectionViewLayout invalidateLayout];
 }

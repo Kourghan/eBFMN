@@ -170,6 +170,9 @@
 		F9EB696E1C8652210031BB7D /* BFMLineStubDict.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB696D1C8652210031BB7D /* BFMLineStubDict.m */; settings = {ASSET_TAGS = (); }; };
 		F9EB69701C86624F0031BB7D /* placeholder_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = F9EB696F1C86624F0031BB7D /* placeholder_iphone.png */; settings = {ASSET_TAGS = (); }; };
 		F9EB69721C8663890031BB7D /* placeholder_iphone2.png in Resources */ = {isa = PBXBuildFile; fileRef = F9EB69711C8663890031BB7D /* placeholder_iphone2.png */; settings = {ASSET_TAGS = (); }; };
+		F9FC3B571C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC3B561C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F9FC3B5A1C866B5900936AE3 /* BFMPrizeSingleLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC3B591C866B5900936AE3 /* BFMPrizeSingleLineView.m */; settings = {ASSET_TAGS = (); }; };
+		F9FC3B5C1C866C0A00936AE3 /* BFMPrizeLineAndDescription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FC3B5B1C866C0A00936AE3 /* BFMPrizeLineAndDescription.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -492,6 +495,11 @@
 		F9EB696D1C8652210031BB7D /* BFMLineStubDict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMLineStubDict.m; sourceTree = "<group>"; };
 		F9EB696F1C86624F0031BB7D /* placeholder_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_iphone.png; sourceTree = "<group>"; };
 		F9EB69711C8663890031BB7D /* placeholder_iphone2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_iphone2.png; sourceTree = "<group>"; };
+		F9FC3B551C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPrizeLineAndDescriptionViewController.h; sourceTree = "<group>"; };
+		F9FC3B561C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPrizeLineAndDescriptionViewController.m; sourceTree = "<group>"; };
+		F9FC3B581C866B5900936AE3 /* BFMPrizeSingleLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPrizeSingleLineView.h; sourceTree = "<group>"; };
+		F9FC3B591C866B5900936AE3 /* BFMPrizeSingleLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPrizeSingleLineView.m; sourceTree = "<group>"; };
+		F9FC3B5B1C866C0A00936AE3 /* BFMPrizeLineAndDescription.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BFMPrizeLineAndDescription.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1452,6 +1460,8 @@
 				F9EB695B1C862AA50031BB7D /* BFMPrizeLinesView.m */,
 				F9EB696C1C8652210031BB7D /* BFMLineStubDict.h */,
 				F9EB696D1C8652210031BB7D /* BFMLineStubDict.m */,
+				F9FC3B581C866B5900936AE3 /* BFMPrizeSingleLineView.h */,
+				F9FC3B591C866B5900936AE3 /* BFMPrizeSingleLineView.m */,
 			);
 			path = BFMPrizeLinesView;
 			sourceTree = "<group>";
@@ -1459,6 +1469,7 @@
 		F9EB69551C862A6A0031BB7D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F9FC3B541C866AB400936AE3 /* BFMPrizeLineAndDescriptionViewController */,
 				F9EB69561C862A6A0031BB7D /* BFMPrize2LinesViewController */,
 			);
 			path = ViewController;
@@ -1506,6 +1517,16 @@
 				F9EB69691C862BAC0031BB7D /* BFMPrizeLinesObject.h */,
 			);
 			path = BFMPrizeLinesObject;
+			sourceTree = "<group>";
+		};
+		F9FC3B541C866AB400936AE3 /* BFMPrizeLineAndDescriptionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F9FC3B551C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.h */,
+				F9FC3B561C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.m */,
+				F9FC3B5B1C866C0A00936AE3 /* BFMPrizeLineAndDescription.storyboard */,
+			);
+			path = BFMPrizeLineAndDescriptionViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1623,6 +1644,7 @@
 				619928901C8238B1005AEC26 /* BFMPrizeBannerCell.xib in Resources */,
 				6135F3811BAF466E00B29DE3 /* BFMBenefitsPageController.xib in Resources */,
 				61C182131B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Regular.otf in Resources */,
+				F9FC3B5C1C866C0A00936AE3 /* BFMPrizeLineAndDescription.storyboard in Resources */,
 				6189D84D1BEA235E009880B1 /* BFMShopConcreteCell.xib in Resources */,
 				F97464881C6D285E00FF6F44 /* BFMFrontCardView.xib in Resources */,
 				F9EB69701C86624F0031BB7D /* placeholder_iphone.png in Resources */,
@@ -1709,6 +1731,7 @@
 				619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */,
 				613C28BD1BA3415C00B2856A /* BFMNewsModel.m in Sources */,
 				F97464851C6D285E00FF6F44 /* BFMCardPresentingView.m in Sources */,
+				F9FC3B5A1C866B5900936AE3 /* BFMPrizeSingleLineView.m in Sources */,
 				2CF024F31B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m in Sources */,
 				61FD3D6B1BA7096D00F4CEFB /* ODSSectionChange.m in Sources */,
 				F921AA711C7DD26100A30D8B /* NSLayoutConstraint+SBFAdjust.m in Sources */,
@@ -1778,6 +1801,7 @@
 				61B1DD2F1BB6D41500DB6D23 /* BFMDashboardAdaptor.m in Sources */,
 				61E477541BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.m in Sources */,
 				613AE75A1B9B872C00300B22 /* BFMSysAccount.m in Sources */,
+				F9FC3B571C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.m in Sources */,
 				619E2BDC1B97564A00886893 /* main.m in Sources */,
 				61CFBC211C6CA1CA00AACBC0 /* BFMPrizeCategorisController.m in Sources */,
 				613AE76D1B9C683800300B22 /* BFMLeaderboardModel.m in Sources */,

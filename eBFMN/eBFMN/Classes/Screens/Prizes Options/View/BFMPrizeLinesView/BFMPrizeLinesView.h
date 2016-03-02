@@ -14,5 +14,10 @@
 
 @property (nonatomic, strong) BFMPrizeLinesAdapter *topAdapter;
 @property (nonatomic, strong) BFMPrizeLinesAdapter *bottomAdapter;
+@property (nonatomic, weak) IBOutlet UICollectionView *topCV;
+@property (nonatomic, weak) IBOutlet UICollectionView *bottomCV;
+
+- (void)setupPrizeViews;
+- (void)setupAdaptersContentSizes;
 
 @end
