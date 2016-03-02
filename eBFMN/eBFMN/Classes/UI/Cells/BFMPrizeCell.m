@@ -77,11 +77,7 @@
 	
     self.nameLabel.text = object.name;
     NSURL *url = [NSURL URLWithString:[object.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    [self.prizeImage setImageWithURL:url
-                    placeholderImage:[UIImage imageNamed:@"ic_prize1"]];
-	
-	
-	
+    [self.prizeImage setImageWithURL:url];
 }
 
 @end

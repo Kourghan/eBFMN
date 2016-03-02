@@ -190,7 +190,7 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
                                                              subtitle:NSLocalizedString(@"error.saving", nil)];
             [banner show];
         } else {
-            [weakSelf.navigationController popViewControllerAnimated:TRUE];
+            [weakSelf.navigationController popToRootViewControllerAnimated:TRUE];
         }
     }];
 }

@@ -176,11 +176,10 @@
 				 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
 				 completition(nil, [NSError new]);
 			 } else {
-				 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+				 NSManagedObjectContext *context = [NSManagedObjectContext MR_contextWithParent:[NSManagedObjectContext MR_defaultContext]];
 				 NSArray *prizes = [FEMDeserializer  collectionFromRepresentation:[responseObject valueForKey:@"Data"]
 																		  mapping:[BFMPrize defaultMapping]
 																		  context:context];
-				 [context MR_saveToPersistentStoreAndWait];
 				 completition(prizes, nil);
 			 }
 		 } failure:^(NSURLSessionDataTask *task, NSError *error) {

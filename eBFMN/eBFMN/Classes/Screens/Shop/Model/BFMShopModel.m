@@ -28,11 +28,11 @@
 		self.category = category;
         NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
 		
-		NSPredicate *predicate = [NSPredicate predicateWithFormat:@"categoryId == %@", [self.category.identifier stringValue]];
+		NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier != NULL"];
         
         NSFetchRequest *request = [BFMPrize MR_requestAllSortedBy:@"identifier"
                                                         ascending:YES
-                                                    withPredicate:nil
+                                                    withPredicate:predicate
                                                         inContext:context];
         
         NSFetchedResultsController *controller = [[NSFetchedResultsController alloc]
