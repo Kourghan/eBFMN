@@ -15,6 +15,7 @@
 #import "BFMPrize.h"
 #import "BFMPrizeBannerAdapter.h"
 #import "BFMBanner.h"
+#import "BFMPrize2LinesViewController.h"
 
 
 #import "ALAlertBanner.h"
@@ -56,6 +57,8 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 	[NINavigationAppearance pushAppearanceForNavigationController:self.navigationController];
 	[BFMDefaultNavagtionBarAppearance applyTo:self.navigationController.navigationBar];
 	[self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -147,7 +150,11 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 		NSIndexPath *path = [NSIndexPath indexPathForRow:selectedIndex inSection:0];
 		BFMPrizeCategory *category = [strongSelf.adapter.dataSource objectAtIndexPath:path];
 
-		[strongSelf performSegueWithIdentifier:@"prizeList" sender:category];
+//		[strongSelf performSegueWithIdentifier:@"prizeList" sender:category];
+        UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrize2Lines"
+                                                        bundle:nil];
+        BFMPrize2LinesViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
+        [strongSelf.navigationController pushViewController:VC animated:YES];
 	};
 	
 	//if you want to setup selection on screen creation do it here
