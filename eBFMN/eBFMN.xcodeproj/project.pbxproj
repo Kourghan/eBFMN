@@ -172,6 +172,9 @@
 		F9EB696E1C8652210031BB7D /* BFMLineStubDict.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB696D1C8652210031BB7D /* BFMLineStubDict.m */; };
 		F9EB69701C86624F0031BB7D /* placeholder_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = F9EB696F1C86624F0031BB7D /* placeholder_iphone.png */; };
 		F9EB69721C8663890031BB7D /* placeholder_iphone2.png in Resources */ = {isa = PBXBuildFile; fileRef = F9EB69711C8663890031BB7D /* placeholder_iphone2.png */; };
+		F9ED546C1CADBE3B0011A837 /* BFMSectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ED546B1CADBE3B0011A837 /* BFMSectorView.m */; };
+		F9ED546E1CADFEEE0011A837 /* shop_options_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F9ED546D1CADFEED0011A837 /* shop_options_icon.png */; };
+		F9ED54711CAE06A30011A837 /* BFMThinLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ED54701CAE06A30011A837 /* BFMThinLineView.m */; };
 		F9FA445A1CACE28C007DF2D5 /* BFMThinBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FA44591CACE28C007DF2D5 /* BFMThinBorderView.m */; };
 		F9FC3B571C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC3B561C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.m */; };
 		F9FC3B5A1C866B5900936AE3 /* BFMPrizeSingleLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC3B591C866B5900936AE3 /* BFMPrizeSingleLineView.m */; };
@@ -502,6 +505,11 @@
 		F9EB696D1C8652210031BB7D /* BFMLineStubDict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMLineStubDict.m; sourceTree = "<group>"; };
 		F9EB696F1C86624F0031BB7D /* placeholder_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_iphone.png; sourceTree = "<group>"; };
 		F9EB69711C8663890031BB7D /* placeholder_iphone2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_iphone2.png; sourceTree = "<group>"; };
+		F9ED546A1CADBE3B0011A837 /* BFMSectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMSectorView.h; sourceTree = "<group>"; };
+		F9ED546B1CADBE3B0011A837 /* BFMSectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMSectorView.m; sourceTree = "<group>"; };
+		F9ED546D1CADFEED0011A837 /* shop_options_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_options_icon.png; sourceTree = "<group>"; };
+		F9ED546F1CAE06A30011A837 /* BFMThinLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMThinLineView.h; sourceTree = "<group>"; };
+		F9ED54701CAE06A30011A837 /* BFMThinLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMThinLineView.m; sourceTree = "<group>"; };
 		F9FA44581CACE28C007DF2D5 /* BFMThinBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMThinBorderView.h; sourceTree = "<group>"; };
 		F9FA44591CACE28C007DF2D5 /* BFMThinBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMThinBorderView.m; sourceTree = "<group>"; };
 		F9FC3B551C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPrizeLineAndDescriptionViewController.h; sourceTree = "<group>"; };
@@ -590,6 +598,10 @@
 				61F042F61BBB2895000037CF /* earningsView.xib */,
 				F9FA44581CACE28C007DF2D5 /* BFMThinBorderView.h */,
 				F9FA44591CACE28C007DF2D5 /* BFMThinBorderView.m */,
+				F9ED546A1CADBE3B0011A837 /* BFMSectorView.h */,
+				F9ED546B1CADBE3B0011A837 /* BFMSectorView.m */,
+				F9ED546F1CAE06A30011A837 /* BFMThinLineView.h */,
+				F9ED54701CAE06A30011A837 /* BFMThinLineView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -830,6 +842,7 @@
 		619E2C001B977B9100886893 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F9ED546D1CADFEED0011A837 /* shop_options_icon.png */,
 				619E2C041B977BDD00886893 /* Storyboards */,
 				619E2C171B9780D800886893 /* Fonts */,
 				619E2BE81B97564A00886893 /* LaunchScreen.xib */,
@@ -1684,6 +1697,7 @@
 				61C1820E1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold Italic.otf in Resources */,
 				F96073EB1BE72D5000704692 /* BFMNewsActionCell.xib in Resources */,
 				2CB1B8451B9CC37B00AC16D2 /* tabBar.storyboard in Resources */,
+				F9ED546E1CADFEEE0011A837 /* shop_options_icon.png in Resources */,
 				61C1820A1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black Italic.otf in Resources */,
 				61F042F71BBB2895000037CF /* earningsView.xib in Resources */,
 				61CFBC231C6CA21200AACBC0 /* Prize.storyboard in Resources */,
@@ -1817,6 +1831,7 @@
 				61FD3D701BA7096D00F4CEFB /* ODSDataSource.m in Sources */,
 				613AE7811B9CD04400300B22 /* ELAXIBAppearance.m in Sources */,
 				619F0F061BBC8E0900916B0B /* BFMCurrencyPickerDataSource.m in Sources */,
+				F9ED546C1CADBE3B0011A837 /* BFMSectorView.m in Sources */,
 				61E4775D1BE66F8900C2659D /* BFMPendingPointsModel.m in Sources */,
 				61EC27EB1BCA858900DD3812 /* BFMPrize.m in Sources */,
 				617BA1C01BEABAD800AADD0C /* BFMDetailedNewsModel.m in Sources */,
@@ -1878,6 +1893,7 @@
 				61F641B61C7DE4FD006622C3 /* BFMNewsRecord+CoreDataProperties.m in Sources */,
 				613C28C11BA3437700B2856A /* BFMNewsCell.m in Sources */,
 				613C28A71BA31D9C00B2856A /* BFMBaseDashboardCell.m in Sources */,
+				F9ED54711CAE06A30011A837 /* BFMThinLineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

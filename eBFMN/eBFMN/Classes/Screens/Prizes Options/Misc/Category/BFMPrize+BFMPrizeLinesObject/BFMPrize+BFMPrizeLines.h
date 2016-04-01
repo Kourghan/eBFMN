@@ -12,4 +12,6 @@
 
 @interface BFMPrize (BFMPrizeLines)<BFMPrizeLinesObject>
 
+- (BOOL)bfm_shouldShowSettingsCorner;
+
 @end

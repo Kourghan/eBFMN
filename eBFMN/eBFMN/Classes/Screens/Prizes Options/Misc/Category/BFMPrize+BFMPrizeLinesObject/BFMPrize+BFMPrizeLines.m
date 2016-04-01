@@ -32,4 +32,9 @@
     return self.summary;
 }
 
+- (BOOL)bfm_shouldShowSettingsCorner {
+    NSInteger type = self.prizeType.integerValue;
+    return (type == BFMPrizeTypeText) || (type == BFMPrizeTypeColor);
+}
+
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "BFMPrizeCell.h"
-#import "BFMPrize.h"
+#import "BFMPrize+BFMPrizeLines.h"
 
 #import <AFNetworking/UIImageView+AFNetworking.h>
 
@@ -20,6 +20,9 @@
 @property (weak, nonatomic) IBOutlet UIView *pointsView;
 @property (weak, nonatomic) IBOutlet UIView *discountView;
 @property (weak, nonatomic) IBOutlet UILabel *discountPriceLabel;
+@property (nonatomic, weak) IBOutlet UIView *cornerView;
+@property (nonatomic, weak) IBOutlet UIImageView *cornerImageView;
+@property (nonatomic, weak) IBOutlet UIView *separatorView;
 
 @end
 
@@ -57,6 +60,7 @@
 - (void)setObject:(BFMPrize *)object {
     _object = object;
 	if ([object.prizeType integerValue] == BFMPrizeTypePlain) {
+        self.separatorView.hidden = NO;
 		if ([object.oldPoints integerValue] == 0) {
 			self.pointsLabel.text = [object.points stringValue];
 			self.discountView.hidden = YES;
@@ -70,10 +74,11 @@
 			[UIView commitAnimations];
 		}
 	} else {
+        self.separatorView.hidden = YES;
 		self.pointsView.hidden = YES;
 	}
 	
-	
+    self.cornerImageView.hidden = self.cornerView.hidden = ![object bfm_shouldShowSettingsCorner];
 	
     self.nameLabel.text = object.name;
     NSURL *url = [NSURL URLWithString:[object.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
