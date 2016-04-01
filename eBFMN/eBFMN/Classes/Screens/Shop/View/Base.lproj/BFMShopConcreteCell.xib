@@ -54,8 +54,9 @@
                             <constraint firstItem="YtG-PW-YiW" firstAttribute="top" secondItem="tt9-ow-HWJ" secondAttribute="top" id="VbE-yA-hUy"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_prize_circle" translatesAutoresizingMaskIntoConstraints="NO" id="ocf-Tk-VqI">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ocf-Tk-VqI">
                         <rect key="frame" x="41" y="25" width="75" height="75"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="75" id="VnE-aN-Yrv"/>
                             <constraint firstAttribute="width" constant="75" id="ebW-O1-GBf"/>
@@ -174,7 +175,6 @@
     </objects>
     <resources>
         <image name="ic_prize1" width="60" height="68"/>
-        <image name="ic_prize_circle" width="75" height="75"/>
         <image name="shop_options_icon.png" width="30" height="29"/>
     </resources>
 </document>
