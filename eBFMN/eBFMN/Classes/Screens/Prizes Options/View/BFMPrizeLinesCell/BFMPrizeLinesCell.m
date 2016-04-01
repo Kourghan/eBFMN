@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *pointsCount;
 @property (nonatomic, weak) IBOutlet UILabel *IBLabel;
 @property (nonatomic, weak) IBOutlet UILabel *pointsLabel;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *bottomSepConstr;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *rightSepConstr;
 
 @end
 
@@ -39,23 +41,24 @@
                                                  alpha:1.f];
         self.selectImageView.backgroundColor = selectedColor;
         self.selectImageView.layer.borderColor = selectedColor.CGColor;
-        self.selectImageView.layer.borderWidth = 2.f;
+        self.selectImageView.layer.borderWidth = 1.f;
         self.checkMarkImageView.image = [UIImage imageNamed:@"ic_save"];
     } else if (!outline) {
         UIColor *selectedColor = [object bfm_color];
         self.selectImageView.backgroundColor = selectedColor;
         self.selectImageView.layer.borderColor = selectedColor.CGColor;
-        self.selectImageView.layer.borderWidth = 2.f;
+        self.selectImageView.layer.borderWidth = 1.f;
         self.checkMarkImageView.image = nil;
     } else {
         UIColor *selectedColor = [object bfm_color];
         self.selectImageView.backgroundColor = [UIColor clearColor];
         self.selectImageView.layer.borderColor = selectedColor.CGColor;
-        self.selectImageView.layer.borderWidth = 2.f;
+        self.selectImageView.layer.borderWidth = 1.f;
         self.checkMarkImageView.image = nil;
     }
     
     self.selectTitleLabel.text = isSummary ? [object bfm_summary] : [object bfm_title];
+    self.selectTitleLabel.font = [self titleFont:(isSummary ? 18.f : 11.f)];
 
     NSString *points = [object bfm_points];
 	self.pointsCount.text = points;
@@ -64,8 +67,12 @@
 }
 
 - (void)showBottomLine:(BOOL)showBottom showRightLine:(BOOL)showRight {
-    self.rightSepView.hidden = !showRight;
-    self.bottomSepView.hidden = !showBottom;
+    self.rightSepConstr.constant = showRight ? 4.f : 0.f;
+    self.bottomSepConstr.constant = showBottom ? 4.f : 0.f;
+}
+
+- (UIFont *)titleFont:(CGFloat)size {
+    return [UIFont fontWithName:@"ProximaNova-Light" size:size];
 }
 
 @end

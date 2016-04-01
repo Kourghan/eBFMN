@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -66,7 +66,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aDM-om-P6t">
                                 <rect key="frame" x="0.0" y="238" width="375" height="428.5"/>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="hkx-PT-Hqf">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="hkx-PT-Hqf">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -160,6 +160,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="157" height="163"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XwA-rk-VSp" customClass="BFMThinBorderView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="157" height="163"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_prize_circle" translatesAutoresizingMaskIntoConstraints="NO" id="Kev-ni-yvS">
                                                     <rect key="frame" x="41" y="33" width="75" height="75"/>
                                                     <constraints>
@@ -221,9 +225,13 @@
                                             <constraint firstItem="tPr-o1-fca" firstAttribute="centerX" secondItem="Kev-ni-yvS" secondAttribute="centerX" id="69g-DM-zWb"/>
                                             <constraint firstItem="YGE-Pk-vin" firstAttribute="centerX" secondItem="bGf-gR-tMI" secondAttribute="centerX" id="8fU-Ex-Iws"/>
                                             <constraint firstItem="Iz4-qP-kYf" firstAttribute="top" secondItem="Kev-ni-yvS" secondAttribute="bottom" constant="10" id="E9y-np-JFZ"/>
+                                            <constraint firstItem="XwA-rk-VSp" firstAttribute="leading" secondItem="bGf-gR-tMI" secondAttribute="leading" id="JyH-L0-ier"/>
                                             <constraint firstItem="Kev-ni-yvS" firstAttribute="centerX" secondItem="bGf-gR-tMI" secondAttribute="centerX" id="TWs-7c-W7P"/>
+                                            <constraint firstAttribute="trailing" secondItem="XwA-rk-VSp" secondAttribute="trailing" id="TpN-lt-Q4N"/>
                                             <constraint firstItem="YGE-Pk-vin" firstAttribute="top" secondItem="Iz4-qP-kYf" secondAttribute="bottom" id="XLa-q3-mge"/>
                                             <constraint firstItem="Kev-ni-yvS" firstAttribute="top" secondItem="bGf-gR-tMI" secondAttribute="topMargin" constant="25" id="fmh-Bp-RRY"/>
+                                            <constraint firstItem="XwA-rk-VSp" firstAttribute="top" secondItem="bGf-gR-tMI" secondAttribute="top" id="tIR-9J-Jcm"/>
+                                            <constraint firstAttribute="bottom" secondItem="XwA-rk-VSp" secondAttribute="bottom" id="upK-um-oZE"/>
                                         </constraints>
                                         <size key="customSize" width="157" height="163"/>
                                     </collectionViewCell>

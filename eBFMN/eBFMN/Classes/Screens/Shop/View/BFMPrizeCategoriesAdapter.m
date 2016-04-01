@@ -69,7 +69,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 	
 	CGFloat width = floor(screenWidth / coef);
 	CGFloat height = floor(width * ratio);
-	return CGSizeMake(width - 1.f, height - 1.f);
+	return CGSizeMake(width - 2.f, height - 2.f);
 }
 
 @end
