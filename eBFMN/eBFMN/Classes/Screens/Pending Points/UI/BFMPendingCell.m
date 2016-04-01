@@ -26,7 +26,7 @@
 
 - (void)configureWithRecord:(BFMPointsRecord *)record {
     self.depositLabel.text = record.deposit.stringValue;
-    self.pointsLabel.text = record.points.stringValue;
+    self.pointsLabel.text = record.benefit.stringValue;
     self.lotsLabel.text = record.requiredLots.stringValue;
     
     [self configureEnabledForType:[record.type intValue]];

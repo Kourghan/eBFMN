@@ -162,19 +162,19 @@
 		F99096A21BE020CB00E1D629 /* BFMShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969B1BE020CB00E1D629 /* BFMShopModel.m */; };
 		F99096A31BE020CB00E1D629 /* BFMShopCollectionAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */; };
 		F99096A41BE020CB00E1D629 /* BFMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99096A11BE020CB00E1D629 /* BFMShopViewController.m */; };
-		F9D52A5B1C8743F700B85F81 /* BFMPrize+BFMPrizeLines.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D52A5A1C8743F700B85F81 /* BFMPrize+BFMPrizeLines.m */; settings = {ASSET_TAGS = (); }; };
-		F9EB69591C862A880031BB7D /* BFMPrize2LinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB69581C862A880031BB7D /* BFMPrize2LinesViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F9EB695C1C862AA50031BB7D /* BFMPrizeLinesView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB695B1C862AA50031BB7D /* BFMPrizeLinesView.m */; settings = {ASSET_TAGS = (); }; };
-		F9EB695F1C862AB80031BB7D /* BFMPrizeLinesAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB695E1C862AB80031BB7D /* BFMPrizeLinesAdapter.m */; settings = {ASSET_TAGS = (); }; };
-		F9EB69641C862B310031BB7D /* BFMPrizeLinesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB69621C862B310031BB7D /* BFMPrizeLinesCell.m */; settings = {ASSET_TAGS = (); }; };
-		F9EB69651C862B310031BB7D /* BFMPrizeLinesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9EB69631C862B310031BB7D /* BFMPrizeLinesCell.xib */; settings = {ASSET_TAGS = (); }; };
-		F9EB696B1C864BCA0031BB7D /* BFMPrize2Lines.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9EB696A1C864BCA0031BB7D /* BFMPrize2Lines.storyboard */; settings = {ASSET_TAGS = (); }; };
-		F9EB696E1C8652210031BB7D /* BFMLineStubDict.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB696D1C8652210031BB7D /* BFMLineStubDict.m */; settings = {ASSET_TAGS = (); }; };
-		F9EB69701C86624F0031BB7D /* placeholder_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = F9EB696F1C86624F0031BB7D /* placeholder_iphone.png */; settings = {ASSET_TAGS = (); }; };
-		F9EB69721C8663890031BB7D /* placeholder_iphone2.png in Resources */ = {isa = PBXBuildFile; fileRef = F9EB69711C8663890031BB7D /* placeholder_iphone2.png */; settings = {ASSET_TAGS = (); }; };
-		F9FC3B571C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC3B561C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F9FC3B5A1C866B5900936AE3 /* BFMPrizeSingleLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC3B591C866B5900936AE3 /* BFMPrizeSingleLineView.m */; settings = {ASSET_TAGS = (); }; };
-		F9FC3B5C1C866C0A00936AE3 /* BFMPrizeLineAndDescription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FC3B5B1C866C0A00936AE3 /* BFMPrizeLineAndDescription.storyboard */; settings = {ASSET_TAGS = (); }; };
+		F9D52A5B1C8743F700B85F81 /* BFMPrize+BFMPrizeLines.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D52A5A1C8743F700B85F81 /* BFMPrize+BFMPrizeLines.m */; };
+		F9EB69591C862A880031BB7D /* BFMPrize2LinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB69581C862A880031BB7D /* BFMPrize2LinesViewController.m */; };
+		F9EB695C1C862AA50031BB7D /* BFMPrizeLinesView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB695B1C862AA50031BB7D /* BFMPrizeLinesView.m */; };
+		F9EB695F1C862AB80031BB7D /* BFMPrizeLinesAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB695E1C862AB80031BB7D /* BFMPrizeLinesAdapter.m */; };
+		F9EB69641C862B310031BB7D /* BFMPrizeLinesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB69621C862B310031BB7D /* BFMPrizeLinesCell.m */; };
+		F9EB69651C862B310031BB7D /* BFMPrizeLinesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9EB69631C862B310031BB7D /* BFMPrizeLinesCell.xib */; };
+		F9EB696B1C864BCA0031BB7D /* BFMPrize2Lines.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9EB696A1C864BCA0031BB7D /* BFMPrize2Lines.storyboard */; };
+		F9EB696E1C8652210031BB7D /* BFMLineStubDict.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB696D1C8652210031BB7D /* BFMLineStubDict.m */; };
+		F9EB69701C86624F0031BB7D /* placeholder_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = F9EB696F1C86624F0031BB7D /* placeholder_iphone.png */; };
+		F9EB69721C8663890031BB7D /* placeholder_iphone2.png in Resources */ = {isa = PBXBuildFile; fileRef = F9EB69711C8663890031BB7D /* placeholder_iphone2.png */; };
+		F9FC3B571C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC3B561C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.m */; };
+		F9FC3B5A1C866B5900936AE3 /* BFMPrizeSingleLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC3B591C866B5900936AE3 /* BFMPrizeSingleLineView.m */; };
+		F9FC3B5C1C866C0A00936AE3 /* BFMPrizeLineAndDescription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FC3B5B1C866C0A00936AE3 /* BFMPrizeLineAndDescription.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

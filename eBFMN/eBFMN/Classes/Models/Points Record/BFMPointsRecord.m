@@ -84,7 +84,10 @@
                                            @"type" : @"Type",
                                            @"points" : @"Points",
                                            @"deposit" : @"Deposit",
-                                           @"requiredLots" : @"RequiredLots"
+                                           @"requiredLots" : @"RequiredLots",
+										   @"benefit" : @"Benefit",
+										   @"ibid" : @"IBID",
+										   @"lotsCount" : @"LotsCount"
                                            }
      ];
     
