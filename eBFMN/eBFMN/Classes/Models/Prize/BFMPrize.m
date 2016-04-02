@@ -197,6 +197,38 @@
 	 ];
 }
 
++ (void)getPrize:(NSNumber *)identifier
+      completion:(void (^)(BFMPrize *prize, NSError *error))completion {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
+    
+    NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+    
+    [manager GET:@"Bonus/GetPrizeWithIdentifier"
+      parameters:@{@"prizeId" : identifier.stringValue,
+                   @"guid" : sessionKey
+                   }
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
+                 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
+                 completion(nil, [NSError new]);
+             } else {
+                 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+//                 NSArray *prizes = [FEMDeserializer  collectionFromRepresentation:[responseObject valueForKey:@"Data"]
+//                                                                          mapping:[BFMPrize defaultMapping]
+//                                                                          context:context];
+//                 for (BFMPrize *newPrize in prizes) {
+//                     newPrize.categoryId = @(-1);
+//                 }
+                 BFMPrize *prize; //TODO: deserialize
+                 [context MR_saveToPersistentStoreAndWait];
+                 completion(prize, nil);
+             }
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             completion(nil, error);
+         }
+     ];
+}
+
 @end
 
 @implementation BFMPrize (Mapping)

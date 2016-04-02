@@ -29,7 +29,6 @@
                             sSelf.bottomAdapter.selectedIndex);
         }
     };
-//    self.topAdapter.objects = [BFMLineStubDict stubs];
 	
     [self setupAdaptersContentSizes];
 }

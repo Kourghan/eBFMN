@@ -59,6 +59,15 @@
 
 - (void)loadData {
     [self showContentViews:NO animated:NO];
+    
+    if (self.selectedPrize.prizeType.integerValue == BFMPrizeTypePlain) {
+        self.linesView.hidden = YES;
+        [self showContentViews:YES animated:YES];
+        self.prizes = @[self.selectedPrize];
+        [self updateOnResponse];
+        return;
+    }
+    
     [BFMPrize getChildPrizesFrom:self.selectedPrize
                   withCompletion:^(NSArray *prizes, NSError *error) {
                       if (!error) {

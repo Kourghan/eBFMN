@@ -138,7 +138,7 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
                 [strongSelf showTextPrize:prize];
 				break;
 			case BFMPrizeTypePlain:
-				[strongSelf showSaveButton:(selectedIndex != NSNotFound)];
+                [strongSelf showTextPrize:prize];
 				break;
 			default:
 				[strongSelf showSaveButton:(selectedIndex != NSNotFound)];
