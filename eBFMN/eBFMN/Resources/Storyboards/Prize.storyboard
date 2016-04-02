@@ -31,10 +31,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imd-X4-ICJ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="174.5"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="173.5"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xZP-at-Hzr">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="174.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="173.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ZWm-0X-e2O">
                                             <size key="itemSize" width="0.0" height="0.0"/>
@@ -44,7 +44,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" id="IaV-c8-IhA">
-                                                <rect key="frame" x="0.0" y="87.5" width="0.0" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="87" width="0.0" height="0.0"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <autoresizingMask key="autoresizingMask"/>
@@ -56,7 +56,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="imd-X4-ICJ" secondAttribute="height" multiplier="215:100" id="86P-n4-BbJ"/>
+                                    <constraint firstAttribute="width" secondItem="imd-X4-ICJ" secondAttribute="height" multiplier="750:347" id="86P-n4-BbJ"/>
                                     <constraint firstItem="xZP-at-Hzr" firstAttribute="leading" secondItem="imd-X4-ICJ" secondAttribute="leading" id="aBE-h1-jSY"/>
                                     <constraint firstAttribute="bottom" secondItem="xZP-at-Hzr" secondAttribute="bottom" id="qpE-Du-Ps7"/>
                                     <constraint firstItem="xZP-at-Hzr" firstAttribute="top" secondItem="imd-X4-ICJ" secondAttribute="top" id="wDt-bK-Onc"/>
@@ -64,7 +64,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aDM-om-P6t">
-                                <rect key="frame" x="0.0" y="238" width="375" height="428.5"/>
+                                <rect key="frame" x="0.0" y="237" width="375" height="429.5"/>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="hkx-PT-Hqf">
                                     <size key="itemSize" width="50" height="50"/>
@@ -134,7 +134,7 @@
         <!--Shop View Controller-->
         <scene sceneID="6lx-y9-770">
             <objects>
-                <viewController id="bYd-8h-R0f" customClass="BFMShopViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="bYd-8h-R0f" customClass="BFMShopViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Izz-ZB-zxG"/>
                         <viewControllerLayoutGuide type="bottom" id="Sus-5T-MB5"/>
@@ -144,7 +144,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eaX-Sf-6oC">
-                                <rect key="frame" x="0.0" y="117" width="375" height="501"/>
+                                <rect key="frame" x="0.0" y="126" width="375" height="492"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="y8R-nJ-h33">
                                     <size key="itemSize" width="150" height="163"/>
@@ -154,7 +154,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="prizeCell" id="bGf-gR-tMI">
-                                        <rect key="frame" x="0.0" y="64" width="157" height="163"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="157" height="163"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="157" height="163"/>
@@ -238,10 +238,10 @@
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vge-vH-MB0">
-                                <rect key="frame" x="0.0" y="64" width="375" height="53"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="62"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have: 0 IB POINTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tB1-Cd-IQR">
-                                        <rect key="frame" x="99" y="16" width="177" height="22"/>
+                                        <rect key="frame" x="99" y="20.5" width="177" height="22"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -250,7 +250,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="tB1-Cd-IQR" firstAttribute="centerX" secondItem="vge-vH-MB0" secondAttribute="centerX" id="KUc-aj-8RU"/>
-                                    <constraint firstAttribute="height" constant="53" id="PO6-9n-7Ml"/>
+                                    <constraint firstAttribute="height" constant="62" id="PO6-9n-7Ml"/>
                                     <constraint firstItem="tB1-Cd-IQR" firstAttribute="centerY" secondItem="vge-vH-MB0" secondAttribute="centerY" id="bsj-M3-OkE"/>
                                 </constraints>
                             </view>

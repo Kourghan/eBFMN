@@ -10,7 +10,7 @@
 #import "BFMPrizeCategoryCell.h"
 
 // height / width
-static CGFloat const kBFMShopCellSideRatio = 180.f / 160.f;
+static CGFloat const kBFMShopCellSideRatio = 400.f / 368.f;
 static CGFloat const kBFMShopCellSideRatio6Plus =  180.f / 138.f;
 
 @implementation BFMPrizeCategoriesAdapter

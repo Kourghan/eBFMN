@@ -8,6 +8,7 @@
 
 #import "BFMPrizeBannerAdapter.h"
 #import "BFMPrizeBannerCell.h"
+#import "ODSDataSource.h"
 
 static CGFloat const kBFMPrizeBannerAspectRatio = 2.15f;
 
@@ -48,6 +49,11 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 	NSInteger index = indexPath.row;
 	self.selectedIndex = (index == self.selectedIndex) ? NSNotFound : index;
 	[self.collectionView reloadData];
+    
+    BFMBanner *banner = [self.dataSource objectAtIndexPath:indexPath];
+    if (banner && self.bannerSelection) {
+        self.bannerSelection(banner);
+    }
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout

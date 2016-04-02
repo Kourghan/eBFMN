@@ -23,20 +23,26 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0p-xF-ECl" customClass="BFMThinBorderView">
                         <rect key="frame" x="0.0" y="0.0" width="160" height="180"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ev7-yG-OI5">
-                                <rect key="frame" x="20" y="20" width="120" height="120"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ev7-yG-OI5">
+                                <rect key="frame" x="33" y="25" width="94" height="110"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="12S-aX-nBB"/>
                                     <constraint firstAttribute="width" secondItem="Ev7-yG-OI5" secondAttribute="height" multiplier="343:289" id="9tv-wz-kJ3"/>
                                     <constraint firstAttribute="width" secondItem="Ev7-yG-OI5" secondAttribute="height" multiplier="1:1" id="S8y-cT-345"/>
+                                    <constraint firstAttribute="height" constant="110" id="XPD-vp-NvI"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="9tv-wz-kJ3"/>
+                                        <exclude reference="S8y-cT-345"/>
                                     </mask>
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joC-cC-bis">
-                                <rect key="frame" x="60" y="150" width="40.5" height="20"/>
+                                <rect key="frame" x="60" y="140" width="40.5" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="M1c-eJ-I5h"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -44,10 +50,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="joC-cC-bis" firstAttribute="top" secondItem="Ev7-yG-OI5" secondAttribute="bottom" constant="10" id="Gre-Wf-CIy"/>
+                            <constraint firstItem="joC-cC-bis" firstAttribute="top" secondItem="Ev7-yG-OI5" secondAttribute="bottom" constant="5" id="Gre-Wf-CIy"/>
                             <constraint firstAttribute="trailing" secondItem="Ev7-yG-OI5" secondAttribute="trailing" constant="20" id="Kh8-hB-TOg"/>
                             <constraint firstItem="Ev7-yG-OI5" firstAttribute="centerX" secondItem="g0p-xF-ECl" secondAttribute="centerX" id="QBA-nE-6yK"/>
                             <constraint firstItem="joC-cC-bis" firstAttribute="centerX" secondItem="g0p-xF-ECl" secondAttribute="centerX" id="V1T-Ag-mEI"/>
+                            <constraint firstItem="Ev7-yG-OI5" firstAttribute="centerY" secondItem="g0p-xF-ECl" secondAttribute="centerY" constant="-10" id="XUj-sZ-UxW"/>
+                            <constraint firstItem="Ev7-yG-OI5" firstAttribute="centerX" secondItem="g0p-xF-ECl" secondAttribute="centerX" id="fGt-aX-uZa"/>
                             <constraint firstAttribute="bottom" secondItem="joC-cC-bis" secondAttribute="bottom" constant="10" id="j3u-lL-WYD"/>
                             <constraint firstItem="Ev7-yG-OI5" firstAttribute="centerY" secondItem="g0p-xF-ECl" secondAttribute="centerY" id="jCO-P0-2Nf"/>
                             <constraint firstItem="Ev7-yG-OI5" firstAttribute="leading" secondItem="g0p-xF-ECl" secondAttribute="leading" constant="20" id="wtW-SP-g5Q"/>
@@ -55,8 +63,12 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Kh8-hB-TOg"/>
                                 <exclude reference="QBA-nE-6yK"/>
                                 <exclude reference="jCO-P0-2Nf"/>
+                                <exclude reference="wtW-SP-g5Q"/>
+                                <exclude reference="yOQ-2U-l2R"/>
+                                <exclude reference="j3u-lL-WYD"/>
                             </mask>
                         </variation>
                     </view>
@@ -76,7 +88,7 @@
                 <outlet property="nameLabel" destination="joC-cC-bis" id="A0j-mr-Tc3"/>
                 <outlet property="prizeImage" destination="Ev7-yG-OI5" id="M3r-nV-OuU"/>
             </connections>
-            <point key="canvasLocation" x="220" y="249.5"/>
+            <point key="canvasLocation" x="220" y="249"/>
         </collectionViewCell>
     </objects>
 </document>

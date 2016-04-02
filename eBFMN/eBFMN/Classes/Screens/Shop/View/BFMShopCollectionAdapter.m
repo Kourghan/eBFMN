@@ -11,8 +11,8 @@
 #import "BFMPrizeCell.h"
 
 // height / width
-static CGFloat const kBFMShopCellSideRatio = 21.f / 20.f;
-static CGFloat const kBFMShopCellSideRatio6Plus = 24.f / 20.f;
+static CGFloat const kBFMShopCellSideRatio = 450.f / 368.f;
+static CGFloat const kBFMShopCellSideRatio6Plus = 450.f / 368.f;
 
 @implementation BFMShopCollectionAdapter
 
@@ -42,7 +42,7 @@ static CGFloat const kBFMShopCellSideRatio6Plus = 24.f / 20.f;
     BFMPrizeCell *cell = (id)[super collectionView:collectionView
                             cellForItemAtIndexPath:indexPath];
     if ([cell isKindOfClass:[BFMPrizeCell class]]) {
-        [cell configureSelected:(self.selectedIndex == indexPath.row)];
+        [cell configureSelected:NO];
     }
     return cell;
 }

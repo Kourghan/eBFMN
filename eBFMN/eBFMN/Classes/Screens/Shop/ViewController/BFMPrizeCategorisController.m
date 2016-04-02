@@ -16,6 +16,8 @@
 #import "BFMPrizeBannerAdapter.h"
 #import "BFMBanner.h"
 #import "BFMPrize2LinesViewController.h"
+#import "BFMPrizeLineAndDescriptionViewController.h"
+#import "BFMPrize2LinesViewController.h"
 
 
 #import "ALAlertBanner.h"
@@ -101,14 +103,9 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 		}
 	}];
 	
-	self.bannerAdapter.selection = ^(NSInteger selectedIndex) {
+    self.bannerAdapter.bannerSelection = ^(BFMBanner *banner) {
 		__strong typeof(weakSelf) strongSelf = weakSelf;
-		
-		if (selectedIndex == NSNotFound) {
-			//not selected
-			
-			return;
-		}
+        [strongSelf handleBannerSelection:banner];
 	};
 	
 	//if you want to setup selection on screen creation do it here
@@ -155,6 +152,36 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 	
 	//if you want to setup selection on screen creation do it here
 	self.adapter.selectedIndex = NSNotFound;
+}
+
+- (void)handleBannerSelection:(BFMBanner *)banner {
+    [BFMPrize getPrize:banner.prizeId completion:^(BFMPrize *prize, NSError *error) {
+        if (error) {
+            return;
+        }
+        
+        if (prize.prizeType.integerValue == BFMPrizeTypeColor) {
+            [self showColoredPrize:prize];
+        } else {
+            [self showTextPrize:prize];
+        }
+    }];
+}
+
+- (void)showColoredPrize:(BFMPrize *)prize {
+    UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrize2Lines"
+                                                    bundle:nil];
+    BFMPrizeLineAndDescriptionViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
+    VC.selectedPrize = prize;
+    [self.navigationController pushViewController:VC animated:YES];
+}
+
+- (void)showTextPrize:(BFMPrize *)prize {
+    UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrizeLineAndDescription"
+                                                    bundle:nil];
+    BFMPrizeLineAndDescriptionViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
+    VC.selectedPrize = prize;
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

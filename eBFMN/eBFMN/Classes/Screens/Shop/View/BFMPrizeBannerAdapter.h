@@ -8,11 +8,15 @@
 
 #import "ODSCollectionAdapter.h"
 
+@class BFMBanner;
+
 typedef void (^BFMShopCollectionSelection)(NSInteger index);
+typedef void (^BFMBannerSelection)(BFMBanner *banner);
 
 @interface BFMPrizeBannerAdapter : ODSCollectionAdapter
 
 @property (nonatomic, assign) NSInteger selectedIndex;
 @property (nonatomic, copy) BFMShopCollectionSelection selection;
+@property (nonatomic, copy) BFMBannerSelection bannerSelection;
 
 @end

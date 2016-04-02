@@ -27,6 +27,10 @@ typedef enum {
 
 + (void)deleteAllPrizes;
 
+//TODO: get prize by id
++ (void)getPrize:(NSNumber *)identifier
+      completion:(void (^)(BFMPrize *prize, NSError *error))completion;
+
 @end
 
 @interface BFMPrize (Mapping)
