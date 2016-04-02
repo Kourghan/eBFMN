@@ -32,7 +32,7 @@ typedef enum {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
 
     [manager GET:@"Accounts/Login"
-      parameters:@{@"login" : self.username, @"password" : self.password}
+	  parameters:@{@"login" : self.username, @"password" : self.password, @"mobile" : @"true"}
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
              if ([[responseObject valueForKey:@"State"] integerValue] == BFMLoginResultSuccess) {
                  [JNKeychain saveValue:[responseObject valueForKey:@"Data"] forKey:kBFMSessionKey];
