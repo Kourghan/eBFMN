@@ -16,6 +16,7 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <MessageUI/MessageUI.h>
 #import <ALAlertBanner/ALAlertBanner.h>
+#import "AppDelegate.h"
 
 #pragma mark - DEBUG
 
@@ -92,8 +93,7 @@
             if (success) {
                 [BFMUser getInfoWithCompletitionBlock:^(BOOL success) {
                     if (success) {
-                        BFMTabBarController *tabBarVC = [[UIStoryboard tabBarStoryboard] instantiateInitialViewController];
-                        [weakSelf showViewController:tabBarVC sender:weakSelf];
+                        [(AppDelegate *)[UIApplication sharedApplication].delegate showHome];
                     } else {
                         [weakSelf showErrorWithText:NSLocalizedString(@"login.wrongcredentials", @"")];
                     }
