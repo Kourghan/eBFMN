@@ -53,4 +53,23 @@
     [MagicalRecord cleanUp];
 }
 
+- (void)showHome {
+    [self showVC:[UIStoryboard storyboardWithName:@"tabBar" bundle:nil].instantiateInitialViewController];
+}
+
+- (void)showLogin {
+    [self showVC:[UIStoryboard storyboardWithName:@"Login" bundle:nil].instantiateInitialViewController];
+}
+
+- (void)showVC:(UIViewController *)vc {
+    vc.view.frame = self.window.bounds;
+    [UIView transitionFromView:self.window.subviews.lastObject
+                        toView:vc.view
+                      duration:.6
+                       options:(UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionTransitionFlipFromLeft)
+                    completion:^(BOOL finished) {
+                        self.window.rootViewController = vc;
+                    }];
+}
+
 @end

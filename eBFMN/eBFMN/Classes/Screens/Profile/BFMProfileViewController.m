@@ -10,6 +10,7 @@
 
 #import "NINavigationAppearance.h"
 #import "BFMDefaultNavagtionBarAppearance.h"
+#import "AppDelegate.h"
 
 #import "BFMUser+Extension.h"
 #import "BFMPointsRecord.h"
@@ -101,7 +102,7 @@
 }
 
 - (void)handleLogoutNotification:(NSNotification *)notif {
-//    [self logout:nil];
+    [self logout:nil];
 }
 
 #pragma mark - Private (Setup)
@@ -282,10 +283,7 @@
     
     [BFMProfileCardDataController clear];
     
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-    UIViewController *vc = [sb instantiateInitialViewController];
-    vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self presentViewController:vc animated:YES completion:NULL];
+    [(AppDelegate *)[UIApplication sharedApplication].delegate showLogin];
 }
 
 - (void)loadBenefits {
