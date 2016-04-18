@@ -14,6 +14,8 @@
 
 + (UIColor *)bfm_defaultNavigationBlue;
 
+- (UIImage *)imageFromColorForSize:(CGSize)size;
+
 @end
 
 @interface UIColor (Text)

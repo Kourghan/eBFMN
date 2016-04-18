@@ -13,6 +13,8 @@
 
 #import "JNKeychain+UNTExtension.h"
 
+#import "UIColor+Extensions.h"
+
 @interface AppDelegate ()
 
 @end
@@ -38,6 +40,11 @@
 //    
 //    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
 //                                                         forBarMetrics:UIBarMetricsDefault];
+	
+	
+	
+	[[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"ic_hover"]];
+	[[UITabBar appearance] setTranslucent:NO];
     
     return YES;
 }

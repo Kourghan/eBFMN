@@ -203,7 +203,7 @@
     
     NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
     
-    [manager GET:@"Bonus/GetPrizeWithIdentifier"
+    [manager GET:@"Bonus/GetPrizeInfoByID"
       parameters:@{@"prizeId" : identifier.stringValue,
                    @"guid" : sessionKey
                    }
@@ -227,6 +227,29 @@
              completion(nil, error);
          }
      ];
+}
+
++ (void)prizeTypeById:(NSNumber *)identifier completion:(void (^)(BFMPrizeType type, NSError *))completion {
+	BFMSessionManager *manager = [BFMSessionManager sharedManager];
+	
+	NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
+	
+	[manager GET:@"Bonus/GetPrizeType"
+	  parameters:@{@"prizeID" : identifier.stringValue,
+				   @"guid" : sessionKey
+				   }
+		 success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+			 if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
+				 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
+				 completion(BFMPrizeTypeText, [NSError new]);
+			 } else {
+				 BFMPrizeType type = [[responseObject objectForKey:@"Data"] intValue];
+				 completion(type, nil);
+			 }
+		 } failure:^(NSURLSessionDataTask *task, NSError *error) {
+			 completion(BFMPrizeTypeText, error);
+		 }
+	 ];
 }
 
 @end

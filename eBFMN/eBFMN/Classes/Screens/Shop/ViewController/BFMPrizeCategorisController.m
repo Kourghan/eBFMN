@@ -155,16 +155,18 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 }
 
 - (void)handleBannerSelection:(BFMBanner *)banner {
-    [BFMPrize getPrize:banner.prizeId completion:^(BFMPrize *prize, NSError *error) {
+    [BFMPrize prizeTypeById:banner.prizeId completion:^(BFMPrizeType type, NSError *error) {
         if (error) {
             return;
         }
         
-        if (prize.prizeType.integerValue == BFMPrizeTypeColor) {
-            [self showColoredPrize:prize];
-        } else {
-            [self showTextPrize:prize];
-        }
+        if (type == BFMPrizeTypeColor) {
+//            [self showColoredPrize:prize];
+        } else if (type == BFMPrizeTypeText) {
+//			[self showTextPrize:prize];
+		} else if (type == BFMPrizeTypePlain) {
+//			[self showTextPrize:prize];
+		}
     }];
 }
 
@@ -182,6 +184,14 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
     BFMPrizeLineAndDescriptionViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
     VC.selectedPrize = prize;
     [self.navigationController pushViewController:VC animated:YES];
+}
+
+- (void)showPlainPrize:(BFMPrize *)prize {
+	UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrizeLineAndDescription"
+													bundle:nil];
+	BFMPrizeLineAndDescriptionViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
+	VC.selectedPrize = prize;
+	[self.navigationController pushViewController:VC animated:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

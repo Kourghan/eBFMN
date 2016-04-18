@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -164,15 +164,15 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="157" height="163"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_prize_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="tPr-o1-fca">
+                                                    <rect key="frame" x="33" y="25" width="90" height="90"/>
+                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_prize_circle" translatesAutoresizingMaskIntoConstraints="NO" id="Kev-ni-yvS">
                                                     <rect key="frame" x="41" y="33" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="75" id="I0D-wE-fFI"/>
                                                         <constraint firstAttribute="width" constant="75" id="uBy-vS-J92"/>
                                                     </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_prize1" translatesAutoresizingMaskIntoConstraints="NO" id="tPr-o1-fca">
-                                                    <rect key="frame" x="48" y="36" width="60" height="68"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{Name}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iz4-qP-kYf">
                                                     <rect key="frame" x="53" y="118" width="50" height="18.5"/>
@@ -318,7 +318,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_prize1" width="60" height="68"/>
         <image name="ic_prize_circle" width="75" height="75"/>
+        <image name="ic_prize_placeholder" width="90" height="90"/>
     </resources>
 </document>

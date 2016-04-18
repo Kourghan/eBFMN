@@ -31,6 +31,9 @@ typedef enum {
 + (void)getPrize:(NSNumber *)identifier
       completion:(void (^)(BFMPrize *prize, NSError *error))completion;
 
++ (void)prizeTypeById:(NSNumber *)identifier
+		   completion:(void (^)(BFMPrizeType type, NSError *error))completion;
+
 @end
 
 @interface BFMPrize (Mapping)

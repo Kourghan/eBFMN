@@ -22,6 +22,20 @@
     return [self colorWithR:8 G:69 B:110];
 }
 
+- (UIImage *)imageFromColorForSize:(CGSize)size {
+	CGRect rect = CGRectMake(0, 0, size.width, size.height);
+	UIGraphicsBeginImageContext(rect.size);
+	CGContextRef context = UIGraphicsGetCurrentContext();
+	
+	CGContextSetFillColorWithColor(context, [self CGColor]);
+	CGContextFillRect(context, rect);
+	
+	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+	return image;
+}
+
 @end
 
 @implementation UIColor (Text)

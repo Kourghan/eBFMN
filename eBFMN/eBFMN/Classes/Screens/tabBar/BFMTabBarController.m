@@ -8,6 +8,7 @@
 
 #import "BFMTabBarController.h"
 #import "UIStoryboard+BFMStoryboards.h"
+#import "UIColor+Extensions.h"
 
 @interface BFMTabBarController ()
 
@@ -25,6 +26,9 @@
 	[[UITabBarItem appearance] setTitleTextAttributes:@{
 														NSFontAttributeName:[UIFont fontWithName:@"ProximaNova-Regular" size:8.f]
 														} forState:UIControlStateNormal];
+	[[UITabBarItem appearance] setTitleTextAttributes:@{
+														NSFontAttributeName:[UIFont fontWithName:@"ProximaNova-Regular" size:8.f]
+														} forState:UIControlStateSelected];
 }
 
 - (void)configureTabBarItems {

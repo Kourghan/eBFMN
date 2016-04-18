@@ -63,7 +63,7 @@
     self.progressView.linePercentage = 0.08f;
     self.progressView.showTextLabel = NO;
     
-    self.carousel.type = iCarouselTypeCylinder;
+    self.carousel.type = iCarouselTypeLinear;
     self.carousel.pagingEnabled = YES;
 }
 
