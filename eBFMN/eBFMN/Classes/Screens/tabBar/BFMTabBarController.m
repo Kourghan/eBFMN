@@ -33,26 +33,32 @@
 
 - (void)configureTabBarItems {
     UINavigationController *vc1 = [[UIStoryboard dashboardStoryboard] instantiateInitialViewController];
-    vc1.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_dashboard"];
+    vc1.tabBarItem.image = [[UIImage imageNamed:@"ic_tabBar_dashboard"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc1.tabBarItem.selectedImage = [[UIImage imageNamed:@"ic_tabBar_dashboard"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc1.tabBarItem.title = NSLocalizedString(@"tabbar.dashboard", nil);
 	[vc1.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -6)];
 	
     UINavigationController *vc2 = [[UIStoryboard leaderboardStoryboard] instantiateInitialViewController];
-    vc2.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_leaderboard"];
+    vc2.tabBarItem.image = [[UIImage imageNamed:@"ic_tabBar_leaderboard"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc2.tabBarItem.selectedImage = [[UIImage imageNamed:@"ic_tabBar_leaderboard"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc2.tabBarItem.title = NSLocalizedString(@"tabbar.leaderboard", nil);
 	[vc2.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -6)];
     
     UINavigationController *vc3 = [[UIStoryboard newsStoryboard] instantiateInitialViewController];
-    vc3.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_news"];
+    vc3.tabBarItem.image = [[UIImage imageNamed:@"ic_tabBar_news"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc3.tabBarItem.selectedImage = [[UIImage imageNamed:@"ic_tabBar_news"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc3.tabBarItem.title = NSLocalizedString(@"tabbar.news", nil).capitalizedString;
 	[vc3.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -6)];
 
-//    
+    
 //    UINavigationController *vc4 = [[UIStoryboard notificationsStoryboard] instantiateInitialViewController];
-//    vc4.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_notifications"];
+//    vc4.tabBarItem.image = [[UIImage imageNamed:@"ic_tabBar_notifications"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    vc4.tabBarItem.selectedImage = [[UIImage imageNamed:@"ic_tabBar_notifications"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 //    vc4.tabBarItem.title = @"Notifications";
 	
     UINavigationController *vc5 = [[UIStoryboard profileStoryboard] instantiateInitialViewController];
-    vc5.tabBarItem.image = [UIImage imageNamed:@"ic_tabBar_profile"];
+    vc5.tabBarItem.image = [[UIImage imageNamed:@"ic_tabBar_profile"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc5.tabBarItem.selectedImage = [[UIImage imageNamed:@"ic_tabBar_profile"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc5.tabBarItem.title = NSLocalizedString(@"tabbar.profile", nil);
     [vc5.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -6)];
 	
