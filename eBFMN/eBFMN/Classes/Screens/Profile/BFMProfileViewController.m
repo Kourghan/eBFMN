@@ -45,6 +45,7 @@
 @property (weak, nonatomic) IBOutlet BFMCardPresentingView *goalCardView;
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *goalsViews;
 @property (strong, nonatomic) CNPPopupController *popupController;
+@property (nonatomic, assign, getter = isLoggedOut) BOOL loggedOut;
 
 @end
 
@@ -58,6 +59,14 @@
 
 #pragma mark - View lifecycle
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self subscribeLogoutNotification];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -66,7 +75,6 @@
     }
     self.cardPresentingView.hidden = YES;
     
-    [self subscribeLogoutNotification];
     [self bindUser:[BFMUser currentUser]];
     [self setupCardPresentingView];
 }
@@ -260,7 +268,13 @@
 #pragma mark - Handlers
 
 - (IBAction)logout:(id)sender {
-    [JNKeychain deleteValueForKey:kBFMSessionKey];
+    if (self.isLoggedOut) {
+        return;
+    }
+    
+    self.loggedOut = YES;
+    
+    [JNKeychain saveValue:@"" forKey:kBFMSessionKey];
     
     NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
     

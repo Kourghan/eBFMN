@@ -40,8 +40,10 @@ NSString *const kBFMLogoutNotification= @"kBFMLogoutNotification";
                   
                   if ([object isKindOfClass:[NSDictionary class]]) {
                       NSString *key = object[@"Key"];
-                      if ([key isEqualToString:@"YouNeedToLogin"]) {
-                          [weakSelf postLogoutNotification];
+                      if ([key isKindOfClass:[NSString class]]) {
+                          if ([key isEqualToString:@"YouNeedToLogin"]) {
+                              [weakSelf postLogoutNotification];
+                          }
                       }
                   }
               } failure:failure];
@@ -62,8 +64,10 @@ NSString *const kBFMLogoutNotification= @"kBFMLogoutNotification";
                    
                    if ([object isKindOfClass:[NSDictionary class]]) {
                        NSString *key = object[@"Key"];
-                       if ([key isEqualToString:@"YouNeedToLogin"]) {
-                           [weakSelf postLogoutNotification];
+                       if ([key isKindOfClass:[NSString class]]) {
+                           if ([key isEqualToString:@"YouNeedToLogin"]) {
+                               [weakSelf postLogoutNotification];
+                           }
                        }
                    }
                } failure:failure];
@@ -84,8 +88,10 @@ NSString *const kBFMLogoutNotification= @"kBFMLogoutNotification";
                   
                   if ([object isKindOfClass:[NSDictionary class]]) {
                       NSString *key = object[@"Key"];
-                      if ([key isEqualToString:@"YouNeedToLogin"]) {
-                          [weakSelf postLogoutNotification];
+                      if ([key isKindOfClass:[NSString class]]) {
+                          if ([key isEqualToString:@"YouNeedToLogin"]) {
+                              [weakSelf postLogoutNotification];
+                          }
                       }
                   }
               } failure:failure];
@@ -106,8 +112,10 @@ NSString *const kBFMLogoutNotification= @"kBFMLogoutNotification";
                     
                     if ([object isKindOfClass:[NSDictionary class]]) {
                         NSString *key = object[@"Key"];
-                        if ([key isEqualToString:@"YouNeedToLogin"]) {
-                            [weakSelf postLogoutNotification];
+                        if ([key isKindOfClass:[NSString class]]) {
+                            if ([key isEqualToString:@"YouNeedToLogin"]) {
+                                [weakSelf postLogoutNotification];
+                            }
                         }
                     }
                 } failure:failure];
@@ -128,8 +136,10 @@ NSString *const kBFMLogoutNotification= @"kBFMLogoutNotification";
                      
                      if ([object isKindOfClass:[NSDictionary class]]) {
                          NSString *key = object[@"Key"];
-                         if ([key isEqualToString:@"YouNeedToLogin"]) {
-                             [weakSelf postLogoutNotification];
+                         if ([key isKindOfClass:[NSString class]]) {
+                             if ([key isEqualToString:@"YouNeedToLogin"]) {
+                                 [weakSelf postLogoutNotification];
+                             }
                          }
                      }
                  } failure:failure];
@@ -152,8 +162,10 @@ constructingBodyWithBlock:block
                    
                    if ([object isKindOfClass:[NSDictionary class]]) {
                        NSString *key = object[@"Key"];
-                       if ([key isEqualToString:@"YouNeedToLogin"]) {
-                           [weakSelf postLogoutNotification];
+                       if ([key isKindOfClass:[NSString class]]) {
+                           if ([key isEqualToString:@"YouNeedToLogin"]) {
+                               [weakSelf postLogoutNotification];
+                           }
                        }
                    }
                } failure:failure];

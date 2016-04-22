@@ -26,18 +26,13 @@
 	  parameters:@{
 				   @"guid" : sessionKey,
 				   @"prizeID" : prize.identifier
-				   }
-		 success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-			 if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
-				 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
-				 completition([NSError new]);
-			 } else {
-				 completition(nil);
-			 }
-		 } failure:^(NSURLSessionDataTask *task, NSError *error) {
-			 completition(error);
-		 }
-	 ];
+                   }
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             completition(nil);
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             completition(error);
+         }
+     ];
 }
 
 + (void)currentPrizeWithComplatition:(void (^)(BFMPrize * prize, NSError * error))completition {
@@ -45,23 +40,25 @@
 	
 	NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
 	
-	[manager GET:@"Bonus/GetSelectedPrize"
-	  parameters:@{
-				   @"guid" : sessionKey
-				   }
-		 success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-			 if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
-				 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
-				 completition(nil, [NSError new]);
-			 } else {
-				 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
-				 BFMPrize *prize = [FEMDeserializer  objectFromRepresentation:[responseObject valueForKey:@"Data"]
-																	  mapping:[BFMPrize defaultMapping]
-																	  context:context];
-				 [context MR_saveToPersistentStoreAndWait];
-				 completition(prize, nil);
-			 }
-		 } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    [manager GET:@"Bonus/GetSelectedPrize"
+      parameters:@{
+                   @"guid" : sessionKey
+                   }
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             id data = [responseObject valueForKey:@"Data"];
+             if ((data == nil) || ([data isKindOfClass:[NSNull class]])) {
+                 completition(nil, [NSError errorWithDomain:[NSBundle mainBundle].bundleIdentifier
+                                                       code:1002
+                                                   userInfo:nil]);
+             } else {
+                 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+                 BFMPrize *prize = [FEMDeserializer  objectFromRepresentation:[responseObject valueForKey:@"Data"]
+                                                                      mapping:[BFMPrize defaultMapping]
+                                                                      context:context];
+                 [context MR_saveToPersistentStoreAndWait];
+                 completition(prize, nil);
+             }
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
 			 completition(nil, error);
 		 }
 	 ];
@@ -79,10 +76,12 @@
 				   @"guid" : sessionKey
 				   }
 		 success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-			 if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
-				 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
-				 completition(nil, [NSError new]);
-			 } else {
+             id data = [responseObject valueForKey:@"Data"];
+             if ((data == nil) || ([data isKindOfClass:[NSNull class]])) {
+                 completition(nil, [NSError errorWithDomain:[NSBundle mainBundle].bundleIdentifier
+                                                       code:1002
+                                                   userInfo:nil]);
+             } else {
 				 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
 				 NSArray *prizes = [FEMDeserializer  collectionFromRepresentation:[responseObject valueForKey:@"Data"]
 																		  mapping:[BFMPrize defaultMapping]
@@ -136,10 +135,12 @@
 				   @"guid" : sessionKey
 				   }
 		 success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-			 if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
-				 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
-				 completition(nil, [NSError new]);
-			 } else {
+             id data = [responseObject valueForKey:@"Data"];
+             if ((data == nil) || ([data isKindOfClass:[NSNull class]])) {
+                 completition(nil, [NSError errorWithDomain:[NSBundle mainBundle].bundleIdentifier
+                                                       code:1002
+                                                   userInfo:nil]);
+             } else {
 				 NSArray *rawData = [responseObject valueForKey:@"Data"];
 				 NSMutableArray *prizes = [NSMutableArray array];
 				 
@@ -177,10 +178,12 @@
 				   @"guid" : sessionKey
 				   }
 		 success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-			 if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
-				 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
-				 completition(nil, [NSError new]);
-			 } else {
+             id data = [responseObject valueForKey:@"Data"];
+             if ((data == nil) || ([data isKindOfClass:[NSNull class]])) {
+                 completition(nil, [NSError errorWithDomain:[NSBundle mainBundle].bundleIdentifier
+                                                       code:1002
+                                                   userInfo:nil]);
+             } else {
 				 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
 				 NSArray *prizes = [FEMDeserializer  collectionFromRepresentation:[responseObject valueForKey:@"Data"]
 																		  mapping:[BFMPrize defaultMapping]
@@ -208,9 +211,11 @@
                    @"guid" : sessionKey
                    }
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-             if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
-                 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
-                 completion(nil, [NSError new]);
+             id data = [responseObject valueForKey:@"Data"];
+             if ((data == nil) || ([data isKindOfClass:[NSNull class]])) {
+                 completion(nil, [NSError errorWithDomain:[NSBundle mainBundle].bundleIdentifier
+                                                     code:1002
+                                                 userInfo:nil]);
              } else {
                  NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
 //                 NSArray *prizes = [FEMDeserializer  collectionFromRepresentation:[responseObject valueForKey:@"Data"]
@@ -239,10 +244,12 @@
 				   @"guid" : sessionKey
 				   }
 		 success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-			 if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
-				 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
-				 completion(BFMPrizeTypeText, [NSError new]);
-			 } else {
+             id data = [responseObject valueForKey:@"Data"];
+             if ((data == nil) || ([data isKindOfClass:[NSNull class]])) {
+                 completion(BFMPrizeTypePlain, [NSError errorWithDomain:[NSBundle mainBundle].bundleIdentifier
+                                                                   code:1002
+                                                               userInfo:nil]);
+             } else {
 				 BFMPrizeType type = [[responseObject objectForKey:@"Data"] intValue];
 				 completion(type, nil);
 			 }

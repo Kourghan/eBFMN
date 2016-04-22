@@ -24,12 +24,14 @@
 	  parameters:@{
 				   @"guid" : sessionKey
 				   }
-		 success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-			 if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"] ||
-				 [[responseObject valueForKey:@"Key"] isEqualToString:@"YouNeedToLogin"]) {
-				 completition(nil, [NSError new]);
-			 } else {
-				 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+         success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+             id data = [responseObject valueForKey:@"Data"];
+             if ((data == nil) || ([data isKindOfClass:[NSNull class]])) {
+                 completition(nil, [NSError errorWithDomain:[NSBundle mainBundle].bundleIdentifier
+                                                       code:1002
+                                                   userInfo:nil]);
+             } else {
+                 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
 				 NSArray *categories = [FEMDeserializer collectionFromRepresentation:[responseObject valueForKey:@"Data"]
 																			 mapping:[BFMPrizeCategory defaultMapping]
 																			 context:context];
