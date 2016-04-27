@@ -21,6 +21,7 @@
 #import "BFMPrize+CoreDataProperties.h"
 #import "BFMPrize.h"
 #import "BFMColoredPrize.h"
+#import "UIColor+Extensions.h"
 
 @interface BFMPrize2LinesViewController ()
 
@@ -28,6 +29,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *descriptionLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *prizeImageView;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+@property (nonatomic, weak) IBOutlet UIPageControl *pageControl;
 
 @property (nonatomic, strong) NSArray *prizes;
 
@@ -50,6 +52,12 @@
     self.linesView.topAdapter.isOutline = NO;
     self.linesView.bottomAdapter.isOutline = YES;
     self.linesView.bottomAdapter.shouldPresentSummary = YES;
+    self.linesView.topAdapter.pageControl = self.pageControl;
+    
+    self.pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    self.pageControl.currentPageIndicatorTintColor = [UIColor bfm_defaultNavigationBlue];
+    self.pageControl.hidden = YES;
+    self.pageControl.userInteractionEnabled = NO;
     
     [self loadData];
 }
@@ -84,6 +92,13 @@
         BFMColoredPrize *coloredPrize = self.prizes.firstObject;
         NSArray *prizes = coloredPrize.prizes;
         lineView.bottomAdapter.objects = prizes;
+        
+        if (self.prizes.count > 4) {
+            self.pageControl.numberOfPages = ceil(self.prizes.count / 4.f);
+            self.pageControl.hidden = NO;
+        } else {
+            self.pageControl.hidden = YES;
+        }
     } else {
         lineView.bottomAdapter.objects = nil;
     }

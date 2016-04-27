@@ -14,6 +14,7 @@
 
 #import "UIColor+Extensions.h"
 #import "iCarousel.h"
+#import "BFMCarouselDataSource.h"
 
 #import <CZPicker/CZPicker.h>
 
@@ -26,6 +27,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *currencyButton;
 @property (weak, nonatomic) IBOutlet iCarousel *carousel;
+@property (nonatomic, weak) IBOutlet BFMCarouselDataSource *carDataSource;
 
 
 @property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
@@ -63,7 +65,7 @@
     self.progressView.linePercentage = 0.08f;
     self.progressView.showTextLabel = NO;
     
-    self.carousel.type = iCarouselTypeLinear;
+    self.carousel.type = iCarouselTypeCylinder;
     self.carousel.pagingEnabled = YES;
 }
 
@@ -97,6 +99,7 @@
     self.currencies = [user currencies];
     [self.currencyButton setTitle:[user currentCurrency]
                          forState:UIControlStateNormal];
+    self.carDataSource.currentCurrency = [user currentCurrency];
     self.currencyButton.enabled = ([user numberOfCurrencies] > 1);
     [self.carousel reloadData];
 }
@@ -141,6 +144,7 @@
     [BFMUser currentUser].currentCurrency = self.currencies[row];
     [self.currencyButton setTitle:[BFMUser currentUser].currentCurrency
                          forState:UIControlStateNormal];
+    self.carDataSource.currentCurrency = [BFMUser currentUser].currentCurrency;
     
     [self.carousel reloadData];
 }

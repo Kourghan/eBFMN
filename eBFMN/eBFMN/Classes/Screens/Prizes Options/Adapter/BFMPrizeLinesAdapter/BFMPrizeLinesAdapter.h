@@ -10,6 +10,7 @@
 
 #import <UIKit/UICollectionViewFlowLayout.h>
 #import <UIKit/UICollectionView.h>
+#import <UIKit/UIPageControl.h>
 #import <CoreGraphics/CGBase.h>
 
 @class BFMPrizeLinesAdapter;
@@ -27,6 +28,7 @@ UICollectionViewDelegateFlowLayout
 @property (nonatomic, copy) BFMPrizeLinesSelection selection;
 @property (nonatomic, weak) UICollectionView *collectionView;
 @property (nonatomic, assign) CGSize collectionSize;
+@property (nonatomic, weak) UIPageControl *pageControl;
 @property (nonatomic, assign) BOOL isOutline;
 @property (nonatomic, assign) BOOL shouldPresentSummary;
 

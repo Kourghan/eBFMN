@@ -73,4 +73,10 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(cvSize.width / (CGFloat)widthDivisor, cvSize.height / 2.f);
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat width = scrollView.frame.size.width;
+    CGFloat frac = scrollView.contentOffset.x / width;
+    self.pageControl.currentPage = round(frac);
+}
+
 @end

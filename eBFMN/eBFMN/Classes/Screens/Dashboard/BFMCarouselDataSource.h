@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "iCarousel.h"
 
-@interface BFMCarouselDataSource : NSObject
+@interface BFMCarouselDataSource : NSObject<iCarouselDataSource, iCarouselDelegate>
+
+@property (nonatomic, strong) NSString *currentCurrency;
 
 @end
