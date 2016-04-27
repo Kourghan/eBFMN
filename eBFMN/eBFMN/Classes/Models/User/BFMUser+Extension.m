@@ -182,8 +182,14 @@
     [manager GET:@"Bonus/GetIBLeague"
       parameters:@{@"guid" : sessionKey}
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-             NSDictionary *rawData = [responseObject valueForKey:@"Data"];
-             completition([[rawData valueForKey:@"Id"] intValue], nil);
+             id rawData = [responseObject valueForKey:@"Data"];
+			 if (rawData == nil || [rawData isKindOfClass:[NSNull class]]) {
+				 completition(BFMLeagueTypeUndefined, [NSError errorWithDomain:[NSBundle mainBundle].bundleIdentifier
+																		  code:1002
+																	  userInfo:nil]);
+			 } else {
+				 completition([[rawData valueForKey:@"Id"] intValue], nil);
+			 }
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              completition(BFMLeagueTypeUndefined, error);
          }

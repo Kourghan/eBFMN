@@ -224,7 +224,13 @@
 //                 for (BFMPrize *newPrize in prizes) {
 //                     newPrize.categoryId = @(-1);
 //                 }
-                 BFMPrize *prize; //TODO: deserialize
+				 BFMPrize *prize = [FEMDeserializer objectFromRepresentation:data
+																	 mapping:[BFMPrize defaultMapping]
+																	 context:context];
+				 
+				 
+				 
+				 
                  [context MR_saveToPersistentStoreAndWait];
                  completion(prize, nil);
              }
