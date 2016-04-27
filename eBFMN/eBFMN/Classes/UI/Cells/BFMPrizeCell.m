@@ -9,7 +9,7 @@
 #import "BFMPrizeCell.h"
 #import "BFMPrize+BFMPrizeLines.h"
 
-#import <AFNetworking/UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface BFMPrizeCell ()
 
@@ -82,7 +82,7 @@
 	
     self.nameLabel.text = object.name;
     NSURL *url = [NSURL URLWithString:[object.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    [self.prizeImage setImageWithURL:url placeholderImage:[UIImage imageNamed:@"ic_prize_placeholder"]];
+    [self.prizeImage sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"ic_prize_placeholder"]];
 }
 
 @end

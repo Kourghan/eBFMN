@@ -12,7 +12,7 @@
 #import "BFMDefaultNavagtionBarAppearance.h"
 #import "BFMPrizeSingleLineView.h"
 
-#import <AFNetworking/UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import <ALAlertBanner/ALAlertBanner.h>
 #import "BFMDefaultNavagtionBarAppearance.h"
 #import "BFMPrizeSingleLineView.h"
@@ -115,7 +115,7 @@
     BFMPrize *prize = coloredPrize.prizes[linesView.bottomAdapter.selectedIndex];
     NSString *URLString = [prize.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     linesView.bottomAdapter.objects = coloredPrize.prizes;
-    [self.prizeImageView setImageWithURL:[NSURL URLWithString:URLString]];
+    [self.prizeImageView sd_setImageWithURL:[NSURL URLWithString:URLString]];
 }
 
 - (void)showContentViews:(BOOL)show animated:(BOOL)animated {

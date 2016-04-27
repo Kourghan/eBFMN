@@ -153,9 +153,9 @@
     BFMUser *user = [BFMUser currentUser];
     [user getIBLeagueWithCompletitionBlock:^(BFMLeagueType type,
                                              NSError *error) {
-        if (!error) {
+        //if (!error) {
             [weakSelf bindType:type];
-        }
+        //}
     }];
 }
 
