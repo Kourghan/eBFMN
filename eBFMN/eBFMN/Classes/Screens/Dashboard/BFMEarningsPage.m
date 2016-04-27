@@ -17,7 +17,7 @@
 
 #import <CZPicker/CZPicker.h>
 
-#import <AFNetworking/UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface BFMEarningsPage () <CZPickerViewDataSource, CZPickerViewDelegate>
 
@@ -108,8 +108,8 @@
                                     ]
      ];
     NSURL *url = [NSURL URLWithString:[prize.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    [self.prizeImageView setImageWithURL:url
-                    placeholderImage:[UIImage imageNamed:@"ic_prize1"]];
+	[self.prizeImageView sd_setImageWithURL:url
+						   placeholderImage:[UIImage imageNamed:@"ic_prize_placeholder"]];
     if ([self.points integerValue] > 0) {
         double percent = ([self.points integerValue] >= [prize.points integerValue]) ? 1.f : [self.points doubleValue] / [prize.points doubleValue];
         self.progressView.percentage = percent;

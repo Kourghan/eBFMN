@@ -9,7 +9,7 @@
 #import "BFMPrizeBannerCell.h"
 #import "BFMBanner.h"
 
-#import <AFNetworking/UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface BFMPrizeBannerCell ()
 
@@ -30,8 +30,8 @@
 - (void)setObject:(BFMBanner *)object {
 	_object = object;
 	NSURL *url = [NSURL URLWithString:[object.link stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-	[self.bannerImageView setImageWithURL:url
-						 placeholderImage:[UIImage imageNamed:@"ic_banner"]];
+	[self.bannerImageView sd_setImageWithURL:url
+							placeholderImage:[UIImage imageNamed:@"ic_banner"]];
 }
 
 @end

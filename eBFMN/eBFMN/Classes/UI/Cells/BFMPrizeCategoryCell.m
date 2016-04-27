@@ -9,7 +9,7 @@
 #import "BFMPrizeCategoryCell.h"
 #import "BFMPrizeCategory.h"
 
-#import <AFNetworking/UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface BFMPrizeCategoryCell ()
 
@@ -41,8 +41,8 @@
 	_object = object;
 	self.nameLabel.text = object.name;
 	NSURL *url = [NSURL URLWithString:[object.link stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-	[self.prizeImage setImageWithURL:url
-					placeholderImage:[UIImage imageNamed:@"ic_prize1"]];
+	[self.prizeImage sd_setImageWithURL:url
+					   placeholderImage:[UIImage imageNamed:@"ic_prize_placeholder"]];
 }
 
 @end

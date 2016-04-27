@@ -35,7 +35,7 @@
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xZP-at-Hzr">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="173.5"/>
-                                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ZWm-0X-e2O">
                                             <size key="itemSize" width="0.0" height="0.0"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>

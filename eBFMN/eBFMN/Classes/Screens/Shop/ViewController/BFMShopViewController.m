@@ -24,6 +24,8 @@
 #import "BFMPrize2LinesViewController.h"
 #import "BFMPrizeLineAndDescriptionViewController.h"
 
+#import <SVProgressHUD/SVProgressHUD.h>
+
 @interface BFMShopViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -80,7 +82,10 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
 - (void)loadData {
 	__weak typeof(self) weakSelf = self;
 	
+	[SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+	
 	[self.model loadPrizesWithCallback:^(NSError *error) {
+		[SVProgressHUD dismiss];
 		if (error) {
 			ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
 																style:ALAlertBannerStyleFailure

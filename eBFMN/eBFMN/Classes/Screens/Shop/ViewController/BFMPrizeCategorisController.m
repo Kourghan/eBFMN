@@ -45,7 +45,7 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-
+	
 	[self setupCollectionView];
 	[self setupModels];
 	
@@ -59,8 +59,8 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 	[NINavigationAppearance pushAppearanceForNavigationController:self.navigationController];
 	[BFMDefaultNavagtionBarAppearance applyTo:self.navigationController.navigationBar];
 	[self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
-    
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+	
+	self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -86,7 +86,7 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 - (void)setupBannerModel {
 	self.bannerAdapter = [[BFMPrizeBannerAdapter alloc] init];
 	[self.bannerAdapter mapObjectClass:[BFMBanner class]
-				toCellIdentifier:kBFMPrizeBannerCellID];
+					  toCellIdentifier:kBFMPrizeBannerCellID];
 	self.bannerAdapter.dataSource = self.model.bannerDataSource;
 	self.bannerAdapter.collectionView = self.bannerCollectionView;
 	
@@ -103,9 +103,9 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 		}
 	}];
 	
-    self.bannerAdapter.bannerSelection = ^(BFMBanner *banner) {
+	self.bannerAdapter.bannerSelection = ^(BFMBanner *banner) {
 		__strong typeof(weakSelf) strongSelf = weakSelf;
-        [strongSelf handleBannerSelection:banner];
+		[strongSelf handleBannerSelection:banner];
 	};
 	
 	//if you want to setup selection on screen creation do it here
@@ -133,11 +133,11 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 			[banner show];
 		}
 	}];
-
+	
 	
 	self.adapter.selection = ^(NSInteger selectedIndex) {
 		__strong typeof(weakSelf) strongSelf = weakSelf;
-
+		
 		if (selectedIndex == NSNotFound) {
 			//not selected
 			
@@ -146,44 +146,48 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 		
 		NSIndexPath *path = [NSIndexPath indexPathForRow:selectedIndex inSection:0];
 		BFMPrizeCategory *category = [strongSelf.adapter.dataSource objectAtIndexPath:path];
-
+		
 		[strongSelf performSegueWithIdentifier:@"prizeList" sender:category];
-    };
+	};
 	
 	//if you want to setup selection on screen creation do it here
 	self.adapter.selectedIndex = NSNotFound;
 }
 
 - (void)handleBannerSelection:(BFMBanner *)banner {
-    [BFMPrize prizeTypeById:banner.prizeId completion:^(BFMPrizeType type, NSError *error) {
-        if (error) {
-            return;
-        }
-        
-        if (type == BFMPrizeTypeColor) {
-//            [self showColoredPrize:prize];
-        } else if (type == BFMPrizeTypeText) {
-//			[self showTextPrize:prize];
-		} else if (type == BFMPrizeTypePlain) {
-//			[self showTextPrize:prize];
+	[BFMPrize prizeTypeById:banner.prizeId completion:^(BFMPrizeType type, NSError *error) {
+		if (error) {
+			return;
 		}
-    }];
+		
+		[BFMPrize getPrize:banner.prizeId
+				completion:^(BFMPrize *prize, NSError *error) {
+					if ([prize.prizeType integerValue] == BFMPrizeTypeColor) {
+						[self showColoredPrize:prize];
+					} else if (type == BFMPrizeTypeText) {
+						[self showTextPrize:prize];
+					} else if (type == BFMPrizeTypePlain) {
+						[self showPlainPrize:prize];
+					}
+				}];
+		
+	}];
 }
 
 - (void)showColoredPrize:(BFMPrize *)prize {
-    UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrize2Lines"
-                                                    bundle:nil];
-    BFMPrizeLineAndDescriptionViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
-    VC.selectedPrize = prize;
-    [self.navigationController pushViewController:VC animated:YES];
+	UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrize2Lines"
+													bundle:nil];
+	BFMPrizeLineAndDescriptionViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
+	VC.selectedPrize = prize;
+	[self.navigationController pushViewController:VC animated:YES];
 }
 
 - (void)showTextPrize:(BFMPrize *)prize {
-    UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrizeLineAndDescription"
-                                                    bundle:nil];
-    BFMPrizeLineAndDescriptionViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
-    VC.selectedPrize = prize;
-    [self.navigationController pushViewController:VC animated:YES];
+	UIStoryboard *board = [UIStoryboard storyboardWithName:@"BFMPrizeLineAndDescription"
+													bundle:nil];
+	BFMPrizeLineAndDescriptionViewController *VC = [board instantiateViewControllerWithIdentifier:@"2Lines"];
+	VC.selectedPrize = prize;
+	[self.navigationController pushViewController:VC animated:YES];
 }
 
 - (void)showPlainPrize:(BFMPrize *)prize {

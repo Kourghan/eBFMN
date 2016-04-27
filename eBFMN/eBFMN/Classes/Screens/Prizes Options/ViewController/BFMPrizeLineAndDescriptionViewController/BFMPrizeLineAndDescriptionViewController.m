@@ -8,7 +8,7 @@
 
 #import "BFMPrizeLineAndDescriptionViewController.h"
 
-#import <AFNetworking/UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import <ALAlertBanner/ALAlertBanner.h>
 #import "BFMDefaultNavagtionBarAppearance.h"
 #import "BFMPrizeSingleLineView.h"
@@ -89,7 +89,7 @@
     BFMPrize *prize = self.prizes[self.linesView.topAdapter.selectedIndex];
     self.nameLabel.text = prize.name;
     self.descriptionLabel.text = prize.summary;
-    [self.prizeImageView setImageWithURL:[NSURL URLWithString:[prize.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+    [self.prizeImageView sd_setImageWithURL:[NSURL URLWithString:[prize.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
 }
 
 - (void)showContentViews:(BOOL)show animated:(BOOL)animated {
