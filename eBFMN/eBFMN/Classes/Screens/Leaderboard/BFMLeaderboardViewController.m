@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *userRecordNumber;
 @property (weak, nonatomic) IBOutlet UILabel *userRecordName;
 @property (weak, nonatomic) IBOutlet UILabel *userRecordValue;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *dataViewConstr;
 
 @property (nonatomic, strong) NSArray *records;
 
@@ -83,6 +84,7 @@
 }
 
 - (void)findUserRecord {
+    BOOL found = NO;
     for (BFMLeaderboardRecord *record in self.records) {
         if ([record.groupName isEqualToString:[BFMUser currentUser].name]) {
             
@@ -98,8 +100,11 @@
             self.userRecordValue.text = [formatter stringFromNumber:record.value];
             self.userRecordName.text = [NSString stringWithFormat:@"%@ | %@",record.groupName, record.groupID.stringValue];
             self.userRecordNumber.text = @([self.records indexOfObject:record]+1).stringValue;
+            found = YES;
         }
     }
+    
+    self.dataViewConstr.constant = found ? 60.f : 0.f;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
