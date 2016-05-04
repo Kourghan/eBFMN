@@ -15,6 +15,9 @@
 
 #import "UIColor+Extensions.h"
 
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 @interface AppDelegate ()
 
 @end
@@ -23,6 +26,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [Fabric with:@[[Crashlytics class]]];
     
     application.statusBarStyle = UIStatusBarStyleLightContent;
     

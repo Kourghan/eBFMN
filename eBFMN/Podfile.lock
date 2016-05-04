@@ -22,7 +22,10 @@ PODS:
     - AFNetworking/NSURLSession
   - ALAlertBanner (0.3.1)
   - CNPPopupController (0.3.1)
+  - Crashlytics (3.7.0):
+    - Fabric (~> 1.6.3)
   - CZPicker (0.3.7)
+  - Fabric (1.6.7)
   - FastEasyMapping (1.0.2)
   - JNKeychain (0.1.4)
   - MagicalRecord (2.3.2):
@@ -38,7 +41,9 @@ DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - ALAlertBanner
   - CNPPopupController (= 0.3.1)
+  - Crashlytics
   - CZPicker
+  - Fabric
   - FastEasyMapping
   - JNKeychain
   - MagicalRecord
@@ -50,7 +55,9 @@ SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   ALAlertBanner: 08d82be509cd9b70c4ac0ee1e7ac250003a8b34b
   CNPPopupController: 67dc2ca5a3f88cd49a27bb1b0aeb78a24d423d79
+  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
   CZPicker: c5dc1f70c4fe48e1a5a06c0f45a468295c47e3a3
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   FastEasyMapping: 77d566a817ca73304af3e7fbed130850238f1cb4
   JNKeychain: fb6cc9ec95959ba46cd95d0ee6f7a05e41da9f42
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
