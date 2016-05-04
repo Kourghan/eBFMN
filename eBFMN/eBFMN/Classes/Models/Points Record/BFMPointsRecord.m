@@ -60,16 +60,25 @@
                    @"guid" : sessionKey
                    }
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-             if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"]) {
-                 completition(nil, [NSError new]);
-             } else {
-                 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
-                 NSArray *transactions = [FEMDeserializer  collectionFromRepresentation:[responseObject valueForKey:@"Data"]
-                                                                                mapping:[BFMPointsRecord defaultMapping]
-                                                                                context:context];
-                 [context MR_saveToPersistentStoreAndWait];
-                 completition(transactions, nil);
-             }
+			 id errorData = [responseObject valueForKey:@"Key"];
+			 if (errorData == nil || [errorData isKindOfClass:[NSNull class]]) {
+				 completition(nil, [NSError new]);
+			 } else {
+				 if ([errorData isEqualToString:@"ErrorOccured"]) {
+					 completition(nil, [NSError new]);
+				 } else {
+					 id data = [responseObject valueForKey:@"Data"];
+					 if (data == nil || [data isKindOfClass:[NSNull class]]) {
+						 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+						 NSArray *transactions = [FEMDeserializer  collectionFromRepresentation:[responseObject valueForKey:@"Data"]
+																						mapping:[BFMPointsRecord defaultMapping]
+																						context:context];
+						 [context MR_saveToPersistentStoreAndWait];
+						 completition(transactions, nil);
+					 }
+
+				 }
+			 }
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              completition(nil, error);
          }
