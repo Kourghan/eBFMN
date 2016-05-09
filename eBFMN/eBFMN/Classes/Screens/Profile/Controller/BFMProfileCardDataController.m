@@ -97,7 +97,9 @@ static NSString *const kBFMProfileDataCurrent = @"kBFMProfileDataCurrent";
         case BFMLeagueTypeUndefined: return @"";
             
         case BFMLeagueTypeSilver: {
-            return NSLocalizedString(@"", nil);
+            return [NSString stringWithFormat:@"%@ %@",
+                    NSLocalizedString(@"SILVER", nil),
+                    suff];
         }
             
         case BFMLeagueTypeGold: {
