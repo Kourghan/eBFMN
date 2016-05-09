@@ -1,17 +1,56 @@
-eBFMN/eBFMN.xcodeproj/xcuserdata/mykytashytik.xcuserdatad/xcschemes/eBFMN.xcscheme
-eBFMN/eBFMN.xcodeproj/xcuserdata/mykytashytik.xcuserdatad/xcschemes/xcschememanagement.plist
-eBFMN/eBFMN.xcworkspace/xcuserdata/mykytashytik.xcuserdatad/UserInterfaceState.xcuserstate
-eBFMN/Pods/Pods.xcodeproj/xcuserdata/mykytashytik.xcuserdatad/xcschemes/AFNetworking.xcscheme
-eBFMN/Pods/Pods.xcodeproj/xcuserdata/mykytashytik.xcuserdatad/xcschemes/ALAlertBanner.xcscheme
-eBFMN/Pods/Pods.xcodeproj/xcuserdata/mykytashytik.xcuserdatad/xcschemes/CZPicker-CZPicker.xcscheme
-eBFMN/Pods/Pods.xcodeproj/xcuserdata/mykytashytik.xcuserdatad/xcschemes/CZPicker.xcscheme
-eBFMN/Pods/Pods.xcodeproj/xcuserdata/mykytashytik.xcuserdatad/xcschemes/FastEasyMapping.xcscheme
-eBFMN/Pods/Pods.xcodeproj/xcuserdata/mykytashytik.xcuserdatad/xcschemes/JNKeychain.xcscheme
-eBFMN/Pods/Pods.xcodeproj/xcuserdata/mykytashytik.xcuserdatad/xcschemes/MagicalRecord.xcscheme
-eBFMN/Pods/Pods.xcodeproj/xcuserdata/mykytashytik.xcuserdatad/xcschemes/Pods.xcscheme
-eBFMN/Pods/Pods.xcodeproj/xcuserdata/mykytashytik.xcuserdatad/xcschemes/RBBAnimation.xcscheme
-eBFMN/Pods/Pods.xcodeproj/xcuserdata/mykytashytik.xcuserdatad/xcschemes/SDCAlertView.xcscheme
-eBFMN/Pods/Pods.xcodeproj/xcuserdata/mykytashytik.xcuserdatad/xcschemes/SDCAutoLayout.xcscheme
-eBFMN/Pods/Pods.xcodeproj/xcuserdata/mykytashytik.xcuserdatad/xcschemes/SVProgressHUD.xcscheme
-eBFMN/Pods/Pods.xcodeproj/xcuserdata/mykytashytik.xcuserdatad/xcschemes/xcschememanagement.plist
-eBFMN/Pods/Target Support Files/Pods/Pods-frameworks.sh
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+DerivedData
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+
+## AppCode 
+.idea/
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+Pods/
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the 
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://github.com/fastlane/fastlane/blob/master/docs/Gitignore.md
+
+fastlane/report.xml
+fastlane/screenshots
