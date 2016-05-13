@@ -108,6 +108,14 @@
                                 <color key="pageIndicatorTintColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aie-MW-2Zt">
+                                <rect key="frame" x="141" y="210" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Mhh-mw-TzP"/>
+                                    <constraint firstAttribute="width" constant="37" id="cH7-5s-gpw"/>
+                                </constraints>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -115,7 +123,9 @@
                             <constraint firstItem="yPI-EW-OdI" firstAttribute="centerX" secondItem="cgJ-16-6VH" secondAttribute="centerX" id="Eje-bL-7g5"/>
                             <constraint firstItem="2h7-la-4RW" firstAttribute="top" secondItem="59A-P3-xn7" secondAttribute="bottom" constant="14" id="JB0-5g-jKa"/>
                             <constraint firstItem="Svt-k4-nLg" firstAttribute="top" secondItem="2h7-la-4RW" secondAttribute="bottom" constant="30" id="MWe-DD-UXX"/>
+                            <constraint firstItem="aie-MW-2Zt" firstAttribute="centerY" secondItem="2h7-la-4RW" secondAttribute="centerY" id="WXw-G2-eQ8"/>
                             <constraint firstItem="Svt-k4-nLg" firstAttribute="leading" secondItem="cgJ-16-6VH" secondAttribute="leading" constant="12" id="XJW-RD-jgU"/>
+                            <constraint firstItem="aie-MW-2Zt" firstAttribute="centerX" secondItem="2h7-la-4RW" secondAttribute="centerX" id="XR3-c9-EQL"/>
                             <constraint firstItem="59A-P3-xn7" firstAttribute="top" secondItem="hXu-W7-fzG" secondAttribute="bottom" constant="20" id="eeN-Hb-kCf"/>
                             <constraint firstItem="TH0-SP-gqc" firstAttribute="top" secondItem="Svt-k4-nLg" secondAttribute="bottom" constant="20" id="euU-VF-ce2"/>
                             <constraint firstItem="2h7-la-4RW" firstAttribute="leading" secondItem="cgJ-16-6VH" secondAttribute="leading" constant="40" id="guh-bm-gJE"/>
@@ -132,6 +142,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="indicator" destination="aie-MW-2Zt" id="1zR-pL-iBO"/>
                         <outlet property="linesView" destination="Svt-k4-nLg" id="CXW-e8-cKE"/>
                         <outlet property="nameLabel" destination="59A-P3-xn7" id="CGX-vJ-www"/>
                         <outlet property="pageControl" destination="yPI-EW-OdI" id="64E-V0-dTJ"/>

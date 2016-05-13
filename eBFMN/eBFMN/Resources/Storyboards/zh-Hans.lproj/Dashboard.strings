@@ -62,8 +62,8 @@
 /* Class = "UILabel"; text = "BMFN ACCOUNT"; ObjectID = "nB9-RS-76z"; */
 "nB9-RS-76z.text" = "BMFN ACCOUNT";
 
-/* Class = "UILabel"; text = "1000/1000"; ObjectID = "og1-Lu-2Rn"; */
-"og1-Lu-2Rn.text" = "1000/1000";
+/* Class = "UILabel"; text = "     "; ObjectID = "og1-Lu-2Rn"; */
+"og1-Lu-2Rn.text" = "     ";
 
 /* Class = "UILabel"; text = "IB"; ObjectID = "otr-p1-Wrr"; */
 "otr-p1-Wrr.text" = "IB";

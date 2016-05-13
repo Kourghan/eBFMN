@@ -16,6 +16,7 @@
 #import "BFMPrizeLinesAdapter.h"
 #import "BFMPrize+CoreDataProperties.h"
 #import "BFMPrize.h"
+#import "UIImageView+BFMSetImageRefresh.h"
 
 @interface BFMPrizeLineAndDescriptionViewController ()
 
@@ -23,7 +24,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *descriptionLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *prizeImageView;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
-
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *indicator;
 @property (nonatomic, strong) NSArray *prizes;
 
 @end
@@ -34,6 +35,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.indicator stopAnimating];
+    self.indicator.hidden = YES;
     
     __weak typeof(self) weakSelf = self;
     self.linesView.selection = ^(BFMPrizeLinesView *lineView,
@@ -89,7 +93,17 @@
     BFMPrize *prize = self.prizes[self.linesView.topAdapter.selectedIndex];
     self.nameLabel.text = prize.name;
     self.descriptionLabel.text = prize.summary;
-    [self.prizeImageView sd_setImageWithURL:[NSURL URLWithString:[prize.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+    
+    [self.indicator startAnimating];
+    self.indicator.hidden = NO;
+    __weak typeof(self) weakSelf = self;
+    NSURL *URL = [NSURL URLWithString:[prize.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    [self.prizeImageView bfm_setImageWithURL:URL
+                                refreshAfter:2.0
+                                  completion:^{
+                                      [weakSelf.indicator stopAnimating];
+                                      weakSelf.indicator.hidden = YES;
+                                }];
 }
 
 - (void)showContentViews:(BOOL)show animated:(BOOL)animated {

@@ -22,6 +22,7 @@
 #import "BFMPrize.h"
 #import "BFMColoredPrize.h"
 #import "UIColor+Extensions.h"
+#import "UIImageView+BFMSetImageRefresh.h"
 
 @interface BFMPrize2LinesViewController ()
 
@@ -30,6 +31,7 @@
 @property (nonatomic, weak) IBOutlet UIImageView *prizeImageView;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UIPageControl *pageControl;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *indicator;
 
 @property (nonatomic, strong) NSArray *prizes;
 
@@ -41,6 +43,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.indicator stopAnimating];
+    self.indicator.hidden = YES;
     
     __weak typeof(self) weakSelf = self;
     self.linesView.selection = ^(BFMPrizeLinesView *lineView,
@@ -115,7 +120,16 @@
     BFMPrize *prize = coloredPrize.prizes[linesView.bottomAdapter.selectedIndex];
     NSString *URLString = [prize.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     linesView.bottomAdapter.objects = coloredPrize.prizes;
-    [self.prizeImageView sd_setImageWithURL:[NSURL URLWithString:URLString]];
+    
+    [self.indicator startAnimating];
+    self.indicator.hidden = NO;
+    __weak typeof(self) weakSelf = self;
+    [self.prizeImageView bfm_setImageWithURL:[NSURL URLWithString:URLString]
+                                refreshAfter:2.0
+                                  completion:^{
+                                      [weakSelf.indicator stopAnimating];
+                                      weakSelf.indicator.hidden = YES;
+                                  }];
 }
 
 - (void)showContentViews:(BOOL)show animated:(BOOL)animated {

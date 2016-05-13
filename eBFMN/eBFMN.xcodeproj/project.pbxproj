@@ -147,6 +147,7 @@
 		F92367F81C771C5B000F5DEE /* BFMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F92367F71C771C5B000F5DEE /* BFMUtils.m */; };
 		F93D3BD31C6D25BE002456D6 /* ocraextended.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F93D3BCC1C6D25BE002456D6 /* ocraextended.ttf */; };
 		F93F26231C7DA706003E00F8 /* BFMCardArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = F93F26221C7DA706003E00F8 /* BFMCardArrowView.m */; };
+		F953E4F81CE5F3110006FA1F /* UIImageView+BFMSetImageRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F953E4F71CE5F3110006FA1F /* UIImageView+BFMSetImageRefresh.m */; };
 		F96073E41BE723D800704692 /* BFMNewsTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E31BE723D800704692 /* BFMNewsTextCell.m */; };
 		F96073EA1BE72D5000704692 /* BFMNewsActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073E81BE72D5000704692 /* BFMNewsActionCell.m */; };
 		F96073EB1BE72D5000704692 /* BFMNewsActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E91BE72D5000704692 /* BFMNewsActionCell.xib */; };
@@ -461,6 +462,8 @@
 		F93D3BCC1C6D25BE002456D6 /* ocraextended.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ocraextended.ttf; sourceTree = "<group>"; };
 		F93F26211C7DA706003E00F8 /* BFMCardArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMCardArrowView.h; sourceTree = "<group>"; };
 		F93F26221C7DA706003E00F8 /* BFMCardArrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMCardArrowView.m; sourceTree = "<group>"; };
+		F953E4F61CE5F3110006FA1F /* UIImageView+BFMSetImageRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+BFMSetImageRefresh.h"; sourceTree = "<group>"; };
+		F953E4F71CE5F3110006FA1F /* UIImageView+BFMSetImageRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+BFMSetImageRefresh.m"; sourceTree = "<group>"; };
 		F96073E21BE723D800704692 /* BFMNewsTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMNewsTextCell.h; sourceTree = "<group>"; };
 		F96073E31BE723D800704692 /* BFMNewsTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMNewsTextCell.m; sourceTree = "<group>"; };
 		F96073E71BE72D5000704692 /* BFMNewsActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMNewsActionCell.h; sourceTree = "<group>"; };
@@ -932,6 +935,7 @@
 		619E2C0A1B977D4800886893 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				F953E4F51CE5F2F10006FA1F /* UIImageView */,
 				F92367ED1C767FD4000F5DEE /* NSLayoutConstraint */,
 				2CF024F01B9A413C009E8959 /* UIStoryboard */,
 				619E2C101B977DB400886893 /* UIColor */,
@@ -1332,6 +1336,15 @@
 			);
 			name = "Card View";
 			path = "Classes/Screens/Profile/Card View";
+			sourceTree = "<group>";
+		};
+		F953E4F51CE5F2F10006FA1F /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				F953E4F61CE5F3110006FA1F /* UIImageView+BFMSetImageRefresh.h */,
+				F953E4F71CE5F3110006FA1F /* UIImageView+BFMSetImageRefresh.m */,
+			);
+			name = UIImageView;
 			sourceTree = "<group>";
 		};
 		F96073E11BE7239900704692 /* View */ = {
@@ -1817,6 +1830,7 @@
 				61CFBC361C6CCF2800AACBC0 /* BFMPrizeCategoriesViewModel.m in Sources */,
 				F92367F81C771C5B000F5DEE /* BFMUtils.m in Sources */,
 				F919C91E1BE7ECB70022CB02 /* BFMPendingTableAdapter.m in Sources */,
+				F953E4F81CE5F3110006FA1F /* UIImageView+BFMSetImageRefresh.m in Sources */,
 				F9EB695F1C862AB80031BB7D /* BFMPrizeLinesAdapter.m in Sources */,
 				F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */,
 				618AC4641C7481FA005FB7C5 /* BFMPrizeCategoryCell.m in Sources */,

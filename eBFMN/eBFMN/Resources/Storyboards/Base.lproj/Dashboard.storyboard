@@ -246,7 +246,7 @@
                                 <rect key="frame" x="6" y="319" width="588" height="280"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qf9-aC-jJg" customClass="MCPercentageDoughnutView">
-                                        <rect key="frame" x="240" y="86.5" width="107" height="107"/>
+                                        <rect key="frame" x="240" y="86" width="107" height="107"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="107" id="cmX-bZ-JPf"/>
@@ -254,21 +254,21 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKR-WV-WPJ" userLabel="Gift">
-                                        <rect key="frame" x="175" y="119.5" width="40" height="40"/>
+                                        <rect key="frame" x="175" y="119" width="40" height="40"/>
                                         <state key="normal" image="ic_gift" backgroundImage="btn_points"/>
                                         <connections>
                                             <action selector="prizesTapped:" destination="skd-cc-V9v" eventType="touchUpInside" id="Z2J-cr-oFp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOs-ed-eO7" userLabel="Points">
-                                        <rect key="frame" x="372" y="119.5" width="40" height="40"/>
+                                        <rect key="frame" x="372" y="119" width="40" height="40"/>
                                         <state key="normal" image="ic_points" backgroundImage="btn_points"/>
                                         <connections>
                                             <segue destination="wrP-Gf-aM1" kind="show" id="56T-6I-Zz3"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_prize" translatesAutoresizingMaskIntoConstraints="NO" id="e50-Xi-w5e">
-                                        <rect key="frame" x="260" y="105.5" width="68" height="68"/>
+                                        <rect key="frame" x="260" y="106" width="68" height="68"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="68" id="Dlr-ra-dYx"/>
                                             <constraint firstAttribute="height" constant="68" id="rT9-po-v9R"/>
@@ -280,20 +280,20 @@
                                         <color key="textColor" red="0.22745098039215686" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000/1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="og1-Lu-2Rn">
-                                        <rect key="frame" x="261" y="247" width="65.5" height="17.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="og1-Lu-2Rn">
+                                        <rect key="frame" x="284" y="247" width="18.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                         <color key="textColor" red="0.22745098039215686" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIZES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKY-8E-Ldl">
-                                        <rect key="frame" x="184" y="167.5" width="22.5" height="9"/>
+                                        <rect key="frame" x="184" y="167" width="22.5" height="9"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="7"/>
                                         <color key="textColor" red="0.2274509804" green="0.2274509804" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PENDING POINTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5M-sm-Dnp">
-                                        <rect key="frame" x="364" y="167.5" width="56" height="9"/>
+                                        <rect key="frame" x="364" y="167" width="56" height="9"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="7"/>
                                         <color key="textColor" red="0.2274509804" green="0.2274509804" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
