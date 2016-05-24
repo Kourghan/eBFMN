@@ -20,12 +20,14 @@
 #import "BFMNewsTableAdapter.h"
 
 #import <ALAlertBanner/ALAlertBanner.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface BFMNewsViewController ()<UITableViewDelegate, BFMNewsTableAdapterProtocol>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) BFMNewsTableAdapter *adapter;
+@property (nonatomic, strong) UIActivityIndicatorView *refreshIndicatorView;
 
 @end
 
@@ -35,6 +37,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.refreshIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    [self.refreshIndicatorView stopAnimating];
+    self.refreshIndicatorView.hidden = YES;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.refreshIndicatorView];
 
     self.tableView.estimatedRowHeight = 85.f;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -78,10 +85,17 @@
 
 - (void)refreshNews:(UIRefreshControl *)control {
     __weak typeof(self) weakSelf = self;
+    
+    [self.refreshIndicatorView startAnimating];
+    self.refreshIndicatorView.hidden = NO;
+    
     [self.model loadNewsReset:(control != nil) callback:^(NSError *error) {
         if (control) {
             [control endRefreshing];
         }
+        
+        [self.refreshIndicatorView stopAnimating];
+        self.refreshIndicatorView.hidden = YES;
         if (error) {
             ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
                                                                 style:ALAlertBannerStyleFailure

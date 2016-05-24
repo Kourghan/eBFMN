@@ -13,6 +13,8 @@
 
 #import "NINavigationAppearance.h"
 #import "BFMDefaultNavagtionBarAppearance.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+#import "UIViewController+Error.h"
 
 @interface BFMDetailedNewsViewController ()
 
@@ -54,15 +56,34 @@
 
 - (void)loadDetails {
 	__weak typeof(self) weakSelf = self;
+    [self prepareForLoading];
     [self.model fetchDetailedWithCallback:^(BFMNewsRecord *record, NSError *error) {
 		if (error) {
-			
+            [SVProgressHUD dismiss];
+            [weakSelf bfm_showError];
 		} else if (record) {
 			weakSelf.titleLabel.text = record.title;
 			weakSelf.dateLabel.text = [record formattedDate];
 			weakSelf.textLabel.text = record.text;
+            [weakSelf onLoadingCompleted];
 		}
 	}];
+}
+
+- (void)prepareForLoading {
+    for (UIView *view in self.view.subviews) {
+        view.alpha = 0.f;
+    }
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+}
+
+- (void)onLoadingCompleted {
+    for (UIView *view in self.view.subviews) {
+        [UIView animateWithDuration:0.2 animations:^{
+            view.alpha = 1.f;
+        }];
+    }
+    [SVProgressHUD dismiss];
 }
 
 @end

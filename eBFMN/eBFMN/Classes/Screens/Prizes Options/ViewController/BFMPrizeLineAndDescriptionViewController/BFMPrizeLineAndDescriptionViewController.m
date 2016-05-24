@@ -17,6 +17,7 @@
 #import "BFMPrize+CoreDataProperties.h"
 #import "BFMPrize.h"
 #import "UIImageView+BFMSetImageRefresh.h"
+#import "UIViewController+Error.h"
 
 @interface BFMPrizeLineAndDescriptionViewController ()
 
@@ -78,6 +79,10 @@
                           [self showContentViews:YES animated:YES];
                           self.prizes = prizes;
                           [self updateOnResponse];
+                      }
+                      
+                      if (error) {
+                          [self bfm_showError];
                       }
                   }];
 }

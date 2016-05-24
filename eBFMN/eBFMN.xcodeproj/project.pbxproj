@@ -163,6 +163,7 @@
 		F99096A21BE020CB00E1D629 /* BFMShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969B1BE020CB00E1D629 /* BFMShopModel.m */; };
 		F99096A31BE020CB00E1D629 /* BFMShopCollectionAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */; };
 		F99096A41BE020CB00E1D629 /* BFMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99096A11BE020CB00E1D629 /* BFMShopViewController.m */; };
+		F9CAB2EC1CF51096000E24C2 /* UIViewController+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CAB2EB1CF51096000E24C2 /* UIViewController+Error.m */; };
 		F9D52A5B1C8743F700B85F81 /* BFMPrize+BFMPrizeLines.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D52A5A1C8743F700B85F81 /* BFMPrize+BFMPrizeLines.m */; };
 		F9EB69591C862A880031BB7D /* BFMPrize2LinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB69581C862A880031BB7D /* BFMPrize2LinesViewController.m */; };
 		F9EB695C1C862AA50031BB7D /* BFMPrizeLinesView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB695B1C862AA50031BB7D /* BFMPrizeLinesView.m */; };
@@ -491,6 +492,8 @@
 		F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMShopCollectionAdapter.m; sourceTree = "<group>"; };
 		F99096A01BE020CB00E1D629 /* BFMShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMShopViewController.h; sourceTree = "<group>"; };
 		F99096A11BE020CB00E1D629 /* BFMShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMShopViewController.m; sourceTree = "<group>"; };
+		F9CAB2EA1CF51096000E24C2 /* UIViewController+Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Error.h"; sourceTree = "<group>"; };
+		F9CAB2EB1CF51096000E24C2 /* UIViewController+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Error.m"; sourceTree = "<group>"; };
 		F9D52A591C8743F700B85F81 /* BFMPrize+BFMPrizeLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BFMPrize+BFMPrizeLines.h"; sourceTree = "<group>"; };
 		F9D52A5A1C8743F700B85F81 /* BFMPrize+BFMPrizeLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BFMPrize+BFMPrizeLines.m"; sourceTree = "<group>"; };
 		F9EB69571C862A880031BB7D /* BFMPrize2LinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPrize2LinesViewController.h; sourceTree = "<group>"; };
@@ -935,6 +938,7 @@
 		619E2C0A1B977D4800886893 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				F9CAB2E91CF51083000E24C2 /* UIViewController+Error */,
 				F953E4F51CE5F2F10006FA1F /* UIImageView */,
 				F92367ED1C767FD4000F5DEE /* NSLayoutConstraint */,
 				2CF024F01B9A413C009E8959 /* UIStoryboard */,
@@ -1452,6 +1456,16 @@
 			path = Classes/Screens/Shop/ViewController;
 			sourceTree = "<group>";
 		};
+		F9CAB2E91CF51083000E24C2 /* UIViewController+Error */ = {
+			isa = PBXGroup;
+			children = (
+				F9CAB2EA1CF51096000E24C2 /* UIViewController+Error.h */,
+				F9CAB2EB1CF51096000E24C2 /* UIViewController+Error.m */,
+			);
+			name = "UIViewController+Error";
+			path = "Misc/Categories/UIViewController+Error";
+			sourceTree = "<group>";
+		};
 		F9D52A571C8743D200B85F81 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -1871,6 +1885,7 @@
 				F96073EF1BE72E9E00704692 /* BFMNewsSingleActionCell.m in Sources */,
 				61EC27EA1BCA858900DD3812 /* BFMPrize+CoreDataProperties.m in Sources */,
 				61FD3D6D1BA7096D00F4CEFB /* ODSArraySection.m in Sources */,
+				F9CAB2EC1CF51096000E24C2 /* UIViewController+Error.m in Sources */,
 				61FD3D6C1BA7096D00F4CEFB /* ODSFilteringSourceSearchController.m in Sources */,
 				F919C9261BE819360022CB02 /* BFMPendingDateHeaderView.m in Sources */,
 				61B1DD3A1BB6D97D00DB6D23 /* BFMBasePageController.m in Sources */,

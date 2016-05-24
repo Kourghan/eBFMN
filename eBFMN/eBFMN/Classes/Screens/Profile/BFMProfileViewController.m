@@ -27,6 +27,8 @@
 #import "BFMBackCardView.h"
 #import "UIView+BFMLoad.h"
 #import "BFMSessionManager.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+#import "UIViewController+Error.h"
 
 #import <MagicalRecord/MagicalRecord.h>
 
@@ -85,6 +87,7 @@
     [NINavigationAppearance pushAppearanceForNavigationController:self.navigationController];
     [BFMDefaultNavagtionBarAppearance applyTo:self.navigationController.navigationBar];
     
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     [self loadLeague];
     [self loadBenefits];
     [self loadGoals];
@@ -153,9 +156,8 @@
     BFMUser *user = [BFMUser currentUser];
     [user getIBLeagueWithCompletitionBlock:^(BFMLeagueType type,
                                              NSError *error) {
-        //if (!error) {
-            [weakSelf bindType:type];
-        //}
+        [SVProgressHUD dismiss];
+        [weakSelf bindType:type];
     }];
 }
 
@@ -302,14 +304,28 @@
 
 - (void)loadBenefits {
     [BFMUser getAllIBLeagueBenefits:^(NSDictionary *leagues, NSError *error) {
-        [BFMProfileCardDataController setBenefits:leagues];
+        [SVProgressHUD dismiss];
+        
+        if (error) {
+            [self bfm_showError];
+        } else {
+            [BFMProfileCardDataController setBenefits:leagues];
+        }
+        
         [self updateUI];
     }];
 }
 
 - (void)loadGoals {
     [BFMUser getAllIBLeagueGoals:^(NSDictionary *leagues, NSError *error) {
-        [BFMProfileCardDataController setGoals:leagues];
+        [SVProgressHUD dismiss];
+        
+        if (error) {
+            [self bfm_showError];
+        } else {
+            [BFMProfileCardDataController setGoals:leagues];
+        }
+        
         [self updateUI];
     }];
 }

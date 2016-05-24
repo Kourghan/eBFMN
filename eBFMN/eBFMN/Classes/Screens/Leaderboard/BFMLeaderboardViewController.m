@@ -15,6 +15,7 @@
 #import "BFMUser+Extension.h"
 #import "UIColor+Extensions.h"
 #import <SVProgressHUD/SVProgressHUD.h>
+#import "UIViewController+Error.h"
 
 @interface BFMLeaderboardViewController() <UITableViewDataSource, UITableViewDelegate>
 
@@ -71,6 +72,8 @@
 
 - (void)getLeaderboardRecordsWithType:(NSInteger) type {
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+    self.dataViewConstr.constant = 0.f;
+    __weak typeof(self) weakSelf = self;
     [BFMLeaderboardModel getLeaderboardForType:type+1 success:^(NSArray *records) { //+1 is needed because backend enumeration starts with 1
         [SVProgressHUD dismiss];
         self.records = records;
@@ -78,7 +81,9 @@
         [self.tableView reloadData];
     } failure:^(NSError *error) {
         [SVProgressHUD dismiss];
-        //handle error
+        if (error) {
+            [weakSelf bfm_showError];
+        }
     }];
     
 }

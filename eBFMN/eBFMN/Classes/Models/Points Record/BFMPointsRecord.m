@@ -34,7 +34,7 @@
                    @"page" : @(0)
                    }
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-             if ([[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"]) {
+             if (0 && [[responseObject valueForKey:@"Key"] isEqualToString:@"ErrorOccured"]) {
                  completition(nil, [NSError new]);
              } else {
                  NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
@@ -61,14 +61,14 @@
                    }
          success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
 			 id errorData = [responseObject valueForKey:@"Key"];
-			 if (errorData == nil || [errorData isKindOfClass:[NSNull class]]) {
+             if (0 && ((errorData == nil) || [errorData isKindOfClass:[NSNull class]])) {
 				 completition(nil, [NSError new]);
 			 } else {
-				 if ([errorData isEqualToString:@"ErrorOccured"]) {
+				 if (0 && [errorData isEqualToString:@"ErrorOccured"]) {
 					 completition(nil, [NSError new]);
 				 } else {
 					 id data = [responseObject valueForKey:@"Data"];
-					 if (data == nil || [data isKindOfClass:[NSNull class]]) {
+					 if ((data != nil) && ![data isKindOfClass:[NSNull class]]) {
 						 NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
 						 NSArray *transactions = [FEMDeserializer  collectionFromRepresentation:[responseObject valueForKey:@"Data"]
 																						mapping:[BFMPointsRecord defaultMapping]
@@ -106,6 +106,9 @@
                                                                         if ([value isKindOfClass:[NSNumber class]]) {
                                                                             return [(NSNumber *)value stringValue];
                                                                         }
+                                                                        if ([value isKindOfClass:[NSString class]]) {
+                                                                            return value;
+                                                                        }
                                                                         return nil;
                                                                     } reverseMap:^id(id value) {
                                                                         NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
@@ -138,7 +141,7 @@
     
     [mapping setPrimaryKey:@"identifier"];
     [mapping addAttributesFromDictionary:@{
-                                           @"identifier" : @"_id",
+                                           @"identifier" : @"ApproveDate",
                                            @"type" : @"Type",
                                            @"points" : @"Points",
                                            @"deposit" : @"Deposit",

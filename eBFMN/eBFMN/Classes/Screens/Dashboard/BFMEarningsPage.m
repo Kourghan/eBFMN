@@ -19,6 +19,7 @@
 #import <CZPicker/CZPicker.h>
 
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "UIViewController+Error.h"
 
 @interface BFMEarningsPage () <CZPickerViewDataSource, CZPickerViewDelegate>
 
@@ -88,8 +89,14 @@
     }];
     
     [BFMUser getPointsCount:^(NSNumber *points, NSError *error) {
+        if (error) {
+            [weakSelf bfm_showError];
+        }
         weakSelf.points = points;
         [BFMPrize currentPrizeWithComplatition:^(BFMPrize * prize, NSError * error) {
+            if (error) {
+                [weakSelf bfm_showError];
+            }
             [weakSelf bindPrize:prize];
         }];
     }];

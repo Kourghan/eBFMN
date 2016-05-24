@@ -24,9 +24,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 6s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7T-8R-rwQ">
-                                <rect key="frame" x="59" y="84" width="202" height="21"/>
+                                <rect key="frame" x="12" y="84" width="296" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="202" id="Gdt-Bz-43V"/>
                                     <constraint firstAttribute="height" constant="21" id="cBl-Jv-Qjb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="19"/>
@@ -98,7 +97,8 @@
                             <constraint firstItem="N1y-uX-d1C" firstAttribute="top" secondItem="Rq6-iI-kSo" secondAttribute="bottom" constant="8" id="AWm-SK-sev"/>
                             <constraint firstItem="RRF-bz-49H" firstAttribute="centerY" secondItem="Ao4-Wy-HMu" secondAttribute="centerY" id="AqL-Dw-DKA"/>
                             <constraint firstItem="Y7T-8R-rwQ" firstAttribute="top" secondItem="Icn-7T-2Xu" secondAttribute="bottom" constant="20" id="EkT-Pc-D1L"/>
-                            <constraint firstItem="Y7T-8R-rwQ" firstAttribute="centerX" secondItem="oSx-6t-Rsr" secondAttribute="centerX" id="JHn-d7-Oze"/>
+                            <constraint firstItem="Y7T-8R-rwQ" firstAttribute="leading" secondItem="oSx-6t-Rsr" secondAttribute="leading" constant="12" id="JKI-09-VPt"/>
+                            <constraint firstAttribute="trailing" secondItem="Y7T-8R-rwQ" secondAttribute="trailing" constant="12" id="PIt-dG-bav"/>
                             <constraint firstItem="50N-n8-9NS" firstAttribute="top" secondItem="N1y-uX-d1C" secondAttribute="bottom" constant="20" id="T7F-hW-K2a"/>
                             <constraint firstItem="Rq6-iI-kSo" firstAttribute="leading" secondItem="oSx-6t-Rsr" secondAttribute="leading" constant="12" id="U40-Zf-PlI"/>
                             <constraint firstItem="RRF-bz-49H" firstAttribute="centerX" secondItem="Ao4-Wy-HMu" secondAttribute="centerX" id="VAZ-rW-UFP"/>

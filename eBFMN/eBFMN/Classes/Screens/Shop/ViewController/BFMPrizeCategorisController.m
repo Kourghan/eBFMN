@@ -18,6 +18,8 @@
 #import "BFMPrize2LinesViewController.h"
 #import "BFMPrizeLineAndDescriptionViewController.h"
 #import "BFMPrize2LinesViewController.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+#import "UIViewController+Error.h"
 
 
 #import "ALAlertBanner.h"
@@ -36,6 +38,7 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 
 @property (weak, nonatomic) IBOutlet UICollectionView *bannerCollectionView;
 @property (nonatomic, strong) BFMPrizeBannerAdapter *bannerAdapter;
+@property (nonatomic, strong) UIActivityIndicatorView *refreshIndicatorView;
 
 @end
 
@@ -45,6 +48,8 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+    
+    [self setupIndicatorView];
 	
 	[self setupCollectionView];
 	[self setupModels];
@@ -70,6 +75,13 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 }
 
 #pragma mark - Private (setup)
+
+- (void)setupIndicatorView {
+    self.refreshIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    [self.refreshIndicatorView stopAnimating];
+    self.refreshIndicatorView.hidden = YES;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.refreshIndicatorView];
+}
 
 - (void)setupCollectionView {
 	UINib *nib = [UINib nibWithNibName:kBFMCategoryCellID bundle:nil];
@@ -123,7 +135,13 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 	
 	
 	__weak typeof(self) weakSelf = self;
+    [self.refreshIndicatorView startAnimating];
+    self.refreshIndicatorView.hidden = NO;
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
 	[self.model loadCategoriesWithCallback:^(NSError *error) {
+        [SVProgressHUD dismiss];
+        [weakSelf.refreshIndicatorView stopAnimating];
+        weakSelf.refreshIndicatorView.hidden = YES;
 		if (error) {
 			ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
 																style:ALAlertBannerStyleFailure
@@ -157,12 +175,15 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 - (void)handleBannerSelection:(BFMBanner *)banner {
 	[BFMPrize prizeTypeById:banner.prizeId completion:^(BFMPrizeType type, NSError *error) {
 		if (error) {
+            [self bfm_showError];
 			return;
 		}
 		
 		[BFMPrize getPrize:banner.prizeId
 				completion:^(BFMPrize *prize, NSError *error) {
-					if ([prize.prizeType integerValue] == BFMPrizeTypeColor) {
+                    if (error) {
+                        [self bfm_showError];
+                    } else if ([prize.prizeType integerValue] == BFMPrizeTypeColor) {
 						[self showColoredPrize:prize];
 					} else if (type == BFMPrizeTypeText) {
 						[self showTextPrize:prize];

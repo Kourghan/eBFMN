@@ -17,6 +17,7 @@
 #import "ODSArrayDataSource.h"
 
 #import "JNKeychain+UNTExtension.h"
+#import "UIViewController+Error.h"
 
 @interface BFMClientsPage ()
 
@@ -57,8 +58,13 @@
     //my.fxcentral.com/login.html?guid=08c410b0-120d-40fa-b650-72e66b19f4ab&goto=/funds/internalTransfer.html?acc=8079 (USD)
 
     
+    __weak typeof(self) weakSelf = self;
     [self.adapter setDidSelectObject:^(ODSTableAdapter *sender, BFMSysAccount *object, NSIndexPath *indexPath) {
         [BFMUser getLinkForOffice:^(NSString *link, NSError *error) {
+            if (error) {
+                [weakSelf bfm_showError];
+            }
+            
             NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
             NSString *urlString = [NSString stringWithFormat:@"%@/login.html?guid=%@&goto=/funds/internalTransfer.html?acc=%@",
                                    link,
@@ -96,7 +102,12 @@
 #pragma mark - handlers
 
 - (IBAction)liveTapped:(id)sender {
+    __weak typeof(self) weakSelf = self;
     [BFMUser getLinkForOffice:^(NSString *link, NSError *error) {
+        if (error) {
+            [weakSelf bfm_showError];
+        }
+        
         NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
         NSString *urlString = [NSString stringWithFormat:@"%@/login.html?guid=%@&goto=/ib/account-list.html?accountType=1",
                                link,
@@ -108,7 +119,11 @@
 }
 
 - (IBAction)demoTapped:(id)sender {
+    __weak typeof(self) weakSelf = self;
     [BFMUser getLinkForOffice:^(NSString *link, NSError *error) {
+        if (error) {
+            [weakSelf bfm_showError];
+        }
         NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
         NSString *urlString = [NSString stringWithFormat:@"%@/login.html?guid=%@&goto=/ib/account-list.html?accountType=2",
                                link,

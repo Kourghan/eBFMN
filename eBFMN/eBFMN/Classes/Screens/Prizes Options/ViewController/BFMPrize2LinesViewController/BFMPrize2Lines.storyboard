@@ -23,16 +23,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 6s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="59A-P3-xn7">
-                                <rect key="frame" x="59" y="84" width="202" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="202" id="gmA-tp-FJr"/>
-                                    <constraint firstAttribute="height" constant="21" id="x4J-0i-Wan"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="19"/>
-                                <color key="textColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Svt-k4-nLg" customClass="BFMPrizeLinesView">
                                 <rect key="frame" x="12" y="368" width="296" height="180"/>
                                 <subviews>
@@ -116,11 +106,21 @@
                                 </constraints>
                                 <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 6s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="59A-P3-xn7">
+                                <rect key="frame" x="12" y="84" width="296" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="x4J-0i-Wan"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="19"/>
+                                <color key="textColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="2h7-la-4RW" secondAttribute="trailing" constant="40" id="DdB-Zc-TE9"/>
                             <constraint firstItem="yPI-EW-OdI" firstAttribute="centerX" secondItem="cgJ-16-6VH" secondAttribute="centerX" id="Eje-bL-7g5"/>
+                            <constraint firstItem="59A-P3-xn7" firstAttribute="leading" secondItem="cgJ-16-6VH" secondAttribute="leading" constant="12" id="Fhx-1h-x88"/>
                             <constraint firstItem="2h7-la-4RW" firstAttribute="top" secondItem="59A-P3-xn7" secondAttribute="bottom" constant="14" id="JB0-5g-jKa"/>
                             <constraint firstItem="Svt-k4-nLg" firstAttribute="top" secondItem="2h7-la-4RW" secondAttribute="bottom" constant="30" id="MWe-DD-UXX"/>
                             <constraint firstItem="aie-MW-2Zt" firstAttribute="centerY" secondItem="2h7-la-4RW" secondAttribute="centerY" id="WXw-G2-eQ8"/>
@@ -128,8 +128,8 @@
                             <constraint firstItem="aie-MW-2Zt" firstAttribute="centerX" secondItem="2h7-la-4RW" secondAttribute="centerX" id="XR3-c9-EQL"/>
                             <constraint firstItem="59A-P3-xn7" firstAttribute="top" secondItem="hXu-W7-fzG" secondAttribute="bottom" constant="20" id="eeN-Hb-kCf"/>
                             <constraint firstItem="TH0-SP-gqc" firstAttribute="top" secondItem="Svt-k4-nLg" secondAttribute="bottom" constant="20" id="euU-VF-ce2"/>
+                            <constraint firstAttribute="trailing" secondItem="59A-P3-xn7" secondAttribute="trailing" constant="12" id="flK-kq-qNl"/>
                             <constraint firstItem="2h7-la-4RW" firstAttribute="leading" secondItem="cgJ-16-6VH" secondAttribute="leading" constant="40" id="guh-bm-gJE"/>
-                            <constraint firstItem="59A-P3-xn7" firstAttribute="centerX" secondItem="cgJ-16-6VH" secondAttribute="centerX" id="gv3-Mw-28T"/>
                             <constraint firstItem="Svt-k4-nLg" firstAttribute="top" secondItem="yPI-EW-OdI" secondAttribute="bottom" constant="6" id="rCs-R7-yHL"/>
                             <constraint firstAttribute="trailing" secondItem="Svt-k4-nLg" secondAttribute="trailing" constant="12" id="t0b-Qs-WuQ"/>
                         </constraints>

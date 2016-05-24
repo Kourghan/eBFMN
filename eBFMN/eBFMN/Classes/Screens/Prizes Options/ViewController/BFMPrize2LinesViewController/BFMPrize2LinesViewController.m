@@ -23,6 +23,7 @@
 #import "BFMColoredPrize.h"
 #import "UIColor+Extensions.h"
 #import "UIImageView+BFMSetImageRefresh.h"
+#import "UIViewController+Error.h"
 
 @interface BFMPrize2LinesViewController ()
 
@@ -85,6 +86,10 @@
                           [self showContentViews:YES animated:YES];
                           self.prizes = prizes;
                           [self updateOnResponse];
+                      }
+                      
+                      if (error) {
+                          [self bfm_showError];
                       }
                   }];
 }
@@ -165,6 +170,10 @@
                                                                 title:NSLocalizedString(@"error.error", nil)
                                                              subtitle:error.localizedDescription];
             [banner show];
+        }
+        
+        if (error) {
+            [self bfm_showError];
         }
     }];
 }
