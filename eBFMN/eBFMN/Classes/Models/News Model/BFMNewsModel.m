@@ -31,8 +31,8 @@ static NSString *kLastNewsUpdateUserDefaultsKey = @"kLastNewsUpdateUserDefaultsK
     if (self = [super init]) {
         NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
         
-        NSFetchRequest *request = [BFMNewsRecord MR_requestAllSortedBy:@"identifier"
-                                                             ascending:YES
+        NSFetchRequest *request = [BFMNewsRecord MR_requestAllSortedBy:@"date"
+                                                             ascending:NO
                                                          withPredicate:nil
                                                              inContext:context];
         
