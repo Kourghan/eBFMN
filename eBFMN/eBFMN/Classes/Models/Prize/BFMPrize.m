@@ -40,6 +40,10 @@
 	
 	NSString *sessionKey = [JNKeychain loadValueForKey:kBFMSessionKey];
 	
+	if (sessionKey.length == 0) {
+		return;
+	}
+	
     [manager GET:@"Bonus/GetSelectedPrize"
       parameters:@{
                    @"guid" : sessionKey
