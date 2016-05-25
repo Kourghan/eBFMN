@@ -74,7 +74,7 @@ static NSInteger const kBFMTagValue = 1014;
         case BFMCarouselItemTypeCommission:
             NSLog(@"COMISSION!");
             type.text = NSLocalizedString(@"dashboard.commissions", nil);
-            value.text = [user commissionsForCurrency:user.currentCurrency];
+            value.text = [user commissionsForCurrency:self.currentCurrency];
             break;
         case BFMCarouselItemTypeRebates:
             NSLog(@"REBATES!");
