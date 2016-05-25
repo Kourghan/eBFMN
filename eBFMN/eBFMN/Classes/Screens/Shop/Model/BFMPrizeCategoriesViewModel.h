@@ -16,6 +16,6 @@
 @property (nonatomic, strong) ODSDataSource *bannerDataSource;
 
 - (void)loadCategoriesWithCallback:(void (^)(NSError *error))completion;
-- (void)loadBannersWithCallback:(void (^)(NSError *error))completion;
+- (void)loadBannersWithCallback:(void (^)(NSArray *banners, NSError *error))completion;
 
 @end

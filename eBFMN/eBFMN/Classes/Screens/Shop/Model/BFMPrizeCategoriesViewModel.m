@@ -64,9 +64,9 @@
 	}];
 }
 
-- (void)loadBannersWithCallback:(void (^)(NSError *))completion {
+- (void)loadBannersWithCallback:(void (^)(NSArray *banners, NSError *))completion {
 	[BFMBanner bannersWithCompletion:^(NSArray *banners, NSError *error) {
-		completion(error);
+		completion(banners, error);
 	}];
 }
 

@@ -33,7 +33,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imd-X4-ICJ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="173.5"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xZP-at-Hzr">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xZP-at-Hzr">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="173.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ZWm-0X-e2O">
@@ -53,10 +53,21 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="HdD-n8-RCZ">
+                                        <rect key="frame" x="8" y="141.5" width="359" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="qPG-Xd-C3q"/>
+                                        </constraints>
+                                        <color key="pageIndicatorTintColor" red="0.72549019607843135" green="0.72549019607843135" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HdD-n8-RCZ" secondAttribute="trailing" constant="8" id="2j4-RC-uds"/>
                                     <constraint firstAttribute="width" secondItem="imd-X4-ICJ" secondAttribute="height" multiplier="750:347" id="86P-n4-BbJ"/>
+                                    <constraint firstItem="HdD-n8-RCZ" firstAttribute="leading" secondItem="imd-X4-ICJ" secondAttribute="leading" constant="8" id="JRg-gD-njn"/>
+                                    <constraint firstAttribute="bottom" secondItem="HdD-n8-RCZ" secondAttribute="bottom" constant="2" id="KFe-qC-ebF"/>
                                     <constraint firstItem="xZP-at-Hzr" firstAttribute="leading" secondItem="imd-X4-ICJ" secondAttribute="leading" id="aBE-h1-jSY"/>
                                     <constraint firstAttribute="bottom" secondItem="xZP-at-Hzr" secondAttribute="bottom" id="qpE-Du-Ps7"/>
                                     <constraint firstItem="xZP-at-Hzr" firstAttribute="top" secondItem="imd-X4-ICJ" secondAttribute="top" id="wDt-bK-Onc"/>
@@ -99,6 +110,7 @@
                     <navigationItem key="navigationItem" title="PRIZES" id="43r-qO-6Vc"/>
                     <connections>
                         <outlet property="bannerCollectionView" destination="xZP-at-Hzr" id="oOQ-kh-R23"/>
+                        <outlet property="bannerPageControl" destination="HdD-n8-RCZ" id="TvC-M6-EZj"/>
                         <outlet property="collectionView" destination="aDM-om-P6t" id="33K-WW-dn1"/>
                         <segue destination="bYd-8h-R0f" kind="show" identifier="prizeList" id="bkR-RG-awL"/>
                     </connections>

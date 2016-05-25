@@ -65,5 +65,14 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 	return CGSizeMake(screenWidth, screenWidth / kBFMPrizeBannerAspectRatio);
 }
 
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat w = scrollView.frame.size.width;
+    CGFloat frac = scrollView.contentOffset.x / w;
+    if (self.swipeToBannerCallback) {
+        self.swipeToBannerCallback(roundf(frac));
+    }
+}
 
 @end

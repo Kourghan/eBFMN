@@ -18,5 +18,6 @@ typedef void (^BFMBannerSelection)(BFMBanner *banner);
 @property (nonatomic, assign) NSInteger selectedIndex;
 @property (nonatomic, copy) BFMShopCollectionSelection selection;
 @property (nonatomic, copy) BFMBannerSelection bannerSelection;
+@property (nonatomic, copy) BFMShopCollectionSelection swipeToBannerCallback;
 
 @end

@@ -39,6 +39,7 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 @property (weak, nonatomic) IBOutlet UICollectionView *bannerCollectionView;
 @property (nonatomic, strong) BFMPrizeBannerAdapter *bannerAdapter;
 @property (nonatomic, strong) UIActivityIndicatorView *refreshIndicatorView;
+@property (nonatomic, weak) IBOutlet UIPageControl *bannerPageControl;
 
 @end
 
@@ -101,10 +102,11 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 					  toCellIdentifier:kBFMPrizeBannerCellID];
 	self.bannerAdapter.dataSource = self.model.bannerDataSource;
 	self.bannerAdapter.collectionView = self.bannerCollectionView;
-	
+    self.bannerPageControl.hidden = YES;
+    self.bannerPageControl.userInteractionEnabled = NO;
 	
 	__weak typeof(self) weakSelf = self;
-	[self.model loadBannersWithCallback:^(NSError *error) {
+	[self.model loadBannersWithCallback:^(NSArray *banners, NSError *error) {
 		if (error) {
 			ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
 																style:ALAlertBannerStyleFailure
@@ -112,13 +114,20 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 																title:NSLocalizedString(@"error.error", nil)
 															 subtitle:NSLocalizedString(@"error.prizes", nil)];
 			[banner show];
-		}
+        } else {
+            weakSelf.bannerPageControl.hidden = (banners.count < 2);
+            weakSelf.bannerPageControl.numberOfPages = banners.count;
+        }
 	}];
 	
 	self.bannerAdapter.bannerSelection = ^(BFMBanner *banner) {
 		__strong typeof(weakSelf) strongSelf = weakSelf;
 		[strongSelf handleBannerSelection:banner];
 	};
+    
+    self.bannerAdapter.swipeToBannerCallback = ^(NSInteger index) {
+        weakSelf.bannerPageControl.currentPage = index;
+    };
 	
 	//if you want to setup selection on screen creation do it here
 	self.bannerAdapter.selectedIndex = NSNotFound;
