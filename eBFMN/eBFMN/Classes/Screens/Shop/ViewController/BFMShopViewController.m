@@ -89,7 +89,7 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
 		if (error) {
 			ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
 																style:ALAlertBannerStyleFailure
-															 position:ALAlertBannerPositionUnderNavBar
+															 position:ALAlertBannerPositionTop
 																title:NSLocalizedString(@"error.error", nil)
 															 subtitle:NSLocalizedString(@"error.prizes", nil)];
 			[banner show];
@@ -100,7 +100,7 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
 		if (error) {
 			ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
 																style:ALAlertBannerStyleFailure
-															 position:ALAlertBannerPositionUnderNavBar
+															 position:ALAlertBannerPositionTop
 																title:NSLocalizedString(@"error.error", nil)
 															 subtitle:NSLocalizedString(@"error.points", nil)];
 			[banner show];
@@ -190,7 +190,7 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
         if (error) {
             ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
                                                                 style:ALAlertBannerStyleFailure
-                                                             position:ALAlertBannerPositionUnderNavBar
+                                                             position:ALAlertBannerPositionTop
                                                                 title:NSLocalizedString(@"error.error", nil)
                                                              subtitle:NSLocalizedString(@"error.saving", nil)];
             [banner show];

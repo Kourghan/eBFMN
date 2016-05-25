@@ -70,7 +70,7 @@
         if (error) {
             ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
                                                                 style:ALAlertBannerStyleFailure
-                                                             position:ALAlertBannerPositionUnderNavBar
+                                                             position:ALAlertBannerPositionTop
                                                                 title:NSLocalizedString(@"error.error", nil)
                                                              subtitle:NSLocalizedString(@"points.badrequest", nil)];
             [banner show];

@@ -12,9 +12,9 @@
 @implementation UIViewController (Error)
 
 - (void)bfm_showError {
-    ALAlertBanner *banner = [ALAlertBanner alertBannerForView:self.view.window
+    ALAlertBanner *banner = [ALAlertBanner alertBannerForView:[UIApplication sharedApplication].keyWindow
                                                         style:ALAlertBannerStyleFailure
-                                                     position:ALAlertBannerPositionUnderNavBar
+                                                     position:ALAlertBannerPositionTop
                                                         title:NSLocalizedString(@"error.error", nil)
                                                      subtitle:NSLocalizedString(@"error.connection", nil)];
     [banner show];
