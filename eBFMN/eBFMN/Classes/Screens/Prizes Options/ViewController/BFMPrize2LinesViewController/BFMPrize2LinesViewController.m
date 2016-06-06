@@ -24,15 +24,17 @@
 #import "UIColor+Extensions.h"
 #import "UIImageView+BFMSetImageRefresh.h"
 #import "UIViewController+Error.h"
+#import "BFMPrizeGalleryView.h"
+#import "BFMSubviewsLayoutingView.h"
 
 @interface BFMPrize2LinesViewController ()
 
 @property (nonatomic, weak) IBOutlet BFMPrizeLinesView *linesView;
 @property (nonatomic, weak) IBOutlet UILabel *descriptionLabel;
-@property (nonatomic, weak) IBOutlet UIImageView *prizeImageView;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UIPageControl *pageControl;
-@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *indicator;
+@property (nonatomic, weak) IBOutlet BFMPrizeGalleryView *galleryView;
+@property (nonatomic, weak) IBOutlet BFMSubviewsLayoutingView *layoutingView;
 
 @property (nonatomic, strong) NSArray *prizes;
 
@@ -44,9 +46,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.indicator stopAnimating];
-    self.indicator.hidden = YES;
     
     __weak typeof(self) weakSelf = self;
     self.linesView.selection = ^(BFMPrizeLinesView *lineView,
@@ -65,7 +64,20 @@
     self.pageControl.hidden = YES;
     self.pageControl.userInteractionEnabled = NO;
     
+    self.galleryView.selectedIdx = 0;
+    
+    self.galleryView = [BFMPrizeGalleryView galleryView];
+    self.galleryView.frame = self.layoutingView.bounds;
+    [self.layoutingView addSubview:self.galleryView];
+    
     [self loadData];
+    
+    self.galleryView.selection = ^(NSInteger idx) {
+        if (idx != weakSelf.linesView.topAdapter.selectedIndex) {
+            weakSelf.linesView.topAdapter.selectedIndex = idx;
+            [weakSelf updateOnSelection];
+        }
+    };
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -97,6 +109,7 @@
 - (void)updateOnResponse {
     BFMPrizeLinesView *lineView = self.linesView;
     lineView.topAdapter.objects = self.prizes;
+    self.galleryView.objects = self.prizes;
     
     if (self.prizes.count) {
         BFMColoredPrize *coloredPrize = self.prizes.firstObject;
@@ -122,19 +135,10 @@
     BFMPrizeLinesView *linesView = self.linesView;
     BFMColoredPrize *coloredPrize = self.prizes[linesView.topAdapter.selectedIndex];
     self.nameLabel.text = coloredPrize.name;
-    BFMPrize *prize = coloredPrize.prizes[linesView.bottomAdapter.selectedIndex];
-    NSString *URLString = [prize.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//    BFMPrize *prize = coloredPrize.prizes[linesView.bottomAdapter.selectedIndex];
+//    NSString *URLString = [prize.iconURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     linesView.bottomAdapter.objects = coloredPrize.prizes;
-    
-    [self.indicator startAnimating];
-    self.indicator.hidden = NO;
-    __weak typeof(self) weakSelf = self;
-    [self.prizeImageView bfm_setImageWithURL:[NSURL URLWithString:URLString]
-                                refreshAfter:2.0
-                                  completion:^{
-                                      [weakSelf.indicator stopAnimating];
-                                      weakSelf.indicator.hidden = YES;
-                                  }];
+//    self.galleryView.selectedIdx = linesView.topAdapter.selectedIndex;
 }
 
 - (void)showContentViews:(BOOL)show animated:(BOOL)animated {

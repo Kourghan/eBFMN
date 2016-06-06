@@ -145,6 +145,11 @@
 		F92367F01C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = F92367EF1C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.m */; };
 		F92367F41C76838B000F5DEE /* BFMProfileCardDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = F92367F31C76838B000F5DEE /* BFMProfileCardDataController.m */; };
 		F92367F81C771C5B000F5DEE /* BFMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F92367F71C771C5B000F5DEE /* BFMUtils.m */; };
+		F9282D601D05C1D3005A8BF9 /* BFMPrizeGalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9282D5E1D05C1D3005A8BF9 /* BFMPrizeGalleryCell.m */; };
+		F9282D611D05C1D3005A8BF9 /* BFMPrizeGalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9282D5F1D05C1D3005A8BF9 /* BFMPrizeGalleryCell.xib */; };
+		F9282D641D05C2A8005A8BF9 /* BFMPrizeGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9282D631D05C2A8005A8BF9 /* BFMPrizeGalleryView.m */; };
+		F9282D661D05C308005A8BF9 /* BFMPrizeGalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9282D651D05C308005A8BF9 /* BFMPrizeGalleryView.xib */; };
+		F9282D6A1D05DB02005A8BF9 /* BFMSubviewsLayoutingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9282D691D05DB02005A8BF9 /* BFMSubviewsLayoutingView.m */; };
 		F93D3BD31C6D25BE002456D6 /* ocraextended.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F93D3BCC1C6D25BE002456D6 /* ocraextended.ttf */; };
 		F93F26231C7DA706003E00F8 /* BFMCardArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = F93F26221C7DA706003E00F8 /* BFMCardArrowView.m */; };
 		F953E4F81CE5F3110006FA1F /* UIImageView+BFMSetImageRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F953E4F71CE5F3110006FA1F /* UIImageView+BFMSetImageRefresh.m */; };
@@ -460,6 +465,14 @@
 		F92367F31C76838B000F5DEE /* BFMProfileCardDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMProfileCardDataController.m; sourceTree = "<group>"; };
 		F92367F61C771C5B000F5DEE /* BFMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMUtils.h; sourceTree = "<group>"; };
 		F92367F71C771C5B000F5DEE /* BFMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMUtils.m; sourceTree = "<group>"; };
+		F9282D5D1D05C1D3005A8BF9 /* BFMPrizeGalleryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPrizeGalleryCell.h; sourceTree = "<group>"; };
+		F9282D5E1D05C1D3005A8BF9 /* BFMPrizeGalleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPrizeGalleryCell.m; sourceTree = "<group>"; };
+		F9282D5F1D05C1D3005A8BF9 /* BFMPrizeGalleryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMPrizeGalleryCell.xib; sourceTree = "<group>"; };
+		F9282D621D05C2A8005A8BF9 /* BFMPrizeGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPrizeGalleryView.h; sourceTree = "<group>"; };
+		F9282D631D05C2A8005A8BF9 /* BFMPrizeGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPrizeGalleryView.m; sourceTree = "<group>"; };
+		F9282D651D05C308005A8BF9 /* BFMPrizeGalleryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMPrizeGalleryView.xib; sourceTree = "<group>"; };
+		F9282D681D05DB02005A8BF9 /* BFMSubviewsLayoutingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMSubviewsLayoutingView.h; sourceTree = "<group>"; };
+		F9282D691D05DB02005A8BF9 /* BFMSubviewsLayoutingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMSubviewsLayoutingView.m; sourceTree = "<group>"; };
 		F93D3BCC1C6D25BE002456D6 /* ocraextended.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ocraextended.ttf; sourceTree = "<group>"; };
 		F93F26211C7DA706003E00F8 /* BFMCardArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMCardArrowView.h; sourceTree = "<group>"; };
 		F93F26221C7DA706003E00F8 /* BFMCardArrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMCardArrowView.m; sourceTree = "<group>"; };
@@ -1329,6 +1342,35 @@
 			path = Misc/Utils;
 			sourceTree = "<group>";
 		};
+		F9282D5B1D05C187005A8BF9 /* BFMPrizeGalleryCell */ = {
+			isa = PBXGroup;
+			children = (
+				F9282D5D1D05C1D3005A8BF9 /* BFMPrizeGalleryCell.h */,
+				F9282D5E1D05C1D3005A8BF9 /* BFMPrizeGalleryCell.m */,
+				F9282D5F1D05C1D3005A8BF9 /* BFMPrizeGalleryCell.xib */,
+			);
+			path = BFMPrizeGalleryCell;
+			sourceTree = "<group>";
+		};
+		F9282D5C1D05C187005A8BF9 /* BFMPrizeGalleryView */ = {
+			isa = PBXGroup;
+			children = (
+				F9282D621D05C2A8005A8BF9 /* BFMPrizeGalleryView.h */,
+				F9282D631D05C2A8005A8BF9 /* BFMPrizeGalleryView.m */,
+				F9282D651D05C308005A8BF9 /* BFMPrizeGalleryView.xib */,
+			);
+			path = BFMPrizeGalleryView;
+			sourceTree = "<group>";
+		};
+		F9282D671D05DAF2005A8BF9 /* BFMSubviewsLayoutingView */ = {
+			isa = PBXGroup;
+			children = (
+				F9282D681D05DB02005A8BF9 /* BFMSubviewsLayoutingView.h */,
+				F9282D691D05DB02005A8BF9 /* BFMSubviewsLayoutingView.m */,
+			);
+			path = BFMSubviewsLayoutingView;
+			sourceTree = "<group>";
+		};
 		F93D3BC01C6D25BE002456D6 /* Card View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1517,6 +1559,9 @@
 		F9EB69531C862A6A0031BB7D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F9282D671D05DAF2005A8BF9 /* BFMSubviewsLayoutingView */,
+				F9282D5B1D05C187005A8BF9 /* BFMPrizeGalleryCell */,
+				F9282D5C1D05C187005A8BF9 /* BFMPrizeGalleryView */,
 				F9EB69601C862B140031BB7D /* BFMPrizeLinesCell */,
 				F9EB69541C862A6A0031BB7D /* BFMPrizeLinesView */,
 			);
@@ -1706,6 +1751,7 @@
 				F96073F01BE72E9E00704692 /* BFMNewsSingleActionCell.xib in Resources */,
 				61C182101B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Light Italic.otf in Resources */,
 				F97464871C6D285E00FF6F44 /* BFMBackCardView.xib in Resources */,
+				F9282D661D05C308005A8BF9 /* BFMPrizeGalleryView.xib in Resources */,
 				61E4776A1BE8EF3A00C2659D /* Leaderboard.storyboard in Resources */,
 				F9EB69721C8663890031BB7D /* placeholder_iphone2.png in Resources */,
 				61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */,
@@ -1719,6 +1765,7 @@
 				F9FC3B5C1C866C0A00936AE3 /* BFMPrizeLineAndDescription.storyboard in Resources */,
 				6189D84D1BEA235E009880B1 /* BFMShopConcreteCell.xib in Resources */,
 				F97464881C6D285E00FF6F44 /* BFMFrontCardView.xib in Resources */,
+				F9282D611D05C1D3005A8BF9 /* BFMPrizeGalleryCell.xib in Resources */,
 				F9EB69701C86624F0031BB7D /* placeholder_iphone.png in Resources */,
 				61C182161B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */,
 				2CB1B8431B9CC37B00AC16D2 /* Notifications.storyboard in Resources */,
@@ -1842,12 +1889,14 @@
 				619E2C081B977CF200886893 /* BFMUserCredentials.m in Sources */,
 				61B1DD4D1BB83BAC00DB6D23 /* MCPercentageDoughnutView.m in Sources */,
 				61CFBC361C6CCF2800AACBC0 /* BFMPrizeCategoriesViewModel.m in Sources */,
+				F9282D641D05C2A8005A8BF9 /* BFMPrizeGalleryView.m in Sources */,
 				F92367F81C771C5B000F5DEE /* BFMUtils.m in Sources */,
 				F919C91E1BE7ECB70022CB02 /* BFMPendingTableAdapter.m in Sources */,
 				F953E4F81CE5F3110006FA1F /* UIImageView+BFMSetImageRefresh.m in Sources */,
 				F9EB695F1C862AB80031BB7D /* BFMPrizeLinesAdapter.m in Sources */,
 				F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */,
 				618AC4641C7481FA005FB7C5 /* BFMPrizeCategoryCell.m in Sources */,
+				F9282D6A1D05DB02005A8BF9 /* BFMSubviewsLayoutingView.m in Sources */,
 				61FD3D661BA7096D00F4CEFB /* ODSTableAdapter.m in Sources */,
 				61F042F21BBB1F2D000037CF /* iCarousel.m in Sources */,
 				F974648F1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.m in Sources */,
@@ -1905,6 +1954,7 @@
 				2C8E49EE1BDF9C6500A9F8F9 /* BFMDetailedNewsViewController.m in Sources */,
 				61F043071BBBF4B3000037CF /* BFMAccountCell.m in Sources */,
 				F92367F01C767FF3000F5DEE /* NSLayoutConstraint+BFMAdjust.m in Sources */,
+				F9282D601D05C1D3005A8BF9 /* BFMPrizeGalleryCell.m in Sources */,
 				61FD3D711BA7096D00F4CEFB /* ODSFetchedResultsDataSource.m in Sources */,
 				F9EB696E1C8652210031BB7D /* BFMLineStubDict.m in Sources */,
 				F97464841C6D285E00FF6F44 /* BFMBackCardView.m in Sources */,
