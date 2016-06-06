@@ -68,7 +68,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 - (CGSize)collectionView:(UICollectionView *)collectionView
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat widthDivisor = MIN(4.f, MAX(1.f, self.objects.count));
+    CGFloat widthDivisor = MIN(4.3f, MAX(1.f, self.objects.count));
     CGSize cvSize = self.collectionSize;
     return CGSizeMake(cvSize.width / (CGFloat)widthDivisor, cvSize.height / 2.f);
 }
