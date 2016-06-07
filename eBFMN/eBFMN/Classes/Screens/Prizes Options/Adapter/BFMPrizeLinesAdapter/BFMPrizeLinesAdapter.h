@@ -32,4 +32,6 @@ UICollectionViewDelegateFlowLayout
 @property (nonatomic, assign) BOOL isOutline;
 @property (nonatomic, assign) BOOL shouldPresentSummary;
 
+- (CGSize)calculatedCellSize;
+
 @end

@@ -52,6 +52,7 @@
                                  NSInteger topIdx,
                                  NSInteger botIdx) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
+        strongSelf.galleryView.selectedIdx = topIdx;
         [strongSelf updateOnSelection];
     };
     self.linesView.topAdapter.isOutline = NO;
@@ -76,6 +77,12 @@
         if (idx != weakSelf.linesView.topAdapter.selectedIndex) {
             weakSelf.linesView.topAdapter.selectedIndex = idx;
             [weakSelf updateOnSelection];
+            
+            UICollectionView *topCV = weakSelf.linesView.topAdapter.collectionView;
+            NSIndexPath *path = [NSIndexPath indexPathForItem:idx inSection:0];
+            [topCV scrollToItemAtIndexPath:path
+                          atScrollPosition:UICollectionViewScrollPositionNone
+                                  animated:YES];
         }
     };
 }

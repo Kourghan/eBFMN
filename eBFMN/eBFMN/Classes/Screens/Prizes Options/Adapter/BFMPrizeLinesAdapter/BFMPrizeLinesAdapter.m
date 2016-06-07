@@ -68,15 +68,19 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 - (CGSize)collectionView:(UICollectionView *)collectionView
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat widthDivisor = MIN(4.3f, MAX(1.f, self.objects.count));
-    CGSize cvSize = self.collectionSize;
-    return CGSizeMake(cvSize.width / (CGFloat)widthDivisor, cvSize.height / 2.f);
+    return [self calculatedCellSize];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat width = scrollView.frame.size.width;
     CGFloat frac = scrollView.contentOffset.x / width;
     self.pageControl.currentPage = round(frac);
+}
+
+- (CGSize)calculatedCellSize {
+    CGFloat widthDivisor = MIN(4.3f, MAX(1.f, self.objects.count));
+    CGSize cvSize = self.collectionSize;
+    return CGSizeMake(cvSize.width / (CGFloat)widthDivisor, cvSize.height / 2.f);
 }
 
 @end
