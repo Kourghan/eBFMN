@@ -153,9 +153,14 @@
                                                              keyPath:@"ExpirationDate"
                                                                  map:^id(id value) {
                                                                      if ([value isKindOfClass:[NSString class]]) {
-                                                                         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                                                                         [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
-                                                                         return [formatter dateFromString:value];
+                                                                         
+                                                                         NSDateFormatter *f3 = [[self class] threeMSFormatter];
+                                                                         NSDate *date3 = [f3 dateFromString:value];
+                                                                         if (date3) return date3;
+                                                                         
+                                                                         NSDateFormatter *f2 = [[self class] twoMSFormatter];
+                                                                         NSDate *date2 = [f2 dateFromString:value];
+                                                                         if (date2) return date2;
                                                                      }
                                                                      return nil;
                                                                  } reverseMap:^id(id value) {
@@ -165,6 +170,26 @@
     
     
     return mapping;
+}
+
++ (NSDateFormatter *)threeMSFormatter {
+    static NSDateFormatter *threeFormatter;
+    static dispatch_once_t threeToken;
+    dispatch_once(&threeToken, ^{
+        threeFormatter = [NSDateFormatter new];
+        threeFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
+    });
+    return threeFormatter;
+}
+
++ (NSDateFormatter *)twoMSFormatter {
+    static NSDateFormatter *twoFormatter;
+    static dispatch_once_t twoToken;
+    dispatch_once(&twoToken, ^{
+        twoFormatter = [NSDateFormatter new];
+        twoFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss'Z'";
+    });
+    return twoFormatter;
 }
 
 - (NSDate *)dayStartDate {

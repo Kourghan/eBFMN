@@ -11,9 +11,9 @@
 
 typedef enum {
     BFMTransactionTypeNotStared = 0,
-    BFMTransactionTypeInProgress = 1,
-    BFMTransactionTypeExpired = 2,
-    BFMTransactionTypeCompleted = 3
+    BFMTransactionTypeInProgress = 4,
+    BFMTransactionTypeExpired = 5,
+    BFMTransactionTypeCompleted = 6
 } BFMTransactionType;
 
 @class FEMMapping;
