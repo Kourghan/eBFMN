@@ -16,7 +16,7 @@
 #import "BFMDefaultNavagtionBarAppearance.h"
 
 #import <MagicalRecord/MagicalRecord.h>
-#import <ALAlertBanner/ALAlertBanner.h>
+#import "UIViewController+Error.h"
 
 #import "ODSCollectionAdapter.h"
 #import "ODSCollectionAdapter.h"
@@ -87,23 +87,15 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
 	[self.model loadPrizesWithCallback:^(NSError *error) {
 		[SVProgressHUD dismiss];
 		if (error) {
-			ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
-																style:ALAlertBannerStyleFailure
-															 position:ALAlertBannerPositionTop
-																title:NSLocalizedString(@"error.error", nil)
-															 subtitle:NSLocalizedString(@"error.prizes", nil)];
-			[banner show];
+            [weakSelf bfm_showErrorInOW:NSLocalizedString(@"error.error", nil)
+                               subtitle:NSLocalizedString(@"error.prizes", nil)];
 		}
 	}];
 	
 	[self.model loadPointsWithCallback:^(NSNumber *points, NSError *error) {
 		if (error) {
-			ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
-																style:ALAlertBannerStyleFailure
-															 position:ALAlertBannerPositionTop
-																title:NSLocalizedString(@"error.error", nil)
-															 subtitle:NSLocalizedString(@"error.points", nil)];
-			[banner show];
+            [weakSelf bfm_showErrorInOW:NSLocalizedString(@"error.error", nil)
+                               subtitle:NSLocalizedString(@"error.points", nil)];
 		} else {
 			weakSelf.pointsLabel.text = [NSString stringWithFormat:@"%@ %@ %@",
 										 NSLocalizedString(@"prizes.youhave", nil),
@@ -188,12 +180,8 @@ static NSString *const kBFMShopCellID = @"BFMShopConcreteCell";
     __weak typeof(self) weakSelf = self;
     [BFMPrize savePrize:prize withCompletition:^(NSError * error) {
         if (error) {
-            ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
-                                                                style:ALAlertBannerStyleFailure
-                                                             position:ALAlertBannerPositionTop
-                                                                title:NSLocalizedString(@"error.error", nil)
-                                                             subtitle:NSLocalizedString(@"error.saving", nil)];
-            [banner show];
+            [weakSelf bfm_showErrorInOW:NSLocalizedString(@"error.error", nil)
+                               subtitle:NSLocalizedString(@"error.saving", nil)];
         } else {
             [weakSelf.navigationController popToRootViewControllerAnimated:TRUE];
         }

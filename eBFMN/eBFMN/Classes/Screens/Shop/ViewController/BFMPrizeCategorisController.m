@@ -22,7 +22,7 @@
 #import "UIViewController+Error.h"
 
 
-#import "ALAlertBanner.h"
+#import "UIViewController+Error.h"
 
 #import "BFMShopViewController.h"
 #import "BFMShopModel.h"
@@ -108,12 +108,8 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
 	__weak typeof(self) weakSelf = self;
 	[self.model loadBannersWithCallback:^(NSArray *banners, NSError *error) {
 		if (error) {
-			ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
-																style:ALAlertBannerStyleFailure
-															 position:ALAlertBannerPositionTop
-																title:NSLocalizedString(@"error.error", nil)
-															 subtitle:NSLocalizedString(@"error.prizes", nil)];
-			[banner show];
+            [weakSelf bfm_showErrorInOW:NSLocalizedString(@"error.error", nil)
+                               subtitle:NSLocalizedString(@"error.prizes", nil)];
         } else {
             weakSelf.bannerPageControl.hidden = (banners.count < 2);
             weakSelf.bannerPageControl.numberOfPages = banners.count;
@@ -152,12 +148,8 @@ static NSString *const kBFMPrizeBannerCellID = @"BFMPrizeBannerCell";
         [weakSelf.refreshIndicatorView stopAnimating];
         weakSelf.refreshIndicatorView.hidden = YES;
 		if (error) {
-			ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
-																style:ALAlertBannerStyleFailure
-															 position:ALAlertBannerPositionTop
-																title:NSLocalizedString(@"error.error", nil)
-															 subtitle:NSLocalizedString(@"error.prizes", nil)];
-			[banner show];
+            [self bfm_showErrorInOW:NSLocalizedString(@"error.error", nil)
+                           subtitle:NSLocalizedString(@"error.prizes", nil)];
 		}
 	}];
 	

@@ -15,7 +15,7 @@
 #import "NINavigationAppearance.h"
 #import "BFMDefaultNavagtionBarAppearance.h"
 
-#import <ALAlertBanner/ALAlertBanner.h>
+#import "UIViewController+Error.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 
 #import "BFMPendingTableAdapter.h"
@@ -68,12 +68,8 @@
         [SVProgressHUD dismiss];
         
         if (error) {
-            ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
-                                                                style:ALAlertBannerStyleFailure
-                                                             position:ALAlertBannerPositionTop
-                                                                title:NSLocalizedString(@"error.error", nil)
-                                                             subtitle:NSLocalizedString(@"points.badrequest", nil)];
-            [banner show];
+            [weakSelf bfm_showErrorInOW:NSLocalizedString(@"error.error", nil)
+                               subtitle:NSLocalizedString(@"points.badrequest", nil)];
         } else {
 
         }

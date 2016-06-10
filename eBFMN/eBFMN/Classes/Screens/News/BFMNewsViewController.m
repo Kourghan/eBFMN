@@ -19,7 +19,7 @@
 
 #import "BFMNewsTableAdapter.h"
 
-#import <ALAlertBanner/ALAlertBanner.h>
+#import "UIViewController+Error.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 
 @interface BFMNewsViewController ()<UITableViewDelegate, BFMNewsTableAdapterProtocol>
@@ -97,12 +97,8 @@
         [self.refreshIndicatorView stopAnimating];
         self.refreshIndicatorView.hidden = YES;
         if (error) {
-            ALAlertBanner *banner = [ALAlertBanner alertBannerForView:weakSelf.view.window
-                                                                style:ALAlertBannerStyleFailure
-                                                             position:ALAlertBannerPositionTop
-                                                                title:NSLocalizedString(@"error.error", nil)
-                                                             subtitle:NSLocalizedString(@"error.connection", nil)];
-            [banner show];
+            [self bfm_showErrorInOW:NSLocalizedString(@"error.error", nil)
+                           subtitle:NSLocalizedString(@"error.connection", nil)];
         }
     }];
 }

@@ -11,5 +11,8 @@
 @interface UIViewController (Error)
 
 - (void)bfm_showError;
+- (void)bfm_showErrorInKW:(NSString *)title subtitle:(NSString *)subtitle;
+- (void)bfm_showErrorInOW:(NSString *)title subtitle:(NSString *)subtitle;
+- (void)bfm_showErrorInView:(UIView *)view title:(NSString *)title subtitle:(NSString *)subtitle;
 
 @end

@@ -13,7 +13,7 @@
 #import "BFMPrizeSingleLineView.h"
 
 #import <SDWebImage/UIImageView+WebCache.h>
-#import <ALAlertBanner/ALAlertBanner.h>
+#import "UIViewController+Error.h"
 #import "BFMDefaultNavagtionBarAppearance.h"
 #import "BFMPrizeSingleLineView.h"
 #import "NINavigationAppearance.h"
@@ -175,12 +175,8 @@
         if (!error) {
             [self.navigationController popToRootViewControllerAnimated:YES];
         } else {
-            ALAlertBanner *banner = [ALAlertBanner alertBannerForView:self.view.window
-                                                                style:ALAlertBannerStyleFailure
-                                                             position:ALAlertBannerPositionTop
-                                                                title:NSLocalizedString(@"error.error", nil)
-                                                             subtitle:error.localizedDescription];
-            [banner show];
+            [self bfm_showErrorInOW:NSLocalizedString(@"error.error", nil)
+                           subtitle:error.localizedDescription];
         }
         
         if (error) {

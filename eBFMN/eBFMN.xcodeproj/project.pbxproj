@@ -367,7 +367,6 @@
 		61CFBC201C6CA1CA00AACBC0 /* BFMPrizeCategorisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPrizeCategorisController.m; sourceTree = "<group>"; };
 		61CFBC221C6CA21200AACBC0 /* Prize.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Prize.storyboard; path = Resources/Storyboards/Prize.storyboard; sourceTree = "<group>"; };
 		61CFBC301C6CA70A00AACBC0 /* eBFMN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eBFMN-Bridging-Header.h"; sourceTree = "<group>"; };
-		61CFBC331C6CC9D400AACBC0 /* eBFMN-Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "eBFMN-Swift.h"; sourceTree = "<group>"; };
 		61CFBC341C6CCF2800AACBC0 /* BFMPrizeCategoriesViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPrizeCategoriesViewModel.h; sourceTree = "<group>"; };
 		61CFBC351C6CCF2800AACBC0 /* BFMPrizeCategoriesViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPrizeCategoriesViewModel.m; sourceTree = "<group>"; };
 		61E477501BE66C9C00C2659D /* BFMPointsRecord+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BFMPointsRecord+CoreDataProperties.h"; path = "Classes/Models/Points Record/BFMPointsRecord+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -505,6 +504,7 @@
 		F990969E1BE020CB00E1D629 /* BFMShopCollectionAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMShopCollectionAdapter.m; sourceTree = "<group>"; };
 		F99096A01BE020CB00E1D629 /* BFMShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMShopViewController.h; sourceTree = "<group>"; };
 		F99096A11BE020CB00E1D629 /* BFMShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMShopViewController.m; sourceTree = "<group>"; };
+		F9B202B61D0AED5E006B0B98 /* eBFMN-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eBFMN-Swift.h"; sourceTree = "<group>"; };
 		F9CAB2EA1CF51096000E24C2 /* UIViewController+Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Error.h"; sourceTree = "<group>"; };
 		F9CAB2EB1CF51096000E24C2 /* UIViewController+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Error.m"; sourceTree = "<group>"; };
 		F9D52A591C8743F700B85F81 /* BFMPrize+BFMPrizeLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BFMPrize+BFMPrizeLines.h"; sourceTree = "<group>"; };
@@ -824,7 +824,6 @@
 				61CFBC301C6CA70A00AACBC0 /* eBFMN-Bridging-Header.h */,
 				619E2BDA1B97564A00886893 /* Info.plist */,
 				619E2BDB1B97564A00886893 /* main.m */,
-				61CFBC331C6CC9D400AACBC0 /* eBFMN-Swift.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -854,6 +853,7 @@
 				619E2C021B977BA200886893 /* Screens */,
 				619E2C011B977B9C00886893 /* Models */,
 				613C28A81BA31E0E00B2856A /* UI */,
+				F9B202B61D0AED5E006B0B98 /* eBFMN-Swift.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -2209,6 +2209,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Paul Belogour (ZVDF8CQ8KY)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = eBFMN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2228,6 +2229,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Paul Belogour (ZVDF8CQ8KY)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = eBFMN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -15,7 +15,7 @@
 
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <MessageUI/MessageUI.h>
-#import <ALAlertBanner/ALAlertBanner.h>
+#import "UIViewController+Error.h"
 #import "AppDelegate.h"
 
 #pragma mark - DEBUG
@@ -71,12 +71,8 @@
 }
 
 - (void)showErrorWithText:(NSString *)text {
-    ALAlertBanner *banner = [ALAlertBanner alertBannerForView:self.view.window
-                                                        style:ALAlertBannerStyleFailure
-                                                     position:ALAlertBannerPositionTop
-                                                        title:NSLocalizedString(@"error.error", nil)
-                                                     subtitle:text];
-    [banner show];
+    [self bfm_showErrorInOW:NSLocalizedString(@"error.error", nil)
+                   subtitle:text];
 }
 
 #pragma mark - Handlers
