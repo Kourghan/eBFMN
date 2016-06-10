@@ -7,7 +7,7 @@
 //
 
 #import "UIViewController+Error.h"
-#import <CRToast/CRToast.h>
+#import "UIView+Toast.h"
 
 @implementation UIViewController (Error)
 
@@ -29,19 +29,13 @@
 }
 
 - (void)bfm_showErrorInView:(UIView *)view title:(NSString *)title subtitle:(NSString *)subtitle {
-    NSDictionary *config = @{
-                             kCRToastFontKey: [UIFont fontWithName:@"ProximaNova-Semibold" size:14.f],
-                             kCRToastSubtitleFontKey: [UIFont fontWithName:@"ProximaNova-Semibold" size:12.f],
-                             kCRToastTextAlignmentKey: @(NSTextAlignmentLeft),
-                             kCRToastSubtitleTextAlignmentKey: @(NSTextAlignmentLeft),
-                             kCRToastBackgroundColorKey: [UIColor redColor],
-                             kCRToastTextColorKey: [UIColor whiteColor],
-                             kCRToastSubtitleTextColorKey: [UIColor whiteColor],
-                             kCRToastNotificationTypeKey: @(CRToastTypeNavigationBar),
-                             kCRToastTextKey: title,
-                             kCRToastSubtitleTextKey: subtitle
-                             };
-    [CRToastManager showNotificationWithOptions:config completionBlock:nil];
+    [view makeToast:subtitle
+           duration:1.5
+           position:nil
+              title:title
+              image:nil
+              style:nil
+         completion:nil];
 }
 
 @end
