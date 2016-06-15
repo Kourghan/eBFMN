@@ -28,6 +28,10 @@ typedef enum {
     return self;
 }
 
+- (BOOL)isFilled {
+    return self.username.length && self.password.length;
+}
+
 - (void)loginWithCompletitionBlock:(void (^)(BOOL success, NSError *error))completition {
     BFMSessionManager *manager = [BFMSessionManager sharedManager];
 

@@ -150,6 +150,15 @@
 		F9282D641D05C2A8005A8BF9 /* BFMPrizeGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9282D631D05C2A8005A8BF9 /* BFMPrizeGalleryView.m */; };
 		F9282D661D05C308005A8BF9 /* BFMPrizeGalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9282D651D05C308005A8BF9 /* BFMPrizeGalleryView.xib */; };
 		F9282D6A1D05DB02005A8BF9 /* BFMSubviewsLayoutingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9282D691D05DB02005A8BF9 /* BFMSubviewsLayoutingView.m */; };
+		F93D12991D103DCB00EB29BC /* BFMFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D12981D103DCB00EB29BC /* BFMFirstViewController.m */; };
+		F93D129C1D103DE400EB29BC /* BFMSignInView.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D129B1D103DE400EB29BC /* BFMSignInView.m */; };
+		F93D129E1D103DF400EB29BC /* BFMSignInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93D129D1D103DF400EB29BC /* BFMSignInView.xib */; };
+		F93D12A11D103E1500EB29BC /* BFMSignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D12A01D103E1500EB29BC /* BFMSignUpView.m */; };
+		F93D12A31D103E2C00EB29BC /* BFMSignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93D12A21D103E2C00EB29BC /* BFMSignUpView.xib */; };
+		F93D12A61D1041C700EB29BC /* BFMSignUpCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D12A51D1041C700EB29BC /* BFMSignUpCredentials.m */; };
+		F93D12A91D10619600EB29BC /* BFMSignInProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D12A81D10619600EB29BC /* BFMSignInProvider.m */; };
+		F93D12AC1D1180FF00EB29BC /* BFMFirstLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D12AB1D1180FF00EB29BC /* BFMFirstLayoutView.m */; };
+		F93D12AE1D11880C00EB29BC /* NewLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93D12AD1D11880C00EB29BC /* NewLogin.storyboard */; };
 		F93D3BD31C6D25BE002456D6 /* ocraextended.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F93D3BCC1C6D25BE002456D6 /* ocraextended.ttf */; };
 		F93F26231C7DA706003E00F8 /* BFMCardArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = F93F26221C7DA706003E00F8 /* BFMCardArrowView.m */; };
 		F953E4F81CE5F3110006FA1F /* UIImageView+BFMSetImageRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F953E4F71CE5F3110006FA1F /* UIImageView+BFMSetImageRefresh.m */; };
@@ -472,6 +481,21 @@
 		F9282D651D05C308005A8BF9 /* BFMPrizeGalleryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMPrizeGalleryView.xib; sourceTree = "<group>"; };
 		F9282D681D05DB02005A8BF9 /* BFMSubviewsLayoutingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMSubviewsLayoutingView.h; sourceTree = "<group>"; };
 		F9282D691D05DB02005A8BF9 /* BFMSubviewsLayoutingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMSubviewsLayoutingView.m; sourceTree = "<group>"; };
+		F93D12971D103DCB00EB29BC /* BFMFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMFirstViewController.h; sourceTree = "<group>"; };
+		F93D12981D103DCB00EB29BC /* BFMFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMFirstViewController.m; sourceTree = "<group>"; };
+		F93D129A1D103DE400EB29BC /* BFMSignInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMSignInView.h; sourceTree = "<group>"; };
+		F93D129B1D103DE400EB29BC /* BFMSignInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMSignInView.m; sourceTree = "<group>"; };
+		F93D129D1D103DF400EB29BC /* BFMSignInView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMSignInView.xib; sourceTree = "<group>"; };
+		F93D129F1D103E1500EB29BC /* BFMSignUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMSignUpView.h; sourceTree = "<group>"; };
+		F93D12A01D103E1500EB29BC /* BFMSignUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMSignUpView.m; sourceTree = "<group>"; };
+		F93D12A21D103E2C00EB29BC /* BFMSignUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMSignUpView.xib; sourceTree = "<group>"; };
+		F93D12A41D1041C700EB29BC /* BFMSignUpCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMSignUpCredentials.h; sourceTree = "<group>"; };
+		F93D12A51D1041C700EB29BC /* BFMSignUpCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMSignUpCredentials.m; sourceTree = "<group>"; };
+		F93D12A71D10619600EB29BC /* BFMSignInProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMSignInProvider.h; sourceTree = "<group>"; };
+		F93D12A81D10619600EB29BC /* BFMSignInProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMSignInProvider.m; sourceTree = "<group>"; };
+		F93D12AA1D1180FF00EB29BC /* BFMFirstLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMFirstLayoutView.h; sourceTree = "<group>"; };
+		F93D12AB1D1180FF00EB29BC /* BFMFirstLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMFirstLayoutView.m; sourceTree = "<group>"; };
+		F93D12AD1D11880C00EB29BC /* NewLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewLogin.storyboard; sourceTree = "<group>"; };
 		F93D3BCC1C6D25BE002456D6 /* ocraextended.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ocraextended.ttf; sourceTree = "<group>"; };
 		F93F26211C7DA706003E00F8 /* BFMCardArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMCardArrowView.h; sourceTree = "<group>"; };
 		F93F26221C7DA706003E00F8 /* BFMCardArrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMCardArrowView.m; sourceTree = "<group>"; };
@@ -907,6 +931,7 @@
 		619E2C031B977BB000886893 /* Login Screen */ = {
 			isa = PBXGroup;
 			children = (
+				F93D12961D103D9D00EB29BC /* New login */,
 				61C181F71B98E04F00D5FAC8 /* BFMLoginController.h */,
 				61C181F81B98E04F00D5FAC8 /* BFMLoginController.m */,
 				614BC2421BB4B33D0060C8E8 /* BFMForgotPasswordController.h */,
@@ -1371,6 +1396,29 @@
 			path = BFMSubviewsLayoutingView;
 			sourceTree = "<group>";
 		};
+		F93D12961D103D9D00EB29BC /* New login */ = {
+			isa = PBXGroup;
+			children = (
+				F93D12971D103DCB00EB29BC /* BFMFirstViewController.h */,
+				F93D12981D103DCB00EB29BC /* BFMFirstViewController.m */,
+				F93D129A1D103DE400EB29BC /* BFMSignInView.h */,
+				F93D129B1D103DE400EB29BC /* BFMSignInView.m */,
+				F93D129D1D103DF400EB29BC /* BFMSignInView.xib */,
+				F93D129F1D103E1500EB29BC /* BFMSignUpView.h */,
+				F93D12A01D103E1500EB29BC /* BFMSignUpView.m */,
+				F93D12A21D103E2C00EB29BC /* BFMSignUpView.xib */,
+				F93D12A41D1041C700EB29BC /* BFMSignUpCredentials.h */,
+				F93D12A51D1041C700EB29BC /* BFMSignUpCredentials.m */,
+				F93D12A71D10619600EB29BC /* BFMSignInProvider.h */,
+				F93D12A81D10619600EB29BC /* BFMSignInProvider.m */,
+				F93D12AA1D1180FF00EB29BC /* BFMFirstLayoutView.h */,
+				F93D12AB1D1180FF00EB29BC /* BFMFirstLayoutView.m */,
+				F93D12AD1D11880C00EB29BC /* NewLogin.storyboard */,
+			);
+			name = "New login";
+			path = "Classes/Screens/Login Controller/New login";
+			sourceTree = "<group>";
+		};
 		F93D3BC01C6D25BE002456D6 /* Card View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1752,10 +1800,13 @@
 				61C182101B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Light Italic.otf in Resources */,
 				F97464871C6D285E00FF6F44 /* BFMBackCardView.xib in Resources */,
 				F9282D661D05C308005A8BF9 /* BFMPrizeGalleryView.xib in Resources */,
+				F93D129E1D103DF400EB29BC /* BFMSignInView.xib in Resources */,
 				61E4776A1BE8EF3A00C2659D /* Leaderboard.storyboard in Resources */,
 				F9EB69721C8663890031BB7D /* placeholder_iphone2.png in Resources */,
 				61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */,
+				F93D12AE1D11880C00EB29BC /* NewLogin.storyboard in Resources */,
 				61C1820F1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold.otf in Resources */,
+				F93D12A31D103E2C00EB29BC /* BFMSignUpView.xib in Resources */,
 				F9EB69651C862B310031BB7D /* BFMPrizeLinesCell.xib in Resources */,
 				618AC4611C748071005FB7C5 /* BFMPrizeCategoryCell.xib in Resources */,
 				61C182141B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold Italic.otf in Resources */,
@@ -1863,6 +1914,7 @@
 				618AC45F1C747253005FB7C5 /* BFMPrizeCategory.m in Sources */,
 				619E2C131B977DC400886893 /* JNKeychain+UNTExtension.m in Sources */,
 				613C28BD1BA3415C00B2856A /* BFMNewsModel.m in Sources */,
+				F93D129C1D103DE400EB29BC /* BFMSignInView.m in Sources */,
 				F97464851C6D285E00FF6F44 /* BFMCardPresentingView.m in Sources */,
 				F9FC3B5A1C866B5900936AE3 /* BFMPrizeSingleLineView.m in Sources */,
 				2CF024F31B9A415F009E8959 /* UIStoryboard+BFMStoryboards.m in Sources */,
@@ -1900,11 +1952,14 @@
 				61FD3D661BA7096D00F4CEFB /* ODSTableAdapter.m in Sources */,
 				61F042F21BBB1F2D000037CF /* iCarousel.m in Sources */,
 				F974648F1C6D2E0F00FF6F44 /* BFMUser+BFMCardView.m in Sources */,
+				F93D12A61D1041C700EB29BC /* BFMSignUpCredentials.m in Sources */,
 				613AE7731B9CCC9600300B22 /* BFMAccount+Extension.m in Sources */,
 				F97464921C6D2E2600FF6F44 /* UIView+BFMLoad.m in Sources */,
+				F93D12A11D103E1500EB29BC /* BFMSignUpView.m in Sources */,
 				61F641B71C7DE4FD006622C3 /* BFMNewsRecord.m in Sources */,
 				619928961C824A32005AEC26 /* BFMBanner.m in Sources */,
 				61F042F51BBB214A000037CF /* BFMCarouselDataSource.m in Sources */,
+				F93D12A91D10619600EB29BC /* BFMSignInProvider.m in Sources */,
 				6199288B1C823123005AEC26 /* BFMPrizeBannerAdapter.m in Sources */,
 				F9FA445A1CACE28C007DF2D5 /* BFMThinBorderView.m in Sources */,
 				2CF024EF1B9A409A009E8959 /* BFMTabBarController.m in Sources */,
@@ -1970,6 +2025,7 @@
 				2C4E7B121BAA37E100682A56 /* BFMLeaderboardTableViewController.m in Sources */,
 				61FD3D641BA7096D00F4CEFB /* ODSAdapter.m in Sources */,
 				61FD3D671BA7096D00F4CEFB /* ODSBatchObjectChange.m in Sources */,
+				F93D12AC1D1180FF00EB29BC /* BFMFirstLayoutView.m in Sources */,
 				61B1DD361BB6D86E00DB6D23 /* BFMClientsPage.m in Sources */,
 				61E8C96C1C85F3690079DC25 /* BFMColoredPrize.m in Sources */,
 				F99096A21BE020CB00E1D629 /* BFMShopModel.m in Sources */,
@@ -1978,6 +2034,7 @@
 				61FD3D691BA7096D00F4CEFB /* ODSEventBroadcaster.m in Sources */,
 				618AC45E1C747253005FB7C5 /* BFMPrizeCategory+CoreDataProperties.m in Sources */,
 				61B1DD4C1BB83BAC00DB6D23 /* MCNewCustomLayeredView.m in Sources */,
+				F93D12991D103DCB00EB29BC /* BFMFirstViewController.m in Sources */,
 				613AE7801B9CD04400300B22 /* ELAAppearance.m in Sources */,
 				61E477551BE66C9C00C2659D /* BFMPointsRecord.m in Sources */,
 				F92367F41C76838B000F5DEE /* BFMProfileCardDataController.m in Sources */,

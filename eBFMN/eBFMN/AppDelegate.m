@@ -37,7 +37,7 @@
     if ([JNKeychain loadValueForKey:kBFMSessionKey]) {
         controller = [UIStoryboard storyboardWithName:@"tabBar" bundle:nil].instantiateInitialViewController;
     } else {
-        controller = [UIStoryboard storyboardWithName:@"Login" bundle:nil].instantiateInitialViewController;
+        controller = [UIStoryboard storyboardWithName:@"NewLogin" bundle:nil].instantiateInitialViewController;
     }
 
     self.window.rootViewController = controller;
@@ -63,7 +63,7 @@
 }
 
 - (void)showLogin {
-    [self showVC:[UIStoryboard storyboardWithName:@"Login" bundle:nil].instantiateInitialViewController];
+    [self showVC:[UIStoryboard storyboardWithName:@"NewLogin" bundle:nil].instantiateInitialViewController];
 }
 
 - (void)showVC:(UIViewController *)vc {
@@ -71,7 +71,7 @@
     [UIView transitionFromView:self.window.subviews.lastObject
                         toView:vc.view
                       duration:.6
-                       options:(UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionTransitionFlipFromLeft)
+                       options:(UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionTransitionCrossDissolve)
                     completion:^(BOOL finished) {
                         self.window.rootViewController = vc;
                     }];
