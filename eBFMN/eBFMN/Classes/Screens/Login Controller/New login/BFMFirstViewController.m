@@ -30,12 +30,14 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
 @property (nonatomic, weak) IBOutlet UIView *signUpContainerView;
 @property (nonatomic, weak) IBOutlet UIView *containersContainer;
 @property (nonatomic, weak) IBOutlet UIView *navButtonsContainer;
+@property (nonatomic, weak) IBOutlet UIView *bgImageContainer;
 @property (nonatomic, weak) IBOutlet UIView *recognizerView;
 @property (nonatomic, weak) IBOutlet BFMSignInView *signInView;
 @property (nonatomic, weak) IBOutlet BFMSignUpView *signUpView;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *signInLeftConstraint;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *signInButtonCenterConstraint;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *signUpButtonCenterConstraint;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *bgImageConstraint;
 
 @end
 
@@ -141,6 +143,15 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
                         options:UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
                          [self.navButtonsContainer layoutIfNeeded];
+                     } completion:nil];
+    
+    self.bgImageConstraint.constant = (page == BFMFirstTypePageSignIn) ? 0.f : -(scrW / 5.f);
+    [self.bgImageContainer setNeedsUpdateConstraints];
+    [UIView animateWithDuration:.25
+                          delay:0.
+                        options:UIViewAnimationOptionBeginFromCurrentState
+                     animations:^{
+                         [self.bgImageContainer layoutIfNeeded];
                      } completion:nil];
 }
 

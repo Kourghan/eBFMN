@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Mark Simonson - Proxima Nova Regular.otf">
@@ -26,16 +27,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUz-bY-gSm" userLabel="bg img container">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_login" translatesAutoresizingMaskIntoConstraints="NO" id="9Nb-up-4HI">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="9Nb-up-4HI">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="568"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="9Nb-up-4HI" firstAttribute="top" secondItem="VUz-bY-gSm" secondAttribute="top" id="WkZ-7A-iks"/>
-                                    <constraint firstAttribute="bottom" secondItem="9Nb-up-4HI" secondAttribute="bottom" id="YzL-tX-k3w"/>
                                     <constraint firstItem="9Nb-up-4HI" firstAttribute="leading" secondItem="VUz-bY-gSm" secondAttribute="leading" id="i1O-fI-7PD"/>
-                                    <constraint firstAttribute="trailing" secondItem="9Nb-up-4HI" secondAttribute="trailing" id="jaK-Dp-HGf"/>
+                                    <constraint firstItem="9Nb-up-4HI" firstAttribute="width" secondItem="VUz-bY-gSm" secondAttribute="width" multiplier="5:4" id="s8U-So-ghg"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Nb-up-4HI" secondAttribute="bottom" id="wih-Bw-6Yb"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Z8-pX-gJJ">
@@ -118,6 +119,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bgImageConstraint" destination="i1O-fI-7PD" id="F6f-Pz-Iqb"/>
+                        <outlet property="bgImageContainer" destination="VUz-bY-gSm" id="r1r-Of-Myh"/>
                         <outlet property="containersContainer" destination="Tra-Lo-rUE" id="bFu-gR-5mM"/>
                         <outlet property="navButtonsContainer" destination="pWD-Em-vK9" id="1ny-KX-idb"/>
                         <outlet property="recognizerView" destination="0Z8-pX-gJJ" id="nKD-am-JL5"/>
@@ -134,6 +137,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg_login" width="320" height="568"/>
+        <image name="bg" width="563" height="667"/>
     </resources>
 </document>
