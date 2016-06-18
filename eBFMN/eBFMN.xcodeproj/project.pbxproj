@@ -193,6 +193,16 @@
 		F9FC3B571C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC3B561C866ACE00936AE3 /* BFMPrizeLineAndDescriptionViewController.m */; };
 		F9FC3B5A1C866B5900936AE3 /* BFMPrizeSingleLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC3B591C866B5900936AE3 /* BFMPrizeSingleLineView.m */; };
 		F9FC3B5C1C866C0A00936AE3 /* BFMPrizeLineAndDescription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FC3B5B1C866C0A00936AE3 /* BFMPrizeLineAndDescription.storyboard */; };
+		F9FE02E31D157391001C46F4 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9FE02D81D157391001C46F4 /* OpenSans-Bold.ttf */; };
+		F9FE02E41D157391001C46F4 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9FE02D91D157391001C46F4 /* OpenSans-BoldItalic.ttf */; };
+		F9FE02E51D157391001C46F4 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9FE02DA1D157391001C46F4 /* OpenSans-ExtraBold.ttf */; };
+		F9FE02E61D157391001C46F4 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9FE02DB1D157391001C46F4 /* OpenSans-ExtraBoldItalic.ttf */; };
+		F9FE02E71D157391001C46F4 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9FE02DC1D157391001C46F4 /* OpenSans-Italic.ttf */; };
+		F9FE02E81D157391001C46F4 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9FE02DD1D157391001C46F4 /* OpenSans-Light.ttf */; };
+		F9FE02E91D157391001C46F4 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9FE02DE1D157391001C46F4 /* OpenSans-LightItalic.ttf */; };
+		F9FE02EA1D157391001C46F4 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9FE02DF1D157391001C46F4 /* OpenSans-Regular.ttf */; };
+		F9FE02EB1D157391001C46F4 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9FE02E01D157391001C46F4 /* OpenSans-Semibold.ttf */; };
+		F9FE02EC1D157391001C46F4 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9FE02E11D157391001C46F4 /* OpenSans-SemiboldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -556,6 +566,16 @@
 		F9FC3B581C866B5900936AE3 /* BFMPrizeSingleLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPrizeSingleLineView.h; sourceTree = "<group>"; };
 		F9FC3B591C866B5900936AE3 /* BFMPrizeSingleLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPrizeSingleLineView.m; sourceTree = "<group>"; };
 		F9FC3B5B1C866C0A00936AE3 /* BFMPrizeLineAndDescription.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BFMPrizeLineAndDescription.storyboard; sourceTree = "<group>"; };
+		F9FE02D81D157391001C46F4 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		F9FE02D91D157391001C46F4 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F9FE02DA1D157391001C46F4 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F9FE02DB1D157391001C46F4 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		F9FE02DC1D157391001C46F4 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		F9FE02DD1D157391001C46F4 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		F9FE02DE1D157391001C46F4 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		F9FE02DF1D157391001C46F4 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		F9FE02E01D157391001C46F4 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		F9FE02E11D157391001C46F4 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1003,6 +1023,7 @@
 		619E2C171B9780D800886893 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				F9FE02D61D157391001C46F4 /* Open_Sans */,
 				61C181FC1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black Italic.otf */,
 				61C181FD1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black.otf */,
 				61C181FE1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Bold Italic.otf */,
@@ -1687,6 +1708,23 @@
 			path = BFMPrizeLineAndDescriptionViewController;
 			sourceTree = "<group>";
 		};
+		F9FE02D61D157391001C46F4 /* Open_Sans */ = {
+			isa = PBXGroup;
+			children = (
+				F9FE02D81D157391001C46F4 /* OpenSans-Bold.ttf */,
+				F9FE02D91D157391001C46F4 /* OpenSans-BoldItalic.ttf */,
+				F9FE02DA1D157391001C46F4 /* OpenSans-ExtraBold.ttf */,
+				F9FE02DB1D157391001C46F4 /* OpenSans-ExtraBoldItalic.ttf */,
+				F9FE02DC1D157391001C46F4 /* OpenSans-Italic.ttf */,
+				F9FE02DD1D157391001C46F4 /* OpenSans-Light.ttf */,
+				F9FE02DE1D157391001C46F4 /* OpenSans-LightItalic.ttf */,
+				F9FE02DF1D157391001C46F4 /* OpenSans-Regular.ttf */,
+				F9FE02E01D157391001C46F4 /* OpenSans-Semibold.ttf */,
+				F9FE02E11D157391001C46F4 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			path = Open_Sans;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1777,6 +1815,7 @@
 			files = (
 				61C1820C1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Bold Italic.otf in Resources */,
 				61C182151B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold.otf in Resources */,
+				F9FE02E71D157391001C46F4 /* OpenSans-Italic.ttf in Resources */,
 				61C1820B1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black.otf in Resources */,
 				61E477641BE8EF2D00C2659D /* Login.storyboard in Resources */,
 				F9EB696B1C864BCA0031BB7D /* BFMPrize2Lines.storyboard in Resources */,
@@ -1796,27 +1835,36 @@
 				F9282D661D05C308005A8BF9 /* BFMPrizeGalleryView.xib in Resources */,
 				61E4776A1BE8EF3A00C2659D /* Leaderboard.storyboard in Resources */,
 				F9EB69721C8663890031BB7D /* placeholder_iphone2.png in Resources */,
+				F9FE02E31D157391001C46F4 /* OpenSans-Bold.ttf in Resources */,
 				61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */,
+				F9FE02E41D157391001C46F4 /* OpenSans-BoldItalic.ttf in Resources */,
 				F93D12AE1D11880C00EB29BC /* NewLogin.storyboard in Resources */,
 				61C1820F1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold.otf in Resources */,
 				F9EB69651C862B310031BB7D /* BFMPrizeLinesCell.xib in Resources */,
 				618AC4611C748071005FB7C5 /* BFMPrizeCategoryCell.xib in Resources */,
+				F9FE02EB1D157391001C46F4 /* OpenSans-Semibold.ttf in Resources */,
 				61C182141B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold Italic.otf in Resources */,
 				619928901C8238B1005AEC26 /* BFMPrizeBannerCell.xib in Resources */,
 				6135F3811BAF466E00B29DE3 /* BFMBenefitsPageController.xib in Resources */,
+				F9FE02E51D157391001C46F4 /* OpenSans-ExtraBold.ttf in Resources */,
 				61C182131B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Regular.otf in Resources */,
 				F9FC3B5C1C866C0A00936AE3 /* BFMPrizeLineAndDescription.storyboard in Resources */,
+				F9FE02E61D157391001C46F4 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				6189D84D1BEA235E009880B1 /* BFMShopConcreteCell.xib in Resources */,
+				F9FE02EA1D157391001C46F4 /* OpenSans-Regular.ttf in Resources */,
 				F97464881C6D285E00FF6F44 /* BFMFrontCardView.xib in Resources */,
 				F9282D611D05C1D3005A8BF9 /* BFMPrizeGalleryCell.xib in Resources */,
 				F9EB69701C86624F0031BB7D /* placeholder_iphone.png in Resources */,
 				61C182161B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */,
+				F9FE02E81D157391001C46F4 /* OpenSans-Light.ttf in Resources */,
 				2CB1B8431B9CC37B00AC16D2 /* Notifications.storyboard in Resources */,
+				F9FE02EC1D157391001C46F4 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				61C1820E1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold Italic.otf in Resources */,
 				F96073EB1BE72D5000704692 /* BFMNewsActionCell.xib in Resources */,
 				2CB1B8451B9CC37B00AC16D2 /* tabBar.storyboard in Resources */,
 				F9ED546E1CADFEEE0011A837 /* shop_options_icon.png in Resources */,
 				61C1820A1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Black Italic.otf in Resources */,
+				F9FE02E91D157391001C46F4 /* OpenSans-LightItalic.ttf in Resources */,
 				61F042F71BBB2895000037CF /* earningsView.xib in Resources */,
 				61CFBC231C6CA21200AACBC0 /* Prize.storyboard in Resources */,
 				F93D3BD31C6D25BE002456D6 /* ocraextended.ttf in Resources */,
