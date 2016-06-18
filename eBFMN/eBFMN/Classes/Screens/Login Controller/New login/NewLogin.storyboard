@@ -16,9 +16,11 @@
             <string>ProximaNova-Regular</string>
             <string>ProximaNova-Regular</string>
             <string>ProximaNova-Regular</string>
-            <string>ProximaNova-Regular</string>
-            <string>ProximaNova-Regular</string>
-            <string>ProximaNova-Regular</string>
+        </mutableArray>
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -52,37 +54,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Z8-pX-gJJ">
                                 <rect key="frame" x="0.0" y="220" width="320" height="348"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWD-Em-vK9">
-                                <rect key="frame" x="0.0" y="39" width="320" height="62"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfK-xS-URe">
-                                        <rect key="frame" x="100" y="0.0" width="119" height="62"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="62" id="qJa-Xy-oKx"/>
-                                            <constraint firstAttribute="width" constant="119" id="x4a-us-lId"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="34"/>
-                                        <state key="normal" title="Sign In"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0B-fL-jIq">
-                                        <rect key="frame" x="261" y="0.0" width="119" height="62"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="119" id="Nqq-n2-BIX"/>
-                                            <constraint firstAttribute="height" constant="62" id="aFt-B6-qmz"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="34"/>
-                                        <state key="normal" title="Sign Up"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="b0B-fL-jIq" firstAttribute="top" secondItem="pWD-Em-vK9" secondAttribute="top" id="4ET-9v-8UO"/>
-                                    <constraint firstItem="jfK-xS-URe" firstAttribute="centerX" secondItem="pWD-Em-vK9" secondAttribute="centerX" id="9rT-rv-LpQ"/>
-                                    <constraint firstItem="jfK-xS-URe" firstAttribute="top" secondItem="pWD-Em-vK9" secondAttribute="top" id="Z2N-aE-aO2"/>
-                                    <constraint firstAttribute="height" constant="62" id="wAv-1j-ws0"/>
-                                    <constraint firstItem="b0B-fL-jIq" firstAttribute="centerX" secondItem="pWD-Em-vK9" secondAttribute="centerX" constant="160.5" id="wfx-I5-QKh"/>
-                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tra-Lo-rUE" userLabel="screens container">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -160,7 +131,7 @@
                                                             <constraint firstAttribute="height" constant="45" id="cFC-qd-qyM"/>
                                                             <constraint firstAttribute="width" constant="251" id="inI-y6-CeV"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="23"/>
                                                         <state key="normal" title="Sign In">
                                                             <color key="titleColor" red="0.047058823530000002" green="0.23921568630000001" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -475,6 +446,43 @@
                                     <constraint firstItem="xnx-Ma-ZNY" firstAttribute="width" secondItem="Tra-Lo-rUE" secondAttribute="width" id="sIQ-Jg-A4Q"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWD-Em-vK9">
+                                <rect key="frame" x="0.0" y="39" width="320" height="62"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfK-xS-URe">
+                                        <rect key="frame" x="79.5" y="0.0" width="160" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="qJa-Xy-oKx"/>
+                                            <constraint firstAttribute="width" constant="160" id="x4a-us-lId"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="40"/>
+                                        <state key="normal" title="Sign In"/>
+                                        <connections>
+                                            <action selector="signInNavButtonTap:" destination="5hd-fL-rlx" eventType="touchUpInside" id="d73-55-UcX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0B-fL-jIq">
+                                        <rect key="frame" x="230.5" y="0.0" width="180" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="Nqq-n2-BIX"/>
+                                            <constraint firstAttribute="height" constant="62" id="aFt-B6-qmz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="39"/>
+                                        <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="signUpNavButtonTap:" destination="5hd-fL-rlx" eventType="touchUpInside" id="iKc-Z4-S89"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="b0B-fL-jIq" firstAttribute="top" secondItem="pWD-Em-vK9" secondAttribute="top" id="4ET-9v-8UO"/>
+                                    <constraint firstItem="jfK-xS-URe" firstAttribute="centerX" secondItem="pWD-Em-vK9" secondAttribute="centerX" id="9rT-rv-LpQ"/>
+                                    <constraint firstItem="jfK-xS-URe" firstAttribute="top" secondItem="pWD-Em-vK9" secondAttribute="top" id="Z2N-aE-aO2"/>
+                                    <constraint firstAttribute="height" constant="62" id="wAv-1j-ws0"/>
+                                    <constraint firstItem="b0B-fL-jIq" firstAttribute="centerX" secondItem="pWD-Em-vK9" secondAttribute="centerX" constant="160.5" id="wfx-I5-QKh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -504,9 +512,11 @@
                         <outlet property="signInButtonCenterConstraint" destination="9rT-rv-LpQ" id="hYJ-Jw-iar"/>
                         <outlet property="signInContainerView" destination="xnx-Ma-ZNY" id="cgx-R7-UiY"/>
                         <outlet property="signInLeftConstraint" destination="QDJ-nZ-Gwv" id="w2Z-Uy-GhU"/>
+                        <outlet property="signInNavButton" destination="jfK-xS-URe" id="WCc-cE-r6J"/>
                         <outlet property="signInView" destination="Aq5-SO-PPR" id="xY1-zz-XI1"/>
                         <outlet property="signUpButtonCenterConstraint" destination="wfx-I5-QKh" id="Clq-dx-jVV"/>
                         <outlet property="signUpContainerView" destination="YWw-ct-mm7" id="EST-ba-Koh"/>
+                        <outlet property="signUpNavButton" destination="b0B-fL-jIq" id="Den-4Z-Zte"/>
                         <outlet property="signUpView" destination="Fqu-0t-NOb" id="4Fl-cL-6Co"/>
                     </connections>
                 </viewController>

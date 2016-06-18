@@ -30,6 +30,8 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
 @property (nonatomic, weak) IBOutlet UIView *signUpContainerView;
 @property (nonatomic, weak) IBOutlet UIView *containersContainer;
 @property (nonatomic, weak) IBOutlet UIView *navButtonsContainer;
+@property (nonatomic, weak) IBOutlet UIButton *signInNavButton;
+@property (nonatomic, weak) IBOutlet UIButton *signUpNavButton;
 @property (nonatomic, weak) IBOutlet UIView *bgImageContainer;
 @property (nonatomic, weak) IBOutlet UIView *recognizerView;
 @property (nonatomic, weak) IBOutlet BFMSignInView *signInView;
@@ -114,12 +116,14 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
 
 - (void)switchToPage:(BFMFirstTypePage)page {
     CGFloat scrW = CGRectGetWidth([UIScreen mainScreen].bounds);
+    BOOL isSignIn = (page == BFMFirstTypePageSignIn);
     
-    CGFloat signInLeftConstant = (page == BFMFirstTypePageSignIn) ? 0 : -scrW;
+    CGFloat signInLeftConstant = isSignIn ? 0 : -scrW;
+    NSTimeInterval ti = .25;
     
     self.signInLeftConstraint.constant = signInLeftConstant;
     [self.containersContainer setNeedsUpdateConstraints];
-    [UIView animateWithDuration:.25
+    [UIView animateWithDuration:ti
                           delay:0.
                         options:UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
@@ -127,24 +131,32 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
                      } completion:nil];
     
     
-    self.signInButtonCenterConstraint.constant = (page == BFMFirstTypePageSignIn) ? 0.f : (-scrW / 2.f);
-    self.signUpButtonCenterConstraint.constant = (page == BFMFirstTypePageSignIn) ? (scrW / 2.f) : 0.f;
+    self.signInButtonCenterConstraint.constant = isSignIn ? 0.f : (-scrW / 2.f);
+    self.signUpButtonCenterConstraint.constant = isSignIn ? (scrW / 2.f) : 0.f;
     [self.navButtonsContainer setNeedsUpdateConstraints];
-    [UIView animateWithDuration:.25
+    [UIView animateWithDuration:ti
                           delay:0.
                         options:UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
                          [self.navButtonsContainer layoutIfNeeded];
                      } completion:nil];
     
-    self.bgImageConstraint.constant = (page == BFMFirstTypePageSignIn) ? 0.f : -(scrW / 5.f);
+    self.bgImageConstraint.constant = isSignIn ? 0.f : -(scrW / 5.f);
     [self.bgImageContainer setNeedsUpdateConstraints];
-    [UIView animateWithDuration:.25
+    [UIView animateWithDuration:ti
                           delay:0.
                         options:UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
                          [self.bgImageContainer layoutIfNeeded];
                      } completion:nil];
+    
+    [UIView animateWithDuration:ti
+                     animations:^{
+                         CGFloat maxA = 1.f;
+                         CGFloat minA = .1f;
+                         self.signInNavButton.alpha = isSignIn ? maxA : minA;
+                         self.signUpNavButton.alpha = isSignIn ? minA : maxA;
+                     }];
 }
 
 #pragma mark - Private
@@ -156,6 +168,16 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
 
 - (void)showForgotPass:(BFMUserCredentials *)username {
     
+}
+
+#pragma mark - IBAction
+
+- (IBAction)signInNavButtonTap:(id)sender {
+    [self switchToPage:BFMFirstTypePageSignIn];
+}
+
+- (IBAction)signUpNavButtonTap:(id)sender {
+    [self switchToPage:BFMFirstTypePageSignUp];
 }
 
 @end
