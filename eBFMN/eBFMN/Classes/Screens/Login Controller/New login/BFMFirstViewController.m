@@ -9,9 +9,11 @@
 #import "BFMFirstViewController.h"
 
 #import <SVProgressHUD/SVProgressHUD.h>
+#import "BFMCountryViewController.h"
 #import "UIViewController+Error.h"
 #import "BFMUserCredentials.h"
 #import "BFMSignInProvider.h"
+#import "BFMSignUpCountry.h"
 #import "UIView+BFMLoad.h"
 #import "BFMSignUpView.h"
 #import "BFMSignInView.h"
@@ -25,6 +27,7 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
 
 @property (nonatomic, strong) BFMSignInProvider *provider;
 @property (nonatomic, assign) BFMFirstTypePage currentPage;
+@property (nonatomic, strong) BFMSignUpCountry *country;
 
 @property (nonatomic, weak) IBOutlet UIView *signInContainerView;
 @property (nonatomic, weak) IBOutlet UIView *signUpContainerView;
@@ -54,6 +57,8 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
     [self setupContentViews];
     [self setupRecognizer];
     [self switchToPage:BFMFirstTypePageSignIn];
+    
+    [self.provider getCountries:nil];
 }
 
 #pragma mark - Setup
@@ -101,6 +106,9 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
                                [weakSelf showError:errorString];
                            }
                        }];
+    };
+    self.signUpView.countryCallback = ^{
+        [weakSelf showSelectCountry];
     };
 }
 
@@ -168,6 +176,19 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
 
 - (void)showForgotPass:(BFMUserCredentials *)username {
     
+}
+
+- (void)showSelectCountry {
+    UINavigationController *navController = [self.storyboard instantiateViewControllerWithIdentifier:@"CountryNav"];
+    BFMCountryViewController *vc = (id)navController.topViewController;
+    
+    __weak typeof(self) weakSelf = self;
+    vc.selection = ^(BFMSignUpCountry *country) {
+        weakSelf.country = country;
+        weakSelf.signUpView.countryTF.text = country.name;
+    };
+    
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 #pragma mark - IBAction

@@ -54,11 +54,16 @@
     }
 }
 
+- (IBAction)countryButtonTap:(id)sender {
+    if (self.countryCallback) {
+        self.countryCallback();
+    }
+}
+
 - (BFMSignUpCredentials *)fillCredetials {
     BFMSignUpCredentials *credentials = [BFMSignUpCredentials new];
     
     return credentials;
 }
-
 
 @end

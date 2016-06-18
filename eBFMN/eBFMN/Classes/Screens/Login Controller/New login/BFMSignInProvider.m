@@ -8,9 +8,13 @@
 
 #import "BFMSignInProvider.h"
 
+#import <FastEasyMapping/FastEasyMapping.h>
+#import <MagicalRecord/MagicalRecord.h>
 #import "BFMSignUpCredentials.h"
 #import "BFMUserCredentials.h"
 #import "BFMUser+Extension.h"
+#import "BFMSessionManager.h"
+#import "BFMSignUpCountry.h"
 #import "AppDelegate.h"
 #import <UIKit/UIKit.h>
 
@@ -68,6 +72,22 @@
         completion(nil);
     }
     
+}
+
+- (void)getCountries:(BFMCountriesCompletion)completion {
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
+    [manager GET:@"Registration/GetCountries"
+      parameters:@{}
+         success:^(NSURLSessionDataTask *task, NSDictionary *response) {
+             NSArray *objects = [BFMSignUpCountry objectsFromResponse:response];
+             if (completion) {
+                 completion(objects, nil);
+             }
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             if (completion) {
+                 completion(nil, error.localizedDescription);
+             }
+         }];
 }
 
 @end

@@ -11,9 +11,13 @@
 @class BFMSignUpCredentials;
 
 typedef void (^BFMSignUpViewCompletion)(BFMSignUpCredentials *credentials);
+typedef void (^BFMSignUpCountryCallback)();
 
 @interface BFMSignUpView : UIView
 
+@property (nonatomic, weak) IBOutlet UITextField *countryTF;
+
 @property (nonatomic, copy) BFMSignUpViewCompletion signUpCompletion;
+@property (nonatomic, copy) BFMSignUpCountryCallback countryCallback;
 
 @end
