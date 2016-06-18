@@ -6,18 +6,16 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Mark Simonson - Proxima Nova Regular.otf">
-            <string>ProximaNova-Regular</string>
-            <string>ProximaNova-Regular</string>
-            <string>ProximaNova-Regular</string>
-            <string>ProximaNova-Regular</string>
-            <string>ProximaNova-Regular</string>
-            <string>ProximaNova-Regular</string>
-            <string>ProximaNova-Regular</string>
-            <string>ProximaNova-Regular</string>
-            <string>ProximaNova-Regular</string>
-        </mutableArray>
         <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
@@ -40,14 +38,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="9Nb-up-4HI">
-                                        <rect key="frame" x="0.0" y="0.0" width="400" height="568"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="379" height="568"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="9Nb-up-4HI" firstAttribute="top" secondItem="VUz-bY-gSm" secondAttribute="top" id="WkZ-7A-iks"/>
                                     <constraint firstItem="9Nb-up-4HI" firstAttribute="leading" secondItem="VUz-bY-gSm" secondAttribute="leading" id="i1O-fI-7PD"/>
-                                    <constraint firstItem="9Nb-up-4HI" firstAttribute="width" secondItem="VUz-bY-gSm" secondAttribute="width" multiplier="5:4" id="s8U-So-ghg"/>
+                                    <constraint firstItem="9Nb-up-4HI" firstAttribute="width" secondItem="VUz-bY-gSm" secondAttribute="width" multiplier="1334:1126" id="s8U-So-ghg"/>
                                     <constraint firstAttribute="bottom" secondItem="9Nb-up-4HI" secondAttribute="bottom" id="wih-Bw-6Yb"/>
                                 </constraints>
                             </view>
@@ -59,7 +57,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xnx-Ma-ZNY" customClass="BFMFirstLayoutView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <rect key="frame" x="-320" y="0.0" width="320" height="568"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aq5-SO-PPR" customClass="BFMSignInView">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -70,8 +68,8 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000089843" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jkO-Sg-hvJ">
                                                                 <rect key="frame" x="8" y="4" width="235" height="30"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIc-Pm-P90">
                                                                 <rect key="frame" x="0.0" y="36" width="251" height="1"/>
@@ -100,8 +98,8 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Jd-8i-aAD">
                                                                 <rect key="frame" x="8" y="4" width="235" height="30"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OmX-bs-aTm">
                                                                 <rect key="frame" x="0.0" y="36" width="251" height="1"/>
@@ -171,7 +169,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWw-ct-mm7" customClass="BFMFirstLayoutView">
-                                        <rect key="frame" x="320" y="0.0" width="320" height="568"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fqu-0t-NOb" customClass="BFMSignUpView">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -182,8 +180,11 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6iC-po-cv4">
                                                                 <rect key="frame" x="8" y="4" width="235" height="30"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="Fqu-0t-NOb" id="xxE-ch-cGf"/>
+                                                                </connections>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTa-jL-aDB">
                                                                 <rect key="frame" x="0.0" y="36" width="251" height="1"/>
@@ -212,8 +213,11 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6mp-2U-ehu">
                                                                 <rect key="frame" x="8" y="4" width="235" height="30"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="Fqu-0t-NOb" id="Vgm-Xb-xh2"/>
+                                                                </connections>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vC-mi-Hp2">
                                                                 <rect key="frame" x="0.0" y="36" width="251" height="1"/>
@@ -242,8 +246,11 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E9c-bu-CBN">
                                                                 <rect key="frame" x="8" y="4" width="235" height="30"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="Fqu-0t-NOb" id="kq6-Tw-SZa"/>
+                                                                </connections>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVU-ya-na7">
                                                                 <rect key="frame" x="0.0" y="36" width="251" height="1"/>
@@ -272,8 +279,11 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MMe-Ib-cFH">
                                                                 <rect key="frame" x="8" y="4" width="235" height="30"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="Fqu-0t-NOb" id="zTx-W5-L0R"/>
+                                                                </connections>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8d-65-t1B">
                                                                 <rect key="frame" x="0.0" y="36" width="251" height="1"/>
@@ -302,8 +312,11 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxC-6V-TK4">
                                                                 <rect key="frame" x="8" y="4" width="235" height="30"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="Fqu-0t-NOb" id="D2f-Pa-jut"/>
+                                                                </connections>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZb-ys-h0m">
                                                                 <rect key="frame" x="0.0" y="36" width="251" height="1"/>
@@ -332,8 +345,11 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="IB or SP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z89-ha-LKF">
                                                                 <rect key="frame" x="8" y="4" width="99" height="30"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="Fqu-0t-NOb" id="F9H-jX-ZFh"/>
+                                                                </connections>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcI-t9-gAf">
                                                                 <rect key="frame" x="0.0" y="36" width="115" height="1"/>
@@ -362,8 +378,11 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="IB/SP #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5S-7Y-hXy">
                                                                 <rect key="frame" x="8" y="4" width="99" height="30"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="Fqu-0t-NOb" id="dvb-uJ-akr"/>
+                                                                </connections>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pav-Uc-qyo">
                                                                 <rect key="frame" x="0.0" y="36" width="115" height="1"/>
@@ -419,9 +438,9 @@
                                                     <outletCollection property="credentialsFields" destination="6mp-2U-ehu" id="emg-Eq-xwY"/>
                                                     <outletCollection property="credentialsFields" destination="E9c-bu-CBN" id="m9d-vC-lC9"/>
                                                     <outletCollection property="credentialsFields" destination="MMe-Ib-cFH" id="7U8-NM-ggj"/>
-                                                    <outletCollection property="credentialsFields" destination="hxC-6V-TK4" id="K68-JG-vyR"/>
-                                                    <outletCollection property="credentialsFields" destination="Z89-ha-LKF" id="vcZ-72-Bdb"/>
-                                                    <outletCollection property="credentialsFields" destination="T5S-7Y-hXy" id="C5x-B3-2Wa"/>
+                                                    <outletCollection property="credentialsFields" destination="hxC-6V-TK4" id="yqE-VQ-2Ob"/>
+                                                    <outletCollection property="credentialsFields" destination="Z89-ha-LKF" id="ztR-Ya-jBy"/>
+                                                    <outletCollection property="credentialsFields" destination="T5S-7Y-hXy" id="w2J-pP-tn3"/>
                                                 </connections>
                                             </view>
                                         </subviews>
@@ -438,7 +457,7 @@
                                 <constraints>
                                     <constraint firstItem="YWw-ct-mm7" firstAttribute="top" secondItem="Tra-Lo-rUE" secondAttribute="top" id="ElE-7h-iHt"/>
                                     <constraint firstItem="xnx-Ma-ZNY" firstAttribute="height" secondItem="Tra-Lo-rUE" secondAttribute="height" id="Hre-Tg-pbR"/>
-                                    <constraint firstItem="xnx-Ma-ZNY" firstAttribute="leading" secondItem="Tra-Lo-rUE" secondAttribute="leading" id="QDJ-nZ-Gwv"/>
+                                    <constraint firstItem="xnx-Ma-ZNY" firstAttribute="leading" secondItem="Tra-Lo-rUE" secondAttribute="leading" constant="-320" id="QDJ-nZ-Gwv"/>
                                     <constraint firstItem="xnx-Ma-ZNY" firstAttribute="top" secondItem="Tra-Lo-rUE" secondAttribute="top" id="Vkk-ns-SiA"/>
                                     <constraint firstItem="YWw-ct-mm7" firstAttribute="leading" secondItem="xnx-Ma-ZNY" secondAttribute="trailing" id="epu-Dq-ezF"/>
                                     <constraint firstItem="YWw-ct-mm7" firstAttribute="width" secondItem="xnx-Ma-ZNY" secondAttribute="width" id="fxk-CS-nRl"/>

@@ -31,7 +31,19 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
+    if (![self.credentialsFields containsObject:textField]) {
+        return NO;
+    }
+    
+    NSUInteger idx = [self.credentialsFields indexOfObject:textField];
+    if (idx < self.credentialsFields.count - 1) {
+        UITextView *nextField = self.credentialsFields[idx + 1];
+        [nextField becomeFirstResponder];
+    } else {
+        [textField resignFirstResponder];
+    }
+    
+    
     return NO;
 }
 
