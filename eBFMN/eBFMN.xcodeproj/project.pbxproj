@@ -152,9 +152,7 @@
 		F9282D6A1D05DB02005A8BF9 /* BFMSubviewsLayoutingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9282D691D05DB02005A8BF9 /* BFMSubviewsLayoutingView.m */; };
 		F93D12991D103DCB00EB29BC /* BFMFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D12981D103DCB00EB29BC /* BFMFirstViewController.m */; };
 		F93D129C1D103DE400EB29BC /* BFMSignInView.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D129B1D103DE400EB29BC /* BFMSignInView.m */; };
-		F93D129E1D103DF400EB29BC /* BFMSignInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93D129D1D103DF400EB29BC /* BFMSignInView.xib */; };
 		F93D12A11D103E1500EB29BC /* BFMSignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D12A01D103E1500EB29BC /* BFMSignUpView.m */; };
-		F93D12A31D103E2C00EB29BC /* BFMSignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93D12A21D103E2C00EB29BC /* BFMSignUpView.xib */; };
 		F93D12A61D1041C700EB29BC /* BFMSignUpCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D12A51D1041C700EB29BC /* BFMSignUpCredentials.m */; };
 		F93D12A91D10619600EB29BC /* BFMSignInProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D12A81D10619600EB29BC /* BFMSignInProvider.m */; };
 		F93D12AC1D1180FF00EB29BC /* BFMFirstLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D12AB1D1180FF00EB29BC /* BFMFirstLayoutView.m */; };
@@ -485,10 +483,8 @@
 		F93D12981D103DCB00EB29BC /* BFMFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMFirstViewController.m; sourceTree = "<group>"; };
 		F93D129A1D103DE400EB29BC /* BFMSignInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMSignInView.h; sourceTree = "<group>"; };
 		F93D129B1D103DE400EB29BC /* BFMSignInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMSignInView.m; sourceTree = "<group>"; };
-		F93D129D1D103DF400EB29BC /* BFMSignInView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMSignInView.xib; sourceTree = "<group>"; };
 		F93D129F1D103E1500EB29BC /* BFMSignUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMSignUpView.h; sourceTree = "<group>"; };
 		F93D12A01D103E1500EB29BC /* BFMSignUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMSignUpView.m; sourceTree = "<group>"; };
-		F93D12A21D103E2C00EB29BC /* BFMSignUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMSignUpView.xib; sourceTree = "<group>"; };
 		F93D12A41D1041C700EB29BC /* BFMSignUpCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMSignUpCredentials.h; sourceTree = "<group>"; };
 		F93D12A51D1041C700EB29BC /* BFMSignUpCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMSignUpCredentials.m; sourceTree = "<group>"; };
 		F93D12A71D10619600EB29BC /* BFMSignInProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMSignInProvider.h; sourceTree = "<group>"; };
@@ -1403,10 +1399,8 @@
 				F93D12981D103DCB00EB29BC /* BFMFirstViewController.m */,
 				F93D129A1D103DE400EB29BC /* BFMSignInView.h */,
 				F93D129B1D103DE400EB29BC /* BFMSignInView.m */,
-				F93D129D1D103DF400EB29BC /* BFMSignInView.xib */,
 				F93D129F1D103E1500EB29BC /* BFMSignUpView.h */,
 				F93D12A01D103E1500EB29BC /* BFMSignUpView.m */,
-				F93D12A21D103E2C00EB29BC /* BFMSignUpView.xib */,
 				F93D12A41D1041C700EB29BC /* BFMSignUpCredentials.h */,
 				F93D12A51D1041C700EB29BC /* BFMSignUpCredentials.m */,
 				F93D12A71D10619600EB29BC /* BFMSignInProvider.h */,
@@ -1800,13 +1794,11 @@
 				61C182101B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Light Italic.otf in Resources */,
 				F97464871C6D285E00FF6F44 /* BFMBackCardView.xib in Resources */,
 				F9282D661D05C308005A8BF9 /* BFMPrizeGalleryView.xib in Resources */,
-				F93D129E1D103DF400EB29BC /* BFMSignInView.xib in Resources */,
 				61E4776A1BE8EF3A00C2659D /* Leaderboard.storyboard in Resources */,
 				F9EB69721C8663890031BB7D /* placeholder_iphone2.png in Resources */,
 				61C182171B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Thin.otf in Resources */,
 				F93D12AE1D11880C00EB29BC /* NewLogin.storyboard in Resources */,
 				61C1820F1B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Extrabold.otf in Resources */,
-				F93D12A31D103E2C00EB29BC /* BFMSignUpView.xib in Resources */,
 				F9EB69651C862B310031BB7D /* BFMPrizeLinesCell.xib in Resources */,
 				618AC4611C748071005FB7C5 /* BFMPrizeCategoryCell.xib in Resources */,
 				61C182141B98E07200D5FAC8 /* Mark Simonson - Proxima Nova Semibold Italic.otf in Resources */,

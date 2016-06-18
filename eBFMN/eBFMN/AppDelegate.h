@@ -14,6 +14,7 @@
 
 - (void)showHome;
 - (void)showLogin;
+- (void)showVC:(UIViewController *)vc;
 
 @end
 

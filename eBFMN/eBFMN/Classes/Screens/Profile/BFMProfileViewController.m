@@ -49,6 +49,8 @@
 @property (strong, nonatomic) CNPPopupController *popupController;
 @property (nonatomic, assign, getter = isLoggedOut) BOOL loggedOut;
 
+@property (nonatomic, strong) UIViewController *loginVC;
+
 @end
 
 @implementation BFMProfileViewController
@@ -79,6 +81,8 @@
     
     [self bindUser:[BFMUser currentUser]];
     [self setupCardPresentingView];
+    
+    [self setupLoginController];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -117,6 +121,12 @@
 }
 
 #pragma mark - Private (Setup)
+
+- (void)setupLoginController {
+    self.loginVC = [UIStoryboard storyboardWithName:@"NewLogin" bundle:nil].instantiateInitialViewController;
+    [self.loginVC view];
+    self.loginVC.view.frame = [UIScreen mainScreen].bounds;
+}
 
 - (void)setupCardPresentingView {
     {
@@ -299,7 +309,13 @@
     
     [BFMProfileCardDataController clear];
     
-    [(AppDelegate *)[UIApplication sharedApplication].delegate showLogin];
+//    [(AppDelegate *)[UIApplication sharedApplication].delegate showLogin];
+    
+    if (!self.loginVC) {
+        [self setupLoginController];
+    }
+    
+    [(AppDelegate *)[UIApplication sharedApplication].delegate showVC:self.loginVC];
 }
 
 - (void)loadBenefits {

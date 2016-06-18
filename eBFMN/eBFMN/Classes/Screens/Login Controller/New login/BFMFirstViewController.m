@@ -76,11 +76,7 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
 - (void)setupContentViews {
     __weak typeof(self) weakSelf = self;
     
-    BFMSignInView *signInView = [BFMSignInView bfm_load];
-    signInView.frame = self.signInContainerView.bounds;
-    [self.signInContainerView addSubview:signInView];
-    self.signInView = signInView;
-    signInView.signInCompletion = ^(BFMUserCredentials *credentials) {
+    self.signInView.signInCompletion = ^(BFMUserCredentials *credentials) {
         [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
         [weakSelf.provider signIn:credentials
                        completion:^(NSString *errorString) {
@@ -90,15 +86,11 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
                            }
                        }];
     };
-    signInView.passwordCompletion = ^(BFMUserCredentials *credentials) {
+    self.signInView.passwordCompletion = ^(BFMUserCredentials *credentials) {
         [weakSelf showForgotPass:credentials];
     };
     
-    BFMSignUpView *signUpView = [BFMSignUpView bfm_load];
-    signUpView.frame = self.signUpContainerView.bounds;
-    [self.signUpContainerView addSubview:signUpView];
-    self.signUpView = signUpView;
-    signUpView.signUpCompletion = ^(BFMSignUpCredentials *credentials) {
+    self.signUpView.signUpCompletion = ^(BFMSignUpCredentials *credentials) {
         [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
         [weakSelf.provider signUp:credentials
                        completion:^(NSString *errorString) {

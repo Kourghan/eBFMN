@@ -67,11 +67,12 @@
 }
 
 - (void)showVC:(UIViewController *)vc {
-    vc.view.frame = self.window.bounds;
+    [vc view];
+    vc.view.frame = [UIScreen mainScreen].bounds;
     [UIView transitionFromView:self.window.subviews.lastObject
                         toView:vc.view
                       duration:.6
-                       options:(UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionTransitionCrossDissolve)
+                       options:(UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionTransitionFlipFromLeft)
                     completion:^(BOOL finished) {
                         self.window.rootViewController = vc;
                     }];
