@@ -309,12 +309,9 @@
     
     [BFMProfileCardDataController clear];
     
-//    [(AppDelegate *)[UIApplication sharedApplication].delegate showLogin];
-    
     if (!self.loginVC) {
         [self setupLoginController];
     }
-    
     [(AppDelegate *)[UIApplication sharedApplication].delegate showVC:self.loginVC];
 }
 
