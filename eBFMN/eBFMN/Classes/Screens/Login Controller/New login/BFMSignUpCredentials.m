@@ -83,7 +83,7 @@ NSString *bfm_nameWithRole(BFMSignUpRole role) {
         result = [self appendReason:@"Missing code field" existingString:result];
     } else {
         NSCharacterSet *nAlphaSet = [NSCharacterSet decimalDigitCharacterSet].invertedSet;
-        if ([self.lastName rangeOfCharacterFromSet:nAlphaSet].location != NSNotFound) {
+        if ([self.number rangeOfCharacterFromSet:nAlphaSet].location != NSNotFound) {
             result = [self appendReason:@"Code should contain only digits"
                          existingString:result];
         }
