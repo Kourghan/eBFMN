@@ -70,6 +70,23 @@
 - (BFMSignUpCredentials *)fillCredetials {
     BFMSignUpCredentials *credentials = [BFMSignUpCredentials new];
     
+    credentials.email = self.emailTF.text;
+    credentials.firstName = self.firstNameTF.text;
+    credentials.lastName = self.lastNameTF.text;
+    credentials.country = self.countryTF.text;
+    credentials.phone = self.phoneTF.text;
+    
+    NSString *roleText = self.roleTF.text;
+    if ([roleText isEqualToString:@"IB"]) {
+        credentials.type = @(BFMSignUpRoleIB).stringValue;
+    } else if ([roleText isEqualToString:@"SP"]) {
+        credentials.type = @(BFMSignUpRoleSP).stringValue;
+    } else {
+        credentials.type = nil;
+    }
+    
+    credentials.number = self.numberTF.text;
+    
     return credentials;
 }
 

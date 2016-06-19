@@ -105,14 +105,21 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
     };
     
     self.signUpView.signUpCompletion = ^(BFMSignUpCredentials *credentials) {
-        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
-        [weakSelf.provider signUp:credentials
-                       completion:^(NSString *errorString) {
-                           [SVProgressHUD dismiss];
-                           if (errorString.length) {
-                               [weakSelf showError:errorString];
-                           }
-                       }];
+//        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+//        [weakSelf.provider signUp:credentials
+//                       completion:^(NSString *errorString) {
+//                           [SVProgressHUD dismiss];
+//                           if (errorString.length) {
+//                               [weakSelf showError:errorString];
+//                           }
+//                       }];
+        
+        [weakSelf.provider validateSignUp:credentials
+                               completion:^(NSString *errorString) {
+                                   if (errorString.length) {
+                                       [weakSelf bfm_showErrorInKW:@"" subtitle:errorString duration:6.];
+                                   }
+                               }];
     };
     self.signUpView.countryCallback = ^{
         [weakSelf showSelectCountry];

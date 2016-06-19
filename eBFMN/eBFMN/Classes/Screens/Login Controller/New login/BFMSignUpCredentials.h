@@ -27,5 +27,7 @@ extern NSString *bfm_nameWithRole(BFMSignUpRole role);
 @property (nonatomic, strong) NSString *number;
 
 - (BOOL)isFilled;
+- (NSString *)errorStringForFirstScreen:(NSString *)existing;
+- (NSString *)appendReason:(NSString *)reason existingString:(NSString *)existing;
 
 @end

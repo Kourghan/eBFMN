@@ -12,6 +12,7 @@
 
 typedef void (^BFMSignUpCompletion)(NSString *errorString);
 typedef void (^BFMCountriesCompletion)(NSArray *countries, NSString *errorString);
+typedef void (^BFMValidationCompletion)(NSString *errorString);
 
 @interface BFMSignInProvider : NSObject
 
@@ -20,5 +21,7 @@ typedef void (^BFMCountriesCompletion)(NSArray *countries, NSString *errorString
 - (void)signUp:(BFMSignUpCredentials *)credentials
     completion:(BFMSignUpCompletion)completion;
 - (void)getCountries:(BFMCountriesCompletion)completion;
+- (void)validateSignUp:(BFMSignUpCredentials *)credentials
+            completion:(BFMValidationCompletion)completion;
 
 @end

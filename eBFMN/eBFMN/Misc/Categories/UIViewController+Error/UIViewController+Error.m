@@ -17,20 +17,37 @@
 }
 
 - (void)bfm_showErrorInKW:(NSString *)title subtitle:(NSString *)subtitle {
-    [self bfm_showErrorInView:[UIApplication sharedApplication].keyWindow
-                        title:title
-                     subtitle:subtitle];
+    [self bfm_showErrorInKW:title subtitle:subtitle duration:1.5];
 }
 
 - (void)bfm_showErrorInOW:(NSString *)title subtitle:(NSString *)subtitle {
-    [self bfm_showErrorInView:self.view.window
-                        title:title
-                     subtitle:subtitle];
+    [self bfm_showErrorInOW:title subtitle:subtitle duration:1.5];
 }
 
-- (void)bfm_showErrorInView:(UIView *)view title:(NSString *)title subtitle:(NSString *)subtitle {
+- (void)bfm_showErrorInKW:(NSString *)title
+                 subtitle:(NSString *)subtitle
+                 duration:(NSTimeInterval)ti {
+    [self bfm_showErrorInView:[UIApplication sharedApplication].keyWindow
+                        title:title
+                     subtitle:subtitle
+                     duration:ti];
+}
+
+- (void)bfm_showErrorInOW:(NSString *)title
+                 subtitle:(NSString *)subtitle
+                 duration:(NSTimeInterval)ti {
+    [self bfm_showErrorInView:self.view.window
+                        title:title
+                     subtitle:subtitle
+                     duration:ti];
+}
+
+- (void)bfm_showErrorInView:(UIView *)view
+                      title:(NSString *)title
+                   subtitle:(NSString *)subtitle
+                   duration:(NSTimeInterval)duration {
     [view makeToast:subtitle
-           duration:1.5
+           duration:duration
            position:nil
               title:title
               image:nil

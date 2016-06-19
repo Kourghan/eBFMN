@@ -90,4 +90,32 @@
          }];
 }
 
+- (void)validateSignUp:(BFMSignUpCredentials *)credentials
+            completion:(BFMValidationCompletion)completion {
+    if (!credentials.email.length) {
+        if (completion) {
+            completion([credentials errorStringForFirstScreen:@""]);
+        }
+        return;
+    }
+    
+    BFMSessionManager *manager = [BFMSessionManager sharedManager];
+    
+    NSMutableDictionary *params = @{}.mutableCopy;
+    [params setObject:credentials.email forKey:@"email"];
+    
+    [manager GET:@"Registration/CheckEmail"
+      parameters:params
+         success:^(NSURLSessionDataTask *task, id responseObject) {
+             if (completion) {
+                 completion([credentials errorStringForFirstScreen:@""]);
+             }
+         }
+         failure:^(NSURLSessionDataTask *task, NSError *error) {
+             if (completion) {
+                 completion([credentials errorStringForFirstScreen:@""]);
+             }
+         }];
+}
+
 @end
