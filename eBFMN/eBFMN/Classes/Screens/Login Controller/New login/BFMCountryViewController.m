@@ -14,12 +14,11 @@
 #import "BFMSignUpCountry.h"
 #import "BFMCountryCell.h"
 
-@interface BFMCountryViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface BFMCountryViewController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property (nonatomic, strong) BFMSignInProvider *provider;
 @property (nonatomic, strong) NSArray *allCountries;
 @property (nonatomic, strong) NSArray *currentCountries;
-@property (nonatomic, strong) NSString *selectedID;
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UITextField *searchTextField;
@@ -34,6 +33,10 @@
     [super viewDidLoad];
     
     [BFMDefaultNavagtionBarAppearance applyTo:self.navigationController.navigationBar];
+    
+    self.searchTextField.spellCheckingType = UITextSpellCheckingTypeNo;
+    self.searchTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+    self.searchTextField.delegate = self;
     
     NSString *name = NSStringFromClass([BFMCountryCell class]);
     [self.tableView registerNib:[UINib nibWithNibName:name bundle:nil]
@@ -92,6 +95,13 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     BFMSignUpCountry *country = self.currentCountries[indexPath.row];
     self.selectedID = country.identifier;
     [self.tableView reloadData];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.view endEditing:YES];
+    return NO;
 }
 
 #pragma mark - IBAction

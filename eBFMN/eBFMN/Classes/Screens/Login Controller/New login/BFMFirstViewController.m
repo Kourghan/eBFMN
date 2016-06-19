@@ -8,9 +8,11 @@
 
 #import "BFMFirstViewController.h"
 
+#import <WYPopoverController/WYPopoverController.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "BFMCountryViewController.h"
 #import "UIViewController+Error.h"
+#import "BFMKeyboardObserver.h"
 #import "BFMUserCredentials.h"
 #import "BFMSignInProvider.h"
 #import "BFMSignUpCountry.h"
@@ -23,12 +25,15 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
     BFMFirstTypePageSignUp
 };
 
-@interface BFMFirstViewController ()
+@interface BFMFirstViewController ()<BFMKeyboardObserverDelegate, WYPopoverControllerDelegate>
+
+@property (nonatomic, strong) WYPopoverController *popover;
 
 @property (nonatomic, strong) BFMSignInProvider *provider;
 @property (nonatomic, assign) BFMFirstTypePage currentPage;
 @property (nonatomic, strong) BFMSignUpCountry *country;
 
+@property (nonatomic, strong) IBOutlet BFMKeyboardObserver *kbObserver;
 @property (nonatomic, weak) IBOutlet UIView *signInContainerView;
 @property (nonatomic, weak) IBOutlet UIView *signUpContainerView;
 @property (nonatomic, weak) IBOutlet UIView *containersContainer;
@@ -36,13 +41,14 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
 @property (nonatomic, weak) IBOutlet UIButton *signInNavButton;
 @property (nonatomic, weak) IBOutlet UIButton *signUpNavButton;
 @property (nonatomic, weak) IBOutlet UIView *bgImageContainer;
-@property (nonatomic, weak) IBOutlet UIView *recognizerView;
 @property (nonatomic, weak) IBOutlet BFMSignInView *signInView;
 @property (nonatomic, weak) IBOutlet BFMSignUpView *signUpView;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *signInLeftConstraint;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *signInButtonCenterConstraint;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *signUpButtonCenterConstraint;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *bgImageConstraint;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *containerViewTopConstr;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *navViewTopConstr;
 
 @end
 
@@ -123,6 +129,21 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
 }
 
 - (void)switchToPage:(BFMFirstTypePage)page {
+    if (!self.kbObserver.isKbVisible) {
+        [self performAnimationToPage:page];
+        return;
+    }
+    
+    [self.view endEditing:YES];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.35 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self performAnimationToPage:page];
+    });
+}
+
+- (void)performAnimationToPage:(BFMFirstTypePage)page {
+    self.currentPage = page;
+    
     CGFloat scrW = CGRectGetWidth([UIScreen mainScreen].bounds);
     BOOL isSignIn = (page == BFMFirstTypePageSignIn);
     
@@ -138,9 +159,9 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
                          [self.containersContainer layoutIfNeeded];
                      } completion:nil];
     
-    
-    self.signInButtonCenterConstraint.constant = isSignIn ? 0.f : (-scrW / 2.f);
-    self.signUpButtonCenterConstraint.constant = isSignIn ? (scrW / 2.f) : 0.f;
+    CGFloat midOffset = 35.f;
+    self.signInButtonCenterConstraint.constant = isSignIn ? 0.f : (-scrW / 2.f - midOffset);
+    self.signUpButtonCenterConstraint.constant = isSignIn ? (scrW / 2.f + midOffset) : 0.f;
     [self.navButtonsContainer setNeedsUpdateConstraints];
     [UIView animateWithDuration:ti
                           delay:0.
@@ -149,7 +170,7 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
                          [self.navButtonsContainer layoutIfNeeded];
                      } completion:nil];
     
-    self.bgImageConstraint.constant = isSignIn ? 0.f : -(scrW / 5.f);
+    self.bgImageConstraint.constant = isSignIn ? 0.f : -(scrW * 0.5);
     [self.bgImageContainer setNeedsUpdateConstraints];
     [UIView animateWithDuration:ti
                           delay:0.
@@ -187,8 +208,45 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
         weakSelf.country = country;
         weakSelf.signUpView.countryTF.text = country.name;
     };
+    vc.selectedID = self.country.identifier;
     
     [self presentViewController:navController animated:YES completion:nil];
+}
+
+#pragma mark - BFMKeyboardObserverDelegate
+
+- (void)keyboardObserver:(BFMKeyboardObserver *)observer
+   animateKeyboardHeight:(CGFloat)height
+                duration:(NSTimeInterval)duration
+                   curve:(UIViewAnimationCurve)curve {
+    
+    if (self.currentPage == BFMFirstTypePageSignIn) {
+        return;
+    }
+    
+    BOOL kbHidden = (fabs(height) < 0.01);
+    self.navViewTopConstr.constant = kbHidden ? 19.f : 19.f + 88.f - height;
+    self.containerViewTopConstr.constant = kbHidden ? 0.f : -height + 88;
+    [self.view setNeedsUpdateConstraints];
+    
+    [UIView animateWithDuration:duration
+                          delay:.0
+                        options:(curve << 16)
+                     animations:^{
+                         [self.view layoutIfNeeded];
+                     }
+                     completion:nil];
+}
+
+#pragma mark - WYPopoverControllerDelegate
+
+- (BOOL)popoverControllerShouldDismissPopover:(WYPopoverController *)controller {
+    return YES;
+}
+
+- (void)popoverControllerDidDismissPopover:(WYPopoverController *)controller {
+    self.popover.delegate = nil;
+    self.popover = nil;
 }
 
 #pragma mark - IBAction
@@ -199,6 +257,15 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
 
 - (IBAction)signUpNavButtonTap:(id)sender {
     [self switchToPage:BFMFirstTypePageSignUp];
+}
+
+- (IBAction)signUpSelectRoleButtonTap:(UIButton *)sender {
+    CGRect senderRect = [sender convertRect:sender.bounds toView:self.view];
+    WYPopoverController *popover = [[WYPopoverController alloc] initWithContentViewController:<#(UIViewController *)#>];
+    [popover presentPopoverFromRect:senderRect
+                             inView:self.view
+           permittedArrowDirections:WYPopoverArrowDirectionDown
+                           animated:YES];
 }
 
 @end

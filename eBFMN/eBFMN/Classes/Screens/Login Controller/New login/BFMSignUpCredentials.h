@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, BFMSignUpRole) {
+    BFMSignUpRoleOffice = 2,
+    BFMSignUpRoleSP = 3,
+    BFMSignUpRoleIB = 4
+};
+
+extern NSString *bfm_nameWithRole(BFMSignUpRole role);
+
 @interface BFMSignUpCredentials : NSObject
 
 @property (nonatomic, strong) NSString *email;

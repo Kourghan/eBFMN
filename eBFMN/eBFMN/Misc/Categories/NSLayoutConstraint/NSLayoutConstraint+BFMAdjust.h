@@ -11,5 +11,6 @@
 @interface NSLayoutConstraint (BFMAdjust)
 
 @property (nonatomic, assign) CGFloat bfm_phone4Const;
+@property (nonatomic, assign) CGFloat bfm_phone5Const;
 
 @end

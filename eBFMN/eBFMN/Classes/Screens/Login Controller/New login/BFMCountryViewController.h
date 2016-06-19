@@ -14,6 +14,7 @@ typedef void (^BFMCountrySelection)(BFMSignUpCountry *country);
 
 @interface BFMCountryViewController : UIViewController
 
+@property (nonatomic, strong) NSString *selectedID;
 @property (nonatomic, copy) BFMCountrySelection selection;
 
 @end

@@ -8,14 +8,12 @@
 
 #import "BFMSignUpView.h"
 
+#import "UITextField+BFMPlaceholderColor.h"
 #import "BFMSignUpCredentials.h"
 
 @interface BFMSignUpView()<UITextFieldDelegate>
 
-@property (nonatomic, weak) IBOutlet UITextField *emailTF;
-@property (nonatomic, weak) IBOutlet UITextField *passwordTF;
-
-@property (nonatomic, strong) IBOutletCollection(UITextField) NSArray *credentialsFields;
+@property (nonatomic, strong) NSArray *credentialsFields;
 
 @end
 
@@ -24,10 +22,20 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    self.credentialsFields = @[
+                               self.emailTF,
+                               self.firstNameTF,
+                               self.lastNameTF,
+                               self.phoneTF,
+                               self.numberTF
+                               ];
+    
     for (UITextField *textfield in self.credentialsFields) {
-        textfield.attributedPlaceholder = [[NSAttributedString alloc] initWithString:textfield.placeholder
-                                                                          attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+        [textfield bfm_whitify];
     }
+    
+    [self.roleTF bfm_whitify];
+    [self.countryTF bfm_whitify];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -42,7 +50,6 @@
     } else {
         [textField resignFirstResponder];
     }
-    
     
     return NO;
 }

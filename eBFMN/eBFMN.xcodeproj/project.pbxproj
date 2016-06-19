@@ -419,6 +419,8 @@
 		F96073EB1BE72D5000704692 /* BFMNewsActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073E91BE72D5000704692 /* BFMNewsActionCell.xib */; };
 		F96073EF1BE72E9E00704692 /* BFMNewsSingleActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96073ED1BE72E9E00704692 /* BFMNewsSingleActionCell.m */; };
 		F96073F01BE72E9E00704692 /* BFMNewsSingleActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96073EE1BE72E9E00704692 /* BFMNewsSingleActionCell.xib */; };
+		F96B48C91D16B2CC00DFC344 /* BFMSignUpRoleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F96B48C71D16B2CC00DFC344 /* BFMSignUpRoleVC.m */; };
+		F96B48CA1D16B2CC00DFC344 /* BFMSignUpRoleVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96B48C81D16B2CC00DFC344 /* BFMSignUpRoleVC.xib */; };
 		F97464841C6D285E00FF6F44 /* BFMBackCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F974647C1C6D285E00FF6F44 /* BFMBackCardView.m */; };
 		F97464851C6D285E00FF6F44 /* BFMCardPresentingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F974647E1C6D285E00FF6F44 /* BFMCardPresentingView.m */; };
 		F97464861C6D285E00FF6F44 /* BFMFrontCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F97464801C6D285E00FF6F44 /* BFMFrontCardView.m */; };
@@ -435,6 +437,8 @@
 		F99096A41BE020CB00E1D629 /* BFMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99096A11BE020CB00E1D629 /* BFMShopViewController.m */; };
 		F9CAB2EC1CF51096000E24C2 /* UIViewController+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CAB2EB1CF51096000E24C2 /* UIViewController+Error.m */; };
 		F9D52A5B1C8743F700B85F81 /* BFMPrize+BFMPrizeLines.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D52A5A1C8743F700B85F81 /* BFMPrize+BFMPrizeLines.m */; };
+		F9D78B841D169F57000FFA88 /* UITextField+BFMPlaceholderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D78B831D169F57000FFA88 /* UITextField+BFMPlaceholderColor.m */; };
+		F9D78B871D16A462000FFA88 /* BFMKeyboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D78B861D16A462000FFA88 /* BFMKeyboardObserver.m */; };
 		F9EB69591C862A880031BB7D /* BFMPrize2LinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB69581C862A880031BB7D /* BFMPrize2LinesViewController.m */; };
 		F9EB695C1C862AA50031BB7D /* BFMPrizeLinesView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB695B1C862AA50031BB7D /* BFMPrizeLinesView.m */; };
 		F9EB695F1C862AB80031BB7D /* BFMPrizeLinesAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB695E1C862AB80031BB7D /* BFMPrizeLinesAdapter.m */; };
@@ -1027,6 +1031,9 @@
 		F96073EC1BE72E9E00704692 /* BFMNewsSingleActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMNewsSingleActionCell.h; sourceTree = "<group>"; };
 		F96073ED1BE72E9E00704692 /* BFMNewsSingleActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMNewsSingleActionCell.m; sourceTree = "<group>"; };
 		F96073EE1BE72E9E00704692 /* BFMNewsSingleActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMNewsSingleActionCell.xib; sourceTree = "<group>"; };
+		F96B48C61D16B2CC00DFC344 /* BFMSignUpRoleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMSignUpRoleVC.h; sourceTree = "<group>"; };
+		F96B48C71D16B2CC00DFC344 /* BFMSignUpRoleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMSignUpRoleVC.m; sourceTree = "<group>"; };
+		F96B48C81D16B2CC00DFC344 /* BFMSignUpRoleVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMSignUpRoleVC.xib; sourceTree = "<group>"; };
 		F97464791C6D285E00FF6F44 /* BFMFrontCardDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMFrontCardDataProvider.h; sourceTree = "<group>"; };
 		F974647B1C6D285E00FF6F44 /* BFMBackCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMBackCardView.h; sourceTree = "<group>"; };
 		F974647C1C6D285E00FF6F44 /* BFMBackCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMBackCardView.m; sourceTree = "<group>"; };
@@ -1058,6 +1065,10 @@
 		F9CAB2EB1CF51096000E24C2 /* UIViewController+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Error.m"; sourceTree = "<group>"; };
 		F9D52A591C8743F700B85F81 /* BFMPrize+BFMPrizeLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BFMPrize+BFMPrizeLines.h"; sourceTree = "<group>"; };
 		F9D52A5A1C8743F700B85F81 /* BFMPrize+BFMPrizeLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BFMPrize+BFMPrizeLines.m"; sourceTree = "<group>"; };
+		F9D78B821D169F57000FFA88 /* UITextField+BFMPlaceholderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BFMPlaceholderColor.h"; sourceTree = "<group>"; };
+		F9D78B831D169F57000FFA88 /* UITextField+BFMPlaceholderColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+BFMPlaceholderColor.m"; sourceTree = "<group>"; };
+		F9D78B851D16A462000FFA88 /* BFMKeyboardObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMKeyboardObserver.h; sourceTree = "<group>"; };
+		F9D78B861D16A462000FFA88 /* BFMKeyboardObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMKeyboardObserver.m; sourceTree = "<group>"; };
 		F9EB69571C862A880031BB7D /* BFMPrize2LinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPrize2LinesViewController.h; sourceTree = "<group>"; };
 		F9EB69581C862A880031BB7D /* BFMPrize2LinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPrize2LinesViewController.m; sourceTree = "<group>"; };
 		F9EB695A1C862AA50031BB7D /* BFMPrizeLinesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPrizeLinesView.h; sourceTree = "<group>"; };
@@ -1513,6 +1524,7 @@
 		619E2C0A1B977D4800886893 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				F9D78B811D169F32000FFA88 /* UITextField+BFMPlaceholderColor */,
 				F9CAB2E91CF51083000E24C2 /* UIViewController+Error */,
 				F953E4F51CE5F2F10006FA1F /* UIImageView */,
 				F92367ED1C767FD4000F5DEE /* NSLayoutConstraint */,
@@ -1955,6 +1967,11 @@
 				F98195411D15CEF600D01DD6 /* BFMCountryCell.m */,
 				F98195421D15CEF600D01DD6 /* BFMCountryCell.xib */,
 				F93D12AD1D11880C00EB29BC /* NewLogin.storyboard */,
+				F9D78B851D16A462000FFA88 /* BFMKeyboardObserver.h */,
+				F9D78B861D16A462000FFA88 /* BFMKeyboardObserver.m */,
+				F96B48C61D16B2CC00DFC344 /* BFMSignUpRoleVC.h */,
+				F96B48C71D16B2CC00DFC344 /* BFMSignUpRoleVC.m */,
+				F96B48C81D16B2CC00DFC344 /* BFMSignUpRoleVC.xib */,
 			);
 			name = "New login";
 			path = "Classes/Screens/Login Controller/New login";
@@ -2386,6 +2403,16 @@
 			path = "BFMPrize+BFMPrizeLinesObject";
 			sourceTree = "<group>";
 		};
+		F9D78B811D169F32000FFA88 /* UITextField+BFMPlaceholderColor */ = {
+			isa = PBXGroup;
+			children = (
+				F9D78B821D169F57000FFA88 /* UITextField+BFMPlaceholderColor.h */,
+				F9D78B831D169F57000FFA88 /* UITextField+BFMPlaceholderColor.m */,
+			);
+			name = "UITextField+BFMPlaceholderColor";
+			path = "Misc/Categories/UITextField+BFMPlaceholderColor";
+			sourceTree = "<group>";
+		};
 		F9EB69501C8629920031BB7D /* Prizes Options */ = {
 			isa = PBXGroup;
 			children = (
@@ -2709,6 +2736,7 @@
 				F93EFB751D15E03E00223523 /* GB.png in Resources */,
 				F93EFBEA1D15E03E00223523 /* SB.png in Resources */,
 				F93EFC141D15E03E00223523 /* VA.png in Resources */,
+				F96B48CA1D16B2CC00DFC344 /* BFMSignUpRoleVC.xib in Resources */,
 				F93EFB271D15E03E00223523 /* AD.png in Resources */,
 				F93EFBB61D15E03E00223523 /* MG.png in Resources */,
 				6189D8521BEA2370009880B1 /* BFMNewsTextCell.xib in Resources */,
@@ -3036,6 +3064,7 @@
 				61CFBC361C6CCF2800AACBC0 /* BFMPrizeCategoriesViewModel.m in Sources */,
 				F9282D641D05C2A8005A8BF9 /* BFMPrizeGalleryView.m in Sources */,
 				F92367F81C771C5B000F5DEE /* BFMUtils.m in Sources */,
+				F9D78B841D169F57000FFA88 /* UITextField+BFMPlaceholderColor.m in Sources */,
 				F919C91E1BE7ECB70022CB02 /* BFMPendingTableAdapter.m in Sources */,
 				F953E4F81CE5F3110006FA1F /* UIImageView+BFMSetImageRefresh.m in Sources */,
 				F9EB695F1C862AB80031BB7D /* BFMPrizeLinesAdapter.m in Sources */,
@@ -3060,6 +3089,8 @@
 				2CF024EF1B9A409A009E8959 /* BFMTabBarController.m in Sources */,
 				613AE7721B9CC8CA00300B22 /* NINavigationAppearance.m in Sources */,
 				61B1DD4F1BB83BAC00DB6D23 /* MCUtil.m in Sources */,
+				F96B48C91D16B2CC00DFC344 /* BFMSignUpRoleVC.m in Sources */,
+				F9D78B871D16A462000FFA88 /* BFMKeyboardObserver.m in Sources */,
 				61FD3D681BA7096D00F4CEFB /* ODSEvent.m in Sources */,
 				6199288F1C8238B1005AEC26 /* BFMPrizeBannerCell.m in Sources */,
 				F99096A31BE020CB00E1D629 /* BFMShopCollectionAdapter.m in Sources */,

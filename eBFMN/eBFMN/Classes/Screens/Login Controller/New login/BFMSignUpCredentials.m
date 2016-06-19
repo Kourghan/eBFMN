@@ -8,6 +8,15 @@
 
 #import "BFMSignUpCredentials.h"
 
+NSString *bfm_nameWithRole(BFMSignUpRole role) {
+    switch (role) {
+        case BFMSignUpRoleOffice: return @"Office";
+        case BFMSignUpRoleIB: return @"IB";
+        case BFMSignUpRoleSP: return @"SP";
+        default: return @"";
+    }
+};
+
 @implementation BFMSignUpCredentials
 
 - (BOOL)isFilled {
