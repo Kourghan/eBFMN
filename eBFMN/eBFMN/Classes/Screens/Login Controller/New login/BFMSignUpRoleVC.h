@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BFMSignUpCredentials.h"
+
+typedef void (^BFMSignUpRoleVCCompletion)(BFMSignUpRole role);
 
 @interface BFMSignUpRoleVC : UIViewController
+
+@property (nonatomic, copy) BFMSignUpRoleVCCompletion completion;
 
 @end

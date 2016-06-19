@@ -16,6 +16,7 @@
 #import "BFMUserCredentials.h"
 #import "BFMSignInProvider.h"
 #import "BFMSignUpCountry.h"
+#import "BFMSignUpRoleVC.h"
 #import "UIView+BFMLoad.h"
 #import "BFMSignUpView.h"
 #import "BFMSignInView.h"
@@ -28,7 +29,7 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
 @interface BFMFirstViewController ()<BFMKeyboardObserverDelegate, WYPopoverControllerDelegate>
 
 @property (nonatomic, strong) WYPopoverController *popover;
-
+@property (nonatomic, strong) BFMSignUpRoleVC *roleVC;
 @property (nonatomic, strong) BFMSignInProvider *provider;
 @property (nonatomic, assign) BFMFirstTypePage currentPage;
 @property (nonatomic, strong) BFMSignUpCountry *country;
@@ -247,6 +248,7 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
 - (void)popoverControllerDidDismissPopover:(WYPopoverController *)controller {
     self.popover.delegate = nil;
     self.popover = nil;
+    self.roleVC = nil;
 }
 
 #pragma mark - IBAction
@@ -260,8 +262,30 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
 }
 
 - (IBAction)signUpSelectRoleButtonTap:(UIButton *)sender {
+    __weak typeof(self) weakSelf = self;
+    
+    BFMSignUpRoleVC *roleVC = [BFMSignUpRoleVC new];
+    roleVC.completion = ^(BFMSignUpRole role) {
+        weakSelf.signUpView.roleTF.text = bfm_nameWithRole(role);
+        [weakSelf.popover dismissPopoverAnimated:YES];
+    };
+    roleVC.preferredContentSize = CGSizeMake(60.f, 80.f);
+    
     CGRect senderRect = [sender convertRect:sender.bounds toView:self.view];
-    WYPopoverController *popover = [[WYPopoverController alloc] initWithContentViewController:<#(UIViewController *)#>];
+    WYPopoverController *popover = [[WYPopoverController alloc] initWithContentViewController:roleVC];
+    
+    WYPopoverTheme *theme = [WYPopoverTheme theme];
+    theme.fillBottomColor = [UIColor colorWithRed:31.f / 255.f
+                                            green:85.f / 255.f
+                                             blue:124.f / 255.f
+                                            alpha:1.f];
+    theme.tintColor = [UIColor colorWithRed:31.f / 255.f
+                                      green:85.f / 255.f
+                                       blue:124.f / 255.f
+                                      alpha:1.f];
+    popover.theme = theme;
+    self.popover = popover;
+    
     [popover presentPopoverFromRect:senderRect
                              inView:self.view
            permittedArrowDirections:WYPopoverArrowDirectionDown

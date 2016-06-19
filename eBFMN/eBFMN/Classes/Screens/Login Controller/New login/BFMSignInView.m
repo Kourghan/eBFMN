@@ -55,6 +55,7 @@
     if (textField == self.usernameTextField) {
         [self.passwordTextField becomeFirstResponder];
     } else {
+        [textField resignFirstResponder];
         [self signInButtonTap:nil];
     }
     

@@ -55,7 +55,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xnx-Ma-ZNY" customClass="BFMFirstLayoutView">
-                                        <rect key="frame" x="-320" y="0.0" width="320" height="568"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aq5-SO-PPR" customClass="BFMSignInView">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -63,12 +63,6 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWf-nX-BTy">
                                                         <rect key="frame" x="34.5" y="179" width="251" height="37"/>
                                                         <subviews>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000089843" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jkO-Sg-hvJ">
-                                                                <rect key="frame" x="8" y="4" width="235" height="30"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
-                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                                            </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIc-Pm-P90">
                                                                 <rect key="frame" x="0.0" y="36" width="251" height="1"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -76,6 +70,15 @@
                                                                     <constraint firstAttribute="height" constant="1" id="kyP-E4-oG2"/>
                                                                 </constraints>
                                                             </view>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000089843" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jkO-Sg-hvJ">
+                                                                <rect key="frame" x="8" y="4" width="235" height="30"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="Aq5-SO-PPR" id="oRf-yl-f32"/>
+                                                                </connections>
+                                                            </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -98,6 +101,9 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="Aq5-SO-PPR" id="CZK-6D-FKS"/>
+                                                                </connections>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OmX-bs-aTm">
                                                                 <rect key="frame" x="0.0" y="36" width="251" height="1"/>
@@ -167,7 +173,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWw-ct-mm7" customClass="BFMFirstLayoutView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <rect key="frame" x="320" y="0.0" width="320" height="568"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fqu-0t-NOb" customClass="BFMSignUpView">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -497,7 +503,7 @@
                                 <constraints>
                                     <constraint firstItem="YWw-ct-mm7" firstAttribute="top" secondItem="Tra-Lo-rUE" secondAttribute="top" id="ElE-7h-iHt"/>
                                     <constraint firstItem="xnx-Ma-ZNY" firstAttribute="height" secondItem="Tra-Lo-rUE" secondAttribute="height" id="Hre-Tg-pbR"/>
-                                    <constraint firstItem="xnx-Ma-ZNY" firstAttribute="leading" secondItem="Tra-Lo-rUE" secondAttribute="leading" constant="-320" id="QDJ-nZ-Gwv"/>
+                                    <constraint firstItem="xnx-Ma-ZNY" firstAttribute="leading" secondItem="Tra-Lo-rUE" secondAttribute="leading" id="QDJ-nZ-Gwv"/>
                                     <constraint firstItem="xnx-Ma-ZNY" firstAttribute="top" secondItem="Tra-Lo-rUE" secondAttribute="top" id="Vkk-ns-SiA"/>
                                     <constraint firstItem="YWw-ct-mm7" firstAttribute="leading" secondItem="xnx-Ma-ZNY" secondAttribute="trailing" id="epu-Dq-ezF"/>
                                     <constraint firstItem="YWw-ct-mm7" firstAttribute="width" secondItem="xnx-Ma-ZNY" secondAttribute="width" id="fxk-CS-nRl"/>
