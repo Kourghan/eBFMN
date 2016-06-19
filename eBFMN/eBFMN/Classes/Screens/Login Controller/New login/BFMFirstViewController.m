@@ -85,6 +85,11 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
     UISwipeGestureRecognizer *GR2 = [[UISwipeGestureRecognizer alloc] initWithTarget:self
                                                                               action:rightSel];
     [self.containersContainer addGestureRecognizer:GR2];
+    
+    SEL tapSel = @selector(handleDismissTap:);
+    UITapGestureRecognizer *GR3 = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                          action:tapSel];
+    [self.containersContainer addGestureRecognizer:GR3];
 }
 
 - (void)setupContentViews {
@@ -127,6 +132,10 @@ typedef NS_ENUM(NSInteger, BFMFirstTypePage) {
 }
 
 #pragma mark - Pages switching
+
+- (void)handleDismissTap:(UITapGestureRecognizer *)GR {
+    [self.view endEditing:YES];
+}
 
 - (void)handleLeftSwipe:(UISwipeGestureRecognizer *)GR {
     [self switchToPage:BFMFirstTypePageSignUp];
