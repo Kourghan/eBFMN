@@ -49,7 +49,8 @@
     
     self.model = [BFMNewsModel new];
 
-    self.title = [self.model.title uppercaseString];
+    self.title = [self.model.title capitalizedString];
+    self.navigationItem.title = [self.model.title uppercaseString];
     
     self.adapter = [BFMNewsTableAdapter new];
     self.adapter.tableView = self.tableView;
