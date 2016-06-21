@@ -49,7 +49,6 @@ static CGFloat const kBFMShopCellSideRatio6Plus =  180.f / 138.f;
 didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 	NSInteger index = indexPath.row;
 	self.selectedIndex = (index == self.selectedIndex) ? NSNotFound : index;
-	[self.collectionView reloadData];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout

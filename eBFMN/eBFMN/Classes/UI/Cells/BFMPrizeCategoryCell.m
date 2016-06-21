@@ -23,6 +23,17 @@
 
 #pragma mark - Override
 
+- (void)setHighlighted:(BOOL)highlighted {
+    if (highlighted != self.isHighlighted) {
+        [super setHighlighted:highlighted];
+        CGFloat res = highlighted ? .93f : 1.f;
+        [UIView animateWithDuration:.12
+                         animations:^{
+                             self.layer.transform = CATransform3DMakeScale(res, res, 1.f);
+                         }];
+    }
+}
+
 - (void)prepareForReuse {
 	[super prepareForReuse];
 	
