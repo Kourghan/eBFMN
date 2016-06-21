@@ -43,11 +43,11 @@ static NSString *kLastNewsUpdateUserDefaultsKey = @"kLastNewsUpdateUserDefaultsK
                                                   cacheName:nil
                                                   ];
         
-    self.dataSource = [[ODSFetchedResultsDataSource alloc] initWithFetchedResultsController:controller];
-    //[self fetchNews]; // Uncoment+Test when backend implement neews feed
-		
-		self.page = 0;
-		
+        self.dataSource = [[ODSFetchedResultsDataSource alloc] initWithFetchedResultsController:controller];
+        //[self fetchNews]; // Uncoment+Test when backend implement neews feed
+        self.frc = controller;
+        self.page = 0;
+        
     }
     return self;
 }

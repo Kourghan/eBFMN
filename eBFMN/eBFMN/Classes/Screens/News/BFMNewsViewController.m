@@ -22,12 +22,13 @@
 #import "UIViewController+Error.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 
-@interface BFMNewsViewController ()<UITableViewDelegate, BFMNewsTableAdapterProtocol>
+@interface BFMNewsViewController ()<UITableViewDelegate, BFMNewsTableAdapterProtocol, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) BFMNewsTableAdapter *adapter;
 @property (nonatomic, strong) UIActivityIndicatorView *refreshIndicatorView;
+@property (nonatomic, assign, getter = isRefreshing) BOOL refreshing;
 
 @end
 
@@ -42,9 +43,10 @@
     [self.refreshIndicatorView stopAnimating];
     self.refreshIndicatorView.hidden = YES;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.refreshIndicatorView];
-
+    
     self.tableView.estimatedRowHeight = 85.f;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     self.tableView.delegate = self;
     
     self.model = [BFMNewsModel new];
@@ -53,12 +55,14 @@
     self.navigationItem.title = [self.model.title uppercaseString];
     
     self.adapter = [BFMNewsTableAdapter new];
-    self.adapter.tableView = self.tableView;
+    self.adapter.providerFRC = self.model.frc;
+    
     self.adapter.dataSource = self.model.dataSource;
-//    self.adapter.tableView.delegate = self;
 	self.adapter.delegate = self;
     
     [self.adapter mapObjectClass:[BFMNewsRecord class] toCellIdentifier:@"BFMNewsCell"];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self.adapter;
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     
@@ -85,6 +89,12 @@
 }
 
 - (void)refreshNews:(UIRefreshControl *)control {
+    if (self.isRefreshing) {
+        return;
+    }
+    
+    self.refreshing = YES;
+    
     __weak typeof(self) weakSelf = self;
     
     [self.refreshIndicatorView startAnimating];
@@ -101,7 +111,24 @@
             [self bfm_showErrorInOW:NSLocalizedString(@"error.error", nil)
                            subtitle:NSLocalizedString(@"error.connection", nil)];
         }
+        
+        self.refreshing = NO;
+        [self.model.frc performFetch:nil];
+        [self.tableView reloadData];
     }];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.model.frc.fetchedObjects.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    BFMNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BFMNewsCell"
+                                                        forIndexPath:indexPath];
+    cell.object = self.model.frc.fetchedObjects[indexPath.row];
+    return cell;
 }
 
 #pragma mark - Navigation

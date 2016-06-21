@@ -9,14 +9,27 @@
 #import "BFMNewsTableAdapter.h"
 
 #import "BFMNewsCell.h"
+#import "BFMNewsRecord.h"
 
 @interface BFMNewsTableAdapter ()
 
 @property (nonatomic, strong) BFMNewsCell *cell;
 
+@property (nonatomic, strong) BFMNewsCell *protoCell;
+
 @end
 
 @implementation BFMNewsTableAdapter
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.protoCell = [[NSBundle mainBundle] loadNibNamed:@"BFMNewsPrototypeCell"
+                                                       owner:nil
+                                                     options:nil].firstObject;
+    }
+    return self;
+}
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSInteger sectionsAmount = [tableView numberOfSections];
@@ -27,6 +40,20 @@
 		}
 	}
 }
+
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if (!self.providerFRC) {
+//        return 1.f;
+//    }
+//    
+//    BFMNewsRecord *record = self.providerFRC.fetchedObjects[indexPath.row];
+//    self.protoCell.object = record;
+//    self.protoCell.frame = CGRectMake(0.f, 0.f, [UIScreen mainScreen].bounds.size.width, self.protoCell.frame.size.height);
+//    [self.protoCell setNeedsLayout];
+//    [self.protoCell layoutIfNeeded];
+//    CGSize size = [self.protoCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+//    return size.height;
+//}
 
 /*
 override func tableView(_: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

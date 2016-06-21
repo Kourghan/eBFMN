@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Mark Simonson - Proxima Nova Semibold.otf">
+            <string>ProximaNova-Semibold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="BFMNewsCell" id="Lrn-XS-wca" customClass="BFMNewsCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lrn-XS-wca" id="iYP-ew-PNr">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="143.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="{title}" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOP-H1-vES">
+                        <rect key="frame" x="15" y="13" width="290" height="71.5"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
+                        <color key="textColor" red="0.031372549020000001" green="0.27058823529999998" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day, Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hU-6u-MD4">
+                        <rect key="frame" x="77" y="110" width="39.5" height="10.5"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="9"/>
+                        <color key="textColor" red="0.39607843139999999" green="0.39607843139999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Ofx-vV-zjk">
+                        <rect key="frame" x="0.0" y="143" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="FQf-XV-PYP"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="@BMFNNews, " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee1-zz-5yl">
+                        <rect key="frame" x="15" y="110" width="62.5" height="10.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10.5" id="3G1-W5-fZY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="9"/>
+                        <color key="textColor" red="0.39607843139999999" green="0.39607843139999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWe-et-4Z0">
+                        <rect key="frame" x="15" y="89" width="290" height="16"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                        <color key="textColor" red="0.054901960780000002" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3hU-6u-MD4" firstAttribute="leading" secondItem="ee1-zz-5yl" secondAttribute="trailing" id="7wm-Lw-3T1"/>
+                    <constraint firstItem="PWe-et-4Z0" firstAttribute="top" secondItem="rOP-H1-vES" secondAttribute="bottom" constant="5" id="8EJ-d2-3n8"/>
+                    <constraint firstAttribute="trailing" secondItem="Ofx-vV-zjk" secondAttribute="trailing" id="8dp-k0-Lcj"/>
+                    <constraint firstItem="Ofx-vV-zjk" firstAttribute="leading" secondItem="ee1-zz-5yl" secondAttribute="trailing" id="FDn-CE-F6E"/>
+                    <constraint firstItem="rOP-H1-vES" firstAttribute="leading" secondItem="iYP-ew-PNr" secondAttribute="leading" constant="15" id="HhH-D5-JhY"/>
+                    <constraint firstAttribute="bottom" secondItem="Ofx-vV-zjk" secondAttribute="bottom" id="Mqd-mr-9Fx"/>
+                    <constraint firstItem="Ofx-vV-zjk" firstAttribute="leading" secondItem="iYP-ew-PNr" secondAttribute="leading" id="PtR-SN-Ghq"/>
+                    <constraint firstItem="Ofx-vV-zjk" firstAttribute="top" secondItem="ee1-zz-5yl" secondAttribute="bottom" constant="22" id="YjG-s0-NkS"/>
+                    <constraint firstItem="ee1-zz-5yl" firstAttribute="top" secondItem="PWe-et-4Z0" secondAttribute="bottom" constant="5" id="Zgn-Cc-Dt0"/>
+                    <constraint firstItem="rOP-H1-vES" firstAttribute="leading" secondItem="ee1-zz-5yl" secondAttribute="leading" id="aCD-nE-qTi"/>
+                    <constraint firstItem="PWe-et-4Z0" firstAttribute="width" secondItem="rOP-H1-vES" secondAttribute="width" id="dep-E7-Nt4"/>
+                    <constraint firstItem="PWe-et-4Z0" firstAttribute="leading" secondItem="rOP-H1-vES" secondAttribute="leading" id="jqA-iB-6jd"/>
+                    <constraint firstItem="rOP-H1-vES" firstAttribute="top" secondItem="iYP-ew-PNr" secondAttribute="top" constant="13" id="lNW-TK-MUc"/>
+                    <constraint firstItem="ee1-zz-5yl" firstAttribute="baseline" secondItem="3hU-6u-MD4" secondAttribute="baseline" id="qPj-bV-bVn"/>
+                    <constraint firstAttribute="trailing" secondItem="rOP-H1-vES" secondAttribute="trailing" constant="15" id="xOl-i1-OgP"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="FDn-CE-F6E"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="3hU-6u-MD4" id="diX-mX-sLo"/>
+                <outlet property="shortTextLabel" destination="PWe-et-4Z0" id="vI8-mx-eSB"/>
+                <outlet property="titleLabel" destination="rOP-H1-vES" id="22c-S0-DKf"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

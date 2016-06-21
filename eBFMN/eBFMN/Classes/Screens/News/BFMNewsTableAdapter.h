@@ -8,11 +8,14 @@
 
 #import "ODSTableAdapter.h"
 
+#import <CoreData/CoreData.h>
+
 @protocol BFMNewsTableAdapterProtocol;
 
 @interface BFMNewsTableAdapter : ODSTableAdapter
 
 @property (nonatomic, weak) id<BFMNewsTableAdapterProtocol> delegate;
+@property (nonatomic, weak) NSFetchedResultsController *providerFRC;
 
 @end
 

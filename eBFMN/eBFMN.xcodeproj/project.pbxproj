@@ -137,6 +137,7 @@
 		61FD3D751BA76AA200F4CEFB /* BFMNewsTableAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D741BA76AA200F4CEFB /* BFMNewsTableAdapter.m */; };
 		61FD3D791BA8438500F4CEFB /* BFMProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FD3D781BA8438500F4CEFB /* BFMProfileViewController.m */; };
 		E4E74F8D626D1F59048E8C4C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302AB3FC8F773A7347CFDFF0 /* Pods.framework */; };
+		F917DAC01D1976B900C145EA /* BFMNewsPrototypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F917DABF1D1976B900C145EA /* BFMNewsPrototypeCell.xib */; };
 		F919C91E1BE7ECB70022CB02 /* BFMPendingTableAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C91D1BE7ECB70022CB02 /* BFMPendingTableAdapter.m */; };
 		F919C9221BE806510022CB02 /* BFMPendingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9201BE806510022CB02 /* BFMPendingCell.m */; };
 		F919C9261BE819360022CB02 /* BFMPendingDateHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F919C9251BE819360022CB02 /* BFMPendingDateHeaderView.m */; };
@@ -727,6 +728,7 @@
 		61FD3D781BA8438500F4CEFB /* BFMProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMProfileViewController.m; path = Classes/Screens/Profile/BFMProfileViewController.m; sourceTree = "<group>"; };
 		9A2ED38684585DCC5C04EDB7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ED90EA9A0FFE50580AD1AD04 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F917DABF1D1976B900C145EA /* BFMNewsPrototypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFMNewsPrototypeCell.xib; sourceTree = "<group>"; };
 		F919C91C1BE7ECB70022CB02 /* BFMPendingTableAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPendingTableAdapter.h; sourceTree = "<group>"; };
 		F919C91D1BE7ECB70022CB02 /* BFMPendingTableAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMPendingTableAdapter.m; sourceTree = "<group>"; };
 		F919C91F1BE806510022CB02 /* BFMPendingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMPendingCell.h; sourceTree = "<group>"; };
@@ -1322,6 +1324,7 @@
 				2C8E49ED1BDF9C6500A9F8F9 /* BFMDetailedNewsViewController.m */,
 				617BA1BE1BEABAD800AADD0C /* BFMDetailedNewsModel.h */,
 				617BA1BF1BEABAD800AADD0C /* BFMDetailedNewsModel.m */,
+				F917DABF1D1976B900C145EA /* BFMNewsPrototypeCell.xib */,
 			);
 			name = News;
 			sourceTree = "<group>";
@@ -2713,6 +2716,7 @@
 				F93EFBDE1D15E03E00223523 /* PR.png in Resources */,
 				F93EFB651D15E03E00223523 /* DZ.png in Resources */,
 				F93EFBF91D15E03E00223523 /* ST.png in Resources */,
+				F917DAC01D1976B900C145EA /* BFMNewsPrototypeCell.xib in Resources */,
 				F93EFB391D15E03E00223523 /* BB.png in Resources */,
 				F93EFBF81D15E03E00223523 /* SS.png in Resources */,
 				F93EFB7F1D15E03E00223523 /* GP.png in Resources */,
