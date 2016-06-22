@@ -3,9 +3,4 @@ framework module FastEasyMapping {
 
   export *
   module * { export * }
-
-  private header "FEMExcludableCollection.h"
-  private header "FEMMergeableCollection.h"
-  private header "NSArray+FEMPropertyRepresentation.h"
-  private header "NSObject+FEMKVCExtension.h"
 }
